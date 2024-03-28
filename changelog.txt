@@ -1,0 +1,37 @@
+======================================================
+1.20.1 Changelog
+Current Mod Version: 0.1
+======================================================
+
+
+3/27/2024
+Changelog initiated:
+-1.20.1 project created and configured. Including File Structure.
+-Cristened Version 0.1
+-Moved over License, ReadMe, Credits, and 1.16.5 Change log (Present under Heading LEGACY)
+
+
+
+
+
+======================================================
+LEGACY 1.16.5 Changelog
+0.5.2
+======================================================
+ (0.1 - 0.5): 10/08/2023 - 3/20/2024
+ Changelog initiated:
+ - Seperated Crystal Tech mod from, Tutorial mod and Glowing Tree 16.5 mod.
+ - Blossom Trees, Spread Logic, Tiberium Crops, Flower of Life, Deco Blocks, basic items,
+ fluids, Ores, plagued weapons, Gundanium Armor, horse armor, Tags, Ore Gen, Tree gen, structure gen, and all associated
+ textures, loot tables, and recipies added/created.
+ -Addeed License and ReadMe
+
+ (0.5.2): 3/22/2024
+ - Explosion effect added when mining Blue, Red, and Purple Tiberium without a silk touch pickaxe.
+ - Tiberium crop texture changed to Cross render type.
+ - Fixed Tiberium and Ichor soil Sustain Plant Logic. Blocks now only accept specific plants/ certain types of Tiberium.
+ - Began adding Tiberium Infection logic to Tiberium/Ichor soil, created nessicary Mod Tags for infection logic,
+ which will include Plagued Logs infecting other logs and leaves, and Plagued Leaves infecting other leaves.
+ - Added explosion resistance to appropriate blocks. I.E Mod Metal blocks, Tiberium/Ichor Soil, and Blossom Trees.
+ - Updated License and Readme.
+ - Credits File Added.

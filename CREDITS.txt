@@ -1,0 +1,25 @@
+Crystal Technology Mod Credits:
+========================================================================
+
+First and Foremost Thanks Go to Mojang for Minecraft itself, the Entire Forge Community for their tireless work
+on keeping modding alive, and finally thanks to Oracle for Java 17 & 18 specifically since it's been making life
+easier for making this mod.
+
+Next up I will always be thankful for Westwood/EAs Command and Conquer, Bandai Namco/ Sunrise for Mobile Suit Gundam,
+and Harmony Gold/Big West Studio Nue For Robotech. Please do not Nuke this guys.
+
+Next on the List is Tutorials by Kaupenjoe For the Amazing Tutorials on how to dive head first into this and tread
+water.
+
+A special Thanks Goes out to Brohammer the author of Tiberium Craft for letting me study bits of his code, so I could
+make my own Tiberium growth logic.
+
+And last but not least my Partner in crime, and co-conspirator My older brother Che K Carter for his help in reviewing
+the code for bugs, putting up with my late night discord messages crowing about my successes or Cussing at my
+failures, and for helping me bring this mod up to 1.20.1
+
+
+--Dalton J Carter
+
+=========================================================================
+

@@ -1,0 +1,40 @@
+License: Plain and simple.
+
+ALL RIGHTS ARE RESERVED! SO DO NOT RUIN IT FOR EVERYONE ELSE BY BEING A JERK!
+
+WHAT YOU CAN DO:
+1. You are free to STUDY my code.
+2. You can request use of portions of my code.
+3. You can request use of my textures/models, meaning the ones that I have made myself.
+
+WHAT YOU CANNOT DO:
+1. You cannot STEAL my code! I.E Copying entire complex classes, large portions of the Mod etc...
+and claiming it as your own work.
+
+2. You cannot Steal my textures or models!
+
+3. You cannot steal the sound and music files contained in this mod. Many of them are copyrighted,
+and I own legitimate copies of the sound/music.
+
+4. You cannot download this repo to make your own JAR files. I will provide JARs on request and with the
+understanding that you CANNOT distribute it FOR ANY REASON. ESPECIALLY NOT FOR PROFIT!
+
+Again DO NOT ruin this for everybody by being a JERK!
+
+
+WHAT MUST BE UNDERSTOOD:
+
+THIS MOD IS NOT FOR PROFIT!
+NEVER WILL I EVER: charge you for this MOD since it contains Copyrighted material.
+
+Command and Conquer, Robotech, Mobile Suit Gundam: Are owned by their respective copyright holders.
+
+My original content is of course owned by me.
+
+Lastly in the event that you get permission to use my work be it code or graphic Credits are expected. Besides it's
+just plain good manners.
+
+You got any questions e-mail me at Carters_Development@yahoo.com and put Crystal Technology Mod as the subject.
+
+
+
