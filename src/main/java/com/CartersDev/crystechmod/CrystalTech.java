@@ -1,5 +1,7 @@
 package com.CartersDev.crystechmod;
 
+import com.CartersDev.crystechmod.item.ModCreativeModTabs;
+import com.CartersDev.crystechmod.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -23,6 +25,10 @@ public class CrystalTech {
 
     public CrystalTech() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);

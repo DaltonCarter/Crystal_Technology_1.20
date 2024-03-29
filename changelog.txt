@@ -1,6 +1,6 @@
 ======================================================
 1.20.1 Changelog
-Current Mod Version: 0.1
+Current Mod Version: 0.1.5
 ======================================================
 
 
@@ -11,7 +11,16 @@ Changelog initiated:
 -Moved over License, ReadMe, Credits, and 1.16.5 Change log (Present under Heading LEGACY)
 
 
-
+3/28/2024
+Version 0.1.5
+-Creative Mode Tab Created
+-First Transfer complete, all item textures, and model JSONs moved over from 1.16.5.
+-Added the following items:
+    -Tiberium Crystals (Green, BLue, Red, & Purple)
+    -Resonance Crystals ( Aeries, Enigma, Illumina, & Kryon)
+    -Raw Qualrite & Qualrim Compound
+    -Dusts and Ingots (Gundanium, Alythum, Illyrim, Mk 1. Core Steel, Mk2. Core Steel, & Mk.3 Core Steel)
+    -Some Misc items (Plagued Stick, GDI Emblem, Nod Emblem, & Wolf Emblem)
 
 
 ======================================================
