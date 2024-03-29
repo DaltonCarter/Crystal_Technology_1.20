@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "crystechmod:block/green_tiberium_crop_stage2"
+  }
+}

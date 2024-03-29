@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side",
+  "textures": {
+    "pane": "crystechmod:block/nod_tiberglass",
+    "edge": "crystechmod:block/red_tiberglass_pane_top"
+  }
+}

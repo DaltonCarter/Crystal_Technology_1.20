@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "crystechmod:block/flower_of_life"
+  }
+}

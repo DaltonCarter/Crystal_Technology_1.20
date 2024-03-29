@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "crystechmod:block/plagued_leaves"
+  }
+}

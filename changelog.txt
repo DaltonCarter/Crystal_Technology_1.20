@@ -21,6 +21,17 @@ Version 0.1.5
     -Raw Qualrite & Qualrim Compound
     -Dusts and Ingots (Gundanium, Alythum, Illyrim, Mk 1. Core Steel, Mk2. Core Steel, & Mk.3 Core Steel)
     -Some Misc items (Plagued Stick, GDI Emblem, Nod Emblem, & Wolf Emblem)
+-Made Textures for Gundanium Tools
+-Moved over Block Textures, BlockStates, and Models
+-Added the following blocks:
+    -Placeholders for Tiberium/Ichor Soil, and Firestone Block
+    -Tiberium Infested Vanilla Blocks (Stone, Stone Bricks, Cobble, Diorite, Granite, Andesite)
+    -Mod Soil Blocks (Seeded/Yellow Zone Dirt, Seeded/Red Zone Dirt, Seeded Dirt, Yellow Zone Sand, Red Zone Sand)
+    -Tiberium Stone Blocks (Green, Blue, Red, and Purple)
+    -Tiberium Crystal Formation Blocks (Green, Blue, Red, and Purple)
+    -Mineral & Metal Blocks ( Gundanium, Alythum, Illyrim, Mk 1-3 Core Steel, Aeries, Enigma, Illumina, Kryon
+        & Green, Blue, Red, Purple Tibnerium)
+    -Added Basic Ores (Aeries, Enigma, Kryon, Illumina, Qualrite, Gundanium, and Alythum) NO ORE GEN
 
 
 ======================================================

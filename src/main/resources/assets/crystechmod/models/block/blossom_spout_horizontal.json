@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "crystechmod:block/blossom_spout_top",
+    "side": "crystechmod:block/blossom_spout"
+  }
+}

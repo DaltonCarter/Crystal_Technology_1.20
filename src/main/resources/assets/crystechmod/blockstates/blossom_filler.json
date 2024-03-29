@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "crystechmod:block/blossom_filler",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "crystechmod:block/blossom_filler"
+    },
+    "axis=z": {
+      "model": "crystechmod:block/blossom_filler",
+      "x": 90
+    }
+  }
+}

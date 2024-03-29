@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_rh",
+  "textures": {
+    "top": "crystechmod:block/plagued_door_top",
+    "bottom": "crystechmod:block/plagued_door_bottom"
+  }
+}
