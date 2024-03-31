@@ -34,6 +34,14 @@ Version 0.1.5
     -Added Basic Ores (Aeries, Enigma, Kryon, Illumina, Qualrite, Gundanium, and Alythum) NO ORE GEN
 
 
+3/31/2024
+Version 0.1.5
+-Transfered over the Classes for Firestone item, and Firestone block. Removed the ability to light ground on fire
+    with the item.
+-Added Tool and mineable tags
+-added existing blocks to Tool, and Mineable tags.
+
+
 ======================================================
 LEGACY 1.16.5 Changelog
 0.5.2
