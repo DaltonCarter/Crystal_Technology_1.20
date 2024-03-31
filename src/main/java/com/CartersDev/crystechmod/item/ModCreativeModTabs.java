@@ -20,6 +20,8 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                 .title(Component.translatable("creativetab.crystal_technology_tab"))
                 .displayItems((itemDisplayParameters, output) -> {
 
+                    output.accept(ModItems.FIRESTONE.get());
+                    output.accept(ModBlocks.FIRESTONE_BLOCK.get());
                     output.accept(ModItems.TIBERIUM.get());
                     output.accept(ModBlocks.TIBERIUM_BLOCK.get());
                     output.accept(ModItems.TIBERIUM_BLUE.get());

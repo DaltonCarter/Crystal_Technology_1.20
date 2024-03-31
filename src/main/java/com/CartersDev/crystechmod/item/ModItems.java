@@ -3,7 +3,9 @@ package com.CartersDev.crystechmod.item;
 import com.CartersDev.crystechmod.CrystalTech;
 
 
+import com.CartersDev.crystechmod.item.custom.Firestone;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -119,7 +121,10 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
 
 //Misc Items
-public static final RegistryObject<Item> PLAGUED_STICK = ITEMS.register("plagued_stick",
+    public static final RegistryObject<Item> FIRESTONE = ITEMS.register("firestone",
+        () -> new Firestone(new Item.Properties().setNoRepair().durability(10)));
+
+    public static final RegistryObject<Item> PLAGUED_STICK = ITEMS.register("plagued_stick",
         () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> GDI_EMBLEM = ITEMS.register("gdi_emblem",

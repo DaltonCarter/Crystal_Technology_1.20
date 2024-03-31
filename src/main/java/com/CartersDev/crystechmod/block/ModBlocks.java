@@ -1,6 +1,7 @@
 package com.CartersDev.crystechmod.block;
 
 import com.CartersDev.crystechmod.CrystalTech;
+import com.CartersDev.crystechmod.block.custom.FirestoneBlock;
 import com.CartersDev.crystechmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -112,10 +113,8 @@ public class ModBlocks {
 
     //Metal and Mineral Blocks:
 
-//    public static final RegistryObject<Block> FIRESTONE_BLOCK = registerBlock("firestone_block",
-//            () -> new FirestoneBlock(AbstractBlock.Properties.create(Material.IRON)
-//                    .harvestLevel(2).harvestTool(ToolType.PICKAXE)
-//                    .setRequiresTool().hardnessAndResistance(5f)));
+    public static final RegistryObject<Block> FIRESTONE_BLOCK = registerBlock("firestone_block",
+            () -> new FirestoneBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     public static final RegistryObject<Block> AERIES_BLOCK = registerBlock("aeries_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
