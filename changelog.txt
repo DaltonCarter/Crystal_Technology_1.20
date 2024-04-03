@@ -42,6 +42,13 @@ Version 0.1.5
 -added existing blocks to Tool, and Mineable tags.
 
 
+4/3/2024
+Version 0.1.5
+-Created Mod Foods Class, and Transferred over the Tiberium Fruit.
+-Created Mod Food entries for the Tiberium Dusts, they are considered W.I.P
+-Added Fuel Item Class for creating burnables.
+
+
 ======================================================
 LEGACY 1.16.5 Changelog
 0.5.2

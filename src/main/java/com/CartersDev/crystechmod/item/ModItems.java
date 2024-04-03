@@ -18,7 +18,8 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, CrystalTech.MOD_ID);
 
 //Foods
-
+public static final RegistryObject<Item> TIBERIUM_FRUIT = ITEMS.register("tiberium_fruit",
+        () -> new Item(new Item.Properties().food(ModFoods.TIBERIUM_FRUIT)));
 //End of Foods
 
 
