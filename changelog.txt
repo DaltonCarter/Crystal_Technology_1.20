@@ -5,14 +5,18 @@ Current Mod Version: 0.1.5
 
 
 3/27/2024
+Posted By: Dalton Carter
+
 Changelog initiated:
 -1.20.1 project created and configured. Including File Structure.
--Cristened Version 0.1
+-Christened Version 0.1
 -Moved over License, ReadMe, Credits, and 1.16.5 Change log (Present under Heading LEGACY)
 
 
 3/28/2024
 Version 0.1.5
+Posted By: Dalton Carter
+
 -Creative Mode Tab Created
 -First Transfer complete, all item textures, and model JSONs moved over from 1.16.5.
 -Added the following items:
@@ -36,6 +40,8 @@ Version 0.1.5
 
 3/31/2024
 Version 0.1.5
+Posted By: Dalton Carter
+
 -Transfered over the Classes for Firestone item, and Firestone block. Removed the ability to light ground on fire
     with the item.
 -Added Tool and mineable tags
@@ -44,9 +50,22 @@ Version 0.1.5
 
 4/3/2024
 Version 0.1.5
+Posted By: Dalton Carter
+
 -Created Mod Foods Class, and Transferred over the Tiberium Fruit.
 -Created Mod Food entries for the Tiberium Dusts, they are considered W.I.P
 -Added Fuel Item Class for creating burnables.
+
+
+4/4/2024
+Version 0.1.5
+Posted By: Dalton Carter
+
+-Officially added Che Carter as Collaborator, revised Changelog to include who Posted the changes.
+-Added Mod Tags class.
+-Set up file for existing tags to be transferred when all other blocks have been transferred.
+-Began Implementing Data Gen, this will be an ongoing process in order to catch up with what has already been
+made and transferred. At this time only some data has been filled in, others are present as placeholders.
 
 
 ======================================================
@@ -55,17 +74,17 @@ LEGACY 1.16.5 Changelog
 ======================================================
  (0.1 - 0.5): 10/08/2023 - 3/20/2024
  Changelog initiated:
- - Seperated Crystal Tech mod from, Tutorial mod and Glowing Tree 16.5 mod.
+ - Separated Crystal Tech mod from, Tutorial mod and Glowing Tree 16.5 mod.
  - Blossom Trees, Spread Logic, Tiberium Crops, Flower of Life, Deco Blocks, basic items,
  fluids, Ores, plagued weapons, Gundanium Armor, horse armor, Tags, Ore Gen, Tree gen, structure gen, and all associated
- textures, loot tables, and recipies added/created.
- -Addeed License and ReadMe
+ textures, loot tables, and recipes added/created.
+ -Added License and ReadMe
 
  (0.5.2): 3/22/2024
  - Explosion effect added when mining Blue, Red, and Purple Tiberium without a silk touch pickaxe.
  - Tiberium crop texture changed to Cross render type.
  - Fixed Tiberium and Ichor soil Sustain Plant Logic. Blocks now only accept specific plants/ certain types of Tiberium.
- - Began adding Tiberium Infection logic to Tiberium/Ichor soil, created nessicary Mod Tags for infection logic,
+ - Began adding Tiberium Infection logic to Tiberium/Ichor soil, created necessary Mod Tags for infection logic,
  which will include Plagued Logs infecting other logs and leaves, and Plagued Leaves infecting other leaves.
  - Added explosion resistance to appropriate blocks. I.E Mod Metal blocks, Tiberium/Ichor Soil, and Blossom Trees.
  - Updated License and Readme.
