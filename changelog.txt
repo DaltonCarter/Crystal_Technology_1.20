@@ -76,6 +76,8 @@ Posted by: Dalton Carter
 -Changed texture for raw Qualrite and Qualrim Compound to match ore color
 -Made textures for Deep Slate, Nether, and End Ore variants
 -Made Raw Gundanium and Raw Alythum item textures
+-Added Ore Variants to Mod Blocks Class
+-BlockStates DataGen now has all currently transferred and implemented Blocks.
 
 
 ======================================================
