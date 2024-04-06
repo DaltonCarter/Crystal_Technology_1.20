@@ -68,6 +68,16 @@ Posted By: Dalton Carter
 made and transferred. At this time only some data has been filled in, others are present as placeholders.
 
 
+4/5/2024
+version 0.1.5
+Posted by: Dalton Carter
+
+-Updated textures for all ores.
+-Changed texture for raw Qualrite and Qualrim Compound to match ore color
+-Made textures for Deep Slate, Nether, and End Ore variants
+-Made Raw Gundanium and Raw Alythum item textures
+
+
 ======================================================
 LEGACY 1.16.5 Changelog
 0.5.2
