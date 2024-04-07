@@ -33,6 +33,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.GUNDANIUM_INGOT);
         simpleItem(ModItems.ALYTHUM_DUST);
         simpleItem(ModItems.ALYTHUM_INGOT);
+        simpleItem(ModItems.LG_CORE_BLEND);
+        simpleItem(ModItems.LG_CORE_INGOT);
+        simpleItem(ModItems.MG_CORE_BLEND);
+        simpleItem(ModItems.MG_CORE_INGOT);
+        simpleItem(ModItems.HG_CORE_BLEND);
+        simpleItem(ModItems.HG_CORE_INGOT);
+        simpleItem(ModItems.ILLYRIM_BLEND);
+        simpleItem(ModItems.ILLYRIM_INGOT);
+        simpleItem(ModItems.RAW_QUALRITE);
+        simpleItem(ModItems.QUALRIM_COMPOUND);
+        simpleItem(ModItems.GDI_EMBLEM);
+        simpleItem(ModItems.NOD_EMBLEM);
+        simpleItem(ModItems.WOLF_EMBLEM);
+        simpleItem(ModItems.PLAGUED_STICK);
+        simpleItem(ModItems.FIRESTONE);
 
         simpleItem(ModItems.TIBERIUM_FRUIT);
 

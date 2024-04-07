@@ -69,8 +69,8 @@ made and transferred. At this time only some data has been filled in, others are
 
 
 4/5/2024
-version 0.1.5
-Posted by: Dalton Carter
+Version 0.1.5
+Posted By: Dalton Carter
 
 -Updated textures for all ores.
 -Changed texture for raw Qualrite and Qualrim Compound to match ore color
@@ -78,6 +78,14 @@ Posted by: Dalton Carter
 -Made Raw Gundanium and Raw Alythum item textures
 -Added Ore Variants to Mod Blocks Class
 -BlockStates DataGen now has all currently transferred and implemented Blocks.
+
+
+4/6/2024
+Version 0.1.5
+Posted By: Dalton Carter
+
+-Tag Generator now contains all currently implemented blocks.
+-Item Model Provider now contains all Currently implemented items.
 
 
 ======================================================
