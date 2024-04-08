@@ -51,6 +51,12 @@ public static final RegistryObject<Item> TIBERIUM = ITEMS.register("tiberium",
 
     public static final RegistryObject<Item> RAW_QUALRITE = ITEMS.register("raw_qualrite",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RAW_GUNDANIUM = ITEMS.register("raw_gundanium",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RAW_ALYTHUM = ITEMS.register("raw_alythum",
+            () -> new Item(new Item.Properties()));
 //End of Minerals
 
 

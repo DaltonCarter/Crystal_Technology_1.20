@@ -25,23 +25,123 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
 
+        //Self Drops:
         this.dropSelf(ModBlocks.TIBERIUM_BLOCK.get());
+        this.dropSelf(ModBlocks.TIBERIUM_BLUE_BLOCK.get());
+        this.dropSelf(ModBlocks.TIBERIUM_RED_BLOCK.get());
+        this.dropSelf(ModBlocks.TIBERIUM_PURPLE_BLOCK.get());
+
+        this.dropSelf(ModBlocks.AERIES_BLOCK.get());
+        this.dropSelf(ModBlocks.ENIGMA_BLOCK.get());
+        this.dropSelf(ModBlocks.ILLUMINA_BLOCK.get());
+        this.dropSelf(ModBlocks.KRYON_BLOCK.get());
+
         this.dropSelf(ModBlocks.GUNDANIUM_BLOCK.get());
+        this.dropSelf(ModBlocks.ALYTHUM_BLOCK.get());
+        this.dropSelf(ModBlocks.ILLYRIM_BLOCK.get());
+        this.dropSelf(ModBlocks.LG_CORE_BLOCK.get());
+        this.dropSelf(ModBlocks.MG_CORE_BLOCK.get());
+        this.dropSelf(ModBlocks.HG_CORE_BLOCK.get());
         this.dropSelf(ModBlocks.FIRESTONE_BLOCK.get());
 
-//        this.add(ModBlocks.SAPPHIRE_ORE.get(),
-//                block -> createModOreDrops(ModBlocks.SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get()));
-//
-//        this.add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
-//                block -> createModOreDrops(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get()));
-//
-//        this.add(ModBlocks.NETHER_SAPPHIRE_ORE.get(),
-//                block -> createModOreDrops(ModBlocks.NETHER_SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get()));
-//
-//        this.add(ModBlocks.END_SAPPHIRE_ORE.get(),
-//                block -> createModOreDrops(ModBlocks.END_SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get()));
+        this.dropSelf(ModBlocks.INFESTED_STONE.get());
+        this.dropSelf(ModBlocks.INFESTED_STONE_BRICKS.get());
+        this.dropSelf(ModBlocks.INFESTED_COBBLE.get());
+        this.dropSelf(ModBlocks.INFESTED_ANDESITE.get());
+        this.dropSelf(ModBlocks.INFESTED_DIORITE.get());
+        this.dropSelf(ModBlocks.INFESTED_GRANITE.get());
+
+        this.dropSelf(ModBlocks.YELLOW_ZONE_SAND.get());
+        this.dropSelf(ModBlocks.RED_ZONE_DIRT.get());
+        this.dropSelf(ModBlocks.RED_ZONE_SAND.get());
+        this.dropSelf(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get());
+        this.dropSelf(ModBlocks.SEEDED_RED_ZONE_DIRT.get());
+        this.dropSelf(ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get());
+        this.dropSelf(ModBlocks.SEEDED_DIRT.get());
+
+        this.dropSelf(ModBlocks.RIPARIUS_STONE.get());
+        this.dropSelf(ModBlocks.VINIFERA_STONE.get());
+        this.dropSelf(ModBlocks.CRUENTUS_STONE.get());
+        this.dropSelf(ModBlocks.ABOREUS_STONE.get());
+
+        this.dropSelf(ModBlocks.RIPARIUS_CRYSTAL.get());
+        this.dropSelf(ModBlocks.VINIFERA_CRYSTAL.get());
+        this.dropSelf(ModBlocks.CRUENTUS_CRYSTAL.get());
+        this.dropSelf(ModBlocks.ABOREUS_CRYSTAL.get());
+
+
+        //Ore Drops:
+        this.add(ModBlocks.AERIES_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.AERIES_ORE.get(), ModItems.AERIES_CRYSTAL.get()));
+
+        this.add(ModBlocks.DEEPSLATE_AERIES_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.DEEPSLATE_AERIES_ORE.get(), ModItems.AERIES_CRYSTAL.get()));
+
+        this.add(ModBlocks.NETHER_AERIES_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.NETHER_AERIES_ORE.get(), ModItems.AERIES_CRYSTAL.get()));
+
+        this.add(ModBlocks.KRYON_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.KRYON_ORE.get(), ModItems.KRYON_CRYSTAL.get()));
+
+        this.add(ModBlocks.DEEPSLATE_KRYON_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.DEEPSLATE_KRYON_ORE.get(), ModItems.KRYON_CRYSTAL.get()));
+
+        this.add(ModBlocks.NETHER_KRYON_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.NETHER_KRYON_ORE.get(), ModItems.KRYON_CRYSTAL.get()));
+
+        this.add(ModBlocks.END_KRYON_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.END_KRYON_ORE.get(), ModItems.KRYON_CRYSTAL.get()));
+
+        this.add(ModBlocks.ILLUMINA_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.ILLUMINA_ORE.get(), ModItems.ILLUMINA_CRYSTAL.get()));
+
+        this.add(ModBlocks.DEEPSLATE_ILLUMINA_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.DEEPSLATE_ILLUMINA_ORE.get(), ModItems.ILLUMINA_CRYSTAL.get()));
+
+        this.add(ModBlocks.ENIGMA_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.ENIGMA_ORE.get(), ModItems.ENIGMA_CRYSTAL.get()));
+
+        this.add(ModBlocks.DEEPSLATE_ENIGMA_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.DEEPSLATE_ENIGMA_ORE.get(), ModItems.ENIGMA_CRYSTAL.get()));
+
+        this.add(ModBlocks.END_ENIGMA_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.END_ENIGMA_ORE.get(), ModItems.ENIGMA_CRYSTAL.get()));
+
+        this.add(ModBlocks.GUNDANIUM_ORE.get(),
+                block -> createModOreDrops(ModBlocks.GUNDANIUM_ORE.get(), ModItems.RAW_GUNDANIUM.get()));
+
+        this.add(ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get(),
+                block -> createModOreDrops(ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get(), ModItems.RAW_GUNDANIUM.get()));
+
+        this.add(ModBlocks.ALYTHUM_ORE.get(),
+                block -> createModOreDrops(ModBlocks.ALYTHUM_ORE.get(), ModItems.RAW_ALYTHUM.get()));
+
+        this.add(ModBlocks.DEEPSLATE_ALYTHUM_ORE.get(),
+                block -> createModOreDrops(ModBlocks.DEEPSLATE_ALYTHUM_ORE.get(), ModItems.RAW_ALYTHUM.get()));
+
+        this.add(ModBlocks.NETHER_ALYTHUM_ORE.get(),
+                block -> createModOreDrops(ModBlocks.NETHER_ALYTHUM_ORE.get(), ModItems.RAW_ALYTHUM.get()));
+
+        this.add(ModBlocks.QUALRITE_ORE.get(),
+                block -> createModOreDrops(ModBlocks.QUALRITE_ORE.get(), ModItems.RAW_QUALRITE.get()));
+
+        this.add(ModBlocks.DEEPSLATE_QUALRITE_ORE.get(),
+                block -> createModOreDrops(ModBlocks.DEEPSLATE_QUALRITE_ORE.get(), ModItems.RAW_QUALRITE.get()));
+
+        this.add(ModBlocks.NETHER_QUALRITE_ORE.get(),
+                block -> createModOreDrops(ModBlocks.NETHER_QUALRITE_ORE.get(), ModItems.RAW_QUALRITE.get()));
+
+
     }
 
+
+    protected LootTable.Builder createModGemOreDrops(Block pBlock, Item item) {
+        return createSilkTouchDispatchTable(pBlock,
+                this.applyExplosionDecay(pBlock,
+                        LootItem.lootTableItem(item)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+    }
 
     protected LootTable.Builder createModOreDrops(Block pBlock, Item item) {
         return createSilkTouchDispatchTable(pBlock,

@@ -42,6 +42,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ILLYRIM_BLEND);
         simpleItem(ModItems.ILLYRIM_INGOT);
         simpleItem(ModItems.RAW_QUALRITE);
+        simpleItem(ModItems.RAW_ALYTHUM);
+        simpleItem(ModItems.RAW_GUNDANIUM);
         simpleItem(ModItems.QUALRIM_COMPOUND);
         simpleItem(ModItems.GDI_EMBLEM);
         simpleItem(ModItems.NOD_EMBLEM);

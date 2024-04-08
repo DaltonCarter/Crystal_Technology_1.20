@@ -88,6 +88,14 @@ Posted By: Dalton Carter
 -Item Model Provider now contains all Currently implemented items.
 
 
+4/7/2024
+Version 0.2.0
+Posted By: Dalton Carter
+
+-Mod Loot Table now contains all currently implemented blocks.
+-Recipe Provider now has recipes for all current blocks/items.
+-Version updated to 0.2.0
+
 ======================================================
 LEGACY 1.16.5 Changelog
 0.5.2
