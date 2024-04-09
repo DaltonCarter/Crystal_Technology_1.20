@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:tiberium_blue_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "crystechmod:tiberium_blue"
+  }
+}

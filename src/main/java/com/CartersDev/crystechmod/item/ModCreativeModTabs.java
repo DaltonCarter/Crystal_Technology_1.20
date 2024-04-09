@@ -34,32 +34,47 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                     output.accept(ModBlocks.TIBERIUM_PURPLE_BLOCK.get());
 
                     output.accept(ModBlocks.AERIES_ORE.get());
+                    output.accept(ModBlocks.DEEPSLATE_AERIES_ORE.get());
+                    output.accept(ModBlocks.NETHER_AERIES_ORE.get());
                     output.accept(ModItems.AERIES_CRYSTAL.get());
                     output.accept(ModBlocks.AERIES_BLOCK.get());
 
                     output.accept(ModBlocks.ENIGMA_ORE.get());
+                    output.accept(ModBlocks.DEEPSLATE_ENIGMA_ORE.get());
+                    output.accept(ModBlocks.END_ENIGMA_ORE.get());
                     output.accept(ModItems.ENIGMA_CRYSTAL.get());
                     output.accept(ModBlocks.ENIGMA_BLOCK.get());
 
                     output.accept(ModBlocks.ILLUMINA_ORE.get());
+                    output.accept(ModBlocks.DEEPSLATE_ILLUMINA_ORE.get());
                     output.accept(ModItems.ILLUMINA_CRYSTAL.get());
                     output.accept(ModBlocks.ILLUMINA_BLOCK.get());
 
                     output.accept(ModBlocks.KRYON_ORE.get());
+                    output.accept(ModBlocks.DEEPSLATE_KRYON_ORE.get());
+                    output.accept(ModBlocks.NETHER_KRYON_ORE.get());
+                    output.accept(ModBlocks.END_KRYON_ORE.get());
                     output.accept(ModItems.KRYON_CRYSTAL.get());
                     output.accept(ModBlocks.KRYON_BLOCK.get());
 
                     output.accept(ModBlocks.QUALRITE_ORE.get());
+                    output.accept(ModBlocks.DEEPSLATE_QUALRITE_ORE.get());
+                    output.accept(ModBlocks.NETHER_QUALRITE_ORE.get());
                     output.accept(ModItems.RAW_QUALRITE.get());
                     output.accept(ModItems.QUALRIM_COMPOUND.get());
 
                     output.accept(ModBlocks.GUNDANIUM_ORE.get());
+                    output.accept(ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get());
                     output.accept(ModItems.GUNDANIUM_DUST.get());
+                    output.accept(ModItems.RAW_GUNDANIUM.get());
                     output.accept(ModItems.GUNDANIUM_INGOT.get());
                     output.accept(ModBlocks.GUNDANIUM_BLOCK.get());
 
                     output.accept(ModBlocks.ALYTHUM_ORE.get());
+                    output.accept(ModBlocks.DEEPSLATE_ALYTHUM_ORE.get());
+                    output.accept(ModBlocks.NETHER_ALYTHUM_ORE.get());
                     output.accept(ModItems.ALYTHUM_DUST.get());
+                    output.accept(ModItems.RAW_ALYTHUM.get());
                     output.accept(ModItems.ALYTHUM_INGOT.get());
                     output.accept(ModBlocks.ALYTHUM_BLOCK.get());
 
@@ -86,6 +101,8 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                     output.accept(ModItems.WOLF_EMBLEM.get());
 
 
+                    output.accept(ModBlocks.TIBERIUM_SOIL.get());
+                    output.accept(ModBlocks.ICHOR_SOIL.get());
                     output.accept(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get());
                     output.accept(ModBlocks.RED_ZONE_DIRT.get());
                     output.accept(ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get());
@@ -110,6 +127,39 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                     output.accept(ModBlocks.VINIFERA_CRYSTAL.get());
                     output.accept(ModBlocks.CRUENTUS_CRYSTAL.get());
                     output.accept(ModBlocks.ABOREUS_CRYSTAL.get());
+
+                    output.accept(ModBlocks.BLACK_TIBERCRETE.get());
+                    output.accept(ModBlocks.BLACK_TIBERCRETE_POWDER.get());
+                    output.accept(ModBlocks.BLUE_TIBERCRETE.get());
+                    output.accept(ModBlocks.BLUE_TIBERCRETE_POWDER.get());
+                    output.accept(ModBlocks.BROWN_TIBERCRETE.get());
+                    output.accept(ModBlocks.BROWN_TIBERCRETE_POWDER.get());
+                    output.accept(ModBlocks.CYAN_TIBERCRETE.get());
+                    output.accept(ModBlocks.CYAN_TIBERCRETE_POWDER.get());
+                    output.accept(ModBlocks.GRAY_TIBERCRETE.get());
+                    output.accept(ModBlocks.GRAY_TIBERCRETE_POWDER.get());
+                    output.accept(ModBlocks.GREEN_TIBERCRETE.get());
+                    output.accept(ModBlocks.GREEN_TIBERCRETE_POWDER.get());
+                    output.accept(ModBlocks.LIGHT_BLUE_TIBERCRETE.get());
+                    output.accept(ModBlocks.LIGHT_BLUE_TIBERCRETE_POWDER.get());
+                    output.accept(ModBlocks.LIGHT_GRAY_TIBERCRETE.get());
+                    output.accept(ModBlocks.LIGHT_GRAY_TIBERCRETE_POWDER.get());
+                    output.accept(ModBlocks.LIME_TIBERCRETE.get());
+                    output.accept(ModBlocks.LIME_TIBERCRETE_POWDER.get());
+                    output.accept(ModBlocks.MAGENTA_TIBERCRETE.get());
+                    output.accept(ModBlocks.MAGENTA_TIBERCRETE_POWDER.get());
+                    output.accept(ModBlocks.ORANGE_TIBERCRETE.get());
+                    output.accept(ModBlocks.ORANGE_TIBERCRETE_POWDER.get());
+                    output.accept(ModBlocks.PINK_TIBERCRETE.get());
+                    output.accept(ModBlocks.PINK_TIBERCRETE_POWDER.get());
+                    output.accept(ModBlocks.PURPLE_TIBERCRETE.get());
+                    output.accept(ModBlocks.PURPLE_TIBERCRETE_POWDER.get());
+                    output.accept(ModBlocks.RED_TIBERCRETE.get());
+                    output.accept(ModBlocks.RED_TIBERCRETE_POWDER.get());
+                    output.accept(ModBlocks.WHITE_TIBERCRETE.get());
+                    output.accept(ModBlocks.WHITE_TIBERCRETE_POWDER.get());
+                    output.accept(ModBlocks.YELLOW_TIBERCRETE.get());
+                    output.accept(ModBlocks.YELLOW_TIBERCRETE_POWDER.get());
 
 
                 })

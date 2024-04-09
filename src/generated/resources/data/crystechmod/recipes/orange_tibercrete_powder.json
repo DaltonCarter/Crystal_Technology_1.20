@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:tiberium"
+    },
+    {
+      "item": "crystechmod:tiberium"
+    },
+    {
+      "item": "crystechmod:tiberium"
+    },
+    {
+      "item": "crystechmod:tiberium"
+    },
+    {
+      "item": "minecraft:orange_dye"
+    },
+    {
+      "tag": "crystechmod:tibercrete_sands"
+    },
+    {
+      "tag": "crystechmod:tibercrete_sands"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "minecraft:gravel"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "item": "crystechmod:orange_tibercrete_powder"
+  }
+}

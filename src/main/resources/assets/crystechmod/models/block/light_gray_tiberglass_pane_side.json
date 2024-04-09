@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/template_glass_pane_side",
-  "textures": {
-    "pane": "crystechmod:block/light_gray_tiberglass",
-    "edge": "crystechmod:block/light_gray_tiberglass_pane_top"
-  }
-}

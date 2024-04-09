@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:aeries_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "crystechmod:aeries_crystal"
+  }
+}

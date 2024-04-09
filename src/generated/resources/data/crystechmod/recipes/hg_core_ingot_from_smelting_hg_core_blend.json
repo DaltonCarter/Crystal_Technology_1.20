@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "core_steel",
+  "ingredient": {
+    "item": "crystechmod:hg_core_blend"
+  },
+  "result": "crystechmod:hg_core_ingot"
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "gundanium",
+  "ingredient": {
+    "item": "crystechmod:raw_gundanium"
+  },
+  "result": "crystechmod:gundanium_ingot"
+}

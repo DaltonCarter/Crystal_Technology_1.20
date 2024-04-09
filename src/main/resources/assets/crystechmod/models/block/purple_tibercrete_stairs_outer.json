@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "crystechmod:block/purple_tibercrete",
-    "top": "crystechmod:block/purple_tibercrete",
-    "side": "crystechmod:block/purple_tibercrete"
-  }
-}

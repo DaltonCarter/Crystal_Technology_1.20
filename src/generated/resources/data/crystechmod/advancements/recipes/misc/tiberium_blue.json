@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:tiberium_blue"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tiberium_blue_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:tiberium_blue_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_tiberium_blue_block",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:tiberium_blue"
+    ]
+  },
+  "sends_telemetry_event": false
+}

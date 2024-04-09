@@ -96,6 +96,21 @@ Posted By: Dalton Carter
 -Recipe Provider now has recipes for all current blocks/items.
 -Version updated to 0.2.0
 
+4/8/2024
+Version 0.2.0
+Posted By: Dalton Carter
+
+-Tibercrete, Tibercrete Powder, Tiberium Soil, and Ichor Soil added*.
+-Vulnerable Leaves and Tiberium Vulnerable Wood Tags added, but not populated.
+-Datagen updated to contain new additions. Datagen Successfully run.**
+
+*Actual Growth and infection logic commented out until Tiberium Crops, and Plagued wood are implemented.
+
+**Datagen WILL NOT create a recipe for cooking infested cobble claiming there is an error in the result path name,
+inspection of all related parts turned up nothing, retyping out all methods, and names associated with the recipe
+did not work. Recipe for Infested stone by cooking Infested cobble returned to JSON file.
+
+
 ======================================================
 LEGACY 1.16.5 Changelog
 0.5.2

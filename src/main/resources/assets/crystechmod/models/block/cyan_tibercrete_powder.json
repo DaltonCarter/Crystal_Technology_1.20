@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "crystechmod:block/cyan_tibercrete_powder"
-  }
-}

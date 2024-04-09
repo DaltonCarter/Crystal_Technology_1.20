@@ -2,14 +2,14 @@ package com.CartersDev.crystechmod.block;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.custom.FirestoneBlock;
+import com.CartersDev.crystechmod.block.custom.IchorSoilBlock;
+import com.CartersDev.crystechmod.block.custom.TiberiumSoilBlock;
 import com.CartersDev.crystechmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,15 +30,13 @@ public class ModBlocks {
 
 
     //Terrain Blocks
-//    public static final RegistryObject<Block> TIBERIUM_SOIL = registerBlock("tiberium_soil",
-//            () -> new TiberiumSoil(AbstractBlock.Properties.create(Material.EARTH)
-//                    .harvestLevel(3).harvestTool(ToolType.SHOVEL).tickRandomly()
-//                    .setRequiresTool().hardnessAndResistance(5f, 1200.0f).sound(SoundType.GROUND)));
-//
-//    public static final RegistryObject<Block> ICHOR_SOIL = registerBlock("ichor_soil",
-//            () -> new IchorSoil(AbstractBlock.Properties.create(Material.EARTH)
-//                    .harvestLevel(3).harvestTool(ToolType.SHOVEL).tickRandomly()
-//                    .setRequiresTool().hardnessAndResistance(5f, 1200.0f).sound(SoundType.GROUND)));
+    public static final RegistryObject<Block> TIBERIUM_SOIL = registerBlock("tiberium_soil",
+            () -> new TiberiumSoilBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(3f, 1200f).randomTicks()));
+
+    public static final RegistryObject<Block> ICHOR_SOIL = registerBlock("ichor_soil",
+            () -> new IchorSoilBlock(BlockBehaviour.Properties.copy(Blocks.DIRT)
+                    .strength(3f, 1200f).randomTicks()));
 
     public static final RegistryObject<Block> INFESTED_STONE = registerBlock("infested_stone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
@@ -249,7 +247,121 @@ public class ModBlocks {
     //End Ores
 
 
+    //Deco Blocks:
 
+    public static final RegistryObject<Block> BLACK_TIBERCRETE = registerBlock("black_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BLACK_CONCRETE)));
+
+    public static final RegistryObject<Block> BLUE_TIBERCRETE = registerBlock("blue_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BLUE_CONCRETE)));
+
+    public static final RegistryObject<Block> BROWN_TIBERCRETE = registerBlock("brown_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BROWN_CONCRETE)));
+
+    public static final RegistryObject<Block> CYAN_TIBERCRETE = registerBlock("cyan_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CYAN_CONCRETE)));
+
+    public static final RegistryObject<Block> GRAY_TIBERCRETE = registerBlock("gray_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRAY_CONCRETE)));
+
+    public static final RegistryObject<Block> GREEN_TIBERCRETE = registerBlock("green_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GREEN_CONCRETE)));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_TIBERCRETE = registerBlock("light_blue_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LIGHT_BLUE_CONCRETE)));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_TIBERCRETE = registerBlock("light_gray_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LIGHT_GRAY_CONCRETE)));
+
+    public static final RegistryObject<Block> LIME_TIBERCRETE = registerBlock("lime_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LIME_CONCRETE)));
+
+    public static final RegistryObject<Block> MAGENTA_TIBERCRETE = registerBlock("magenta_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.MAGENTA_CONCRETE)));
+
+    public static final RegistryObject<Block> ORANGE_TIBERCRETE = registerBlock("orange_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE)));
+
+    public static final RegistryObject<Block> PINK_TIBERCRETE = registerBlock("pink_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.PINK_CONCRETE)));
+
+    public static final RegistryObject<Block> PURPLE_TIBERCRETE = registerBlock("purple_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.PURPLE_CONCRETE)));
+
+    public static final RegistryObject<Block> RED_TIBERCRETE = registerBlock("red_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.RED_CONCRETE)));
+
+    public static final RegistryObject<Block> WHITE_TIBERCRETE = registerBlock("white_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE)));
+
+    public static final RegistryObject<Block> YELLOW_TIBERCRETE = registerBlock("yellow_tibercrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.YELLOW_CONCRETE)));
+
+    public static final RegistryObject<Block> BLACK_TIBERCRETE_POWDER = registerBlock("black_tibercrete_powder",
+            () -> new ConcretePowderBlock(BLACK_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.BLACK_CONCRETE_POWDER)));
+
+    public static final RegistryObject<Block> BLUE_TIBERCRETE_POWDER = registerBlock("blue_tibercrete_powder",
+            () -> new ConcretePowderBlock(BLUE_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.BLUE_CONCRETE_POWDER)));
+
+    public static final RegistryObject<Block> BROWN_TIBERCRETE_POWDER = registerBlock("brown_tibercrete_powder",
+            () -> new ConcretePowderBlock(BROWN_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.BROWN_CONCRETE_POWDER)));
+
+    public static final RegistryObject<Block> CYAN_TIBERCRETE_POWDER = registerBlock("cyan_tibercrete_powder",
+            () -> new ConcretePowderBlock(CYAN_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.CYAN_CONCRETE_POWDER)));
+
+    public static final RegistryObject<Block> GRAY_TIBERCRETE_POWDER = registerBlock("gray_tibercrete_powder",
+            () -> new ConcretePowderBlock(GRAY_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.GRAY_CONCRETE_POWDER)));
+
+    public static final RegistryObject<Block> GREEN_TIBERCRETE_POWDER = registerBlock("green_tibercrete_powder",
+            () -> new ConcretePowderBlock(GREEN_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.GREEN_CONCRETE_POWDER)));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_TIBERCRETE_POWDER = registerBlock("light_blue_tibercrete_powder",
+            () -> new ConcretePowderBlock(LIGHT_BLUE_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.LIGHT_BLUE_CONCRETE_POWDER)));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_TIBERCRETE_POWDER = registerBlock("light_gray_tibercrete_powder",
+            () -> new ConcretePowderBlock(LIGHT_GRAY_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.LIGHT_GRAY_CONCRETE_POWDER)));
+
+    public static final RegistryObject<Block> LIME_TIBERCRETE_POWDER = registerBlock("lime_tibercrete_powder",
+            () -> new ConcretePowderBlock(LIME_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.LIME_CONCRETE_POWDER)));
+
+    public static final RegistryObject<Block> MAGENTA_TIBERCRETE_POWDER = registerBlock("magenta_tibercrete_powder",
+            () -> new ConcretePowderBlock(MAGENTA_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.MAGENTA_CONCRETE_POWDER)));
+
+    public static final RegistryObject<Block> ORANGE_TIBERCRETE_POWDER = registerBlock("orange_tibercrete_powder",
+            () -> new ConcretePowderBlock(ORANGE_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.ORANGE_CONCRETE_POWDER)));
+
+    public static final RegistryObject<Block> PINK_TIBERCRETE_POWDER = registerBlock("pink_tibercrete_powder",
+            () -> new ConcretePowderBlock(PINK_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.PINK_CONCRETE_POWDER)));
+
+    public static final RegistryObject<Block> PURPLE_TIBERCRETE_POWDER = registerBlock("purple_tibercrete_powder",
+            () -> new ConcretePowderBlock(PURPLE_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.PURPLE_CONCRETE_POWDER)));
+
+    public static final RegistryObject<Block> RED_TIBERCRETE_POWDER = registerBlock("red_tibercrete_powder",
+            () -> new ConcretePowderBlock(RED_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.RED_CONCRETE_POWDER)));
+
+    public static final RegistryObject<Block> WHITE_TIBERCRETE_POWDER = registerBlock("white_tibercrete_powder",
+            () -> new ConcretePowderBlock(WHITE_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.WHITE_CONCRETE_POWDER)));
+
+    public static final RegistryObject<Block> YELLOW_TIBERCRETE_POWDER = registerBlock("yellow_tibercrete_powder",
+            () -> new ConcretePowderBlock(YELLOW_TIBERCRETE.get(),BlockBehaviour.Properties
+                    .copy(Blocks.YELLOW_CONCRETE_POWDER)));
+
+    //End of Deco Blocks
 
 
 

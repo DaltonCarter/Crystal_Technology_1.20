@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "crystechmod:block/yellow_tibercrete",
-    "top": "crystechmod:block/yellow_tibercrete",
-    "side": "crystechmod:block/yellow_tibercrete"
-  }
-}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "crystechmod:hg_core_ingot"
+    }
+  },
+  "pattern": [
+    "HHH",
+    "HHH",
+    "HHH"
+  ],
+  "result": {
+    "item": "crystechmod:hg_core_block"
+  },
+  "show_notification": true
+}

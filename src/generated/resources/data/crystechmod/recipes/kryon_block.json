@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "crystechmod:kryon_crystal"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KKK",
+    "KKK"
+  ],
+  "result": {
+    "item": "crystechmod:kryon_block"
+  },
+  "show_notification": true
+}

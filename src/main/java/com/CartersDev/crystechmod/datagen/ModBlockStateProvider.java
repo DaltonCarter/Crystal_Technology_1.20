@@ -16,6 +16,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+
         blockWithItem(ModBlocks.GUNDANIUM_BLOCK);
         blockWithItem(ModBlocks.ALYTHUM_BLOCK);
         blockWithItem(ModBlocks.ILLYRIM_BLOCK);
@@ -28,10 +29,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TIBERIUM_RED_BLOCK);
         blockWithItem(ModBlocks.TIBERIUM_PURPLE_BLOCK);
 
-        blockWithItem(ModBlocks.AERIES_BLOCK);
-        blockWithItem(ModBlocks.ILLYRIM_BLOCK);
-        blockWithItem(ModBlocks.ENIGMA_BLOCK);
-        blockWithItem(ModBlocks.KRYON_BLOCK);
+        blockWithItem((ModBlocks.AERIES_BLOCK));
+        blockWithItem((ModBlocks.ENIGMA_BLOCK));
+        blockWithItem((ModBlocks.ILLUMINA_BLOCK));
+        blockWithItem((ModBlocks.KRYON_BLOCK));
 
         blockWithItem(ModBlocks.GUNDANIUM_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_GUNDANIUM_ORE);
@@ -56,13 +57,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ILLUMINA_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_ILLUMINA_ORE);
 
-
         blockWithItem(ModBlocks.QUALRITE_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_QUALRITE_ORE);
         blockWithItem(ModBlocks.NETHER_QUALRITE_ORE);
-
-
-
 
         blockWithItem(ModBlocks.INFESTED_STONE);
         blockWithItem(ModBlocks.INFESTED_STONE_BRICKS);
@@ -87,6 +84,44 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ABOREUS_CRYSTAL);
 
         blockWithItem(ModBlocks.FIRESTONE_BLOCK);
+
+        blockWithItem(ModBlocks.BLACK_TIBERCRETE);
+        blockWithItem(ModBlocks.BLUE_TIBERCRETE);
+        blockWithItem(ModBlocks.BROWN_TIBERCRETE);
+        blockWithItem(ModBlocks.CYAN_TIBERCRETE);
+        blockWithItem(ModBlocks.GRAY_TIBERCRETE);
+        blockWithItem(ModBlocks.GREEN_TIBERCRETE);
+        blockWithItem(ModBlocks.LIGHT_BLUE_TIBERCRETE);
+        blockWithItem(ModBlocks.LIGHT_GRAY_TIBERCRETE);
+        blockWithItem(ModBlocks.LIME_TIBERCRETE);
+        blockWithItem(ModBlocks.MAGENTA_TIBERCRETE);
+        blockWithItem(ModBlocks.ORANGE_TIBERCRETE);
+        blockWithItem(ModBlocks.PINK_TIBERCRETE);
+        blockWithItem(ModBlocks.PURPLE_TIBERCRETE);
+        blockWithItem(ModBlocks.RED_TIBERCRETE);
+        blockWithItem(ModBlocks.WHITE_TIBERCRETE);
+        blockWithItem(ModBlocks.YELLOW_TIBERCRETE);
+
+        blockWithItem(ModBlocks.BLACK_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.BLUE_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.BROWN_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.CYAN_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.GRAY_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.GREEN_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.LIGHT_BLUE_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.LIGHT_GRAY_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.LIME_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.MAGENTA_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.ORANGE_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.PINK_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.PURPLE_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.RED_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.WHITE_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.YELLOW_TIBERCRETE_POWDER);
+
+        blockWithItem(ModBlocks.TIBERIUM_SOIL);
+        blockWithItem(ModBlocks.ICHOR_SOIL);
+
 
 
     }

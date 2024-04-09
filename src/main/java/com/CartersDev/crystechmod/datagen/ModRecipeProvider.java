@@ -4,13 +4,16 @@ package com.CartersDev.crystechmod.datagen;
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.item.ModItems;
+import com.CartersDev.crystechmod.util.ModTags;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.StonecutterRecipe;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.Iterator;
@@ -29,7 +32,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
     private static final List<ItemLike> MG_CORE_STEEL = List.of(ModItems.MG_CORE_BLEND.get());
     private static final List<ItemLike> HG_CORE_STEEL = List.of(ModItems.HG_CORE_BLEND.get());
     private static final List<ItemLike> ILLYRIM_ALLOY = List.of(ModItems.ILLYRIM_BLEND.get());
-    private static final List<ItemLike> INFESTED_STONE = List.of(ModBlocks.INFESTED_COBBLE.get());
+
 
 
     public ModRecipeProvider(PackOutput pOutput) {
@@ -58,8 +61,6 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         oreSmelting(consumer, HG_CORE_STEEL, RecipeCategory.MISC, ModItems.HG_CORE_INGOT.get(), 0.25f, 200, "core_steel");
         oreBlasting(consumer, HG_CORE_STEEL, RecipeCategory.MISC, ModItems.HG_CORE_INGOT.get(), 0.25f, 100, "core_steel");
 
-        oreSmelting(consumer, INFESTED_STONE, RecipeCategory.MISC, ModBlocks.INFESTED_STONE.get(), 0.25f, 200, "infested_stone");
-        oreBlasting(consumer, INFESTED_STONE, RecipeCategory.MISC, ModBlocks.INFESTED_STONE.get(), 0.25f, 100, "infested_stone");
 
 
 
@@ -184,7 +185,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.FIRESTONE.get()), has(ModItems.FIRESTONE.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.INFESTED_STONE_BRICKS.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.INFESTED_STONE_BRICKS.get(), 4)
                 .pattern("   ")
                 .pattern(" SS")
                 .pattern(" SS")
@@ -268,6 +269,249 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModBlocks.FIRESTONE_BLOCK.get()), has(ModBlocks.FIRESTONE_BLOCK.get()))
                 .save(consumer);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.BLACK_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.BLACK_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.BLACK_TIBERCRETE_POWDER.get()), has(ModBlocks.BLACK_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.BLUE_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.BLUE_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.BLUE_TIBERCRETE_POWDER.get()), has(ModBlocks.BLUE_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.BROWN_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.BROWN_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.BROWN_TIBERCRETE_POWDER.get()), has(ModBlocks.BROWN_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.CYAN_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.CYAN_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.CYAN_TIBERCRETE_POWDER.get()), has(ModBlocks.CYAN_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.GRAY_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.GRAY_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.GRAY_TIBERCRETE_POWDER.get()), has(ModBlocks.GRAY_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.GREEN_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.GREEN_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.GREEN_TIBERCRETE_POWDER.get()), has(ModBlocks.GREEN_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.LIGHT_BLUE_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.LIGHT_BLUE_TIBERCRETE_POWDER.get()), has(ModBlocks.LIGHT_BLUE_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.LIGHT_GRAY_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.LIGHT_GRAY_TIBERCRETE_POWDER.get()), has(ModBlocks.LIGHT_GRAY_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.LIME_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.LIME_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.LIME_TIBERCRETE_POWDER.get()), has(ModBlocks.LIME_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MAGENTA_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.MAGENTA_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.MAGENTA_TIBERCRETE_POWDER.get()), has(ModBlocks.MAGENTA_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.ORANGE_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.ORANGE_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.ORANGE_TIBERCRETE_POWDER.get()), has(ModBlocks.ORANGE_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.PINK_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.PINK_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.PINK_TIBERCRETE_POWDER.get()), has(ModBlocks.PINK_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.PURPLE_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.PURPLE_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.PURPLE_TIBERCRETE_POWDER.get()), has(ModBlocks.PURPLE_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.RED_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.RED_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.RED_TIBERCRETE_POWDER.get()), has(ModBlocks.RED_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.WHITE_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.WHITE_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.WHITE_TIBERCRETE_POWDER.get()), has(ModBlocks.WHITE_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.YELLOW_TIBERCRETE_POWDER.get(), 8)
+                .requires(ModItems.TIBERIUM.get(), 4)
+                .requires(Items.YELLOW_DYE, 1)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(ModTags.Items.TIBERCRETE_SANDS)
+                .requires(Items.GRAVEL, 2)
+                .unlockedBy(getHasName(ModBlocks.YELLOW_TIBERCRETE_POWDER.get()), has(ModBlocks.YELLOW_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.BLACK_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.BLACK_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.BLACK_TIBERCRETE_POWDER.get()), has(ModBlocks.BLACK_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.BLUE_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.BLUE_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.BLUE_TIBERCRETE_POWDER.get()), has(ModBlocks.BLUE_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.BROWN_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.BROWN_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.BROWN_TIBERCRETE_POWDER.get()), has(ModBlocks.BROWN_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.CYAN_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.CYAN_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.CYAN_TIBERCRETE_POWDER.get()), has(ModBlocks.CYAN_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.GRAY_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.GRAY_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.GRAY_TIBERCRETE_POWDER.get()), has(ModBlocks.GRAY_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.GREEN_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.GREEN_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.GREEN_TIBERCRETE_POWDER.get()), has(ModBlocks.GREEN_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.LIGHT_BLUE_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.LIGHT_BLUE_TIBERCRETE_POWDER.get()), has(ModBlocks.LIGHT_BLUE_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.LIGHT_GRAY_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.LIGHT_GRAY_TIBERCRETE_POWDER.get()), has(ModBlocks.LIGHT_GRAY_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.LIME_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.LIME_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.LIME_TIBERCRETE_POWDER.get()), has(ModBlocks.LIME_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MAGENTA_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.MAGENTA_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.MAGENTA_TIBERCRETE_POWDER.get()), has(ModBlocks.MAGENTA_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.ORANGE_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.ORANGE_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.ORANGE_TIBERCRETE_POWDER.get()), has(ModBlocks.ORANGE_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.PINK_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.PINK_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.PINK_TIBERCRETE_POWDER.get()), has(ModBlocks.PINK_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.PURPLE_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.PURPLE_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.PURPLE_TIBERCRETE_POWDER.get()), has(ModBlocks.PURPLE_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.RED_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.RED_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.RED_TIBERCRETE_POWDER.get()), has(ModBlocks.RED_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.WHITE_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.WHITE_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.WHITE_TIBERCRETE_POWDER.get()), has(ModBlocks.WHITE_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.YELLOW_TIBERCRETE.get(), 8)
+                .requires(ModBlocks.YELLOW_TIBERCRETE_POWDER.get(), 8)
+                .requires(Items.WATER_BUCKET, 1)
+                .unlockedBy(getHasName(ModBlocks.YELLOW_TIBERCRETE_POWDER.get()), has(ModBlocks.YELLOW_TIBERCRETE_POWDER.get()))
+                .save(consumer);
+
+
+
+
     //Stonecutter:
 
 
@@ -299,7 +543,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
             SimpleCookingRecipeBuilder.generic(Ingredient.of(new ItemLike[]{itemlike}), pCategory, pResult,
                     pExperience, pCookingTime, pCookingSerializer)
                     .group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
-                    .save(pFinishedRecipeConsumer, CrystalTech.MOD_ID + ":" +(pResult) + pRecipeName + "_" + getItemName(itemlike));
+                    .save(pFinishedRecipeConsumer, CrystalTech.MOD_ID + ":" + (pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
 
     }

@@ -1,0 +1,27 @@
+{
+  "values": [
+    "crystechmod:lg_core_block",
+    "crystechmod:mg_core_block",
+    "crystechmod:hg_core_block",
+    "crystechmod:tiberium_red_block",
+    "crystechmod:aeries_ore",
+    "crystechmod:deepslate_aeries_ore",
+    "crystechmod:nether_aeries_ore",
+    "crystechmod:enigma_ore",
+    "crystechmod:deepslate_enigma_ore",
+    "crystechmod:end_enigma_ore",
+    "crystechmod:illumina_ore",
+    "crystechmod:deepslate_illumina_ore",
+    "crystechmod:kryon_ore",
+    "crystechmod:deepslate_kryon_ore",
+    "crystechmod:nether_kryon_ore",
+    "crystechmod:end_kryon_ore",
+    "crystechmod:alythum_ore",
+    "crystechmod:deepslate_alythum_ore",
+    "crystechmod:nether_alythum_ore",
+    "crystechmod:qualrite_ore",
+    "crystechmod:deepslate_qualrite_ore",
+    "crystechmod:nether_qualrite_ore",
+    "crystechmod:ichor_soil"
+  ]
+}

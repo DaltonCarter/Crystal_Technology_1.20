@@ -69,6 +69,43 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.CRUENTUS_CRYSTAL.get());
         this.dropSelf(ModBlocks.ABOREUS_CRYSTAL.get());
 
+        this.dropSelf(ModBlocks.BLACK_TIBERCRETE.get());
+        this.dropSelf(ModBlocks.BLUE_TIBERCRETE.get());
+        this.dropSelf(ModBlocks.BROWN_TIBERCRETE.get());
+        this.dropSelf(ModBlocks.CYAN_TIBERCRETE.get());
+        this.dropSelf(ModBlocks.GRAY_TIBERCRETE.get());
+        this.dropSelf(ModBlocks.GREEN_TIBERCRETE.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_TIBERCRETE.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_TIBERCRETE.get());
+        this.dropSelf(ModBlocks.LIME_TIBERCRETE.get());
+        this.dropSelf(ModBlocks.MAGENTA_TIBERCRETE.get());
+        this.dropSelf(ModBlocks.ORANGE_TIBERCRETE.get());
+        this.dropSelf(ModBlocks.PINK_TIBERCRETE.get());
+        this.dropSelf(ModBlocks.PURPLE_TIBERCRETE.get());
+        this.dropSelf(ModBlocks.RED_TIBERCRETE.get());
+        this.dropSelf(ModBlocks.WHITE_TIBERCRETE.get());
+        this.dropSelf(ModBlocks.YELLOW_TIBERCRETE.get());
+
+        this.dropSelf(ModBlocks.BLACK_TIBERCRETE_POWDER.get());
+        this.dropSelf(ModBlocks.BLUE_TIBERCRETE_POWDER.get());
+        this.dropSelf(ModBlocks.BROWN_TIBERCRETE_POWDER.get());
+        this.dropSelf(ModBlocks.CYAN_TIBERCRETE_POWDER.get());
+        this.dropSelf(ModBlocks.GRAY_TIBERCRETE_POWDER.get());
+        this.dropSelf(ModBlocks.GREEN_TIBERCRETE_POWDER.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_TIBERCRETE_POWDER.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_TIBERCRETE_POWDER.get());
+        this.dropSelf(ModBlocks.LIME_TIBERCRETE_POWDER.get());
+        this.dropSelf(ModBlocks.MAGENTA_TIBERCRETE_POWDER.get());
+        this.dropSelf(ModBlocks.ORANGE_TIBERCRETE_POWDER.get());
+        this.dropSelf(ModBlocks.PINK_TIBERCRETE_POWDER.get());
+        this.dropSelf(ModBlocks.PURPLE_TIBERCRETE_POWDER.get());
+        this.dropSelf(ModBlocks.RED_TIBERCRETE_POWDER.get());
+        this.dropSelf(ModBlocks.WHITE_TIBERCRETE_POWDER.get());
+        this.dropSelf(ModBlocks.YELLOW_TIBERCRETE_POWDER.get());
+
+        this.dropSelf(ModBlocks.TIBERIUM_SOIL.get());
+        this.dropSelf(ModBlocks.ICHOR_SOIL.get());
+
 
         //Ore Drops:
         this.add(ModBlocks.AERIES_ORE.get(),

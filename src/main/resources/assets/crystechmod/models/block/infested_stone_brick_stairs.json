@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "crystechmod:block/infested_stone_bricks",
-    "top": "crystechmod:block/infested_stone_bricks",
-    "side": "crystechmod:block/infested_stone_bricks"
-  }
-}

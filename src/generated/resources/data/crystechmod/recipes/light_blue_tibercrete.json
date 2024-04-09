@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:light_blue_tibercrete_powder"
+    },
+    {
+      "item": "crystechmod:light_blue_tibercrete_powder"
+    },
+    {
+      "item": "crystechmod:light_blue_tibercrete_powder"
+    },
+    {
+      "item": "crystechmod:light_blue_tibercrete_powder"
+    },
+    {
+      "item": "crystechmod:light_blue_tibercrete_powder"
+    },
+    {
+      "item": "crystechmod:light_blue_tibercrete_powder"
+    },
+    {
+      "item": "crystechmod:light_blue_tibercrete_powder"
+    },
+    {
+      "item": "crystechmod:light_blue_tibercrete_powder"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "item": "crystechmod:light_blue_tibercrete"
+  }
+}

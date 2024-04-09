@@ -4,9 +4,11 @@ package com.CartersDev.crystechmod.datagen;
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
 
+import com.CartersDev.crystechmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -23,6 +25,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
 
 
+        this.tag(ModTags.Blocks.TIBERCRETE_SANDS)
+                .add(ModBlocks.RED_ZONE_SAND.get(),
+                        ModBlocks.YELLOW_ZONE_SAND.get(),
+                        Blocks.SAND,
+                        Blocks.RED_SAND);
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.TIBERIUM_BLOCK.get(),
@@ -82,7 +89,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(),
                         ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(),
                         ModBlocks.SEEDED_RED_ZONE_DIRT.get(),
-                        ModBlocks.SEEDED_DIRT.get()
+                        ModBlocks.SEEDED_DIRT.get(),
+                        ModBlocks.TIBERIUM_SOIL.get(),
+                        ModBlocks.ICHOR_SOIL.get()
                 );
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
@@ -110,7 +119,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.GUNDANIUM_BLOCK.get(),
                 ModBlocks.ALYTHUM_BLOCK.get(),
                 ModBlocks.ILLYRIM_BLOCK.get(),
-                ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get()
+                ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get(),
+                ModBlocks.TIBERIUM_SOIL.get()
                 );
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
@@ -135,7 +145,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                  ModBlocks.NETHER_ALYTHUM_ORE.get(),
                  ModBlocks.QUALRITE_ORE.get(),
                  ModBlocks.DEEPSLATE_QUALRITE_ORE.get(),
-                 ModBlocks.NETHER_QUALRITE_ORE.get()
+                 ModBlocks.NETHER_QUALRITE_ORE.get(),
+                 ModBlocks.ICHOR_SOIL.get()
                 );
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:mg_core_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "crystechmod:mg_core_ingot"
+  }
+}

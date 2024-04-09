@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/template_glass_pane_side_alt",
-  "textures": {
-    "pane": "crystechmod:block/wolf_tiberglass",
-    "edge": "crystechmod:block/black_tiberglass_pane_top"
-  }
-}
