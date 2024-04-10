@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:lime_dye"
+    },
+    "G": {
+      "item": "crystechmod:clear_tiberglass"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GDG",
+    "GGG"
+  ],
+  "result": {
+    "count": 8,
+    "item": "crystechmod:lime_tiberglass"
+  },
+  "show_notification": true
+}

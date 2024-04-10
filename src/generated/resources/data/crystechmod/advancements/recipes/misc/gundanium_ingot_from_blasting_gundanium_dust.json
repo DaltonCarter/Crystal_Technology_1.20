@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gundanium_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:gundanium_dust"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:gundanium_ingot_from_blasting_gundanium_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_gundanium_dust",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:gundanium_ingot_from_blasting_gundanium_dust"
+    ]
+  },
+  "sends_telemetry_event": false
+}

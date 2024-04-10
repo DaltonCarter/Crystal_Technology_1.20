@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "crystechmod:gdi_emblem"
+    },
+    "G": {
+      "item": "crystechmod:yellow_tiberglass"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GEG",
+    "GGG"
+  ],
+  "result": {
+    "count": 8,
+    "item": "crystechmod:gdi_tiberglass"
+  },
+  "show_notification": true
+}

@@ -364,7 +364,107 @@ public class ModBlocks {
     //End of Deco Blocks
 
 
+    //Glass:
 
+    public static final RegistryObject<Block> CLEAR_TIBERGLASS = registerBlock("clear_tiberglass",
+            () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
+
+    public static final RegistryObject<Block> MOSAIC_TIBERGLASS = registerBlock("mosaic_tiberglass",
+            () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
+
+    public static final RegistryObject<Block> GDI_TIBERGLASS = registerBlock("gdi_tiberglass",
+            () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
+
+    public static final RegistryObject<Block> NOD_TIBERGLASS = registerBlock("nod_tiberglass",
+            () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
+
+    public static final RegistryObject<Block> WOLF_TIBERGLASS = registerBlock("wolf_tiberglass",
+            () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
+
+    public static final RegistryObject<Block> BLACK_TIBERGLASS = registerBlock("black_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.BLACK,BlockBehaviour.Properties.copy(Blocks.BLACK_STAINED_GLASS)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> BLUE_TIBERGLASS = registerBlock("blue_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.BLUE,BlockBehaviour.Properties.copy(Blocks.BLUE_STAINED_GLASS)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> BROWN_TIBERGLASS = registerBlock("brown_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.BROWN,BlockBehaviour.Properties.copy(Blocks.BROWN_STAINED_GLASS)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> CYAN_TIBERGLASS = registerBlock("cyan_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.CYAN,BlockBehaviour.Properties.copy(Blocks.CYAN_STAINED_GLASS)));
+
+    public static final RegistryObject<Block> GRAY_TIBERGLASS = registerBlock("gray_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.GRAY,BlockBehaviour.Properties.copy(Blocks.GRAY_STAINED_GLASS)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> GREEN_TIBERGLASS = registerBlock("green_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.GREEN,BlockBehaviour.Properties.copy(Blocks.GREEN_STAINED_GLASS)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_TIBERGLASS = registerBlock("light_blue_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.LIGHT_BLUE,BlockBehaviour.Properties.copy(Blocks.LIGHT_BLUE_STAINED_GLASS)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_TIBERGLASS = registerBlock("light_gray_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.LIGHT_GRAY,BlockBehaviour.Properties.copy(Blocks.LIGHT_GRAY_STAINED_GLASS)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> LIME_TIBERGLASS = registerBlock("lime_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.LIME,BlockBehaviour.Properties.copy(Blocks.LIME_STAINED_GLASS)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> MAGENTA_TIBERGLASS = registerBlock("magenta_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.MAGENTA,BlockBehaviour.Properties.copy(Blocks.MAGENTA_STAINED_GLASS)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> ORANGE_TIBERGLASS = registerBlock("orange_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.ORANGE,BlockBehaviour.Properties.copy(Blocks.ORANGE_STAINED_GLASS)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> PINK_TIBERGLASS = registerBlock("pink_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.PINK,BlockBehaviour.Properties.copy(Blocks.PINK_STAINED_GLASS)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> PURPLE_TIBERGLASS = registerBlock("purple_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.PURPLE,BlockBehaviour.Properties.copy(Blocks.PURPLE_STAINED_GLASS)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> RED_TIBERGLASS = registerBlock("red_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.RED,BlockBehaviour.Properties.copy(Blocks.RED_STAINED_GLASS)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> WHITE_TIBERGLASS = registerBlock("white_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.WHITE,BlockBehaviour.Properties.copy(Blocks.WHITE_STAINED_GLASS)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> YELLOW_TIBERGLASS = registerBlock("yellow_tiberglass",
+            () -> new StainedGlassBlock(DyeColor.YELLOW,BlockBehaviour.Properties.copy(Blocks.YELLOW_STAINED_GLASS)
+                    .noOcclusion()));
+
+//    public static final RegistryObject<Block> CLEAR_TIBERGLASS_PANE = registerBlock("clear_tiberglass_pane",
+//            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE)));
+//
+//    public static final RegistryObject<Block> MOSAIC_TIBERGLASS_PANE = registerBlock("mosaic_tiberglass_pane",
+//            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE)));
+//
+//    public static final RegistryObject<Block> GDI_TIBERGLASS_PANE = registerBlock("gdi_tiberglass_pane",
+//            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE)));
+//
+//    public static final RegistryObject<Block> NOD_TIBERGLASS_PANE = registerBlock("nod_tiberglass_pane",
+//            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE)));
+//
+//    public static final RegistryObject<Block> WOLF_TIBERGLASS_PANE = registerBlock("wolf_tiberglass_pane",
+//            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE)));
+
+
+
+
+
+
+    //End of Glass
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

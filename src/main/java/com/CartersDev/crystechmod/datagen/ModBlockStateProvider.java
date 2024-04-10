@@ -85,6 +85,28 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.FIRESTONE_BLOCK);
 
+        blockWithItem((ModBlocks.CLEAR_TIBERGLASS));
+        blockWithItem((ModBlocks.MOSAIC_TIBERGLASS));
+        blockWithItem((ModBlocks.GDI_TIBERGLASS));
+        blockWithItem((ModBlocks.NOD_TIBERGLASS));
+        blockWithItem((ModBlocks.WOLF_TIBERGLASS));
+        blockWithItem((ModBlocks.BLACK_TIBERGLASS));
+        blockWithItem((ModBlocks.BLUE_TIBERGLASS));
+        blockWithItem((ModBlocks.BROWN_TIBERGLASS));
+        blockWithItem((ModBlocks.CYAN_TIBERGLASS));
+        blockWithItem((ModBlocks.GRAY_TIBERGLASS));
+        blockWithItem((ModBlocks.GREEN_TIBERGLASS));
+        blockWithItem((ModBlocks.LIGHT_BLUE_TIBERGLASS));
+        blockWithItem((ModBlocks.LIGHT_GRAY_TIBERGLASS));
+        blockWithItem((ModBlocks.LIME_TIBERGLASS));
+        blockWithItem((ModBlocks.MAGENTA_TIBERGLASS));
+        blockWithItem((ModBlocks.ORANGE_TIBERGLASS));
+        blockWithItem((ModBlocks.PINK_TIBERGLASS));
+        blockWithItem((ModBlocks.PURPLE_TIBERGLASS));
+        blockWithItem((ModBlocks.RED_TIBERGLASS));
+        blockWithItem((ModBlocks.WHITE_TIBERGLASS));
+        blockWithItem((ModBlocks.YELLOW_TIBERGLASS));
+
         blockWithItem(ModBlocks.BLACK_TIBERCRETE);
         blockWithItem(ModBlocks.BLUE_TIBERCRETE);
         blockWithItem(ModBlocks.BROWN_TIBERCRETE);
@@ -130,5 +152,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
    }
+
 
 }

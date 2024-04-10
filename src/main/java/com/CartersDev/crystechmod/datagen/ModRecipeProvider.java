@@ -23,15 +23,17 @@ import java.util.function.Consumer;
 public class ModRecipeProvider  extends RecipeProvider implements IConditionBuilder {
 
     private static final List<ItemLike> GUNDANIUM_SMELTABLES = List.of(ModItems.RAW_GUNDANIUM.get(),
-            ModBlocks.GUNDANIUM_ORE.get(), ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get());
+            ModItems.GUNDANIUM_DUST.get(), ModBlocks.GUNDANIUM_ORE.get(), ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get());
 
     private static final List<ItemLike> ALYTHUM_SMELTABLES = List.of(ModItems.RAW_ALYTHUM.get(),
-            ModBlocks.ALYTHUM_ORE.get(), ModBlocks.DEEPSLATE_ALYTHUM_ORE.get(), ModBlocks.NETHER_ALYTHUM_ORE.get());
+            ModItems.ALYTHUM_DUST.get(), ModBlocks.ALYTHUM_ORE.get(), ModBlocks.DEEPSLATE_ALYTHUM_ORE.get(), ModBlocks.NETHER_ALYTHUM_ORE.get());
 
     private static final List<ItemLike> LG_CORE_STEEL = List.of(ModItems.LG_CORE_BLEND.get());
     private static final List<ItemLike> MG_CORE_STEEL = List.of(ModItems.MG_CORE_BLEND.get());
     private static final List<ItemLike> HG_CORE_STEEL = List.of(ModItems.HG_CORE_BLEND.get());
     private static final List<ItemLike> ILLYRIM_ALLOY = List.of(ModItems.ILLYRIM_BLEND.get());
+    private static final List<ItemLike> TIBERGLASS_SMELTABLES = List.of(ModBlocks.YELLOW_ZONE_SAND.get(),
+            ModBlocks.RED_ZONE_SAND.get());
 
 
 
@@ -60,7 +62,6 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
         oreSmelting(consumer, HG_CORE_STEEL, RecipeCategory.MISC, ModItems.HG_CORE_INGOT.get(), 0.25f, 200, "core_steel");
         oreBlasting(consumer, HG_CORE_STEEL, RecipeCategory.MISC, ModItems.HG_CORE_INGOT.get(), 0.25f, 100, "core_steel");
-
 
 
 
@@ -191,6 +192,189 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" SS")
                 .define('S', ModBlocks.INFESTED_STONE.get())
                 .unlockedBy(getHasName(ModBlocks.INFESTED_STONE.get()), has(ModBlocks.INFESTED_STONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MOSAIC_TIBERGLASS.get(), 5)
+                .pattern("TGB")
+                .pattern("GGG")
+                .pattern("RGP")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('T', ModItems.TIBERIUM.get())
+                .define('B', ModItems.TIBERIUM_BLUE.get())
+                .define('R', ModItems.TIBERIUM_RED.get())
+                .define('P', ModItems.TIBERIUM_PURPLE.get())
+                .unlockedBy(getHasName(ModBlocks.MOSAIC_TIBERGLASS.get()), has(ModBlocks.MOSAIC_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GDI_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GEG")
+                .pattern("GGG")
+                .define('G', ModBlocks.YELLOW_TIBERGLASS.get())
+                .define('E', ModItems.GDI_EMBLEM.get())
+                .unlockedBy(getHasName(ModBlocks.GDI_TIBERGLASS.get()), has(ModBlocks.GDI_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NOD_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GEG")
+                .pattern("GGG")
+                .define('G', ModBlocks.RED_TIBERGLASS.get())
+                .define('E', ModItems.NOD_EMBLEM.get())
+                .unlockedBy(getHasName(ModBlocks.NOD_TIBERGLASS.get()), has(ModBlocks.NOD_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WOLF_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GEG")
+                .pattern("GGG")
+                .define('G', ModBlocks.BLACK_TIBERGLASS.get())
+                .define('E', ModItems.WOLF_EMBLEM.get())
+                .unlockedBy(getHasName(ModBlocks.WOLF_TIBERGLASS.get()), has(ModBlocks.WOLF_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.BLACK_DYE)
+                .unlockedBy(getHasName(ModBlocks.BLACK_TIBERGLASS.get()), has(ModBlocks.BLACK_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.BLUE_DYE)
+                .unlockedBy(getHasName(ModBlocks.BLUE_TIBERGLASS.get()), has(ModBlocks.BLUE_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.BROWN_DYE)
+                .unlockedBy(getHasName(ModBlocks.BROWN_TIBERGLASS.get()), has(ModBlocks.BROWN_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.CYAN_DYE)
+                .unlockedBy(getHasName(ModBlocks.CYAN_TIBERGLASS.get()), has(ModBlocks.CYAN_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.GRAY_DYE)
+                .unlockedBy(getHasName(ModBlocks.GRAY_TIBERGLASS.get()), has(ModBlocks.GRAY_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.LIGHT_BLUE_DYE)
+                .unlockedBy(getHasName(ModBlocks.LIGHT_BLUE_TIBERGLASS.get()), has(ModBlocks.LIGHT_BLUE_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.LIGHT_GRAY_DYE)
+                .unlockedBy(getHasName(ModBlocks.LIGHT_GRAY_TIBERGLASS.get()), has(ModBlocks.LIGHT_GRAY_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.LIME_DYE)
+                .unlockedBy(getHasName(ModBlocks.LIME_TIBERGLASS.get()), has(ModBlocks.LIME_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.MAGENTA_DYE)
+                .unlockedBy(getHasName(ModBlocks.MAGENTA_TIBERGLASS.get()), has(ModBlocks.MAGENTA_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.ORANGE_DYE)
+                .unlockedBy(getHasName(ModBlocks.ORANGE_TIBERGLASS.get()), has(ModBlocks.ORANGE_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.PINK_DYE)
+                .unlockedBy(getHasName(ModBlocks.PINK_TIBERGLASS.get()), has(ModBlocks.PINK_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.PURPLE_DYE)
+                .unlockedBy(getHasName(ModBlocks.PURPLE_TIBERGLASS.get()), has(ModBlocks.PURPLE_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.RED_DYE)
+                .unlockedBy(getHasName(ModBlocks.RED_TIBERGLASS.get()), has(ModBlocks.RED_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.GREEN_DYE)
+                .unlockedBy(getHasName(ModBlocks.GREEN_TIBERGLASS.get()), has(ModBlocks.GREEN_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.WHITE_DYE)
+                .unlockedBy(getHasName(ModBlocks.WHITE_TIBERGLASS.get()), has(ModBlocks.WHITE_TIBERGLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_TIBERGLASS.get(), 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .define('D', Items.YELLOW_DYE)
+                .unlockedBy(getHasName(ModBlocks.YELLOW_TIBERGLASS.get()), has(ModBlocks.YELLOW_TIBERGLASS.get()))
                 .save(consumer);
 
         //Shapeless Crafting:
@@ -547,4 +731,6 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         }
 
     }
+
+
 }

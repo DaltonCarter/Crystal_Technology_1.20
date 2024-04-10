@@ -128,6 +128,28 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                     output.accept(ModBlocks.CRUENTUS_CRYSTAL.get());
                     output.accept(ModBlocks.ABOREUS_CRYSTAL.get());
 
+                    output.accept(ModBlocks.CLEAR_TIBERGLASS.get());
+                    output.accept(ModBlocks.MOSAIC_TIBERGLASS.get());
+                    output.accept(ModBlocks.GDI_TIBERGLASS.get());
+                    output.accept(ModBlocks.NOD_TIBERGLASS.get());
+                    output.accept(ModBlocks.WOLF_TIBERGLASS.get());
+                    output.accept(ModBlocks.BLACK_TIBERGLASS.get());
+                    output.accept(ModBlocks.BLUE_TIBERGLASS.get());
+                    output.accept(ModBlocks.BROWN_TIBERGLASS.get());
+                    output.accept(ModBlocks.CYAN_TIBERGLASS.get());
+                    output.accept(ModBlocks.GRAY_TIBERGLASS.get());
+                    output.accept(ModBlocks.GREEN_TIBERGLASS.get());
+                    output.accept(ModBlocks.LIGHT_BLUE_TIBERGLASS.get());
+                    output.accept(ModBlocks.LIGHT_GRAY_TIBERGLASS.get());
+                    output.accept(ModBlocks.LIME_TIBERGLASS.get());
+                    output.accept(ModBlocks.MAGENTA_TIBERGLASS.get());
+                    output.accept(ModBlocks.ORANGE_TIBERGLASS.get());
+                    output.accept(ModBlocks.PINK_TIBERGLASS.get());
+                    output.accept(ModBlocks.PURPLE_TIBERGLASS.get());
+                    output.accept(ModBlocks.RED_TIBERGLASS.get());
+                    output.accept(ModBlocks.WHITE_TIBERGLASS.get());
+                    output.accept(ModBlocks.YELLOW_TIBERGLASS.get());
+
                     output.accept(ModBlocks.BLACK_TIBERCRETE.get());
                     output.accept(ModBlocks.BLACK_TIBERCRETE_POWDER.get());
                     output.accept(ModBlocks.BLUE_TIBERCRETE.get());

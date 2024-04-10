@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:tiberium_blue"
+    },
+    "G": {
+      "item": "crystechmod:clear_tiberglass"
+    },
+    "P": {
+      "item": "crystechmod:tiberium_purple"
+    },
+    "R": {
+      "item": "crystechmod:tiberium_red"
+    },
+    "T": {
+      "item": "crystechmod:tiberium"
+    }
+  },
+  "pattern": [
+    "TGB",
+    "GGG",
+    "RGP"
+  ],
+  "result": {
+    "count": 5,
+    "item": "crystechmod:mosaic_tiberglass"
+  },
+  "show_notification": true
+}

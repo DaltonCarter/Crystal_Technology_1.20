@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "crystechmod:red_zone_sand"
+  },
+  "result": "crystechmod:clear_tiberglass",
+  "experience": 0.1,
+  "cookingtime": 200
+}

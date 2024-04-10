@@ -103,6 +103,28 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.WHITE_TIBERCRETE_POWDER.get());
         this.dropSelf(ModBlocks.YELLOW_TIBERCRETE_POWDER.get());
 
+        this.dropSelf(ModBlocks.CLEAR_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.MOSAIC_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.GDI_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.NOD_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.WOLF_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.BLACK_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.BLUE_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.BROWN_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.CYAN_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.GREEN_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.GRAY_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.LIME_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.MAGENTA_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.ORANGE_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.PINK_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.PURPLE_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.RED_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.WHITE_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.YELLOW_TIBERGLASS.get());
+
         this.dropSelf(ModBlocks.TIBERIUM_SOIL.get());
         this.dropSelf(ModBlocks.ICHOR_SOIL.get());
 

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "crystechmod:nod_emblem"
+    },
+    "G": {
+      "item": "crystechmod:red_tiberglass"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GEG",
+    "GGG"
+  ],
+  "result": {
+    "count": 8,
+    "item": "crystechmod:nod_tiberglass"
+  },
+  "show_notification": true
+}

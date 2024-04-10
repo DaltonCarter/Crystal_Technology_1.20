@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "crystechmod:wolf_emblem"
+    },
+    "G": {
+      "item": "crystechmod:black_tiberglass"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GEG",
+    "GGG"
+  ],
+  "result": {
+    "count": 8,
+    "item": "crystechmod:wolf_tiberglass"
+  },
+  "show_notification": true
+}

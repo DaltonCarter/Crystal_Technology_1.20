@@ -12,6 +12,7 @@ Changelog initiated:
 -Christened Version 0.1
 -Moved over License, ReadMe, Credits, and 1.16.5 Change log (Present under Heading LEGACY)
 
+-------------------------------------------------------------------------------
 
 3/28/2024
 Version 0.1.5
@@ -37,6 +38,7 @@ Posted By: Dalton Carter
         & Green, Blue, Red, Purple Tibnerium)
     -Added Basic Ores (Aeries, Enigma, Kryon, Illumina, Qualrite, Gundanium, and Alythum) NO ORE GEN
 
+-------------------------------------------------------------------------------
 
 3/31/2024
 Version 0.1.5
@@ -47,6 +49,7 @@ Posted By: Dalton Carter
 -Added Tool and mineable tags
 -added existing blocks to Tool, and Mineable tags.
 
+-------------------------------------------------------------------------------
 
 4/3/2024
 Version 0.1.5
@@ -56,6 +59,7 @@ Posted By: Dalton Carter
 -Created Mod Food entries for the Tiberium Dusts, they are considered W.I.P
 -Added Fuel Item Class for creating burnables.
 
+-------------------------------------------------------------------------------
 
 4/4/2024
 Version 0.1.5
@@ -67,6 +71,7 @@ Posted By: Dalton Carter
 -Began Implementing Data Gen, this will be an ongoing process in order to catch up with what has already been
 made and transferred. At this time only some data has been filled in, others are present as placeholders.
 
+-------------------------------------------------------------------------------
 
 4/5/2024
 Version 0.1.5
@@ -79,6 +84,7 @@ Posted By: Dalton Carter
 -Added Ore Variants to Mod Blocks Class
 -BlockStates DataGen now has all currently transferred and implemented Blocks.
 
+-------------------------------------------------------------------------------
 
 4/6/2024
 Version 0.1.5
@@ -87,6 +93,7 @@ Posted By: Dalton Carter
 -Tag Generator now contains all currently implemented blocks.
 -Item Model Provider now contains all Currently implemented items.
 
+-------------------------------------------------------------------------------
 
 4/7/2024
 Version 0.2.0
@@ -95,6 +102,8 @@ Posted By: Dalton Carter
 -Mod Loot Table now contains all currently implemented blocks.
 -Recipe Provider now has recipes for all current blocks/items.
 -Version updated to 0.2.0
+
+-------------------------------------------------------------------------------
 
 4/8/2024
 Version 0.2.0
@@ -109,6 +118,17 @@ Posted By: Dalton Carter
 **Datagen WILL NOT create a recipe for cooking infested cobble claiming there is an error in the result path name,
 inspection of all related parts turned up nothing, retyping out all methods, and names associated with the recipe
 did not work. Recipe for Infested stone by cooking Infested cobble returned to JSON file.
+
+-------------------------------------------------------------------------------
+
+4/10/2024
+Version 0.2.0
+Posted By: Dalton Carter
+
+-Tiberglass transferred.
+-Datagen updated with new blocks, and run successfully.
+-Smelting recipe for Clear Tiberglass is under Old Data folder, Recipe provider will not accept recipes that require blocks.
+will update once I figure out the problem.
 
 
 ======================================================
