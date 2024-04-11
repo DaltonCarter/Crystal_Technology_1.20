@@ -129,6 +129,13 @@ Posted By: Dalton Carter
 -Datagen updated with new blocks, and run successfully.
 -Smelting recipe for Clear Tiberglass is under Old Data folder, Recipe provider will not accept recipes that require blocks.
 will update once I figure out the problem.
+-Datagen Updated with new methods, and new blocks, and run successfully.
+-Transferred Plagued Planks, Door, Trapdoor, Fence, Gate, Button, Pressure Plate, Stairs and Slab.
+-Transferred Tiberglass Panes.
+-Transferred Tibercrete Stairs.
+-Transfered Infested Stone Slab, and stairs.
+-Transferred Firestone Wall.
+-Tags for mining with Axe, Fence, Fence Gate, Wall added.
 
 
 ======================================================

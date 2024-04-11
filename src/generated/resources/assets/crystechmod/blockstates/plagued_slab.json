@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/plagued_slab"
+    },
+    "type=double": {
+      "model": "crystechmod:block/plagued_planks"
+    },
+    "type=top": {
+      "model": "crystechmod:block/plagued_slab_top"
+    }
+  }
+}

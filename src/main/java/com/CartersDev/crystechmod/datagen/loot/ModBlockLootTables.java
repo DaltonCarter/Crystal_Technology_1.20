@@ -103,30 +103,92 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.WHITE_TIBERCRETE_POWDER.get());
         this.dropSelf(ModBlocks.YELLOW_TIBERCRETE_POWDER.get());
 
+        this.dropSelf(ModBlocks.BLACK_TIBERCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.BLUE_TIBERCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.BROWN_TIBERCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.CYAN_TIBERCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.GRAY_TIBERCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.GREEN_TIBERCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_TIBERCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_TIBERCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.LIME_TIBERCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.MAGENTA_TIBERCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.ORANGE_TIBERCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.PINK_TIBERCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.PURPLE_TIBERCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.RED_TIBERCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.WHITE_TIBERCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.YELLOW_TIBERCRETE_STAIRS.get());
+
         this.dropSelf(ModBlocks.CLEAR_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.CLEAR_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.MOSAIC_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.MOSAIC_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.GDI_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.GDI_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.NOD_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.NOD_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.WOLF_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.WOLF_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.BLACK_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.BLACK_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.BLUE_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.BLUE_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.BROWN_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.BROWN_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.CYAN_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.CYAN_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.GREEN_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.GREEN_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.GRAY_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.GRAY_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.LIGHT_BLUE_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.LIGHT_GRAY_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.LIME_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.LIME_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.MAGENTA_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.MAGENTA_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.ORANGE_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.ORANGE_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.PINK_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.PINK_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.PURPLE_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.PURPLE_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.RED_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.RED_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.WHITE_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.WHITE_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.YELLOW_TIBERGLASS.get());
+        this.dropSelf(ModBlocks.YELLOW_TIBERGLASS_PANE.get());
 
         this.dropSelf(ModBlocks.TIBERIUM_SOIL.get());
         this.dropSelf(ModBlocks.ICHOR_SOIL.get());
+
+        this.dropSelf(ModBlocks.PLAGUED_STAIRS.get());
+        this.dropSelf(ModBlocks.PLAGUED_PLANKS.get());
+        this.dropSelf(ModBlocks.PLAGUED_FENCE.get());
+        this.dropSelf(ModBlocks.PLAGUED_BUTTON.get());
+        this.dropSelf(ModBlocks.PLAGUED_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.PLAGUED_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.PLAGUED_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.FIRESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.INFESTED_STONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.INFESTED_COBBLE_STAIRS.get());
+
+        this.add(ModBlocks.PLAGUED_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PLAGUED_SLAB.get()));
+
+        this.add(ModBlocks.INFESTED_STONE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.INFESTED_STONE_BRICK_SLAB.get()));
+
+        this.add(ModBlocks.INFESTED_COBBLE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.INFESTED_COBBLE_SLAB.get()));
+
+        this.add(ModBlocks.PLAGUED_DOOR.get(),
+                block -> createDoorTable(ModBlocks.PLAGUED_DOOR.get()));
 
 
         //Ore Drops:

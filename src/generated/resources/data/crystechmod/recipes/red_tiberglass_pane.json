@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "crystechmod:red_tiberglass"
+    }
+  },
+  "pattern": [
+    "   ",
+    "GGG",
+    "GGG"
+  ],
+  "result": {
+    "count": 16,
+    "item": "crystechmod:red_tiberglass_pane"
+  },
+  "show_notification": true
+}

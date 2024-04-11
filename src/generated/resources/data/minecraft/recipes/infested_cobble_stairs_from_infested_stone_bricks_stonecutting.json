@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:infested_stone_bricks"
+  },
+  "result": "crystechmod:infested_cobble_stairs"
+}

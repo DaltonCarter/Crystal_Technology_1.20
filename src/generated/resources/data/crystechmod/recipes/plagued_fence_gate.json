@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "crystechmod:plagued_planks"
+    },
+    "S": {
+      "item": "crystechmod:plagued_stick"
+    }
+  },
+  "pattern": [
+    "   ",
+    "SPS",
+    "SPS"
+  ],
+  "result": {
+    "item": "crystechmod:plagued_fence_gate"
+  },
+  "show_notification": true
+}

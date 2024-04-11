@@ -1,8 +1,12 @@
-// 1.20.1	2024-04-09T03:11:02.3513054	Tags for minecraft:block mod id crystechmod
+// 1.20.1	2024-04-11T01:43:07.2612612	Tags for minecraft:block mod id crystechmod
 39acdcf33383e05a367faca9c1c896cc6cdba9c0 data/crystechmod/tags/blocks/tibercrete_sands.json
 6130a5a375cd6dd0af575b5f1a61a422f77c326f data/forge/tags/blocks/needs_netherite_tool.json
-a3f1047b93a4e115f1524ee7f9025ea2e32cc467 data/minecraft/tags/blocks/mineable/pickaxe.json
-f421d6678491eb8e2bef8e3aff70a18738f9c76a data/minecraft/tags/blocks/mineable/shovel.json
+e37e673d43545f22e47b4b1558fe2e84bf39e130 data/minecraft/tags/blocks/fences.json
+7d2f6de7091b1f40ce55ff0171a9f074c674813e data/minecraft/tags/blocks/fence_gates.json
+d153ee7d3d94bd27c3e44f2d85f8ec6a005d2993 data/minecraft/tags/blocks/mineable/axe.json
+280ffa6ad6811fd8ca26cd4d3c171ae11de91c69 data/minecraft/tags/blocks/mineable/pickaxe.json
+f7b7b0cbf5fe1937fbbe024c9f0807f12d845845 data/minecraft/tags/blocks/mineable/shovel.json
 5ab4c515ffafd37a3e4cbe30177a28ca49cad050 data/minecraft/tags/blocks/needs_diamond_tool.json
-de80f9ec84687e6529e70331f34208c63a4d949b data/minecraft/tags/blocks/needs_iron_tool.json
-cafb1a4f9cfa5fa3f3c0f4a89ce99a864bdbcd52 data/minecraft/tags/blocks/needs_stone_tool.json
+7983e34c7bec942d56bb63c79bae2aa6ec765a68 data/minecraft/tags/blocks/needs_iron_tool.json
+b55ed4bb29b805f447f7f6b80b6b19b89b1bae1a data/minecraft/tags/blocks/needs_stone_tool.json
+6dc9b4b5ca2ed07aa92994cc9c4941c117829fd4 data/minecraft/tags/blocks/walls.json

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/template_glass_pane_post",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "edge": "crystechmod:block/red_tiberglass_pane_top",
+    "pane": "crystechmod:block/red_tiberglass"
+  }
+}

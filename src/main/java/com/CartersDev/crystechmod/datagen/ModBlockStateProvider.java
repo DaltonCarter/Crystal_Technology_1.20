@@ -4,7 +4,7 @@ import com.CartersDev.crystechmod.CrystalTech;
 
 import com.CartersDev.crystechmod.block.ModBlocks;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
@@ -140,11 +140,67 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RED_TIBERCRETE_POWDER);
         blockWithItem(ModBlocks.WHITE_TIBERCRETE_POWDER);
         blockWithItem(ModBlocks.YELLOW_TIBERCRETE_POWDER);
+        blockWithItem(ModBlocks.PLAGUED_PLANKS);
 
         blockWithItem(ModBlocks.TIBERIUM_SOIL);
         blockWithItem(ModBlocks.ICHOR_SOIL);
 
+       paneBlockWithRenderType((IronBarsBlock) ModBlocks.CLEAR_TIBERGLASS_PANE.get(), modLoc("block/clear_tiberglass"), modLoc("block/clear_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((IronBarsBlock) ModBlocks.MOSAIC_TIBERGLASS_PANE.get(), modLoc("block/mosaic_tiberglass"), modLoc("block/mosaic_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((IronBarsBlock) ModBlocks.GDI_TIBERGLASS_PANE.get(), modLoc("block/gdi_tiberglass"), modLoc("block/yellow_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((IronBarsBlock) ModBlocks.NOD_TIBERGLASS_PANE.get(), modLoc("block/nod_tiberglass"), modLoc("block/red_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((IronBarsBlock) ModBlocks.WOLF_TIBERGLASS_PANE.get(), modLoc("block/wolf_tiberglass"), modLoc("block/black_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.BLACK_TIBERGLASS_PANE.get(), modLoc("block/black_tiberglass"), modLoc("block/black_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.BLUE_TIBERGLASS_PANE.get(), modLoc("block/blue_tiberglass"), modLoc("block/blue_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.BROWN_TIBERGLASS_PANE.get(), modLoc("block/brown_tiberglass"), modLoc("block/brown_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.CYAN_TIBERGLASS_PANE.get(), modLoc("block/cyan_tiberglass"), modLoc("block/cyan_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.LIGHT_BLUE_TIBERGLASS_PANE.get(), modLoc("block/light_blue_tiberglass"), modLoc("block/light_blue_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.LIGHT_GRAY_TIBERGLASS_PANE.get(), modLoc("block/light_gray_tiberglass"), modLoc("block/light_gray_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.LIME_TIBERGLASS_PANE.get(), modLoc("block/lime_tiberglass"), modLoc("block/lime_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.MAGENTA_TIBERGLASS_PANE.get(), modLoc("block/magenta_tiberglass"), modLoc("block/magenta_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.ORANGE_TIBERGLASS_PANE.get(), modLoc("block/orange_tiberglass"), modLoc("block/orange_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.PINK_TIBERGLASS_PANE.get(), modLoc("block/pink_tiberglass"), modLoc("block/pink_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.PURPLE_TIBERGLASS_PANE.get(), modLoc("block/purple_tiberglass"), modLoc("block/purple_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.GRAY_TIBERGLASS_PANE.get(), modLoc("block/gray_tiberglass"), modLoc("block/gray_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.GREEN_TIBERGLASS_PANE.get(), modLoc("block/green_tiberglass"), modLoc("block/green_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.RED_TIBERGLASS_PANE.get(), modLoc("block/red_tiberglass"), modLoc("block/red_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.WHITE_TIBERGLASS_PANE.get(), modLoc("block/white_tiberglass"), modLoc("block/white_tiberglass_pane_top"),"translucent");
+       paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.YELLOW_TIBERGLASS_PANE.get(), modLoc("block/yellow_tiberglass"), modLoc("block/yellow_tiberglass_pane_top"),"translucent");
 
+       stairsBlock((StairBlock) ModBlocks.PLAGUED_STAIRS.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
+       stairsBlock((StairBlock) ModBlocks.INFESTED_STONE_BRICK_STAIRS.get(), blockTexture(ModBlocks.INFESTED_STONE_BRICKS.get()));
+       stairsBlock((StairBlock) ModBlocks.INFESTED_COBBLE_STAIRS.get(), blockTexture(ModBlocks.INFESTED_COBBLE.get()));
+       stairsBlock((StairBlock) ModBlocks.BLACK_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.BLACK_TIBERCRETE.get()));
+       stairsBlock((StairBlock) ModBlocks.BLUE_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.BLUE_TIBERCRETE.get()));
+       stairsBlock((StairBlock) ModBlocks.BROWN_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.BROWN_TIBERCRETE.get()));
+       stairsBlock((StairBlock) ModBlocks.CYAN_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.CYAN_TIBERCRETE.get()));
+       stairsBlock((StairBlock) ModBlocks.GRAY_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.GRAY_TIBERCRETE.get()));
+       stairsBlock((StairBlock) ModBlocks.GREEN_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.GREEN_TIBERCRETE.get()));
+       stairsBlock((StairBlock) ModBlocks.LIGHT_BLUE_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.LIGHT_BLUE_TIBERCRETE.get()));
+       stairsBlock((StairBlock) ModBlocks.LIGHT_GRAY_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.LIGHT_GRAY_TIBERCRETE.get()));
+       stairsBlock((StairBlock) ModBlocks.LIME_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.LIME_TIBERCRETE.get()));
+       stairsBlock((StairBlock) ModBlocks.MAGENTA_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.MAGENTA_TIBERCRETE.get()));
+       stairsBlock((StairBlock) ModBlocks.ORANGE_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.ORANGE_TIBERCRETE.get()));
+       stairsBlock((StairBlock) ModBlocks.PINK_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.PINK_TIBERCRETE.get()));
+       stairsBlock((StairBlock) ModBlocks.PURPLE_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.PURPLE_TIBERCRETE.get()));
+       stairsBlock((StairBlock) ModBlocks.RED_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.RED_TIBERCRETE.get()));
+       stairsBlock((StairBlock) ModBlocks.WHITE_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.WHITE_TIBERCRETE.get()));
+       stairsBlock((StairBlock) ModBlocks.YELLOW_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.YELLOW_TIBERCRETE.get()));
+
+       slabBlock((SlabBlock) ModBlocks.PLAGUED_SLAB.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
+       slabBlock((SlabBlock) ModBlocks.INFESTED_STONE_BRICK_SLAB.get(), blockTexture(ModBlocks.INFESTED_STONE_BRICKS.get()), blockTexture(ModBlocks.INFESTED_STONE_BRICKS.get()));
+       slabBlock((SlabBlock) ModBlocks.INFESTED_COBBLE_SLAB.get(), blockTexture(ModBlocks.INFESTED_COBBLE.get()), blockTexture(ModBlocks.INFESTED_COBBLE.get()));
+
+        buttonBlock((ButtonBlock) ModBlocks.PLAGUED_BUTTON.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
+        pressurePlateBlock((PressurePlateBlock) ModBlocks.PLAGUED_PRESSURE_PLATE.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.PLAGUED_FENCE.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.PLAGUED_FENCE_GATE.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
+
+        doorBlockWithRenderType((((DoorBlock) ModBlocks.PLAGUED_DOOR.get())), modLoc("block/plagued_door_bottom"), modLoc("block/plagued_door_top"), "cutout");
+        trapdoorBlockWithRenderType((((TrapDoorBlock) ModBlocks.PLAGUED_TRAPDOOR.get())), modLoc("block/plagued_trapdoor"), true, "cutout");
+
+        wallBlock((((WallBlock) ModBlocks.FIRESTONE_WALL.get())), blockTexture(( ModBlocks.FIRESTONE_BLOCK.get())));
 
     }
 

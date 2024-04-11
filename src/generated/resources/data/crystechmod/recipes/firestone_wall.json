@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "crystechmod:firestone_block"
+    }
+  },
+  "pattern": [
+    "   ",
+    "FFF",
+    "FFF"
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:firestone_wall"
+  },
+  "show_notification": true
+}

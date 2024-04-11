@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:wolf_tiberglass_pane"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wolf_tiberglass": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:wolf_tiberglass"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_wolf_tiberglass",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:wolf_tiberglass_pane"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -2,9 +2,11 @@ package com.CartersDev.crystechmod.block;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.custom.FirestoneBlock;
+import com.CartersDev.crystechmod.block.custom.FirestoneWallBlock;
 import com.CartersDev.crystechmod.block.custom.IchorSoilBlock;
 import com.CartersDev.crystechmod.block.custom.TiberiumSoilBlock;
 import com.CartersDev.crystechmod.item.ModItems;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -12,6 +14,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -361,8 +365,125 @@ public class ModBlocks {
             () -> new ConcretePowderBlock(YELLOW_TIBERCRETE.get(),BlockBehaviour.Properties
                     .copy(Blocks.YELLOW_CONCRETE_POWDER)));
 
+    public static final RegistryObject<Block> BLACK_TIBERCRETE_STAIRS = registerBlock("black_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.BLACK_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.BLACK_CONCRETE)));
+
+    public static final RegistryObject<Block> BLUE_TIBERCRETE_STAIRS = registerBlock("blue_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.BLUE_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.BLUE_CONCRETE)));
+
+    public static final RegistryObject<Block> BROWN_TIBERCRETE_STAIRS = registerBlock("brown_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.BROWN_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.BROWN_CONCRETE)));
+
+    public static final RegistryObject<Block> CYAN_TIBERCRETE_STAIRS = registerBlock("cyan_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.CYAN_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.CYAN_CONCRETE)));
+
+    public static final RegistryObject<Block> GRAY_TIBERCRETE_STAIRS = registerBlock("gray_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.GRAY_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.GRAY_CONCRETE)));
+
+    public static final RegistryObject<Block> GREEN_TIBERCRETE_STAIRS = registerBlock("green_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.GREEN_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.GREEN_CONCRETE)));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_TIBERCRETE_STAIRS = registerBlock("light_blue_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.LIGHT_BLUE_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.LIGHT_BLUE_CONCRETE)));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_TIBERCRETE_STAIRS = registerBlock("light_gray_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.LIGHT_GRAY_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.LIGHT_GRAY_CONCRETE)));
+
+    public static final RegistryObject<Block> LIME_TIBERCRETE_STAIRS = registerBlock("lime_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.LIME_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.LIME_CONCRETE)));
+
+    public static final RegistryObject<Block> MAGENTA_TIBERCRETE_STAIRS = registerBlock("magenta_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.MAGENTA_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.MAGENTA_CONCRETE)));
+
+    public static final RegistryObject<Block> ORANGE_TIBERCRETE_STAIRS = registerBlock("orange_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.ORANGE_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE)));
+
+    public static final RegistryObject<Block> PINK_TIBERCRETE_STAIRS = registerBlock("pink_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.PINK_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.PINK_CONCRETE)));
+
+    public static final RegistryObject<Block> PURPLE_TIBERCRETE_STAIRS = registerBlock("purple_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.PURPLE_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.PURPLE_CONCRETE)));
+
+    public static final RegistryObject<Block> RED_TIBERCRETE_STAIRS = registerBlock("red_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.RED_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.RED_CONCRETE)));
+
+    public static final RegistryObject<Block> WHITE_TIBERCRETE_STAIRS = registerBlock("white_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.WHITE_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE)));
+
+    public static final RegistryObject<Block> YELLOW_TIBERCRETE_STAIRS = registerBlock("yellow_tibercrete_stairs",
+            () -> new StairBlock(() -> ModBlocks.YELLOW_TIBERCRETE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.YELLOW_CONCRETE)));
+
+    public static final RegistryObject<Block> INFESTED_COBBLE_STAIRS = registerBlock("infested_cobble_stairs",
+            () -> new StairBlock(() -> ModBlocks.INFESTED_COBBLE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_STAIRS)));
+
+    public static final RegistryObject<Block> INFESTED_COBBLE_SLAB = registerBlock("infested_cobble_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_SLAB)));
+
+    public static final RegistryObject<Block> INFESTED_STONE_BRICK_STAIRS = registerBlock("infested_stone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.INFESTED_STONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+
+    public static final RegistryObject<Block> INFESTED_STONE_BRICK_SLAB = registerBlock("infested_stone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> FIRESTONE_WALL = registerBlock("firestone_wall",
+            () -> new FirestoneWallBlock(BlockBehaviour.Properties.copy(ModBlocks.FIRESTONE_BLOCK.get())));
+
     //End of Deco Blocks
 
+    //Wood:
+
+    public static final RegistryObject<Block> PLAGUED_PLANKS = registerBlock("plagued_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> PLAGUED_STAIRS = registerBlock("plagued_stairs",
+            () -> new StairBlock(() -> ModBlocks.PLAGUED_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> PLAGUED_SLAB = registerBlock("plagued_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> PLAGUED_BUTTON = registerBlock("plagued_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON),
+                    BlockSetType.OAK, 20, true));
+
+    public static final RegistryObject<Block> PLAGUED_PRESSURE_PLATE = registerBlock("plagued_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour
+                    .Properties.copy(Blocks.OAK_PLANKS), BlockSetType.OAK));
+
+    public static final RegistryObject<Block> PLAGUED_FENCE = registerBlock("plagued_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> PLAGUED_FENCE_GATE = registerBlock("plagued_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS),
+                    SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+
+    public static final RegistryObject<Block> PLAGUED_DOOR = registerBlock("plagued_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(),
+                    BlockSetType.OAK));
+
+    public static final RegistryObject<Block> PLAGUED_TRAPDOOR = registerBlock("plagued_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(),
+                    BlockSetType.OAK));
+
+    //End of Wood
 
     //Glass:
 
@@ -444,27 +565,89 @@ public class ModBlocks {
             () -> new StainedGlassBlock(DyeColor.YELLOW,BlockBehaviour.Properties.copy(Blocks.YELLOW_STAINED_GLASS)
                     .noOcclusion()));
 
-//    public static final RegistryObject<Block> CLEAR_TIBERGLASS_PANE = registerBlock("clear_tiberglass_pane",
-//            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE)));
-//
-//    public static final RegistryObject<Block> MOSAIC_TIBERGLASS_PANE = registerBlock("mosaic_tiberglass_pane",
-//            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE)));
-//
-//    public static final RegistryObject<Block> GDI_TIBERGLASS_PANE = registerBlock("gdi_tiberglass_pane",
-//            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE)));
-//
-//    public static final RegistryObject<Block> NOD_TIBERGLASS_PANE = registerBlock("nod_tiberglass_pane",
-//            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE)));
-//
-//    public static final RegistryObject<Block> WOLF_TIBERGLASS_PANE = registerBlock("wolf_tiberglass_pane",
-//            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE)));
+    public static final RegistryObject<Block> CLEAR_TIBERGLASS_PANE = registerBlock("clear_tiberglass_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).noOcclusion()));
 
+    public static final RegistryObject<Block> MOSAIC_TIBERGLASS_PANE = registerBlock("mosaic_tiberglass_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).noOcclusion()));
 
+    public static final RegistryObject<Block> GDI_TIBERGLASS_PANE = registerBlock("gdi_tiberglass_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).noOcclusion()));
 
+    public static final RegistryObject<Block> NOD_TIBERGLASS_PANE = registerBlock("nod_tiberglass_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).noOcclusion()));
 
+    public static final RegistryObject<Block> WOLF_TIBERGLASS_PANE = registerBlock("wolf_tiberglass_pane",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).noOcclusion()));
 
+    public static final RegistryObject<Block> BLACK_TIBERGLASS_PANE = registerBlock("black_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.BLACK ,BlockBehaviour.Properties.copy(Blocks.BLACK_STAINED_GLASS_PANE)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> BLUE_TIBERGLASS_PANE = registerBlock("blue_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.BLUE ,BlockBehaviour.Properties.copy(Blocks.BLUE_STAINED_GLASS_PANE)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> BROWN_TIBERGLASS_PANE = registerBlock("brown_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.BROWN ,BlockBehaviour.Properties.copy(Blocks.BROWN_STAINED_GLASS_PANE)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> CYAN_TIBERGLASS_PANE = registerBlock("cyan_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.CYAN ,BlockBehaviour.Properties.copy(Blocks.CYAN_STAINED_GLASS_PANE)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> GRAY_TIBERGLASS_PANE = registerBlock("gray_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.GRAY ,BlockBehaviour.Properties.copy(Blocks.GRAY_STAINED_GLASS_PANE)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> GREEN_TIBERGLASS_PANE = registerBlock("green_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.GREEN ,BlockBehaviour.Properties.copy(Blocks.GREEN_STAINED_GLASS_PANE)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_TIBERGLASS_PANE = registerBlock("light_blue_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.LIGHT_BLUE ,BlockBehaviour.Properties.copy(Blocks.LIGHT_BLUE_STAINED_GLASS_PANE)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_TIBERGLASS_PANE = registerBlock("light_gray_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.LIGHT_GRAY ,BlockBehaviour.Properties.copy(Blocks.LIGHT_GRAY_STAINED_GLASS_PANE)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> LIME_TIBERGLASS_PANE = registerBlock("lime_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.LIME ,BlockBehaviour.Properties.copy(Blocks.LIME_STAINED_GLASS_PANE)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> MAGENTA_TIBERGLASS_PANE = registerBlock("magenta_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.MAGENTA ,BlockBehaviour.Properties.copy(Blocks.MAGENTA_STAINED_GLASS_PANE)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> ORANGE_TIBERGLASS_PANE = registerBlock("orange_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.ORANGE ,BlockBehaviour.Properties.copy(Blocks.ORANGE_STAINED_GLASS_PANE)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> PINK_TIBERGLASS_PANE = registerBlock("pink_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.PINK ,BlockBehaviour.Properties.copy(Blocks.PINK_STAINED_GLASS_PANE)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> PURPLE_TIBERGLASS_PANE = registerBlock("purple_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.PURPLE ,BlockBehaviour.Properties.copy(Blocks.PURPLE_STAINED_GLASS_PANE)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> RED_TIBERGLASS_PANE = registerBlock("red_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.RED ,BlockBehaviour.Properties.copy(Blocks.RED_STAINED_GLASS_PANE)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> WHITE_TIBERGLASS_PANE = registerBlock("white_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.WHITE ,BlockBehaviour.Properties.copy(Blocks.WHITE_STAINED_GLASS_PANE)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> YELLOW_TIBERGLASS_PANE = registerBlock("yellow_tiberglass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.YELLOW ,BlockBehaviour.Properties.copy(Blocks.YELLOW_STAINED_GLASS_PANE)
+                    .noOcclusion()));
 
     //End of Glass
+
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

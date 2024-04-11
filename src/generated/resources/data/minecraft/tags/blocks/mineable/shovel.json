@@ -8,6 +8,22 @@
     "crystechmod:seeded_red_zone_dirt",
     "crystechmod:seeded_dirt",
     "crystechmod:tiberium_soil",
-    "crystechmod:ichor_soil"
+    "crystechmod:ichor_soil",
+    "crystechmod:black_tibercrete_powder",
+    "crystechmod:blue_tibercrete_powder",
+    "crystechmod:brown_tibercrete_powder",
+    "crystechmod:cyan_tibercrete_powder",
+    "crystechmod:gray_tibercrete_powder",
+    "crystechmod:green_tibercrete_powder",
+    "crystechmod:light_blue_tibercrete_powder",
+    "crystechmod:light_gray_tibercrete_powder",
+    "crystechmod:lime_tibercrete_powder",
+    "crystechmod:magenta_tibercrete_powder",
+    "crystechmod:orange_tibercrete_powder",
+    "crystechmod:pink_tibercrete_powder",
+    "crystechmod:purple_tibercrete_powder",
+    "crystechmod:red_tibercrete_powder",
+    "crystechmod:white_tibercrete_powder",
+    "crystechmod:yellow_tibercrete_powder"
   ]
 }

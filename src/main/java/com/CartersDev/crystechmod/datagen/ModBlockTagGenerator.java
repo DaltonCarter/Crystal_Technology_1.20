@@ -73,9 +73,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.INFESTED_STONE.get(),
                 ModBlocks.INFESTED_ANDESITE.get(),
                 ModBlocks.INFESTED_COBBLE.get(),
+                ModBlocks.INFESTED_COBBLE_SLAB.get(),
+                ModBlocks.INFESTED_COBBLE_STAIRS.get(),
                 ModBlocks.INFESTED_DIORITE.get(),
                 ModBlocks.INFESTED_GRANITE.get(),
                 ModBlocks.INFESTED_STONE_BRICKS.get(),
+                ModBlocks.INFESTED_STONE_BRICK_STAIRS.get(),
+                ModBlocks.INFESTED_STONE_BRICK_SLAB.get(),
                 ModBlocks.LG_CORE_BLOCK.get(),
                 ModBlocks.MG_CORE_BLOCK.get(),
                 ModBlocks.HG_CORE_BLOCK.get(),
@@ -101,6 +105,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.WHITE_TIBERGLASS.get(),
                 ModBlocks.YELLOW_TIBERGLASS.get(),
                 ModBlocks.FIRESTONE_BLOCK.get(),
+                ModBlocks.FIRESTONE_WALL.get(),
                 ModBlocks.BLACK_TIBERCRETE.get(),
                 ModBlocks.BLUE_TIBERCRETE.get(),
                 ModBlocks.BROWN_TIBERCRETE.get(),
@@ -116,7 +121,44 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.PURPLE_TIBERCRETE.get(),
                 ModBlocks.RED_TIBERCRETE.get(),
                 ModBlocks.WHITE_TIBERCRETE.get(),
-                ModBlocks.YELLOW_TIBERCRETE.get()
+                ModBlocks.YELLOW_TIBERCRETE.get(),
+                ModBlocks.CLEAR_TIBERGLASS_PANE.get(),
+                ModBlocks.MOSAIC_TIBERGLASS_PANE.get(),
+                ModBlocks.GDI_TIBERGLASS_PANE.get(),
+                ModBlocks.NOD_TIBERGLASS_PANE.get(),
+                ModBlocks.WOLF_TIBERGLASS_PANE.get(),
+                ModBlocks.BLACK_TIBERGLASS_PANE.get(),
+                ModBlocks.BLUE_TIBERGLASS_PANE.get(),
+                ModBlocks.BROWN_TIBERGLASS_PANE.get(),
+                ModBlocks.CYAN_TIBERGLASS_PANE.get(),
+                ModBlocks.GRAY_TIBERGLASS_PANE.get(),
+                ModBlocks.GREEN_TIBERGLASS_PANE.get(),
+                ModBlocks.LIGHT_BLUE_TIBERGLASS_PANE.get(),
+                ModBlocks.LIGHT_GRAY_TIBERGLASS_PANE.get(),
+                ModBlocks.LIME_TIBERGLASS_PANE.get(),
+                ModBlocks.MAGENTA_TIBERGLASS_PANE.get(),
+                ModBlocks.ORANGE_TIBERGLASS_PANE.get(),
+                ModBlocks.PINK_TIBERGLASS_PANE.get(),
+                ModBlocks.PURPLE_TIBERGLASS_PANE.get(),
+                ModBlocks.RED_TIBERGLASS_PANE.get(),
+                ModBlocks.WHITE_TIBERGLASS_PANE.get(),
+                ModBlocks.YELLOW_TIBERGLASS_PANE.get(),
+                ModBlocks.BLACK_TIBERCRETE_STAIRS.get(),
+                ModBlocks.BLUE_TIBERCRETE_STAIRS.get(),
+                ModBlocks.BROWN_TIBERCRETE_STAIRS.get(),
+                ModBlocks.CYAN_TIBERCRETE_STAIRS.get(),
+                ModBlocks.GRAY_TIBERCRETE_STAIRS.get(),
+                ModBlocks.GREEN_TIBERCRETE_STAIRS.get(),
+                ModBlocks.LIGHT_BLUE_TIBERCRETE_STAIRS.get(),
+                ModBlocks.LIGHT_GRAY_TIBERCRETE_STAIRS.get(),
+                ModBlocks.LIME_TIBERCRETE_STAIRS.get(),
+                ModBlocks.MAGENTA_TIBERCRETE_STAIRS.get(),
+                ModBlocks.ORANGE_TIBERCRETE_STAIRS.get(),
+                ModBlocks.PINK_TIBERCRETE_STAIRS.get(),
+                ModBlocks.PURPLE_TIBERCRETE_STAIRS.get(),
+                ModBlocks.RED_TIBERCRETE_STAIRS.get(),
+                ModBlocks.WHITE_TIBERCRETE_STAIRS.get(),
+                ModBlocks.YELLOW_TIBERCRETE_STAIRS.get()
                 );
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
@@ -147,34 +189,72 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.YELLOW_TIBERCRETE_POWDER.get()
                 );
 
+        this.tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.PLAGUED_TRAPDOOR.get(),
+                        ModBlocks.PLAGUED_PLANKS.get(),
+                        ModBlocks.PLAGUED_BUTTON.get(),
+                        ModBlocks.PLAGUED_DOOR.get(),
+                        ModBlocks.PLAGUED_PRESSURE_PLATE.get(),
+                        ModBlocks.PLAGUED_FENCE.get(),
+                        ModBlocks.PLAGUED_FENCE_GATE.get(),
+                        ModBlocks.PLAGUED_STAIRS.get(),
+                        ModBlocks.PLAGUED_SLAB.get()
+
+                );
+
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.INFESTED_STONE.get(),
                         ModBlocks.INFESTED_STONE_BRICKS.get(),
+                        ModBlocks.INFESTED_STONE_BRICK_SLAB.get(),
+                        ModBlocks.INFESTED_STONE_BRICK_STAIRS.get(),
                         ModBlocks.INFESTED_COBBLE.get(),
+                        ModBlocks.INFESTED_COBBLE_STAIRS.get(),
+                        ModBlocks.INFESTED_COBBLE_SLAB.get(),
                         ModBlocks.INFESTED_DIORITE.get(),
                         ModBlocks.INFESTED_ANDESITE.get(),
                         ModBlocks.INFESTED_GRANITE.get(),
                         ModBlocks.CLEAR_TIBERGLASS.get(),
+                        ModBlocks.CLEAR_TIBERGLASS_PANE.get(),
                         ModBlocks.MOSAIC_TIBERGLASS.get(),
+                        ModBlocks.MOSAIC_TIBERGLASS_PANE.get(),
                         ModBlocks.GDI_TIBERGLASS.get(),
+                        ModBlocks.GDI_TIBERGLASS_PANE.get(),
                         ModBlocks.NOD_TIBERGLASS.get(),
+                        ModBlocks.NOD_TIBERGLASS_PANE.get(),
                         ModBlocks.WOLF_TIBERGLASS.get(),
+                        ModBlocks.WOLF_TIBERGLASS_PANE.get(),
                         ModBlocks.BLACK_TIBERGLASS.get(),
+                        ModBlocks.BLACK_TIBERGLASS_PANE.get(),
                         ModBlocks.BLUE_TIBERGLASS.get(),
+                        ModBlocks.BLUE_TIBERGLASS_PANE.get(),
                         ModBlocks.BROWN_TIBERGLASS.get(),
+                        ModBlocks.BROWN_TIBERGLASS_PANE.get(),
                         ModBlocks.CYAN_TIBERGLASS.get(),
+                        ModBlocks.CYAN_TIBERGLASS_PANE.get(),
                         ModBlocks.GRAY_TIBERGLASS.get(),
+                        ModBlocks.GRAY_TIBERGLASS_PANE.get(),
                         ModBlocks.GREEN_TIBERGLASS.get(),
+                        ModBlocks.GREEN_TIBERGLASS_PANE.get(),
                         ModBlocks.LIGHT_BLUE_TIBERGLASS.get(),
+                        ModBlocks.LIGHT_BLUE_TIBERGLASS_PANE.get(),
                         ModBlocks.LIGHT_GRAY_TIBERGLASS.get(),
+                        ModBlocks.LIGHT_GRAY_TIBERGLASS_PANE.get(),
                         ModBlocks.LIME_TIBERGLASS.get(),
+                        ModBlocks.LIME_TIBERGLASS_PANE.get(),
                         ModBlocks.MAGENTA_TIBERGLASS.get(),
+                        ModBlocks.MAGENTA_TIBERGLASS_PANE.get(),
                         ModBlocks.ORANGE_TIBERGLASS.get(),
+                        ModBlocks.ORANGE_TIBERGLASS_PANE.get(),
                         ModBlocks.PINK_TIBERGLASS.get(),
+                        ModBlocks.PINK_TIBERGLASS_PANE.get(),
                         ModBlocks.PURPLE_TIBERGLASS.get(),
+                        ModBlocks.PURPLE_TIBERGLASS_PANE.get(),
                         ModBlocks.RED_TIBERGLASS.get(),
+                        ModBlocks.RED_TIBERGLASS_PANE.get(),
                         ModBlocks.WHITE_TIBERGLASS.get(),
+                        ModBlocks.WHITE_TIBERGLASS_PANE.get(),
                         ModBlocks.YELLOW_TIBERGLASS.get(),
+                        ModBlocks.YELLOW_TIBERGLASS_PANE.get(),
                         ModBlocks.BLACK_TIBERCRETE_POWDER.get(),
                         ModBlocks.BLUE_TIBERCRETE_POWDER.get(),
                         ModBlocks.BROWN_TIBERCRETE_POWDER.get(),
@@ -206,7 +286,32 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.PURPLE_TIBERCRETE.get(),
                         ModBlocks.RED_TIBERCRETE.get(),
                         ModBlocks.WHITE_TIBERCRETE.get(),
-                        ModBlocks.YELLOW_TIBERCRETE.get()
+                        ModBlocks.YELLOW_TIBERCRETE.get(),
+                        ModBlocks.PLAGUED_TRAPDOOR.get(),
+                        ModBlocks.PLAGUED_PLANKS.get(),
+                        ModBlocks.PLAGUED_BUTTON.get(),
+                        ModBlocks.PLAGUED_DOOR.get(),
+                        ModBlocks.PLAGUED_PRESSURE_PLATE.get(),
+                        ModBlocks.PLAGUED_FENCE.get(),
+                        ModBlocks.PLAGUED_FENCE_GATE.get(),
+                        ModBlocks.PLAGUED_STAIRS.get(),
+                        ModBlocks.PLAGUED_SLAB.get(),
+                        ModBlocks.BLACK_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.BLUE_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.BROWN_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.CYAN_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.GRAY_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.GREEN_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.LIGHT_BLUE_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.LIGHT_GRAY_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.LIME_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.MAGENTA_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.ORANGE_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.PINK_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.PURPLE_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.RED_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.WHITE_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.YELLOW_TIBERCRETE_STAIRS.get()
                 );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
@@ -218,6 +323,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.CRUENTUS_STONE.get(),
                 ModBlocks.ABOREUS_STONE.get(),
                 ModBlocks.FIRESTONE_BLOCK.get(),
+                ModBlocks.FIRESTONE_WALL.get(),
                 ModBlocks.AERIES_BLOCK.get(),
                 ModBlocks.ENIGMA_BLOCK.get(),
                 ModBlocks.ILLUMINA_BLOCK.get(),
@@ -262,6 +368,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.ABOREUS_CRYSTAL.get()
                 );
 
+        this.tag(BlockTags.FENCES)
+                .add(ModBlocks.PLAGUED_FENCE.get()
+                );
+
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.PLAGUED_FENCE_GATE.get()
+                );
+
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.FIRESTONE_WALL.get()
+                );
 
     }
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/infested_cobble_slab"
+    },
+    "type=double": {
+      "model": "crystechmod:block/infested_cobble"
+    },
+    "type=top": {
+      "model": "crystechmod:block/infested_cobble_slab_top"
+    }
+  }
+}
