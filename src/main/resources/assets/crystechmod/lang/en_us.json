@@ -224,10 +224,10 @@
   "block.crystechmod.nod_tiberglass_pane": "Nod Tiberglass Pane",
   "block.crystechmod.mosaic_tiberglass_pane": "Mosaic Tiberglass Pane",
   "block.crystechmod.wolf_tiberglass_pane": "Wolf Tiberglass Pane",
-  "block.crystechmod.blossom_base": "Blossom Tree Base",
-  "block.crystechmod.blossom_center": "Blossom Tree Trunk",
-  "block.crystechmod.blossom_spout": "Blossom Tree Spout",
-  "block.crystechmod.blossom_filler": "Blossom Tree Arm",
+  "block.crystechmod.blossom_base": "Tiberium Blossom Tree Base",
+  "block.crystechmod.blossom_center": "Tiberium Blossom Tree Trunk",
+  "block.crystechmod.blossom_spout": "Tiberium Blossom Tree Spout",
+  "block.crystechmod.blossom_filler": "Tiberium Blossom Tree Arm",
   "block.crystechmod.seeded_dirt": "Tiberium Seeded Dirt",
 
 

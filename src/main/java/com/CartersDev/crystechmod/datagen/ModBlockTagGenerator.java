@@ -24,6 +24,26 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
 
+        this.tag(ModTags.Blocks.TIBERIUM_VIABLE_BLOCKS)
+                .add(
+                        ModBlocks.RED_ZONE_DIRT.get(),
+                        ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(),
+                        Blocks.DIRT,
+                        Blocks.COBBLESTONE,
+                        Blocks.STONE,
+                        Blocks.STONE_BRICKS,
+                        Blocks.ANDESITE,
+                        Blocks.DIORITE,
+                        Blocks.GRANITE
+                );
+
+        this.tag(ModTags.Blocks.TIBERIUM_SEED_BLOCKS)
+                .add(
+                        ModBlocks.SEEDED_RED_ZONE_DIRT.get(),
+                        ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(),
+                        ModBlocks.SEEDED_DIRT.get()
+                );
+
 
         this.tag(ModTags.Blocks.TIBERCRETE_SANDS)
                 .add(ModBlocks.RED_ZONE_SAND.get(),

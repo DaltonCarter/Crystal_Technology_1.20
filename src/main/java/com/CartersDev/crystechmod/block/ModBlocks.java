@@ -1,10 +1,7 @@
 package com.CartersDev.crystechmod.block;
 
 import com.CartersDev.crystechmod.CrystalTech;
-import com.CartersDev.crystechmod.block.custom.FirestoneBlock;
-import com.CartersDev.crystechmod.block.custom.FirestoneWallBlock;
-import com.CartersDev.crystechmod.block.custom.IchorSoilBlock;
-import com.CartersDev.crystechmod.block.custom.TiberiumSoilBlock;
+import com.CartersDev.crystechmod.block.custom.*;
 import com.CartersDev.crystechmod.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -645,6 +642,13 @@ public class ModBlocks {
                     .noOcclusion()));
 
     //End of Glass
+
+
+    //Blossom Tree
+    public static final RegistryObject<Block> BLOSSOM_SPOUT = registerBlock("blossom_spout",
+            () -> new BlossomTreeSpoutBlock(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noLootTable()
+                    .randomTicks()));
+    //End Blossom Tree
 
 
 

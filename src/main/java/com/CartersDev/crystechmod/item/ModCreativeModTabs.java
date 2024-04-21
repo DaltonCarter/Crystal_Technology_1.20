@@ -22,6 +22,8 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
 
                     output.accept(ModItems.TIBERIUM_FRUIT.get());
 
+                    output.accept(ModBlocks.BLOSSOM_SPOUT.get());
+
                     output.accept(ModItems.FIRESTONE.get());
                     output.accept(ModBlocks.FIRESTONE_BLOCK.get());
                     output.accept(ModBlocks.FIRESTONE_WALL.get());

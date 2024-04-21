@@ -16,6 +16,8 @@ public class ModTags {
         public static final TagKey<Block> VULNERABLE_LEAVES = tag("vulnerable_leaves");
         public static final TagKey<Block> TIBERIUM_VULNERABLE_WOOD= tag("tiberium_vulnerable_wood");
         public static final TagKey<Block> TIBERCRETE_SANDS= tag("tibercrete_sands");
+        public static final TagKey<Block> TIBERIUM_VIABLE_BLOCKS= tag("tiberium_viable_blocks");
+        public static final TagKey<Block> TIBERIUM_SEED_BLOCKS= tag("tiberium_seed_block");
 
 
 

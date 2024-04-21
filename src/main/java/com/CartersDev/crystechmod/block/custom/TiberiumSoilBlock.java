@@ -39,10 +39,10 @@ public class TiberiumSoilBlock extends Block {
                 if(number > 7){
 
                     System.out.println("A patch of Vinifera Tiberium has sprouted!.");
-//                    worldIn.setBlock(abovePos, ModBlocks.BLUE_TIBERIUM_CROP.get().getDefaultState());
+//                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.BLUE_TIBERIUM_CROP.get().getDefaultState());
                 }else {
                     System.out.println("A patch of Riparius Tiberium has sprouted!.");
-//                    worldIn.setBlock(abovePos, ModBlocks.GREEN_TIBERIUM_CROP.get().getDefaultState());
+//                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.GREEN_TIBERIUM_CROP.get().getDefaultState());
                 }
 
             } else if (aboveState.is(ModTags.Blocks.TIBERIUM_VULNERABLE_WOOD)) {
@@ -52,7 +52,7 @@ public class TiberiumSoilBlock extends Block {
                 if(number > 7){
 
                     System.out.println("A Tree has contracted Tiberium Plague!.");
-//                    worldIn.setBlock(abovePos, ModBlocks.PLAGUED_LOG.get().getDefaultState());
+//                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.PLAGUED_LOG.get().getDefaultState());
                 }
             } else if (aboveState.is(ModTags.Blocks.VULNERABLE_LEAVES) ) {
                 Random random = new Random();
@@ -61,7 +61,7 @@ public class TiberiumSoilBlock extends Block {
                 if(number > 7){
 
                     System.out.println("Tree Leaves have contracted Tiberium Plague!.");
-//                    worldIn.setBlock(abovePos, ModBlocks.PLAGUED_LEAVES.get().getDefaultState());
+//                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.PLAGUED_LEAVES.get().getDefaultState());
                 }
             }
 
