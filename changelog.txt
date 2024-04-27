@@ -137,6 +137,17 @@ will update once I figure out the problem.
 -Transferred Firestone Wall.
 -Tags for mining with Axe, Fence, Fence Gate, Wall added.
 
+-------------------------------------------------------------------------------
+
+4/21/2024 - 4/26/2024
+Version 0.2.5
+Posted By: Dalton Carter
+
+-Updated version to 0.2.5
+-Added Plagued Leaves
+-Added Blossom Spout Logic, Blossom Spout also partially implemented to test logic.
+-Created Blossom Base Logic in an attempt to make the blossom tree a basic Multi-block
+
 
 ======================================================
 LEGACY 1.16.5 Changelog
