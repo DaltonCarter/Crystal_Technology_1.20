@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "crystechmod:gundanium_ingot"
+    },
+    "I": {
+      "item": "minecraft:iron_horse_armor"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GIG",
+    "GGG"
+  ],
+  "result": {
+    "item": "crystechmod:gundanium_horse_armor"
+  },
+  "show_notification": true
+}

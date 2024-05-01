@@ -12,7 +12,8 @@ public class ModTags {
 
     public static class Blocks {
 
-        public static final TagKey<Block> METAL_DETECTOR_VALUABLES = tag("metal_detector_valuables");
+        public static final TagKey<Block> NEEDS_PLAGUED_TOOL = tag("needs_plagued_tool");
+        public static final TagKey<Block> NEEDS_GUNDANIUM_TOOL = tag("needs_gundanium_tool");
         public static final TagKey<Block> VULNERABLE_LEAVES = tag("vulnerable_leaves");
         public static final TagKey<Block> TIBERIUM_VULNERABLE_WOOD= tag("tiberium_vulnerable_wood");
         public static final TagKey<Block> TIBERCRETE_SANDS= tag("tibercrete_sands");
@@ -28,6 +29,7 @@ public class ModTags {
 
     public static class Items {
         public static final TagKey<Item> TIBERCRETE_SANDS= tag("tibercrete_sands");
+        public static final TagKey<Item> STICKS= tag("sticks");
 
 
 

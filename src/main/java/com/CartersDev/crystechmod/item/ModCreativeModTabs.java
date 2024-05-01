@@ -36,6 +36,25 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                     output.accept(ModItems.TIBERIUM_PURPLE.get());
                     output.accept(ModBlocks.TIBERIUM_PURPLE_BLOCK.get());
 
+                    output.accept(ModItems.PLAGUED_SWORD.get());
+                    output.accept(ModItems.PLAGUED_PICKAXE.get());
+                    output.accept(ModItems.PLAGUED_AXE.get());
+                    output.accept(ModItems.PLAGUED_SHOVEL.get());
+                    output.accept(ModItems.PLAGUED_HOE.get());
+
+                    output.accept(ModItems.GUNDANIUM_SWORD.get());
+                    output.accept(ModItems.GUNDANIUM_PICKAXE.get());
+                    output.accept(ModItems.GUNDANIUM_AXE.get());
+                    output.accept(ModItems.GUNDANIUM_SHOVEL.get());
+                    output.accept(ModItems.GUNDANIUM_HOE.get());
+
+                    output.accept(ModItems.GUNDANIUM_HELMET.get());
+                    output.accept(ModItems.GUNDANIUM_CHESTPLATE.get());
+                    output.accept(ModItems.GUNDANIUM_LEGGINGS.get());
+                    output.accept(ModItems.GUNDANIUM_BOOTS.get());
+
+                    output.accept(ModItems.GUNDANIUM_HORSE_ARMOR.get());
+
                     output.accept(ModBlocks.AERIES_ORE.get());
                     output.accept(ModBlocks.DEEPSLATE_AERIES_ORE.get());
                     output.accept(ModBlocks.NETHER_AERIES_ORE.get());

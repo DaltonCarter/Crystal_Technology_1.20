@@ -148,6 +148,19 @@ Posted By: Dalton Carter
 -Added Blossom Spout Logic, Blossom Spout also partially implemented to test logic.
 -Created Blossom Base Logic in an attempt to make the blossom tree a basic Multi-block
 
+-------------------------------------------------------------------------------
+
+4/30/2024
+Version 0.3.0
+Posted By: Dalton Carter
+
+-Updated version to 0.3.0
+-Added Gundanium Armor, and Gundanium Horse Armor
+-Added Full Armor Bonus
+-Added Plagued, and Gundanium Tools
+-Added both Mod Tool Tiers, and Mod Armor Material Tiers
+
+
 
 ======================================================
 LEGACY 1.16.5 Changelog

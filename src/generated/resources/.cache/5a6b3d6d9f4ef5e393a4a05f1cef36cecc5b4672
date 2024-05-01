@@ -1,2 +1,4 @@
-// 1.20.1	2024-04-09T03:11:02.3523014	Tags for minecraft:item mod id crystechmod
+// 1.20.1	2024-04-30T17:28:51.3194882	Tags for minecraft:item mod id crystechmod
+ecf2a3889f87177c168a6ffc2c5f25e077381f19 data/crystechmod/tags/items/sticks.json
 39acdcf33383e05a367faca9c1c896cc6cdba9c0 data/crystechmod/tags/items/tibercrete_sands.json
+72fddfdd9e89cecba3e53a6c115b938c9744a867 data/minecraft/tags/items/trimmable_armor.json

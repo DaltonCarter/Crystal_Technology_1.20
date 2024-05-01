@@ -223,17 +223,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 );
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.INFESTED_STONE.get(),
-                        ModBlocks.INFESTED_STONE_BRICKS.get(),
-                        ModBlocks.INFESTED_STONE_BRICK_SLAB.get(),
-                        ModBlocks.INFESTED_STONE_BRICK_STAIRS.get(),
-                        ModBlocks.INFESTED_COBBLE.get(),
-                        ModBlocks.INFESTED_COBBLE_STAIRS.get(),
-                        ModBlocks.INFESTED_COBBLE_SLAB.get(),
-                        ModBlocks.INFESTED_DIORITE.get(),
-                        ModBlocks.INFESTED_ANDESITE.get(),
-                        ModBlocks.INFESTED_GRANITE.get(),
-                        ModBlocks.CLEAR_TIBERGLASS.get(),
+                .add(ModBlocks.CLEAR_TIBERGLASS.get(),
                         ModBlocks.CLEAR_TIBERGLASS_PANE.get(),
                         ModBlocks.MOSAIC_TIBERGLASS.get(),
                         ModBlocks.MOSAIC_TIBERGLASS_PANE.get(),
@@ -275,6 +265,28 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.WHITE_TIBERGLASS_PANE.get(),
                         ModBlocks.YELLOW_TIBERGLASS.get(),
                         ModBlocks.YELLOW_TIBERGLASS_PANE.get(),
+                        ModBlocks.PLAGUED_TRAPDOOR.get(),
+                        ModBlocks.PLAGUED_PLANKS.get(),
+                        ModBlocks.PLAGUED_BUTTON.get(),
+                        ModBlocks.PLAGUED_DOOR.get(),
+                        ModBlocks.PLAGUED_PRESSURE_PLATE.get(),
+                        ModBlocks.PLAGUED_FENCE.get(),
+                        ModBlocks.PLAGUED_FENCE_GATE.get(),
+                        ModBlocks.PLAGUED_STAIRS.get(),
+                        ModBlocks.PLAGUED_SLAB.get()
+                );
+
+        this.tag(ModTags.Blocks.NEEDS_PLAGUED_TOOL)
+                .add(ModBlocks.INFESTED_STONE.get(),
+                     ModBlocks.INFESTED_COBBLE.get(),
+                     ModBlocks.INFESTED_STONE_BRICKS.get(),
+                     ModBlocks.INFESTED_ANDESITE.get(),
+                     ModBlocks.INFESTED_DIORITE.get(),
+                     ModBlocks.INFESTED_GRANITE.get(),
+                     ModBlocks.INFESTED_COBBLE_SLAB.get(),
+                     ModBlocks.INFESTED_STONE_BRICK_SLAB.get(),
+                     ModBlocks.INFESTED_STONE_BRICK_STAIRS.get(),
+                     ModBlocks.INFESTED_COBBLE_STAIRS.get(),
                         ModBlocks.BLACK_TIBERCRETE_POWDER.get(),
                         ModBlocks.BLUE_TIBERCRETE_POWDER.get(),
                         ModBlocks.BROWN_TIBERCRETE_POWDER.get(),
@@ -307,15 +319,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.RED_TIBERCRETE.get(),
                         ModBlocks.WHITE_TIBERCRETE.get(),
                         ModBlocks.YELLOW_TIBERCRETE.get(),
-                        ModBlocks.PLAGUED_TRAPDOOR.get(),
-                        ModBlocks.PLAGUED_PLANKS.get(),
-                        ModBlocks.PLAGUED_BUTTON.get(),
-                        ModBlocks.PLAGUED_DOOR.get(),
-                        ModBlocks.PLAGUED_PRESSURE_PLATE.get(),
-                        ModBlocks.PLAGUED_FENCE.get(),
-                        ModBlocks.PLAGUED_FENCE_GATE.get(),
-                        ModBlocks.PLAGUED_STAIRS.get(),
-                        ModBlocks.PLAGUED_SLAB.get(),
                         ModBlocks.BLACK_TIBERCRETE_STAIRS.get(),
                         ModBlocks.BLUE_TIBERCRETE_STAIRS.get(),
                         ModBlocks.BROWN_TIBERCRETE_STAIRS.get(),
@@ -353,6 +356,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.ILLYRIM_BLOCK.get(),
                 ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get(),
                 ModBlocks.TIBERIUM_SOIL.get()
+                );
+
+        this.tag(ModTags.Blocks.NEEDS_GUNDANIUM_TOOL)
+                .add(ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get()
                 );
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)

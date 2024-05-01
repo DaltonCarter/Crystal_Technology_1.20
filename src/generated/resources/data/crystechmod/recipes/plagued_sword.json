@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "crystechmod:plagued_planks"
+    },
+    "S": {
+      "tag": "crystechmod:sticks"
+    }
+  },
+  "pattern": [
+    " P ",
+    " P ",
+    " S "
+  ],
+  "result": {
+    "item": "crystechmod:plagued_sword"
+  },
+  "show_notification": true
+}

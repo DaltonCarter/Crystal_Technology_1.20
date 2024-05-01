@@ -772,6 +772,138 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModBlocks.YELLOW_TIBERCRETE.get()), has(ModBlocks.YELLOW_TIBERCRETE.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PLAGUED_SWORD.get())
+                .pattern(" P ")
+                .pattern(" P ")
+                .pattern(" S ")
+                .define('P', ModBlocks.PLAGUED_PLANKS.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PLAGUED_PICKAXE.get())
+                .pattern("PPP")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('P', ModBlocks.PLAGUED_PLANKS.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PLAGUED_AXE.get())
+                .pattern(" PP")
+                .pattern(" SP")
+                .pattern(" S ")
+                .define('P', ModBlocks.PLAGUED_PLANKS.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PLAGUED_SHOVEL.get())
+                .pattern(" P ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('P', ModBlocks.PLAGUED_PLANKS.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PLAGUED_HOE.get())
+                .pattern(" PP")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('P', ModBlocks.PLAGUED_PLANKS.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GUNDANIUM_HELMET.get())
+                .pattern("GGG")
+                .pattern("G G")
+                .pattern("   ")
+                .define('G', ModItems.GUNDANIUM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GUNDANIUM_CHESTPLATE.get())
+                .pattern("G G")
+                .pattern("GGG")
+                .pattern("GGG")
+                .define('G', ModItems.GUNDANIUM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GUNDANIUM_LEGGINGS.get())
+                .pattern("GGG")
+                .pattern("G G")
+                .pattern("G G")
+                .define('G', ModItems.GUNDANIUM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GUNDANIUM_BOOTS.get())
+                .pattern("   ")
+                .pattern("G G")
+                .pattern("G G")
+                .define('G', ModItems.GUNDANIUM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GUNDANIUM_HORSE_ARMOR.get())
+                .pattern("GGG")
+                .pattern("GIG")
+                .pattern("GGG")
+                .define('G', ModItems.GUNDANIUM_INGOT.get())
+                .define('I', Items.IRON_HORSE_ARMOR)
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GUNDANIUM_SWORD.get())
+                .pattern(" G ")
+                .pattern(" G ")
+                .pattern(" S ")
+                .define('G', ModItems.GUNDANIUM_INGOT.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GUNDANIUM_PICKAXE.get())
+                .pattern("GGG")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('G', ModItems.GUNDANIUM_INGOT.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GUNDANIUM_AXE.get())
+                .pattern(" GG")
+                .pattern(" SG")
+                .pattern(" S ")
+                .define('G', ModItems.GUNDANIUM_INGOT.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GUNDANIUM_SHOVEL.get())
+                .pattern(" G ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('G', ModItems.GUNDANIUM_INGOT.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GUNDANIUM_HOE.get())
+                .pattern(" GG")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('G', ModItems.GUNDANIUM_INGOT.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+
         //Shapeless Crafting:
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIBERIUM.get(), 9)
                 .requires(ModBlocks.TIBERIUM_BLOCK.get())

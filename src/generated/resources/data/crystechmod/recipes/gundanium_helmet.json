@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "crystechmod:gundanium_ingot"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "G G",
+    "   "
+  ],
+  "result": {
+    "item": "crystechmod:gundanium_helmet"
+  },
+  "show_notification": true
+}

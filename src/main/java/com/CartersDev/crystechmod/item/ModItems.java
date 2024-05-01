@@ -4,8 +4,7 @@ import com.CartersDev.crystechmod.CrystalTech;
 
 
 import com.CartersDev.crystechmod.item.custom.Firestone;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -125,6 +124,74 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
     public static final RegistryObject<Item> HG_CORE_INGOT = ITEMS.register("hg_core_ingot",
             () -> new Item(new Item.Properties()));
 //End of Metals & Raw Metals
+
+
+    //Tools
+    public static final RegistryObject<Item> PLAGUED_SWORD = ITEMS.register("plagued_sword",
+            () -> new SwordItem(ModToolTiers.PLAGUED, 2, -1.5f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> PLAGUED_AXE = ITEMS.register("plagued_axe",
+            () -> new AxeItem(ModToolTiers.PLAGUED, 6, -2.5f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> PLAGUED_PICKAXE = ITEMS.register("plagued_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.PLAGUED, 1, -1.8f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> PLAGUED_SHOVEL = ITEMS.register("plagued_shovel",
+            () -> new ShovelItem(ModToolTiers.PLAGUED, 1.5f, -2f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> PLAGUED_HOE = ITEMS.register("plagued_hoe",
+            () -> new HoeItem(ModToolTiers.PLAGUED, 0, -2f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> GUNDANIUM_SWORD = ITEMS.register("gundanium_sword",
+            () -> new SwordItem(ModToolTiers.GUNDANIUM, 2, -2f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> GUNDANIUM_AXE = ITEMS.register("gundanium_axe",
+            () -> new AxeItem(ModToolTiers.GUNDANIUM, 5, -2.5f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> GUNDANIUM_PICKAXE = ITEMS.register("gundanium_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.GUNDANIUM, 2, -2f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> GUNDANIUM_SHOVEL = ITEMS.register("gundanium_shovel",
+            () -> new ShovelItem(ModToolTiers.GUNDANIUM, 2, -2f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> GUNDANIUM_HOE = ITEMS.register("gundanium_hoe",
+            () -> new HoeItem(ModToolTiers.GUNDANIUM, -1, 0f,
+                    new Item.Properties()));
+    //End Tools
+
+
+    //Armors
+
+    public static final RegistryObject<Item> GUNDANIUM_HELMET = ITEMS.register("gundanium_helmet",
+            () -> new ArmorItem(ModArmorMaterials.GUNDANIUM, ArmorItem.Type.HELMET,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> GUNDANIUM_CHESTPLATE = ITEMS.register("gundanium_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.GUNDANIUM, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> GUNDANIUM_LEGGINGS = ITEMS.register("gundanium_leggings",
+            () -> new ArmorItem(ModArmorMaterials.GUNDANIUM, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> GUNDANIUM_BOOTS = ITEMS.register("gundanium_boots",
+            () -> new ArmorItem(ModArmorMaterials.GUNDANIUM, ArmorItem.Type.BOOTS,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> GUNDANIUM_HORSE_ARMOR = ITEMS.register("gundanium_horse_armor",
+            () -> new HorseArmorItem(9, "gundanium",
+                    new Item.Properties()));
+    //End Armors
+
 
 
 //Misc Items

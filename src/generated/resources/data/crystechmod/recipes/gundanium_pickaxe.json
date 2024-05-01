@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "crystechmod:gundanium_ingot"
+    },
+    "S": {
+      "tag": "crystechmod:sticks"
+    }
+  },
+  "pattern": [
+    "GGG",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "crystechmod:gundanium_pickaxe"
+  },
+  "show_notification": true
+}
