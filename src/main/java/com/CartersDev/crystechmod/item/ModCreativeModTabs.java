@@ -53,6 +53,11 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                     output.accept(ModItems.GUNDANIUM_LEGGINGS.get());
                     output.accept(ModItems.GUNDANIUM_BOOTS.get());
 
+                    output.accept(ModItems.ALYTHUM_HELMET.get());
+                    output.accept(ModItems.ALYTHUM_CHESTPLATE.get());
+                    output.accept(ModItems.ALYTHUM_LEGGINGS.get());
+                    output.accept(ModItems.ALYTHUM_BOOTS.get());
+
                     output.accept(ModItems.GUNDANIUM_HORSE_ARMOR.get());
 
                     output.accept(ModBlocks.AERIES_ORE.get());

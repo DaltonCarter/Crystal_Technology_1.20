@@ -160,6 +160,13 @@ Posted By: Dalton Carter
 -Added Plagued, and Gundanium Tools
 -Added both Mod Tool Tiers, and Mod Armor Material Tiers
 
+-------------------------------------------------------------------------------
+
+5/01/2024
+Version 0.3.0
+Posted By: Dalton Carter
+
+-Added Alythum Armor
 
 
 ======================================================

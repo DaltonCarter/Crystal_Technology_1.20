@@ -150,6 +150,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.GUNDANIUM_LEGGINGS);
         trimmedArmorItem(ModItems.GUNDANIUM_BOOTS);
 
+        trimmedArmorItem(ModItems.ALYTHUM_HELMET);
+        trimmedArmorItem(ModItems.ALYTHUM_CHESTPLATE);
+        trimmedArmorItem(ModItems.ALYTHUM_LEGGINGS);
+        trimmedArmorItem(ModItems.ALYTHUM_BOOTS);
+
         simpleItem(ModItems.GUNDANIUM_HORSE_ARMOR);
 
     }

@@ -190,6 +190,23 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
     public static final RegistryObject<Item> GUNDANIUM_HORSE_ARMOR = ITEMS.register("gundanium_horse_armor",
             () -> new HorseArmorItem(9, "gundanium",
                     new Item.Properties()));
+
+    public static final RegistryObject<Item> ALYTHUM_HELMET = ITEMS.register("alythum_helmet",
+            () -> new ArmorItem(ModArmorMaterials.ALYTHUM, ArmorItem.Type.HELMET,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ALYTHUM_CHESTPLATE = ITEMS.register("alythum_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.ALYTHUM, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ALYTHUM_LEGGINGS = ITEMS.register("alythum_leggings",
+            () -> new ArmorItem(ModArmorMaterials.ALYTHUM, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ALYTHUM_BOOTS = ITEMS.register("alythum_boots",
+            () -> new ArmorItem(ModArmorMaterials.ALYTHUM, ArmorItem.Type.BOOTS,
+                    new Item.Properties()));
+
     //End Armors
 
 
