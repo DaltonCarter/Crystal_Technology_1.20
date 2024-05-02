@@ -167,6 +167,9 @@ Version 0.3.0
 Posted By: Dalton Carter
 
 -Added Alythum Armor
+-Added both Hazmat item textures, and Armor Models
+-Made textures for Tiberium/Ichor Leather
+-Made Textures for Gundanium Arrow, and Tiberium arrow
 
 
 ======================================================
