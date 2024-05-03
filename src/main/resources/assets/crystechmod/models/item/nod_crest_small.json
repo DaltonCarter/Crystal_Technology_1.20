@@ -1,0 +1,14 @@
+{
+  "parent": "crystechmod:block/nod_crest_small",
+  "perspectives": {
+    "gui": {
+      "parent": "crystechmod:block/nod_crest_small"
+    },
+    "ground": {
+      "parent": "crystechmod:block/nod_crest_small"
+    },
+    "fixed": {
+      "parent": "crystechmod:block/nod_crest_small"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "crystechmod:hazmat_glass_panes"
+    },
+    "L": {
+      "item": "crystechmod:tiberium_leather"
+    }
+  },
+  "pattern": [
+    "LLL",
+    "LGL",
+    "   "
+  ],
+  "result": {
+    "item": "crystechmod:hazmat_mk1_helmet"
+  },
+  "show_notification": true
+}

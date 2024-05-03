@@ -12,6 +12,12 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
+    HAZMAT_MK1("hazmat_mk1", 10, new int[] {1, 2, 3, 1}, 15,
+            SoundEvents.ARMOR_EQUIP_LEATHER, 0.0f, 0.0f, () -> Ingredient.of(ModItems.TIBERIUM_LEATHER.get())),
+
+    HAZMAT_MK2("hazmat_mk2", 13, new int[] {1, 4, 5, 2}, 15,
+            SoundEvents.ARMOR_EQUIP_LEATHER, 0.1f, 0.0f, () -> Ingredient.of(ModItems.ICHOR_LEATHER.get())),
+
     GUNDANIUM("gundanium", 20, new int[] {3, 6, 6, 3}, 12,
             SoundEvents.ARMOR_EQUIP_IRON, 0.5f, 0.1f, () -> Ingredient.of(ModItems.GUNDANIUM_INGOT.get())),
 

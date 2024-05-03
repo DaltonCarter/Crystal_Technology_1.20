@@ -45,6 +45,9 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
 
+        simpleItem(ModItems.TIBERIUM_LEATHER);
+        simpleItem(ModItems.ICHOR_LEATHER);
+
         simpleItem(ModItems.TIBERIUM);
         simpleItem(ModItems.TIBERIUM_BLUE);
         simpleItem(ModItems.TIBERIUM_RED);
@@ -154,6 +157,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.ALYTHUM_CHESTPLATE);
         trimmedArmorItem(ModItems.ALYTHUM_LEGGINGS);
         trimmedArmorItem(ModItems.ALYTHUM_BOOTS);
+
+        trimmedArmorItem(ModItems.HAZMAT_MK1_HELMET);
+        trimmedArmorItem(ModItems.HAZMAT_MK1_CHESTPLATE);
+        trimmedArmorItem(ModItems.HAZMAT_MK1_LEGGINGS);
+        trimmedArmorItem(ModItems.HAZMAT_MK1_BOOTS);
+
+        trimmedArmorItem(ModItems.HAZMAT_MK2_HELMET);
+        trimmedArmorItem(ModItems.HAZMAT_MK2_CHESTPLATE);
+        trimmedArmorItem(ModItems.HAZMAT_MK2_LEGGINGS);
+        trimmedArmorItem(ModItems.HAZMAT_MK2_BOOTS);
 
         simpleItem(ModItems.GUNDANIUM_HORSE_ARMOR);
 

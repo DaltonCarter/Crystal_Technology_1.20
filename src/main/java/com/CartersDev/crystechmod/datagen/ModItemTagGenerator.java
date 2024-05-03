@@ -28,6 +28,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     this.copy(ModTags.Blocks.TIBERCRETE_SANDS, ModTags.Items.TIBERCRETE_SANDS);
 
+        this.copy(ModTags.Blocks.HAZMAT_GLASS_PANES, ModTags.Items.HAZMAT_GLASS_PANES);
+
         this.tag(ItemTags.TRIMMABLE_ARMOR)
                 .add(
                         ModItems.GUNDANIUM_HELMET.get(),
@@ -38,6 +40,15 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.ALYTHUM_CHESTPLATE.get(),
                         ModItems.ALYTHUM_LEGGINGS.get(),
                         ModItems.ALYTHUM_BOOTS.get());
+                        ModItems.HAZMAT_MK1_HELMET.get();
+                        ModItems.HAZMAT_MK1_CHESTPLATE.get();
+                        ModItems.HAZMAT_MK1_LEGGINGS.get();
+                        ModItems.HAZMAT_MK1_BOOTS.get();
+                        ModItems.HAZMAT_MK2_HELMET.get();
+                        ModItems.HAZMAT_MK2_CHESTPLATE.get();
+                        ModItems.HAZMAT_MK2_LEGGINGS.get();
+                        ModItems.HAZMAT_MK2_BOOTS.get();
+
 
         this.tag(ModTags.Items.STICKS)
                 .add(ModItems.PLAGUED_STICK.get(),

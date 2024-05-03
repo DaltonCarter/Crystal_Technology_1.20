@@ -54,7 +54,16 @@
   "item.crystechmod.alythum_chestplate": "Alythum Chestplate",
   "item.crystechmod.alythum_leggings": "Alythum Leggings",
   "item.crystechmod.alythum_boots": "Alythum Boots",
-
+  "item.crystechmod.hazmat_mk1_helmet": "Tiberium Hazmat Helmet",
+  "item.crystechmod.hazmat_mk1_chestplate": "Tiberium Chestplate",
+  "item.crystechmod.hazmat_mk1_leggings": "Tiberium Hazmat Leggings",
+  "item.crystechmod.hazmat_mk1_boots": "Tiberium Hazmat Boots",
+  "item.crystechmod.hazmat_mk2_helmet": "Red Zone Hazmat Helmet",
+  "item.crystechmod.hazmat_mk2_chestplate": "Red Zone Chestplate",
+  "item.crystechmod.hazmat_mk2_leggings": "Red Zone Hazmat Leggings",
+  "item.crystechmod.hazmat_mk2_boots": "Red Zone Hazmat Boots",
+  "item.crystechmod.tiberium_leather": "Tiberium Plagued Leather",
+  "item.crystechmod.ichor_leather": "Ichor Infused Leather",
 
 
   "block.crystechmod.aeries_ore": "Aeries Ore",

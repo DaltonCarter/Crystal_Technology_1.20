@@ -935,6 +935,39 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HAZMAT_MK1_HELMET.get())
+                .pattern("LLL")
+                .pattern("LGL")
+                .pattern("   ")
+                .define('L', ModItems.TIBERIUM_LEATHER.get())
+                .define('G', ModTags.Items.HAZMAT_GLASS_PANES)
+                .unlockedBy(getHasName(ModItems.TIBERIUM_LEATHER.get()), has(ModItems.TIBERIUM_LEATHER.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HAZMAT_MK1_CHESTPLATE.get())
+                .pattern("L L")
+                .pattern("LLL")
+                .pattern("LLL")
+                .define('L', ModItems.TIBERIUM_LEATHER.get())
+                .unlockedBy(getHasName(ModItems.TIBERIUM_LEATHER.get()), has(ModItems.TIBERIUM_LEATHER.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HAZMAT_MK1_LEGGINGS.get())
+                .pattern("LLL")
+                .pattern("L L")
+                .pattern("L L")
+                .define('L', ModItems.TIBERIUM_LEATHER.get())
+                .unlockedBy(getHasName(ModItems.TIBERIUM_LEATHER.get()), has(ModItems.TIBERIUM_LEATHER.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HAZMAT_MK1_BOOTS.get())
+                .pattern("   ")
+                .pattern("L L")
+                .pattern("L L")
+                .define('L', ModItems.TIBERIUM_LEATHER.get())
+                .unlockedBy(getHasName(ModItems.TIBERIUM_LEATHER.get()), has(ModItems.TIBERIUM_LEATHER.get()))
+                .save(consumer);
+
 
         //Shapeless Crafting:
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIBERIUM.get(), 9)

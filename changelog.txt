@@ -162,14 +162,18 @@ Posted By: Dalton Carter
 
 -------------------------------------------------------------------------------
 
-5/01/2024
+5/01/2024 - 5/03/2024
 Version 0.3.0
 Posted By: Dalton Carter
 
 -Added Alythum Armor
--Added both Hazmat item textures, and Armor Models
+-Added both Hazmat item textures, Armor Models, and Armor materials
 -Made textures for Tiberium/Ichor Leather
 -Made Textures for Gundanium Arrow, and Tiberium arrow
+-Added Tiberium/Ichor Leather
+-Added Hazmat MK.1, and MK.2 armors
+-un-utilized JSONS and custom block class for a half finished first attempt at block bench present. Will return
+to those once proper documentation/ education has been obtained.
 
 
 ======================================================

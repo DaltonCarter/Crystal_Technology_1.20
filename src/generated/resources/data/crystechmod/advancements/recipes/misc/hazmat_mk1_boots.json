@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:hazmat_mk1_boots"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tiberium_leather": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:tiberium_leather"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_tiberium_leather",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:hazmat_mk1_boots"
+    ]
+  },
+  "sends_telemetry_event": false
+}

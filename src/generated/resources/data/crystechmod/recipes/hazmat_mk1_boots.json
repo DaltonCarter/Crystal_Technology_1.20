@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "crystechmod:tiberium_leather"
+    }
+  },
+  "pattern": [
+    "   ",
+    "L L",
+    "L L"
+  ],
+  "result": {
+    "item": "crystechmod:hazmat_mk1_boots"
+  },
+  "show_notification": true
+}

@@ -37,6 +37,18 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         Blocks.GRANITE
                 );
 
+        this.tag(ModTags.Blocks.HAZMAT_GLASS_PANES)
+                .add(
+                        ModBlocks.CLEAR_TIBERGLASS_PANE.get(),
+                        Blocks.GLASS_PANE
+                );
+
+        this.tag(ModTags.Blocks.HAZMAT_GLASS_PANES2)
+                .add(
+                        ModBlocks.RED_TIBERGLASS_PANE.get(),
+                        Blocks.RED_STAINED_GLASS_PANE
+                );
+
         this.tag(ModTags.Blocks.TIBERIUM_SEED_BLOCKS)
                 .add(
                         ModBlocks.SEEDED_RED_ZONE_DIRT.get(),

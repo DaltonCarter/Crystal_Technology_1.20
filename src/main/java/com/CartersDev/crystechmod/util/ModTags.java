@@ -19,6 +19,8 @@ public class ModTags {
         public static final TagKey<Block> TIBERCRETE_SANDS= tag("tibercrete_sands");
         public static final TagKey<Block> TIBERIUM_VIABLE_BLOCKS= tag("tiberium_viable_blocks");
         public static final TagKey<Block> TIBERIUM_SEED_BLOCKS= tag("tiberium_seed_block");
+        public static final TagKey<Block> HAZMAT_GLASS_PANES= tag("hazmat_glass_panes");
+        public static final TagKey<Block> HAZMAT_GLASS_PANES2= tag("hazmat_glass_panes2");
 
 
 
@@ -30,6 +32,8 @@ public class ModTags {
     public static class Items {
         public static final TagKey<Item> TIBERCRETE_SANDS= tag("tibercrete_sands");
         public static final TagKey<Item> STICKS= tag("sticks");
+        public static final TagKey<Item> HAZMAT_GLASS_PANES= tag("hazmat_glass_panes");
+        public static final TagKey<Item> HAZMAT_GLASS_PANES2= tag("hazmat_glass_panes2");
 
 
 

@@ -24,9 +24,13 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
 
 //                    output.accept(ModBlocks.BLOSSOM_SPOUT.get());
 
+                    output.accept(ModItems.TIBERIUM_LEATHER.get());
+                    output.accept(ModItems.ICHOR_LEATHER.get());
+
                     output.accept(ModItems.FIRESTONE.get());
                     output.accept(ModBlocks.FIRESTONE_BLOCK.get());
                     output.accept(ModBlocks.FIRESTONE_WALL.get());
+
                     output.accept(ModItems.TIBERIUM.get());
                     output.accept(ModBlocks.TIBERIUM_BLOCK.get());
                     output.accept(ModItems.TIBERIUM_BLUE.get());
@@ -47,6 +51,16 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                     output.accept(ModItems.GUNDANIUM_AXE.get());
                     output.accept(ModItems.GUNDANIUM_SHOVEL.get());
                     output.accept(ModItems.GUNDANIUM_HOE.get());
+
+                    output.accept(ModItems.HAZMAT_MK1_HELMET.get());
+                    output.accept(ModItems.HAZMAT_MK1_CHESTPLATE.get());
+                    output.accept(ModItems.HAZMAT_MK1_LEGGINGS.get());
+                    output.accept(ModItems.HAZMAT_MK1_BOOTS.get());
+
+                    output.accept(ModItems.HAZMAT_MK2_HELMET.get());
+                    output.accept(ModItems.HAZMAT_MK2_CHESTPLATE.get());
+                    output.accept(ModItems.HAZMAT_MK2_LEGGINGS.get());
+                    output.accept(ModItems.HAZMAT_MK2_BOOTS.get());
 
                     output.accept(ModItems.GUNDANIUM_HELMET.get());
                     output.accept(ModItems.GUNDANIUM_CHESTPLATE.get());

@@ -207,6 +207,38 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
             () -> new ArmorItem(ModArmorMaterials.ALYTHUM, ArmorItem.Type.BOOTS,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> HAZMAT_MK1_HELMET = ITEMS.register("hazmat_mk1_helmet",
+            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK1, ArmorItem.Type.HELMET,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> HAZMAT_MK1_CHESTPLATE = ITEMS.register("hazmat_mk1_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK1, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> HAZMAT_MK1_LEGGINGS = ITEMS.register("hazmat_mk1_leggings",
+            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK1, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> HAZMAT_MK1_BOOTS = ITEMS.register("hazmat_mk1_boots",
+            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK1, ArmorItem.Type.BOOTS,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> HAZMAT_MK2_HELMET = ITEMS.register("hazmat_mk2_helmet",
+            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK2, ArmorItem.Type.HELMET,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> HAZMAT_MK2_CHESTPLATE = ITEMS.register("hazmat_mk2_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK2, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> HAZMAT_MK2_LEGGINGS = ITEMS.register("hazmat_mk2_leggings",
+            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK2, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> HAZMAT_MK2_BOOTS = ITEMS.register("hazmat_mk2_boots",
+            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK2, ArmorItem.Type.BOOTS,
+                    new Item.Properties()));
+
     //End Armors
 
 
@@ -217,6 +249,12 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> PLAGUED_STICK = ITEMS.register("plagued_stick",
         () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> TIBERIUM_LEATHER = ITEMS.register("tiberium_leather",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ICHOR_LEATHER = ITEMS.register("ichor_leather",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> GDI_EMBLEM = ITEMS.register("gdi_emblem",
             () -> new Item(new Item.Properties()));
