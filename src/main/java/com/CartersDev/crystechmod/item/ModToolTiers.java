@@ -21,8 +21,14 @@ public class ModToolTiers {
 
 
     public static final Tier GUNDANIUM = TierSortingRegistry.registerTier(
-            new ForgeTier(2, 500, 6.5f, 3.5f, 10,
+            new ForgeTier(2, 500, 6.5f, 2.5f, 10,
                     ModTags.Blocks.NEEDS_GUNDANIUM_TOOL, () -> Ingredient.of(ModItems.GUNDANIUM_INGOT.get())),
             new ResourceLocation(CrystalTech.MOD_ID, "gundanium"), List.of(Tiers.IRON), List.of());
+
+
+    public static final Tier ALYTHUM = TierSortingRegistry.registerTier(
+            new ForgeTier(3, 1761, 9.0f, 3.5f, 13,
+                    ModTags.Blocks.NEEDS_ALYTHUM_TOOL, () -> Ingredient.of(ModItems.ALYTHUM_INGOT.get())),
+            new ResourceLocation(CrystalTech.MOD_ID, "alythum"), List.of(Tiers.IRON), List.of());
 
 }

@@ -14,6 +14,7 @@ public class ModTags {
 
         public static final TagKey<Block> NEEDS_PLAGUED_TOOL = tag("needs_plagued_tool");
         public static final TagKey<Block> NEEDS_GUNDANIUM_TOOL = tag("needs_gundanium_tool");
+        public static final TagKey<Block> NEEDS_ALYTHUM_TOOL = tag("needs_alythum_tool");
         public static final TagKey<Block> VULNERABLE_LEAVES = tag("vulnerable_leaves");
         public static final TagKey<Block> TIBERIUM_VULNERABLE_WOOD= tag("tiberium_vulnerable_wood");
         public static final TagKey<Block> TIBERCRETE_SANDS= tag("tibercrete_sands");

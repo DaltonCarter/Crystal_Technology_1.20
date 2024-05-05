@@ -400,6 +400,20 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                  ModBlocks.ICHOR_SOIL.get()
                 );
 
+        this.tag(ModTags.Blocks.NEEDS_ALYTHUM_TOOL)
+                .add(
+                        ModBlocks.DEEPSLATE_AERIES_ORE.get(),
+                        ModBlocks.NETHER_AERIES_ORE.get(),
+                        ModBlocks.DEEPSLATE_ENIGMA_ORE.get(),
+                        ModBlocks.END_ENIGMA_ORE.get(),
+                        ModBlocks.DEEPSLATE_ILLUMINA_ORE.get(),
+                        ModBlocks.DEEPSLATE_KRYON_ORE.get(),
+                        ModBlocks.NETHER_KRYON_ORE.get(),
+                        ModBlocks.END_KRYON_ORE.get(),
+                        ModBlocks.NETHER_ALYTHUM_ORE.get(),
+                        ModBlocks.NETHER_QUALRITE_ORE.get()
+                );
+
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.RIPARIUS_CRYSTAL.get(),
                 ModBlocks.VINIFERA_CRYSTAL.get(),

@@ -162,7 +162,7 @@ Posted By: Dalton Carter
 
 -------------------------------------------------------------------------------
 
-5/01/2024 - 5/03/2024
+5/01/2024 - 5/04/2024
 Version 0.3.0
 Posted By: Dalton Carter
 
@@ -174,7 +174,7 @@ Posted By: Dalton Carter
 -Added Hazmat MK.1, and MK.2 armors
 -un-utilized JSONS and custom block class for a half finished first attempt at block bench present. Will return
 to those once proper documentation/ education has been obtained.
-
+-Added Alythum Weapons
 
 ======================================================
 LEGACY 1.16.5 Changelog

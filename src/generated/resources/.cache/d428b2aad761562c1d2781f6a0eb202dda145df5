@@ -1,5 +1,6 @@
-// 1.20.1	2024-05-03T01:31:02.5608884	Item Models: crystechmod
+// 1.20.1	2024-05-05T01:58:29.8270986	Item Models: crystechmod
 59af2f348d998b633663b4205f4a1565e13933c0 assets/crystechmod/models/item/aeries_crystal.json
+e93e288155e12d75f29575ccb056b60bd51b7bea assets/crystechmod/models/item/alythum_axe.json
 8b8decbbfe4dec30a6f3d7b8076de9aa2af2dbc2 assets/crystechmod/models/item/alythum_boots.json
 bceb58554b8a1ace44f0559d20812e8ae69711a6 assets/crystechmod/models/item/alythum_boots_amethyst_trim.json
 8864aba1da6958546b12c44e1bbcc85e1445d6bd assets/crystechmod/models/item/alythum_boots_copper_trim.json
@@ -34,6 +35,7 @@ ab4a89c98f345023f1f98ac4d8897405cde04c0b assets/crystechmod/models/item/alythum_
 3984d4ac4f20d03430f8949b1e7c71a47e722a17 assets/crystechmod/models/item/alythum_helmet_netherite_trim.json
 822f1bc4ea4530e215eca84531399cf33819c5ff assets/crystechmod/models/item/alythum_helmet_quartz_trim.json
 47dc58306e0b6d6bec432353ab32b3d0e409c155 assets/crystechmod/models/item/alythum_helmet_redstone_trim.json
+c5b8530dbb3d19742328c190885774f49f70f751 assets/crystechmod/models/item/alythum_hoe.json
 2ec115e77d8ac22e1612101248d8aced2e488549 assets/crystechmod/models/item/alythum_ingot.json
 4334e01742fac99e104c09085f765f2656706faa assets/crystechmod/models/item/alythum_leggings.json
 33be6692c402253712a38e4b4d6a4a60e81d8137 assets/crystechmod/models/item/alythum_leggings_amethyst_trim.json
@@ -46,6 +48,9 @@ eb3cb6cb33b7111650792d94a82c5b1284d742ae assets/crystechmod/models/item/alythum_
 f1f28c5decf8faa7edae7539c38dae4514f82132 assets/crystechmod/models/item/alythum_leggings_netherite_trim.json
 d9ed55969c97dee8d4ec006cbf009bdec7aa7816 assets/crystechmod/models/item/alythum_leggings_quartz_trim.json
 d26f9d438718f71d318689c3b0cb95b148492bb5 assets/crystechmod/models/item/alythum_leggings_redstone_trim.json
+3cea02b0af0b0d1a33ae3d5a2a0c8219cc7d7459 assets/crystechmod/models/item/alythum_pickaxe.json
+f533b35b34b9ba1181181fb89e8c7ebcb98d8c3a assets/crystechmod/models/item/alythum_shovel.json
+d44531ca847c753a781f8e5e6e3949ec096529a8 assets/crystechmod/models/item/alythum_sword.json
 0419eacffb9e95916073f9b9ba7b0606c54bd3f3 assets/crystechmod/models/item/black_tibercrete_stairs.json
 efca020efe98f5d3bcf0dff7e89b55b5166f38a4 assets/crystechmod/models/item/black_tiberglass_pane.json
 2d96fcf68ca1985d5c0b11469ed0d3e440890a1b assets/crystechmod/models/item/blue_tibercrete_stairs.json

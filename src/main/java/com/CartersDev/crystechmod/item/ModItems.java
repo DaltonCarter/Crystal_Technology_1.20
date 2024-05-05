@@ -148,15 +148,15 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
                     new Item.Properties()));
 
     public static final RegistryObject<Item> GUNDANIUM_SWORD = ITEMS.register("gundanium_sword",
-            () -> new SwordItem(ModToolTiers.GUNDANIUM, 2, -2f,
+            () -> new SwordItem(ModToolTiers.GUNDANIUM, 3, -2f,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> GUNDANIUM_AXE = ITEMS.register("gundanium_axe",
-            () -> new AxeItem(ModToolTiers.GUNDANIUM, 5, -2.5f,
+            () -> new AxeItem(ModToolTiers.GUNDANIUM, 6, -2.5f,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> GUNDANIUM_PICKAXE = ITEMS.register("gundanium_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.GUNDANIUM, 2, -2f,
+            () -> new PickaxeItem(ModToolTiers.GUNDANIUM, 3, -2f,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> GUNDANIUM_SHOVEL = ITEMS.register("gundanium_shovel",
@@ -165,6 +165,26 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> GUNDANIUM_HOE = ITEMS.register("gundanium_hoe",
             () -> new HoeItem(ModToolTiers.GUNDANIUM, -1, 0f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ALYTHUM_SWORD = ITEMS.register("alythum_sword",
+            () -> new SwordItem(ModToolTiers.ALYTHUM, 4, -1.5f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ALYTHUM_AXE = ITEMS.register("alythum_axe",
+            () -> new AxeItem(ModToolTiers.ALYTHUM, 7, -2.0f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ALYTHUM_PICKAXE = ITEMS.register("alythum_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.ALYTHUM, 3, -1.5f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ALYTHUM_SHOVEL = ITEMS.register("alythum_shovel",
+            () -> new ShovelItem(ModToolTiers.ALYTHUM, 2, -1f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ALYTHUM_HOE = ITEMS.register("alythum_hoe",
+            () -> new HoeItem(ModToolTiers.ALYTHUM, -1, 1f,
                     new Item.Properties()));
     //End Tools
 

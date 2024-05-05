@@ -52,6 +52,12 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                     output.accept(ModItems.GUNDANIUM_SHOVEL.get());
                     output.accept(ModItems.GUNDANIUM_HOE.get());
 
+                    output.accept(ModItems.ALYTHUM_SWORD.get());
+                    output.accept(ModItems.ALYTHUM_PICKAXE.get());
+                    output.accept(ModItems.ALYTHUM_AXE.get());
+                    output.accept(ModItems.ALYTHUM_SHOVEL.get());
+                    output.accept(ModItems.ALYTHUM_HOE.get());
+
                     output.accept(ModItems.HAZMAT_MK1_HELMET.get());
                     output.accept(ModItems.HAZMAT_MK1_CHESTPLATE.get());
                     output.accept(ModItems.HAZMAT_MK1_LEGGINGS.get());
