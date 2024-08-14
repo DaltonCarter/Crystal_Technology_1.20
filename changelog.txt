@@ -176,6 +176,21 @@ Posted By: Dalton Carter
 to those once proper documentation/ education has been obtained.
 -Added Alythum Weapons
 
+
+-------------------------------------------------------------------------------
+
+8/13/2024 - 8/14/2024
+Version 0.3.1
+Posted By: Dalton Carter
+
+-Added Custom Enchantments, Effects, Potions, and Brewing Recipes
+-Added Lightning Striker 1 and 2 Enchants
+-Added Freeze Effect, Freeze Potion, and Freeze potion Recipe
+
+Note: While Assisting with The Glowing Tree Mod, I learned how to make Potion effect last forever,
+and how to deal with the handling for when it is used as an Armor Set Bonus.
+
+
 ======================================================
 LEGACY 1.16.5 Changelog
 0.5.2

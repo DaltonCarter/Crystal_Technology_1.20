@@ -1,0 +1,6 @@
+{
+    "parent": "crystechmod:item/plagued_bow",
+    "textures": {
+        "layer0": "crystechmod:item/plagued_bow_pulling_2"
+    }
+}

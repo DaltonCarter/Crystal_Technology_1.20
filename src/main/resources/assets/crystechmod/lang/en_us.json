@@ -36,6 +36,7 @@
   "item.crystechmod.plagued_sword": "Plagued Sword",
   "item.crystechmod.plagued_hoe": "Plagued Hoe",
   "item.crystechmod.plagued_shovel": "Plagued Shovel",
+  "item.crystechmod.plagued_bow": "Plagued Bow",
   "item.crystechmod.core_steel_sign": "Core Steel Sign",
   "item.crystechmod.gundanium_helmet": "Gundanium Helmet",
   "item.crystechmod.gundanium_chestplate": "Gundanium Chestplate",
@@ -69,6 +70,10 @@
   "item.crystechmod.alythum_axe": "Alythum Axe",
   "item.crystechmod.alythum_hoe": "Alythum Hoe",
   "item.crystechmod.alythum_shovel": "Alythum Shovel",
+
+  "item.minecraft.potion.effect.freeze_potion": "Freeze Potion",
+  "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
 
 
   "block.crystechmod.aeries_ore": "Aeries Ore",
@@ -254,8 +259,12 @@
   "block.crystechmod.seeded_dirt": "Tiberium Seeded Dirt",
 
 
+  "enchantment.crystechmod.lightning_striker": "Lightning Striker",
+
 
   "tootip.crystechmod.firestone_wall.tooltip": "For those times when things REALLY need to stay off your lawn.",
+
+  "effect.crystechmod.freeze": "Freeze",
 
   "creativetab.crystal_technology_tab": "Crystal Technology"
 

@@ -186,6 +186,9 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
     public static final RegistryObject<Item> ALYTHUM_HOE = ITEMS.register("alythum_hoe",
             () -> new HoeItem(ModToolTiers.ALYTHUM, -1, 1f,
                     new Item.Properties()));
+
+    public static final RegistryObject<Item> PLAGUED_BOW = ITEMS.register("plagued_bow",
+            () -> new BowItem(new Item.Properties().durability(684)));
     //End Tools
 
 

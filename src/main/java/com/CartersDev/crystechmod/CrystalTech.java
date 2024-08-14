@@ -1,13 +1,19 @@
 package com.CartersDev.crystechmod;
 
 import com.CartersDev.crystechmod.block.ModBlocks;
+import com.CartersDev.crystechmod.effect.ModEffects;
+import com.CartersDev.crystechmod.enchantment.ModEnchantments;
 import com.CartersDev.crystechmod.item.ModCreativeModTabs;
 import com.CartersDev.crystechmod.item.ModItems;
+import com.CartersDev.crystechmod.potion.ModPotions;
+import com.CartersDev.crystechmod.util.BetterBrewingRecipe;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -35,13 +41,25 @@ public class CrystalTech {
         ModBlocks.register(modEventBus);
 
 
-        modEventBus.addListener(this::commonSetup);
+        ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
+        ModEnchantments.register(modEventBus);
 
+
+        modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            //Potion Recipes
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
+                    ModItems.QUALRIM_COMPOUND.get(), ModPotions.FREEZE_POTION.get()));
+
+            //End of Potion Recipes
+        });
+
 
     }
 
