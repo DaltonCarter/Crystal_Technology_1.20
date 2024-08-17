@@ -5,6 +5,7 @@ import com.CartersDev.crystechmod.effect.ModEffects;
 import com.CartersDev.crystechmod.enchantment.ModEnchantments;
 import com.CartersDev.crystechmod.item.ModCreativeModTabs;
 import com.CartersDev.crystechmod.item.ModItems;
+import com.CartersDev.crystechmod.loot.ModLootModifiers;
 import com.CartersDev.crystechmod.potion.ModPotions;
 import com.CartersDev.crystechmod.util.BetterBrewingRecipe;
 import com.mojang.logging.LogUtils;
@@ -40,6 +41,7 @@ public class CrystalTech {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModLootModifiers.register(modEventBus);
 
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);

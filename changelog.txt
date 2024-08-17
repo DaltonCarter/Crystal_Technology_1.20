@@ -198,6 +198,7 @@ Posted By: Dalton Carter
 
 -Added Yokaran Bloom Tall Flower
 -Added Nod Crest Large
+-Added Global Loot Modifier to Datagen, and loot Modifier
 
 
 ======================================================

@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-11T01:43:07.256211	Loot Tables
+// 1.20.1	2024-08-16T21:11:27.5549283	Loot Tables
 03c6f95925fa38635ca3601903e1d452029caabd data/crystechmod/loot_tables/blocks/aboreus_crystal.json
 54cc8c095a6e7af070b865de543f3a1891b49055 data/crystechmod/loot_tables/blocks/aboreus_stone.json
 c1005c86f610c3ea139857f0d980e40086fc3cac data/crystechmod/loot_tables/blocks/aeries_block.json
@@ -101,6 +101,7 @@ b6515c7d49ddb4f4c7585cecad7593a86bf21ba2 data/crystechmod/loot_tables/blocks/mg_
 53e6225a10287d546f6e0b552c7a45ce6f0a2b8b data/crystechmod/loot_tables/blocks/nether_alythum_ore.json
 7a1c282333cadaf7f32082e926b63119131d2602 data/crystechmod/loot_tables/blocks/nether_kryon_ore.json
 8ed782c83527e15f123a1e9a2aab0d39c34d960f data/crystechmod/loot_tables/blocks/nether_qualrite_ore.json
+b765f45e7d6466b2007f55d18ab56bcb8478c50d data/crystechmod/loot_tables/blocks/nod_crest_large.json
 4442e05a77ecd1407d4f36115e46421dd79db3a7 data/crystechmod/loot_tables/blocks/nod_tiberglass.json
 5bc229fb9e723f8269d531d821bdda1ce67d7307 data/crystechmod/loot_tables/blocks/nod_tiberglass_pane.json
 07db43c137a81b6803514c79b4ae80a789b8c5ab data/crystechmod/loot_tables/blocks/orange_tibercrete.json
@@ -161,3 +162,4 @@ facc2f33983fd6ce7c5fde3c74362a043820b613 data/crystechmod/loot_tables/blocks/yel
 446fa973b02d8a582fbf6effb9221c2a2d2434d5 data/crystechmod/loot_tables/blocks/yellow_tiberglass_pane.json
 f6eaa8d86784d437b50f20cf959bd60a1c2c8804 data/crystechmod/loot_tables/blocks/yellow_zone_cracked_dirt.json
 16d874fe6a3c0155e4fe9280d39d206cd597fbba data/crystechmod/loot_tables/blocks/yellow_zone_sand.json
+b2e5bbd8ac33b36161d38c6c406fa98ec816f544 data/crystechmod/loot_tables/blocks/yokaran_bloom.json

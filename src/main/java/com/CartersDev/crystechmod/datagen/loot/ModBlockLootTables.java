@@ -30,6 +30,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.TIBERIUM_BLUE_BLOCK.get());
         this.dropSelf(ModBlocks.TIBERIUM_RED_BLOCK.get());
         this.dropSelf(ModBlocks.TIBERIUM_PURPLE_BLOCK.get());
+        this.dropSelf(ModBlocks.NOD_CREST_LARGE.get());
+        this.dropSelf(ModBlocks.YOKARAN_BLOOM.get());
+
+
 
         this.dropSelf(ModBlocks.AERIES_BLOCK.get());
         this.dropSelf(ModBlocks.ENIGMA_BLOCK.get());
