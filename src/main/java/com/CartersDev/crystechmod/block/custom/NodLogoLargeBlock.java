@@ -10,7 +10,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class NodLogoLargeBlock extends Block {
 
-    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 48, 16, 48);
+    public static final VoxelShape SHAPE = Block.box(-16, 0, -16, 32, 16, 32);
 
 
     public NodLogoLargeBlock(Properties pProperties) {

@@ -190,6 +190,15 @@ Posted By: Dalton Carter
 Note: While Assisting with The Glowing Tree Mod, I learned how to make Potion effect last forever,
 and how to deal with the handling for when it is used as an Armor Set Bonus.
 
+-------------------------------------------------------------------------------
+
+8/16/2024
+Version 0.3.1
+Posted By: Dalton Carter
+
+-Added Yokaran Bloom Tall Flower
+-Added Nod Crest Large
+
 
 ======================================================
 LEGACY 1.16.5 Changelog

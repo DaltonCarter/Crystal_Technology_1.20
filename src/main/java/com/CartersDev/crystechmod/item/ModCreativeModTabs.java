@@ -23,6 +23,8 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                 .displayItems((itemDisplayParameters, output) -> {
 
                     output.accept(ModItems.TIBERIUM_FRUIT.get());
+                    output.accept(ModBlocks.YOKARAN_BLOOM.get());
+                    output.accept(ModBlocks.NOD_CREST_LARGE.get());
 
 //                    output.accept(ModBlocks.BLOSSOM_SPOUT.get());
 

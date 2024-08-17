@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "crystechmod:block/yokaran_bloom_bottom"
+    },
+    "half=upper": {
+      "model": "crystechmod:block/yokaran_bloom_top"
+    }
+  }
+}

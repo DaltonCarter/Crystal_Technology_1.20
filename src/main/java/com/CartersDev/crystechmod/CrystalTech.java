@@ -58,6 +58,8 @@ public class CrystalTech {
                     ModItems.QUALRIM_COMPOUND.get(), ModPotions.FREEZE_POTION.get()));
 
             //End of Potion Recipes
+
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.YOKARAN_BLOOM.get(), RenderType.cutout());
         });
 
 

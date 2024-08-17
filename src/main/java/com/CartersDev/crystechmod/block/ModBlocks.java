@@ -5,6 +5,7 @@ import com.CartersDev.crystechmod.block.custom.*;
 import com.CartersDev.crystechmod.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -28,6 +29,10 @@ public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, CrystalTech.MOD_ID);
+
+    public static final RegistryObject<Block> NOD_CREST_LARGE = registerBlock("nod_crest_large",
+            () -> new NodLogoLargeBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(3f, 1200f).randomTicks()));
 
 
     //Terrain Blocks
@@ -643,6 +648,12 @@ public class ModBlocks {
                     .noOcclusion()));
 
     //End of Glass
+
+    //Plants
+    public static final RegistryObject<Block> YOKARAN_BLOOM = registerBlock("yokaran_bloom",
+            () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.LILAC)
+                    .noOcclusion().noCollission()));
+    //End of Plants
 
 
     //Blossom Tree
