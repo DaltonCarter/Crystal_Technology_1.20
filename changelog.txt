@@ -201,6 +201,20 @@ Posted By: Dalton Carter
 -Added Global Loot Modifier to Datagen, and loot Modifier
 
 
+-------------------------------------------------------------------------------
+
+8/18/2024
+Version 0.3.1
+Posted By: Dalton Carter
+
+-Added Strawberry, Strawberry Crop, and Strawberry Seeds*
+-Added Datagen handling for Strawberry Crop**
+
+*Note: This will be changed at a later date to fit in with the Mods Survival Aspect
+**Note 2: Will need to see if this handling will work for Tiberium Crystal Growths(Crop)
+
+
+
 ======================================================
 LEGACY 1.16.5 Changelog
 0.5.2

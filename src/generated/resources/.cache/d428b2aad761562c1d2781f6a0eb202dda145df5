@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-16T21:11:27.5604458	Item Models: crystechmod
+// 1.20.1	2024-08-18T16:44:00.771932	Item Models: crystechmod
 59af2f348d998b633663b4205f4a1565e13933c0 assets/crystechmod/models/item/aeries_crystal.json
 e93e288155e12d75f29575ccb056b60bd51b7bea assets/crystechmod/models/item/alythum_axe.json
 8b8decbbfe4dec30a6f3d7b8076de9aa2af2dbc2 assets/crystechmod/models/item/alythum_boots.json
@@ -261,6 +261,8 @@ c75952fbf158d90168c4f029c9621cbfec7894ab assets/crystechmod/models/item/plagued_
 b457cb9a281c196512fd1dd430fdc93f9a46299c assets/crystechmod/models/item/raw_qualrite.json
 e6deb62921f070d312dd489194c431160c3843d3 assets/crystechmod/models/item/red_tibercrete_stairs.json
 632d156694a73ea517f0430e376d44f3550b8721 assets/crystechmod/models/item/red_tiberglass_pane.json
+0b3c9c6197d6f525ff898da46928f4df2d18c82b assets/crystechmod/models/item/strawberry.json
+fdbbbea3ded6c9361cdfb2ab7c2b309d54460246 assets/crystechmod/models/item/strawberry_seeds.json
 97bfa1f993e6ce478247ac6d37f5d6a8dbe9244a assets/crystechmod/models/item/tiberium.json
 0567ecbfc6b7b64450c50fa636e3f1773839d6b6 assets/crystechmod/models/item/tiberium_blue.json
 7083f5d01abc511627ef32b5e9ecd819eebac76a assets/crystechmod/models/item/tiberium_fruit.json

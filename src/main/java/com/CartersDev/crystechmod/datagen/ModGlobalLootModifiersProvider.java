@@ -3,6 +3,7 @@ package com.CartersDev.crystechmod.datagen;
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.loot.AddItemModifier;
+import com.CartersDev.crystechmod.loot.AddSusSandItemModifier;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
@@ -28,6 +29,9 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
 
         add("lg_core_blend_from_jungle_temples", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build() }, ModItems.LG_CORE_BLEND.get()));
+
+        add("lg_core_ingot_from_suspicious_sand", new AddSusSandItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("archaeology/desert_pyramid")).build() }, ModItems.LG_CORE_INGOT.get()));
 
     }
 }

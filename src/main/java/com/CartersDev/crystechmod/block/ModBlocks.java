@@ -30,11 +30,6 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, CrystalTech.MOD_ID);
 
-    public static final RegistryObject<Block> NOD_CREST_LARGE = registerBlock("nod_crest_large",
-            () -> new NodLogoLargeBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
-                    .strength(3f, 1200f).randomTicks()));
-
-
     //Terrain Blocks
     public static final RegistryObject<Block> TIBERIUM_SOIL = registerBlock("tiberium_soil",
             () -> new TiberiumSoilBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
@@ -255,6 +250,8 @@ public class ModBlocks {
 
     //Deco Blocks:
 
+    public static final RegistryObject<Block> NOD_CREST_LARGE = registerBlock("nod_crest_large",
+            () -> new NodLogoLargeBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
     public static final RegistryObject<Block> BLACK_TIBERCRETE = registerBlock("black_tibercrete",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BLACK_CONCRETE)));
@@ -451,6 +448,7 @@ public class ModBlocks {
 
     //End of Deco Blocks
 
+
     //Wood:
 
     public static final RegistryObject<Block> PLAGUED_PLANKS = registerBlock("plagued_planks",
@@ -487,6 +485,7 @@ public class ModBlocks {
                     BlockSetType.OAK));
 
     //End of Wood
+
 
     //Glass:
 
@@ -649,9 +648,14 @@ public class ModBlocks {
 
     //End of Glass
 
+
     //Plants
     public static final RegistryObject<Block> YOKARAN_BLOOM = registerBlock("yokaran_bloom",
             () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.LILAC)
+                    .noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
+            () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)
                     .noOcclusion().noCollission()));
     //End of Plants
 

@@ -1,0 +1,6 @@
+// 1.20.1	2024-08-18T16:01:35.2273302	Global Loot Modifiers : crystechmod
+8c7d468bd55e0c242e48ee2e3f82497669b16e47 data/crystechmod/loot_modifiers/lg_core_blend_from_jungle_temples.json
+ba575a528de36cd427881da16e17f7fe3950cab0 data/crystechmod/loot_modifiers/lg_core_ingot_from_suspicious_sand.json
+15e21cfebfb3816d5a04803054707ee839484dbc data/crystechmod/loot_modifiers/tiberium_fruit_from_creeper.json
+e2d890d02ec1547b6576a1fb60d1822406cece48 data/crystechmod/loot_modifiers/tiberium_fruit_from_grass.json
+194185b4c01d26299c40b521c5e00c79e3daceeb data/forge/loot_modifiers/global_loot_modifiers.json

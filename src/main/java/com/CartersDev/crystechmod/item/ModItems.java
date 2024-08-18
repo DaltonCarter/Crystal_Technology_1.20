@@ -3,6 +3,7 @@ package com.CartersDev.crystechmod.item;
 import com.CartersDev.crystechmod.CrystalTech;
 
 
+import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.item.custom.Firestone;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -16,9 +17,18 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, CrystalTech.MOD_ID);
 
-//Foods
+//Foods & Seeds
 public static final RegistryObject<Item> TIBERIUM_FRUIT = ITEMS.register("tiberium_fruit",
         () -> new Item(new Item.Properties().food(ModFoods.TIBERIUM_FRUIT)));
+
+    public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
+            () -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
+
+    public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(), new Item.Properties()));
+
+
+
 //End of Foods
 
 

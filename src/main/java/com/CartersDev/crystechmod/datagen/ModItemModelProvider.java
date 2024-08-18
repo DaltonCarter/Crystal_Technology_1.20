@@ -81,6 +81,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.FIRESTONE);
 
         simpleItem(ModItems.TIBERIUM_FRUIT);
+        simpleItem(ModItems.STRAWBERRY);
+        simpleItem(ModItems.STRAWBERRY_SEEDS);
 
         paneItem(ModBlocks.CLEAR_TIBERGLASS_PANE, ModBlocks.CLEAR_TIBERGLASS);
         paneItem(ModBlocks.MOSAIC_TIBERGLASS_PANE, ModBlocks.MOSAIC_TIBERGLASS);

@@ -13,6 +13,10 @@ public class ModFoods {
                     0.1f)
             .alwaysEat().build();
 
+    public static final FoodProperties STRAWBERRY = new FoodProperties.Builder().nutrition(2).fast()
+            .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED,200),
+                    0.1f).build();
+
     public static final FoodProperties RIPARIUS_TIBERIUM_DUST = new FoodProperties.Builder().nutrition(3).fast()
             .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.CONFUSION,200),
                     0.2f).alwaysEat().build();
