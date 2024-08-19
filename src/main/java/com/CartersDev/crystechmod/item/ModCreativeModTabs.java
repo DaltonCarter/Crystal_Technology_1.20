@@ -24,7 +24,10 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
 
                     output.accept(ModItems.TIBERIUM_FRUIT.get());
                     output.accept(ModItems.STRAWBERRY.get());
+                    output.accept(ModItems.CORN.get());
                     output.accept(ModItems.STRAWBERRY_SEEDS.get());
+                    output.accept(ModItems.CORN_SEEDS.get());
+
                     output.accept(ModBlocks.YOKARAN_BLOOM.get());
 
 
@@ -37,6 +40,8 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                     output.accept(ModBlocks.FIRESTONE_BLOCK.get());
                     output.accept(ModBlocks.FIRESTONE_WALL.get());
 
+                    output.accept(ModItems.GREEN_TIBERIUM_DUST.get());
+                    output.accept(ModItems.BLUE_TIBERIUM_DUST.get());
                     output.accept(ModItems.TIBERIUM.get());
                     output.accept(ModBlocks.TIBERIUM_BLOCK.get());
                     output.accept(ModItems.TIBERIUM_BLUE.get());

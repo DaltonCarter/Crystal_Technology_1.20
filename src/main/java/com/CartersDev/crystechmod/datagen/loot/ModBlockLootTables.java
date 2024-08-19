@@ -2,6 +2,8 @@ package com.CartersDev.crystechmod.datagen.loot;
 
 
 import com.CartersDev.crystechmod.block.ModBlocks;
+import com.CartersDev.crystechmod.block.custom.CornCropBlock;
+import com.CartersDev.crystechmod.block.custom.GreenTiberiumCrystalBlock;
 import com.CartersDev.crystechmod.block.custom.StrawberryCropBlock;
 import com.CartersDev.crystechmod.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -278,12 +280,46 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.STRAWBERRY_CROP.get(), createCropDrops(ModBlocks.STRAWBERRY_CROP.get(), ModItems.STRAWBERRY.get(),
                 ModItems.STRAWBERRY_SEEDS.get(), lootitemcondition$builder));
 
-        //End of Crops Handling
+
+        LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 7))
+                .or(LootItemBlockStatePropertyCondition
+                        .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 8)));
+
+        // LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
+        //         .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+        //         .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 8));
+
+        this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN.get(),
+                ModItems.CORN_SEEDS.get(), lootitemcondition$builder2));
 
 
+        LootItemCondition.Builder lootitemcondition$builder3 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.GREEN_TIBERIUM_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(GreenTiberiumCrystalBlock.AGE, 7));
 
+        this.add(ModBlocks.GREEN_TIBERIUM_CROP.get(), createCropDrops(ModBlocks.GREEN_TIBERIUM_CROP.get(), ModItems.TIBERIUM.get(),
+                ModItems.GREEN_TIBERIUM_DUST.get(), lootitemcondition$builder3));
+
+
+        LootItemCondition.Builder lootitemcondition$builder4 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.BLUE_TIBERIUM_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(GreenTiberiumCrystalBlock.AGE, 7));
+
+        this.add(ModBlocks.BLUE_TIBERIUM_CROP.get(), createCropDrops(ModBlocks.BLUE_TIBERIUM_CROP.get(), ModItems.TIBERIUM_BLUE.get(),
+                ModItems.BLUE_TIBERIUM_DUST.get(), lootitemcondition$builder4));
 
     }
+
+
+    //End of Crops Handling
+
+
+
+
+
 
 
     protected LootTable.Builder createModGemOreDrops(Block pBlock, Item item) {

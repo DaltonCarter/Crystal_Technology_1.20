@@ -17,6 +17,8 @@
     "crystechmod:alythum_block",
     "crystechmod:illyrim_block",
     "crystechmod:deepslate_gundanium_ore",
-    "crystechmod:tiberium_soil"
+    "crystechmod:tiberium_soil",
+    "crystechmod:green_tiberium_crop",
+    "crystechmod:blue_tiberium_crop"
   ]
 }

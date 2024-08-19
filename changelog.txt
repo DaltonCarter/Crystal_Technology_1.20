@@ -203,6 +203,23 @@ Posted By: Dalton Carter
 
 -------------------------------------------------------------------------------
 
+8/19/2024
+Version 0.3.1
+Posted By: Dalton Carter
+
+-Added Corn, Corn Crop, and Corn Seeds*
+-Re-added Green & Blue Tiberium Crop**
+-Added Datagen handling for new/returning Crops
+
+*Note: This will be changed at a later date to fit in with the Mods Survival Aspect.
+
+**Note 2: Growth Logic is in place, and it can be planted, bone mealed, and Harvested. However, Status effect on coming
+into contact with the formations is not working, and Explosions from improperly mining Blue Tiberium Currently CRASH the Client.
+Red and Purple Tiberium Crops will be Re-added once this is resolved.
+
+
+-------------------------------------------------------------------------------
+
 8/18/2024
 Version 0.3.1
 Posted By: Dalton Carter
@@ -212,8 +229,6 @@ Posted By: Dalton Carter
 
 *Note: This will be changed at a later date to fit in with the Mods Survival Aspect
 **Note 2: Will need to see if this handling will work for Tiberium Crystal Growths(Crop)
-
-
 
 ======================================================
 LEGACY 1.16.5 Changelog

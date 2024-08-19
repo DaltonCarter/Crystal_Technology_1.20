@@ -76,21 +76,21 @@ public class TiberiumSoilBlock extends Block {
         return true;
     }
 
-//    @Override
-//    public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, IPlantable plantable) {
-//        Block plant = plantable.getPlant(world, pos.relative(facing)).getBlock();
+    @Override
+    public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, IPlantable plantable) {
+        Block plant = plantable.getPlant(world, pos.relative(facing)).getBlock();
 
-//        if (plant == ModBlocks.GREEN_TIBERIUM_CROP.get()){
-//            return true;
-//        } else if (plant == ModBlocks.BLUE_TIBERIUM_CROP.get()) {
-//            return true;
-//        } else if (plant instanceof SaplingBlock) {
-//            return true;
-//        } else if (plant instanceof FlowerBlock) {
-//            return true;
-//        } else {
-//            return super.canSustainPlant(state, world, pos, facing, plantable);
-//        }
-//    }
+        if (plant == ModBlocks.GREEN_TIBERIUM_CROP.get()){
+            return true;
+        } else if (plant == ModBlocks.BLUE_TIBERIUM_CROP.get()) {
+            return true;
+        } else if (plant instanceof SaplingBlock) {
+            return true;
+        } else if (plant instanceof FlowerBlock) {
+            return true;
+        } else {
+            return super.canSustainPlant(state, world, pos, facing, plantable);
+        }
+    }
 
 }

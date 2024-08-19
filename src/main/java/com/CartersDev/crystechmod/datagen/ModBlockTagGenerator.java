@@ -190,7 +190,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.PURPLE_TIBERCRETE_STAIRS.get(),
                 ModBlocks.RED_TIBERCRETE_STAIRS.get(),
                 ModBlocks.WHITE_TIBERCRETE_STAIRS.get(),
-                ModBlocks.YELLOW_TIBERCRETE_STAIRS.get()
+                ModBlocks.YELLOW_TIBERCRETE_STAIRS.get(),
+                ModBlocks.GREEN_TIBERIUM_CROP.get(),
+                ModBlocks.BLUE_TIBERIUM_CROP.get()
                 );
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
@@ -367,7 +369,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.ALYTHUM_BLOCK.get(),
                 ModBlocks.ILLYRIM_BLOCK.get(),
                 ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get(),
-                ModBlocks.TIBERIUM_SOIL.get()
+                ModBlocks.TIBERIUM_SOIL.get(),
+                ModBlocks.GREEN_TIBERIUM_CROP.get(),
+                ModBlocks.BLUE_TIBERIUM_CROP.get()
                 );
 
         this.tag(ModTags.Blocks.NEEDS_GUNDANIUM_TOOL)

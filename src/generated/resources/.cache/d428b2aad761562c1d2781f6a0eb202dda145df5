@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-18T16:44:00.771932	Item Models: crystechmod
+// 1.20.1	2024-08-19T01:33:53.8522292	Item Models: crystechmod
 59af2f348d998b633663b4205f4a1565e13933c0 assets/crystechmod/models/item/aeries_crystal.json
 e93e288155e12d75f29575ccb056b60bd51b7bea assets/crystechmod/models/item/alythum_axe.json
 8b8decbbfe4dec30a6f3d7b8076de9aa2af2dbc2 assets/crystechmod/models/item/alythum_boots.json
@@ -58,6 +58,8 @@ efca020efe98f5d3bcf0dff7e89b55b5166f38a4 assets/crystechmod/models/item/black_ti
 17f060499297552263bd3aed83fe08850207195c assets/crystechmod/models/item/brown_tibercrete_stairs.json
 b7f425d0fab225ae161609c1b75f45a4f9633ee6 assets/crystechmod/models/item/brown_tiberglass_pane.json
 6a16f8504884f1afeaae1328bb1af2c42b836191 assets/crystechmod/models/item/clear_tiberglass_pane.json
+033332b8a3555a0a7751bf4e45a48c831a533776 assets/crystechmod/models/item/corn.json
+c74a2097a5ce4ffc836d4abb5d7c657db8026c6f assets/crystechmod/models/item/corn_seeds.json
 85b72e4aaf9fe39131c330f12fd3af4477fb66e1 assets/crystechmod/models/item/cyan_tibercrete_stairs.json
 ed4e7c408cfe0371574e53ba34e6dd0881b5dfbb assets/crystechmod/models/item/cyan_tiberglass_pane.json
 a8c7c15e83426f6890c67a3c19af6b0ed4471f00 assets/crystechmod/models/item/enigma_crystal.json

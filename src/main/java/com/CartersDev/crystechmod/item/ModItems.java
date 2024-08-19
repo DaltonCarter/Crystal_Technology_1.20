@@ -24,8 +24,14 @@ public static final RegistryObject<Item> TIBERIUM_FRUIT = ITEMS.register("tiberi
     public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
             () -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
 
+    public static final RegistryObject<Item> CORN = ITEMS.register("corn",
+            () -> new Item(new Item.Properties().food(ModFoods.CORN)));
+
     public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
             () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
 
 
 
@@ -71,15 +77,12 @@ public static final RegistryObject<Item> TIBERIUM = ITEMS.register("tiberium",
 
 //Dusts
 
-//public static final RegistryObject<Item> GREEN_TIBERIUM_DUST = ITEMS.register("green_tiberium_dust",
-//        () -> new BlockItem(ModBlocks.GREEN_TIBERIUM_CROP.get(), new Item.Properties()
-//                .food(new Food.Builder().fastToEat().effect(() -> new EffectInstance(Effects.POISON, 100, 0), 1f)
-//                        .build()).group(ModItemGroup.CRYS_TECH)));
-//
-//    public static final RegistryObject<Item> BLUE_TIBERIUM_DUST = ITEMS.register("blue_tiberium_dust",
-//            () -> new BlockItem(ModBlocks.BLUE_TIBERIUM_CROP.get(), new Item.Properties()
-//                    .food(new Food.Builder().fastToEat().effect(() -> new EffectInstance(Effects.POISON, 100, 2), 1f)
-//                            .build()).group(ModItemGroup.CRYS_TECH)));
+public static final RegistryObject<Item> GREEN_TIBERIUM_DUST = ITEMS.register("green_tiberium_dust",
+        () -> new ItemNameBlockItem(ModBlocks.GREEN_TIBERIUM_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> BLUE_TIBERIUM_DUST = ITEMS.register("blue_tiberium_dust",
+            () -> new ItemNameBlockItem(ModBlocks.BLUE_TIBERIUM_CROP.get(), new Item.Properties()));
+
 //
 //    public static final RegistryObject<Item> RED_TIBERIUM_DUST = ITEMS.register("red_tiberium_dust",
 //            () -> new BlockItem(ModBlocks.RED_TIBERIUM_CROP.get(), new Item.Properties()

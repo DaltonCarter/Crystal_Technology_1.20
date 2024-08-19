@@ -17,21 +17,9 @@ public class ModFoods {
             .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED,200),
                     0.1f).build();
 
-    public static final FoodProperties RIPARIUS_TIBERIUM_DUST = new FoodProperties.Builder().nutrition(3).fast()
-            .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.CONFUSION,200),
-                    0.2f).alwaysEat().build();
-
-    public static final FoodProperties VINIFERA_TIBERIUM_DUST = new FoodProperties.Builder().nutrition(3).fast()
-            .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.POISON,200),
-                    0.2f).alwaysEat().build();
-
-    public static final FoodProperties CRUENTUS_TIBERIUM_DUST = new FoodProperties.Builder().nutrition(3).fast()
-            .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.POISON,200, 1),
-                    0.2f).alwaysEat().build();
-
-    public static final FoodProperties ABOREUS_TIBERIUM_DUST = new FoodProperties.Builder().nutrition(3).fast()
-            .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.WITHER,200),
-                    0.2f).alwaysEat().build();
+    public static final FoodProperties CORN = new FoodProperties.Builder().nutrition(6).fast()
+            .saturationMod(0.5f).effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE,200),
+                    0.1f).build();
 
 
 

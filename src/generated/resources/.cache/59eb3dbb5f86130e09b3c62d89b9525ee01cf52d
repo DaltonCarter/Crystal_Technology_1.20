@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-18T16:44:00.7708723	Loot Tables
+// 1.20.1	2024-08-19T03:00:15.72486	Loot Tables
 03c6f95925fa38635ca3601903e1d452029caabd data/crystechmod/loot_tables/blocks/aboreus_crystal.json
 54cc8c095a6e7af070b865de543f3a1891b49055 data/crystechmod/loot_tables/blocks/aboreus_stone.json
 c1005c86f610c3ea139857f0d980e40086fc3cac data/crystechmod/loot_tables/blocks/aeries_block.json
@@ -15,6 +15,7 @@ dd6f884d8f382fb87f105487b9e50c91d16c0457 data/crystechmod/loot_tables/blocks/blu
 64aeaf9ce43fdea40465ccb663d7214158888797 data/crystechmod/loot_tables/blocks/blue_tibercrete_stairs.json
 32b8c52a194e5d03f799193d1f3c310dd8236934 data/crystechmod/loot_tables/blocks/blue_tiberglass.json
 6967e3ac6a613e403b1d448a0834694de3b506dd data/crystechmod/loot_tables/blocks/blue_tiberglass_pane.json
+23b7ce0cd92ac82d262765d502e9e780e350ee68 data/crystechmod/loot_tables/blocks/blue_tiberium_crop.json
 3ee2b46c837507c8570ea1ca881261ebccfe8f23 data/crystechmod/loot_tables/blocks/brown_tibercrete.json
 a0f5109b491a67da2f60bb43130acd6ddd1aacdc data/crystechmod/loot_tables/blocks/brown_tibercrete_powder.json
 fc581e3135373590a7753d12449340dbdba388bf data/crystechmod/loot_tables/blocks/brown_tibercrete_stairs.json
@@ -22,6 +23,7 @@ f83d5d7c285564f4216b37ef82b61e85755ba02f data/crystechmod/loot_tables/blocks/bro
 1fc31c513cb663fb4c650f67b04da40de1d15e1d data/crystechmod/loot_tables/blocks/brown_tiberglass_pane.json
 37b899c56366eed424cfa64864ea84c6b7c332f8 data/crystechmod/loot_tables/blocks/clear_tiberglass.json
 e69fce93570c5bd3c4c9adbfa5dbed98c2280666 data/crystechmod/loot_tables/blocks/clear_tiberglass_pane.json
+71c43212b158d7ab63ce85681b3046251259e5f0 data/crystechmod/loot_tables/blocks/corn_crop.json
 89a03992d11096822d3740debfdedffd7f3eb7a5 data/crystechmod/loot_tables/blocks/cruentus_crystal.json
 bc8a22764b7b85924a15dcc314340cdefb150a10 data/crystechmod/loot_tables/blocks/cruentus_stone.json
 5a3e51122f6fc102aaafbd50ff99300bd7520664 data/crystechmod/loot_tables/blocks/cyan_tibercrete.json
@@ -54,6 +56,7 @@ da1ca333bd43855bb7e8327e8bd3c5a98c76d1e3 data/crystechmod/loot_tables/blocks/gre
 748a3c5ed621924e953898ae2eea09d85b06049d data/crystechmod/loot_tables/blocks/green_tibercrete_stairs.json
 049bd5b90c30d1f9af2f0eed08e5a351abba7134 data/crystechmod/loot_tables/blocks/green_tiberglass.json
 5e0c1c37999d110ab277ed1f474a177ecd22a6f3 data/crystechmod/loot_tables/blocks/green_tiberglass_pane.json
+bfe65ec2c7758b2b6f799b838744afbed692c9a8 data/crystechmod/loot_tables/blocks/green_tiberium_crop.json
 8d1a325461ba7582dbd6cfcbc52d617a502d8c7b data/crystechmod/loot_tables/blocks/gundanium_block.json
 4e2a8183cb1196eddb9627766a224e656a27affa data/crystechmod/loot_tables/blocks/gundanium_ore.json
 93667b0d6497a0c5e4e14b13ed84ecd7151a6a14 data/crystechmod/loot_tables/blocks/hg_core_block.json
