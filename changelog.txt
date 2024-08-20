@@ -200,6 +200,17 @@ Posted By: Dalton Carter
 -Added Nod Crest Large
 -Added Global Loot Modifier to Datagen, and loot Modifier
 
+-------------------------------------------------------------------------------
+
+8/18/2024
+Version 0.3.1
+Posted By: Dalton Carter
+
+-Added Strawberry, Strawberry Crop, and Strawberry Seeds*
+-Added Datagen handling for Strawberry Crop**
+
+*Note: This will be changed at a later date to fit in with the Mods Survival Aspect
+**Note 2: Will need to see if this handling will work for Tiberium Crystal Growths(Crop)
 
 -------------------------------------------------------------------------------
 
@@ -217,18 +228,20 @@ Posted By: Dalton Carter
 into contact with the formations is not working, and Explosions from improperly mining Blue Tiberium Currently CRASH the Client.
 Red and Purple Tiberium Crops will be Re-added once this is resolved.
 
-
 -------------------------------------------------------------------------------
 
-8/18/2024
-Version 0.3.1
+8/20/2024
+Version 0.3.5
 Posted By: Dalton Carter
 
--Added Strawberry, Strawberry Crop, and Strawberry Seeds*
--Added Datagen handling for Strawberry Crop**
 
-*Note: This will be changed at a later date to fit in with the Mods Survival Aspect
-**Note 2: Will need to see if this handling will work for Tiberium Crystal Growths(Crop)
+-Re-added Red & Purple Tiberium Crop*
+-Re-implemented Automatic Tiberium Growth on Ichor and Tiberium Soil
+-Added Datagen handling for returning Crops
+
+*Note: Blue red and Purple TIberium no longer has explosion property on Improper mining. It continues to
+crash with little explaination. Should I ever figure out how to implement it PROPERLY I will re-add this feature
+
 
 ======================================================
 LEGACY 1.16.5 Changelog

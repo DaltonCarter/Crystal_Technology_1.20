@@ -83,16 +83,11 @@ public static final RegistryObject<Item> GREEN_TIBERIUM_DUST = ITEMS.register("g
     public static final RegistryObject<Item> BLUE_TIBERIUM_DUST = ITEMS.register("blue_tiberium_dust",
             () -> new ItemNameBlockItem(ModBlocks.BLUE_TIBERIUM_CROP.get(), new Item.Properties()));
 
-//
-//    public static final RegistryObject<Item> RED_TIBERIUM_DUST = ITEMS.register("red_tiberium_dust",
-//            () -> new BlockItem(ModBlocks.RED_TIBERIUM_CROP.get(), new Item.Properties()
-//                    .food(new Food.Builder().fastToEat().effect(() -> new EffectInstance(Effects.POISON, 100, 0), 1f)
-//                            .build()).group(ModItemGroup.CRYS_TECH)));
-//
-//    public static final RegistryObject<Item> PURPLE_TIBERIUM_DUST = ITEMS.register("purple_tiberium_dust",
-//            () -> new BlockItem(ModBlocks.PURPLE_TIBERIUM_CROP.get(), new Item.Properties()
-//                    .food(new Food.Builder().fastToEat().effect(() -> new EffectInstance(Effects.POISON, 100, 2), 1f)
-//                            .build()).group(ModItemGroup.CRYS_TECH)));
+    public static final RegistryObject<Item> RED_TIBERIUM_DUST = ITEMS.register("red_tiberium_dust",
+            () -> new ItemNameBlockItem(ModBlocks.RED_TIBERIUM_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> PURPLE_TIBERIUM_DUST = ITEMS.register("purple_tiberium_dust",
+            () -> new ItemNameBlockItem(ModBlocks.PURPLE_TIBERIUM_CROP.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> QUALRIM_COMPOUND = ITEMS.register("qualrim_compound",
             () -> new Item(new Item.Properties()));

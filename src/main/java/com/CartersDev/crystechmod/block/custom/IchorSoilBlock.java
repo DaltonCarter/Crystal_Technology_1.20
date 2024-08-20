@@ -35,16 +35,16 @@ public class IchorSoilBlock extends Block {
 
                 if(number >10 && number < 15 ){
                     System.out.println("A patch of Vinifera Tiberium has sprouted!.");
-//                    worldIn.setBlock(abovePos, ModBlocks.BLUE_TIBERIUM_CROP.get().getDefaultState());
+                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.BLUE_TIBERIUM_CROP.get().defaultBlockState());
                 }else if (number > 14 && number < 18) {
                     System.out.println("A patch of Cruentus Tiberium has sprouted!.");
-//                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.RED_TIBERIUM_CROP.get().getDefaultState());
+                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.RED_TIBERIUM_CROP.get().defaultBlockState());
                 }else if (number > 17 && number <= 20) {
                     System.out.println("A patch of Aboreus Tiberium has sprouted!.");
-//                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.PURPLE_TIBERIUM_CROP.get().getDefaultState());
+                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.PURPLE_TIBERIUM_CROP.get().defaultBlockState());
                 }else {
                     System.out.println("A patch of Riparius Tiberium has sprouted!.");
-//                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.GREEN_TIBERIUM_CROP.get().getDefaultState());
+                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.GREEN_TIBERIUM_CROP.get().defaultBlockState());
                 }
 
             }
@@ -53,26 +53,26 @@ public class IchorSoilBlock extends Block {
     }
 
 
-//    @Override
-//    public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, IPlantable plantable) {
-//        Block plant = plantable.getPlant(world, pos.relative(facing)).getBlock();
-//
-//        if (plant == ModBlocks.GREEN_TIBERIUM_CROP.get()){
-//            return true;
-//        } else if (plant == ModBlocks.BLUE_TIBERIUM_CROP.get()) {
-//            return true;
-//        }else if (plant == ModBlocks.RED_TIBERIUM_CROP.get()) {
-//            return true;
-//        }else if (plant == ModBlocks.PURPLE_TIBERIUM_CROP.get()) {
-//            return true;
-//        } else if (plant instanceof SaplingBlock) {
-//            return true;
-//        } else if (plant instanceof FlowerBlock) {
-//            return true;
-//        } else {
-//            return super.canSustainPlant(state, world, pos, facing, plantable);
-//        }
-//    }
+    @Override
+    public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, IPlantable plantable) {
+        Block plant = plantable.getPlant(world, pos.relative(facing)).getBlock();
+
+        if (plant == ModBlocks.GREEN_TIBERIUM_CROP.get()){
+            return true;
+        } else if (plant == ModBlocks.BLUE_TIBERIUM_CROP.get()) {
+            return true;
+        }else if (plant == ModBlocks.RED_TIBERIUM_CROP.get()) {
+            return true;
+        }else if (plant == ModBlocks.PURPLE_TIBERIUM_CROP.get()) {
+            return true;
+        } else if (plant instanceof SaplingBlock) {
+            return true;
+        } else if (plant instanceof FlowerBlock) {
+            return true;
+        } else {
+            return super.canSustainPlant(state, world, pos, facing, plantable);
+        }
+    }
 
     @Override
     public boolean canDropFromExplosion(BlockState state, BlockGetter level, BlockPos pos, Explosion explosion) {

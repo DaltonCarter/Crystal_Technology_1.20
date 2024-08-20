@@ -4,8 +4,6 @@ package com.CartersDev.crystechmod.block.custom;
 import com.CartersDev.crystechmod.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.Difficulty;
-
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -19,9 +17,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import java.util.Objects;
-
-public class GreenTiberiumCrystalBlock extends CropBlock {
+public class PurpleTiberiumCrystalBlock extends CropBlock {
     public static final int MAX_AGE = 7;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_7;
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
@@ -35,18 +31,9 @@ public class GreenTiberiumCrystalBlock extends CropBlock {
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
 
-    public GreenTiberiumCrystalBlock(Properties properties) {
+    public PurpleTiberiumCrystalBlock(Properties properties) {
         super(properties);
 
-    }
-
-    @Override
-    public void growCrops(Level pLevel, BlockPos pPos, BlockState pState) {
-        int nextAge = this.getAge(pState) + this.getBonemealAgeIncrease(pLevel);
-        int maxAge = this.getMaxAge();
-        if (nextAge > maxAge) {
-            nextAge = maxAge;
-        }
     }
 
     @Override
@@ -62,8 +49,9 @@ public class GreenTiberiumCrystalBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItems.GREEN_TIBERIUM_DUST.get();
+        return ModItems.PURPLE_TIBERIUM_DUST.get();
     }
+
 
     @Override
     public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {

@@ -60,42 +60,17 @@ public class BlueTiberiumCrystalBlock extends CropBlock {
 
 
     @Override
-    public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
-        if(!pLevel.isClientSide() && pLevel.getDifficulty() != Difficulty.PEACEFUL) {
-            LivingEntity target = (LivingEntity) pEntity;
-            target.addEffect(new MobEffectInstance(MobEffects.POISON, 160));
+    public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
+        if (!pLevel.isClientSide && pLevel.getDifficulty() != Difficulty.PEACEFUL) {
+            if (pEntity instanceof LivingEntity) {
+                LivingEntity livingentity = (LivingEntity)pEntity;
+                if (!livingentity.isInvulnerableTo(pLevel.damageSources().wither())) {
+                    livingentity.addEffect(new MobEffectInstance(MobEffects.POISON, 160));
+                }
+            }
+
         }
-        super.stepOn(pLevel, pPos, pState, pEntity);
     }
-
-
-//    @Override
-//    public boolean onDestroyedByPlayer(BlockState state, Level level, BlockPos pos, Player player, boolean willHarvest, FluidState fluid) {
-//
-//        String Enchantments = EnchantmentHelper.getEnchantments(player.getMainHandItem()).toString();
-//
-//        if (willHarvest) {
-//            if (!Enchantments.contains("net.minecraft.enchantment.SilkTouchEnchantment") && !player.isCreative()) {
-//                level.explode(null, pos.getX(), pos.getY(), pos.getZ()
-//                        , 4w.0f, Level.ExplosionInteraction.TNT);
-//            }
-//        }
-//
-//        return super.onDestroyedByPlayer(state, level, pos, player, willHarvest, fluid);
-//
-//
-//    }
-//
-//    @Override
-//    public boolean canDropFromExplosion(BlockState state, BlockGetter level, BlockPos pos, Explosion explosion) {
-//        return true;
-//    }
-//
-//    @Override
-//    public void onBlockExploded(BlockState state, Level level, BlockPos pos, Explosion explosion) {
-//        level.explode(null, pos.getX(), pos.getY(), pos.getZ(), 4.0f, Level.ExplosionInteraction.BLOCK);
-//        super.onBlockExploded(state, level, pos, explosion);
-//    }
 
 
 }

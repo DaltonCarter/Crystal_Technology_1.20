@@ -648,7 +648,6 @@ public class ModBlocks {
 
     //End of Glass
 
-
     //Plants
     public static final RegistryObject<Block> YOKARAN_BLOOM = registerBlock("yokaran_bloom",
             () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.LILAC)
@@ -668,6 +667,14 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> BLUE_TIBERIUM_CROP = BLOCKS.register("blue_tiberium_crop",
             () -> new BlueTiberiumCrystalBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).lightLevel(tiberiumglow)
+                    .noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> RED_TIBERIUM_CROP = BLOCKS.register("red_tiberium_crop",
+            () -> new RedTiberiumCrystalBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).lightLevel(tiberiumglow)
+                    .noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> PURPLE_TIBERIUM_CROP = BLOCKS.register("purple_tiberium_crop",
+            () -> new PurpleTiberiumCrystalBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).lightLevel(tiberiumglow)
                     .noOcclusion().noCollission()));
 
     //Tiberium

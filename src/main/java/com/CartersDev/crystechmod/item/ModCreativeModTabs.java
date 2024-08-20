@@ -41,13 +41,15 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                     output.accept(ModBlocks.FIRESTONE_WALL.get());
 
                     output.accept(ModItems.GREEN_TIBERIUM_DUST.get());
-                    output.accept(ModItems.BLUE_TIBERIUM_DUST.get());
                     output.accept(ModItems.TIBERIUM.get());
                     output.accept(ModBlocks.TIBERIUM_BLOCK.get());
+                    output.accept(ModItems.BLUE_TIBERIUM_DUST.get());
                     output.accept(ModItems.TIBERIUM_BLUE.get());
                     output.accept(ModBlocks.TIBERIUM_BLUE_BLOCK.get());
+                    output.accept(ModItems.RED_TIBERIUM_DUST.get());
                     output.accept(ModItems.TIBERIUM_RED.get());
                     output.accept(ModBlocks.TIBERIUM_RED_BLOCK.get());
+                    output.accept(ModItems.PURPLE_TIBERIUM_DUST.get());
                     output.accept(ModItems.TIBERIUM_PURPLE.get());
                     output.accept(ModBlocks.TIBERIUM_PURPLE_BLOCK.get());
 

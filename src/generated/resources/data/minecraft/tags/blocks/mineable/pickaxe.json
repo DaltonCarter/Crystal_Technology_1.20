@@ -128,6 +128,8 @@
     "crystechmod:white_tibercrete_stairs",
     "crystechmod:yellow_tibercrete_stairs",
     "crystechmod:green_tiberium_crop",
-    "crystechmod:blue_tiberium_crop"
+    "crystechmod:blue_tiberium_crop",
+    "crystechmod:red_tiberium_crop",
+    "crystechmod:purple_tiberium_crop"
   ]
 }

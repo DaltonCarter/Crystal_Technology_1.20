@@ -39,10 +39,10 @@ public class TiberiumSoilBlock extends Block {
                 if(number > 7){
 
                     System.out.println("A patch of Vinifera Tiberium has sprouted!.");
-//                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.BLUE_TIBERIUM_CROP.get().getDefaultState());
+                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.BLUE_TIBERIUM_CROP.get().defaultBlockState());
                 }else {
                     System.out.println("A patch of Riparius Tiberium has sprouted!.");
-//                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.GREEN_TIBERIUM_CROP.get().getDefaultState());
+                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.GREEN_TIBERIUM_CROP.get().defaultBlockState());
                 }
 
             } else if (aboveState.is(ModTags.Blocks.TIBERIUM_VULNERABLE_WOOD)) {

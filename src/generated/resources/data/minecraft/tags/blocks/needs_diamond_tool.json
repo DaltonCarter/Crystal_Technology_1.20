@@ -22,6 +22,8 @@
     "crystechmod:qualrite_ore",
     "crystechmod:deepslate_qualrite_ore",
     "crystechmod:nether_qualrite_ore",
-    "crystechmod:ichor_soil"
+    "crystechmod:ichor_soil",
+    "crystechmod:red_tiberium_crop",
+    "crystechmod:purple_tiberium_crop"
   ]
 }
