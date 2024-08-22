@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-19T01:33:53.8522292	Item Models: crystechmod
+// 1.20.1	2024-08-21T23:14:20.7880539	Item Models: crystechmod
 59af2f348d998b633663b4205f4a1565e13933c0 assets/crystechmod/models/item/aeries_crystal.json
 e93e288155e12d75f29575ccb056b60bd51b7bea assets/crystechmod/models/item/alythum_axe.json
 8b8decbbfe4dec30a6f3d7b8076de9aa2af2dbc2 assets/crystechmod/models/item/alythum_boots.json
@@ -62,9 +62,11 @@ b7f425d0fab225ae161609c1b75f45a4f9633ee6 assets/crystechmod/models/item/brown_ti
 c74a2097a5ce4ffc836d4abb5d7c657db8026c6f assets/crystechmod/models/item/corn_seeds.json
 85b72e4aaf9fe39131c330f12fd3af4477fb66e1 assets/crystechmod/models/item/cyan_tibercrete_stairs.json
 ed4e7c408cfe0371574e53ba34e6dd0881b5dfbb assets/crystechmod/models/item/cyan_tiberglass_pane.json
+9874dcfb4cfd2d71d0c459b4b1f94f527ab36852 assets/crystechmod/models/item/devils_blood.json
 a8c7c15e83426f6890c67a3c19af6b0ed4471f00 assets/crystechmod/models/item/enigma_crystal.json
 03b9a675cf9bfd6655ef33a571eef5ab9c6e8599 assets/crystechmod/models/item/firestone.json
 87ef185c96cd4543c0a7f5912bef0cfa5c5a19d0 assets/crystechmod/models/item/firestone_wall.json
+90e5f4dbd2b70c657d618678c9abe68e34285d1e assets/crystechmod/models/item/flower_of_life.json
 c3a48797f512912e14245b3290752381368ca216 assets/crystechmod/models/item/gdi_emblem.json
 1dba912632e5bab88ea7716daf29e983e760bda6 assets/crystechmod/models/item/gdi_tiberglass_pane.json
 835b240e8e2297a7b55f01ade4c8ea71d12d64f9 assets/crystechmod/models/item/gray_tibercrete_stairs.json
@@ -213,6 +215,7 @@ ab88653915895b028b2fe3b775432eccc1c033a6 assets/crystechmod/models/item/hazmat_m
 c083d118330752a9a8ab2dddbf21bc1b5e23dbbe assets/crystechmod/models/item/hazmat_mk2_leggings_redstone_trim.json
 9fb15a86ba147cebe82a90110a17559d1aae4964 assets/crystechmod/models/item/hg_core_blend.json
 b5c9c6eee8ae2e50a82f9815b0208381dfe344f6 assets/crystechmod/models/item/hg_core_ingot.json
+b90e7273575f55602eac234498cdeadfd77d61c7 assets/crystechmod/models/item/hyacinth.json
 dde7b626b0312aa6d48d0285a9d2ddb87d9fb18c assets/crystechmod/models/item/ichor_leather.json
 49609bd2e8b5291f56f3dd7f9517de98ed050f38 assets/crystechmod/models/item/illumina_crystal.json
 88061eed2a0c937eb10d6e40abcff4eae72efb99 assets/crystechmod/models/item/illyrim_blend.json

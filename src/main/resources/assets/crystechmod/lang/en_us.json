@@ -123,9 +123,8 @@
   "block.crystechmod.firestone_wall": "Firestone Wall",
   "block.crystechmod.hyacinth": "Hyacinth",
   "block.crystechmod.flower_of_life": "Flower of Life",
-  "block.crystechmod.potted_hyacinth": "Potted Hyacinth",
-  "block.crystechmod.potted_flower_of_life": "Potted Flower of Life",
-  "block.crystechmod.lightning_channeler": "Lightning Channeler",
+  "block.crystechmod.devils_blood": "Devil's Blood",
+  "block.crystechmod.yokaran_bloom": "Yokaran Bloom",
   "block.crystechmod.tiberium_soil": "Tiberium Soil",
   "block.crystechmod.ichor_soil": "Ichor Soil",
   "block.crystechmod.plagued_log": "Plagued Log",
@@ -262,7 +261,6 @@
   "block.crystechmod.blossom_spout": "Tiberium Blossom Tree Spout",
   "block.crystechmod.blossom_filler": "Tiberium Blossom Tree Arm",
   "block.crystechmod.seeded_dirt": "Tiberium Seeded Dirt",
-  "block.crystechmod.yokaran_bloom": "Yokaran Bloom",
   "block.crystechmod.nod_crest_large": "Large Nod Crest",
 
 

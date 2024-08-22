@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -651,8 +652,33 @@ public class ModBlocks {
 
     //Plants
     public static final RegistryObject<Block> YOKARAN_BLOOM = registerBlock("yokaran_bloom",
-            () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.LILAC)
+            () -> new YokaranBloomBlock(BlockBehaviour.Properties.copy(Blocks.LILAC)
                     .noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> DEVILS_BLOOD = registerBlock("devils_blood",
+            () -> new DevilsBloodBlock(MobEffects.BLINDNESS, 5, BlockBehaviour.Properties
+                    .copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> POTTED_DEVILS_BLOOD = BLOCKS.register("potted_devils_blood",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.DEVILS_BLOOD,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+    public static final RegistryObject<Block> FLOWER_OF_LIFE = registerBlock("flower_of_life",
+            () -> new FlowerofLifeBlock(MobEffects.CONFUSION, 5, BlockBehaviour.Properties
+                    .copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> POTTED_FLOWER_OF_LIFE = BLOCKS.register("potted_flower_of_life",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.FLOWER_OF_LIFE,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+    public static final RegistryObject<Block> HYACINTH = registerBlock("hyacinth",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 5, BlockBehaviour.Properties
+                    .copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> POTTED_HYACINTH = BLOCKS.register("potted_hyacinth",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.DEVILS_BLOOD,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
 
     public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)
@@ -682,19 +708,23 @@ public class ModBlocks {
                     .noOcclusion().noCollission()));
 
     public static final RegistryObject<LiquidBlock> TIBERIUM_WATER_BLOCK = BLOCKS.register("tiberium_water_block",
-            () -> new LiquidBlock(ModFluids.SOURCE_TIBERIUM_WATER, BlockBehaviour.Properties.copy(Blocks.WATER)));
+            () -> new LiquidBlock(ModFluids.SOURCE_TIBERIUM_WATER, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
 
     public static final RegistryObject<LiquidBlock> MOLTEN_TIBERIUM_BLOCK = BLOCKS.register("molten_tiberium_block",
-            () -> new LiquidBlock(ModFluids.SOURCE_MOLTEN_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
+            () -> new MoltenTiberiumBlock(ModFluids.SOURCE_MOLTEN_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)
+                    .randomTicks().noLootTable(), 5, 0.5f));
 
     public static final RegistryObject<LiquidBlock> MOLTEN_BLUE_TIBERIUM_BLOCK = BLOCKS.register("molten_blue_tiberium_block",
-            () -> new LiquidBlock(ModFluids.SOURCE_MOLTEN_BLUE_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
+            () -> new MoltenTiberiumBlock(ModFluids.SOURCE_MOLTEN_BLUE_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)
+                    .randomTicks().noLootTable(), 5, 0.5f));
 
     public static final RegistryObject<LiquidBlock> MOLTEN_RED_TIBERIUM_BLOCK = BLOCKS.register("molten_red_tiberium_block",
-            () -> new LiquidBlock(ModFluids.SOURCE_MOLTEN_RED_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
+            () -> new MoltenTiberiumBlock(ModFluids.SOURCE_MOLTEN_RED_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)
+                    .randomTicks().noLootTable(), 5, 0.5f));
 
     public static final RegistryObject<LiquidBlock> MOLTEN_PURPLE_TIBERIUM_BLOCK = BLOCKS.register("molten_purple_tiberium_block",
-            () -> new LiquidBlock(ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
+            () -> new MoltenTiberiumBlock(ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)
+                    .randomTicks().noLootTable(), 5, 0.5f));
 
     //End of Tiberium
 

@@ -180,6 +180,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.GUNDANIUM_HORSE_ARMOR);
 
+        simpleBlockItemBlockTexture(ModBlocks.HYACINTH);
+        simpleBlockItemBlockTexture(ModBlocks.FLOWER_OF_LIFE);
+        simpleBlockItemBlockTexture(ModBlocks.DEVILS_BLOOD);
+
     }
 
     // Shoutout to El_Redstoniano for making this
@@ -278,6 +282,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(CrystalTech.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(CrystalTech.MOD_ID,"block/" + item.getId().getPath()));
     }
 
 }

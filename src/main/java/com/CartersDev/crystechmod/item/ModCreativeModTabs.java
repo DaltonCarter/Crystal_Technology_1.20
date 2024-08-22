@@ -28,6 +28,9 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                     output.accept(ModItems.STRAWBERRY_SEEDS.get());
                     output.accept(ModItems.CORN_SEEDS.get());
 
+                    output.accept(ModBlocks.HYACINTH.get());
+                    output.accept(ModBlocks.FLOWER_OF_LIFE.get());
+                    output.accept(ModBlocks.DEVILS_BLOOD.get());
                     output.accept(ModBlocks.YOKARAN_BLOOM.get());
 
                     output.accept(ModItems.TIBERIUM_WATER_BUCKET.get());

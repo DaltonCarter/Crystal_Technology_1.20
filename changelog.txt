@@ -250,11 +250,16 @@ Version 0.4.0
 Posted By: Dalton Carter
 
 -Added Custom Fluids
--Re-added All Tiberium Fluids*
+-Re-added All Tiberium Fluids
+-Created Molten Tiberium Block Class to handle Lava-like features.
 -Water infection Logic re-implemented
 -Removed in progress Blossom Base Class
+-Re-Added Flower of Life and Hyacinth
+-Created Devil's Blood Flower
+-Added Potted Variants for Devil's Blood, Flower of Life, and Hyacinth
+-Implemented custom Classes for Yokaran Bloom, Flower of Life, and Devil's Blood
+-Added Datagen handling for Flowers and Potted Flowers
 
-*Note: Molten Tiberium Currently does not function like lava, will fix as soon as I know how.
 
 ======================================================
 LEGACY 1.16.5 Changelog

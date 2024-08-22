@@ -215,6 +215,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         makeCornCrop((CropBlock) ModBlocks.CORN_CROP.get(), "corn_stage_", "corn_stage_");
 
+        simpleBlockWithItem(ModBlocks.HYACINTH.get(), models().cross(blockTexture(ModBlocks.HYACINTH.get()).getPath(),
+                blockTexture(ModBlocks.HYACINTH.get())).renderType("cutout"));
+
+        simpleBlockWithItem(ModBlocks.FLOWER_OF_LIFE.get(), models().cross(blockTexture(ModBlocks.FLOWER_OF_LIFE.get()).getPath(),
+                blockTexture(ModBlocks.FLOWER_OF_LIFE.get())).renderType("cutout"));
+
+        simpleBlockWithItem(ModBlocks.DEVILS_BLOOD.get(), models().cross(blockTexture(ModBlocks.DEVILS_BLOOD.get()).getPath(),
+                blockTexture(ModBlocks.DEVILS_BLOOD.get())).renderType("cutout"));
+
+        simpleBlockWithItem(ModBlocks.POTTED_HYACINTH.get(), models().singleTexture("potted_hyacinth",
+                new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.HYACINTH.get())).renderType("cutout"));
+
+        simpleBlockWithItem(ModBlocks.POTTED_FLOWER_OF_LIFE.get(), models().singleTexture("potted_flower_of_life",
+                new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.FLOWER_OF_LIFE.get())).renderType("cutout"));
+
+        simpleBlockWithItem(ModBlocks.POTTED_DEVILS_BLOOD.get(), models().singleTexture("potted_devils_blood",
+                new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.DEVILS_BLOOD.get())).renderType("cutout"));
 
 
     }

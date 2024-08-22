@@ -17,6 +17,7 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -186,10 +187,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.INFESTED_STONE_BRICK_STAIRS.get());
         this.dropSelf(ModBlocks.INFESTED_COBBLE_STAIRS.get());
 
+        this.dropSelf(ModBlocks.HYACINTH.get());
+        this.dropSelf(ModBlocks.FLOWER_OF_LIFE.get());
+        this.dropSelf(ModBlocks.DEVILS_BLOOD.get());
+
         //End of Self Drops
 
 
         //Complex Self Drops
+
+        this.add(ModBlocks.POTTED_HYACINTH.get(), createPotFlowerItemTable(ModBlocks.HYACINTH.get()));
+        this.add(ModBlocks.POTTED_FLOWER_OF_LIFE.get(), createPotFlowerItemTable(ModBlocks.FLOWER_OF_LIFE.get()));
+        this.add(ModBlocks.POTTED_DEVILS_BLOOD.get(), createPotFlowerItemTable(ModBlocks.DEVILS_BLOOD.get()));
 
         this.add(ModBlocks.PLAGUED_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.PLAGUED_SLAB.get()));
