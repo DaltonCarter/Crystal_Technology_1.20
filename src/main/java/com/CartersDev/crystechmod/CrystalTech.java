@@ -3,6 +3,8 @@ package com.CartersDev.crystechmod;
 import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.effect.ModEffects;
 import com.CartersDev.crystechmod.enchantment.ModEnchantments;
+import com.CartersDev.crystechmod.fluid.ModFluidTypes;
+import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModCreativeModTabs;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.loot.ModLootModifiers;
@@ -46,6 +48,10 @@ public class CrystalTech {
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
         ModEnchantments.register(modEventBus);
+
+
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
@@ -91,6 +97,11 @@ public class CrystalTech {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.PURPLE_TIBERIUM_CROP.get(), RenderType.cutout());
 
             //End of Tiberium
+
+            //Fluids
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_TIBERIUM_WATER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_TIBERIUM_WATER.get(), RenderType.translucent());
+            //End of Fluids
 
 
             //Crystals and Glass

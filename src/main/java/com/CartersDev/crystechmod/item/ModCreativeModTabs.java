@@ -30,7 +30,7 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
 
                     output.accept(ModBlocks.YOKARAN_BLOOM.get());
 
-
+                    output.accept(ModItems.TIBERIUM_WATER_BUCKET.get());
 //                    output.accept(ModBlocks.BLOSSOM_SPOUT.get());
 
                     output.accept(ModItems.TIBERIUM_LEATHER.get());
@@ -43,15 +43,19 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                     output.accept(ModItems.GREEN_TIBERIUM_DUST.get());
                     output.accept(ModItems.TIBERIUM.get());
                     output.accept(ModBlocks.TIBERIUM_BLOCK.get());
+                    output.accept(ModItems.MOLTEN_TIBERIUM_BUCKET.get());
                     output.accept(ModItems.BLUE_TIBERIUM_DUST.get());
                     output.accept(ModItems.TIBERIUM_BLUE.get());
                     output.accept(ModBlocks.TIBERIUM_BLUE_BLOCK.get());
+                    output.accept(ModItems.MOLTEN_BLUE_TIBERIUM_BUCKET.get());
                     output.accept(ModItems.RED_TIBERIUM_DUST.get());
                     output.accept(ModItems.TIBERIUM_RED.get());
                     output.accept(ModBlocks.TIBERIUM_RED_BLOCK.get());
+                    output.accept(ModItems.MOLTEN_RED_TIBERIUM_BUCKET.get());
                     output.accept(ModItems.PURPLE_TIBERIUM_DUST.get());
                     output.accept(ModItems.TIBERIUM_PURPLE.get());
                     output.accept(ModBlocks.TIBERIUM_PURPLE_BLOCK.get());
+                    output.accept(ModItems.MOLTEN_PURPLE_TIBERIUM_BUCKET.get());
 
                     output.accept(ModItems.PLAGUED_SWORD.get());
                     output.accept(ModItems.PLAGUED_PICKAXE.get());

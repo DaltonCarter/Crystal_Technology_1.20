@@ -4,6 +4,7 @@ import com.CartersDev.crystechmod.CrystalTech;
 
 
 import com.CartersDev.crystechmod.block.ModBlocks;
+import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.custom.Firestone;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -295,6 +296,26 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> WOLF_EMBLEM = ITEMS.register("wolf_emblem",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> TIBERIUM_WATER_BUCKET = ITEMS.register("tiberium_water_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_TIBERIUM_WATER, new Item.Properties().craftRemainder(Items.BUCKET)
+                    .stacksTo(1)));
+
+    public static final RegistryObject<Item> MOLTEN_TIBERIUM_BUCKET = ITEMS.register("molten_tiberium_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_MOLTEN_TIBERIUM, new Item.Properties().craftRemainder(Items.BUCKET)
+                    .stacksTo(1)));
+
+    public static final RegistryObject<Item> MOLTEN_BLUE_TIBERIUM_BUCKET = ITEMS.register("molten_blue_tiberium_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_MOLTEN_BLUE_TIBERIUM, new Item.Properties().craftRemainder(Items.BUCKET)
+                    .stacksTo(1)));
+
+    public static final RegistryObject<Item> MOLTEN_RED_TIBERIUM_BUCKET = ITEMS.register("molten_red_tiberium_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_MOLTEN_RED_TIBERIUM, new Item.Properties().craftRemainder(Items.BUCKET)
+                    .stacksTo(1)));
+
+    public static final RegistryObject<Item> MOLTEN_PURPLE_TIBERIUM_BUCKET = ITEMS.register("molten_purple_tiberium_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM, new Item.Properties().craftRemainder(Items.BUCKET)
+                    .stacksTo(1)));
 //End of Misc Items
 
 

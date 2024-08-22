@@ -3,6 +3,7 @@ package com.CartersDev.crystechmod.block.custom;
 
 
 import com.CartersDev.crystechmod.block.ModBlocks;
+import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -104,10 +105,10 @@ public class BlossomTreeSpoutBlock extends RotatedPillarBlock {
              }
 
          }
-//         else if (worldIn.getBlockState(target).getBlock() == Blocks.WATER) {
-//             System.out.println("Water has been infected with Tiberium!");
-//             worldIn.setBlock(target, ModFluids.TIBERIUM_WATER_BLOCK.get().defaultBlockState(), 1);
-//         }
+         else if (worldIn.getBlockState(target).getBlock() == Blocks.WATER) {
+             System.out.println("Water has been infected with Tiberium!");
+             worldIn.setBlock(target, ModBlocks.TIBERIUM_WATER_BLOCK.get().defaultBlockState(), 1);
+         }
 
         }
 

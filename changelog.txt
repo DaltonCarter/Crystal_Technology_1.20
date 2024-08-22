@@ -243,6 +243,19 @@ Posted By: Dalton Carter
 crash with little explaination. Should I ever figure out how to implement it PROPERLY I will re-add this feature
 
 
+-------------------------------------------------------------------------------
+
+8/21/2024
+Version 0.4.0
+Posted By: Dalton Carter
+
+-Added Custom Fluids
+-Re-added All Tiberium Fluids*
+-Water infection Logic re-implemented
+-Removed in progress Blossom Base Class
+
+*Note: Molten Tiberium Currently does not function like lava, will fix as soon as I know how.
+
 ======================================================
 LEGACY 1.16.5 Changelog
 0.5.2

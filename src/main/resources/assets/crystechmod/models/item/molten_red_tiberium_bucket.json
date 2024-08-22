@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "crystechmod:item/molten_red_tiberium_bucket"
+  }
+
+}

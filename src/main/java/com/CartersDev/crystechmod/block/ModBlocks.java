@@ -2,6 +2,7 @@ package com.CartersDev.crystechmod.block;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.custom.*;
+import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -661,6 +662,9 @@ public class ModBlocks {
             () -> new CornCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)
                     .noOcclusion().noCollission()));
     //End of Plants
+
+
+    //Tiberium
     public static final RegistryObject<Block> GREEN_TIBERIUM_CROP = BLOCKS.register("green_tiberium_crop",
             () -> new GreenTiberiumCrystalBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).lightLevel(tiberiumglow)
                     .noOcclusion().noCollission()));
@@ -677,7 +681,20 @@ public class ModBlocks {
             () -> new PurpleTiberiumCrystalBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).lightLevel(tiberiumglow)
                     .noOcclusion().noCollission()));
 
-    //Tiberium
+    public static final RegistryObject<LiquidBlock> TIBERIUM_WATER_BLOCK = BLOCKS.register("tiberium_water_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_TIBERIUM_WATER, BlockBehaviour.Properties.copy(Blocks.WATER)));
+
+    public static final RegistryObject<LiquidBlock> MOLTEN_TIBERIUM_BLOCK = BLOCKS.register("molten_tiberium_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_MOLTEN_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
+
+    public static final RegistryObject<LiquidBlock> MOLTEN_BLUE_TIBERIUM_BLOCK = BLOCKS.register("molten_blue_tiberium_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_MOLTEN_BLUE_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
+
+    public static final RegistryObject<LiquidBlock> MOLTEN_RED_TIBERIUM_BLOCK = BLOCKS.register("molten_red_tiberium_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_MOLTEN_RED_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
+
+    public static final RegistryObject<LiquidBlock> MOLTEN_PURPLE_TIBERIUM_BLOCK = BLOCKS.register("molten_purple_tiberium_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
 
     //End of Tiberium
 
