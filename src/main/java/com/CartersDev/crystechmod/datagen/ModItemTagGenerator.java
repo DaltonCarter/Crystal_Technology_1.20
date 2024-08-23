@@ -50,6 +50,14 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.HAZMAT_MK2_BOOTS.get();
 
 
+
+        this.tag(ItemTags.MUSIC_DISCS)
+                .add(ModItems.STILL_ALONE_MUSIC_DISC.get());
+
+        this.tag(ItemTags.CREEPER_DROP_MUSIC_DISCS)
+                .add(ModItems.STILL_ALONE_MUSIC_DISC.get());
+
+
         this.tag(ModTags.Items.STICKS)
                 .add(ModItems.PLAGUED_STICK.get(),
                         Items.STICK);

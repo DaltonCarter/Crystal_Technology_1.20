@@ -22,6 +22,9 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                 .title(Component.translatable("creativetab.crystal_technology_tab"))
                 .displayItems((itemDisplayParameters, output) -> {
 
+                    output.accept(ModBlocks.SOUND_BLOCK.get());
+                    output.accept(ModItems.STILL_ALONE_MUSIC_DISC.get());
+
                     output.accept(ModItems.TIBERIUM_FRUIT.get());
                     output.accept(ModItems.STRAWBERRY.get());
                     output.accept(ModItems.CORN.get());
@@ -31,7 +34,9 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                     output.accept(ModBlocks.HYACINTH.get());
                     output.accept(ModBlocks.FLOWER_OF_LIFE.get());
                     output.accept(ModBlocks.DEVILS_BLOOD.get());
+                    output.accept(ModItems.DEVILS_BLOOD_POWDER.get());
                     output.accept(ModBlocks.YOKARAN_BLOOM.get());
+                    output.accept(ModItems.YOKARAN_BLOOM_POWDER.get());
 
                     output.accept(ModItems.TIBERIUM_WATER_BUCKET.get());
 //                    output.accept(ModBlocks.BLOSSOM_SPOUT.get());

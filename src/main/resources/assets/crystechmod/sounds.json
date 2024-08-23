@@ -1,0 +1,46 @@
+{
+  "chime": {
+    "subtitles": "sounds.crystechmod.chime",
+    "sounds": [
+      "crystechmod:chime"
+    ]
+  },
+  "sound_block_break": {
+    "subtitle": "sounds.crystechmod.sound_block_break",
+    "sounds": [
+      "crystechmod:sound_block_break"
+    ]
+  },
+  "sound_block_step": {
+    "subtitle": "sounds.crystechmod.sound_block_step",
+    "sounds": [
+      "crystechmod:sound_block_step"
+    ]
+  },
+  "sound_block_place": {
+    "subtitle": "sounds.crystechmod.sound_block_place",
+    "sounds": [
+      "crystechmod:sound_block_place"
+    ]
+  },
+  "sound_block_hit": {
+    "subtitle": "sounds.crystechmod.sound_block_hit",
+    "sounds": [
+      "crystechmod:sound_block_hit"
+    ]
+  },
+  "sound_block_fall": {
+    "subtitle": "sounds.crystechmod.sound_block_fall",
+    "sounds": [
+      "crystechmod:sound_block_fall"
+    ]
+  },
+  "still_alone": {
+    "sounds": [
+      {
+        "name": "crystechmod:still_alone",
+        "stream": true
+      }
+    ]
+  }
+}

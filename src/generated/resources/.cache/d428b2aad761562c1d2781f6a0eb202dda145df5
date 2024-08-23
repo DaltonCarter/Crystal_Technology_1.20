@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-21T23:14:20.7880539	Item Models: crystechmod
+// 1.20.1	2024-08-22T18:32:11.523403	Item Models: crystechmod
 59af2f348d998b633663b4205f4a1565e13933c0 assets/crystechmod/models/item/aeries_crystal.json
 e93e288155e12d75f29575ccb056b60bd51b7bea assets/crystechmod/models/item/alythum_axe.json
 8b8decbbfe4dec30a6f3d7b8076de9aa2af2dbc2 assets/crystechmod/models/item/alythum_boots.json
@@ -63,6 +63,7 @@ c74a2097a5ce4ffc836d4abb5d7c657db8026c6f assets/crystechmod/models/item/corn_see
 85b72e4aaf9fe39131c330f12fd3af4477fb66e1 assets/crystechmod/models/item/cyan_tibercrete_stairs.json
 ed4e7c408cfe0371574e53ba34e6dd0881b5dfbb assets/crystechmod/models/item/cyan_tiberglass_pane.json
 9874dcfb4cfd2d71d0c459b4b1f94f527ab36852 assets/crystechmod/models/item/devils_blood.json
+3d3ccc190d7e7292eb5199939359c16411f0c317 assets/crystechmod/models/item/devils_blood_powder.json
 a8c7c15e83426f6890c67a3c19af6b0ed4471f00 assets/crystechmod/models/item/enigma_crystal.json
 03b9a675cf9bfd6655ef33a571eef5ab9c6e8599 assets/crystechmod/models/item/firestone.json
 87ef185c96cd4543c0a7f5912bef0cfa5c5a19d0 assets/crystechmod/models/item/firestone_wall.json
@@ -266,6 +267,7 @@ c75952fbf158d90168c4f029c9621cbfec7894ab assets/crystechmod/models/item/plagued_
 b457cb9a281c196512fd1dd430fdc93f9a46299c assets/crystechmod/models/item/raw_qualrite.json
 e6deb62921f070d312dd489194c431160c3843d3 assets/crystechmod/models/item/red_tibercrete_stairs.json
 632d156694a73ea517f0430e376d44f3550b8721 assets/crystechmod/models/item/red_tiberglass_pane.json
+b4faf6e3098816e73498ea2fce1af700abefc4ff assets/crystechmod/models/item/still_alone_music_disc.json
 0b3c9c6197d6f525ff898da46928f4df2d18c82b assets/crystechmod/models/item/strawberry.json
 fdbbbea3ded6c9361cdfb2ab7c2b309d54460246 assets/crystechmod/models/item/strawberry_seeds.json
 97bfa1f993e6ce478247ac6d37f5d6a8dbe9244a assets/crystechmod/models/item/tiberium.json
@@ -280,3 +282,4 @@ d6a09d93b1e72e8f8736c5c355c26ffe5cf9d6c6 assets/crystechmod/models/item/white_ti
 e659861ce065df705b03a13e2396fb8dc065044f assets/crystechmod/models/item/wolf_tiberglass_pane.json
 e5cbdeb5d635f578511d15ec368e9fe810273464 assets/crystechmod/models/item/yellow_tibercrete_stairs.json
 3c0af8717025bfbc60d68c919d95577f3f4f4dbb assets/crystechmod/models/item/yellow_tiberglass_pane.json
+f63a7b776458b814bb07d63673754c432546fdf6 assets/crystechmod/models/item/yokaran_bloom_powder.json

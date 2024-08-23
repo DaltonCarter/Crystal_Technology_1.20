@@ -190,6 +190,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.HYACINTH.get());
         this.dropSelf(ModBlocks.FLOWER_OF_LIFE.get());
         this.dropSelf(ModBlocks.DEVILS_BLOOD.get());
+        this.dropSelf(ModBlocks.SOUND_BLOCK.get());
 
         //End of Self Drops
 

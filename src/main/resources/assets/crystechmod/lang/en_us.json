@@ -84,6 +84,10 @@
   "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
   "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
 
+  "item.crystechmod.still_alone_music_disc": "Still Alone Music Disc",
+  "item.crystechmod.still_alone_music_disc.desc": "Made by Bobek (Bobisfaction) and Swirekster for Twisted Insurrection.",
+
+
 
   "block.crystechmod.aeries_ore": "Aeries Ore",
   "block.crystechmod.deepslate_aeries_ore": "Deepslate Aeries Ore",
@@ -270,6 +274,17 @@
   "tootip.crystechmod.firestone_wall.tooltip": "For those times when things REALLY need to stay off your lawn.",
 
   "effect.crystechmod.freeze": "Freeze",
+
+  "entity.minecraft.villager.crystechmod.tiberiumgatherer": "Tiberium Gatherer",
+
+  "sounds.crystechmod.chime": "Alert Chime",
+  "sounds.crystechmod.sound_block_break": "Sound Block Broken",
+  "sounds.crystechmod.sound_block_fall": "Sound Block Fallen On",
+  "sounds.crystechmod.sound_block_hit": "Sound Block Hit",
+  "sounds.crystechmod.sound_block_place": "Sound Block Placed",
+  "sounds.crystechmod.sound_block_step": "Sound Block Stepped On",
+
+
 
   "creativetab.crystal_technology_tab": "Crystal Technology"
 

@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-21T23:14:20.7865496	Loot Tables
+// 1.20.1	2024-08-22T18:05:21.7292819	Loot Tables
 03c6f95925fa38635ca3601903e1d452029caabd data/crystechmod/loot_tables/blocks/aboreus_crystal.json
 54cc8c095a6e7af070b865de543f3a1891b49055 data/crystechmod/loot_tables/blocks/aboreus_stone.json
 c1005c86f610c3ea139857f0d980e40086fc3cac data/crystechmod/loot_tables/blocks/aeries_block.json
@@ -152,6 +152,7 @@ c9f682c1fc2571a3a7768f673d55c37861f66d5e data/crystechmod/loot_tables/blocks/rip
 924b408820bbb100384daf88fef636e34a62ebb0 data/crystechmod/loot_tables/blocks/seeded_dirt.json
 28134dda2176aeff78b1aae8e207224e1da3b21f data/crystechmod/loot_tables/blocks/seeded_red_zone_dirt.json
 91d4207cbc23d2de43f3b09882dcaab1ad00bd69 data/crystechmod/loot_tables/blocks/seeded_yellow_zone_cracked_dirt.json
+f0747dc173d7a8c6b9f8d92f4256e4fddb0d072b data/crystechmod/loot_tables/blocks/sound_block.json
 b2f63ad13fb7c694acc58695cba2ce205a3e4a89 data/crystechmod/loot_tables/blocks/strawberry_crop.json
 c44df972df9be71020eb66002e7bbca5a6acf681 data/crystechmod/loot_tables/blocks/tiberium_block.json
 6b5950628a097f8a8fd8af027eb040182d98e509 data/crystechmod/loot_tables/blocks/tiberium_blue_block.json

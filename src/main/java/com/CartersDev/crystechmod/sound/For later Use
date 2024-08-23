@@ -1,0 +1,4 @@
+For playing a sound at position clicked:
+
+context.getLevel().playSeededSound(null, positionClicked.getX(), positionClicked.getY(), positionClicked.getZ(),
+ModSounds.CHIME.get(), SoundSource.BLOCKS, 1f, 1f, 0);

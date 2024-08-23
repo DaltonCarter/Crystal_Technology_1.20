@@ -48,6 +48,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.TIBERIUM_LEATHER);
         simpleItem(ModItems.ICHOR_LEATHER);
 
+        simpleItem(ModItems.YOKARAN_BLOOM_POWDER);
+        simpleItem(ModItems.DEVILS_BLOOD_POWDER);
+
+        simpleItem(ModItems.STILL_ALONE_MUSIC_DISC);
+
         simpleItem(ModItems.TIBERIUM);
         simpleItem(ModItems.TIBERIUM_BLUE);
         simpleItem(ModItems.TIBERIUM_RED);

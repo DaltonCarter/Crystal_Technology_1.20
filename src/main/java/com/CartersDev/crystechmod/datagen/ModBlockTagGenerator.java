@@ -65,6 +65,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.TIBERIUM_BLOCK.get(),
+                ModBlocks.SOUND_BLOCK.get(),
                 ModBlocks.TIBERIUM_BLUE_BLOCK.get(),
                 ModBlocks.TIBERIUM_RED_BLOCK.get(),
                 ModBlocks.TIBERIUM_PURPLE_BLOCK.get(),
@@ -241,6 +242,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.CLEAR_TIBERGLASS.get(),
+                        ModBlocks.SOUND_BLOCK.get(),
                         ModBlocks.CLEAR_TIBERGLASS_PANE.get(),
                         ModBlocks.MOSAIC_TIBERGLASS.get(),
                         ModBlocks.MOSAIC_TIBERGLASS_PANE.get(),

@@ -6,6 +6,7 @@ import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.custom.Firestone;
+import com.CartersDev.crystechmod.sound.ModSounds;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -109,6 +110,12 @@ public static final RegistryObject<Item> GREEN_TIBERIUM_DUST = ITEMS.register("g
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> HG_CORE_BLEND = ITEMS.register("hg_core_blend",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> YOKARAN_BLOOM_POWDER = ITEMS.register("yokaran_bloom_powder",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> DEVILS_BLOOD_POWDER = ITEMS.register("devils_blood_powder",
             () -> new Item(new Item.Properties()));
 //end of Dusts
 
@@ -272,6 +279,14 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
                     new Item.Properties()));
 
     //End Armors
+
+
+    //Music Discs
+    public static final RegistryObject<Item> STILL_ALONE_MUSIC_DISC = ITEMS.register("still_alone_music_disc",
+            () -> new RecordItem(6, ModSounds.STILL_ALONE,
+                    new Item.Properties().stacksTo(1), 5140));
+
+    //End of Music Discs
 
 
 

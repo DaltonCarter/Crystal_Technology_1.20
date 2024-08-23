@@ -31,6 +31,7 @@ Random random = new Random();
             context.getItemInHand().hurtAndBreak(1, context.getPlayer(), player ->
                     player.broadcastBreakEvent(player.getUsedItemHand()));
 
+
         }
 
         return super.onItemUseFirst(stack, context);

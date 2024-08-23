@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-21T23:14:20.7795361	Block States: crystechmod
+// 1.20.1	2024-08-22T18:05:21.7232616	Block States: crystechmod
 b96cfdc734a704501413713f3f2c8cfcb4ba2a5c assets/crystechmod/blockstates/aboreus_crystal.json
 2bc3c855a08913269329ffaaf6ab3588f39fd679 assets/crystechmod/blockstates/aboreus_stone.json
 4eb0e66f6b57acdc95618edddf4b631706bf4ed4 assets/crystechmod/blockstates/aeries_block.json
@@ -148,6 +148,7 @@ f64fcee523ce7a331ff1d06f7ec4d03f6d1a455f assets/crystechmod/blockstates/riparius
 68973bddbf0dc70075cce369f272f31803c6f763 assets/crystechmod/blockstates/seeded_dirt.json
 84c5033be43249c17cb44a25ef824ab1b27ae0e8 assets/crystechmod/blockstates/seeded_red_zone_dirt.json
 23a55723f89051c6e3f6b81ef0e3bd5964725cbd assets/crystechmod/blockstates/seeded_yellow_zone_cracked_dirt.json
+d849766bb927d6021b8d16d5a16a04cda9356c15 assets/crystechmod/blockstates/sound_block.json
 10417046a4ed5d86e8ba0621cf33f16223534311 assets/crystechmod/blockstates/strawberry_crop.json
 b239231357a085a06557a57665c9acd176b494c9 assets/crystechmod/blockstates/tiberium_block.json
 31409fdddc30700c2894f6ae08f5057915bb6517 assets/crystechmod/blockstates/tiberium_blue_block.json
@@ -453,6 +454,7 @@ a9a5890699f85efb6d86eee2dbac0ead4881ee5f assets/crystechmod/models/block/red_zon
 30585bdbcccf8570aab60b78986bf5569eb6f860 assets/crystechmod/models/block/seeded_dirt.json
 694aa02a5da6e96b5f00aae1ac8095038afef2e6 assets/crystechmod/models/block/seeded_red_zone_dirt.json
 2688e0f474fb39a8d71cca540212db2277e09c6e assets/crystechmod/models/block/seeded_yellow_zone_cracked_dirt.json
+2caf92f723ab42922d1437a6762660209a797f64 assets/crystechmod/models/block/sound_block.json
 01fdf71ac1cccaf3ae77bf7b2f485d6c1097ca5e assets/crystechmod/models/block/strawberry_stage0.json
 298b84d7d5c46b5825704a68ce653ef321feda4b assets/crystechmod/models/block/strawberry_stage1.json
 5c8e95c5ac2456f475aae3d0f543bda237e05f0d assets/crystechmod/models/block/strawberry_stage2.json
@@ -599,6 +601,7 @@ d87df215dce7c5540b744d36358137e43f6e0b04 assets/crystechmod/models/item/riparius
 89b8c97e37fc8ecbdc4499a9ec463ae293f10488 assets/crystechmod/models/item/seeded_dirt.json
 bb7d1c43a09aabb810358cc5cb24c875ccbb66ea assets/crystechmod/models/item/seeded_red_zone_dirt.json
 21120fcef54fdecc36ccb248d44aff0be970cf95 assets/crystechmod/models/item/seeded_yellow_zone_cracked_dirt.json
+8e499416ac5ae042cb467781b40cf49031d60d9a assets/crystechmod/models/item/sound_block.json
 36a9bf6fbbdce493c3c5150fbf5fa1b50f26c783 assets/crystechmod/models/item/tiberium_block.json
 3b9b6ff8e6d8ab1d6011298e1453fea912610509 assets/crystechmod/models/item/tiberium_blue_block.json
 df2b48231060298b9565b1ee3b002859c32903a9 assets/crystechmod/models/item/tiberium_purple_block.json

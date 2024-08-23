@@ -260,6 +260,23 @@ Posted By: Dalton Carter
 -Implemented custom Classes for Yokaran Bloom, Flower of Life, and Devil's Blood
 -Added Datagen handling for Flowers and Potted Flowers
 
+-------------------------------------------------------------------------------
+
+8/22/2024
+Version 0.4.2
+Posted By: Dalton Carter
+
+-Added Custom Villager Trades & Wandering Trader Trades
+-Added Custom Villager Profession WITH Trades*
+-Added Custom Sounds and Music**
+-Added all appropriate Data gen
+-Added Devil's Blood Powder, and Yokaran Bloom Powder***
+
+*Note: Will modify the Profession Texture at a later moment
+**Note2: While the Still Alone Track from Twisted insurrection is available for Free, I do not have Distribution permission.
+***Note3: These currently serve no purpose but to lay the groundwork for the more in depth crafting.
+
+
 
 ======================================================
 LEGACY 1.16.5 Changelog
