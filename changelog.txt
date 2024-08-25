@@ -276,6 +276,19 @@ Posted By: Dalton Carter
 **Note2: While the Still Alone Track from Twisted insurrection is available for Free, I do not have Distribution permission.
 ***Note3: These currently serve no purpose but to lay the groundwork for the more in depth crafting.
 
+-------------------------------------------------------------------------------
+
+8/23/2024 - 8/25/2024
+Version 0.4.5
+Posted By: Dalton Carter
+
+-Added Custom ALL custom Music intended for the Mod*
+-Divided Items and blocks into multiple creatives tabs for the sake of organization and ease of access
+
+*Note: While Tracks from Twisted insurrection is available for Free, I do not have Distribution permission, also
+While I own Legitimate copies of all the Command and Conquer Music used, It is still EA Games, I cannot be paid for
+distributing it, nor do I have the rights to. All of this is intended for Private use in the end.
+
 
 
 ======================================================

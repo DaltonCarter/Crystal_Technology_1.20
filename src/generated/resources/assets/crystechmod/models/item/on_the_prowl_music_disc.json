@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "crystechmod:item/on_the_prowl_music_disc"
+  }
+}

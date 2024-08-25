@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "crystechmod:item/lone_trooper_music_disc"
+  }
+}

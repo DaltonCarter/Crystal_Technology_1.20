@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "crystechmod:item/dark_valley_music_disc"
+  }
+}

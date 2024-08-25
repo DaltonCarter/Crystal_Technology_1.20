@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "crystechmod:item/space_echo_music_disc"
+  }
+}

@@ -17,29 +17,19 @@ public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CrystalTech.MOD_ID);
 
-public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("crystal_technology_tab",
+public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_MODE_TABS.register("crystal_technology_tab",
         () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TIBERIUM.get()))
                 .title(Component.translatable("creativetab.crystal_technology_tab"))
                 .displayItems((itemDisplayParameters, output) -> {
 
-                    output.accept(ModBlocks.SOUND_BLOCK.get());
-                    output.accept(ModItems.STILL_ALONE_MUSIC_DISC.get());
+                    //                    output.accept(ModBlocks.BLOSSOM_SPOUT.get());
+                    output.accept(ModBlocks.NOD_CREST_LARGE.get());
 
-                    output.accept(ModItems.TIBERIUM_FRUIT.get());
-                    output.accept(ModItems.STRAWBERRY.get());
-                    output.accept(ModItems.CORN.get());
-                    output.accept(ModItems.STRAWBERRY_SEEDS.get());
-                    output.accept(ModItems.CORN_SEEDS.get());
+                    output.accept(ModItems.PLAGUED_STICK.get());
 
-                    output.accept(ModBlocks.HYACINTH.get());
-                    output.accept(ModBlocks.FLOWER_OF_LIFE.get());
-                    output.accept(ModBlocks.DEVILS_BLOOD.get());
-                    output.accept(ModItems.DEVILS_BLOOD_POWDER.get());
-                    output.accept(ModBlocks.YOKARAN_BLOOM.get());
                     output.accept(ModItems.YOKARAN_BLOOM_POWDER.get());
-
+                    output.accept(ModItems.DEVILS_BLOOD_POWDER.get());
                     output.accept(ModItems.TIBERIUM_WATER_BUCKET.get());
-//                    output.accept(ModBlocks.BLOSSOM_SPOUT.get());
 
                     output.accept(ModItems.TIBERIUM_LEATHER.get());
                     output.accept(ModItems.ICHOR_LEATHER.get());
@@ -64,47 +54,6 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                     output.accept(ModItems.TIBERIUM_PURPLE.get());
                     output.accept(ModBlocks.TIBERIUM_PURPLE_BLOCK.get());
                     output.accept(ModItems.MOLTEN_PURPLE_TIBERIUM_BUCKET.get());
-
-                    output.accept(ModItems.PLAGUED_SWORD.get());
-                    output.accept(ModItems.PLAGUED_PICKAXE.get());
-                    output.accept(ModItems.PLAGUED_AXE.get());
-                    output.accept(ModItems.PLAGUED_SHOVEL.get());
-                    output.accept(ModItems.PLAGUED_HOE.get());
-                    output.accept(ModItems.PLAGUED_BOW.get());
-
-                    output.accept(ModItems.GUNDANIUM_SWORD.get());
-                    output.accept(ModItems.GUNDANIUM_PICKAXE.get());
-                    output.accept(ModItems.GUNDANIUM_AXE.get());
-                    output.accept(ModItems.GUNDANIUM_SHOVEL.get());
-                    output.accept(ModItems.GUNDANIUM_HOE.get());
-
-                    output.accept(ModItems.ALYTHUM_SWORD.get());
-                    output.accept(ModItems.ALYTHUM_PICKAXE.get());
-                    output.accept(ModItems.ALYTHUM_AXE.get());
-                    output.accept(ModItems.ALYTHUM_SHOVEL.get());
-                    output.accept(ModItems.ALYTHUM_HOE.get());
-
-                    output.accept(ModItems.HAZMAT_MK1_HELMET.get());
-                    output.accept(ModItems.HAZMAT_MK1_CHESTPLATE.get());
-                    output.accept(ModItems.HAZMAT_MK1_LEGGINGS.get());
-                    output.accept(ModItems.HAZMAT_MK1_BOOTS.get());
-
-                    output.accept(ModItems.HAZMAT_MK2_HELMET.get());
-                    output.accept(ModItems.HAZMAT_MK2_CHESTPLATE.get());
-                    output.accept(ModItems.HAZMAT_MK2_LEGGINGS.get());
-                    output.accept(ModItems.HAZMAT_MK2_BOOTS.get());
-
-                    output.accept(ModItems.GUNDANIUM_HELMET.get());
-                    output.accept(ModItems.GUNDANIUM_CHESTPLATE.get());
-                    output.accept(ModItems.GUNDANIUM_LEGGINGS.get());
-                    output.accept(ModItems.GUNDANIUM_BOOTS.get());
-
-                    output.accept(ModItems.ALYTHUM_HELMET.get());
-                    output.accept(ModItems.ALYTHUM_CHESTPLATE.get());
-                    output.accept(ModItems.ALYTHUM_LEGGINGS.get());
-                    output.accept(ModItems.ALYTHUM_BOOTS.get());
-
-                    output.accept(ModItems.GUNDANIUM_HORSE_ARMOR.get());
 
                     output.accept(ModBlocks.AERIES_ORE.get());
                     output.accept(ModBlocks.DEEPSLATE_AERIES_ORE.get());
@@ -167,152 +116,275 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
                     output.accept(ModItems.HG_CORE_INGOT.get());
                     output.accept(ModBlocks.HG_CORE_BLOCK.get());
 
-                    output.accept(ModItems.PLAGUED_STICK.get());
-
                     output.accept(ModItems.GDI_EMBLEM.get());
                     output.accept(ModItems.NOD_EMBLEM.get());
                     output.accept(ModItems.WOLF_EMBLEM.get());
 
 
-                    output.accept(ModBlocks.TIBERIUM_SOIL.get());
-                    output.accept(ModBlocks.ICHOR_SOIL.get());
-                    output.accept(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get());
-                    output.accept(ModBlocks.RED_ZONE_DIRT.get());
-                    output.accept(ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get());
-                    output.accept(ModBlocks.SEEDED_RED_ZONE_DIRT.get());
-                    output.accept(ModBlocks.YELLOW_ZONE_SAND.get());
-                    output.accept(ModBlocks.RED_ZONE_SAND.get());
-                    output.accept(ModBlocks.SEEDED_DIRT.get());
-
-                    output.accept(ModBlocks.PLAGUED_PLANKS.get());
-                    output.accept(ModBlocks.PLAGUED_STAIRS.get());
-                    output.accept(ModBlocks.PLAGUED_SLAB.get());
-                    output.accept(ModBlocks.PLAGUED_BUTTON.get());
-                    output.accept(ModBlocks.PLAGUED_PRESSURE_PLATE.get());
-                    output.accept(ModBlocks.PLAGUED_FENCE.get());
-                    output.accept(ModBlocks.PLAGUED_FENCE_GATE.get());
-                    output.accept(ModBlocks.PLAGUED_DOOR.get());
-                    output.accept(ModBlocks.PLAGUED_TRAPDOOR.get());
-
-                    output.accept(ModBlocks.INFESTED_ANDESITE.get());
-                    output.accept(ModBlocks.INFESTED_COBBLE.get());
-                    output.accept(ModBlocks.INFESTED_COBBLE_SLAB.get());
-                    output.accept(ModBlocks.INFESTED_COBBLE_STAIRS.get());
-                    output.accept(ModBlocks.INFESTED_STONE.get());
-                    output.accept(ModBlocks.INFESTED_STONE_BRICKS.get());
-                    output.accept(ModBlocks.INFESTED_STONE_BRICK_SLAB.get());
-                    output.accept(ModBlocks.INFESTED_STONE_BRICK_STAIRS.get());
-                    output.accept(ModBlocks.INFESTED_DIORITE.get());
-                    output.accept(ModBlocks.INFESTED_GRANITE.get());
-
-                    output.accept(ModBlocks.RIPARIUS_STONE.get());
-                    output.accept(ModBlocks.CRUENTUS_STONE.get());
-                    output.accept(ModBlocks.VINIFERA_STONE.get());
-                    output.accept(ModBlocks.ABOREUS_STONE.get());
-
-                    output.accept(ModBlocks.RIPARIUS_CRYSTAL.get());
-                    output.accept(ModBlocks.VINIFERA_CRYSTAL.get());
-                    output.accept(ModBlocks.CRUENTUS_CRYSTAL.get());
-                    output.accept(ModBlocks.ABOREUS_CRYSTAL.get());
-
-                    output.accept(ModBlocks.CLEAR_TIBERGLASS.get());
-                    output.accept(ModBlocks.CLEAR_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.MOSAIC_TIBERGLASS.get());
-                    output.accept(ModBlocks.MOSAIC_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.GDI_TIBERGLASS.get());
-                    output.accept(ModBlocks.GDI_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.NOD_TIBERGLASS.get());
-                    output.accept(ModBlocks.NOD_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.WOLF_TIBERGLASS.get());
-                    output.accept(ModBlocks.WOLF_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.BLACK_TIBERGLASS.get());
-                    output.accept(ModBlocks.BLACK_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.BLUE_TIBERGLASS.get());
-                    output.accept(ModBlocks.BLUE_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.BROWN_TIBERGLASS.get());
-                    output.accept(ModBlocks.BROWN_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.CYAN_TIBERGLASS.get());
-                    output.accept(ModBlocks.CYAN_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.GRAY_TIBERGLASS.get());
-                    output.accept(ModBlocks.GRAY_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.GREEN_TIBERGLASS.get());
-                    output.accept(ModBlocks.GREEN_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.LIGHT_BLUE_TIBERGLASS.get());
-                    output.accept(ModBlocks.LIGHT_BLUE_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.LIGHT_GRAY_TIBERGLASS.get());
-                    output.accept(ModBlocks.LIGHT_GRAY_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.LIME_TIBERGLASS.get());
-                    output.accept(ModBlocks.LIME_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.MAGENTA_TIBERGLASS.get());
-                    output.accept(ModBlocks.MAGENTA_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.ORANGE_TIBERGLASS.get());
-                    output.accept(ModBlocks.ORANGE_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.PINK_TIBERGLASS.get());
-                    output.accept(ModBlocks.PINK_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.PURPLE_TIBERGLASS.get());
-                    output.accept(ModBlocks.PURPLE_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.RED_TIBERGLASS.get());
-                    output.accept(ModBlocks.RED_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.WHITE_TIBERGLASS.get());
-                    output.accept(ModBlocks.WHITE_TIBERGLASS_PANE.get());
-                    output.accept(ModBlocks.YELLOW_TIBERGLASS.get());
-                    output.accept(ModBlocks.YELLOW_TIBERGLASS_PANE.get());
-
-                    output.accept(ModBlocks.BLACK_TIBERCRETE.get());
-                    output.accept(ModBlocks.BLACK_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.BLACK_TIBERCRETE_POWDER.get());
-                    output.accept(ModBlocks.BLUE_TIBERCRETE.get());
-                    output.accept(ModBlocks.BLUE_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.BLUE_TIBERCRETE_POWDER.get());
-                    output.accept(ModBlocks.BROWN_TIBERCRETE.get());
-                    output.accept(ModBlocks.BROWN_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.BROWN_TIBERCRETE_POWDER.get());
-                    output.accept(ModBlocks.CYAN_TIBERCRETE.get());
-                    output.accept(ModBlocks.CYAN_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.CYAN_TIBERCRETE_POWDER.get());
-                    output.accept(ModBlocks.GRAY_TIBERCRETE.get());
-                    output.accept(ModBlocks.GRAY_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.GRAY_TIBERCRETE_POWDER.get());
-                    output.accept(ModBlocks.GREEN_TIBERCRETE.get());
-                    output.accept(ModBlocks.GREEN_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.GREEN_TIBERCRETE_POWDER.get());
-                    output.accept(ModBlocks.LIGHT_BLUE_TIBERCRETE.get());
-                    output.accept(ModBlocks.LIGHT_BLUE_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.LIGHT_BLUE_TIBERCRETE_POWDER.get());
-                    output.accept(ModBlocks.LIGHT_GRAY_TIBERCRETE.get());
-                    output.accept(ModBlocks.LIGHT_GRAY_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.LIGHT_GRAY_TIBERCRETE_POWDER.get());
-                    output.accept(ModBlocks.LIME_TIBERCRETE.get());
-                    output.accept(ModBlocks.LIME_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.LIME_TIBERCRETE_POWDER.get());
-                    output.accept(ModBlocks.MAGENTA_TIBERCRETE.get());
-                    output.accept(ModBlocks.MAGENTA_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.MAGENTA_TIBERCRETE_POWDER.get());
-                    output.accept(ModBlocks.ORANGE_TIBERCRETE.get());
-                    output.accept(ModBlocks.ORANGE_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.ORANGE_TIBERCRETE_POWDER.get());
-                    output.accept(ModBlocks.PINK_TIBERCRETE.get());
-                    output.accept(ModBlocks.PINK_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.PINK_TIBERCRETE_POWDER.get());
-                    output.accept(ModBlocks.PURPLE_TIBERCRETE.get());
-                    output.accept(ModBlocks.PURPLE_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.PURPLE_TIBERCRETE_POWDER.get());
-                    output.accept(ModBlocks.RED_TIBERCRETE.get());
-                    output.accept(ModBlocks.RED_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.RED_TIBERCRETE_POWDER.get());
-                    output.accept(ModBlocks.WHITE_TIBERCRETE.get());
-                    output.accept(ModBlocks.WHITE_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.WHITE_TIBERCRETE_POWDER.get());
-                    output.accept(ModBlocks.YELLOW_TIBERCRETE.get());
-                    output.accept(ModBlocks.YELLOW_TIBERCRETE_STAIRS.get());
-                    output.accept(ModBlocks.YELLOW_TIBERCRETE_POWDER.get());
-
-                    output.accept(ModBlocks.NOD_CREST_LARGE.get());
-
-
                 })
                 .build());
 
+    public static final RegistryObject<CreativeModeTab> FOOD_TAB = CREATIVE_MODE_TABS.register("crystal_technology_food_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TIBERIUM_FRUIT.get()))
+                    .title(Component.translatable("creativetab.crystal_technology_food_tab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.TIBERIUM_FRUIT.get());
+                        output.accept(ModItems.STRAWBERRY.get());
+                        output.accept(ModItems.CORN.get());
+                        output.accept(ModItems.STRAWBERRY_SEEDS.get());
+                        output.accept(ModItems.CORN_SEEDS.get());
+                    })
+                    .build());
+
+    public static final RegistryObject<CreativeModeTab> EQUIP_TAB = CREATIVE_MODE_TABS.register("crystal_technology_equipment_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.GUNDANIUM_SWORD.get()))
+                    .title(Component.translatable("creativetab.crystal_technology_equipment_tab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.PLAGUED_SWORD.get());
+                        output.accept(ModItems.PLAGUED_PICKAXE.get());
+                        output.accept(ModItems.PLAGUED_AXE.get());
+                        output.accept(ModItems.PLAGUED_SHOVEL.get());
+                        output.accept(ModItems.PLAGUED_HOE.get());
+                        output.accept(ModItems.PLAGUED_BOW.get());
+
+                        output.accept(ModItems.GUNDANIUM_SWORD.get());
+                        output.accept(ModItems.GUNDANIUM_PICKAXE.get());
+                        output.accept(ModItems.GUNDANIUM_AXE.get());
+                        output.accept(ModItems.GUNDANIUM_SHOVEL.get());
+                        output.accept(ModItems.GUNDANIUM_HOE.get());
+
+                        output.accept(ModItems.ALYTHUM_SWORD.get());
+                        output.accept(ModItems.ALYTHUM_PICKAXE.get());
+                        output.accept(ModItems.ALYTHUM_AXE.get());
+                        output.accept(ModItems.ALYTHUM_SHOVEL.get());
+                        output.accept(ModItems.ALYTHUM_HOE.get());
+
+                        output.accept(ModItems.HAZMAT_MK1_HELMET.get());
+                        output.accept(ModItems.HAZMAT_MK1_CHESTPLATE.get());
+                        output.accept(ModItems.HAZMAT_MK1_LEGGINGS.get());
+                        output.accept(ModItems.HAZMAT_MK1_BOOTS.get());
+
+                        output.accept(ModItems.HAZMAT_MK2_HELMET.get());
+                        output.accept(ModItems.HAZMAT_MK2_CHESTPLATE.get());
+                        output.accept(ModItems.HAZMAT_MK2_LEGGINGS.get());
+                        output.accept(ModItems.HAZMAT_MK2_BOOTS.get());
+
+                        output.accept(ModItems.GUNDANIUM_HELMET.get());
+                        output.accept(ModItems.GUNDANIUM_CHESTPLATE.get());
+                        output.accept(ModItems.GUNDANIUM_LEGGINGS.get());
+                        output.accept(ModItems.GUNDANIUM_BOOTS.get());
+
+                        output.accept(ModItems.ALYTHUM_HELMET.get());
+                        output.accept(ModItems.ALYTHUM_CHESTPLATE.get());
+                        output.accept(ModItems.ALYTHUM_LEGGINGS.get());
+                        output.accept(ModItems.ALYTHUM_BOOTS.get());
+
+                        output.accept(ModItems.GUNDANIUM_HORSE_ARMOR.get());
+                    })
+                    .build());
+
+    public static final RegistryObject<CreativeModeTab> MUSIC_TAB = CREATIVE_MODE_TABS.register("crystal_technology_music_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.HYOUHAKU_WANDERING_MUSIC_DISC.get()))
+                    .title(Component.translatable("creativetab.crystal_technology_music_tab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.SOUND_BLOCK.get());
+                        output.accept(ModItems.HYOUHAKU_WANDERING_MUSIC_DISC.get());
+                        output.accept(ModItems.STILL_ALONE_MUSIC_DISC.get());
+                        output.accept(ModItems.CORRODED_VALVES_MUSIC_DISC.get());
+                        output.accept(ModItems.DARK_MACHINATIONS_MUSIC_DISC.get());
+                        output.accept(ModItems.DARK_VALLEY_MUSIC_DISC.get());
+                        output.accept(ModItems.EAGLES_DAWN_MUSIC_DISC.get());
+                        output.accept(ModItems.MANUFACTORY_MUSIC_DISC.get());
+                        output.accept(ModItems.NECROFUNK_MUSIC_DISC.get());
+                        output.accept(ModItems.OBSESSION_SOFTWARE_MUSIC_DISC.get());
+                        output.accept(ModItems.PRODIGAL_SON_MUSIC_DISC.get());
+                        output.accept(ModItems.PYROTEK_MUSIC_DISC.get());
+                        output.accept(ModItems.REPENTANCE_MUSIC_DISC.get());
+                        output.accept(ModItems.SPACE_ECHO_MUSIC_DISC.get());
+                        output.accept(ModItems.TOMBS_MUSIC_DISC.get());
+                        output.accept(ModItems.UNYIELDING_MUSIC_DISC.get());
+                        output.accept(ModItems.WIRES_MUSIC_DISC.get());
+                        output.accept(ModItems.XENOPHILE_MUSIC_DISC.get());
+                        output.accept(ModItems.APPROACH_MUSIC_DISC.get());
+                        output.accept(ModItems.DUSK_HOUR_MUSIC_DISC.get());
+                        output.accept(ModItems.TS_DUSK_HOUR_MUSIC_DISC.get());
+                        output.accept(ModItems.HEROISM_MUSIC_DISC.get());
+                        output.accept(ModItems.LONE_TROOPER_MUSIC_DISC.get());
+                        output.accept(ModItems.PHAROTEK_MUSIC_DISC.get());
+                        output.accept(ModItems.VALVES_MUSIC_DISC.get());
+                        output.accept(ModItems.WHAT_LURKS_MUSIC_DISC.get());
+                        output.accept(ModItems.AIRSTRIKE_MUSIC_DISC.get());
+                        output.accept(ModItems.CANYON_CHASE_MUSIC_DISC.get());
+                        output.accept(ModItems.CREEPING_UPON_MUSIC_DISC.get());
+                        output.accept(ModItems.DEPTH_CHARGE_MUSIC_DISC.get());
+                        output.accept(ModItems.DRONE_MUSIC_DISC.get());
+                        output.accept(ModItems.ON_THE_PROWL_MUSIC_DISC.get());
+                        output.accept(ModItems.RAIN_IN_THE_NIGHT_MUSIC_DISC.get());
+                        output.accept(ModItems.RECON_MUSIC_DISC.get());
+                        output.accept(ModItems.AWAITING_MUSIC_DISC.get());
+                        output.accept(ModItems.DENSE_MUSIC_DISC.get());
+                        output.accept(ModItems.FLOATING_MUSIC_DISC.get());
+                        output.accept(ModItems.RUN_MUSIC_DISC.get());
+                        output.accept(ModItems.THE_SEARCH_MUSIC_DISC.get());
+                        output.accept(ModItems.TRENCHES_MUSIC_DISC.get());
+                        output.accept(ModItems.VECTOR_MUSIC_DISC.get());
+                        output.accept(ModItems.VOICE_RHYTHM_2_MUSIC_DISC.get());
+
+                    })
+                    .build());
+
+    public static final RegistryObject<CreativeModeTab> NATURAL_TAB = CREATIVE_MODE_TABS.register("crystal_technology_natural_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get()))
+                    .title(Component.translatable("creativetab.crystal_technology_natural_tab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+
+                        output.accept(ModBlocks.HYACINTH.get());
+                        output.accept(ModBlocks.FLOWER_OF_LIFE.get());
+                        output.accept(ModBlocks.DEVILS_BLOOD.get());
+                        output.accept(ModBlocks.YOKARAN_BLOOM.get());
+
+                        output.accept(ModBlocks.TIBERIUM_SOIL.get());
+                        output.accept(ModBlocks.ICHOR_SOIL.get());
+                        output.accept(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get());
+                        output.accept(ModBlocks.RED_ZONE_DIRT.get());
+                        output.accept(ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get());
+                        output.accept(ModBlocks.SEEDED_RED_ZONE_DIRT.get());
+                        output.accept(ModBlocks.YELLOW_ZONE_SAND.get());
+                        output.accept(ModBlocks.RED_ZONE_SAND.get());
+                        output.accept(ModBlocks.SEEDED_DIRT.get());
+
+                        output.accept(ModBlocks.PLAGUED_PLANKS.get());
+                        output.accept(ModBlocks.PLAGUED_STAIRS.get());
+                        output.accept(ModBlocks.PLAGUED_SLAB.get());
+                        output.accept(ModBlocks.PLAGUED_BUTTON.get());
+                        output.accept(ModBlocks.PLAGUED_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.PLAGUED_FENCE.get());
+                        output.accept(ModBlocks.PLAGUED_FENCE_GATE.get());
+                        output.accept(ModBlocks.PLAGUED_DOOR.get());
+                        output.accept(ModBlocks.PLAGUED_TRAPDOOR.get());
+
+                        output.accept(ModBlocks.INFESTED_ANDESITE.get());
+                        output.accept(ModBlocks.INFESTED_COBBLE.get());
+                        output.accept(ModBlocks.INFESTED_COBBLE_SLAB.get());
+                        output.accept(ModBlocks.INFESTED_COBBLE_STAIRS.get());
+                        output.accept(ModBlocks.INFESTED_STONE.get());
+                        output.accept(ModBlocks.INFESTED_DIORITE.get());
+                        output.accept(ModBlocks.INFESTED_GRANITE.get());
+
+                        output.accept(ModBlocks.RIPARIUS_STONE.get());
+                        output.accept(ModBlocks.CRUENTUS_STONE.get());
+                        output.accept(ModBlocks.VINIFERA_STONE.get());
+                        output.accept(ModBlocks.ABOREUS_STONE.get());
+
+                        output.accept(ModBlocks.RIPARIUS_CRYSTAL.get());
+                        output.accept(ModBlocks.VINIFERA_CRYSTAL.get());
+                        output.accept(ModBlocks.CRUENTUS_CRYSTAL.get());
+                        output.accept(ModBlocks.ABOREUS_CRYSTAL.get());
+
+                    })
+                    .build());
+
+    public static final RegistryObject<CreativeModeTab> BUILDING_TAB = CREATIVE_MODE_TABS.register("crystal_technology_building_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.INFESTED_STONE_BRICKS.get()))
+                    .title(Component.translatable("creativetab.crystal_technology_building_tab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+
+                        output.accept(ModBlocks.INFESTED_STONE_BRICKS.get());
+                        output.accept(ModBlocks.INFESTED_STONE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.INFESTED_STONE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.BLACK_TIBERCRETE.get());
+                        output.accept(ModBlocks.BLACK_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.BLACK_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.BLUE_TIBERCRETE.get());
+                        output.accept(ModBlocks.BLUE_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.BLUE_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.BROWN_TIBERCRETE.get());
+                        output.accept(ModBlocks.BROWN_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.BROWN_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.CYAN_TIBERCRETE.get());
+                        output.accept(ModBlocks.CYAN_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.CYAN_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.GRAY_TIBERCRETE.get());
+                        output.accept(ModBlocks.GRAY_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.GRAY_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.GREEN_TIBERCRETE.get());
+                        output.accept(ModBlocks.GREEN_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.GREEN_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_TIBERCRETE.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_TIBERCRETE.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.LIME_TIBERCRETE.get());
+                        output.accept(ModBlocks.LIME_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.LIME_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.MAGENTA_TIBERCRETE.get());
+                        output.accept(ModBlocks.MAGENTA_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.MAGENTA_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.ORANGE_TIBERCRETE.get());
+                        output.accept(ModBlocks.ORANGE_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.ORANGE_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.PINK_TIBERCRETE.get());
+                        output.accept(ModBlocks.PINK_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.PINK_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.PURPLE_TIBERCRETE.get());
+                        output.accept(ModBlocks.PURPLE_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.PURPLE_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.RED_TIBERCRETE.get());
+                        output.accept(ModBlocks.RED_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.RED_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.WHITE_TIBERCRETE.get());
+                        output.accept(ModBlocks.WHITE_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.WHITE_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.YELLOW_TIBERCRETE.get());
+                        output.accept(ModBlocks.YELLOW_TIBERCRETE_STAIRS.get());
+                        output.accept(ModBlocks.YELLOW_TIBERCRETE_POWDER.get());
+                        output.accept(ModBlocks.CLEAR_TIBERGLASS.get());
+                        output.accept(ModBlocks.CLEAR_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.MOSAIC_TIBERGLASS.get());
+                        output.accept(ModBlocks.MOSAIC_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.GDI_TIBERGLASS.get());
+                        output.accept(ModBlocks.GDI_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.NOD_TIBERGLASS.get());
+                        output.accept(ModBlocks.NOD_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.WOLF_TIBERGLASS.get());
+                        output.accept(ModBlocks.WOLF_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.BLACK_TIBERGLASS.get());
+                        output.accept(ModBlocks.BLACK_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.BLUE_TIBERGLASS.get());
+                        output.accept(ModBlocks.BLUE_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.BROWN_TIBERGLASS.get());
+                        output.accept(ModBlocks.BROWN_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.CYAN_TIBERGLASS.get());
+                        output.accept(ModBlocks.CYAN_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.GRAY_TIBERGLASS.get());
+                        output.accept(ModBlocks.GRAY_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.GREEN_TIBERGLASS.get());
+                        output.accept(ModBlocks.GREEN_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_TIBERGLASS.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_TIBERGLASS.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.LIME_TIBERGLASS.get());
+                        output.accept(ModBlocks.LIME_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.MAGENTA_TIBERGLASS.get());
+                        output.accept(ModBlocks.MAGENTA_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.ORANGE_TIBERGLASS.get());
+                        output.accept(ModBlocks.ORANGE_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.PINK_TIBERGLASS.get());
+                        output.accept(ModBlocks.PINK_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.PURPLE_TIBERGLASS.get());
+                        output.accept(ModBlocks.PURPLE_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.RED_TIBERGLASS.get());
+                        output.accept(ModBlocks.RED_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.WHITE_TIBERGLASS.get());
+                        output.accept(ModBlocks.WHITE_TIBERGLASS_PANE.get());
+                        output.accept(ModBlocks.YELLOW_TIBERGLASS.get());
+                        output.accept(ModBlocks.YELLOW_TIBERGLASS_PANE.get());
+
+                    })
+                    .build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);

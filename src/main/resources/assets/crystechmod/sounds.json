@@ -42,5 +42,325 @@
         "stream": true
       }
     ]
+  },
+  "hyouhaku_wandering": {
+    "sounds": [
+      {
+        "name": "crystechmod:hyouhaku_wandering",
+        "stream": true
+      }
+    ]
+  },
+  "corroded_valves": {
+    "sounds": [
+      {
+        "name": "crystechmod:corroded_valves",
+        "stream": true
+      }
+    ]
+  },
+  "dark_machinations": {
+    "sounds": [
+      {
+        "name": "crystechmod:dark_machinations",
+        "stream": true
+      }
+    ]
+  },
+  "dark_valley": {
+    "sounds": [
+      {
+        "name": "crystechmod:dark_valley",
+        "stream": true
+      }
+    ]
+  },
+  "eagles_dawn": {
+    "sounds": [
+      {
+        "name": "crystechmod:eagles_dawn",
+        "stream": true
+      }
+    ]
+  },
+  "manufactory": {
+    "sounds": [
+      {
+        "name": "crystechmod:manufactory",
+        "stream": true
+      }
+    ]
+  },
+  "necrofunk": {
+    "sounds": [
+      {
+        "name": "crystechmod:necrofunk",
+        "stream": true
+      }
+    ]
+  },
+  "obsession_software": {
+    "sounds": [
+      {
+        "name": "crystechmod:obsession_software",
+        "stream": true
+      }
+    ]
+  },
+  "prodigal_son": {
+    "sounds": [
+      {
+        "name": "crystechmod:prodigal_son",
+        "stream": true
+      }
+    ]
+  },
+  "pyrotek": {
+    "sounds": [
+      {
+        "name": "crystechmod:pyrotek",
+        "stream": true
+      }
+    ]
+  },
+  "repentance": {
+    "sounds": [
+      {
+        "name": "crystechmod:repentance",
+        "stream": true
+      }
+    ]
+  },
+  "space_echo": {
+    "sounds": [
+      {
+        "name": "crystechmod:space_echo",
+        "stream": true
+      }
+    ]
+  },
+  "tombs": {
+    "sounds": [
+      {
+        "name": "crystechmod:tombs",
+        "stream": true
+      }
+    ]
+  },
+  "unyielding": {
+    "sounds": [
+      {
+        "name": "crystechmod:unyielding",
+        "stream": true
+      }
+    ]
+  },
+  "wires": {
+    "sounds": [
+      {
+        "name": "crystechmod:wires",
+        "stream": true
+      }
+    ]
+  },
+  "xenophile": {
+    "sounds": [
+      {
+        "name": "crystechmod:xenophile",
+        "stream": true
+      }
+    ]
+  },
+  "approach": {
+    "sounds": [
+      {
+        "name": "crystechmod:approach",
+        "stream": true
+      }
+    ]
+  },
+  "dusk_hour": {
+    "sounds": [
+      {
+        "name": "crystechmod:dusk_hour",
+        "stream": true
+      }
+    ]
+  },
+  "ts_dusk_hour": {
+    "sounds": [
+      {
+        "name": "crystechmod:ts_dusk_hour",
+        "stream": true
+      }
+    ]
+  },
+  "heroism": {
+    "sounds": [
+      {
+        "name": "crystechmod:heroism",
+        "stream": true
+      }
+    ]
+  },
+  "lone_trooper": {
+    "sounds": [
+      {
+        "name": "crystechmod:lone_trooper",
+        "stream": true
+      }
+    ]
+  },
+  "pharotek": {
+    "sounds": [
+      {
+        "name": "crystechmod:pharotek",
+        "stream": true
+      }
+    ]
+  },
+  "valves": {
+    "sounds": [
+      {
+        "name": "crystechmod:valves",
+        "stream": true
+      }
+    ]
+  },
+  "what_lurks": {
+    "sounds": [
+      {
+        "name": "crystechmod:what_lurks",
+        "stream": true
+      }
+    ]
+  },
+  "airstrike": {
+    "sounds": [
+      {
+        "name": "crystechmod:airstrike",
+        "stream": true
+      }
+    ]
+  },
+  "canyon_chase": {
+    "sounds": [
+      {
+        "name": "crystechmod:canyon_chase",
+        "stream": true
+      }
+    ]
+  },
+  "creeping_upon": {
+    "sounds": [
+      {
+        "name": "crystechmod:creeping_upon",
+        "stream": true
+      }
+    ]
+  },
+  "depth_charge": {
+    "sounds": [
+      {
+        "name": "crystechmod:depth_charge",
+        "stream": true
+      }
+    ]
+  },
+  "drone": {
+    "sounds": [
+      {
+        "name": "crystechmod:drone",
+        "stream": true
+      }
+    ]
+  },
+  "on_the_prowl": {
+    "sounds": [
+      {
+        "name": "crystechmod:on_the_prowl",
+        "stream": true
+      }
+    ]
+  },
+  "rain_in_the_night": {
+    "sounds": [
+      {
+        "name": "crystechmod:rain_in_the_night",
+        "stream": true
+      }
+    ]
+  },
+  "recon": {
+    "sounds": [
+      {
+        "name": "crystechmod:recon",
+        "stream": true
+      }
+    ]
+  },
+  "awaiting": {
+    "sounds": [
+      {
+        "name": "crystechmod:awaiting",
+        "stream": true
+      }
+    ]
+  },
+  "dense": {
+    "sounds": [
+      {
+        "name": "crystechmod:dense",
+        "stream": true
+      }
+    ]
+  },
+  "floating": {
+    "sounds": [
+      {
+        "name": "crystechmod:floating",
+        "stream": true
+      }
+    ]
+  },
+  "run": {
+    "sounds": [
+      {
+        "name": "crystechmod:run",
+        "stream": true
+      }
+    ]
+  },
+  "the_search": {
+    "sounds": [
+      {
+        "name": "crystechmod:the_search",
+        "stream": true
+      }
+    ]
+  },
+  "trenches": {
+    "sounds": [
+      {
+        "name": "crystechmod:trenches",
+        "stream": true
+      }
+    ]
+  },
+  "vector": {
+    "sounds": [
+      {
+        "name": "crystechmod:vector",
+        "stream": true
+      }
+    ]
+  },
+  "voice_rhythm_2": {
+    "sounds": [
+      {
+        "name": "crystechmod:voice_rhythm_2",
+        "stream": true
+      }
+    ]
   }
 }
