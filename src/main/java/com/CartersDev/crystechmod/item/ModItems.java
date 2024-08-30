@@ -4,10 +4,12 @@ import com.CartersDev.crystechmod.CrystalTech;
 
 
 import com.CartersDev.crystechmod.block.ModBlocks;
+import com.CartersDev.crystechmod.entity.ModEntities;
 import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.custom.Firestone;
 import com.CartersDev.crystechmod.sound.ModSounds;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -279,6 +281,15 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
                     new Item.Properties()));
 
     //End Armors
+
+
+    //Spawn Eggs
+    public static final RegistryObject<Item> RHINO_SPAWN_EGG = ITEMS.register("rhino_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.RHINO, 0x7e9680, 0xc5d1c5,
+                    new Item.Properties()));
+
+
+    //End of Spawn Eggs
 
 
     //Music Discs

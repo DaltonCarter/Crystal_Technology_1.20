@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-24T23:40:43.9646593	Item Models: crystechmod
+// 1.20.1	2024-08-29T17:54:49.038046	Item Models: crystechmod
 59af2f348d998b633663b4205f4a1565e13933c0 assets/crystechmod/models/item/aeries_crystal.json
 ff2259e71d719fdfaaf3587a33a8044b77022d43 assets/crystechmod/models/item/airstrike_music_disc.json
 e93e288155e12d75f29575ccb056b60bd51b7bea assets/crystechmod/models/item/alythum_axe.json
@@ -294,6 +294,7 @@ b457cb9a281c196512fd1dd430fdc93f9a46299c assets/crystechmod/models/item/raw_qual
 e6deb62921f070d312dd489194c431160c3843d3 assets/crystechmod/models/item/red_tibercrete_stairs.json
 632d156694a73ea517f0430e376d44f3550b8721 assets/crystechmod/models/item/red_tiberglass_pane.json
 3f9c706290034fe8247b1df828fb1b645280a94f assets/crystechmod/models/item/repentance_music_disc.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/crystechmod/models/item/rhino_spawn_egg.json
 000efca619abbfd27a44ddfdb713f627730c400d assets/crystechmod/models/item/run_music_disc.json
 8eb601f3269a4ef0d08e68d8a8e44755b95f5a04 assets/crystechmod/models/item/space_echo_music_disc.json
 b4faf6e3098816e73498ea2fce1af700abefc4ff assets/crystechmod/models/item/still_alone_music_disc.json

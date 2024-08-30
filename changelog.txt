@@ -290,6 +290,16 @@ While I own Legitimate copies of all the Command and Conquer Music used, It is s
 distributing it, nor do I have the rights to. All of this is intended for Private use in the end.
 
 
+-------------------------------------------------------------------------------
+
+8/29/2024
+Version 0.4.5
+Posted By: Dalton Carter
+
+-Added Custom Mob with Animations
+-Added NBT data for 5 crystal formations (All made by Che)
+
+
 
 ======================================================
 LEGACY 1.16.5 Changelog

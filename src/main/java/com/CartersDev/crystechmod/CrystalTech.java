@@ -3,6 +3,8 @@ package com.CartersDev.crystechmod;
 import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.effect.ModEffects;
 import com.CartersDev.crystechmod.enchantment.ModEnchantments;
+import com.CartersDev.crystechmod.entity.ModEntities;
+import com.CartersDev.crystechmod.entity.client.RhinoRenderer;
 import com.CartersDev.crystechmod.fluid.ModFluidTypes;
 import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModCreativeModTabs;
@@ -15,6 +17,7 @@ import com.CartersDev.crystechmod.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -61,6 +64,7 @@ public class CrystalTech {
         ModVillagers.register(modEventBus);
 
         ModSounds.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -104,6 +108,8 @@ public class CrystalTech {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+
+            EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
 
             //Tiberium
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_TIBERIUM_CROP.get(), RenderType.cutout());
