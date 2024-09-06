@@ -299,6 +299,15 @@ Posted By: Dalton Carter
 -Added Custom Mob with Animations
 -Added NBT data for 5 crystal formations (All made by Che)
 
+-------------------------------------------------------------------------------
+
+9/05/2024
+Version 0.4.5
+Posted By: Dalton Carter
+
+-Added Tiberium Grinder Block Entity, entity rendering for some eye candy, and Custom Recipe handling
+-Added JEI Compatibility
+-Added Recipes for all 4 Tiberium Dusts, and Flower Powders.
 
 
 ======================================================

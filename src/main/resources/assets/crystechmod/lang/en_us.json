@@ -171,6 +171,8 @@
   "item.crystechmod.vector_music_disc.desc": "Vector - by Frank Klepacki.",
   "item.crystechmod.voice_rhythm_2_music_disc": "Voice Rhythm 2 Music Disc",
   "item.crystechmod.voice_rhythm_2_music_disc.desc": "Voice Rhythm 2 - by Frank Klepacki.",
+  "item.crystechmod.devils_blood_powder": "Devil's Blood Powder",
+  "item.crystechmod.yokaran_bloom_powder": "Yokaran Bloom Powder",
 
 
   "block.crystechmod.aeries_ore": "Aeries Ore",
@@ -351,6 +353,8 @@
   "block.crystechmod.seeded_dirt": "Tiberium Seeded Dirt",
   "block.crystechmod.nod_crest_large": "Large Nod Crest",
 
+  "block.crystechmod.tiberium_grinder": "Tiberium Grinder",
+
 
   "enchantment.crystechmod.lightning_striker": "Lightning Striker",
 
@@ -370,6 +374,13 @@
   "sounds.crystechmod.sound_block_hit": "Sound Block Hit",
   "sounds.crystechmod.sound_block_place": "Sound Block Placed",
   "sounds.crystechmod.sound_block_step": "Sound Block Stepped On",
+
+  "fluid_type.crystechmod.tiberium_water_fluid": "Tiberium Plagued Water",
+  "fluid_type.crystechmod.molten_tiberium_fluid": "Molten Riparius Tiberium",
+  "fluid_type.crystechmod.molten_blue_tiberium_fluid": "Molten Vinifera Tiberium",
+  "fluid_type.crystechmod.molten_red_tiberium_fluid": "Molten Cruentus Tiberium",
+  "fluid_type.crystechmod.molten_purple_tiberium_fluid": "Molten Aboreus Tiberium",
+
 
 
   "creativetab.crystal_technology_tab": "Crystal Technology Ingredients",

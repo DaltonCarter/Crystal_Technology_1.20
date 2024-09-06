@@ -735,6 +735,13 @@ public class ModBlocks {
     //End of Tiberium
 
 
+    //Block Entities
+    public static final RegistryObject<Block> TIBERIUM_GRINDER = registerBlock("tiberium_grinder",
+            () -> new TiberiumGrinderBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    //End of Block Entities
+
+
     //Blossom Tree
     public static final RegistryObject<Block> BLOSSOM_SPOUT = registerBlock("blossom_spout",
             () -> new BlossomTreeSpoutBlock(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noLootTable()

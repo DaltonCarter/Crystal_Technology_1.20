@@ -1,6 +1,8 @@
 package com.CartersDev.crystechmod.event;
 
 import com.CartersDev.crystechmod.CrystalTech;
+import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
+import com.CartersDev.crystechmod.block.entity.renderer.TiberiumGrinderBlockEntityRenderer;
 import com.CartersDev.crystechmod.entity.client.ModModelLayers;
 import com.CartersDev.crystechmod.entity.client.RhinoModel;
 import net.minecraftforge.api.distmarker.Dist;
@@ -16,5 +18,9 @@ public class ModEventBusClientEvents {
         event.registerLayerDefinition(ModModelLayers.RHINO_LAYER, RhinoModel::createBodyLayer);
     }
 
+    @SubscribeEvent
+public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(ModBlockEntities.TIBERIUM_GRINDER_BE.get(), TiberiumGrinderBlockEntityRenderer::new);
+}
 
 }

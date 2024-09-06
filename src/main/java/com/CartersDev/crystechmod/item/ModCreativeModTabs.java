@@ -26,6 +26,8 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     output.accept(ModBlocks.NOD_CREST_LARGE.get());
                     output.accept(ModItems.RHINO_SPAWN_EGG.get());
 
+                    output.accept(ModBlocks.TIBERIUM_GRINDER.get());
+
                     output.accept(ModItems.PLAGUED_STICK.get());
 
                     output.accept(ModItems.YOKARAN_BLOOM_POWDER.get());

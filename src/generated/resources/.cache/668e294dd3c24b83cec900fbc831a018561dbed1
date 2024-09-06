@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-22T18:05:21.7232616	Block States: crystechmod
+// 1.20.1	2024-09-05T18:32:39.5062855	Block States: crystechmod
 b96cfdc734a704501413713f3f2c8cfcb4ba2a5c assets/crystechmod/blockstates/aboreus_crystal.json
 2bc3c855a08913269329ffaaf6ab3588f39fd679 assets/crystechmod/blockstates/aboreus_stone.json
 4eb0e66f6b57acdc95618edddf4b631706bf4ed4 assets/crystechmod/blockstates/aeries_block.json
@@ -152,6 +152,7 @@ d849766bb927d6021b8d16d5a16a04cda9356c15 assets/crystechmod/blockstates/sound_bl
 10417046a4ed5d86e8ba0621cf33f16223534311 assets/crystechmod/blockstates/strawberry_crop.json
 b239231357a085a06557a57665c9acd176b494c9 assets/crystechmod/blockstates/tiberium_block.json
 31409fdddc30700c2894f6ae08f5057915bb6517 assets/crystechmod/blockstates/tiberium_blue_block.json
+a6e6478f57671688c74ba4d29ddd7632432d5de5 assets/crystechmod/blockstates/tiberium_grinder.json
 a2671ad6735005995b649c94f251d79cf16dbdf7 assets/crystechmod/blockstates/tiberium_purple_block.json
 f2f19f35c76264b12f096bd513d6e85d4e9b17ee assets/crystechmod/blockstates/tiberium_red_block.json
 3547b738879cd9d9cc1c5101d1c8f958ce85e830 assets/crystechmod/blockstates/tiberium_soil.json
@@ -604,6 +605,7 @@ bb7d1c43a09aabb810358cc5cb24c875ccbb66ea assets/crystechmod/models/item/seeded_r
 8e499416ac5ae042cb467781b40cf49031d60d9a assets/crystechmod/models/item/sound_block.json
 36a9bf6fbbdce493c3c5150fbf5fa1b50f26c783 assets/crystechmod/models/item/tiberium_block.json
 3b9b6ff8e6d8ab1d6011298e1453fea912610509 assets/crystechmod/models/item/tiberium_blue_block.json
+d8fbc4a78c2e48bbe9d1b8751c8dac807995e223 assets/crystechmod/models/item/tiberium_grinder.json
 df2b48231060298b9565b1ee3b002859c32903a9 assets/crystechmod/models/item/tiberium_purple_block.json
 c42c85faa08e7d764668648b7feaaf92dc971f33 assets/crystechmod/models/item/tiberium_red_block.json
 57f45039ebfa2ad33586adb34bb7afcf403d2156 assets/crystechmod/models/item/tiberium_soil.json

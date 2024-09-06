@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -237,6 +238,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.POTTED_DEVILS_BLOOD.get(), models().singleTexture("potted_devils_blood",
                 new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.DEVILS_BLOOD.get())).renderType("cutout"));
+
+        simpleBlockWithItem(ModBlocks.TIBERIUM_GRINDER.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/tiberium_grinder")));
 
 
     }
