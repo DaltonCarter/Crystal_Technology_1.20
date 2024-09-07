@@ -266,6 +266,16 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.PLAGUED_DOOR.get());
                         output.accept(ModBlocks.PLAGUED_TRAPDOOR.get());
 
+                        output.accept(ModBlocks.EMBER_OAK_PLANKS.get());
+                        output.accept(ModBlocks.EMBER_OAK_STAIRS.get());
+                        output.accept(ModBlocks.EMBER_OAK_SLAB.get());
+                        output.accept(ModBlocks.EMBER_OAK_BUTTON.get());
+                        output.accept(ModBlocks.EMBER_OAK_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.EMBER_OAK_FENCE.get());
+                        output.accept(ModBlocks.EMBER_OAK_FENCE_GATE.get());
+                        output.accept(ModBlocks.EMBER_OAK_DOOR.get());
+                        output.accept(ModBlocks.EMBER_OAK_TRAPDOOR.get());
+
                         output.accept(ModBlocks.INFESTED_ANDESITE.get());
                         output.accept(ModBlocks.INFESTED_COBBLE.get());
                         output.accept(ModBlocks.INFESTED_COBBLE_SLAB.get());

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "crystechmod:block/ember_oak_planks"
+  }
+}

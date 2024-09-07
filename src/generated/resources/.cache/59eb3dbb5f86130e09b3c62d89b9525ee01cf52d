@@ -1,4 +1,4 @@
-// 1.20.1	2024-09-05T18:32:39.5128207	Loot Tables
+// 1.20.1	2024-09-07T02:25:47.2888459	Loot Tables
 03c6f95925fa38635ca3601903e1d452029caabd data/crystechmod/loot_tables/blocks/aboreus_crystal.json
 54cc8c095a6e7af070b865de543f3a1891b49055 data/crystechmod/loot_tables/blocks/aboreus_stone.json
 c1005c86f610c3ea139857f0d980e40086fc3cac data/crystechmod/loot_tables/blocks/aeries_block.json
@@ -39,6 +39,15 @@ faf5522ed06b81d61c307ea1783dd87be3a970f5 data/crystechmod/loot_tables/blocks/dee
 1dd611fa4ae2abe7e6db36d1b2bbe5576d0d1198 data/crystechmod/loot_tables/blocks/deepslate_kryon_ore.json
 cc1013da1a6d53790ab50bfcbf15d82da3da782f data/crystechmod/loot_tables/blocks/deepslate_qualrite_ore.json
 8868efb4c0a225b2119e528a66e245b5146b58e2 data/crystechmod/loot_tables/blocks/devils_blood.json
+670f3aea73863f3220a1ec658eb48d1274992abf data/crystechmod/loot_tables/blocks/ember_oak_button.json
+87d51e68e74736a362c11e1006f52036681fded8 data/crystechmod/loot_tables/blocks/ember_oak_door.json
+77be11ddfda22701a3be9caceee266eeb3cce84f data/crystechmod/loot_tables/blocks/ember_oak_fence.json
+8c220cd18a94404d7822b7dc84859e603bd7e152 data/crystechmod/loot_tables/blocks/ember_oak_fence_gate.json
+7f43b15c668e63e2598e856d74c292b3c5a40234 data/crystechmod/loot_tables/blocks/ember_oak_planks.json
+6094c49b752b8c5e09a052e3feee8aa065f748e6 data/crystechmod/loot_tables/blocks/ember_oak_pressure_plate.json
+30863798ccb0e3f5e9c982287cf135bb581561ac data/crystechmod/loot_tables/blocks/ember_oak_slab.json
+0367584a5c4df17213d69b471cf58acdfe75d696 data/crystechmod/loot_tables/blocks/ember_oak_stairs.json
+ed82d65c2640ab69477b0ade8f9ce0d5f9da675e data/crystechmod/loot_tables/blocks/ember_oak_trapdoor.json
 c213958ef7b97d94284d68e579fa72a8d0afc463 data/crystechmod/loot_tables/blocks/end_enigma_ore.json
 fe40955866758088beb706cfb03dafe0d08725fd data/crystechmod/loot_tables/blocks/end_kryon_ore.json
 d42ef6e641937507087972e61825b4e6a85bcc07 data/crystechmod/loot_tables/blocks/enigma_block.json

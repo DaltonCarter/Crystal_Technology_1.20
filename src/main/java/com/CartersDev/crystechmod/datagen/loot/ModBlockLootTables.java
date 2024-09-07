@@ -183,6 +183,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PLAGUED_TRAPDOOR.get());
         this.dropSelf(ModBlocks.PLAGUED_FENCE_GATE.get());
         this.dropSelf(ModBlocks.FIRESTONE_WALL.get());
+        this.dropSelf(ModBlocks.EMBER_OAK_STAIRS.get());
+        this.dropSelf(ModBlocks.EMBER_OAK_PLANKS.get());
+        this.dropSelf(ModBlocks.EMBER_OAK_FENCE.get());
+        this.dropSelf(ModBlocks.EMBER_OAK_BUTTON.get());
+        this.dropSelf(ModBlocks.EMBER_OAK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.EMBER_OAK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.EMBER_OAK_FENCE_GATE.get());
+
 
         this.dropSelf(ModBlocks.INFESTED_STONE_BRICK_STAIRS.get());
         this.dropSelf(ModBlocks.INFESTED_COBBLE_STAIRS.get());
@@ -206,6 +214,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.PLAGUED_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.PLAGUED_SLAB.get()));
 
+        this.add(ModBlocks.EMBER_OAK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.EMBER_OAK_SLAB.get()));
+
         this.add(ModBlocks.INFESTED_STONE_BRICK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.INFESTED_STONE_BRICK_SLAB.get()));
 
@@ -214,6 +225,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.PLAGUED_DOOR.get(),
                 block -> createDoorTable(ModBlocks.PLAGUED_DOOR.get()));
+
+        this.add(ModBlocks.EMBER_OAK_DOOR.get(),
+                block -> createDoorTable(ModBlocks.EMBER_OAK_DOOR.get()));
 
         //End of Complex Self Drops
 

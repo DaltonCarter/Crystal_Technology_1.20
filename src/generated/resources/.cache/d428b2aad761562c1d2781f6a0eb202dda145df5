@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-29T17:54:49.038046	Item Models: crystechmod
+// 1.20.1	2024-09-07T02:43:01.6784048	Item Models: crystechmod
 59af2f348d998b633663b4205f4a1565e13933c0 assets/crystechmod/models/item/aeries_crystal.json
 ff2259e71d719fdfaaf3587a33a8044b77022d43 assets/crystechmod/models/item/airstrike_music_disc.json
 e93e288155e12d75f29575ccb056b60bd51b7bea assets/crystechmod/models/item/alythum_axe.json
@@ -77,6 +77,14 @@ afc04dd8345c21e982ba013ba68c212ceb584613 assets/crystechmod/models/item/dark_val
 c22396a14d3151771616bb31735f5a21a22064fb assets/crystechmod/models/item/drone_music_disc.json
 9ec1a14ab0e86439d697255ddd24cf05638ccacb assets/crystechmod/models/item/dusk_hour_music_disc.json
 0528948416928badc0cced0a1304f5c187459437 assets/crystechmod/models/item/eagles_dawn_music_disc.json
+b32056192cf79339a6cb3944447de934ca9bba74 assets/crystechmod/models/item/ember_oak_button.json
+7937784e5579942ba0138b123001c002c134bc08 assets/crystechmod/models/item/ember_oak_door.json
+72d4cfac506bf98f39f5fdb8957ac22fc1200e38 assets/crystechmod/models/item/ember_oak_fence.json
+6cbbf6af460a9b8ac20a01df0c8bc7abd910d19a assets/crystechmod/models/item/ember_oak_fence_gate.json
+bceae539ec428c31c908506bf78d067b408a4ad9 assets/crystechmod/models/item/ember_oak_pressure_plate.json
+da0c3e24e537e4de698cbb49754ef4f0b2ac4c4e assets/crystechmod/models/item/ember_oak_slab.json
+4d03b922f85b884dd08aa97274607d31c61a6a14 assets/crystechmod/models/item/ember_oak_stairs.json
+db2728f1cde624f7b1bc9d359d52e11507c179b4 assets/crystechmod/models/item/ember_oak_trapdoor.json
 a8c7c15e83426f6890c67a3c19af6b0ed4471f00 assets/crystechmod/models/item/enigma_crystal.json
 03b9a675cf9bfd6655ef33a571eef5ab9c6e8599 assets/crystechmod/models/item/firestone.json
 87ef185c96cd4543c0a7f5912bef0cfa5c5a19d0 assets/crystechmod/models/item/firestone_wall.json

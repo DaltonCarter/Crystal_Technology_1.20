@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "crystechmod:block/ember_oak_planks"
+  }
+}

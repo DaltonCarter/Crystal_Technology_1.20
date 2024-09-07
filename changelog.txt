@@ -311,9 +311,11 @@ Posted By: Dalton Carter
 
 -------------------------------------------------------------------------------
 
-9/06/2024
-Version 0.4.5
+9/06/2024 - 9/07/2024
+Version 0.4.6
 Posted By: Dalton Carter
+
+-Updated to Version 0.4.6
 
 -Texture overhaul for: Seeded Dirt, Yellow Zone Cracked Dirt, and Red Zone Dirt in order to show infection stage and
 provide a smoother transition to full custom block textures.
@@ -321,7 +323,11 @@ provide a smoother transition to full custom block textures.
 -Texture overhaul for Yellow zone sand, and red zone sand so that they blend in with vanilla sands, while also blending
 in with other blocks of their Biome type
 
+-Texture overhaul for Plagued Door and Plagued Trapdoor
+
 -Texture overhaul for all 4 Tiberium Crops.
+
+-Added Ember Oak Planks, Slabs, Stairs, Fence, Gate, Door, Trapdoor, Button, & Pressure plate.
 
 ======================================================
 LEGACY 1.16.5 Changelog

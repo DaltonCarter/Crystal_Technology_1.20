@@ -236,7 +236,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.PLAGUED_FENCE.get(),
                         ModBlocks.PLAGUED_FENCE_GATE.get(),
                         ModBlocks.PLAGUED_STAIRS.get(),
-                        ModBlocks.PLAGUED_SLAB.get()
+                        ModBlocks.PLAGUED_SLAB.get(),
+                        ModBlocks.EMBER_OAK_TRAPDOOR.get(),
+                        ModBlocks.EMBER_OAK_PLANKS.get(),
+                        ModBlocks.EMBER_OAK_BUTTON.get(),
+                        ModBlocks.EMBER_OAK_DOOR.get(),
+                        ModBlocks.EMBER_OAK_PRESSURE_PLATE.get(),
+                        ModBlocks.EMBER_OAK_FENCE.get(),
+                        ModBlocks.EMBER_OAK_FENCE_GATE.get(),
+                        ModBlocks.EMBER_OAK_STAIRS.get(),
+                        ModBlocks.EMBER_OAK_SLAB.get()
 
                 );
 
@@ -292,7 +301,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.PLAGUED_FENCE.get(),
                         ModBlocks.PLAGUED_FENCE_GATE.get(),
                         ModBlocks.PLAGUED_STAIRS.get(),
-                        ModBlocks.PLAGUED_SLAB.get()
+                        ModBlocks.PLAGUED_SLAB.get(),
+                        ModBlocks.EMBER_OAK_TRAPDOOR.get(),
+                        ModBlocks.EMBER_OAK_PLANKS.get(),
+                        ModBlocks.EMBER_OAK_BUTTON.get(),
+                        ModBlocks.EMBER_OAK_DOOR.get(),
+                        ModBlocks.EMBER_OAK_PRESSURE_PLATE.get(),
+                        ModBlocks.EMBER_OAK_FENCE.get(),
+                        ModBlocks.EMBER_OAK_FENCE_GATE.get(),
+                        ModBlocks.EMBER_OAK_STAIRS.get(),
+                        ModBlocks.EMBER_OAK_SLAB.get()
                 );
 
         this.tag(ModTags.Blocks.NEEDS_PLAGUED_TOOL)
@@ -433,16 +451,40 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 );
 
         this.tag(BlockTags.FENCES)
-                .add(ModBlocks.PLAGUED_FENCE.get()
+                .add(ModBlocks.PLAGUED_FENCE.get(),
+                        ModBlocks.EMBER_OAK_FENCE.get()
                 );
 
         this.tag(BlockTags.FENCE_GATES)
-                .add(ModBlocks.PLAGUED_FENCE_GATE.get()
+                .add(ModBlocks.PLAGUED_FENCE_GATE.get(),
+                        ModBlocks.EMBER_OAK_FENCE_GATE.get()
                 );
 
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.FIRESTONE_WALL.get()
                 );
+
+        this.tag(BlockTags.WOODEN_DOORS)
+                .add(ModBlocks.PLAGUED_DOOR.get(),
+                        ModBlocks.EMBER_OAK_DOOR.get()
+                );
+
+        this.tag(BlockTags.WOODEN_TRAPDOORS)
+                .add(ModBlocks.PLAGUED_TRAPDOOR.get(),
+                        ModBlocks.EMBER_OAK_TRAPDOOR.get()
+                );
+
+        this.tag(BlockTags.WOODEN_BUTTONS)
+                .add(ModBlocks.PLAGUED_BUTTON.get(),
+                        ModBlocks.EMBER_OAK_BUTTON.get()
+                );
+
+        this.tag(BlockTags.WOODEN_PRESSURE_PLATES)
+                .add(ModBlocks.PLAGUED_PRESSURE_PLATE.get(),
+                        ModBlocks.EMBER_OAK_PRESSURE_PLATE.get()
+                );
+
+
 
     }
 }

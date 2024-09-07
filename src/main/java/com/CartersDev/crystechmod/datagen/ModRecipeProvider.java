@@ -636,6 +636,73 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.STICK, 4)
+                .pattern("   ")
+                .pattern("  E")
+                .pattern("  E")
+                .define('E', ModBlocks.EMBER_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.EMBER_OAK_PLANKS.get()), has(ModBlocks.EMBER_OAK_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EMBER_OAK_STAIRS.get(), 4)
+                .pattern("E  ")
+                .pattern("EE ")
+                .pattern("EEE")
+                .define('E', ModBlocks.EMBER_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.EMBER_OAK_PLANKS.get()), has(ModBlocks.EMBER_OAK_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EMBER_OAK_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("EEE")
+                .define('E', ModBlocks.EMBER_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.EMBER_OAK_PLANKS.get()), has(ModBlocks.EMBER_OAK_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EMBER_OAK_PRESSURE_PLATE.get(), 1)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern(" EE")
+                .define('E', ModBlocks.EMBER_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.EMBER_OAK_PLANKS.get()), has(ModBlocks.EMBER_OAK_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EMBER_OAK_TRAPDOOR.get(), 2)
+                .pattern("   ")
+                .pattern("EEE")
+                .pattern("EEE")
+                .define('E', ModBlocks.EMBER_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.EMBER_OAK_PLANKS.get()), has(ModBlocks.EMBER_OAK_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EMBER_OAK_DOOR.get(), 3)
+                .pattern(" EE")
+                .pattern(" EE")
+                .pattern(" EE")
+                .define('E', ModBlocks.EMBER_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.EMBER_OAK_PLANKS.get()), has(ModBlocks.EMBER_OAK_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EMBER_OAK_FENCE.get(), 3)
+                .pattern("   ")
+                .pattern("ESE")
+                .pattern("ESE")
+                .define('E', ModBlocks.EMBER_OAK_PLANKS.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EMBER_OAK_FENCE_GATE.get(), 1)
+                .pattern("   ")
+                .pattern("SES")
+                .pattern("SES")
+                .define('E', ModBlocks.EMBER_OAK_PLANKS.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.EMBER_OAK_PLANKS.get()), has(ModBlocks.EMBER_OAK_PLANKS.get()))
+                .save(consumer);
+
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FIRESTONE_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("FFF")

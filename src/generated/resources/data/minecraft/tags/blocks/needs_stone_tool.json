@@ -51,6 +51,15 @@
     "crystechmod:plagued_fence",
     "crystechmod:plagued_fence_gate",
     "crystechmod:plagued_stairs",
-    "crystechmod:plagued_slab"
+    "crystechmod:plagued_slab",
+    "crystechmod:ember_oak_trapdoor",
+    "crystechmod:ember_oak_planks",
+    "crystechmod:ember_oak_button",
+    "crystechmod:ember_oak_door",
+    "crystechmod:ember_oak_pressure_plate",
+    "crystechmod:ember_oak_fence",
+    "crystechmod:ember_oak_fence_gate",
+    "crystechmod:ember_oak_stairs",
+    "crystechmod:ember_oak_slab"
   ]
 }

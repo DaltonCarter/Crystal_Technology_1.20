@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/ember_oak_slab"
+    },
+    "type=double": {
+      "model": "crystechmod:block/ember_oak_planks"
+    },
+    "type=top": {
+      "model": "crystechmod:block/ember_oak_slab_top"
+    }
+  }
+}

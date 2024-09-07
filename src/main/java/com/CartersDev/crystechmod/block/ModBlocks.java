@@ -437,6 +437,7 @@ public class ModBlocks {
             () -> new StairBlock(() -> ModBlocks.YELLOW_TIBERCRETE.get().defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.YELLOW_CONCRETE)));
 
+
     public static final RegistryObject<Block> INFESTED_COBBLE_STAIRS = registerBlock("infested_cobble_stairs",
             () -> new StairBlock(() -> ModBlocks.INFESTED_COBBLE.get().defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_STAIRS)));
@@ -489,6 +490,39 @@ public class ModBlocks {
                     BlockSetType.OAK));
 
     public static final RegistryObject<Block> PLAGUED_TRAPDOOR = registerBlock("plagued_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(),
+                    BlockSetType.OAK));
+
+    public static final RegistryObject<Block> EMBER_OAK_PLANKS = registerBlock("ember_oak_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> EMBER_OAK_STAIRS = registerBlock("ember_oak_stairs",
+            () -> new StairBlock(() -> ModBlocks.EMBER_OAK_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> EMBER_OAK_SLAB = registerBlock("ember_oak_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> EMBER_OAK_BUTTON = registerBlock("ember_oak_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON),
+                    BlockSetType.OAK, 20, true));
+
+    public static final RegistryObject<Block> EMBER_OAK_PRESSURE_PLATE = registerBlock("ember_oak_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour
+                    .Properties.copy(Blocks.OAK_PLANKS), BlockSetType.OAK));
+
+    public static final RegistryObject<Block> EMBER_OAK_FENCE = registerBlock("ember_oak_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> EMBER_OAK_FENCE_GATE = registerBlock("ember_oak_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS),
+                    SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+
+    public static final RegistryObject<Block> EMBER_OAK_DOOR = registerBlock("ember_oak_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(),
+                    BlockSetType.OAK));
+
+    public static final RegistryObject<Block> EMBER_OAK_TRAPDOOR = registerBlock("ember_oak_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(),
                     BlockSetType.OAK));
 

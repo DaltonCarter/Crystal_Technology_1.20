@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "crystechmod:ember_oak_planks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "   ",
+    "EEE"
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:ember_oak_slab"
+  },
+  "show_notification": true
+}
