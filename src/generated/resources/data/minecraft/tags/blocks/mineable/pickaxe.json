@@ -131,6 +131,24 @@
     "crystechmod:green_tiberium_crop",
     "crystechmod:blue_tiberium_crop",
     "crystechmod:red_tiberium_crop",
-    "crystechmod:purple_tiberium_crop"
+    "crystechmod:purple_tiberium_crop",
+    "crystechmod:infested_stone_brick_wall",
+    "crystechmod:infested_cobble_wall",
+    "crystechmod:black_tibercrete_slab",
+    "crystechmod:blue_tibercrete_slab",
+    "crystechmod:brown_tibercrete_slab",
+    "crystechmod:cyan_tibercrete_slab",
+    "crystechmod:gray_tibercrete_slab",
+    "crystechmod:green_tibercrete_slab",
+    "crystechmod:light_blue_tibercrete_slab",
+    "crystechmod:light_gray_tibercrete_slab",
+    "crystechmod:lime_tibercrete_slab",
+    "crystechmod:magenta_tibercrete_slab",
+    "crystechmod:orange_tibercrete_slab",
+    "crystechmod:pink_tibercrete_slab",
+    "crystechmod:purple_tibercrete_slab",
+    "crystechmod:red_tibercrete_slab",
+    "crystechmod:white_tibercrete_slab",
+    "crystechmod:yellow_tibercrete_slab"
   ]
 }

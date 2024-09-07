@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:white_tibercrete_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white_tibercrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:white_tibercrete"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_white_tibercrete",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:white_tibercrete_slab"
+    ]
+  },
+  "sends_telemetry_event": false
+}

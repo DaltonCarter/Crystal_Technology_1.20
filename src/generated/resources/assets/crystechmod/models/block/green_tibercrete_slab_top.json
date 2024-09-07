@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "crystechmod:block/green_tibercrete",
+    "side": "crystechmod:block/green_tibercrete",
+    "top": "crystechmod:block/green_tibercrete"
+  }
+}

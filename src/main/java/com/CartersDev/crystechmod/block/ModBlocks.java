@@ -455,6 +455,61 @@ public class ModBlocks {
     public static final RegistryObject<Block> FIRESTONE_WALL = registerBlock("firestone_wall",
             () -> new FirestoneWallBlock(BlockBehaviour.Properties.copy(ModBlocks.FIRESTONE_BLOCK.get())));
 
+    public static final RegistryObject<Block> INFESTED_COBBLE_WALL = registerBlock("infested_cobble_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(ModBlocks.INFESTED_COBBLE.get())));
+
+    public static final RegistryObject<Block> INFESTED_STONE_BRICK_WALL = registerBlock("infested_stone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(ModBlocks.INFESTED_STONE_BRICKS.get())));
+
+    public static final RegistryObject<Block> BLACK_TIBERCRETE_SLAB = registerBlock("black_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> BLUE_TIBERCRETE_SLAB = registerBlock("blue_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> BROWN_TIBERCRETE_SLAB = registerBlock("brown_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> CYAN_TIBERCRETE_SLAB = registerBlock("cyan_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> GRAY_TIBERCRETE_SLAB = registerBlock("gray_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> GREEN_TIBERCRETE_SLAB = registerBlock("green_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_TIBERCRETE_SLAB = registerBlock("light_blue_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_TIBERCRETE_SLAB = registerBlock("light_gray_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> LIME_TIBERCRETE_SLAB = registerBlock("lime_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> MAGENTA_TIBERCRETE_SLAB = registerBlock("magenta_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> ORANGE_TIBERCRETE_SLAB = registerBlock("orange_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> PINK_TIBERCRETE_SLAB = registerBlock("pink_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> PURPLE_TIBERCRETE_SLAB = registerBlock("purple_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> RED_TIBERCRETE_SLAB = registerBlock("red_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> WHITE_TIBERCRETE_SLAB = registerBlock("white_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> YELLOW_TIBERCRETE_SLAB = registerBlock("yellow_tibercrete_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+
     //End of Deco Blocks
 
 

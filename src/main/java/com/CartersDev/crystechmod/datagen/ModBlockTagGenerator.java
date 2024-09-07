@@ -195,7 +195,25 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.GREEN_TIBERIUM_CROP.get(),
                 ModBlocks.BLUE_TIBERIUM_CROP.get(),
                 ModBlocks.RED_TIBERIUM_CROP.get(),
-                ModBlocks.PURPLE_TIBERIUM_CROP.get()
+                ModBlocks.PURPLE_TIBERIUM_CROP.get(),
+                        ModBlocks.INFESTED_STONE_BRICK_WALL.get(),
+                        ModBlocks.INFESTED_COBBLE_WALL.get(),
+                        ModBlocks.BLACK_TIBERCRETE_SLAB.get(),
+                        ModBlocks.BLUE_TIBERCRETE_SLAB.get(),
+                        ModBlocks.BROWN_TIBERCRETE_SLAB.get(),
+                        ModBlocks.CYAN_TIBERCRETE_SLAB.get(),
+                        ModBlocks.GRAY_TIBERCRETE_SLAB.get(),
+                        ModBlocks.GREEN_TIBERCRETE_SLAB.get(),
+                        ModBlocks.LIGHT_BLUE_TIBERCRETE_SLAB.get(),
+                        ModBlocks.LIGHT_GRAY_TIBERCRETE_SLAB.get(),
+                        ModBlocks.LIME_TIBERCRETE_SLAB.get(),
+                        ModBlocks.MAGENTA_TIBERCRETE_SLAB.get(),
+                        ModBlocks.ORANGE_TIBERCRETE_SLAB.get(),
+                        ModBlocks.PINK_TIBERCRETE_SLAB.get(),
+                        ModBlocks.PURPLE_TIBERCRETE_SLAB.get(),
+                        ModBlocks.RED_TIBERCRETE_SLAB.get(),
+                        ModBlocks.WHITE_TIBERCRETE_SLAB.get(),
+                        ModBlocks.YELLOW_TIBERCRETE_SLAB.get()
 
                 );
 
@@ -371,7 +389,25 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.PURPLE_TIBERCRETE_STAIRS.get(),
                         ModBlocks.RED_TIBERCRETE_STAIRS.get(),
                         ModBlocks.WHITE_TIBERCRETE_STAIRS.get(),
-                        ModBlocks.YELLOW_TIBERCRETE_STAIRS.get()
+                        ModBlocks.YELLOW_TIBERCRETE_STAIRS.get(),
+                        ModBlocks.INFESTED_STONE_BRICK_WALL.get(),
+                        ModBlocks.INFESTED_COBBLE_WALL.get(),
+                        ModBlocks.BLACK_TIBERCRETE_SLAB.get(),
+                        ModBlocks.BLUE_TIBERCRETE_SLAB.get(),
+                        ModBlocks.BROWN_TIBERCRETE_SLAB.get(),
+                        ModBlocks.CYAN_TIBERCRETE_SLAB.get(),
+                        ModBlocks.GRAY_TIBERCRETE_SLAB.get(),
+                        ModBlocks.GREEN_TIBERCRETE_SLAB.get(),
+                        ModBlocks.LIGHT_BLUE_TIBERCRETE_SLAB.get(),
+                        ModBlocks.LIGHT_GRAY_TIBERCRETE_SLAB.get(),
+                        ModBlocks.LIME_TIBERCRETE_SLAB.get(),
+                        ModBlocks.MAGENTA_TIBERCRETE_SLAB.get(),
+                        ModBlocks.ORANGE_TIBERCRETE_SLAB.get(),
+                        ModBlocks.PINK_TIBERCRETE_SLAB.get(),
+                        ModBlocks.PURPLE_TIBERCRETE_SLAB.get(),
+                        ModBlocks.RED_TIBERCRETE_SLAB.get(),
+                        ModBlocks.WHITE_TIBERCRETE_SLAB.get(),
+                        ModBlocks.YELLOW_TIBERCRETE_SLAB.get()
                 );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
@@ -461,7 +497,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 );
 
         this.tag(BlockTags.WALLS)
-                .add(ModBlocks.FIRESTONE_WALL.get()
+                .add(ModBlocks.FIRESTONE_WALL.get(),
+                        ModBlocks.INFESTED_STONE_BRICK_WALL.get(),
+                        ModBlocks.INFESTED_COBBLE_WALL.get()
                 );
 
         this.tag(BlockTags.WOODEN_DOORS)

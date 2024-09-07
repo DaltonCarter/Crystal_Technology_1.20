@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "crystechmod:infested_stone_bricks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "III",
+    "III"
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:infested_stone_brick_wall"
+  },
+  "show_notification": true
+}

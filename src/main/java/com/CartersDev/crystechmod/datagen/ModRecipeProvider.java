@@ -711,6 +711,22 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModBlocks.FIRESTONE_BLOCK.get()), has(ModBlocks.FIRESTONE_BLOCK.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.INFESTED_COBBLE_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("III")
+                .pattern("III")
+                .define('I', ModBlocks.INFESTED_COBBLE.get())
+                .unlockedBy(getHasName(ModBlocks.INFESTED_COBBLE.get()), has(ModBlocks.INFESTED_COBBLE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.INFESTED_STONE_BRICK_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("III")
+                .pattern("III")
+                .define('I', ModBlocks.INFESTED_STONE_BRICKS.get())
+                .unlockedBy(getHasName(ModBlocks.INFESTED_STONE_BRICKS.get()), has(ModBlocks.INFESTED_STONE_BRICKS.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_TIBERCRETE_STAIRS.get(), 4)
                 .pattern("T  ")
                 .pattern("TT ")
@@ -832,8 +848,136 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_TIBERCRETE_STAIRS.get(), 4)
-                .pattern("T  ")
+                .pattern("   ")
                 .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.YELLOW_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.YELLOW_TIBERCRETE.get()), has(ModBlocks.YELLOW_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.BLACK_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.BLACK_TIBERCRETE.get()), has(ModBlocks.BLACK_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.BLUE_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.BLUE_TIBERCRETE.get()), has(ModBlocks.BLUE_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.BROWN_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.BROWN_TIBERCRETE.get()), has(ModBlocks.BROWN_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.CYAN_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.CYAN_TIBERCRETE.get()), has(ModBlocks.CYAN_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.GRAY_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.GRAY_TIBERCRETE.get()), has(ModBlocks.GRAY_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.GREEN_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.GREEN_TIBERCRETE.get()), has(ModBlocks.GREEN_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.LIGHT_BLUE_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.LIGHT_BLUE_TIBERCRETE.get()), has(ModBlocks.LIGHT_BLUE_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.LIGHT_GRAY_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.LIGHT_GRAY_TIBERCRETE.get()), has(ModBlocks.LIGHT_GRAY_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.LIME_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.LIME_TIBERCRETE.get()), has(ModBlocks.LIME_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.MAGENTA_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.MAGENTA_TIBERCRETE.get()), has(ModBlocks.MAGENTA_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.ORANGE_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.ORANGE_TIBERCRETE.get()), has(ModBlocks.ORANGE_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.PINK_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.PINK_TIBERCRETE.get()), has(ModBlocks.PINK_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.PURPLE_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.PURPLE_TIBERCRETE.get()), has(ModBlocks.PURPLE_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.RED_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.RED_TIBERCRETE.get()), has(ModBlocks.RED_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.WHITE_TIBERCRETE.get())
+                .unlockedBy(getHasName(ModBlocks.WHITE_TIBERCRETE.get()), has(ModBlocks.WHITE_TIBERCRETE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_TIBERCRETE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
                 .pattern("TTT")
                 .define('T', ModBlocks.YELLOW_TIBERCRETE.get())
                 .unlockedBy(getHasName(ModBlocks.YELLOW_TIBERCRETE.get()), has(ModBlocks.YELLOW_TIBERCRETE.get()))
@@ -1425,6 +1569,14 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INFESTED_STONE_BRICK_STAIRS.get(), ModBlocks.INFESTED_COBBLE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INFESTED_STONE_BRICK_STAIRS.get(), ModBlocks.INFESTED_STONE_BRICKS.get());
 
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INFESTED_STONE_BRICK_WALL.get(), ModBlocks.INFESTED_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INFESTED_STONE_BRICK_WALL.get(), ModBlocks.INFESTED_COBBLE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INFESTED_STONE_BRICK_WALL.get(), ModBlocks.INFESTED_STONE_BRICKS.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INFESTED_COBBLE_WALL.get(), ModBlocks.INFESTED_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INFESTED_COBBLE_WALL.get(), ModBlocks.INFESTED_COBBLE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INFESTED_COBBLE_WALL.get(), ModBlocks.INFESTED_STONE_BRICKS.get());
+
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.BLACK_TIBERCRETE_STAIRS.get(), ModBlocks.BLACK_TIBERCRETE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.BLUE_TIBERCRETE_STAIRS.get(), ModBlocks.BLUE_TIBERCRETE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.BROWN_TIBERCRETE_STAIRS.get(), ModBlocks.BROWN_TIBERCRETE.get());
@@ -1441,6 +1593,23 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RED_TIBERCRETE_STAIRS.get(), ModBlocks.RED_TIBERCRETE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.WHITE_TIBERCRETE_STAIRS.get(), ModBlocks.WHITE_TIBERCRETE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YELLOW_TIBERCRETE_STAIRS.get(), ModBlocks.YELLOW_TIBERCRETE.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.BLACK_TIBERCRETE_SLAB.get(), ModBlocks.BLACK_TIBERCRETE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.BLUE_TIBERCRETE_SLAB.get(), ModBlocks.BLUE_TIBERCRETE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.BROWN_TIBERCRETE_SLAB.get(), ModBlocks.BROWN_TIBERCRETE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CYAN_TIBERCRETE_SLAB.get(), ModBlocks.CYAN_TIBERCRETE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.GRAY_TIBERCRETE_SLAB.get(), ModBlocks.GRAY_TIBERCRETE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.GREEN_TIBERCRETE_SLAB.get(), ModBlocks.GREEN_TIBERCRETE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_TIBERCRETE_SLAB.get(), ModBlocks.LIGHT_BLUE_TIBERCRETE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_TIBERCRETE_SLAB.get(), ModBlocks.LIGHT_GRAY_TIBERCRETE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LIME_TIBERCRETE_SLAB.get(), ModBlocks.LIME_TIBERCRETE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.MAGENTA_TIBERCRETE_SLAB.get(), ModBlocks.MAGENTA_TIBERCRETE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ORANGE_TIBERCRETE_SLAB.get(), ModBlocks.ORANGE_TIBERCRETE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PINK_TIBERCRETE_SLAB.get(), ModBlocks.PINK_TIBERCRETE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PURPLE_TIBERCRETE_SLAB.get(), ModBlocks.PURPLE_TIBERCRETE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RED_TIBERCRETE_SLAB.get(), ModBlocks.RED_TIBERCRETE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.WHITE_TIBERCRETE_SLAB.get(), ModBlocks.WHITE_TIBERCRETE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YELLOW_TIBERCRETE_SLAB.get(), ModBlocks.YELLOW_TIBERCRETE.get(), 2);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients,

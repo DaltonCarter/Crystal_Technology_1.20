@@ -206,6 +206,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
        slabBlock((SlabBlock) ModBlocks.INFESTED_STONE_BRICK_SLAB.get(), blockTexture(ModBlocks.INFESTED_STONE_BRICKS.get()), blockTexture(ModBlocks.INFESTED_STONE_BRICKS.get()));
        slabBlock((SlabBlock) ModBlocks.INFESTED_COBBLE_SLAB.get(), blockTexture(ModBlocks.INFESTED_COBBLE.get()), blockTexture(ModBlocks.INFESTED_COBBLE.get()));
 
+        slabBlock((SlabBlock) ModBlocks.BLACK_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.BLACK_TIBERCRETE.get()), blockTexture(ModBlocks.BLACK_TIBERCRETE.get()));
+        slabBlock((SlabBlock) ModBlocks.BLUE_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.BLUE_TIBERCRETE.get()), blockTexture(ModBlocks.BLUE_TIBERCRETE.get()));
+        slabBlock((SlabBlock) ModBlocks.BROWN_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.BROWN_TIBERCRETE.get()), blockTexture(ModBlocks.BROWN_TIBERCRETE.get()));
+        slabBlock((SlabBlock) ModBlocks.CYAN_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.CYAN_TIBERCRETE.get()), blockTexture(ModBlocks.CYAN_TIBERCRETE.get()));
+        slabBlock((SlabBlock) ModBlocks.GRAY_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.GRAY_TIBERCRETE.get()), blockTexture(ModBlocks.GRAY_TIBERCRETE.get()));
+        slabBlock((SlabBlock) ModBlocks.GREEN_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.GREEN_TIBERCRETE.get()), blockTexture(ModBlocks.GREEN_TIBERCRETE.get()));
+        slabBlock((SlabBlock) ModBlocks.LIGHT_BLUE_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.LIGHT_BLUE_TIBERCRETE.get()), blockTexture(ModBlocks.LIGHT_BLUE_TIBERCRETE.get()));
+        slabBlock((SlabBlock) ModBlocks.LIGHT_GRAY_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.LIGHT_GRAY_TIBERCRETE.get()), blockTexture(ModBlocks.LIGHT_GRAY_TIBERCRETE.get()));
+        slabBlock((SlabBlock) ModBlocks.LIME_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.LIME_TIBERCRETE.get()), blockTexture(ModBlocks.LIME_TIBERCRETE.get()));
+        slabBlock((SlabBlock) ModBlocks.MAGENTA_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.MAGENTA_TIBERCRETE.get()), blockTexture(ModBlocks.MAGENTA_TIBERCRETE.get()));
+        slabBlock((SlabBlock) ModBlocks.ORANGE_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.ORANGE_TIBERCRETE.get()), blockTexture(ModBlocks.ORANGE_TIBERCRETE.get()));
+        slabBlock((SlabBlock) ModBlocks.PINK_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.PINK_TIBERCRETE.get()), blockTexture(ModBlocks.PINK_TIBERCRETE.get()));
+        slabBlock((SlabBlock) ModBlocks.PURPLE_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.PURPLE_TIBERCRETE.get()), blockTexture(ModBlocks.PURPLE_TIBERCRETE.get()));
+        slabBlock((SlabBlock) ModBlocks.RED_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.RED_TIBERCRETE.get()), blockTexture(ModBlocks.RED_TIBERCRETE.get()));
+        slabBlock((SlabBlock) ModBlocks.WHITE_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.WHITE_TIBERCRETE.get()), blockTexture(ModBlocks.WHITE_TIBERCRETE.get()));
+        slabBlock((SlabBlock) ModBlocks.YELLOW_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.YELLOW_TIBERCRETE.get()), blockTexture(ModBlocks.YELLOW_TIBERCRETE.get()));
+
+
         buttonBlock((ButtonBlock) ModBlocks.PLAGUED_BUTTON.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
         pressurePlateBlock((PressurePlateBlock) ModBlocks.PLAGUED_PRESSURE_PLATE.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
         buttonBlock((ButtonBlock) ModBlocks.EMBER_OAK_BUTTON.get(), blockTexture(ModBlocks.EMBER_OAK_PLANKS.get()));
@@ -222,6 +240,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         trapdoorBlockWithRenderType((((TrapDoorBlock) ModBlocks.EMBER_OAK_TRAPDOOR.get())), modLoc("block/ember_oak_trapdoor"), true, "cutout");
 
         wallBlock((((WallBlock) ModBlocks.FIRESTONE_WALL.get())), blockTexture(( ModBlocks.FIRESTONE_BLOCK.get())));
+        wallBlock((((WallBlock) ModBlocks.INFESTED_COBBLE_WALL.get())), blockTexture(( ModBlocks.INFESTED_COBBLE.get())));
+        wallBlock((((WallBlock) ModBlocks.INFESTED_STONE_BRICK_WALL.get())), blockTexture(( ModBlocks.INFESTED_STONE_BRICKS.get())));
 
         makeStrawberryCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
 

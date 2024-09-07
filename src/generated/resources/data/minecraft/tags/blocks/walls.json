@@ -1,5 +1,7 @@
 {
   "values": [
-    "crystechmod:firestone_wall"
+    "crystechmod:firestone_wall",
+    "crystechmod:infested_stone_brick_wall",
+    "crystechmod:infested_cobble_wall"
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "crystechmod:infested_cobble"
+    }
+  },
+  "pattern": [
+    "   ",
+    "III",
+    "III"
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:infested_cobble_wall"
+  },
+  "show_notification": true
+}

@@ -190,10 +190,29 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.EMBER_OAK_PRESSURE_PLATE);
         evenSimplerBlockItem(ModBlocks.PLAGUED_FENCE_GATE);
         evenSimplerBlockItem(ModBlocks.EMBER_OAK_FENCE_GATE);
+        evenSimplerBlockItem(ModBlocks.BLACK_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.BLUE_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.BROWN_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.CYAN_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.GRAY_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.GREEN_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.LIGHT_BLUE_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.LIGHT_GRAY_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.LIME_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.MAGENTA_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.ORANGE_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.PINK_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.PURPLE_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.RED_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.WHITE_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.YELLOW_TIBERCRETE_SLAB);
 
         trapdoorItem((ModBlocks.PLAGUED_TRAPDOOR));
         trapdoorItem((ModBlocks.EMBER_OAK_TRAPDOOR));
         wallItem((ModBlocks.FIRESTONE_WALL), ModBlocks.FIRESTONE_BLOCK);
+
+        wallItem((ModBlocks.INFESTED_COBBLE_WALL), ModBlocks.INFESTED_COBBLE);
+        wallItem((ModBlocks.INFESTED_STONE_BRICK_WALL), ModBlocks.INFESTED_STONE_BRICKS);
 
         handheldItem(ModItems.PLAGUED_SWORD);
         handheldItem(ModItems.PLAGUED_PICKAXE);

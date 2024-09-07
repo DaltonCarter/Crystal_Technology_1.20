@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "crystechmod:black_tibercrete"
+    }
+  },
+  "pattern": [
+    "   ",
+    "   ",
+    "TTT"
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:black_tibercrete_slab"
+  },
+  "show_notification": true
+}

@@ -329,6 +329,8 @@ in with other blocks of their Biome type
 
 -Added Ember Oak Planks, Slabs, Stairs, Fence, Gate, Door, Trapdoor, Button, & Pressure plate.
 
+-Added Tibercrete Slabs, and textures for Tibercrete Bricks.
+
 ======================================================
 LEGACY 1.16.5 Changelog
 0.5.2

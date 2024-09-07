@@ -190,6 +190,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.EMBER_OAK_PRESSURE_PLATE.get());
         this.dropSelf(ModBlocks.EMBER_OAK_TRAPDOOR.get());
         this.dropSelf(ModBlocks.EMBER_OAK_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.INFESTED_COBBLE_WALL.get());
+        this.dropSelf(ModBlocks.INFESTED_STONE_BRICK_WALL.get());
 
 
         this.dropSelf(ModBlocks.INFESTED_STONE_BRICK_STAIRS.get());
@@ -222,6 +224,39 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.INFESTED_COBBLE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.INFESTED_COBBLE_SLAB.get()));
+
+        this.add(ModBlocks.BLACK_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.BLACK_TIBERCRETE_SLAB.get()));
+        this.add(ModBlocks.BLUE_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.BLUE_TIBERCRETE_SLAB.get()));
+        this.add(ModBlocks.BROWN_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.BROWN_TIBERCRETE_SLAB.get()));
+        this.add(ModBlocks.CYAN_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CYAN_TIBERCRETE_SLAB.get()));
+        this.add(ModBlocks.GRAY_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.GRAY_TIBERCRETE_SLAB.get()));
+        this.add(ModBlocks.GREEN_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.GREEN_TIBERCRETE_SLAB.get()));
+        this.add(ModBlocks.LIGHT_BLUE_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.LIGHT_BLUE_TIBERCRETE_SLAB.get()));
+        this.add(ModBlocks.LIGHT_GRAY_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.LIGHT_GRAY_TIBERCRETE_SLAB.get()));
+        this.add(ModBlocks.LIME_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.LIME_TIBERCRETE_SLAB.get()));
+        this.add(ModBlocks.MAGENTA_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.MAGENTA_TIBERCRETE_SLAB.get()));
+        this.add(ModBlocks.ORANGE_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ORANGE_TIBERCRETE_SLAB.get()));
+        this.add(ModBlocks.PINK_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PINK_TIBERCRETE_SLAB.get()));
+        this.add(ModBlocks.PURPLE_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PURPLE_TIBERCRETE_SLAB.get()));
+        this.add(ModBlocks.RED_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.RED_TIBERCRETE_SLAB.get()));
+        this.add(ModBlocks.WHITE_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.WHITE_TIBERCRETE_SLAB.get()));
+        this.add(ModBlocks.YELLOW_TIBERCRETE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.YELLOW_TIBERCRETE_SLAB.get()));
 
         this.add(ModBlocks.PLAGUED_DOOR.get(),
                 block -> createDoorTable(ModBlocks.PLAGUED_DOOR.get()));
