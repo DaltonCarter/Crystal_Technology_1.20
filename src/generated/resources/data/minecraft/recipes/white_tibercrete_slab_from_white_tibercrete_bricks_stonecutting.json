@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "crystechmod:white_tibercrete_bricks"
+  },
+  "result": "crystechmod:white_tibercrete_slab"
+}

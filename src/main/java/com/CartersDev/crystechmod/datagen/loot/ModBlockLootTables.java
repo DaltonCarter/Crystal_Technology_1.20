@@ -129,6 +129,80 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.WHITE_TIBERCRETE_STAIRS.get());
         this.dropSelf(ModBlocks.YELLOW_TIBERCRETE_STAIRS.get());
 
+        this.dropSelf(ModBlocks.BLACK_TIBERCRETE_BRICKS.get());
+        this.dropSelf(ModBlocks.BLUE_TIBERCRETE_BRICKS.get());
+        this.dropSelf(ModBlocks.BROWN_TIBERCRETE_BRICKS.get());
+        this.dropSelf(ModBlocks.CYAN_TIBERCRETE_BRICKS.get());
+        this.dropSelf(ModBlocks.GRAY_TIBERCRETE_BRICKS.get());
+        this.dropSelf(ModBlocks.GREEN_TIBERCRETE_BRICKS.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICKS.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICKS.get());
+        this.dropSelf(ModBlocks.LIME_TIBERCRETE_BRICKS.get());
+        this.dropSelf(ModBlocks.MAGENTA_TIBERCRETE_BRICKS.get());
+        this.dropSelf(ModBlocks.ORANGE_TIBERCRETE_BRICKS.get());
+        this.dropSelf(ModBlocks.PINK_TIBERCRETE_BRICKS.get());
+        this.dropSelf(ModBlocks.PURPLE_TIBERCRETE_BRICKS.get());
+        this.dropSelf(ModBlocks.RED_TIBERCRETE_BRICKS.get());
+        this.dropSelf(ModBlocks.WHITE_TIBERCRETE_BRICKS.get());
+        this.dropSelf(ModBlocks.YELLOW_TIBERCRETE_BRICKS.get());
+
+        this.dropSelf(ModBlocks.BLACK_TIBERCRETE_WALL.get());
+        this.dropSelf(ModBlocks.BLUE_TIBERCRETE_WALL.get());
+        this.dropSelf(ModBlocks.BROWN_TIBERCRETE_WALL.get());
+        this.dropSelf(ModBlocks.CYAN_TIBERCRETE_WALL.get());
+        this.dropSelf(ModBlocks.GRAY_TIBERCRETE_WALL.get());
+        this.dropSelf(ModBlocks.GREEN_TIBERCRETE_WALL.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_TIBERCRETE_WALL.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_TIBERCRETE_WALL.get());
+        this.dropSelf(ModBlocks.LIME_TIBERCRETE_WALL.get());
+        this.dropSelf(ModBlocks.MAGENTA_TIBERCRETE_WALL.get());
+        this.dropSelf(ModBlocks.ORANGE_TIBERCRETE_WALL.get());
+        this.dropSelf(ModBlocks.PINK_TIBERCRETE_WALL.get());
+        this.dropSelf(ModBlocks.PURPLE_TIBERCRETE_WALL.get());
+        this.dropSelf(ModBlocks.RED_TIBERCRETE_WALL.get());
+        this.dropSelf(ModBlocks.WHITE_TIBERCRETE_WALL.get());
+        this.dropSelf(ModBlocks.YELLOW_TIBERCRETE_WALL.get());
+
+        this.dropSelf(ModBlocks.BLACK_TIBERCRETE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.BLUE_TIBERCRETE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.BROWN_TIBERCRETE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.CYAN_TIBERCRETE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.GRAY_TIBERCRETE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.GREEN_TIBERCRETE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.LIME_TIBERCRETE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.MAGENTA_TIBERCRETE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.ORANGE_TIBERCRETE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.PINK_TIBERCRETE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.PURPLE_TIBERCRETE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.RED_TIBERCRETE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.WHITE_TIBERCRETE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.YELLOW_TIBERCRETE_BRICK_STAIRS.get());
+
+        this.dropSelf(ModBlocks.BLACK_TIBERCRETE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.BLUE_TIBERCRETE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.BROWN_TIBERCRETE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.CYAN_TIBERCRETE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.GRAY_TIBERCRETE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.GREEN_TIBERCRETE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.LIME_TIBERCRETE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.MAGENTA_TIBERCRETE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.ORANGE_TIBERCRETE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.PINK_TIBERCRETE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.PURPLE_TIBERCRETE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.RED_TIBERCRETE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.WHITE_TIBERCRETE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.YELLOW_TIBERCRETE_BRICK_WALL.get());
+
+        this.dropSelf(ModBlocks.PLAGUED_ANDESITE_STAIRS.get());
+        this.dropSelf(ModBlocks.PLAGUED_ANDESITE_WALL.get());
+
+        this.dropSelf(ModBlocks.PLAGUED_STONE_STAIRS.get());
+        this.dropSelf(ModBlocks.PLAGUED_STONE_WALL.get());
+
         this.dropSelf(ModBlocks.CLEAR_TIBERGLASS.get());
         this.dropSelf(ModBlocks.CLEAR_TIBERGLASS_PANE.get());
         this.dropSelf(ModBlocks.MOSAIC_TIBERGLASS.get());
@@ -257,6 +331,45 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createSlabItemTable(ModBlocks.WHITE_TIBERCRETE_SLAB.get()));
         this.add(ModBlocks.YELLOW_TIBERCRETE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.YELLOW_TIBERCRETE_SLAB.get()));
+
+        this.add(ModBlocks.BLACK_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.BLACK_TIBERCRETE_BRICK_SLAB.get()));
+        this.add(ModBlocks.BLUE_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.BLUE_TIBERCRETE_BRICK_SLAB.get()));
+        this.add(ModBlocks.BROWN_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.BROWN_TIBERCRETE_BRICK_SLAB.get()));
+        this.add(ModBlocks.CYAN_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CYAN_TIBERCRETE_BRICK_SLAB.get()));
+        this.add(ModBlocks.GRAY_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.GRAY_TIBERCRETE_BRICK_SLAB.get()));
+        this.add(ModBlocks.GREEN_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.GREEN_TIBERCRETE_BRICK_SLAB.get()));
+        this.add(ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICK_SLAB.get()));
+        this.add(ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICK_SLAB.get()));
+        this.add(ModBlocks.LIME_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.LIME_TIBERCRETE_BRICK_SLAB.get()));
+        this.add(ModBlocks.MAGENTA_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.MAGENTA_TIBERCRETE_BRICK_SLAB.get()));
+        this.add(ModBlocks.ORANGE_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ORANGE_TIBERCRETE_BRICK_SLAB.get()));
+        this.add(ModBlocks.PINK_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PINK_TIBERCRETE_BRICK_SLAB.get()));
+        this.add(ModBlocks.PURPLE_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PURPLE_TIBERCRETE_BRICK_SLAB.get()));
+        this.add(ModBlocks.RED_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.RED_TIBERCRETE_BRICK_SLAB.get()));
+        this.add(ModBlocks.WHITE_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.WHITE_TIBERCRETE_BRICK_SLAB.get()));
+        this.add(ModBlocks.YELLOW_TIBERCRETE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.YELLOW_TIBERCRETE_BRICK_SLAB.get()));
+
+        this.add(ModBlocks.PLAGUED_ANDESITE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PLAGUED_ANDESITE_SLAB.get()));
+
+        this.add(ModBlocks.PLAGUED_STONE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PLAGUED_STONE_SLAB.get()));
 
         this.add(ModBlocks.PLAGUED_DOOR.get(),
                 block -> createDoorTable(ModBlocks.PLAGUED_DOOR.get()));

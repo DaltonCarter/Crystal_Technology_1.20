@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:orange_tibercrete"
+  },
+  "result": "crystechmod:orange_tibercrete_wall"
+}

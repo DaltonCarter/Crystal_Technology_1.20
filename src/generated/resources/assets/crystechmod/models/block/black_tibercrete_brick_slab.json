@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "crystechmod:block/black_tibercrete_bricks",
+    "side": "crystechmod:block/black_tibercrete_bricks",
+    "top": "crystechmod:block/black_tibercrete_bricks"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:light_gray_tibercrete_bricks"
+  },
+  "result": "crystechmod:light_gray_tibercrete"
+}

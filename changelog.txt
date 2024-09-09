@@ -331,6 +331,15 @@ in with other blocks of their Biome type
 
 -Added Tibercrete Slabs, and textures for Tibercrete Bricks.
 
+-------------------------------------------------------------------------------
+
+9/08/2024 - 9/09/2024
+Version 0.4.6
+Posted By: Dalton Carter
+
+-Added Tibercrete Bricks, Brick Slabs, Brick Stairs, brick walls, and Tibercrete Walls for all 16 colors.
+-Added Plagued Andesite & Plagued Stone, Slabs, Stairs, and walls.
+
 ======================================================
 LEGACY 1.16.5 Changelog
 0.5.2

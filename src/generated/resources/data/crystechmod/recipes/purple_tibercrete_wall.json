@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "crystechmod:purple_tibercrete"
+    }
+  },
+  "pattern": [
+    "   ",
+    "TTT",
+    "TTT"
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:purple_tibercrete_wall"
+  },
+  "show_notification": true
+}

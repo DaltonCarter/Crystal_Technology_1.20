@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "crystechmod:block/infested_stone",
+    "side": "crystechmod:block/infested_stone",
+    "top": "crystechmod:block/infested_stone"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:blue_tibercrete"
+  },
+  "result": "crystechmod:blue_tibercrete_brick_stairs"
+}

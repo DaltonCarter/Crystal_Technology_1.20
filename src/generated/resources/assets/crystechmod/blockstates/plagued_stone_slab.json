@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/plagued_stone_slab"
+    },
+    "type=double": {
+      "model": "crystechmod:block/infested_stone"
+    },
+    "type=top": {
+      "model": "crystechmod:block/plagued_stone_slab_top"
+    }
+  }
+}

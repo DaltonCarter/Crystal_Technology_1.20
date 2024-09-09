@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:infested_andesite"
+  },
+  "result": "crystechmod:plagued_andesite_wall"
+}

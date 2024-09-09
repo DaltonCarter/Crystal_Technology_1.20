@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/green_tibercrete_brick_slab"
+    },
+    "type=double": {
+      "model": "crystechmod:block/green_tibercrete_bricks"
+    },
+    "type=top": {
+      "model": "crystechmod:block/green_tibercrete_brick_slab_top"
+    }
+  }
+}

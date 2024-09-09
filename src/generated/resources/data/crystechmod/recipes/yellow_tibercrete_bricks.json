@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "crystechmod:yellow_tibercrete"
+    }
+  },
+  "pattern": [
+    "   ",
+    " TT",
+    " TT"
+  ],
+  "result": {
+    "count": 4,
+    "item": "crystechmod:yellow_tibercrete_bricks"
+  },
+  "show_notification": true
+}

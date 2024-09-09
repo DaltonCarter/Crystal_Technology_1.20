@@ -1,9 +1,9 @@
-// 1.20.1	2024-09-07T14:07:35.8049006	Tags for minecraft:block mod id crystechmod
+// 1.20.1	2024-09-09T02:55:39.111436	Tags for minecraft:block mod id crystechmod
 3c0db247b35cadbc078a1b88ac98777330717935 data/crystechmod/tags/blocks/hazmat_glass_panes.json
 fde81393ef244e7ec272ed755f993f402ff61d5d data/crystechmod/tags/blocks/hazmat_glass_panes2.json
 94d3b46aed493f5842b549f658dfac45bf562a02 data/crystechmod/tags/blocks/needs_alythum_tool.json
 2e64ef8dd16d3f26b009e6f657a19a2a41393d74 data/crystechmod/tags/blocks/needs_gundanium_tool.json
-ef22753bba153d097273a210b01e3fc9c6788f58 data/crystechmod/tags/blocks/needs_plagued_tool.json
+26b96c4ac6e333c8d467bab681527949ef0b9d80 data/crystechmod/tags/blocks/needs_plagued_tool.json
 39acdcf33383e05a367faca9c1c896cc6cdba9c0 data/crystechmod/tags/blocks/tibercrete_sands.json
 40f94ad99830e757072a50a78d7faa3861352918 data/crystechmod/tags/blocks/tiberium_seed_block.json
 72579eb09bc12d149291c913873988870590b898 data/crystechmod/tags/blocks/tiberium_viable_blocks.json
@@ -11,12 +11,12 @@ ef22753bba153d097273a210b01e3fc9c6788f58 data/crystechmod/tags/blocks/needs_plag
 c8de9471192e004d66bb792addb08eba73f1e748 data/minecraft/tags/blocks/fences.json
 9b9faadc63170185ea93d872f3882ffa8bff4e84 data/minecraft/tags/blocks/fence_gates.json
 27ea26c16b84f1800e6fb02d02a31373ed1fa710 data/minecraft/tags/blocks/mineable/axe.json
-05051d2286f639d569550db7f3d4e380911dad7a data/minecraft/tags/blocks/mineable/pickaxe.json
+707418302f1a3f8561e6800ee004f95cc0e979e9 data/minecraft/tags/blocks/mineable/pickaxe.json
 f7b7b0cbf5fe1937fbbe024c9f0807f12d845845 data/minecraft/tags/blocks/mineable/shovel.json
 91821ae30eacb82f652261999bc316bcfca8369f data/minecraft/tags/blocks/needs_diamond_tool.json
 c6e09ed70e1ca99bd1cd2c200d975f8f591c15cf data/minecraft/tags/blocks/needs_iron_tool.json
 03eda2fc3f88c07fd5351165ffc18467f82045bb data/minecraft/tags/blocks/needs_stone_tool.json
-2c140096ad6a9090ecaa24ac26d7faabf2567493 data/minecraft/tags/blocks/walls.json
+54ecd15f13b7370ad28761647a4ca65c234ae7b3 data/minecraft/tags/blocks/walls.json
 b85f2497a9679e8a4119b8b14eae765963bc82b5 data/minecraft/tags/blocks/wooden_buttons.json
 8320d5a80af4e8a2c49c47d4dfa500e57198c3b4 data/minecraft/tags/blocks/wooden_doors.json
 d989cfc8c43e5e8c66ec949fc2e5b99f357328d1 data/minecraft/tags/blocks/wooden_pressure_plates.json

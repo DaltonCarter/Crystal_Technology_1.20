@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/plagued_andesite_slab"
+    },
+    "type=double": {
+      "model": "crystechmod:block/infested_andesite"
+    },
+    "type=top": {
+      "model": "crystechmod:block/plagued_andesite_slab_top"
+    }
+  }
+}

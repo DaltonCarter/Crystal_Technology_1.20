@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "crystechmod:light_gray_tibercrete_bricks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "TTT",
+    "TTT"
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:light_gray_tibercrete_brick_wall"
+  },
+  "show_notification": true
+}

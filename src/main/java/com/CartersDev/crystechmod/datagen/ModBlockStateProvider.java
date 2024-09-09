@@ -148,6 +148,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RED_TIBERCRETE_POWDER);
         blockWithItem(ModBlocks.WHITE_TIBERCRETE_POWDER);
         blockWithItem(ModBlocks.YELLOW_TIBERCRETE_POWDER);
+
+        blockWithItem(ModBlocks.BLACK_TIBERCRETE_BRICKS);
+        blockWithItem(ModBlocks.BLUE_TIBERCRETE_BRICKS);
+        blockWithItem(ModBlocks.BROWN_TIBERCRETE_BRICKS);
+        blockWithItem(ModBlocks.CYAN_TIBERCRETE_BRICKS);
+        blockWithItem(ModBlocks.GRAY_TIBERCRETE_BRICKS);
+        blockWithItem(ModBlocks.GREEN_TIBERCRETE_BRICKS);
+        blockWithItem(ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICKS);
+        blockWithItem(ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICKS);
+        blockWithItem(ModBlocks.LIME_TIBERCRETE_BRICKS);
+        blockWithItem(ModBlocks.MAGENTA_TIBERCRETE_BRICKS);
+        blockWithItem(ModBlocks.ORANGE_TIBERCRETE_BRICKS);
+        blockWithItem(ModBlocks.PINK_TIBERCRETE_BRICKS);
+        blockWithItem(ModBlocks.PURPLE_TIBERCRETE_BRICKS);
+        blockWithItem(ModBlocks.RED_TIBERCRETE_BRICKS);
+        blockWithItem(ModBlocks.WHITE_TIBERCRETE_BRICKS);
+        blockWithItem(ModBlocks.YELLOW_TIBERCRETE_BRICKS);
+
         blockWithItem(ModBlocks.PLAGUED_PLANKS);
         blockWithItem(ModBlocks.EMBER_OAK_PLANKS);
 
@@ -201,10 +219,31 @@ public class ModBlockStateProvider extends BlockStateProvider {
        stairsBlock((StairBlock) ModBlocks.WHITE_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.WHITE_TIBERCRETE.get()));
        stairsBlock((StairBlock) ModBlocks.YELLOW_TIBERCRETE_STAIRS.get(), blockTexture(ModBlocks.YELLOW_TIBERCRETE.get()));
 
+        stairsBlock((StairBlock) ModBlocks.BLACK_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.BLACK_TIBERCRETE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.BLUE_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.BLUE_TIBERCRETE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.BROWN_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.BROWN_TIBERCRETE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.CYAN_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.CYAN_TIBERCRETE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.GRAY_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.GRAY_TIBERCRETE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.GREEN_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.GREEN_TIBERCRETE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.LIME_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.LIME_TIBERCRETE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.MAGENTA_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.MAGENTA_TIBERCRETE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.ORANGE_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.ORANGE_TIBERCRETE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.PINK_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.PINK_TIBERCRETE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.PURPLE_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.PURPLE_TIBERCRETE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.RED_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.RED_TIBERCRETE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.WHITE_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.WHITE_TIBERCRETE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.YELLOW_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.YELLOW_TIBERCRETE_BRICKS.get()));
+
+        stairsBlock((StairBlock) ModBlocks.PLAGUED_ANDESITE_STAIRS.get(), blockTexture(ModBlocks.INFESTED_ANDESITE.get()));
+        stairsBlock((StairBlock) ModBlocks.PLAGUED_STONE_STAIRS.get(), blockTexture(ModBlocks.INFESTED_STONE.get()));
+
        slabBlock((SlabBlock) ModBlocks.PLAGUED_SLAB.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
        slabBlock((SlabBlock) ModBlocks.EMBER_OAK_SLAB.get(), blockTexture(ModBlocks.EMBER_OAK_PLANKS.get()), blockTexture(ModBlocks.EMBER_OAK_PLANKS.get()));
        slabBlock((SlabBlock) ModBlocks.INFESTED_STONE_BRICK_SLAB.get(), blockTexture(ModBlocks.INFESTED_STONE_BRICKS.get()), blockTexture(ModBlocks.INFESTED_STONE_BRICKS.get()));
        slabBlock((SlabBlock) ModBlocks.INFESTED_COBBLE_SLAB.get(), blockTexture(ModBlocks.INFESTED_COBBLE.get()), blockTexture(ModBlocks.INFESTED_COBBLE.get()));
+       slabBlock((SlabBlock) ModBlocks.PLAGUED_STONE_SLAB.get(), blockTexture(ModBlocks.INFESTED_STONE.get()), blockTexture(ModBlocks.INFESTED_STONE.get()));
 
         slabBlock((SlabBlock) ModBlocks.BLACK_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.BLACK_TIBERCRETE.get()), blockTexture(ModBlocks.BLACK_TIBERCRETE.get()));
         slabBlock((SlabBlock) ModBlocks.BLUE_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.BLUE_TIBERCRETE.get()), blockTexture(ModBlocks.BLUE_TIBERCRETE.get()));
@@ -222,6 +261,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) ModBlocks.RED_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.RED_TIBERCRETE.get()), blockTexture(ModBlocks.RED_TIBERCRETE.get()));
         slabBlock((SlabBlock) ModBlocks.WHITE_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.WHITE_TIBERCRETE.get()), blockTexture(ModBlocks.WHITE_TIBERCRETE.get()));
         slabBlock((SlabBlock) ModBlocks.YELLOW_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.YELLOW_TIBERCRETE.get()), blockTexture(ModBlocks.YELLOW_TIBERCRETE.get()));
+
+        slabBlock((SlabBlock) ModBlocks.BLACK_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.BLACK_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.BLACK_TIBERCRETE_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.BLUE_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.BLUE_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.BLUE_TIBERCRETE_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.BROWN_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.BROWN_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.BROWN_TIBERCRETE_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.CYAN_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.CYAN_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.CYAN_TIBERCRETE_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.GRAY_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.GRAY_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.GRAY_TIBERCRETE_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.GREEN_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.GREEN_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.GREEN_TIBERCRETE_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.LIME_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.LIME_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.LIME_TIBERCRETE_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.MAGENTA_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.MAGENTA_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.MAGENTA_TIBERCRETE_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.ORANGE_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.ORANGE_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.ORANGE_TIBERCRETE_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.PINK_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.PINK_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.PINK_TIBERCRETE_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.PURPLE_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.PURPLE_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.PURPLE_TIBERCRETE_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.RED_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.RED_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.RED_TIBERCRETE_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.WHITE_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.WHITE_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.WHITE_TIBERCRETE_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.YELLOW_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.YELLOW_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.YELLOW_TIBERCRETE_BRICKS.get()));
+
+        slabBlock((SlabBlock) ModBlocks.PLAGUED_ANDESITE_SLAB.get(), blockTexture(ModBlocks.INFESTED_ANDESITE.get()), blockTexture(ModBlocks.INFESTED_ANDESITE.get()));
 
 
         buttonBlock((ButtonBlock) ModBlocks.PLAGUED_BUTTON.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
@@ -242,6 +300,44 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock((((WallBlock) ModBlocks.FIRESTONE_WALL.get())), blockTexture(( ModBlocks.FIRESTONE_BLOCK.get())));
         wallBlock((((WallBlock) ModBlocks.INFESTED_COBBLE_WALL.get())), blockTexture(( ModBlocks.INFESTED_COBBLE.get())));
         wallBlock((((WallBlock) ModBlocks.INFESTED_STONE_BRICK_WALL.get())), blockTexture(( ModBlocks.INFESTED_STONE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.PLAGUED_ANDESITE_WALL.get())), blockTexture(( ModBlocks.INFESTED_ANDESITE.get())));
+        wallBlock((((WallBlock) ModBlocks.PLAGUED_STONE_WALL.get())), blockTexture(( ModBlocks.INFESTED_STONE.get())));
+
+        wallBlock((((WallBlock) ModBlocks.BLACK_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.BLACK_TIBERCRETE.get())));
+        wallBlock((((WallBlock) ModBlocks.BLUE_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.BLUE_TIBERCRETE.get())));
+        wallBlock((((WallBlock) ModBlocks.BROWN_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.BROWN_TIBERCRETE.get())));
+        wallBlock((((WallBlock) ModBlocks.CYAN_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.CYAN_TIBERCRETE.get())));
+        wallBlock((((WallBlock) ModBlocks.GRAY_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.GRAY_TIBERCRETE.get())));
+        wallBlock((((WallBlock) ModBlocks.GREEN_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.GREEN_TIBERCRETE.get())));
+        wallBlock((((WallBlock) ModBlocks.LIGHT_BLUE_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.LIGHT_BLUE_TIBERCRETE.get())));
+        wallBlock((((WallBlock) ModBlocks.LIGHT_GRAY_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.LIGHT_GRAY_TIBERCRETE.get())));
+        wallBlock((((WallBlock) ModBlocks.LIME_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.LIME_TIBERCRETE.get())));
+        wallBlock((((WallBlock) ModBlocks.MAGENTA_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.MAGENTA_TIBERCRETE.get())));
+        wallBlock((((WallBlock) ModBlocks.ORANGE_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.ORANGE_TIBERCRETE.get())));
+        wallBlock((((WallBlock) ModBlocks.PINK_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.PINK_TIBERCRETE.get())));
+        wallBlock((((WallBlock) ModBlocks.PURPLE_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.PURPLE_TIBERCRETE.get())));
+        wallBlock((((WallBlock) ModBlocks.RED_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.RED_TIBERCRETE.get())));
+        wallBlock((((WallBlock) ModBlocks.WHITE_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.WHITE_TIBERCRETE.get())));
+        wallBlock((((WallBlock) ModBlocks.YELLOW_TIBERCRETE_WALL.get())), blockTexture(( ModBlocks.YELLOW_TIBERCRETE.get())));
+
+        wallBlock((((WallBlock) ModBlocks.BLACK_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.BLACK_TIBERCRETE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.BLUE_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.BLUE_TIBERCRETE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.BROWN_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.BROWN_TIBERCRETE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.CYAN_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.CYAN_TIBERCRETE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.GRAY_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.GRAY_TIBERCRETE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.GREEN_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.GREEN_TIBERCRETE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.LIME_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.LIME_TIBERCRETE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.MAGENTA_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.MAGENTA_TIBERCRETE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.ORANGE_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.ORANGE_TIBERCRETE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.PINK_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.PINK_TIBERCRETE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.PURPLE_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.PURPLE_TIBERCRETE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.RED_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.RED_TIBERCRETE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.WHITE_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.WHITE_TIBERCRETE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.YELLOW_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.YELLOW_TIBERCRETE_BRICKS.get())));
+
+
 
         makeStrawberryCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
 

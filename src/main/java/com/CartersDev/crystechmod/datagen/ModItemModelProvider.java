@@ -206,6 +206,45 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.RED_TIBERCRETE_SLAB);
         evenSimplerBlockItem(ModBlocks.WHITE_TIBERCRETE_SLAB);
         evenSimplerBlockItem(ModBlocks.YELLOW_TIBERCRETE_SLAB);
+        evenSimplerBlockItem(ModBlocks.BLACK_TIBERCRETE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.BLUE_TIBERCRETE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.BROWN_TIBERCRETE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CYAN_TIBERCRETE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.GRAY_TIBERCRETE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.GREEN_TIBERCRETE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.LIME_TIBERCRETE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.MAGENTA_TIBERCRETE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.ORANGE_TIBERCRETE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.PINK_TIBERCRETE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.PURPLE_TIBERCRETE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.RED_TIBERCRETE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WHITE_TIBERCRETE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.YELLOW_TIBERCRETE_BRICK_STAIRS);
+
+        evenSimplerBlockItem(ModBlocks.PLAGUED_ANDESITE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.PLAGUED_ANDESITE_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.PLAGUED_STONE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.PLAGUED_STONE_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.BLACK_TIBERCRETE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.BLUE_TIBERCRETE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.BROWN_TIBERCRETE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.CYAN_TIBERCRETE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.GRAY_TIBERCRETE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.GREEN_TIBERCRETE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.LIME_TIBERCRETE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.MAGENTA_TIBERCRETE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.ORANGE_TIBERCRETE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.PINK_TIBERCRETE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.PURPLE_TIBERCRETE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.RED_TIBERCRETE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.WHITE_TIBERCRETE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.YELLOW_TIBERCRETE_BRICK_SLAB);
 
         trapdoorItem((ModBlocks.PLAGUED_TRAPDOOR));
         trapdoorItem((ModBlocks.EMBER_OAK_TRAPDOOR));
@@ -213,6 +252,43 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         wallItem((ModBlocks.INFESTED_COBBLE_WALL), ModBlocks.INFESTED_COBBLE);
         wallItem((ModBlocks.INFESTED_STONE_BRICK_WALL), ModBlocks.INFESTED_STONE_BRICKS);
+
+        wallItem((ModBlocks.BLACK_TIBERCRETE_WALL), ModBlocks.BLACK_TIBERCRETE);
+        wallItem((ModBlocks.BLUE_TIBERCRETE_WALL), ModBlocks.BLUE_TIBERCRETE);
+        wallItem((ModBlocks.BROWN_TIBERCRETE_WALL), ModBlocks.BROWN_TIBERCRETE);
+        wallItem((ModBlocks.CYAN_TIBERCRETE_WALL), ModBlocks.CYAN_TIBERCRETE);
+        wallItem((ModBlocks.GRAY_TIBERCRETE_WALL), ModBlocks.GRAY_TIBERCRETE);
+        wallItem((ModBlocks.GREEN_TIBERCRETE_WALL), ModBlocks.GREEN_TIBERCRETE);
+        wallItem((ModBlocks.LIGHT_BLUE_TIBERCRETE_WALL), ModBlocks.LIGHT_BLUE_TIBERCRETE);
+        wallItem((ModBlocks.LIGHT_GRAY_TIBERCRETE_WALL), ModBlocks.LIGHT_GRAY_TIBERCRETE);
+        wallItem((ModBlocks.LIME_TIBERCRETE_WALL), ModBlocks.LIME_TIBERCRETE);
+        wallItem((ModBlocks.MAGENTA_TIBERCRETE_WALL), ModBlocks.MAGENTA_TIBERCRETE);
+        wallItem((ModBlocks.ORANGE_TIBERCRETE_WALL), ModBlocks.ORANGE_TIBERCRETE);
+        wallItem((ModBlocks.PINK_TIBERCRETE_WALL), ModBlocks.PINK_TIBERCRETE);
+        wallItem((ModBlocks.PURPLE_TIBERCRETE_WALL), ModBlocks.PURPLE_TIBERCRETE);
+        wallItem((ModBlocks.RED_TIBERCRETE_WALL), ModBlocks.RED_TIBERCRETE);
+        wallItem((ModBlocks.WHITE_TIBERCRETE_WALL), ModBlocks.WHITE_TIBERCRETE);
+        wallItem((ModBlocks.YELLOW_TIBERCRETE_WALL), ModBlocks.YELLOW_TIBERCRETE);
+
+        wallItem((ModBlocks.BLACK_TIBERCRETE_BRICK_WALL), ModBlocks.BLACK_TIBERCRETE_BRICKS);
+        wallItem((ModBlocks.BLUE_TIBERCRETE_BRICK_WALL), ModBlocks.BLUE_TIBERCRETE_BRICKS);
+        wallItem((ModBlocks.BROWN_TIBERCRETE_BRICK_WALL), ModBlocks.BROWN_TIBERCRETE_BRICKS);
+        wallItem((ModBlocks.CYAN_TIBERCRETE_BRICK_WALL), ModBlocks.CYAN_TIBERCRETE_BRICKS);
+        wallItem((ModBlocks.GRAY_TIBERCRETE_BRICK_WALL), ModBlocks.GRAY_TIBERCRETE_BRICKS);
+        wallItem((ModBlocks.GREEN_TIBERCRETE_BRICK_WALL), ModBlocks.GREEN_TIBERCRETE_BRICKS);
+        wallItem((ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICK_WALL), ModBlocks.LIGHT_BLUE_TIBERCRETE_BRICKS);
+        wallItem((ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICK_WALL), ModBlocks.LIGHT_GRAY_TIBERCRETE_BRICKS);
+        wallItem((ModBlocks.LIME_TIBERCRETE_BRICK_WALL), ModBlocks.LIME_TIBERCRETE_BRICKS);
+        wallItem((ModBlocks.MAGENTA_TIBERCRETE_BRICK_WALL), ModBlocks.MAGENTA_TIBERCRETE_BRICKS);
+        wallItem((ModBlocks.ORANGE_TIBERCRETE_BRICK_WALL), ModBlocks.ORANGE_TIBERCRETE_BRICKS);
+        wallItem((ModBlocks.PINK_TIBERCRETE_BRICK_WALL), ModBlocks.PINK_TIBERCRETE_BRICKS);
+        wallItem((ModBlocks.PURPLE_TIBERCRETE_BRICK_WALL), ModBlocks.PURPLE_TIBERCRETE_BRICKS);
+        wallItem((ModBlocks.RED_TIBERCRETE_BRICK_WALL), ModBlocks.RED_TIBERCRETE_BRICKS);
+        wallItem((ModBlocks.WHITE_TIBERCRETE_BRICK_WALL), ModBlocks.WHITE_TIBERCRETE_BRICKS);
+        wallItem((ModBlocks.YELLOW_TIBERCRETE_BRICK_WALL), ModBlocks.YELLOW_TIBERCRETE_BRICKS);
+
+        wallItem((ModBlocks.PLAGUED_ANDESITE_WALL), ModBlocks.INFESTED_ANDESITE);
+        wallItem((ModBlocks.PLAGUED_STONE_WALL), ModBlocks.INFESTED_STONE);
 
         handheldItem(ModItems.PLAGUED_SWORD);
         handheldItem(ModItems.PLAGUED_PICKAXE);

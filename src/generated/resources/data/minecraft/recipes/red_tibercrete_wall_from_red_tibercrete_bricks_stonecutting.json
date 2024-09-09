@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:red_tibercrete_bricks"
+  },
+  "result": "crystechmod:red_tibercrete_wall"
+}

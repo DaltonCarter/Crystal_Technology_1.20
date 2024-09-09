@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "crystechmod:pink_tibercrete_bricks"
+  },
+  "result": "crystechmod:pink_tibercrete_brick_slab"
+}
