@@ -1,4 +1,4 @@
-// 1.20.1	2024-09-11T03:41:05.1101405	Recipes
+// 1.20.1	2024-09-11T04:26:08.2490461	Recipes
 07482deb0280f340aee127749c5d21846ee6d779 data/crystechmod/advancements/recipes/misc/aboreus_crystal_slab.json
 f448272682d3830889ebc0529f95f07e13cd094b data/crystechmod/advancements/recipes/misc/aboreus_crystal_stairs.json
 44761e0723c22f1e50d943ac5d31591d64fe05bc data/crystechmod/advancements/recipes/misc/aboreus_crystal_wall.json
@@ -687,7 +687,7 @@ e143423cfe202cce8f08f1e23ec48b13a315f086 data/crystechmod/recipes/yellow_tibercr
 ef82840946ee5e16b42341580b1731572baf2618 data/crystechmod/recipes/yellow_tibercrete_brick_wall.json
 c75a4874d44a839b0b1c00da42c50e993bcb2b03 data/crystechmod/recipes/yellow_tibercrete_powder.json
 5e267592adf38b657a1efe9a78fa5b6cafc1d8d3 data/crystechmod/recipes/yellow_tibercrete_slab.json
-64fb8b96e46adb67c20f15eea5b0cec78fe03849 data/crystechmod/recipes/yellow_tibercrete_stairs.json
+f1c11eb87152657d0d9d30ff8bb75509cf24946d data/crystechmod/recipes/yellow_tibercrete_stairs.json
 e92055c2d8f0151f10709fe82e70f27122e13509 data/crystechmod/recipes/yellow_tibercrete_wall.json
 d6e63bbdbde73d96341c10dc0b6362448be1681a data/crystechmod/recipes/yellow_tiberglass.json
 c3d70d4da3b07b70415b05db597e2fe460023645 data/crystechmod/recipes/yellow_tiberglass_pane.json

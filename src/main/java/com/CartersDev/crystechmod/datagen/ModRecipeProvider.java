@@ -964,7 +964,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_TIBERCRETE_STAIRS.get(), 4)
-                .pattern("   ")
+                .pattern("T  ")
                 .pattern("TT ")
                 .pattern("TTT")
                 .define('T', ModBlocks.YELLOW_TIBERCRETE.get())
