@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "crystechmod:marika_oak_planks"
+    }
+  },
+  "pattern": [
+    "E  ",
+    "EE ",
+    "EEE"
+  ],
+  "result": {
+    "count": 4,
+    "item": "crystechmod:marika_oak_stairs"
+  },
+  "show_notification": true
+}

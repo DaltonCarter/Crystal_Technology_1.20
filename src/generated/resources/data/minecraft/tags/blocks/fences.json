@@ -1,6 +1,8 @@
 {
   "values": [
     "crystechmod:plagued_fence",
-    "crystechmod:ember_oak_fence"
+    "crystechmod:ember_oak_fence",
+    "crystechmod:dead_fence",
+    "crystechmod:marika_oak_fence"
   ]
 }

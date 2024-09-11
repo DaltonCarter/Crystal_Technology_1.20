@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "crystechmod:dead_planks"
+    }
+  },
+  "pattern": [
+    "E  ",
+    "EE ",
+    "EEE"
+  ],
+  "result": {
+    "count": 4,
+    "item": "crystechmod:dead_stairs"
+  },
+  "show_notification": true
+}

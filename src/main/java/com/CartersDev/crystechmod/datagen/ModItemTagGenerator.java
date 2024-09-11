@@ -1,6 +1,7 @@
 package com.CartersDev.crystechmod.datagen;
 
 import com.CartersDev.crystechmod.CrystalTech;
+import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -143,5 +144,24 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.PLAGUED_STICK.get(),
                         Items.STICK);
 
+        this.tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.PLAGUED_LOG.get().asItem())
+                .add(ModBlocks.PLAGUED_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_PLAGUED_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_PLAGUED_WOOD.get().asItem())
+                .add(ModBlocks.MARIKA_OAK_LOG.get().asItem())
+                .add(ModBlocks.MARIKA_OAK_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_MARIKA_OAK_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_MARIKA_OAK_WOOD.get().asItem())
+                .add(ModBlocks.DEAD_LOG.get().asItem())
+                .add(ModBlocks.DEAD_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_DEAD_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_DEAD_WOOD.get().asItem());
+
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.DEAD_PLANKS.get().asItem())
+                .add(ModBlocks.MARIKA_OAK_PLANKS.get().asItem())
+                .add(ModBlocks.EMBER_OAK_PLANKS.get().asItem());
     }
+
 }

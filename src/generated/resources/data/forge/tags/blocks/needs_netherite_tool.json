@@ -3,6 +3,18 @@
     "crystechmod:riparius_crystal",
     "crystechmod:vinifera_crystal",
     "crystechmod:cruentus_crystal",
-    "crystechmod:aboreus_crystal"
+    "crystechmod:aboreus_crystal",
+    "crystechmod:riparius_crystal_wall",
+    "crystechmod:riparius_crystal_slab",
+    "crystechmod:riparius_crystal_stairs",
+    "crystechmod:vinifera_crystal_wall",
+    "crystechmod:vinifera_crystal_slab",
+    "crystechmod:vinifera_crystal_stairs",
+    "crystechmod:cruentus_crystal_wall",
+    "crystechmod:cruentus_crystal_slab",
+    "crystechmod:cruentus_crystal_stairs",
+    "crystechmod:aboreus_crystal_wall",
+    "crystechmod:aboreus_crystal_slab",
+    "crystechmod:aboreus_crystal_stairs"
   ]
 }

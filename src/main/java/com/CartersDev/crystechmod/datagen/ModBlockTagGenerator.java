@@ -299,7 +299,37 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.PLAGUED_ANDESITE_STAIRS.get(),
                         ModBlocks.PLAGUED_STONE_WALL.get(),
                         ModBlocks.PLAGUED_STONE_SLAB.get(),
-                        ModBlocks.PLAGUED_STONE_STAIRS.get()
+                        ModBlocks.PLAGUED_STONE_STAIRS.get(),
+                        ModBlocks.PLAGUED_GRANITE_WALL.get(),
+                        ModBlocks.PLAGUED_GRANITE_SLAB.get(),
+                        ModBlocks.PLAGUED_GRANITE_STAIRS.get(),
+                        ModBlocks.PLAGUED_DIORITE_WALL.get(),
+                        ModBlocks.PLAGUED_DIORITE_SLAB.get(),
+                        ModBlocks.PLAGUED_DIORITE_STAIRS.get(),
+                        ModBlocks.RIPARIUS_STONE_WALL.get(),
+                        ModBlocks.RIPARIUS_STONE_SLAB.get(),
+                        ModBlocks.RIPARIUS_STONE_STAIRS.get(),
+                        ModBlocks.VINIFERA_STONE_WALL.get(),
+                        ModBlocks.VINIFERA_STONE_SLAB.get(),
+                        ModBlocks.VINIFERA_STONE_STAIRS.get(),
+                        ModBlocks.CRUENTUS_STONE_WALL.get(),
+                        ModBlocks.CRUENTUS_STONE_SLAB.get(),
+                        ModBlocks.CRUENTUS_STONE_STAIRS.get(),
+                        ModBlocks.ABOREUS_STONE_WALL.get(),
+                        ModBlocks.ABOREUS_STONE_SLAB.get(),
+                        ModBlocks.ABOREUS_STONE_STAIRS.get(),
+                        ModBlocks.RIPARIUS_CRYSTAL_WALL.get(),
+                        ModBlocks.RIPARIUS_CRYSTAL_SLAB.get(),
+                        ModBlocks.RIPARIUS_CRYSTAL_STAIRS.get(),
+                        ModBlocks.VINIFERA_CRYSTAL_WALL.get(),
+                        ModBlocks.VINIFERA_CRYSTAL_SLAB.get(),
+                        ModBlocks.VINIFERA_CRYSTAL_STAIRS.get(),
+                        ModBlocks.CRUENTUS_CRYSTAL_WALL.get(),
+                        ModBlocks.CRUENTUS_CRYSTAL_SLAB.get(),
+                        ModBlocks.CRUENTUS_CRYSTAL_STAIRS.get(),
+                        ModBlocks.ABOREUS_CRYSTAL_WALL.get(),
+                        ModBlocks.ABOREUS_CRYSTAL_SLAB.get(),
+                        ModBlocks.ABOREUS_CRYSTAL_STAIRS.get()
 
 
                 );
@@ -350,9 +380,30 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.EMBER_OAK_FENCE.get(),
                         ModBlocks.EMBER_OAK_FENCE_GATE.get(),
                         ModBlocks.EMBER_OAK_STAIRS.get(),
-                        ModBlocks.EMBER_OAK_SLAB.get()
+                        ModBlocks.EMBER_OAK_SLAB.get(),
+                        ModBlocks.DEAD_TRAPDOOR.get(),
+                        ModBlocks.DEAD_PLANKS.get(),
+                        ModBlocks.DEAD_BUTTON.get(),
+                        ModBlocks.DEAD_DOOR.get(),
+                        ModBlocks.DEAD_PRESSURE_PLATE.get(),
+                        ModBlocks.DEAD_FENCE.get(),
+                        ModBlocks.DEAD_FENCE_GATE.get(),
+                        ModBlocks.DEAD_STAIRS.get(),
+                        ModBlocks.DEAD_SLAB.get(),
+                        ModBlocks.MARIKA_OAK_TRAPDOOR.get(),
+                        ModBlocks.MARIKA_OAK_PLANKS.get(),
+                        ModBlocks.MARIKA_OAK_BUTTON.get(),
+                        ModBlocks.MARIKA_OAK_DOOR.get(),
+                        ModBlocks.MARIKA_OAK_PRESSURE_PLATE.get(),
+                        ModBlocks.MARIKA_OAK_FENCE.get(),
+                        ModBlocks.MARIKA_OAK_FENCE_GATE.get(),
+                        ModBlocks.MARIKA_OAK_STAIRS.get(),
+                        ModBlocks.MARIKA_OAK_SLAB.get()
 
                 );
+
+
+
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.CLEAR_TIBERGLASS.get(),
@@ -415,7 +466,25 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.EMBER_OAK_FENCE.get(),
                         ModBlocks.EMBER_OAK_FENCE_GATE.get(),
                         ModBlocks.EMBER_OAK_STAIRS.get(),
-                        ModBlocks.EMBER_OAK_SLAB.get()
+                        ModBlocks.EMBER_OAK_SLAB.get(),
+                        ModBlocks.DEAD_TRAPDOOR.get(),
+                        ModBlocks.DEAD_PLANKS.get(),
+                        ModBlocks.DEAD_BUTTON.get(),
+                        ModBlocks.DEAD_DOOR.get(),
+                        ModBlocks.DEAD_PRESSURE_PLATE.get(),
+                        ModBlocks.DEAD_FENCE.get(),
+                        ModBlocks.DEAD_FENCE_GATE.get(),
+                        ModBlocks.DEAD_STAIRS.get(),
+                        ModBlocks.DEAD_SLAB.get(),
+                        ModBlocks.MARIKA_OAK_TRAPDOOR.get(),
+                        ModBlocks.MARIKA_OAK_PLANKS.get(),
+                        ModBlocks.MARIKA_OAK_BUTTON.get(),
+                        ModBlocks.MARIKA_OAK_DOOR.get(),
+                        ModBlocks.MARIKA_OAK_PRESSURE_PLATE.get(),
+                        ModBlocks.MARIKA_OAK_FENCE.get(),
+                        ModBlocks.MARIKA_OAK_FENCE_GATE.get(),
+                        ModBlocks.MARIKA_OAK_STAIRS.get(),
+                        ModBlocks.MARIKA_OAK_SLAB.get()
                 );
 
         this.tag(ModTags.Blocks.NEEDS_PLAGUED_TOOL)
@@ -580,7 +649,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.PLAGUED_ANDESITE_STAIRS.get(),
                         ModBlocks.PLAGUED_STONE_WALL.get(),
                         ModBlocks.PLAGUED_STONE_SLAB.get(),
-                        ModBlocks.PLAGUED_STONE_STAIRS.get()
+                        ModBlocks.PLAGUED_STONE_STAIRS.get(),
+                        ModBlocks.PLAGUED_GRANITE_WALL.get(),
+                        ModBlocks.PLAGUED_GRANITE_SLAB.get(),
+                        ModBlocks.PLAGUED_GRANITE_STAIRS.get(),
+                        ModBlocks.PLAGUED_DIORITE_WALL.get(),
+                        ModBlocks.PLAGUED_DIORITE_SLAB.get(),
+                        ModBlocks.PLAGUED_DIORITE_STAIRS.get()
                 );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
@@ -603,7 +678,20 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get(),
                 ModBlocks.TIBERIUM_SOIL.get(),
                 ModBlocks.GREEN_TIBERIUM_CROP.get(),
-                ModBlocks.BLUE_TIBERIUM_CROP.get()
+                ModBlocks.BLUE_TIBERIUM_CROP.get(),
+                        ModBlocks.RIPARIUS_STONE_WALL.get(),
+                        ModBlocks.RIPARIUS_STONE_SLAB.get(),
+                        ModBlocks.RIPARIUS_STONE_STAIRS.get(),
+                        ModBlocks.VINIFERA_STONE_WALL.get(),
+                        ModBlocks.VINIFERA_STONE_SLAB.get(),
+                        ModBlocks.VINIFERA_STONE_STAIRS.get(),
+                        ModBlocks.CRUENTUS_STONE_WALL.get(),
+                        ModBlocks.CRUENTUS_STONE_SLAB.get(),
+                        ModBlocks.CRUENTUS_STONE_STAIRS.get(),
+                        ModBlocks.ABOREUS_STONE_WALL.get(),
+                        ModBlocks.ABOREUS_STONE_SLAB.get(),
+                        ModBlocks.ABOREUS_STONE_STAIRS.get()
+
                 );
 
         this.tag(ModTags.Blocks.NEEDS_GUNDANIUM_TOOL)
@@ -656,17 +744,33 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.RIPARIUS_CRYSTAL.get(),
                 ModBlocks.VINIFERA_CRYSTAL.get(),
                 ModBlocks.CRUENTUS_CRYSTAL.get(),
-                ModBlocks.ABOREUS_CRYSTAL.get()
+                ModBlocks.ABOREUS_CRYSTAL.get(),
+                        ModBlocks.RIPARIUS_CRYSTAL_WALL.get(),
+                        ModBlocks.RIPARIUS_CRYSTAL_SLAB.get(),
+                        ModBlocks.RIPARIUS_CRYSTAL_STAIRS.get(),
+                        ModBlocks.VINIFERA_CRYSTAL_WALL.get(),
+                        ModBlocks.VINIFERA_CRYSTAL_SLAB.get(),
+                        ModBlocks.VINIFERA_CRYSTAL_STAIRS.get(),
+                        ModBlocks.CRUENTUS_CRYSTAL_WALL.get(),
+                        ModBlocks.CRUENTUS_CRYSTAL_SLAB.get(),
+                        ModBlocks.CRUENTUS_CRYSTAL_STAIRS.get(),
+                        ModBlocks.ABOREUS_CRYSTAL_WALL.get(),
+                        ModBlocks.ABOREUS_CRYSTAL_SLAB.get(),
+                        ModBlocks.ABOREUS_CRYSTAL_STAIRS.get()
                 );
 
         this.tag(BlockTags.FENCES)
                 .add(ModBlocks.PLAGUED_FENCE.get(),
-                        ModBlocks.EMBER_OAK_FENCE.get()
+                        ModBlocks.EMBER_OAK_FENCE.get(),
+                        ModBlocks.DEAD_FENCE.get(),
+                        ModBlocks.MARIKA_OAK_FENCE.get()
                 );
 
         this.tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.PLAGUED_FENCE_GATE.get(),
-                        ModBlocks.EMBER_OAK_FENCE_GATE.get()
+                        ModBlocks.EMBER_OAK_FENCE_GATE.get(),
+                        ModBlocks.DEAD_FENCE_GATE.get(),
+                        ModBlocks.MARIKA_OAK_FENCE_GATE.get()
                 );
 
         this.tag(BlockTags.WALLS)
@@ -706,30 +810,70 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.WHITE_TIBERCRETE_BRICK_WALL.get(),
                         ModBlocks.YELLOW_TIBERCRETE_BRICK_WALL.get(),
                         ModBlocks.PLAGUED_ANDESITE_WALL.get(),
-                        ModBlocks.PLAGUED_STONE_WALL.get()
+                        ModBlocks.PLAGUED_STONE_WALL.get(),
+                        ModBlocks.PLAGUED_GRANITE_WALL.get(),
+                        ModBlocks.PLAGUED_DIORITE_WALL.get(),
+                        ModBlocks.RIPARIUS_STONE_WALL.get(),
+                        ModBlocks.CRUENTUS_STONE_WALL.get(),
+                        ModBlocks.ABOREUS_STONE_WALL.get(),
+                        ModBlocks.VINIFERA_STONE_WALL.get(),
+                        ModBlocks.RIPARIUS_CRYSTAL_WALL.get(),
+                        ModBlocks.CRUENTUS_CRYSTAL_WALL.get(),
+                        ModBlocks.ABOREUS_CRYSTAL_WALL.get(),
+                        ModBlocks.VINIFERA_CRYSTAL_WALL.get()
                 );
 
         this.tag(BlockTags.WOODEN_DOORS)
                 .add(ModBlocks.PLAGUED_DOOR.get(),
-                        ModBlocks.EMBER_OAK_DOOR.get()
+                        ModBlocks.EMBER_OAK_DOOR.get(),
+                        ModBlocks.DEAD_DOOR.get(),
+                        ModBlocks.MARIKA_OAK_DOOR.get()
                 );
 
         this.tag(BlockTags.WOODEN_TRAPDOORS)
                 .add(ModBlocks.PLAGUED_TRAPDOOR.get(),
-                        ModBlocks.EMBER_OAK_TRAPDOOR.get()
+                        ModBlocks.EMBER_OAK_TRAPDOOR.get(),
+                        ModBlocks.DEAD_TRAPDOOR.get(),
+                        ModBlocks.MARIKA_OAK_TRAPDOOR.get()
                 );
 
         this.tag(BlockTags.WOODEN_BUTTONS)
                 .add(ModBlocks.PLAGUED_BUTTON.get(),
-                        ModBlocks.EMBER_OAK_BUTTON.get()
+                        ModBlocks.EMBER_OAK_BUTTON.get(),
+                        ModBlocks.DEAD_BUTTON.get(),
+                        ModBlocks.MARIKA_OAK_BUTTON.get()
                 );
 
         this.tag(BlockTags.WOODEN_PRESSURE_PLATES)
                 .add(ModBlocks.PLAGUED_PRESSURE_PLATE.get(),
-                        ModBlocks.EMBER_OAK_PRESSURE_PLATE.get()
+                        ModBlocks.EMBER_OAK_PRESSURE_PLATE.get(),
+                        ModBlocks.DEAD_PRESSURE_PLATE.get(),
+                        ModBlocks.MARIKA_OAK_PRESSURE_PLATE.get()
                 );
 
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.PLAGUED_LOG.get(),
+                        ModBlocks.PLAGUED_WOOD.get(),
+                        ModBlocks.STRIPPED_PLAGUED_LOG.get(),
+                        ModBlocks.STRIPPED_PLAGUED_WOOD.get(),
+                        ModBlocks.MARIKA_OAK_LOG.get(),
+                        ModBlocks.MARIKA_OAK_WOOD.get(),
+                        ModBlocks.STRIPPED_MARIKA_OAK_LOG.get(),
+                        ModBlocks.STRIPPED_MARIKA_OAK_WOOD.get(),
+                        ModBlocks.DEAD_LOG.get(),
+                        ModBlocks.DEAD_WOOD.get(),
+                        ModBlocks.STRIPPED_DEAD_LOG.get(),
+                        ModBlocks.STRIPPED_DEAD_WOOD.get()
 
+                );
+
+        this.tag(BlockTags.LEAVES)
+                .add(ModBlocks.PLAGUED_LEAVES.get(),
+                ModBlocks.MARIKA_OAK_LEAVES.get(),
+                ModBlocks.DEAD_LEAVES.get(),
+                ModBlocks.EMBER_OAK_LEAVES.get()
+
+                );
 
     }
 }

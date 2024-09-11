@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/cruentus_stone_slab"
+    },
+    "type=double": {
+      "model": "crystechmod:block/cruentus_stone"
+    },
+    "type=top": {
+      "model": "crystechmod:block/cruentus_stone_slab_top"
+    }
+  }
+}

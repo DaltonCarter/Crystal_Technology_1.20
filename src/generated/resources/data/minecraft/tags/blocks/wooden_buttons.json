@@ -1,6 +1,8 @@
 {
   "values": [
     "crystechmod:plagued_button",
-    "crystechmod:ember_oak_button"
+    "crystechmod:ember_oak_button",
+    "crystechmod:dead_button",
+    "crystechmod:marika_oak_button"
   ]
 }

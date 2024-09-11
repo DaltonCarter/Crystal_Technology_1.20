@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:vinifera_crystal_stairs_from_vinifera_crystal_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vinifera_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:vinifera_crystal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_vinifera_crystal",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:vinifera_crystal_stairs_from_vinifera_crystal_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

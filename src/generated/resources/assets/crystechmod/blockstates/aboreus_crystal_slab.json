@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/aboreus_crystal_slab"
+    },
+    "type=double": {
+      "model": "crystechmod:block/aboreus_crystal"
+    },
+    "type=top": {
+      "model": "crystechmod:block/aboreus_crystal_slab_top"
+    }
+  }
+}

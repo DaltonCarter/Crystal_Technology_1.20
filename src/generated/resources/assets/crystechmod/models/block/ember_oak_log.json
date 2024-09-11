@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "crystechmod:block/ember_oak_log_top",
+    "side": "crystechmod:block/ember_oak_log"
+  }
+}

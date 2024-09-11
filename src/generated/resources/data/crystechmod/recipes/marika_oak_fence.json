@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "crystechmod:marika_oak_planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "   ",
+    "ESE",
+    "ESE"
+  ],
+  "result": {
+    "count": 3,
+    "item": "crystechmod:marika_oak_fence"
+  },
+  "show_notification": true
+}

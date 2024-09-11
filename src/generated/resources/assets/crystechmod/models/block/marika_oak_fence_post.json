@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "crystechmod:block/marika_oak_planks"
+  }
+}

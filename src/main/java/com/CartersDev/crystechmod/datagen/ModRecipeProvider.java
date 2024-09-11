@@ -690,7 +690,123 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("ESE")
                 .define('E', ModBlocks.EMBER_OAK_PLANKS.get())
                 .define('S', Items.STICK)
-                .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
+                .unlockedBy(getHasName(ModBlocks.EMBER_OAK_PLANKS.get()), has(ModBlocks.EMBER_OAK_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DEAD_FENCE_GATE.get(), 1)
+                .pattern("   ")
+                .pattern("SES")
+                .pattern("SES")
+                .define('E', ModBlocks.DEAD_PLANKS.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.DEAD_PLANKS.get()), has(ModBlocks.DEAD_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DEAD_STAIRS.get(), 4)
+                .pattern("E  ")
+                .pattern("EE ")
+                .pattern("EEE")
+                .define('E', ModBlocks.DEAD_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.DEAD_PLANKS.get()), has(ModBlocks.DEAD_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DEAD_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("EEE")
+                .define('E', ModBlocks.DEAD_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.DEAD_PLANKS.get()), has(ModBlocks.DEAD_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DEAD_PRESSURE_PLATE.get(), 1)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern(" EE")
+                .define('E', ModBlocks.DEAD_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.DEAD_PLANKS.get()), has(ModBlocks.DEAD_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DEAD_TRAPDOOR.get(), 2)
+                .pattern("   ")
+                .pattern("EEE")
+                .pattern("EEE")
+                .define('E', ModBlocks.DEAD_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.DEAD_PLANKS.get()), has(ModBlocks.DEAD_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DEAD_DOOR.get(), 3)
+                .pattern(" EE")
+                .pattern(" EE")
+                .pattern(" EE")
+                .define('E', ModBlocks.DEAD_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.DEAD_PLANKS.get()), has(ModBlocks.DEAD_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DEAD_FENCE.get(), 3)
+                .pattern("   ")
+                .pattern("ESE")
+                .pattern("ESE")
+                .define('E', ModBlocks.DEAD_PLANKS.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.DEAD_PLANKS.get()), has(ModBlocks.DEAD_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MARIKA_OAK_FENCE_GATE.get(), 1)
+                .pattern("   ")
+                .pattern("SES")
+                .pattern("SES")
+                .define('E', ModBlocks.MARIKA_OAK_PLANKS.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_PLANKS.get()), has(ModBlocks.MARIKA_OAK_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MARIKA_OAK_STAIRS.get(), 4)
+                .pattern("E  ")
+                .pattern("EE ")
+                .pattern("EEE")
+                .define('E', ModBlocks.MARIKA_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_PLANKS.get()), has(ModBlocks.MARIKA_OAK_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MARIKA_OAK_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("EEE")
+                .define('E', ModBlocks.MARIKA_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_PLANKS.get()), has(ModBlocks.MARIKA_OAK_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MARIKA_OAK_PRESSURE_PLATE.get(), 1)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern(" EE")
+                .define('E', ModBlocks.MARIKA_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_PLANKS.get()), has(ModBlocks.MARIKA_OAK_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MARIKA_OAK_TRAPDOOR.get(), 2)
+                .pattern("   ")
+                .pattern("EEE")
+                .pattern("EEE")
+                .define('E', ModBlocks.MARIKA_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_PLANKS.get()), has(ModBlocks.MARIKA_OAK_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MARIKA_OAK_DOOR.get(), 3)
+                .pattern(" EE")
+                .pattern(" EE")
+                .pattern(" EE")
+                .define('E', ModBlocks.MARIKA_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_PLANKS.get()), has(ModBlocks.MARIKA_OAK_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MARIKA_OAK_FENCE.get(), 3)
+                .pattern("   ")
+                .pattern("ESE")
+                .pattern("ESE")
+                .define('E', ModBlocks.MARIKA_OAK_PLANKS.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_PLANKS.get()), has(ModBlocks.MARIKA_OAK_PLANKS.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EMBER_OAK_FENCE_GATE.get(), 1)
@@ -1671,6 +1787,246 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModBlocks.INFESTED_STONE.get()), has(ModBlocks.INFESTED_STONE.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PLAGUED_GRANITE_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("TTT")
+                .pattern("TTT")
+                .define('T', ModBlocks.INFESTED_GRANITE.get())
+                .unlockedBy(getHasName(ModBlocks.INFESTED_GRANITE.get()), has(ModBlocks.INFESTED_GRANITE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PLAGUED_GRANITE_STAIRS.get(), 4)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.INFESTED_GRANITE.get())
+                .unlockedBy(getHasName(ModBlocks.INFESTED_GRANITE.get()), has(ModBlocks.INFESTED_GRANITE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PLAGUED_GRANITE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.INFESTED_GRANITE.get())
+                .unlockedBy(getHasName(ModBlocks.INFESTED_GRANITE.get()), has(ModBlocks.INFESTED_GRANITE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PLAGUED_DIORITE_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("TTT")
+                .pattern("TTT")
+                .define('T', ModBlocks.INFESTED_DIORITE.get())
+                .unlockedBy(getHasName(ModBlocks.INFESTED_DIORITE.get()), has(ModBlocks.INFESTED_DIORITE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PLAGUED_DIORITE_STAIRS.get(), 4)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.INFESTED_DIORITE.get())
+                .unlockedBy(getHasName(ModBlocks.INFESTED_DIORITE.get()), has(ModBlocks.INFESTED_DIORITE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PLAGUED_DIORITE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.INFESTED_DIORITE.get())
+                .unlockedBy(getHasName(ModBlocks.INFESTED_DIORITE.get()), has(ModBlocks.INFESTED_DIORITE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("TTT")
+                .pattern("TTT")
+                .define('T', ModBlocks.RIPARIUS_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.RIPARIUS_STONE.get()), has(ModBlocks.RIPARIUS_STONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_STAIRS.get(), 4)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.RIPARIUS_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.RIPARIUS_STONE.get()), has(ModBlocks.RIPARIUS_STONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.RIPARIUS_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.RIPARIUS_STONE.get()), has(ModBlocks.RIPARIUS_STONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("TTT")
+                .pattern("TTT")
+                .define('T', ModBlocks.VINIFERA_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.VINIFERA_STONE.get()), has(ModBlocks.VINIFERA_STONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_STAIRS.get(), 4)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.VINIFERA_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.VINIFERA_STONE.get()), has(ModBlocks.VINIFERA_STONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.VINIFERA_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.VINIFERA_STONE.get()), has(ModBlocks.VINIFERA_STONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("TTT")
+                .pattern("TTT")
+                .define('T', ModBlocks.CRUENTUS_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.CRUENTUS_STONE.get()), has(ModBlocks.CRUENTUS_STONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_STAIRS.get(), 4)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.CRUENTUS_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.CRUENTUS_STONE.get()), has(ModBlocks.CRUENTUS_STONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.CRUENTUS_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.CRUENTUS_STONE.get()), has(ModBlocks.CRUENTUS_STONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("TTT")
+                .pattern("TTT")
+                .define('T', ModBlocks.ABOREUS_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.ABOREUS_STONE.get()), has(ModBlocks.ABOREUS_STONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_STAIRS.get(), 4)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.ABOREUS_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.ABOREUS_STONE.get()), has(ModBlocks.ABOREUS_STONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.ABOREUS_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.ABOREUS_STONE.get()), has(ModBlocks.ABOREUS_STONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RIPARIUS_CRYSTAL_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("TTT")
+                .pattern("TTT")
+                .define('T', ModBlocks.RIPARIUS_CRYSTAL.get())
+                .unlockedBy(getHasName(ModBlocks.RIPARIUS_CRYSTAL.get()), has(ModBlocks.RIPARIUS_CRYSTAL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RIPARIUS_CRYSTAL_STAIRS.get(), 4)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.RIPARIUS_CRYSTAL.get())
+                .unlockedBy(getHasName(ModBlocks.RIPARIUS_CRYSTAL.get()), has(ModBlocks.RIPARIUS_CRYSTAL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RIPARIUS_CRYSTAL_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.RIPARIUS_CRYSTAL.get())
+                .unlockedBy(getHasName(ModBlocks.RIPARIUS_CRYSTAL.get()), has(ModBlocks.RIPARIUS_CRYSTAL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VINIFERA_CRYSTAL_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("TTT")
+                .pattern("TTT")
+                .define('T', ModBlocks.VINIFERA_CRYSTAL.get())
+                .unlockedBy(getHasName(ModBlocks.VINIFERA_CRYSTAL.get()), has(ModBlocks.VINIFERA_CRYSTAL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VINIFERA_CRYSTAL_STAIRS.get(), 4)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.VINIFERA_CRYSTAL.get())
+                .unlockedBy(getHasName(ModBlocks.VINIFERA_CRYSTAL.get()), has(ModBlocks.VINIFERA_CRYSTAL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VINIFERA_CRYSTAL_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.VINIFERA_CRYSTAL.get())
+                .unlockedBy(getHasName(ModBlocks.VINIFERA_CRYSTAL.get()), has(ModBlocks.VINIFERA_CRYSTAL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CRUENTUS_CRYSTAL_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("TTT")
+                .pattern("TTT")
+                .define('T', ModBlocks.CRUENTUS_CRYSTAL.get())
+                .unlockedBy(getHasName(ModBlocks.CRUENTUS_CRYSTAL.get()), has(ModBlocks.CRUENTUS_CRYSTAL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CRUENTUS_CRYSTAL_STAIRS.get(), 4)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.CRUENTUS_CRYSTAL.get())
+                .unlockedBy(getHasName(ModBlocks.CRUENTUS_CRYSTAL.get()), has(ModBlocks.CRUENTUS_CRYSTAL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CRUENTUS_CRYSTAL_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.CRUENTUS_CRYSTAL.get())
+                .unlockedBy(getHasName(ModBlocks.CRUENTUS_CRYSTAL.get()), has(ModBlocks.CRUENTUS_CRYSTAL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ABOREUS_CRYSTAL_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("TTT")
+                .pattern("TTT")
+                .define('T', ModBlocks.ABOREUS_CRYSTAL.get())
+                .unlockedBy(getHasName(ModBlocks.ABOREUS_CRYSTAL.get()), has(ModBlocks.ABOREUS_CRYSTAL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ABOREUS_CRYSTAL_STAIRS.get(), 4)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.ABOREUS_CRYSTAL.get())
+                .unlockedBy(getHasName(ModBlocks.ABOREUS_CRYSTAL.get()), has(ModBlocks.ABOREUS_CRYSTAL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ABOREUS_CRYSTAL_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.ABOREUS_CRYSTAL.get())
+                .unlockedBy(getHasName(ModBlocks.ABOREUS_CRYSTAL.get()), has(ModBlocks.ABOREUS_CRYSTAL.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PLAGUED_SWORD.get())
                 .pattern(" P ")
                 .pattern(" P ")
@@ -2233,6 +2589,25 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModBlocks.YELLOW_TIBERCRETE_POWDER.get()), has(ModBlocks.YELLOW_TIBERCRETE_POWDER.get()))
                 .save(consumer);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.PLAGUED_PLANKS.get(), 4)
+                .requires(ModBlocks.PLAGUED_LOG.get(), 1)
+                .unlockedBy(getHasName(ModBlocks.PLAGUED_LOG.get()), has(ModBlocks.PLAGUED_LOG.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.EMBER_OAK_PLANKS.get(), 4)
+                .requires(ModBlocks.EMBER_OAK_LOG.get(), 1)
+                .unlockedBy(getHasName(ModBlocks.EMBER_OAK_LOG.get()), has(ModBlocks.EMBER_OAK_LOG.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.DEAD_PLANKS.get(), 4)
+                .requires(ModBlocks.DEAD_LOG.get(), 1)
+                .unlockedBy(getHasName(ModBlocks.DEAD_LOG.get()), has(ModBlocks.DEAD_LOG.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MARIKA_OAK_PLANKS.get(), 4)
+                .requires(ModBlocks.MARIKA_OAK_LOG.get(), 1)
+                .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_LOG.get()), has(ModBlocks.MARIKA_OAK_LOG.get()))
+                .save(consumer);
 
 
 
@@ -2241,10 +2616,41 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PLAGUED_ANDESITE_SLAB.get(), ModBlocks.INFESTED_ANDESITE.get(), 2);
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PLAGUED_ANDESITE_STAIRS.get(), ModBlocks.INFESTED_ANDESITE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PLAGUED_ANDESITE_WALL.get(), ModBlocks.INFESTED_ANDESITE.get());
-
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PLAGUED_STONE_SLAB.get(), ModBlocks.INFESTED_STONE.get(), 2);
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PLAGUED_STONE_STAIRS.get(), ModBlocks.INFESTED_STONE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PLAGUED_STONE_WALL.get(), ModBlocks.INFESTED_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PLAGUED_GRANITE_SLAB.get(), ModBlocks.INFESTED_GRANITE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PLAGUED_GRANITE_STAIRS.get(), ModBlocks.INFESTED_GRANITE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PLAGUED_GRANITE_WALL.get(), ModBlocks.INFESTED_GRANITE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PLAGUED_DIORITE_SLAB.get(), ModBlocks.INFESTED_DIORITE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PLAGUED_DIORITE_STAIRS.get(), ModBlocks.INFESTED_DIORITE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PLAGUED_DIORITE_WALL.get(), ModBlocks.INFESTED_DIORITE.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_SLAB.get(), ModBlocks.RIPARIUS_STONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_STAIRS.get(), ModBlocks.RIPARIUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_WALL.get(), ModBlocks.RIPARIUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_SLAB.get(), ModBlocks.VINIFERA_STONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_STAIRS.get(), ModBlocks.VINIFERA_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_WALL.get(), ModBlocks.VINIFERA_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_SLAB.get(), ModBlocks.CRUENTUS_STONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_STAIRS.get(), ModBlocks.CRUENTUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_WALL.get(), ModBlocks.CRUENTUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_SLAB.get(), ModBlocks.ABOREUS_STONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_STAIRS.get(), ModBlocks.ABOREUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_WALL.get(), ModBlocks.ABOREUS_STONE.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_CRYSTAL_SLAB.get(), ModBlocks.RIPARIUS_CRYSTAL.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_CRYSTAL_STAIRS.get(), ModBlocks.RIPARIUS_CRYSTAL.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_CRYSTAL_WALL.get(), ModBlocks.RIPARIUS_CRYSTAL.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_CRYSTAL_SLAB.get(), ModBlocks.VINIFERA_CRYSTAL.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_CRYSTAL_STAIRS.get(), ModBlocks.VINIFERA_CRYSTAL.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_CRYSTAL_WALL.get(), ModBlocks.VINIFERA_CRYSTAL.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_CRYSTAL_SLAB.get(), ModBlocks.CRUENTUS_CRYSTAL.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_CRYSTAL_STAIRS.get(), ModBlocks.CRUENTUS_CRYSTAL.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_CRYSTAL_WALL.get(), ModBlocks.CRUENTUS_CRYSTAL.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_CRYSTAL_SLAB.get(), ModBlocks.ABOREUS_CRYSTAL.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_CRYSTAL_STAIRS.get(), ModBlocks.ABOREUS_CRYSTAL.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_CRYSTAL_WALL.get(), ModBlocks.ABOREUS_CRYSTAL.get());
 
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INFESTED_STONE_BRICKS.get(), ModBlocks.INFESTED_COBBLE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INFESTED_STONE_BRICKS.get(), ModBlocks.INFESTED_STONE.get());
@@ -2270,6 +2676,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INFESTED_COBBLE_WALL.get(), ModBlocks.INFESTED_STONE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INFESTED_COBBLE_WALL.get(), ModBlocks.INFESTED_COBBLE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INFESTED_COBBLE_WALL.get(), ModBlocks.INFESTED_STONE_BRICKS.get());
+
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.BLACK_TIBERCRETE_STAIRS.get(), ModBlocks.BLACK_TIBERCRETE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.BLUE_TIBERCRETE_STAIRS.get(), ModBlocks.BLUE_TIBERCRETE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.BROWN_TIBERCRETE_STAIRS.get(), ModBlocks.BROWN_TIBERCRETE.get());

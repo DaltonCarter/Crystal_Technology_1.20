@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "crystechmod:block/riparius_crystal",
+    "side": "crystechmod:block/riparius_crystal",
+    "top": "crystechmod:block/riparius_crystal"
+  }
+}

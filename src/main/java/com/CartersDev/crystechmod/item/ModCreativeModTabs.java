@@ -256,6 +256,11 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.RED_ZONE_SAND.get());
                         output.accept(ModBlocks.SEEDED_DIRT.get());
 
+                        output.accept(ModBlocks.PLAGUED_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_PLAGUED_LOG.get());
+                        output.accept(ModBlocks.PLAGUED_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_PLAGUED_WOOD.get());
+                        output.accept(ModBlocks.PLAGUED_LEAVES.get());
                         output.accept(ModBlocks.PLAGUED_PLANKS.get());
                         output.accept(ModBlocks.PLAGUED_STAIRS.get());
                         output.accept(ModBlocks.PLAGUED_SLAB.get());
@@ -266,6 +271,11 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.PLAGUED_DOOR.get());
                         output.accept(ModBlocks.PLAGUED_TRAPDOOR.get());
 
+                        output.accept(ModBlocks.EMBER_OAK_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_EMBER_OAK_LOG.get());
+                        output.accept(ModBlocks.EMBER_OAK_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_EMBER_OAK_WOOD.get());
+                        output.accept(ModBlocks.EMBER_OAK_LEAVES.get());
                         output.accept(ModBlocks.EMBER_OAK_PLANKS.get());
                         output.accept(ModBlocks.EMBER_OAK_STAIRS.get());
                         output.accept(ModBlocks.EMBER_OAK_SLAB.get());
@@ -275,6 +285,36 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.EMBER_OAK_FENCE_GATE.get());
                         output.accept(ModBlocks.EMBER_OAK_DOOR.get());
                         output.accept(ModBlocks.EMBER_OAK_TRAPDOOR.get());
+
+                        output.accept(ModBlocks.DEAD_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_DEAD_LOG.get());
+                        output.accept(ModBlocks.DEAD_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_DEAD_WOOD.get());
+                        output.accept(ModBlocks.DEAD_LEAVES.get());
+                        output.accept(ModBlocks.DEAD_PLANKS.get());
+                        output.accept(ModBlocks.DEAD_STAIRS.get());
+                        output.accept(ModBlocks.DEAD_SLAB.get());
+                        output.accept(ModBlocks.DEAD_BUTTON.get());
+                        output.accept(ModBlocks.DEAD_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.DEAD_FENCE.get());
+                        output.accept(ModBlocks.DEAD_FENCE_GATE.get());
+                        output.accept(ModBlocks.DEAD_DOOR.get());
+                        output.accept(ModBlocks.DEAD_TRAPDOOR.get());
+
+                        output.accept(ModBlocks.MARIKA_OAK_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_MARIKA_OAK_LOG.get());
+                        output.accept(ModBlocks.MARIKA_OAK_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_MARIKA_OAK_WOOD.get());
+                        output.accept(ModBlocks.MARIKA_OAK_LEAVES.get());
+                        output.accept(ModBlocks.MARIKA_OAK_PLANKS.get());
+                        output.accept(ModBlocks.MARIKA_OAK_STAIRS.get());
+                        output.accept(ModBlocks.MARIKA_OAK_SLAB.get());
+                        output.accept(ModBlocks.MARIKA_OAK_BUTTON.get());
+                        output.accept(ModBlocks.MARIKA_OAK_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.MARIKA_OAK_FENCE.get());
+                        output.accept(ModBlocks.MARIKA_OAK_FENCE_GATE.get());
+                        output.accept(ModBlocks.MARIKA_OAK_DOOR.get());
+                        output.accept(ModBlocks.MARIKA_OAK_TRAPDOOR.get());
 
                         output.accept(ModBlocks.INFESTED_ANDESITE.get());
                         output.accept(ModBlocks.PLAGUED_ANDESITE_STAIRS.get());
@@ -292,33 +332,54 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.PLAGUED_STONE_WALL.get());
 
                         output.accept(ModBlocks.INFESTED_DIORITE.get());
-
+                        output.accept(ModBlocks.PLAGUED_DIORITE_STAIRS.get());
+                        output.accept(ModBlocks.PLAGUED_DIORITE_SLAB.get());
+                        output.accept(ModBlocks.PLAGUED_DIORITE_WALL.get());
 
                         output.accept(ModBlocks.INFESTED_GRANITE.get());
-
+                        output.accept(ModBlocks.PLAGUED_GRANITE_STAIRS.get());
+                        output.accept(ModBlocks.PLAGUED_GRANITE_SLAB.get());
+                        output.accept(ModBlocks.PLAGUED_GRANITE_WALL.get());
 
                         output.accept(ModBlocks.RIPARIUS_STONE.get());
-
+                        output.accept(ModBlocks.RIPARIUS_STONE_STAIRS.get());
+                        output.accept(ModBlocks.RIPARIUS_STONE_SLAB.get());
+                        output.accept(ModBlocks.RIPARIUS_STONE_WALL.get());
 
                         output.accept(ModBlocks.CRUENTUS_STONE.get());
-
+                        output.accept(ModBlocks.CRUENTUS_STONE_STAIRS.get());
+                        output.accept(ModBlocks.CRUENTUS_STONE_SLAB.get());
+                        output.accept(ModBlocks.CRUENTUS_STONE_WALL.get());
 
                         output.accept(ModBlocks.VINIFERA_STONE.get());
-
+                        output.accept(ModBlocks.VINIFERA_STONE_STAIRS.get());
+                        output.accept(ModBlocks.VINIFERA_STONE_SLAB.get());
+                        output.accept(ModBlocks.VINIFERA_STONE_WALL.get());
 
                         output.accept(ModBlocks.ABOREUS_STONE.get());
-
+                        output.accept(ModBlocks.ABOREUS_STONE_STAIRS.get());
+                        output.accept(ModBlocks.ABOREUS_STONE_SLAB.get());
+                        output.accept(ModBlocks.ABOREUS_STONE_WALL.get());
 
                         output.accept(ModBlocks.RIPARIUS_CRYSTAL.get());
-
-
-                        output.accept(ModBlocks.VINIFERA_CRYSTAL.get());
-
+                        output.accept(ModBlocks.RIPARIUS_CRYSTAL_STAIRS.get());
+                        output.accept(ModBlocks.RIPARIUS_CRYSTAL_SLAB.get());
+                        output.accept(ModBlocks.RIPARIUS_CRYSTAL_WALL.get());
 
                         output.accept(ModBlocks.CRUENTUS_CRYSTAL.get());
+                        output.accept(ModBlocks.CRUENTUS_CRYSTAL_STAIRS.get());
+                        output.accept(ModBlocks.CRUENTUS_CRYSTAL_SLAB.get());
+                        output.accept(ModBlocks.CRUENTUS_CRYSTAL_WALL.get());
 
+                        output.accept(ModBlocks.VINIFERA_CRYSTAL.get());
+                        output.accept(ModBlocks.VINIFERA_CRYSTAL_STAIRS.get());
+                        output.accept(ModBlocks.VINIFERA_CRYSTAL_SLAB.get());
+                        output.accept(ModBlocks.VINIFERA_CRYSTAL_WALL.get());
 
                         output.accept(ModBlocks.ABOREUS_CRYSTAL.get());
+                        output.accept(ModBlocks.ABOREUS_CRYSTAL_STAIRS.get());
+                        output.accept(ModBlocks.ABOREUS_CRYSTAL_SLAB.get());
+                        output.accept(ModBlocks.ABOREUS_CRYSTAL_WALL.get());
 
 
                     })

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "crystechmod:vinifera_crystal"
+    }
+  },
+  "pattern": [
+    "T  ",
+    "TT ",
+    "TTT"
+  ],
+  "result": {
+    "count": 4,
+    "item": "crystechmod:vinifera_crystal_stairs"
+  },
+  "show_notification": true
+}

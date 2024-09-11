@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:infested_granite"
+  },
+  "result": "crystechmod:plagued_granite_stairs"
+}

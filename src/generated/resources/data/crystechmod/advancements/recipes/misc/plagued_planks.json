@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_plagued_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:plagued_log"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:plagued_planks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_plagued_log",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:plagued_planks"
+    ]
+  },
+  "sends_telemetry_event": false
+}

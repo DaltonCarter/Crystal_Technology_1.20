@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "crystechmod:block/riparius_stone",
+    "side": "crystechmod:block/riparius_stone",
+    "top": "crystechmod:block/riparius_stone"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_riparius_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:riparius_crystal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:riparius_crystal_slab_from_riparius_crystal_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_riparius_crystal",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:riparius_crystal_slab_from_riparius_crystal_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "crystechmod:block/marika_oak_log",
+    "side": "crystechmod:block/marika_oak_log"
+  }
+}

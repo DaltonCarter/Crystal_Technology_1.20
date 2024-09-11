@@ -19,6 +19,18 @@
     "crystechmod:deepslate_gundanium_ore",
     "crystechmod:tiberium_soil",
     "crystechmod:green_tiberium_crop",
-    "crystechmod:blue_tiberium_crop"
+    "crystechmod:blue_tiberium_crop",
+    "crystechmod:riparius_stone_wall",
+    "crystechmod:riparius_stone_slab",
+    "crystechmod:riparius_stone_stairs",
+    "crystechmod:vinifera_stone_wall",
+    "crystechmod:vinifera_stone_slab",
+    "crystechmod:vinifera_stone_stairs",
+    "crystechmod:cruentus_stone_wall",
+    "crystechmod:cruentus_stone_slab",
+    "crystechmod:cruentus_stone_stairs",
+    "crystechmod:aboreus_stone_wall",
+    "crystechmod:aboreus_stone_slab",
+    "crystechmod:aboreus_stone_stairs"
   ]
 }

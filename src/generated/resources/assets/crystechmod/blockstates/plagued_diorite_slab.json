@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/plagued_diorite_slab"
+    },
+    "type=double": {
+      "model": "crystechmod:block/infested_diorite"
+    },
+    "type=top": {
+      "model": "crystechmod:block/plagued_diorite_slab_top"
+    }
+  }
+}

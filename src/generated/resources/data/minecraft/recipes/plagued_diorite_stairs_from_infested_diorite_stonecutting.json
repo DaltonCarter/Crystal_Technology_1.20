@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:infested_diorite"
+  },
+  "result": "crystechmod:plagued_diorite_stairs"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:aboreus_crystal"
+  },
+  "result": "crystechmod:aboreus_crystal_stairs"
+}

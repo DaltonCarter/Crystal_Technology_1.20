@@ -785,20 +785,147 @@ public class ModBlocks {
     public static final RegistryObject<Block> PLAGUED_STONE_WALL = registerBlock("plagued_stone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
+    public static final RegistryObject<Block> PLAGUED_GRANITE_STAIRS = registerBlock("plagued_granite_stairs",
+            () -> new StairBlock(() -> ModBlocks.INFESTED_GRANITE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+
+    public static final RegistryObject<Block> PLAGUED_GRANITE_SLAB = registerBlock("plagued_granite_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> PLAGUED_GRANITE_WALL = registerBlock("plagued_granite_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> PLAGUED_DIORITE_STAIRS = registerBlock("plagued_diorite_stairs",
+            () -> new StairBlock(() -> ModBlocks.INFESTED_DIORITE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+
+    public static final RegistryObject<Block> PLAGUED_DIORITE_SLAB = registerBlock("plagued_diorite_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> PLAGUED_DIORITE_WALL = registerBlock("plagued_diorite_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> RIPARIUS_STONE_STAIRS = registerBlock("riparius_stone_stairs",
+            () -> new StairBlock(() -> ModBlocks.RIPARIUS_STONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+
+    public static final RegistryObject<Block> RIPARIUS_STONE_SLAB = registerBlock("riparius_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> RIPARIUS_STONE_WALL = registerBlock("riparius_stone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> VINIFERA_STONE_STAIRS = registerBlock("vinifera_stone_stairs",
+            () -> new StairBlock(() -> ModBlocks.VINIFERA_STONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+
+    public static final RegistryObject<Block> VINIFERA_STONE_SLAB = registerBlock("vinifera_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> VINIFERA_STONE_WALL = registerBlock("vinifera_stone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> CRUENTUS_STONE_STAIRS = registerBlock("cruentus_stone_stairs",
+            () -> new StairBlock(() -> ModBlocks.CRUENTUS_STONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+
+    public static final RegistryObject<Block> CRUENTUS_STONE_SLAB = registerBlock("cruentus_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> CRUENTUS_STONE_WALL = registerBlock("cruentus_stone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> ABOREUS_STONE_STAIRS = registerBlock("aboreus_stone_stairs",
+            () -> new StairBlock(() -> ModBlocks.ABOREUS_STONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+
+    public static final RegistryObject<Block> ABOREUS_STONE_SLAB = registerBlock("aboreus_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> ABOREUS_STONE_WALL = registerBlock("aboreus_stone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> RIPARIUS_CRYSTAL_STAIRS = registerBlock("riparius_crystal_stairs",
+            () -> new StairBlock(() -> ModBlocks.RIPARIUS_CRYSTAL.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+                            .noOcclusion().lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> RIPARIUS_CRYSTAL_SLAB = registerBlock("riparius_crystal_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+                    .noOcclusion().lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> RIPARIUS_CRYSTAL_WALL = registerBlock("riparius_crystal_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+                    .noOcclusion().lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> VINIFERA_CRYSTAL_STAIRS = registerBlock("vinifera_crystal_stairs",
+            () -> new StairBlock(() -> ModBlocks.VINIFERA_CRYSTAL.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+                            .noOcclusion().lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> VINIFERA_CRYSTAL_SLAB = registerBlock("vinifera_crystal_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+                    .noOcclusion().lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> VINIFERA_CRYSTAL_WALL = registerBlock("vinifera_crystal_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+                    .noOcclusion().lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> CRUENTUS_CRYSTAL_STAIRS = registerBlock("cruentus_crystal_stairs",
+            () -> new StairBlock(() -> ModBlocks.CRUENTUS_CRYSTAL.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+                            .noOcclusion().lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> CRUENTUS_CRYSTAL_SLAB = registerBlock("cruentus_crystal_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+                    .noOcclusion().lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> CRUENTUS_CRYSTAL_WALL = registerBlock("cruentus_crystal_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+                    .noOcclusion().lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> ABOREUS_CRYSTAL_STAIRS = registerBlock("aboreus_crystal_stairs",
+            () -> new StairBlock(() -> ModBlocks.ABOREUS_CRYSTAL.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+                            .noOcclusion().lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> ABOREUS_CRYSTAL_SLAB = registerBlock("aboreus_crystal_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+                    .noOcclusion().lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> ABOREUS_CRYSTAL_WALL = registerBlock("aboreus_crystal_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+                    .noOcclusion().lightLevel(tiberiumglow)));
+
     //End of Deco Blocks
 
 
     //Wood:
 
+    public static final RegistryObject<Block> PLAGUED_LOG = registerBlock("plagued_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+
+    public static final RegistryObject<Block> PLAGUED_WOOD = registerBlock("plagued_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+
+    public static final RegistryObject<Block> STRIPPED_PLAGUED_LOG = registerBlock("stripped_plagued_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).strength(3f)));
+
+    public static final RegistryObject<Block> STRIPPED_PLAGUED_WOOD = registerBlock("stripped_plagued_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(3f)));
+
+    public static final RegistryObject<Block> PLAGUED_LEAVES = registerBlock("plagued_leaves",
+            () -> new PlaguedLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
     public static final RegistryObject<Block> PLAGUED_PLANKS = registerBlock("plagued_planks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+            () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
     public static final RegistryObject<Block> PLAGUED_STAIRS = registerBlock("plagued_stairs",
             () -> new StairBlock(() -> ModBlocks.PLAGUED_PLANKS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
 
     public static final RegistryObject<Block> PLAGUED_SLAB = registerBlock("plagued_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
 
     public static final RegistryObject<Block> PLAGUED_BUTTON = registerBlock("plagued_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON),
@@ -806,32 +933,47 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PLAGUED_PRESSURE_PLATE = registerBlock("plagued_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour
-                    .Properties.copy(Blocks.OAK_PLANKS), BlockSetType.OAK));
+                    .Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
 
     public static final RegistryObject<Block> PLAGUED_FENCE = registerBlock("plagued_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
 
     public static final RegistryObject<Block> PLAGUED_FENCE_GATE = registerBlock("plagued_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS),
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE),
                     SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
     public static final RegistryObject<Block> PLAGUED_DOOR = registerBlock("plagued_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(),
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).noOcclusion(),
                     BlockSetType.OAK));
 
     public static final RegistryObject<Block> PLAGUED_TRAPDOOR = registerBlock("plagued_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(),
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR).noOcclusion(),
                     BlockSetType.OAK));
+
+    public static final RegistryObject<Block> EMBER_OAK_LOG = registerBlock("ember_oak_log",
+            () -> new EmberLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+
+    public static final RegistryObject<Block> EMBER_OAK_WOOD = registerBlock("ember_oak_wood",
+            () -> new EmberLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+
+    public static final RegistryObject<Block> STRIPPED_EMBER_OAK_LOG = registerBlock("stripped_ember_oak_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).strength(3f)));
+
+    public static final RegistryObject<Block> STRIPPED_EMBER_OAK_WOOD = registerBlock("stripped_ember_oak_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(3f)));
+
+    public static final RegistryObject<Block> EMBER_OAK_LEAVES = registerBlock("ember_oak_leaves",
+            () -> new EmberLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).lightLevel(tiberiumglow)));
 
     public static final RegistryObject<Block> EMBER_OAK_PLANKS = registerBlock("ember_oak_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
     public static final RegistryObject<Block> EMBER_OAK_STAIRS = registerBlock("ember_oak_stairs",
             () -> new StairBlock(() -> ModBlocks.EMBER_OAK_PLANKS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
 
     public static final RegistryObject<Block> EMBER_OAK_SLAB = registerBlock("ember_oak_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
 
     public static final RegistryObject<Block> EMBER_OAK_BUTTON = registerBlock("ember_oak_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON),
@@ -839,22 +981,120 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> EMBER_OAK_PRESSURE_PLATE = registerBlock("ember_oak_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour
-                    .Properties.copy(Blocks.OAK_PLANKS), BlockSetType.OAK));
+                    .Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
 
     public static final RegistryObject<Block> EMBER_OAK_FENCE = registerBlock("ember_oak_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
 
     public static final RegistryObject<Block> EMBER_OAK_FENCE_GATE = registerBlock("ember_oak_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS),
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE),
                     SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
     public static final RegistryObject<Block> EMBER_OAK_DOOR = registerBlock("ember_oak_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(),
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).noOcclusion(),
                     BlockSetType.OAK));
 
     public static final RegistryObject<Block> EMBER_OAK_TRAPDOOR = registerBlock("ember_oak_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(),
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR).noOcclusion(),
                     BlockSetType.OAK));
+
+    public static final RegistryObject<Block> DEAD_LOG = registerBlock("dead_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+
+    public static final RegistryObject<Block> DEAD_WOOD = registerBlock("dead_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+
+    public static final RegistryObject<Block> STRIPPED_DEAD_LOG = registerBlock("stripped_dead_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).strength(3f)));
+
+    public static final RegistryObject<Block> STRIPPED_DEAD_WOOD = registerBlock("stripped_dead_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(3f)));
+
+    public static final RegistryObject<Block> DEAD_LEAVES = registerBlock("dead_leaves",
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> DEAD_PLANKS = registerBlock("dead_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> DEAD_STAIRS = registerBlock("dead_stairs",
+            () -> new StairBlock(() -> ModBlocks.DEAD_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
+
+    public static final RegistryObject<Block> DEAD_SLAB = registerBlock("dead_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
+
+    public static final RegistryObject<Block> DEAD_BUTTON = registerBlock("dead_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON),
+                    BlockSetType.OAK, 20, true));
+
+    public static final RegistryObject<Block> DEAD_PRESSURE_PLATE = registerBlock("dead_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour
+                    .Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
+
+    public static final RegistryObject<Block> DEAD_FENCE = registerBlock("dead_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
+
+    public static final RegistryObject<Block> DEAD_FENCE_GATE = registerBlock("dead_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE),
+                    SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+
+    public static final RegistryObject<Block> DEAD_DOOR = registerBlock("dead_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).noOcclusion(),
+                    BlockSetType.OAK));
+
+    public static final RegistryObject<Block> DEAD_TRAPDOOR = registerBlock("dead_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR).noOcclusion(),
+                    BlockSetType.OAK));
+
+    public static final RegistryObject<Block> MARIKA_OAK_LOG = registerBlock("marika_oak_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f).lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> MARIKA_OAK_WOOD = registerBlock("marika_oak_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f).lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> STRIPPED_MARIKA_OAK_LOG = registerBlock("stripped_marika_oak_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).strength(3f).lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> STRIPPED_MARIKA_OAK_WOOD = registerBlock("stripped_marika_oak_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(3f).lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> MARIKA_OAK_LEAVES = registerBlock("marika_oak_leaves",
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> MARIKA_OAK_PLANKS = registerBlock("marika_oak_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> MARIKA_OAK_STAIRS = registerBlock("marika_oak_stairs",
+            () -> new StairBlock(() -> ModBlocks.MARIKA_OAK_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
+
+    public static final RegistryObject<Block> MARIKA_OAK_SLAB = registerBlock("marika_oak_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
+
+    public static final RegistryObject<Block> MARIKA_OAK_BUTTON = registerBlock("marika_oak_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON),
+                    BlockSetType.OAK, 20, true));
+
+    public static final RegistryObject<Block> MARIKA_OAK_PRESSURE_PLATE = registerBlock("marika_oak_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour
+                    .Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
+
+    public static final RegistryObject<Block> MARIKA_OAK_FENCE = registerBlock("marika_oak_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
+
+    public static final RegistryObject<Block> MARIKA_OAK_FENCE_GATE = registerBlock("marika_oak_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE),
+                    SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+
+    public static final RegistryObject<Block> MARIKA_OAK_DOOR = registerBlock("marika_oak_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).noOcclusion(),
+                    BlockSetType.OAK));
+
+    public static final RegistryObject<Block> MARIKA_OAK_TRAPDOOR = registerBlock("marika_oak_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR).noOcclusion(),
+                    BlockSetType.OAK));
+
+
 
     //End of Wood
 

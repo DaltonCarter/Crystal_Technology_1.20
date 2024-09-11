@@ -199,9 +199,28 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.dropSelf(ModBlocks.PLAGUED_ANDESITE_STAIRS.get());
         this.dropSelf(ModBlocks.PLAGUED_ANDESITE_WALL.get());
-
         this.dropSelf(ModBlocks.PLAGUED_STONE_STAIRS.get());
         this.dropSelf(ModBlocks.PLAGUED_STONE_WALL.get());
+        this.dropSelf(ModBlocks.PLAGUED_GRANITE_STAIRS.get());
+        this.dropSelf(ModBlocks.PLAGUED_GRANITE_WALL.get());
+        this.dropSelf(ModBlocks.PLAGUED_DIORITE_STAIRS.get());
+        this.dropSelf(ModBlocks.PLAGUED_DIORITE_WALL.get());
+        this.dropSelf(ModBlocks.RIPARIUS_STONE_STAIRS.get());
+        this.dropSelf(ModBlocks.RIPARIUS_STONE_WALL.get());
+        this.dropSelf(ModBlocks.VINIFERA_STONE_STAIRS.get());
+        this.dropSelf(ModBlocks.VINIFERA_STONE_WALL.get());
+        this.dropSelf(ModBlocks.CRUENTUS_STONE_STAIRS.get());
+        this.dropSelf(ModBlocks.CRUENTUS_STONE_WALL.get());
+        this.dropSelf(ModBlocks.ABOREUS_STONE_STAIRS.get());
+        this.dropSelf(ModBlocks.ABOREUS_STONE_WALL.get());
+        this.dropSelf(ModBlocks.RIPARIUS_CRYSTAL_STAIRS.get());
+        this.dropSelf(ModBlocks.RIPARIUS_CRYSTAL_WALL.get());
+        this.dropSelf(ModBlocks.VINIFERA_CRYSTAL_STAIRS.get());
+        this.dropSelf(ModBlocks.VINIFERA_CRYSTAL_WALL.get());
+        this.dropSelf(ModBlocks.CRUENTUS_CRYSTAL_STAIRS.get());
+        this.dropSelf(ModBlocks.CRUENTUS_CRYSTAL_WALL.get());
+        this.dropSelf(ModBlocks.ABOREUS_CRYSTAL_STAIRS.get());
+        this.dropSelf(ModBlocks.ABOREUS_CRYSTAL_WALL.get());
 
         this.dropSelf(ModBlocks.CLEAR_TIBERGLASS.get());
         this.dropSelf(ModBlocks.CLEAR_TIBERGLASS_PANE.get());
@@ -249,6 +268,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.TIBERIUM_SOIL.get());
         this.dropSelf(ModBlocks.ICHOR_SOIL.get());
 
+        this.dropSelf(ModBlocks.PLAGUED_LOG.get());
+        this.dropSelf(ModBlocks.PLAGUED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_PLAGUED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_PLAGUED_WOOD.get());
+
+        this.add(ModBlocks.PLAGUED_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.FLOWER_OF_LIFE.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
         this.dropSelf(ModBlocks.PLAGUED_STAIRS.get());
         this.dropSelf(ModBlocks.PLAGUED_PLANKS.get());
         this.dropSelf(ModBlocks.PLAGUED_FENCE.get());
@@ -256,7 +282,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PLAGUED_PRESSURE_PLATE.get());
         this.dropSelf(ModBlocks.PLAGUED_TRAPDOOR.get());
         this.dropSelf(ModBlocks.PLAGUED_FENCE_GATE.get());
+
         this.dropSelf(ModBlocks.FIRESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.EMBER_OAK_LOG.get());
+        this.dropSelf(ModBlocks.EMBER_OAK_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_EMBER_OAK_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_EMBER_OAK_WOOD.get());
+
+        this.add(ModBlocks.EMBER_OAK_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.FLOWER_OF_LIFE.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.dropSelf(ModBlocks.EMBER_OAK_STAIRS.get());
         this.dropSelf(ModBlocks.EMBER_OAK_PLANKS.get());
         this.dropSelf(ModBlocks.EMBER_OAK_FENCE.get());
@@ -264,10 +298,39 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.EMBER_OAK_PRESSURE_PLATE.get());
         this.dropSelf(ModBlocks.EMBER_OAK_TRAPDOOR.get());
         this.dropSelf(ModBlocks.EMBER_OAK_FENCE_GATE.get());
+
+        this.dropSelf(ModBlocks.DEAD_LOG.get());
+        this.dropSelf(ModBlocks.DEAD_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_DEAD_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_DEAD_WOOD.get());
+
+        this.add(ModBlocks.DEAD_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.FLOWER_OF_LIFE.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.DEAD_STAIRS.get());
+        this.dropSelf(ModBlocks.DEAD_PLANKS.get());
+        this.dropSelf(ModBlocks.DEAD_FENCE.get());
+        this.dropSelf(ModBlocks.DEAD_BUTTON.get());
+        this.dropSelf(ModBlocks.DEAD_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.DEAD_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.DEAD_FENCE_GATE.get());
+
+        this.dropSelf(ModBlocks.MARIKA_OAK_LOG.get());
+        this.dropSelf(ModBlocks.MARIKA_OAK_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_MARIKA_OAK_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_MARIKA_OAK_WOOD.get());
+
+        this.add(ModBlocks.MARIKA_OAK_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.FLOWER_OF_LIFE.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.MARIKA_OAK_STAIRS.get());
+        this.dropSelf(ModBlocks.MARIKA_OAK_PLANKS.get());
+        this.dropSelf(ModBlocks.MARIKA_OAK_FENCE.get());
+        this.dropSelf(ModBlocks.MARIKA_OAK_BUTTON.get());
+        this.dropSelf(ModBlocks.MARIKA_OAK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.MARIKA_OAK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.MARIKA_OAK_FENCE_GATE.get());
+
+
+
         this.dropSelf(ModBlocks.INFESTED_COBBLE_WALL.get());
         this.dropSelf(ModBlocks.INFESTED_STONE_BRICK_WALL.get());
-
-
         this.dropSelf(ModBlocks.INFESTED_STONE_BRICK_STAIRS.get());
         this.dropSelf(ModBlocks.INFESTED_COBBLE_STAIRS.get());
 
@@ -292,6 +355,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.EMBER_OAK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.EMBER_OAK_SLAB.get()));
+
+        this.add(ModBlocks.DEAD_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.DEAD_SLAB.get()));
+
+        this.add(ModBlocks.MARIKA_OAK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.MARIKA_OAK_SLAB.get()));
 
         this.add(ModBlocks.INFESTED_STONE_BRICK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.INFESTED_STONE_BRICK_SLAB.get()));
@@ -365,17 +434,53 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.YELLOW_TIBERCRETE_BRICK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.YELLOW_TIBERCRETE_BRICK_SLAB.get()));
 
+        this.add(ModBlocks.RIPARIUS_STONE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.RIPARIUS_STONE_SLAB.get()));
+
+        this.add(ModBlocks.VINIFERA_STONE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.VINIFERA_STONE_SLAB.get()));
+
+        this.add(ModBlocks.CRUENTUS_STONE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CRUENTUS_STONE_SLAB.get()));
+
+        this.add(ModBlocks.ABOREUS_STONE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ABOREUS_STONE_SLAB.get()));
+
+        this.add(ModBlocks.RIPARIUS_CRYSTAL_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.RIPARIUS_CRYSTAL_SLAB.get()));
+
+        this.add(ModBlocks.VINIFERA_CRYSTAL_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.VINIFERA_CRYSTAL_SLAB.get()));
+
+        this.add(ModBlocks.CRUENTUS_CRYSTAL_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CRUENTUS_CRYSTAL_SLAB.get()));
+
+        this.add(ModBlocks.ABOREUS_CRYSTAL_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ABOREUS_CRYSTAL_SLAB.get()));
+
         this.add(ModBlocks.PLAGUED_ANDESITE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.PLAGUED_ANDESITE_SLAB.get()));
 
         this.add(ModBlocks.PLAGUED_STONE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.PLAGUED_STONE_SLAB.get()));
 
+        this.add(ModBlocks.PLAGUED_GRANITE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PLAGUED_GRANITE_SLAB.get()));
+
+        this.add(ModBlocks.PLAGUED_DIORITE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PLAGUED_DIORITE_SLAB.get()));
+
         this.add(ModBlocks.PLAGUED_DOOR.get(),
                 block -> createDoorTable(ModBlocks.PLAGUED_DOOR.get()));
 
         this.add(ModBlocks.EMBER_OAK_DOOR.get(),
                 block -> createDoorTable(ModBlocks.EMBER_OAK_DOOR.get()));
+
+        this.add(ModBlocks.DEAD_DOOR.get(),
+                block -> createDoorTable(ModBlocks.DEAD_DOOR.get()));
+
+        this.add(ModBlocks.MARIKA_OAK_DOOR.get(),
+                block -> createDoorTable(ModBlocks.MARIKA_OAK_DOOR.get()));
 
         //End of Complex Self Drops
 

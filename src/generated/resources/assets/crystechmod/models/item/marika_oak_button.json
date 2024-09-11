@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "crystechmod:block/marika_oak_planks"
+  }
+}

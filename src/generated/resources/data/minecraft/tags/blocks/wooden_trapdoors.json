@@ -1,6 +1,8 @@
 {
   "values": [
     "crystechmod:plagued_trapdoor",
-    "crystechmod:ember_oak_trapdoor"
+    "crystechmod:ember_oak_trapdoor",
+    "crystechmod:dead_trapdoor",
+    "crystechmod:marika_oak_trapdoor"
   ]
 }

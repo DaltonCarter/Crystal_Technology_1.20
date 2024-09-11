@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "crystechmod:riparius_crystal"
+  },
+  "result": "crystechmod:riparius_crystal_slab"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/leaves",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "all": "crystechmod:block/ember_oak_leaves"
+  }
+}

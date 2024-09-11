@@ -17,6 +17,24 @@
     "crystechmod:ember_oak_fence",
     "crystechmod:ember_oak_fence_gate",
     "crystechmod:ember_oak_stairs",
-    "crystechmod:ember_oak_slab"
+    "crystechmod:ember_oak_slab",
+    "crystechmod:dead_trapdoor",
+    "crystechmod:dead_planks",
+    "crystechmod:dead_button",
+    "crystechmod:dead_door",
+    "crystechmod:dead_pressure_plate",
+    "crystechmod:dead_fence",
+    "crystechmod:dead_fence_gate",
+    "crystechmod:dead_stairs",
+    "crystechmod:dead_slab",
+    "crystechmod:marika_oak_trapdoor",
+    "crystechmod:marika_oak_planks",
+    "crystechmod:marika_oak_button",
+    "crystechmod:marika_oak_door",
+    "crystechmod:marika_oak_pressure_plate",
+    "crystechmod:marika_oak_fence",
+    "crystechmod:marika_oak_fence_gate",
+    "crystechmod:marika_oak_stairs",
+    "crystechmod:marika_oak_slab"
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:vinifera_stone"
+  },
+  "result": "crystechmod:vinifera_stone_wall"
+}

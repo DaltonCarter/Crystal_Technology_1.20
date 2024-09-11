@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "crystechmod:infested_diorite"
+    }
+  },
+  "pattern": [
+    "   ",
+    "TTT",
+    "TTT"
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:plagued_diorite_wall"
+  },
+  "show_notification": true
+}

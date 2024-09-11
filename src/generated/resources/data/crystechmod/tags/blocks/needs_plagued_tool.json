@@ -161,6 +161,12 @@
     "crystechmod:plagued_andesite_stairs",
     "crystechmod:plagued_stone_wall",
     "crystechmod:plagued_stone_slab",
-    "crystechmod:plagued_stone_stairs"
+    "crystechmod:plagued_stone_stairs",
+    "crystechmod:plagued_granite_wall",
+    "crystechmod:plagued_granite_slab",
+    "crystechmod:plagued_granite_stairs",
+    "crystechmod:plagued_diorite_wall",
+    "crystechmod:plagued_diorite_slab",
+    "crystechmod:plagued_diorite_stairs"
   ]
 }

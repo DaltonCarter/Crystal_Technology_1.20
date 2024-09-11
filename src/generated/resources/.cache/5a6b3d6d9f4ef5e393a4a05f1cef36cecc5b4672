@@ -1,7 +1,9 @@
-// 1.20.1	2024-08-24T23:30:09.9800798	Tags for minecraft:item mod id crystechmod
+// 1.20.1	2024-09-11T03:41:05.1238282	Tags for minecraft:item mod id crystechmod
 3c0db247b35cadbc078a1b88ac98777330717935 data/crystechmod/tags/items/hazmat_glass_panes.json
 ecf2a3889f87177c168a6ffc2c5f25e077381f19 data/crystechmod/tags/items/sticks.json
 39acdcf33383e05a367faca9c1c896cc6cdba9c0 data/crystechmod/tags/items/tibercrete_sands.json
 68d8524c113f254fcd6b3a8048e13140d6d0fa5a data/minecraft/tags/items/creeper_drop_music_discs.json
+e0721fc7760819c2882cc2896aeb4f60de8a8dad data/minecraft/tags/items/logs_that_burn.json
 68d8524c113f254fcd6b3a8048e13140d6d0fa5a data/minecraft/tags/items/music_discs.json
+11f2a89e1d32fef11e2d27ab1bb5177832a97e92 data/minecraft/tags/items/planks.json
 7a19fd90233dbcf16f92c524b61edd7543a99b6d data/minecraft/tags/items/trimmable_armor.json

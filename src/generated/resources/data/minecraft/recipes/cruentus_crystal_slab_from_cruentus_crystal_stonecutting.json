@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "crystechmod:cruentus_crystal"
+  },
+  "result": "crystechmod:cruentus_crystal_slab"
+}

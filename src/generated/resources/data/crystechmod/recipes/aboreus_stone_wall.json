@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "crystechmod:aboreus_stone"
+    }
+  },
+  "pattern": [
+    "   ",
+    "TTT",
+    "TTT"
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:aboreus_stone_wall"
+  },
+  "show_notification": true
+}

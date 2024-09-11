@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/marika_oak_slab"
+    },
+    "type=double": {
+      "model": "crystechmod:block/marika_oak_planks"
+    },
+    "type=top": {
+      "model": "crystechmod:block/marika_oak_slab_top"
+    }
+  }
+}

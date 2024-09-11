@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "crystechmod:block/vinifera_stone",
+    "side": "crystechmod:block/vinifera_stone",
+    "top": "crystechmod:block/vinifera_stone"
+  }
+}

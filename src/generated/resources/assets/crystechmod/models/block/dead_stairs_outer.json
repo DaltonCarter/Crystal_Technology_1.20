@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "crystechmod:block/dead_planks",
+    "side": "crystechmod:block/dead_planks",
+    "top": "crystechmod:block/dead_planks"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "crystechmod:block/cruentus_stone",
+    "side": "crystechmod:block/cruentus_stone",
+    "top": "crystechmod:block/cruentus_stone"
+  }
+}

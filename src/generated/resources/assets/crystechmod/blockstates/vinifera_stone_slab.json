@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/vinifera_stone_slab"
+    },
+    "type=double": {
+      "model": "crystechmod:block/vinifera_stone"
+    },
+    "type=top": {
+      "model": "crystechmod:block/vinifera_stone_slab_top"
+    }
+  }
+}

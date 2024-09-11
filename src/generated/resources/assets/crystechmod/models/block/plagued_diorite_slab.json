@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "crystechmod:block/infested_diorite",
+    "side": "crystechmod:block/infested_diorite",
+    "top": "crystechmod:block/infested_diorite"
+  }
+}

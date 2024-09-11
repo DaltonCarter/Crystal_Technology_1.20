@@ -333,12 +333,22 @@ in with other blocks of their Biome type
 
 -------------------------------------------------------------------------------
 
-9/08/2024 - 9/09/2024
+9/08/2024 - 9/11/2024
 Version 0.4.6
 Posted By: Dalton Carter
 
 -Added Tibercrete Bricks, Brick Slabs, Brick Stairs, brick walls, and Tibercrete Walls for all 16 colors.
--Added Plagued Andesite & Plagued Stone, Slabs, Stairs, and walls.
+
+-Added Plagued Andesite, Plagued Granite, Plagued Diorite, Plagued Stone, 4 Tiberium Stone,
+4 Tiberium Crystal Formation Block, Slabs, Stairs, and walls.
+
+-Added Logs, Wood, & leaves for Plagued Wood
+-Added Ember Oak Blocks, and Deco Blocks
+-Added Dead Blocks, and Deco Blocks
+-Added Marika Oak Blocks, and Deco Blocks *
+
+*Note: This is The Glow Tree by Che Carter, renamed as a Gag on the Erd Tree. Used with Permission...
+considering I helped make it...the Glow tree that is. The reference to Elden Ring is for Laughs.
 
 ======================================================
 LEGACY 1.16.5 Changelog

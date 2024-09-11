@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:cruentus_stone"
+  },
+  "result": "crystechmod:cruentus_stone_stairs"
+}
