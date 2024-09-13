@@ -41,7 +41,7 @@
   "item.crystechmod.plagued_hoe": "Plagued Hoe",
   "item.crystechmod.plagued_shovel": "Plagued Shovel",
   "item.crystechmod.plagued_bow": "Plagued Bow",
-  "item.crystechmod.core_steel_sign": "Core Steel Sign",
+
   "item.crystechmod.gundanium_helmet": "Gundanium Helmet",
   "item.crystechmod.gundanium_chestplate": "Gundanium Chestplate",
   "item.crystechmod.gundanium_leggings": "Gundanium Leggings",
@@ -304,7 +304,14 @@
   "block.crystechmod.white_tibercrete_stairs": "White Tibercrete Stairs",
   "block.crystechmod.yellow_tibercrete_stairs": "Yellow Tibercrete Stairs",
   "block.crystechmod.plagued_leaves": "Plagued Leaves",
-  "block.crystechmod.core_steel_sign": "Core Steel Sign",
+  "block.crystechmod.plagued_sign": "Plagued Sign",
+  "block.crystechmod.plagued_hanging_sign": "Plagued Hanging Sign",
+  "block.crystechmod.ember_oak_sign": "Ember_Oak Sign",
+  "block.crystechmod.ember_oak_hanging_sign": "Ember_Oak Hanging Sign",
+  "block.crystechmod.dead_sign": "Dead Sign",
+  "block.crystechmod.dead_hanging_sign": "Dead Hanging Sign",
+  "block.crystechmod.marika_oak_sign": "Marika_Oak Sign",
+  "block.crystechmod.marika_oak_hanging_sign": "Marika_Oak Hanging Sign",
   "block.crystechmod.infested_andesite": "Plagued Andesite",
   "block.crystechmod.infested_cobble": "Plagued Cobblestone",
   "block.crystechmod.infested_cobble_slab": "Plagued Cobblestone Slab",
@@ -379,7 +386,7 @@
   "block.crystechmod.blossom_base": "Tiberium Blossom Tree Base",
   "block.crystechmod.blossom_center": "Tiberium Blossom Tree Trunk",
   "block.crystechmod.blossom_spout": "Tiberium Blossom Tree Spout",
-  "block.crystechmod.blossom_filler": "Tiberium Blossom Tree Arm",
+  "block.crystechmod.blossom_arm": "Tiberium Blossom Tree Arm",
 
   "block.crystechmod.seeded_dirt": "Tiberium Seeded Dirt",
 

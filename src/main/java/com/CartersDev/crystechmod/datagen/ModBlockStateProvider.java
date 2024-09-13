@@ -175,11 +175,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TIBERIUM_SOIL);
         blockWithItem(ModBlocks.ICHOR_SOIL);
 
-        blockItem(ModBlocks.BLOSSOM_SPOUT);
+        axisBlock(((RotatedPillarBlock) ModBlocks.BLOSSOM_SPOUT.get()), blockTexture(ModBlocks.BLOSSOM_SPOUT.get()),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/blossom_spout_top"));
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.BLOSSOM_CENTER.get()), blockTexture(ModBlocks.BLOSSOM_CENTER.get()),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/blossom_top"));
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.BLOSSOM_BASE.get()), blockTexture(ModBlocks.BLOSSOM_BASE.get()),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/blossom_top"));
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.BLOSSOM_ARM.get()), blockTexture(ModBlocks.BLOSSOM_CENTER.get()),blockTexture(ModBlocks.BLOSSOM_CENTER.get()));
 
         blockWithItem(ModBlocks.SOUND_BLOCK);
         
         logBlock(((RotatedPillarBlock) ModBlocks.PLAGUED_LOG.get()));
+
         axisBlock(((RotatedPillarBlock) ModBlocks.PLAGUED_WOOD.get()), blockTexture(ModBlocks.PLAGUED_LOG.get()),blockTexture(ModBlocks.PLAGUED_LOG.get()));
 
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_PLAGUED_LOG.get()), blockTexture(ModBlocks.STRIPPED_PLAGUED_LOG.get()),
@@ -191,6 +201,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.PLAGUED_WOOD);
         blockItem(ModBlocks.STRIPPED_PLAGUED_LOG);
         blockItem(ModBlocks.STRIPPED_PLAGUED_WOOD);
+        blockItem(ModBlocks.BLOSSOM_SPOUT);
+        blockItem(ModBlocks.BLOSSOM_CENTER);
+        blockItem(ModBlocks.BLOSSOM_BASE);
+        blockItem(ModBlocks.BLOSSOM_ARM);
 
         leavesBlock(ModBlocks.PLAGUED_LEAVES);
 
@@ -238,6 +252,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_MARIKA_OAK_WOOD);
 
         leavesBlock(ModBlocks.MARIKA_OAK_LEAVES);
+
+        signBlock(((StandingSignBlock) ModBlocks.PLAGUED_SIGN.get()), ((WallSignBlock) ModBlocks.PLAGUED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
+
+        hangingSignBlock(ModBlocks.PLAGUED_HANGING_SIGN.get(), ModBlocks.PLAGUED_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.MARIKA_OAK_SIGN.get()), ((WallSignBlock) ModBlocks.MARIKA_OAK_WALL_SIGN.get()),
+                blockTexture(ModBlocks.MARIKA_OAK_PLANKS.get()));
+
+        hangingSignBlock(ModBlocks.MARIKA_OAK_HANGING_SIGN.get(), ModBlocks.MARIKA_OAK_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.MARIKA_OAK_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.EMBER_OAK_SIGN.get()), ((WallSignBlock) ModBlocks.EMBER_OAK_WALL_SIGN.get()),
+                blockTexture(ModBlocks.EMBER_OAK_PLANKS.get()));
+
+        hangingSignBlock(ModBlocks.EMBER_OAK_HANGING_SIGN.get(), ModBlocks.EMBER_OAK_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.EMBER_OAK_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.DEAD_SIGN.get()), ((WallSignBlock) ModBlocks.DEAD_WALL_SIGN.get()),
+                blockTexture(ModBlocks.DEAD_PLANKS.get()));
+
+        hangingSignBlock(ModBlocks.DEAD_HANGING_SIGN.get(), ModBlocks.DEAD_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.DEAD_PLANKS.get()));
 
         paneBlockWithRenderType((IronBarsBlock) ModBlocks.CLEAR_TIBERGLASS_PANE.get(), modLoc("block/clear_tiberglass"), modLoc("block/clear_tiberglass_pane_top"),"translucent");
        paneBlockWithRenderType((IronBarsBlock) ModBlocks.MOSAIC_TIBERGLASS_PANE.get(), modLoc("block/mosaic_tiberglass"), modLoc("block/mosaic_tiberglass_pane_top"),"translucent");
@@ -486,6 +520,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ModelFile.UncheckedModelFile(modLoc("block/tiberium_grinder")));
 
 
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
+        ModelFile sign = models().sign(name(signBlock), texture);
+        hangingSignBlock(signBlock, wallSignBlock, sign);
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ModelFile sign) {
+        simpleBlock(signBlock, sign);
+        simpleBlock(wallSignBlock, sign);
+    }
+
+    private String name(Block block) {
+        return key(block).getPath();
+    }
+
+    private ResourceLocation key(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block);
     }
 
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {

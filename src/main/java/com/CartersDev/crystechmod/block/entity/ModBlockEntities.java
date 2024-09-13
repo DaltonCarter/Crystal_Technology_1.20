@@ -18,6 +18,21 @@ public static final RegistryObject<BlockEntityType<TiberiumGrinderBlockEntity>> 
         BLOCK_ENTITIES.register("tiberium_grinder_be", () -> BlockEntityType.Builder.of(
                 TiberiumGrinderBlockEntity::new, ModBlocks.TIBERIUM_GRINDER.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> MOD_SIGN =
+            BLOCK_ENTITIES.register("mod_sign", () -> BlockEntityType.Builder.of(
+                    ModSignBlockEntity::new, ModBlocks.PLAGUED_SIGN.get(), ModBlocks.PLAGUED_WALL_SIGN.get(),
+                    ModBlocks.MARIKA_OAK_SIGN.get(), ModBlocks.MARIKA_OAK_WALL_SIGN.get(),
+                    ModBlocks.EMBER_OAK_SIGN.get(), ModBlocks.EMBER_OAK_WALL_SIGN.get(),
+                    ModBlocks.DEAD_SIGN.get(), ModBlocks.DEAD_WALL_SIGN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<ModHangingSignBlockEntity>> MOD_HANGING_SIGN =
+            BLOCK_ENTITIES.register("mod_hanging_sign", () -> BlockEntityType.Builder.of(
+                    ModHangingSignBlockEntity::new,
+                    ModBlocks.PLAGUED_HANGING_SIGN.get(), ModBlocks.PLAGUED_WALL_HANGING_SIGN.get(),
+                    ModBlocks.EMBER_OAK_HANGING_SIGN.get(), ModBlocks.EMBER_OAK_WALL_HANGING_SIGN.get(),
+                    ModBlocks.MARIKA_OAK_HANGING_SIGN.get(), ModBlocks.MARIKA_OAK_WALL_HANGING_SIGN.get(),
+                    ModBlocks.DEAD_HANGING_SIGN.get(), ModBlocks.DEAD_WALL_HANGING_SIGN.get()).build(null));
+
 
 
 

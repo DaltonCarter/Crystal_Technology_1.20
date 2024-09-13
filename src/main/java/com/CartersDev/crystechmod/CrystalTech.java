@@ -17,11 +17,13 @@ import com.CartersDev.crystechmod.screen.ModMenuTypes;
 import com.CartersDev.crystechmod.screen.TiberiumGrinderScreen;
 import com.CartersDev.crystechmod.sound.ModSounds;
 import com.CartersDev.crystechmod.util.BetterBrewingRecipe;
+import com.CartersDev.crystechmod.util.ModWoodTypes;
 import com.CartersDev.crystechmod.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
@@ -118,6 +120,11 @@ public class CrystalTech {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+
+            Sheets.addWoodType(ModWoodTypes.PLAGUED);
+            Sheets.addWoodType(ModWoodTypes.EMBER_OAK);
+            Sheets.addWoodType(ModWoodTypes.DEAD);
+            Sheets.addWoodType(ModWoodTypes.MARIKA_OAK);
 
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
 

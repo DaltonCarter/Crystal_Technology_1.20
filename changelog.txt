@@ -333,9 +333,11 @@ in with other blocks of their Biome type
 
 -------------------------------------------------------------------------------
 
-9/08/2024 - 9/11/2024
-Version 0.4.6
+9/08/2024 - 9/12/2024
+Version 0.4.7
 Posted By: Dalton Carter
+
+Updated to Version 0.4.7
 
 -Added Tibercrete Bricks, Brick Slabs, Brick Stairs, brick walls, and Tibercrete Walls for all 16 colors.
 
@@ -346,6 +348,10 @@ Posted By: Dalton Carter
 -Added Ember Oak Blocks, and Deco Blocks
 -Added Dead Blocks, and Deco Blocks
 -Added Marika Oak Blocks, and Deco Blocks *
+
+-Re-added Tiberium Blossom Tree
+
+-Added Signs and Hanging signs for all Wood Types
 
 *Note: This is The Glow Tree by Che Carter, renamed as a Gag on the Erd Tree. Used with Permission...
 considering I helped make it...the Glow tree that is. The reference to Elden Ring is for Laughs.

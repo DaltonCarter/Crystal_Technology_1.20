@@ -5,6 +5,7 @@ import com.CartersDev.crystechmod.block.custom.*;
 import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.sound.ModSounds;
+import com.CartersDev.crystechmod.util.ModWoodTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
@@ -1343,12 +1344,72 @@ public class ModBlocks {
     public static final RegistryObject<Block> TIBERIUM_GRINDER = registerBlock("tiberium_grinder",
             () -> new TiberiumGrinderBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
+    public static final RegistryObject<Block> PLAGUED_SIGN = BLOCKS.register("plagued_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.PLAGUED));
+
+    public static final RegistryObject<Block> PLAGUED_WALL_SIGN = BLOCKS.register("plagued_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.PLAGUED));
+
+    public static final RegistryObject<Block> PLAGUED_HANGING_SIGN = BLOCKS.register("plagued_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.PLAGUED));
+
+    public static final RegistryObject<Block> PLAGUED_WALL_HANGING_SIGN = BLOCKS.register("plagued_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.PLAGUED));
+
+    public static final RegistryObject<Block> EMBER_OAK_SIGN = BLOCKS.register("ember_oak_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.EMBER_OAK));
+
+    public static final RegistryObject<Block> EMBER_OAK_WALL_SIGN = BLOCKS.register("ember_oak_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.EMBER_OAK));
+
+    public static final RegistryObject<Block> EMBER_OAK_HANGING_SIGN = BLOCKS.register("ember_oak_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.EMBER_OAK));
+
+    public static final RegistryObject<Block> EMBER_OAK_WALL_HANGING_SIGN = BLOCKS.register("ember_oak_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.EMBER_OAK));
+
+    public static final RegistryObject<Block> DEAD_SIGN = BLOCKS.register("dead_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.DEAD));
+
+    public static final RegistryObject<Block> DEAD_WALL_SIGN = BLOCKS.register("dead_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.DEAD));
+
+    public static final RegistryObject<Block> DEAD_HANGING_SIGN = BLOCKS.register("dead_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.DEAD));
+
+    public static final RegistryObject<Block> DEAD_WALL_HANGING_SIGN = BLOCKS.register("dead_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.DEAD));
+
+    public static final RegistryObject<Block> MARIKA_OAK_SIGN = BLOCKS.register("marika_oak_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.MARIKA_OAK));
+
+    public static final RegistryObject<Block> MARIKA_OAK_WALL_SIGN = BLOCKS.register("marika_oak_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.MARIKA_OAK));
+
+    public static final RegistryObject<Block> MARIKA_OAK_HANGING_SIGN = BLOCKS.register("marika_oak_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.MARIKA_OAK));
+
+    public static final RegistryObject<Block> MARIKA_OAK_WALL_HANGING_SIGN = BLOCKS.register("marika_oak_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.MARIKA_OAK));
+
     //End of Block Entities
 
 
     //Blossom Tree
     public static final RegistryObject<Block> BLOSSOM_SPOUT = registerBlock("blossom_spout",
             () -> new BlossomTreeSpoutBlock(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noLootTable()
+                    .randomTicks()));
+
+    public static final RegistryObject<Block> BLOSSOM_CENTER = registerBlock("blossom_center",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noLootTable()
+                    .randomTicks()));
+
+    public static final RegistryObject<Block> BLOSSOM_BASE = registerBlock("blossom_base",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noLootTable()
+                    .randomTicks()));
+
+    public static final RegistryObject<Block> BLOSSOM_ARM = registerBlock("blossom_arm",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noLootTable()
                     .randomTicks()));
     //End Blossom Tree
 

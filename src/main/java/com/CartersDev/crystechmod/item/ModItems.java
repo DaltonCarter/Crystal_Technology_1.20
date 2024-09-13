@@ -502,6 +502,30 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
     public static final RegistryObject<Item> MOLTEN_PURPLE_TIBERIUM_BUCKET = ITEMS.register("molten_purple_tiberium_bucket",
             () -> new BucketItem(ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM, new Item.Properties().craftRemainder(Items.BUCKET)
                     .stacksTo(1)));
+
+    public static final RegistryObject<Item> PLAGUED_SIGN = ITEMS.register("plagued_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.PLAGUED_SIGN.get(), ModBlocks.PLAGUED_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> PLAGUED_HANGING_SIGN = ITEMS.register("plagued_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.PLAGUED_HANGING_SIGN.get(), ModBlocks.PLAGUED_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> EMBER_OAK_SIGN = ITEMS.register("ember_oak_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.EMBER_OAK_SIGN.get(), ModBlocks.EMBER_OAK_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> EMBER_OAK_HANGING_SIGN = ITEMS.register("ember_oak_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.EMBER_OAK_HANGING_SIGN.get(), ModBlocks.EMBER_OAK_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> DEAD_SIGN = ITEMS.register("dead_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.DEAD_SIGN.get(), ModBlocks.DEAD_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> DEAD_HANGING_SIGN = ITEMS.register("dead_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.DEAD_HANGING_SIGN.get(), ModBlocks.DEAD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> MARIKA_OAK_SIGN = ITEMS.register("marika_oak_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.MARIKA_OAK_SIGN.get(), ModBlocks.MARIKA_OAK_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> MARIKA_OAK_HANGING_SIGN = ITEMS.register("marika_oak_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.MARIKA_OAK_HANGING_SIGN.get(), ModBlocks.MARIKA_OAK_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
 //End of Misc Items
 
 

@@ -383,6 +383,15 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         withExistingParent(ModItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
+        simpleItem(ModItems.PLAGUED_SIGN);
+        simpleItem(ModItems.PLAGUED_HANGING_SIGN);
+        simpleItem(ModItems.EMBER_OAK_SIGN);
+        simpleItem(ModItems.EMBER_OAK_HANGING_SIGN);
+        simpleItem(ModItems.DEAD_SIGN);
+        simpleItem(ModItems.DEAD_HANGING_SIGN);
+        simpleItem(ModItems.MARIKA_OAK_SIGN);
+        simpleItem(ModItems.MARIKA_OAK_HANGING_SIGN);
+
     }
 
     // Shoutout to El_Redstoniano for making this

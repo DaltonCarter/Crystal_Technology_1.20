@@ -22,7 +22,11 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                 .title(Component.translatable("creativetab.crystal_technology_tab"))
                 .displayItems((itemDisplayParameters, output) -> {
 
-                    //                    output.accept(ModBlocks.BLOSSOM_SPOUT.get());
+                    output.accept(ModBlocks.BLOSSOM_SPOUT.get());
+                    output.accept(ModBlocks.BLOSSOM_CENTER.get());
+                    output.accept(ModBlocks.BLOSSOM_BASE.get());
+                    output.accept(ModBlocks.BLOSSOM_ARM.get());
+
                     output.accept(ModBlocks.NOD_CREST_LARGE.get());
                     output.accept(ModItems.RHINO_SPAWN_EGG.get());
 
@@ -270,6 +274,8 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.PLAGUED_FENCE_GATE.get());
                         output.accept(ModBlocks.PLAGUED_DOOR.get());
                         output.accept(ModBlocks.PLAGUED_TRAPDOOR.get());
+                        output.accept(ModItems.PLAGUED_SIGN.get());
+                        output.accept(ModItems.PLAGUED_HANGING_SIGN.get());
 
                         output.accept(ModBlocks.EMBER_OAK_LOG.get());
                         output.accept(ModBlocks.STRIPPED_EMBER_OAK_LOG.get());
@@ -285,6 +291,8 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.EMBER_OAK_FENCE_GATE.get());
                         output.accept(ModBlocks.EMBER_OAK_DOOR.get());
                         output.accept(ModBlocks.EMBER_OAK_TRAPDOOR.get());
+                        output.accept(ModItems.EMBER_OAK_SIGN.get());
+                        output.accept(ModItems.EMBER_OAK_HANGING_SIGN.get());
 
                         output.accept(ModBlocks.DEAD_LOG.get());
                         output.accept(ModBlocks.STRIPPED_DEAD_LOG.get());
@@ -300,6 +308,8 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.DEAD_FENCE_GATE.get());
                         output.accept(ModBlocks.DEAD_DOOR.get());
                         output.accept(ModBlocks.DEAD_TRAPDOOR.get());
+                        output.accept(ModItems.DEAD_SIGN.get());
+                        output.accept(ModItems.DEAD_HANGING_SIGN.get());
 
                         output.accept(ModBlocks.MARIKA_OAK_LOG.get());
                         output.accept(ModBlocks.STRIPPED_MARIKA_OAK_LOG.get());
@@ -315,6 +325,8 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.MARIKA_OAK_FENCE_GATE.get());
                         output.accept(ModBlocks.MARIKA_OAK_DOOR.get());
                         output.accept(ModBlocks.MARIKA_OAK_TRAPDOOR.get());
+                        output.accept(ModItems.MARIKA_OAK_SIGN.get());
+                        output.accept(ModItems.MARIKA_OAK_HANGING_SIGN.get());
 
                         output.accept(ModBlocks.INFESTED_ANDESITE.get());
                         output.accept(ModBlocks.PLAGUED_ANDESITE_STAIRS.get());

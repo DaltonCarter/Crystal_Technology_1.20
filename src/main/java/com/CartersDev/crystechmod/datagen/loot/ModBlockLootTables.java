@@ -482,6 +482,26 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.MARIKA_OAK_DOOR.get(),
                 block -> createDoorTable(ModBlocks.MARIKA_OAK_DOOR.get()));
 
+        this.add(ModBlocks.PLAGUED_SIGN.get(), block -> createSingleItemTable(ModItems.PLAGUED_SIGN.get()));
+        this.add(ModBlocks.PLAGUED_WALL_SIGN.get(), block -> createSingleItemTable(ModItems.PLAGUED_SIGN.get()));
+        this.add(ModBlocks.PLAGUED_HANGING_SIGN.get(), block -> createSingleItemTable(ModItems.PLAGUED_HANGING_SIGN.get()));
+        this.add(ModBlocks.PLAGUED_WALL_HANGING_SIGN.get(), block -> createSingleItemTable(ModItems.PLAGUED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.DEAD_SIGN.get(), block -> createSingleItemTable(ModItems.DEAD_SIGN.get()));
+        this.add(ModBlocks.DEAD_WALL_SIGN.get(), block -> createSingleItemTable(ModItems.DEAD_SIGN.get()));
+        this.add(ModBlocks.DEAD_HANGING_SIGN.get(), block -> createSingleItemTable(ModItems.DEAD_HANGING_SIGN.get()));
+        this.add(ModBlocks.DEAD_WALL_HANGING_SIGN.get(), block -> createSingleItemTable(ModItems.DEAD_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.EMBER_OAK_SIGN.get(), block -> createSingleItemTable(ModItems.EMBER_OAK_SIGN.get()));
+        this.add(ModBlocks.EMBER_OAK_WALL_SIGN.get(), block -> createSingleItemTable(ModItems.EMBER_OAK_SIGN.get()));
+        this.add(ModBlocks.EMBER_OAK_HANGING_SIGN.get(), block -> createSingleItemTable(ModItems.EMBER_OAK_HANGING_SIGN.get()));
+        this.add(ModBlocks.EMBER_OAK_WALL_HANGING_SIGN.get(), block -> createSingleItemTable(ModItems.EMBER_OAK_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.MARIKA_OAK_SIGN.get(), block -> createSingleItemTable(ModItems.MARIKA_OAK_SIGN.get()));
+        this.add(ModBlocks.MARIKA_OAK_WALL_SIGN.get(), block -> createSingleItemTable(ModItems.MARIKA_OAK_SIGN.get()));
+        this.add(ModBlocks.MARIKA_OAK_HANGING_SIGN.get(), block -> createSingleItemTable(ModItems.MARIKA_OAK_HANGING_SIGN.get()));
+        this.add(ModBlocks.MARIKA_OAK_WALL_HANGING_SIGN.get(), block -> createSingleItemTable(ModItems.MARIKA_OAK_HANGING_SIGN.get()));
+
         //End of Complex Self Drops
 
 
