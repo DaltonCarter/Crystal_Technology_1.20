@@ -356,6 +356,16 @@ Updated to Version 0.4.7
 *Note: This is The Glow Tree by Che Carter, renamed as a Gag on the Erd Tree. Used with Permission...
 considering I helped make it...the Glow tree that is. The reference to Elden Ring is for Laughs.
 
+------------------------------------------------------------------------------
+
+9/08/2024 - 9/12/2024
+Version 0.4.7
+Posted By: Dalton Carter
+
+-Added Custom Particle handling.
+
+
+
 ======================================================
 LEGACY 1.16.5 Changelog
 0.5.2

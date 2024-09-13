@@ -11,6 +11,7 @@ import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModCreativeModTabs;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.loot.ModLootModifiers;
+import com.CartersDev.crystechmod.particle.ModParticles;
 import com.CartersDev.crystechmod.potion.ModPotions;
 import com.CartersDev.crystechmod.recipe.ModRecipes;
 import com.CartersDev.crystechmod.screen.ModMenuTypes;
@@ -77,6 +78,7 @@ public class CrystalTech {
         ModMenuTypes.register(modEventBus);
 
         ModRecipes.register(modEventBus);
+        ModParticles.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
