@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 
 
-public class PlaguedLeavesBlock extends LeavesBlock {
+public class PlaguedLeavesBlock extends ModLeavesBlock {
     public PlaguedLeavesBlock(Properties properties) {
         super(properties);
     }
@@ -32,18 +32,4 @@ public class PlaguedLeavesBlock extends LeavesBlock {
         super.animateTick(stateIn, worldIn, pos, rand);
     }
 
-    @Override
-    public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return true;
-    }
-
-    @Override
-    public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return 60;
-    }
-
-    @Override
-    public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return 30;
-    }
 }

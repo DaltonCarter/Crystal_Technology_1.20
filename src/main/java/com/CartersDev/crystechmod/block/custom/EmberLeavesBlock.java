@@ -2,6 +2,7 @@ package com.CartersDev.crystechmod.block.custom;
 
 
 
+import com.CartersDev.crystechmod.particle.ModParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -21,7 +22,7 @@ public class EmberLeavesBlock extends LeavesBlock {
     public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, RandomSource rand) {
         float chance = 0.35f;
         if (chance < rand.nextFloat()) {
-            worldIn.addParticle(ParticleTypes.CHERRY_LEAVES, pos.getX() + rand.nextDouble(),
+            worldIn.addParticle(ModParticles.EMBER_PARTICLES.get(), pos.getX() + rand.nextDouble(),
                     pos.getY() + 0.0D, pos.getZ() + rand.nextDouble(),
                     0d, 0.05d, 0d);
 

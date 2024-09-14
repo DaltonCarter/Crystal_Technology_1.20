@@ -15,6 +15,12 @@ public class ModParticles {
 public static final RegistryObject<SimpleParticleType> YOKARITE_PARTICLES =
         PARTICLE_TYPES.register("yokarite_particles", () -> new SimpleParticleType(true));
 
+    public static final RegistryObject<SimpleParticleType> MARIKA_PARTICLES =
+            PARTICLE_TYPES.register("marika_particles", () -> new SimpleParticleType(true));
+
+    public static final RegistryObject<SimpleParticleType> EMBER_PARTICLES =
+            PARTICLE_TYPES.register("ember_particles", () -> new SimpleParticleType(true));
+
 
 public static void register(IEventBus eventBus) {
     PARTICLE_TYPES.register(eventBus);

@@ -6,6 +6,8 @@ import com.CartersDev.crystechmod.block.entity.renderer.TiberiumGrinderBlockEnti
 import com.CartersDev.crystechmod.entity.client.ModModelLayers;
 import com.CartersDev.crystechmod.entity.client.RhinoModel;
 import com.CartersDev.crystechmod.particle.ModParticles;
+import com.CartersDev.crystechmod.particle.custom.EmberParticles;
+import com.CartersDev.crystechmod.particle.custom.MarikaParticles;
 import com.CartersDev.crystechmod.particle.custom.YokariteParticles;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
@@ -35,6 +37,13 @@ public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
     public static void registerParticleFactories(final RegisterParticleProvidersEvent event) {
     Minecraft.getInstance().particleEngine.register(ModParticles.YOKARITE_PARTICLES.get(),
             YokariteParticles.Provider::new);
+
+    Minecraft.getInstance().particleEngine.register(ModParticles.MARIKA_PARTICLES.get(),
+            MarikaParticles.Provider::new);
+
+    Minecraft.getInstance().particleEngine.register(ModParticles.EMBER_PARTICLES.get(),
+            EmberParticles.Provider::new);
 }
+
 
 }

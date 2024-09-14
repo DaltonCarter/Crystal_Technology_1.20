@@ -30,6 +30,7 @@ public class ModBlocks {
 
     public static ToIntFunction<BlockState> tiberiumglow = BlockState -> 7;
     public static ToIntFunction<BlockState> blossomglow = BlockState -> 12;
+    public static ToIntFunction<BlockState> marikaglow = BlockState -> 15;
 
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, CrystalTech.MOD_ID);
@@ -964,7 +965,7 @@ public class ModBlocks {
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(3f)));
 
     public static final RegistryObject<Block> EMBER_OAK_LEAVES = registerBlock("ember_oak_leaves",
-            () -> new EmberLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).lightLevel(tiberiumglow)));
+            () -> new EmberLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).lightLevel(marikaglow)));
 
     public static final RegistryObject<Block> EMBER_OAK_PLANKS = registerBlock("ember_oak_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
@@ -1048,19 +1049,19 @@ public class ModBlocks {
                     BlockSetType.OAK));
 
     public static final RegistryObject<Block> MARIKA_OAK_LOG = registerBlock("marika_oak_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f).lightLevel(tiberiumglow)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f).lightLevel(marikaglow)));
 
     public static final RegistryObject<Block> MARIKA_OAK_WOOD = registerBlock("marika_oak_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f).lightLevel(tiberiumglow)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f).lightLevel(marikaglow)));
 
     public static final RegistryObject<Block> STRIPPED_MARIKA_OAK_LOG = registerBlock("stripped_marika_oak_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).strength(3f).lightLevel(tiberiumglow)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).strength(3f).lightLevel(marikaglow)));
 
     public static final RegistryObject<Block> STRIPPED_MARIKA_OAK_WOOD = registerBlock("stripped_marika_oak_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(3f).lightLevel(tiberiumglow)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(3f).lightLevel(marikaglow)));
 
     public static final RegistryObject<Block> MARIKA_OAK_LEAVES = registerBlock("marika_oak_leaves",
-            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).lightLevel(tiberiumglow)));
+            () -> new MarikaLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).lightLevel(marikaglow)));
 
     public static final RegistryObject<Block> MARIKA_OAK_PLANKS = registerBlock("marika_oak_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
