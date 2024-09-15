@@ -1,0 +1,33 @@
+{
+  "name": "crystechmod:house/streets",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "crystechmod:village/streets/street_1",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "crystechmod:village/streets/street_2",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "crystechmod:village/streets/street_3",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

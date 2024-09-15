@@ -365,6 +365,14 @@ Posted By: Dalton Carter
 -Added Custom Particle handling.
 -Added Custom Particles for the Marika Oak, and Ember Oak.
 
+------------------------------------------------------------------------------
+
+9/15/2024
+Version 0.4.7
+Posted By: Ché Carter
+
+-Added structures nbt data
+-Added worldgen .json files
 
 
 ======================================================
