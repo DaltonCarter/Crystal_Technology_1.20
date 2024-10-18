@@ -1,8 +1,11 @@
 package com.CartersDev.crystechmod.block.custom;
 
 
+import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.item.ModItems;
+import com.CartersDev.crystechmod.util.ModTags;
 import net.minecraft.core.BlockPos;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.Difficulty;
 
 import net.minecraft.world.effect.MobEffect;
@@ -10,6 +13,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
@@ -18,6 +22,7 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.Objects;
@@ -41,14 +46,6 @@ public class GreenTiberiumCrystalBlock extends CropBlock {
 
     }
 
-    @Override
-    public void growCrops(Level pLevel, BlockPos pPos, BlockState pState) {
-        int nextAge = this.getAge(pState) + this.getBonemealAgeIncrease(pLevel);
-        int maxAge = this.getMaxAge();
-        if (nextAge > maxAge) {
-            nextAge = maxAge;
-        }
-    }
 
     @Override
     public IntegerProperty getAgeProperty() {
@@ -60,6 +57,21 @@ public class GreenTiberiumCrystalBlock extends CropBlock {
         return MAX_AGE;
     }
 
+    @Override
+    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+        return SHAPE_BY_AGE[this.getAge(pState)];
+    }
+
+    @Override
+    public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
+        BlockPos blockpos = pPos.below();
+        BlockState blockstate = pLevel.getBlockState(blockpos);
+        if (blockstate.is(ModTags.Blocks.TIBERIUM_SOIL)) {
+            return true;
+        } else {
+            return pLevel.getRawBrightness(pPos, 0) <= 15 && blockstate.canSustainPlant(pLevel, blockpos, net.minecraft.core.Direction.UP, this);
+        }
+    }
 
     @Override
     protected ItemLike getBaseSeedId() {

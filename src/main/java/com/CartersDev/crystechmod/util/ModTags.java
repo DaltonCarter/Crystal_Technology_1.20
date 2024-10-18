@@ -22,6 +22,7 @@ public class ModTags {
         public static final TagKey<Block> TIBERIUM_SEED_BLOCKS= tag("tiberium_seed_block");
         public static final TagKey<Block> HAZMAT_GLASS_PANES= tag("hazmat_glass_panes");
         public static final TagKey<Block> HAZMAT_GLASS_PANES2= tag("hazmat_glass_panes2");
+        public static final TagKey<Block> TIBERIUM_SOIL= tag("tiberium_soil");
 
 
 

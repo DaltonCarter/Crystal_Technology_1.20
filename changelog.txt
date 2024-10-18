@@ -371,8 +371,25 @@ Posted By: Dalton Carter
 Version 0.4.7
 Posted By: Ché Carter
 
--Added structures nbt data
--Added worldgen .json files
+-Added  NBT data for structures
+-Added Worldgen .json files
+
+------------------------------------------------------------------------------
+
+10/17/2024
+Version 0.4.7
+Posted By: Dalton Carter
+
+-Updated Sound Block with extra Functionality
+-Updated Tiberium Crops to Survive at ANY Light Level
+-Fixed Green Tiberium NOT growing when Bone Mealed
+-Fixed Tiberium Infection NOT converting Grass Blocks
+-Fixed Tiberglass Panes having no Recipes
+-Added Manual Infection logic for Tiberium Dusts
+
+Notes: Mod has been Tested for basic compatibility in The Dire wolf Mod Pack for
+1.20.1. While Fluids DO properly interact with what they need to, the display
+is off.
 
 
 ======================================================

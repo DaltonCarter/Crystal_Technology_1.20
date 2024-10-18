@@ -6,7 +6,7 @@ import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.entity.ModEntities;
 import com.CartersDev.crystechmod.fluid.ModFluids;
-import com.CartersDev.crystechmod.item.custom.Firestone;
+import com.CartersDev.crystechmod.item.custom.*;
 import com.CartersDev.crystechmod.sound.ModSounds;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -68,30 +68,23 @@ public static final RegistryObject<Item> TIBERIUM = ITEMS.register("tiberium",
     public static final RegistryObject<Item> ENIGMA_CRYSTAL = ITEMS.register("enigma_crystal",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> RAW_QUALRITE = ITEMS.register("raw_qualrite",
-            () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> RAW_GUNDANIUM = ITEMS.register("raw_gundanium",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> RAW_ALYTHUM = ITEMS.register("raw_alythum",
-            () -> new Item(new Item.Properties()));
 //End of Minerals
 
 
 //Dusts
 
 public static final RegistryObject<Item> GREEN_TIBERIUM_DUST = ITEMS.register("green_tiberium_dust",
-        () -> new ItemNameBlockItem(ModBlocks.GREEN_TIBERIUM_CROP.get(), new Item.Properties()));
+        () -> new TiberiumDust(ModBlocks.GREEN_TIBERIUM_CROP.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> BLUE_TIBERIUM_DUST = ITEMS.register("blue_tiberium_dust",
-            () -> new ItemNameBlockItem(ModBlocks.BLUE_TIBERIUM_CROP.get(), new Item.Properties()));
+            () -> new BlueTiberiumDust(ModBlocks.BLUE_TIBERIUM_CROP.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> RED_TIBERIUM_DUST = ITEMS.register("red_tiberium_dust",
-            () -> new ItemNameBlockItem(ModBlocks.RED_TIBERIUM_CROP.get(), new Item.Properties()));
+            () -> new RedTiberiumDust(ModBlocks.RED_TIBERIUM_CROP.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> PURPLE_TIBERIUM_DUST = ITEMS.register("purple_tiberium_dust",
-            () -> new ItemNameBlockItem(ModBlocks.PURPLE_TIBERIUM_CROP.get(), new Item.Properties()));
+            () -> new PurpleTiberiumDust(ModBlocks.PURPLE_TIBERIUM_CROP.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> QUALRIM_COMPOUND = ITEMS.register("qualrim_compound",
             () -> new Item(new Item.Properties()));
@@ -123,6 +116,15 @@ public static final RegistryObject<Item> GREEN_TIBERIUM_DUST = ITEMS.register("g
 
 
 //Metals & Raw Metals
+
+    public static final RegistryObject<Item> RAW_QUALRITE = ITEMS.register("raw_qualrite",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RAW_GUNDANIUM = ITEMS.register("raw_gundanium",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RAW_ALYTHUM = ITEMS.register("raw_alythum",
+            () -> new Item(new Item.Properties()));
 
 public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gundanium_ingot",
         () -> new Item(new Item.Properties()));

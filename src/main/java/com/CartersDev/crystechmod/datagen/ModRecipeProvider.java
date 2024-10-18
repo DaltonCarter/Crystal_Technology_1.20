@@ -410,6 +410,15 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModBlocks.YELLOW_TIBERGLASS.get()), has(ModBlocks.YELLOW_TIBERGLASS.get()))
                 .save(consumer);
 
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CLEAR_TIBERGLASS_PANE.get(), 16)
+                .pattern("   ")
+                .pattern("GGG")
+                .pattern("GGG")
+                .define('G', ModBlocks.CLEAR_TIBERGLASS.get())
+                .unlockedBy(getHasName(ModBlocks.CLEAR_TIBERGLASS.get()), has(ModBlocks.CLEAR_TIBERGLASS.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MOSAIC_TIBERGLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("GGG")
@@ -422,7 +431,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("   ")
                 .pattern("GGG")
                 .pattern("GGG")
-                .define('G', ModBlocks.GDI_TIBERGLASS_PANE.get())
+                .define('G', ModBlocks.GDI_TIBERGLASS.get())
                 .unlockedBy(getHasName(ModBlocks.GDI_TIBERGLASS.get()), has(ModBlocks.GDI_TIBERGLASS.get()))
                 .save(consumer);
 
@@ -486,7 +495,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("   ")
                 .pattern("GGG")
                 .pattern("GGG")
-                .define('G', ModBlocks.LIGHT_BLUE_TIBERGLASS_PANE.get())
+                .define('G', ModBlocks.LIGHT_BLUE_TIBERGLASS.get())
                 .unlockedBy(getHasName(ModBlocks.LIGHT_BLUE_TIBERGLASS.get()), has(ModBlocks.LIGHT_BLUE_TIBERGLASS.get()))
                 .save(consumer);
 
@@ -510,7 +519,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("   ")
                 .pattern("GGG")
                 .pattern("GGG")
-                .define('G', ModBlocks.MAGENTA_TIBERGLASS_PANE.get())
+                .define('G', ModBlocks.MAGENTA_TIBERGLASS.get())
                 .unlockedBy(getHasName(ModBlocks.MAGENTA_TIBERGLASS.get()), has(ModBlocks.MAGENTA_TIBERGLASS.get()))
                 .save(consumer);
 

@@ -74,6 +74,9 @@ public class BlossomTreeSpoutBlock extends RotatedPillarBlock {
              }else if (worldIn.getBlockState(target).getBlock() == Blocks.DIRT) {
                  System.out.println("Dirt has been Seeded!");
                  worldIn.setBlockAndUpdate(target, ModBlocks.SEEDED_DIRT.get().defaultBlockState());
+             }else if (worldIn.getBlockState(target).getBlock() == Blocks.GRASS_BLOCK) {
+                 System.out.println("Grass has been Seeded!");
+                 worldIn.setBlockAndUpdate(target, ModBlocks.SEEDED_DIRT.get().defaultBlockState());
              }else if (worldIn.getBlockState(target).getBlock() == Blocks.STONE) {
                  System.out.println("Stone has been Infested!");
                  worldIn.setBlockAndUpdate(target, ModBlocks.INFESTED_STONE.get().defaultBlockState());

@@ -1,4 +1,4 @@
-// 1.20.1	2024-09-11T03:41:05.1197796	Tags for minecraft:block mod id crystechmod
+// 1.20.1	2024-10-17T22:57:23.0726504	Tags for minecraft:block mod id crystechmod
 3c0db247b35cadbc078a1b88ac98777330717935 data/crystechmod/tags/blocks/hazmat_glass_panes.json
 fde81393ef244e7ec272ed755f993f402ff61d5d data/crystechmod/tags/blocks/hazmat_glass_panes2.json
 94d3b46aed493f5842b549f658dfac45bf562a02 data/crystechmod/tags/blocks/needs_alythum_tool.json
@@ -6,7 +6,8 @@ fde81393ef244e7ec272ed755f993f402ff61d5d data/crystechmod/tags/blocks/hazmat_gla
 82b3a1a72b9c7e4b944800f7d006ddf2055c5e71 data/crystechmod/tags/blocks/needs_plagued_tool.json
 39acdcf33383e05a367faca9c1c896cc6cdba9c0 data/crystechmod/tags/blocks/tibercrete_sands.json
 40f94ad99830e757072a50a78d7faa3861352918 data/crystechmod/tags/blocks/tiberium_seed_block.json
-72579eb09bc12d149291c913873988870590b898 data/crystechmod/tags/blocks/tiberium_viable_blocks.json
+20f7cea4c6bb0d78aecbc80cfd6b762d55f20025 data/crystechmod/tags/blocks/tiberium_soil.json
+03ebab99021e338e3ee270b548a533c345459a9a data/crystechmod/tags/blocks/tiberium_viable_blocks.json
 ddfcad38a7999881b28206520a3ccb5ad0d0f46d data/forge/tags/blocks/needs_netherite_tool.json
 c6aab69a244678a9783a3baff90174fb529ed517 data/minecraft/tags/blocks/fences.json
 669ec66f0d6f7ecfcfb062efab82e9ea3128fcbd data/minecraft/tags/blocks/fence_gates.json

@@ -29,6 +29,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.RED_ZONE_DIRT.get(),
                         ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(),
                         Blocks.DIRT,
+                        Blocks.GRASS_BLOCK,
                         Blocks.COBBLESTONE,
                         Blocks.STONE,
                         Blocks.STONE_BRICKS,
@@ -56,6 +57,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.SEEDED_DIRT.get()
                 );
 
+        this.tag(ModTags.Blocks.TIBERIUM_SOIL)
+                .add(
+                        ModBlocks.TIBERIUM_SOIL.get(),
+                        ModBlocks.ICHOR_SOIL.get()
+                );
 
         this.tag(ModTags.Blocks.TIBERCRETE_SANDS)
                 .add(ModBlocks.RED_ZONE_SAND.get(),
