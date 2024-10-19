@@ -2,18 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "E": {
+    "P": {
+      "tag": "crystechmod:sticks"
+    },
+    "S": {
       "item": "crystechmod:ember_oak_planks"
     }
   },
   "pattern": [
-    "   ",
-    "  E",
-    "  E"
+    "SSS",
+    "SSS",
+    " P "
   ],
   "result": {
-    "count": 4,
-    "item": "minecraft:stick"
+    "item": "crystechmod:ember_oak_sign"
   },
   "show_notification": true
 }

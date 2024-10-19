@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:chain"
+    },
+    "S": {
+      "item": "crystechmod:stripped_marika_oak_log"
+    }
+  },
+  "pattern": [
+    "C C",
+    "SSS",
+    "SSS"
+  ],
+  "result": {
+    "item": "crystechmod:marika_oak_hanging_sign"
+  },
+  "show_notification": true
+}

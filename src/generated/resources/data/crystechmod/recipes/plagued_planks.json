@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "crystechmod:plagued_log"
+      "tag": "crystechmod:plagued_logs"
     }
   ],
   "result": {

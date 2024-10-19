@@ -13,6 +13,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.StonecutterRecipe;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import org.jetbrains.annotations.NotNull;
@@ -587,6 +588,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
                 .save(consumer);
 
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PLAGUED_STAIRS.get(), 4)
                 .pattern("P  ")
                 .pattern("PP ")
@@ -643,14 +645,6 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('P', ModBlocks.PLAGUED_PLANKS.get())
                 .define('S', ModItems.PLAGUED_STICK.get())
                 .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.STICK, 4)
-                .pattern("   ")
-                .pattern("  E")
-                .pattern("  E")
-                .define('E', ModBlocks.EMBER_OAK_PLANKS.get())
-                .unlockedBy(getHasName(ModBlocks.EMBER_OAK_PLANKS.get()), has(ModBlocks.EMBER_OAK_PLANKS.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EMBER_OAK_STAIRS.get(), 4)
@@ -2277,6 +2271,123 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALYTHUM_HAMMER.get())
+                .pattern("ABA")
+                .pattern("ASA")
+                .pattern(" S ")
+                .define('A', ModItems.ALYTHUM_INGOT.get())
+                .define('B', ModBlocks.ALYTHUM_BLOCK.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GUNDANIUM_HAMMER.get())
+                .pattern("ABA")
+                .pattern("ASA")
+                .pattern(" S ")
+                .define('A', ModItems.GUNDANIUM_INGOT.get())
+                .define('B', ModBlocks.GUNDANIUM_BLOCK.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALYTHUM_PAXEL.get())
+                .pattern("CSC")
+                .pattern("AHP")
+                .pattern(" H ")
+                .define('P', ModItems.ALYTHUM_PICKAXE.get())
+                .define('A', ModItems.ALYTHUM_AXE.get())
+                .define('S', ModItems.ALYTHUM_SHOVEL.get())
+                .define('C', ModItems.LG_CORE_INGOT.get())
+                .define('H', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GUNDANIUM_PAXEL.get())
+                .pattern("GSG")
+                .pattern("AHP")
+                .pattern(" H ")
+                .define('P', ModItems.GUNDANIUM_PICKAXE.get())
+                .define('A', ModItems.GUNDANIUM_AXE.get())
+                .define('S', ModItems.GUNDANIUM_SHOVEL.get())
+                .define('G', ModBlocks.GUNDANIUM_BLOCK.get())
+                .define('H', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PLAGUED_HANGING_SIGN.get())
+                .pattern("C C")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModBlocks.STRIPPED_PLAGUED_LOG.get())
+                .define('C', Items.CHAIN)
+                .unlockedBy(getHasName(ModBlocks.PLAGUED_LOG.get()), has(ModBlocks.PLAGUED_LOG.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MARIKA_OAK_HANGING_SIGN.get())
+                .pattern("C C")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModBlocks.STRIPPED_MARIKA_OAK_LOG.get())
+                .define('C', Items.CHAIN)
+                .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_LOG.get()), has(ModBlocks.MARIKA_OAK_LOG.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EMBER_OAK_HANGING_SIGN.get())
+                .pattern("C C")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModBlocks.STRIPPED_EMBER_OAK_LOG.get())
+                .define('C', Items.CHAIN)
+                .unlockedBy(getHasName(ModBlocks.EMBER_OAK_LOG.get()), has(ModBlocks.EMBER_OAK_LOG.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DEAD_HANGING_SIGN.get())
+                .pattern("C C")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModBlocks.STRIPPED_DEAD_LOG.get())
+                .define('C', Items.CHAIN)
+                .unlockedBy(getHasName(ModBlocks.DEAD_LOG.get()), has(ModBlocks.DEAD_LOG.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DEAD_SIGN.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern(" P ")
+                .define('S', ModBlocks.DEAD_PLANKS.get())
+                .define('P', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModBlocks.DEAD_LOG.get()), has(ModBlocks.DEAD_LOG.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PLAGUED_SIGN.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern(" P ")
+                .define('S', ModBlocks.PLAGUED_PLANKS.get())
+                .define('P', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModBlocks.PLAGUED_LOG.get()), has(ModBlocks.PLAGUED_LOG.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EMBER_OAK_SIGN.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern(" P ")
+                .define('S', ModBlocks.EMBER_OAK_PLANKS.get())
+                .define('P', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModBlocks.EMBER_OAK_LOG.get()), has(ModBlocks.EMBER_OAK_LOG.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MARIKA_OAK_SIGN.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern(" P ")
+                .define('S', ModBlocks.MARIKA_OAK_PLANKS.get())
+                .define('P', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_LOG.get()), has(ModBlocks.MARIKA_OAK_LOG.get()))
+                .save(consumer);
+
         //Shapeless Crafting:
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIBERIUM.get(), 9)
                 .requires(ModBlocks.TIBERIUM_BLOCK.get())
@@ -2356,6 +2467,21 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.PLAGUED_BUTTON.get(), 1)
                 .requires(ModBlocks.PLAGUED_PLANKS.get())
                 .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.DEAD_BUTTON.get(), 1)
+                .requires(ModBlocks.DEAD_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.DEAD_PLANKS.get()), has(ModBlocks.DEAD_PLANKS.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.EMBER_OAK_BUTTON.get(), 1)
+                .requires(ModBlocks.EMBER_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.EMBER_OAK_PLANKS.get()), has(ModBlocks.EMBER_OAK_PLANKS.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MARIKA_OAK_BUTTON.get(), 1)
+                .requires(ModBlocks.MARIKA_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_PLANKS.get()), has(ModBlocks.MARIKA_OAK_PLANKS.get()))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.BLACK_TIBERCRETE_POWDER.get(), 8)
@@ -2599,22 +2725,22 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.PLAGUED_PLANKS.get(), 4)
-                .requires(ModBlocks.PLAGUED_LOG.get(), 1)
+                .requires(ModTags.Items.PLAGUED_LOGS)
                 .unlockedBy(getHasName(ModBlocks.PLAGUED_LOG.get()), has(ModBlocks.PLAGUED_LOG.get()))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.EMBER_OAK_PLANKS.get(), 4)
-                .requires(ModBlocks.EMBER_OAK_LOG.get(), 1)
+                .requires(ModTags.Items.EMBER_OAK_LOGS)
                 .unlockedBy(getHasName(ModBlocks.EMBER_OAK_LOG.get()), has(ModBlocks.EMBER_OAK_LOG.get()))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.DEAD_PLANKS.get(), 4)
-                .requires(ModBlocks.DEAD_LOG.get(), 1)
+                .requires(ModTags.Items.DEAD_LOGS)
                 .unlockedBy(getHasName(ModBlocks.DEAD_LOG.get()), has(ModBlocks.DEAD_LOG.get()))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MARIKA_OAK_PLANKS.get(), 4)
-                .requires(ModBlocks.MARIKA_OAK_LOG.get(), 1)
+                .requires(ModTags.Items.MARIKA_OAK_LOGS)
                 .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_LOG.get()), has(ModBlocks.MARIKA_OAK_LOG.get()))
                 .save(consumer);
 

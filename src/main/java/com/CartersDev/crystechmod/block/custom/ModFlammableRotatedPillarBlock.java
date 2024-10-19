@@ -1,6 +1,7 @@
 package com.CartersDev.crystechmod.block.custom;
 
 import com.CartersDev.crystechmod.block.ModBlocks;
+import com.CartersDev.crystechmod.item.custom.PaxelItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.AxeItem;
@@ -35,7 +36,7 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
 
     @Override
     public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
-        if(context.getItemInHand().getItem() instanceof AxeItem) {
+        if(context.getItemInHand().getItem() instanceof AxeItem || context.getItemInHand().getItem() instanceof PaxelItem) {
             if(state.is(ModBlocks.PLAGUED_LOG.get())){
                 return ModBlocks.STRIPPED_PLAGUED_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
@@ -44,24 +45,24 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
                 return ModBlocks.STRIPPED_PLAGUED_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
 
-//            if(state.is(ModBlocks.PLAGUED_LOG.get())){
-//                return ModBlocks.STRIPPED_PLAGUED_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-//            }
-//            if(state.is(ModBlocks.PLAGUED_LOG.get())){
-//                return ModBlocks.STRIPPED_PLAGUED_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-//            }
-//            if(state.is(ModBlocks.PLAGUED_LOG.get())){
-//                return ModBlocks.STRIPPED_PLAGUED_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-//            }
-//            if(state.is(ModBlocks.PLAGUED_LOG.get())){
-//                return ModBlocks.STRIPPED_PLAGUED_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-//            }
-//            if(state.is(ModBlocks.PLAGUED_LOG.get())){
-//                return ModBlocks.STRIPPED_PLAGUED_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-//            }
-//            if(state.is(ModBlocks.PLAGUED_LOG.get())){
-//                return ModBlocks.STRIPPED_PLAGUED_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-//            }
+            if(state.is(ModBlocks.EMBER_OAK_LOG.get())){
+                return ModBlocks.STRIPPED_EMBER_OAK_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.EMBER_OAK_WOOD.get())){
+                return ModBlocks.STRIPPED_EMBER_OAK_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.DEAD_LOG.get())){
+                return ModBlocks.STRIPPED_DEAD_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.DEAD_WOOD.get())){
+                return ModBlocks.STRIPPED_DEAD_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.MARIKA_OAK_LOG.get())){
+                return ModBlocks.STRIPPED_MARIKA_OAK_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.MARIKA_OAK_WOOD.get())){
+                return ModBlocks.STRIPPED_MARIKA_OAK_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
         }
         return super.getToolModifiedState(state, context, toolAction, simulate);
     }

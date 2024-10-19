@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:marika_oak_planks"
+    }
+  ],
+  "result": {
+    "item": "crystechmod:marika_oak_button"
+  }
+}

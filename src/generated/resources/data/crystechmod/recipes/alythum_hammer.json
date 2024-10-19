@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:alythum_ingot"
+    },
+    "B": {
+      "item": "crystechmod:alythum_block"
+    },
+    "S": {
+      "tag": "crystechmod:sticks"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "ASA",
+    " S "
+  ],
+  "result": {
+    "item": "crystechmod:alythum_hammer"
+  },
+  "show_notification": true
+}

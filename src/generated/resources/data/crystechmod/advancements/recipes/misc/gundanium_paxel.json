@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ember_oak_planks": {
+    "has_alythum_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "crystechmod:ember_oak_planks"
+              "crystechmod:alythum_ingot"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:stick"
+        "recipe": "crystechmod:gundanium_paxel"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_ember_oak_planks",
+      "has_alythum_ingot",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:stick"
+      "crystechmod:gundanium_paxel"
     ]
   },
   "sends_telemetry_event": false

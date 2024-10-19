@@ -187,6 +187,14 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
             () -> new HoeItem(ModToolTiers.GUNDANIUM, -1, 0f,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> GUNDANIUM_PAXEL = ITEMS.register("gundanium_paxel",
+            () -> new PaxelItem(ModToolTiers.GUNDANIUM, 1, 1f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> GUNDANIUM_HAMMER = ITEMS.register("gundanium_hammer",
+            () -> new HammerItem(ModToolTiers.GUNDANIUM, 1, -1f,
+                    new Item.Properties()));
+
     public static final RegistryObject<Item> ALYTHUM_SWORD = ITEMS.register("alythum_sword",
             () -> new SwordItem(ModToolTiers.ALYTHUM, 4, -1.5f,
                     new Item.Properties()));
@@ -205,6 +213,14 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> ALYTHUM_HOE = ITEMS.register("alythum_hoe",
             () -> new HoeItem(ModToolTiers.ALYTHUM, -1, 1f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ALYTHUM_PAXEL = ITEMS.register("alythum_paxel",
+            () -> new PaxelItem(ModToolTiers.ALYTHUM, 3, 2f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ALYTHUM_HAMMER = ITEMS.register("alythum_hammer",
+            () -> new HammerItem(ModToolTiers.ALYTHUM, 3, -2f,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> PLAGUED_BOW = ITEMS.register("plagued_bow",

@@ -391,6 +391,18 @@ Notes: Mod has been Tested for basic compatibility in The Dire wolf Mod Pack for
 1.20.1. While Fluids DO properly interact with what they need to, the display
 is off.
 
+------------------------------------------------------------------------------
+
+10/18/2024
+Version 0.4.72
+Posted By: Dalton Carter
+
+-Added Paxel Tool, With Right Click Functionality, and Custom Wood Support.
+-Added Hammer Tool
+-Fixed Lang Entries
+-Added Recipies for Signs, Buttons, Paxel, and Hammer
+-Added ALOT of Tags, Including adding 3 of my wood types to Vanilla Planks Tags
+
 
 ======================================================
 LEGACY 1.16.5 Changelog

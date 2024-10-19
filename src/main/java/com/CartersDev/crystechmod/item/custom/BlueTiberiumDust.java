@@ -33,8 +33,6 @@ public class BlueTiberiumDust extends ItemNameBlockItem {
         RandomSource rand = RandomSource.create();
 
         if (!pLevel.isClientSide() && pHand == InteractionHand.MAIN_HAND) {
-
-
             if (itemstack.is(ModItems.BLUE_TIBERIUM_DUST.get())) {
                 int SoilChance = rand.nextInt(10);
                 if (SoilChance >= 5) {

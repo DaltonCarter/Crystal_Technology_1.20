@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:gundanium_axe"
+    },
+    "G": {
+      "item": "crystechmod:gundanium_block"
+    },
+    "H": {
+      "tag": "crystechmod:sticks"
+    },
+    "P": {
+      "item": "crystechmod:gundanium_pickaxe"
+    },
+    "S": {
+      "item": "crystechmod:gundanium_shovel"
+    }
+  },
+  "pattern": [
+    "GSG",
+    "AHP",
+    " H "
+  ],
+  "result": {
+    "item": "crystechmod:gundanium_paxel"
+  },
+  "show_notification": true
+}

@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "crystechmod:ember_oak_log"
+      "tag": "crystechmod:ember_oak_logs"
     }
   ],
   "result": {

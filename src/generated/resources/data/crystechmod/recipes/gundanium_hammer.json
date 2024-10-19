@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:gundanium_ingot"
+    },
+    "B": {
+      "item": "crystechmod:gundanium_block"
+    },
+    "S": {
+      "tag": "crystechmod:sticks"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "ASA",
+    " S "
+  ],
+  "result": {
+    "item": "crystechmod:gundanium_hammer"
+  },
+  "show_notification": true
+}

@@ -11,6 +11,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
@@ -30,6 +31,17 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     this.copy(ModTags.Blocks.TIBERCRETE_SANDS, ModTags.Items.TIBERCRETE_SANDS);
 
         this.copy(ModTags.Blocks.HAZMAT_GLASS_PANES, ModTags.Items.HAZMAT_GLASS_PANES);
+
+        this.copy(ModTags.Blocks.EMBER_OAK_LOGS, ModTags.Items.EMBER_OAK_LOGS);
+        this.copy(ModTags.Blocks.MARIKA_OAK_LOGS, ModTags.Items.MARIKA_OAK_LOGS);
+        this.copy(ModTags.Blocks.DEAD_LOGS, ModTags.Items.DEAD_LOGS);
+        this.copy(ModTags.Blocks.PLAGUED_LOGS, ModTags.Items.PLAGUED_LOGS);
+        this.copy(ModTags.Blocks.MOD_PLANKS, ModTags.Items.MOD_PLANKS);
+
+
+        this.tag(ItemTags.PLANKS)
+                .addTag(ModTags.Items.MOD_PLANKS);
+
 
         this.tag(ItemTags.TRIMMABLE_ARMOR)
                 .add(

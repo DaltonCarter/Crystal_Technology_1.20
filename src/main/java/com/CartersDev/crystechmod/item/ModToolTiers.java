@@ -17,7 +17,7 @@ public class ModToolTiers {
     public static final Tier PLAGUED = TierSortingRegistry.registerTier(
             new ForgeTier(1, 150, 4f, 1.5f, 7,
                     ModTags.Blocks.NEEDS_PLAGUED_TOOL, () -> Ingredient.of(ModBlocks.PLAGUED_PLANKS.get())),
-            new ResourceLocation(CrystalTech.MOD_ID, "plagued"), List.of(Tiers.WOOD), List.of());
+            new ResourceLocation(CrystalTech.MOD_ID, "plagued"), List.of(Tiers.STONE), List.of());
 
 
     public static final Tier GUNDANIUM = TierSortingRegistry.registerTier(
@@ -29,6 +29,6 @@ public class ModToolTiers {
     public static final Tier ALYTHUM = TierSortingRegistry.registerTier(
             new ForgeTier(3, 1761, 9.0f, 3.5f, 13,
                     ModTags.Blocks.NEEDS_ALYTHUM_TOOL, () -> Ingredient.of(ModItems.ALYTHUM_INGOT.get())),
-            new ResourceLocation(CrystalTech.MOD_ID, "alythum"), List.of(Tiers.IRON), List.of());
+            new ResourceLocation(CrystalTech.MOD_ID, "alythum"), List.of(Tiers.DIAMOND), List.of());
 
 }

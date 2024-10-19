@@ -343,17 +343,22 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.PLAGUED_AXE);
         handheldItem(ModItems.PLAGUED_SHOVEL);
         handheldItem(ModItems.PLAGUED_HOE);
+
         handheldItem(ModItems.GUNDANIUM_SWORD);
         handheldItem(ModItems.GUNDANIUM_PICKAXE);
         handheldItem(ModItems.GUNDANIUM_AXE);
         handheldItem(ModItems.GUNDANIUM_SHOVEL);
         handheldItem(ModItems.GUNDANIUM_HOE);
+        handheldItem(ModItems.GUNDANIUM_PAXEL);
+        handheldItem(ModItems.GUNDANIUM_HAMMER);
 
         handheldItem(ModItems.ALYTHUM_SWORD);
         handheldItem(ModItems.ALYTHUM_PICKAXE);
         handheldItem(ModItems.ALYTHUM_AXE);
         handheldItem(ModItems.ALYTHUM_SHOVEL);
         handheldItem(ModItems.ALYTHUM_HOE);
+        handheldItem(ModItems.ALYTHUM_PAXEL);
+        handheldItem(ModItems.ALYTHUM_HAMMER);
 
         trimmedArmorItem(ModItems.GUNDANIUM_HELMET);
         trimmedArmorItem(ModItems.GUNDANIUM_CHESTPLATE);

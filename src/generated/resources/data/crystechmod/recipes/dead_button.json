@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:dead_planks"
+    }
+  ],
+  "result": {
+    "item": "crystechmod:dead_button"
+  }
+}

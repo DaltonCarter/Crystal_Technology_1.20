@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:alythum_axe"
+    },
+    "C": {
+      "item": "crystechmod:lg_core_ingot"
+    },
+    "H": {
+      "tag": "crystechmod:sticks"
+    },
+    "P": {
+      "item": "crystechmod:alythum_pickaxe"
+    },
+    "S": {
+      "item": "crystechmod:alythum_shovel"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "AHP",
+    " H "
+  ],
+  "result": {
+    "item": "crystechmod:alythum_paxel"
+  },
+  "show_notification": true
+}

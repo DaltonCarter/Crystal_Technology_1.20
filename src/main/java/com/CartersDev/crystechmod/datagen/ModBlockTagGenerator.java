@@ -8,6 +8,7 @@ import com.CartersDev.crystechmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
@@ -664,6 +665,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.PLAGUED_DIORITE_STAIRS.get()
                 );
 
+        this.tag(ModTags.Blocks.PAXEL_MINEABLE)
+                .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTag(BlockTags.MINEABLE_WITH_AXE)
+                .addTag(BlockTags.MINEABLE_WITH_SHOVEL);
+
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.GUNDANIUM_ORE.get(),
                 ModBlocks.TIBERIUM_BLOCK.get(),
@@ -699,6 +705,45 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.ABOREUS_STONE_STAIRS.get()
 
                 );
+
+        this.tag(ModTags.Blocks.MOD_PLANKS)
+                .add(ModBlocks.MARIKA_OAK_PLANKS.get(),
+                        ModBlocks.EMBER_OAK_PLANKS.get(),
+                        ModBlocks.DEAD_PLANKS.get()
+
+                );
+
+        this.tag(BlockTags.PLANKS)
+                .addTags(ModTags.Blocks.MOD_PLANKS);
+
+        this.tag(ModTags.Blocks.MARIKA_OAK_LOGS)
+                .add(ModBlocks.MARIKA_OAK_LOG.get(),
+                        ModBlocks.MARIKA_OAK_WOOD.get(),
+                        ModBlocks.STRIPPED_MARIKA_OAK_WOOD.get(),
+                        ModBlocks.STRIPPED_MARIKA_OAK_LOG.get()
+                );
+
+        this.tag(ModTags.Blocks.DEAD_LOGS)
+                .add(ModBlocks.DEAD_LOG.get(),
+                        ModBlocks.DEAD_WOOD.get(),
+                        ModBlocks.STRIPPED_DEAD_WOOD.get(),
+                        ModBlocks.STRIPPED_DEAD_LOG.get()
+                );
+
+        this.tag(ModTags.Blocks.PLAGUED_LOGS)
+                .add(ModBlocks.PLAGUED_LOG.get(),
+                        ModBlocks.PLAGUED_WOOD.get(),
+                        ModBlocks.STRIPPED_PLAGUED_WOOD.get(),
+                        ModBlocks.STRIPPED_PLAGUED_LOG.get()
+                );
+
+        this.tag(ModTags.Blocks.EMBER_OAK_LOGS)
+                .add(ModBlocks.EMBER_OAK_LOG.get(),
+                        ModBlocks.EMBER_OAK_WOOD.get(),
+                        ModBlocks.STRIPPED_EMBER_OAK_WOOD.get(),
+                        ModBlocks.STRIPPED_EMBER_OAK_LOG.get()
+                );
+
 
         this.tag(ModTags.Blocks.NEEDS_GUNDANIUM_TOOL)
                 .add(ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get()
