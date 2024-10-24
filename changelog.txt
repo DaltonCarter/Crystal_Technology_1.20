@@ -414,6 +414,7 @@ Posted By: Dalton Carter
 -added Tiberium Stone Bricks, Slabs, stairs, and Walls
 -Slowing Sword Class added for "On-Hit" effect reference for weapons.
 -Looking into making Paxel COMPLETELY compatible with ANY Wood not just Vanilla and my own.
+-Revised Paxel Class sent to Che for server testing.
 -Test Block is Present for Texture Testing Purposes.
 
 
