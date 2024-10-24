@@ -20,12 +20,10 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CampfireBlock;
-import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.common.ToolActions;
 
-import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.Consumer;
@@ -35,44 +33,9 @@ import static net.minecraft.world.item.HoeItem.changeIntoState;
 import static net.minecraft.world.item.HoeItem.changeIntoStateAndDropItem;
 
 
-//The Below Class is all thanks to Kaupenjoes Work This is NOT MINE!!! Note: For some Reason it will not Strip Mod Woods....
+//The Below Class is all thanks to Kaupenjoes!!!  This is NOT MINE!!!
 
 public class PaxelItem extends DiggerItem implements Vanishable {
-    protected static final Map<Block, BlockState> FLATTENABLES = Maps.newHashMap((new ImmutableMap.Builder()).put(Blocks.GRASS_BLOCK, Blocks.DIRT_PATH.defaultBlockState()).put(Blocks.DIRT, Blocks.DIRT_PATH.defaultBlockState()).put(Blocks.PODZOL, Blocks.DIRT_PATH.defaultBlockState()).put(Blocks.COARSE_DIRT, Blocks.DIRT_PATH.defaultBlockState()).put(Blocks.MYCELIUM, Blocks.DIRT_PATH.defaultBlockState()).put(Blocks.ROOTED_DIRT, Blocks.DIRT_PATH.defaultBlockState()).build());
-
-    protected static final Map<Block, Block> STRIPPABLES = (new ImmutableMap.Builder<Block, Block>())
-            .put(Blocks.OAK_WOOD, Blocks.STRIPPED_OAK_WOOD)
-            .put(Blocks.OAK_LOG, Blocks.STRIPPED_OAK_LOG)
-            .put(Blocks.DARK_OAK_WOOD, Blocks.STRIPPED_DARK_OAK_WOOD)
-            .put(Blocks.DARK_OAK_LOG, Blocks.STRIPPED_DARK_OAK_LOG)
-            .put(Blocks.ACACIA_WOOD, Blocks.STRIPPED_ACACIA_WOOD)
-            .put(Blocks.ACACIA_LOG, Blocks.STRIPPED_ACACIA_LOG)
-            .put(Blocks.CHERRY_WOOD, Blocks.STRIPPED_CHERRY_WOOD)
-            .put(Blocks.CHERRY_LOG, Blocks.STRIPPED_CHERRY_LOG)
-            .put(Blocks.BIRCH_WOOD, Blocks.STRIPPED_BIRCH_WOOD)
-            .put(Blocks.BIRCH_LOG, Blocks.STRIPPED_BIRCH_LOG)
-            .put(Blocks.JUNGLE_WOOD, Blocks.STRIPPED_JUNGLE_WOOD)
-            .put(Blocks.JUNGLE_LOG, Blocks.STRIPPED_JUNGLE_LOG)
-            .put(Blocks.SPRUCE_WOOD, Blocks.STRIPPED_SPRUCE_WOOD)
-            .put(Blocks.SPRUCE_LOG, Blocks.STRIPPED_SPRUCE_LOG)
-            .put(Blocks.WARPED_STEM, Blocks.STRIPPED_WARPED_STEM)
-            .put(Blocks.WARPED_HYPHAE, Blocks.STRIPPED_WARPED_HYPHAE)
-            .put(Blocks.CRIMSON_STEM, Blocks.STRIPPED_CRIMSON_STEM)
-            .put(Blocks.CRIMSON_HYPHAE, Blocks.STRIPPED_CRIMSON_HYPHAE)
-            .put(Blocks.MANGROVE_WOOD, Blocks.STRIPPED_MANGROVE_WOOD)
-            .put(Blocks.MANGROVE_LOG, Blocks.STRIPPED_MANGROVE_LOG)
-            .put(ModBlocks.EMBER_OAK_LOG.get(), ModBlocks.STRIPPED_EMBER_OAK_LOG.get())
-            .put(ModBlocks.EMBER_OAK_WOOD.get(), ModBlocks.STRIPPED_EMBER_OAK_WOOD.get())
-            .put(ModBlocks.MARIKA_OAK_LOG.get(), ModBlocks.STRIPPED_MARIKA_OAK_LOG.get())
-            .put(ModBlocks.MARIKA_OAK_WOOD.get(), ModBlocks.STRIPPED_MARIKA_OAK_WOOD.get())
-            .put(ModBlocks.DEAD_LOG.get(), ModBlocks.STRIPPED_DEAD_LOG.get())
-            .put(ModBlocks.DEAD_WOOD.get(), ModBlocks.STRIPPED_DEAD_WOOD.get())
-            .put(ModBlocks.PLAGUED_LOG.get(), ModBlocks.STRIPPED_PLAGUED_LOG.get())
-            .put(ModBlocks.PLAGUED_WOOD.get(), ModBlocks.STRIPPED_PLAGUED_WOOD.get()).build();
-
-    protected static final Map<Block, Pair<Predicate<UseOnContext>, Consumer<UseOnContext>>> TILLABLES = Maps.newHashMap(ImmutableMap.of(Blocks.GRASS_BLOCK, Pair.of(HoeItem::onlyIfAirAbove, changeIntoState(Blocks.FARMLAND.defaultBlockState())), Blocks.DIRT_PATH, Pair.of(HoeItem::onlyIfAirAbove, changeIntoState(Blocks.FARMLAND.defaultBlockState())), Blocks.DIRT, Pair.of(HoeItem::onlyIfAirAbove, changeIntoState(Blocks.FARMLAND.defaultBlockState())), Blocks.COARSE_DIRT, Pair.of(HoeItem::onlyIfAirAbove, changeIntoState(Blocks.DIRT.defaultBlockState())), Blocks.ROOTED_DIRT, Pair.of((p_238242_) -> {
-        return true;
-    }, changeIntoStateAndDropItem(Blocks.DIRT.defaultBlockState(), Items.HANGING_ROOTS))));
 
     public PaxelItem(Tier pTier, float pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
         super(pAttackDamageModifier, pAttackSpeedModifier, pTier, ModTags.Blocks.PAXEL_MINEABLE, pProperties);
@@ -115,6 +78,7 @@ public class PaxelItem extends DiggerItem implements Vanishable {
             }
 
             return InteractionResult.sidedSuccess(level.isClientSide);
+
         } else {
             if (pContext.getClickedFace() == Direction.DOWN) {
                 return InteractionResult.PASS;

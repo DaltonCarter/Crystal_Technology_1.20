@@ -22,6 +22,8 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                 .title(Component.translatable("creativetab.crystal_technology_tab"))
                 .displayItems((itemDisplayParameters, output) -> {
 
+                    output.accept(ModBlocks.TEST_BLOCK.get());
+
                     output.accept(ModBlocks.BLOSSOM_SPOUT.get());
                     output.accept(ModBlocks.BLOSSOM_CENTER.get());
                     output.accept(ModBlocks.BLOSSOM_BASE.get());
@@ -362,20 +364,41 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.RIPARIUS_STONE_SLAB.get());
                         output.accept(ModBlocks.RIPARIUS_STONE_WALL.get());
 
+                        output.accept(ModBlocks.RIPARIUS_STONE_BRICKS.get());
+                        output.accept(ModBlocks.RIPARIUS_STONE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.RIPARIUS_STONE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.RIPARIUS_STONE_BRICK_WALL.get());
+
                         output.accept(ModBlocks.CRUENTUS_STONE.get());
                         output.accept(ModBlocks.CRUENTUS_STONE_STAIRS.get());
                         output.accept(ModBlocks.CRUENTUS_STONE_SLAB.get());
                         output.accept(ModBlocks.CRUENTUS_STONE_WALL.get());
+
+                        output.accept(ModBlocks.CRUENTUS_STONE_BRICKS.get());
+                        output.accept(ModBlocks.CRUENTUS_STONE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.CRUENTUS_STONE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.CRUENTUS_STONE_BRICK_WALL.get());
 
                         output.accept(ModBlocks.VINIFERA_STONE.get());
                         output.accept(ModBlocks.VINIFERA_STONE_STAIRS.get());
                         output.accept(ModBlocks.VINIFERA_STONE_SLAB.get());
                         output.accept(ModBlocks.VINIFERA_STONE_WALL.get());
 
+                        output.accept(ModBlocks.VINIFERA_STONE_BRICKS.get());
+                        output.accept(ModBlocks.VINIFERA_STONE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.VINIFERA_STONE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.VINIFERA_STONE_BRICK_WALL.get());
+
                         output.accept(ModBlocks.ABOREUS_STONE.get());
                         output.accept(ModBlocks.ABOREUS_STONE_STAIRS.get());
                         output.accept(ModBlocks.ABOREUS_STONE_SLAB.get());
                         output.accept(ModBlocks.ABOREUS_STONE_WALL.get());
+
+                        output.accept(ModBlocks.ABOREUS_STONE_BRICKS.get());
+                        output.accept(ModBlocks.ABOREUS_STONE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.ABOREUS_STONE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.ABOREUS_STONE_BRICK_WALL.get());
+
 
                         output.accept(ModBlocks.RIPARIUS_CRYSTAL.get());
                         output.accept(ModBlocks.RIPARIUS_CRYSTAL_STAIRS.get());

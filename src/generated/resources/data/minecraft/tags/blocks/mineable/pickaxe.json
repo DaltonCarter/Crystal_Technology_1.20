@@ -243,8 +243,12 @@
     "crystechmod:plagued_diorite_slab",
     "crystechmod:plagued_diorite_stairs",
     "crystechmod:riparius_stone_wall",
+    "crystechmod:riparius_stone_brick_wall",
     "crystechmod:riparius_stone_slab",
+    "crystechmod:riparius_stone_brick_slab",
     "crystechmod:riparius_stone_stairs",
+    "crystechmod:riparius_stone_stairs",
+    "crystechmod:riparius_stone_bricks",
     "crystechmod:vinifera_stone_wall",
     "crystechmod:vinifera_stone_slab",
     "crystechmod:vinifera_stone_stairs",
@@ -265,6 +269,15 @@
     "crystechmod:cruentus_crystal_stairs",
     "crystechmod:aboreus_crystal_wall",
     "crystechmod:aboreus_crystal_slab",
-    "crystechmod:aboreus_crystal_stairs"
+    "crystechmod:aboreus_crystal_stairs",
+    "crystechmod:vinifera_stone_brick_wall",
+    "crystechmod:vinifera_stone_brick_slab",
+    "crystechmod:vinifera_stone_brick_stairs",
+    "crystechmod:cruentus_stone_brick_wall",
+    "crystechmod:cruentus_stone_brick_slab",
+    "crystechmod:cruentus_stone_brick_stairs",
+    "crystechmod:aboreus_stone_brick_wall",
+    "crystechmod:aboreus_stone_brick_slab",
+    "crystechmod:aboreus_stone_brick_stairs"
   ]
 }

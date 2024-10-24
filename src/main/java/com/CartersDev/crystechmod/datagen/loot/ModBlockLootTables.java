@@ -31,6 +31,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
 
         //Self Drops:
+        this.dropSelf(ModBlocks.TEST_BLOCK.get());
+
         this.dropSelf(ModBlocks.TIBERIUM_BLOCK.get());
         this.dropSelf(ModBlocks.TIBERIUM_BLUE_BLOCK.get());
         this.dropSelf(ModBlocks.TIBERIUM_RED_BLOCK.get());
@@ -69,9 +71,21 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.SEEDED_DIRT.get());
 
         this.dropSelf(ModBlocks.RIPARIUS_STONE.get());
+        this.dropSelf(ModBlocks.RIPARIUS_STONE_BRICKS.get());
+        this.dropSelf(ModBlocks.RIPARIUS_STONE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.RIPARIUS_STONE_BRICK_STAIRS.get());
         this.dropSelf(ModBlocks.VINIFERA_STONE.get());
+        this.dropSelf(ModBlocks.VINIFERA_STONE_BRICKS.get());
+        this.dropSelf(ModBlocks.VINIFERA_STONE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.VINIFERA_STONE_BRICK_STAIRS.get());
         this.dropSelf(ModBlocks.CRUENTUS_STONE.get());
+        this.dropSelf(ModBlocks.CRUENTUS_STONE_BRICKS.get());
+        this.dropSelf(ModBlocks.CRUENTUS_STONE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.CRUENTUS_STONE_BRICK_STAIRS.get());
         this.dropSelf(ModBlocks.ABOREUS_STONE.get());
+        this.dropSelf(ModBlocks.ABOREUS_STONE_BRICKS.get());
+        this.dropSelf(ModBlocks.ABOREUS_STONE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.ABOREUS_STONE_BRICK_STAIRS.get());
 
         this.dropSelf(ModBlocks.RIPARIUS_CRYSTAL.get());
         this.dropSelf(ModBlocks.VINIFERA_CRYSTAL.get());
@@ -437,14 +451,26 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.RIPARIUS_STONE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.RIPARIUS_STONE_SLAB.get()));
 
+        this.add(ModBlocks.RIPARIUS_STONE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.RIPARIUS_STONE_BRICK_SLAB.get()));
+
         this.add(ModBlocks.VINIFERA_STONE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.VINIFERA_STONE_SLAB.get()));
+
+        this.add(ModBlocks.VINIFERA_STONE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.VINIFERA_STONE_BRICK_SLAB.get()));
 
         this.add(ModBlocks.CRUENTUS_STONE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.CRUENTUS_STONE_SLAB.get()));
 
+        this.add(ModBlocks.CRUENTUS_STONE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CRUENTUS_STONE_BRICK_SLAB.get()));
+
         this.add(ModBlocks.ABOREUS_STONE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.ABOREUS_STONE_SLAB.get()));
+
+        this.add(ModBlocks.ABOREUS_STONE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ABOREUS_STONE_BRICK_SLAB.get()));
 
         this.add(ModBlocks.RIPARIUS_CRYSTAL_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.RIPARIUS_CRYSTAL_SLAB.get()));

@@ -4,6 +4,10 @@
     "crystechmod:tiberium_block",
     "crystechmod:tiberium_blue_block",
     "crystechmod:riparius_stone",
+    "crystechmod:riparius_stone_bricks",
+    "crystechmod:riparius_stone_brick_slab",
+    "crystechmod:riparius_stone_brick_stairs",
+    "crystechmod:riparius_stone_brick_wall",
     "crystechmod:vinifera_stone",
     "crystechmod:cruentus_stone",
     "crystechmod:aboreus_stone",
@@ -31,6 +35,15 @@
     "crystechmod:cruentus_stone_stairs",
     "crystechmod:aboreus_stone_wall",
     "crystechmod:aboreus_stone_slab",
-    "crystechmod:aboreus_stone_stairs"
+    "crystechmod:aboreus_stone_stairs",
+    "crystechmod:vinifera_stone_brick_wall",
+    "crystechmod:vinifera_stone_brick_slab",
+    "crystechmod:vinifera_stone_brick_stairs",
+    "crystechmod:cruentus_stone_brick_wall",
+    "crystechmod:cruentus_stone_brick_slab",
+    "crystechmod:cruentus_stone_brick_stairs",
+    "crystechmod:aboreus_stone_brick_wall",
+    "crystechmod:aboreus_stone_brick_slab",
+    "crystechmod:aboreus_stone_brick_stairs"
   ]
 }

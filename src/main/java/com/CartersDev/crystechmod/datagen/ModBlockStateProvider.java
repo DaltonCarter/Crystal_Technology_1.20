@@ -26,6 +26,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
+        blockWithItem(ModBlocks.TEST_BLOCK);
+
+        //Basic Block States:
         blockWithItem(ModBlocks.GUNDANIUM_BLOCK);
         blockWithItem(ModBlocks.ALYTHUM_BLOCK);
         blockWithItem(ModBlocks.ILLYRIM_BLOCK);
@@ -91,6 +94,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.VINIFERA_CRYSTAL);
         blockWithItem(ModBlocks.CRUENTUS_CRYSTAL);
         blockWithItem(ModBlocks.ABOREUS_CRYSTAL);
+        blockWithItem(ModBlocks.RIPARIUS_STONE_BRICKS);
+        blockWithItem(ModBlocks.VINIFERA_STONE_BRICKS);
+        blockWithItem(ModBlocks.CRUENTUS_STONE_BRICKS);
+        blockWithItem(ModBlocks.ABOREUS_STONE_BRICKS);
 
         blockWithItem(ModBlocks.FIRESTONE_BLOCK);
 
@@ -174,7 +181,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.TIBERIUM_SOIL);
         blockWithItem(ModBlocks.ICHOR_SOIL);
+        blockWithItem(ModBlocks.SOUND_BLOCK);
 
+        //Rotated Pillar Blocks:
         axisBlock(((RotatedPillarBlock) ModBlocks.BLOSSOM_SPOUT.get()), blockTexture(ModBlocks.BLOSSOM_SPOUT.get()),
                 new ResourceLocation(CrystalTech.MOD_ID, "block/blossom_spout_top"));
 
@@ -186,8 +195,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         axisBlock(((RotatedPillarBlock) ModBlocks.BLOSSOM_ARM.get()), blockTexture(ModBlocks.BLOSSOM_CENTER.get()),blockTexture(ModBlocks.BLOSSOM_CENTER.get()));
 
-        blockWithItem(ModBlocks.SOUND_BLOCK);
-        
+
+        //Wood Blocks:
         logBlock(((RotatedPillarBlock) ModBlocks.PLAGUED_LOG.get()));
 
         axisBlock(((RotatedPillarBlock) ModBlocks.PLAGUED_WOOD.get()), blockTexture(ModBlocks.PLAGUED_LOG.get()),blockTexture(ModBlocks.PLAGUED_LOG.get()));
@@ -253,6 +262,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         leavesBlock(ModBlocks.MARIKA_OAK_LEAVES);
 
+        //Signs:
         signBlock(((StandingSignBlock) ModBlocks.PLAGUED_SIGN.get()), ((WallSignBlock) ModBlocks.PLAGUED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
 
@@ -273,6 +283,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         hangingSignBlock(ModBlocks.DEAD_HANGING_SIGN.get(), ModBlocks.DEAD_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.DEAD_PLANKS.get()));
 
+        //Panel Blocks/ Glass Panes:
         paneBlockWithRenderType((IronBarsBlock) ModBlocks.CLEAR_TIBERGLASS_PANE.get(), modLoc("block/clear_tiberglass"), modLoc("block/clear_tiberglass_pane_top"),"translucent");
        paneBlockWithRenderType((IronBarsBlock) ModBlocks.MOSAIC_TIBERGLASS_PANE.get(), modLoc("block/mosaic_tiberglass"), modLoc("block/mosaic_tiberglass_pane_top"),"translucent");
        paneBlockWithRenderType((IronBarsBlock) ModBlocks.GDI_TIBERGLASS_PANE.get(), modLoc("block/gdi_tiberglass"), modLoc("block/yellow_tiberglass_pane_top"),"translucent");
@@ -295,6 +306,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
        paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.WHITE_TIBERGLASS_PANE.get(), modLoc("block/white_tiberglass"), modLoc("block/white_tiberglass_pane_top"),"translucent");
        paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.YELLOW_TIBERGLASS_PANE.get(), modLoc("block/yellow_tiberglass"), modLoc("block/yellow_tiberglass_pane_top"),"translucent");
 
+       //Stairs:
        stairsBlock((StairBlock) ModBlocks.PLAGUED_STAIRS.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
        stairsBlock((StairBlock) ModBlocks.EMBER_OAK_STAIRS.get(), blockTexture(ModBlocks.EMBER_OAK_PLANKS.get()));
        stairsBlock((StairBlock) ModBlocks.DEAD_STAIRS.get(), blockTexture(ModBlocks.DEAD_PLANKS.get()));
@@ -339,16 +351,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) ModBlocks.PLAGUED_STONE_STAIRS.get(), blockTexture(ModBlocks.INFESTED_STONE.get()));
         stairsBlock((StairBlock) ModBlocks.PLAGUED_GRANITE_STAIRS.get(), blockTexture(ModBlocks.INFESTED_GRANITE.get()));
         stairsBlock((StairBlock) ModBlocks.PLAGUED_DIORITE_STAIRS.get(), blockTexture(ModBlocks.INFESTED_DIORITE.get()));
+
         stairsBlock((StairBlock) ModBlocks.RIPARIUS_STONE_STAIRS.get(), blockTexture(ModBlocks.RIPARIUS_STONE.get()));
+        stairsBlock((StairBlock) ModBlocks.RIPARIUS_STONE_BRICK_STAIRS.get(), blockTexture(ModBlocks.RIPARIUS_STONE_BRICKS.get()));
+
         stairsBlock((StairBlock) ModBlocks.VINIFERA_STONE_STAIRS.get(), blockTexture(ModBlocks.VINIFERA_STONE.get()));
+        stairsBlock((StairBlock) ModBlocks.VINIFERA_STONE_BRICK_STAIRS.get(), blockTexture(ModBlocks.VINIFERA_STONE_BRICKS.get()));
+
         stairsBlock((StairBlock) ModBlocks.CRUENTUS_STONE_STAIRS.get(), blockTexture(ModBlocks.CRUENTUS_STONE.get()));
+        stairsBlock((StairBlock) ModBlocks.CRUENTUS_STONE_BRICK_STAIRS.get(), blockTexture(ModBlocks.CRUENTUS_STONE_BRICKS.get()));
+
         stairsBlock((StairBlock) ModBlocks.ABOREUS_STONE_STAIRS.get(), blockTexture(ModBlocks.ABOREUS_STONE.get()));
+        stairsBlock((StairBlock) ModBlocks.ABOREUS_STONE_BRICK_STAIRS.get(), blockTexture(ModBlocks.ABOREUS_STONE_BRICKS.get()));
 
         stairsBlock((StairBlock) ModBlocks.RIPARIUS_CRYSTAL_STAIRS.get(), blockTexture(ModBlocks.RIPARIUS_CRYSTAL.get()));
         stairsBlock((StairBlock) ModBlocks.VINIFERA_CRYSTAL_STAIRS.get(), blockTexture(ModBlocks.VINIFERA_CRYSTAL.get()));
         stairsBlock((StairBlock) ModBlocks.CRUENTUS_CRYSTAL_STAIRS.get(), blockTexture(ModBlocks.CRUENTUS_CRYSTAL.get()));
         stairsBlock((StairBlock) ModBlocks.ABOREUS_CRYSTAL_STAIRS.get(), blockTexture(ModBlocks.ABOREUS_CRYSTAL.get()));
 
+        //Slabs:
        slabBlock((SlabBlock) ModBlocks.PLAGUED_SLAB.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
        slabBlock((SlabBlock) ModBlocks.EMBER_OAK_SLAB.get(), blockTexture(ModBlocks.EMBER_OAK_PLANKS.get()), blockTexture(ModBlocks.EMBER_OAK_PLANKS.get()));
        slabBlock((SlabBlock) ModBlocks.DEAD_SLAB.get(), blockTexture(ModBlocks.DEAD_PLANKS.get()), blockTexture(ModBlocks.DEAD_PLANKS.get()));
@@ -394,17 +415,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) ModBlocks.YELLOW_TIBERCRETE_BRICK_SLAB.get(), blockTexture(ModBlocks.YELLOW_TIBERCRETE_BRICKS.get()), blockTexture(ModBlocks.YELLOW_TIBERCRETE_BRICKS.get()));
 
         slabBlock((SlabBlock) ModBlocks.PLAGUED_ANDESITE_SLAB.get(), blockTexture(ModBlocks.INFESTED_ANDESITE.get()), blockTexture(ModBlocks.INFESTED_ANDESITE.get()));
+
         slabBlock((SlabBlock) ModBlocks.RIPARIUS_STONE_SLAB.get(), blockTexture(ModBlocks.RIPARIUS_STONE.get()), blockTexture(ModBlocks.RIPARIUS_STONE.get()));
+        slabBlock((SlabBlock) ModBlocks.RIPARIUS_STONE_BRICK_SLAB.get(), blockTexture(ModBlocks.RIPARIUS_STONE_BRICKS.get()), blockTexture(ModBlocks.RIPARIUS_STONE_BRICKS.get()));
+
         slabBlock((SlabBlock) ModBlocks.ABOREUS_STONE_SLAB.get(), blockTexture(ModBlocks.ABOREUS_STONE.get()), blockTexture(ModBlocks.ABOREUS_STONE.get()));
+        slabBlock((SlabBlock) ModBlocks.ABOREUS_STONE_BRICK_SLAB.get(), blockTexture(ModBlocks.ABOREUS_STONE_BRICKS.get()), blockTexture(ModBlocks.ABOREUS_STONE_BRICKS.get()));
+
         slabBlock((SlabBlock) ModBlocks.CRUENTUS_STONE_SLAB.get(), blockTexture(ModBlocks.CRUENTUS_STONE.get()), blockTexture(ModBlocks.CRUENTUS_STONE.get()));
+        slabBlock((SlabBlock) ModBlocks.CRUENTUS_STONE_BRICK_SLAB.get(), blockTexture(ModBlocks.CRUENTUS_STONE_BRICKS.get()), blockTexture(ModBlocks.CRUENTUS_STONE_BRICKS.get()));
+
         slabBlock((SlabBlock) ModBlocks.VINIFERA_STONE_SLAB.get(), blockTexture(ModBlocks.VINIFERA_STONE.get()), blockTexture(ModBlocks.VINIFERA_STONE.get()));
+        slabBlock((SlabBlock) ModBlocks.VINIFERA_STONE_BRICK_SLAB.get(), blockTexture(ModBlocks.VINIFERA_STONE_BRICKS.get()), blockTexture(ModBlocks.VINIFERA_STONE_BRICKS.get()));
 
         slabBlock((SlabBlock) ModBlocks.RIPARIUS_CRYSTAL_SLAB.get(), blockTexture(ModBlocks.RIPARIUS_CRYSTAL.get()), blockTexture(ModBlocks.RIPARIUS_CRYSTAL.get()));
         slabBlock((SlabBlock) ModBlocks.ABOREUS_CRYSTAL_SLAB.get(), blockTexture(ModBlocks.ABOREUS_CRYSTAL.get()), blockTexture(ModBlocks.ABOREUS_CRYSTAL.get()));
         slabBlock((SlabBlock) ModBlocks.CRUENTUS_CRYSTAL_SLAB.get(), blockTexture(ModBlocks.CRUENTUS_CRYSTAL.get()), blockTexture(ModBlocks.CRUENTUS_CRYSTAL.get()));
         slabBlock((SlabBlock) ModBlocks.VINIFERA_CRYSTAL_SLAB.get(), blockTexture(ModBlocks.VINIFERA_CRYSTAL.get()), blockTexture(ModBlocks.VINIFERA_CRYSTAL.get()));
 
-
+        //Buttons and Pressure Plates:
         buttonBlock((ButtonBlock) ModBlocks.PLAGUED_BUTTON.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
         pressurePlateBlock((PressurePlateBlock) ModBlocks.PLAGUED_PRESSURE_PLATE.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
         buttonBlock((ButtonBlock) ModBlocks.EMBER_OAK_BUTTON.get(), blockTexture(ModBlocks.EMBER_OAK_PLANKS.get()));
@@ -416,6 +445,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         buttonBlock((ButtonBlock) ModBlocks.MARIKA_OAK_BUTTON.get(), blockTexture(ModBlocks.MARIKA_OAK_PLANKS.get()));
         pressurePlateBlock((PressurePlateBlock) ModBlocks.MARIKA_OAK_PRESSURE_PLATE.get(), blockTexture(ModBlocks.MARIKA_OAK_PLANKS.get()));
 
+        //Fences and Fence Gates:
         fenceBlock((FenceBlock) ModBlocks.PLAGUED_FENCE.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
         fenceGateBlock((FenceGateBlock) ModBlocks.PLAGUED_FENCE_GATE.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
         fenceBlock((FenceBlock) ModBlocks.EMBER_OAK_FENCE.get(), blockTexture(ModBlocks.EMBER_OAK_PLANKS.get()));
@@ -427,6 +457,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceBlock((FenceBlock) ModBlocks.MARIKA_OAK_FENCE.get(), blockTexture(ModBlocks.MARIKA_OAK_PLANKS.get()));
         fenceGateBlock((FenceGateBlock) ModBlocks.MARIKA_OAK_FENCE_GATE.get(), blockTexture(ModBlocks.MARIKA_OAK_PLANKS.get()));
 
+        //Doors and Trapdoors:
         doorBlockWithRenderType((((DoorBlock) ModBlocks.PLAGUED_DOOR.get())), modLoc("block/plagued_door_bottom"), modLoc("block/plagued_door_top"), "cutout");
         trapdoorBlockWithRenderType((((TrapDoorBlock) ModBlocks.PLAGUED_TRAPDOOR.get())), modLoc("block/plagued_trapdoor"), true, "cutout");
         doorBlockWithRenderType((((DoorBlock) ModBlocks.EMBER_OAK_DOOR.get())), modLoc("block/ember_oak_door_bottom"), modLoc("block/ember_oak_door_top"), "cutout");
@@ -438,6 +469,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType((((DoorBlock) ModBlocks.MARIKA_OAK_DOOR.get())), modLoc("block/marika_oak_door_bottom"), modLoc("block/marika_oak_door_top"), "cutout");
         trapdoorBlockWithRenderType((((TrapDoorBlock) ModBlocks.MARIKA_OAK_TRAPDOOR.get())), modLoc("block/marika_oak_trapdoor"), true, "cutout");
 
+        //Walls:
         wallBlock((((WallBlock) ModBlocks.FIRESTONE_WALL.get())), blockTexture(( ModBlocks.FIRESTONE_BLOCK.get())));
         wallBlock((((WallBlock) ModBlocks.INFESTED_COBBLE_WALL.get())), blockTexture(( ModBlocks.INFESTED_COBBLE.get())));
         wallBlock((((WallBlock) ModBlocks.INFESTED_STONE_BRICK_WALL.get())), blockTexture(( ModBlocks.INFESTED_STONE_BRICKS.get())));
@@ -445,10 +477,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock((((WallBlock) ModBlocks.PLAGUED_STONE_WALL.get())), blockTexture(( ModBlocks.INFESTED_STONE.get())));
         wallBlock((((WallBlock) ModBlocks.PLAGUED_GRANITE_WALL.get())), blockTexture(( ModBlocks.INFESTED_GRANITE.get())));
         wallBlock((((WallBlock) ModBlocks.PLAGUED_DIORITE_WALL.get())), blockTexture(( ModBlocks.INFESTED_DIORITE.get())));
+
         wallBlock((((WallBlock) ModBlocks.RIPARIUS_STONE_WALL.get())), blockTexture(( ModBlocks.RIPARIUS_STONE.get())));
+        wallBlock((((WallBlock) ModBlocks.RIPARIUS_STONE_BRICK_WALL.get())), blockTexture(( ModBlocks.RIPARIUS_STONE_BRICKS.get())));
+
         wallBlock((((WallBlock) ModBlocks.VINIFERA_STONE_WALL.get())), blockTexture(( ModBlocks.VINIFERA_STONE.get())));
+        wallBlock((((WallBlock) ModBlocks.VINIFERA_STONE_BRICK_WALL.get())), blockTexture(( ModBlocks.VINIFERA_STONE_BRICKS.get())));
+
         wallBlock((((WallBlock) ModBlocks.CRUENTUS_STONE_WALL.get())), blockTexture(( ModBlocks.CRUENTUS_STONE.get())));
+        wallBlock((((WallBlock) ModBlocks.CRUENTUS_STONE_BRICK_WALL.get())), blockTexture(( ModBlocks.CRUENTUS_STONE_BRICKS.get())));
+
         wallBlock((((WallBlock) ModBlocks.ABOREUS_STONE_WALL.get())), blockTexture(( ModBlocks.ABOREUS_STONE.get())));
+        wallBlock((((WallBlock) ModBlocks.ABOREUS_STONE_BRICK_WALL.get())), blockTexture(( ModBlocks.ABOREUS_STONE_BRICKS.get())));
 
         wallBlock((((WallBlock) ModBlocks.RIPARIUS_CRYSTAL_WALL.get())), blockTexture(( ModBlocks.RIPARIUS_CRYSTAL.get())));
         wallBlock((((WallBlock) ModBlocks.VINIFERA_CRYSTAL_WALL.get())), blockTexture(( ModBlocks.VINIFERA_CRYSTAL.get())));
@@ -490,7 +530,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock((((WallBlock) ModBlocks.YELLOW_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.YELLOW_TIBERCRETE_BRICKS.get())));
 
 
-
+        //Crops and Plants:
         makeStrawberryCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
 
         makeCornCrop((CropBlock) ModBlocks.CORN_CROP.get(), "corn_stage_", "corn_stage_");
@@ -516,6 +556,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.DEVILS_BLOOD.get())).renderType("cutout"));
 
+
+        // Machines and other Block Entities:
         simpleBlockWithItem(ModBlocks.TIBERIUM_GRINDER.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/tiberium_grinder")));
 

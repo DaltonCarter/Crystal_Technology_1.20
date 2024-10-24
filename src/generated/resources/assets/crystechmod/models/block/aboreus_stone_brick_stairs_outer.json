@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "crystechmod:block/aboreus_stone_bricks",
+    "side": "crystechmod:block/aboreus_stone_bricks",
+    "top": "crystechmod:block/aboreus_stone_bricks"
+  }
+}

@@ -332,9 +332,29 @@
   "block.crystechmod.red_zone_sand": "Red Zone Sand",
 
   "block.crystechmod.riparius_stone": "Riparius Stone",
+  "block.crystechmod.riparius_stone_bricks": "Riparius Stone Bricks",
+  "block.crystechmod.riparius_stone_brick_slab": "Riparius Stone Brick Slab",
+  "block.crystechmod.riparius_stone_brick_stairs": "Riparius Stone Brick Stairs",
+  "block.crystechmod.riparius_stone_brick_wall": "Riparius Stone Brick Wall",
+
   "block.crystechmod.vinifera_stone": "Vinifera Stone",
+  "block.crystechmod.vinifera_stone_bricks": "Vinifera Stone Bricks",
+  "block.crystechmod.vinifera_stone_brick_slab": "Vinifera Stone Brick Slab",
+  "block.crystechmod.vinifera_stone_brick_stairs": "Vinifera Stone Brick Stairs",
+  "block.crystechmod.vinifera_stone_brick_wall": "Vinifera Stone Brick Wall",
+
   "block.crystechmod.cruentus_stone": "Cruentus Stone",
+  "block.crystechmod.cruentus_stone_bricks": "Cruentus Stone Bricks",
+  "block.crystechmod.cruentus_stone_brick_slab": "Cruentus Stone Brick Slab",
+  "block.crystechmod.cruentus_stone_brick_stairs": "Cruentus Stone Brick Stairs",
+  "block.crystechmod.cruentus_stone_brick_wall": "Cruentus Stone Brick Wall",
+
   "block.crystechmod.aboreus_stone": "Aboreus Stone",
+  "block.crystechmod.aboreus_stone_bricks": "Aboreus Stone Bricks",
+  "block.crystechmod.aboreus_stone_brick_slab": "Aboreus Stone Brick Slab",
+  "block.crystechmod.aboreus_stone_brick_stairs": "Aboreus Stone Brick Stairs",
+  "block.crystechmod.aboreus_stone_brick_wall": "Aboreus Stone Brick Wall",
+
   "block.crystechmod.riparius_crystal": "Riparius Crystal",
   "block.crystechmod.vinifera_crystal": "Vinifera Crystal",
   "block.crystechmod.cruentus_crystal": "Cruentus Crystal",

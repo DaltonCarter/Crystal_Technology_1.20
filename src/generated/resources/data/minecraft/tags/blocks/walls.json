@@ -46,6 +46,10 @@
     "crystechmod:riparius_crystal_wall",
     "crystechmod:cruentus_crystal_wall",
     "crystechmod:aboreus_crystal_wall",
-    "crystechmod:vinifera_crystal_wall"
+    "crystechmod:vinifera_crystal_wall",
+    "crystechmod:riparius_stone_brick_wall",
+    "crystechmod:cruentus_stone_brick_wall",
+    "crystechmod:aboreus_stone_brick_wall",
+    "crystechmod:vinifera_stone_brick_wall"
   ]
 }

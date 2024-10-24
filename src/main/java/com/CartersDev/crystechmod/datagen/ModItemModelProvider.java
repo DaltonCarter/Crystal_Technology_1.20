@@ -45,6 +45,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
 
+        //Simple Item Models:
         simpleItem(ModItems.TIBERIUM_LEATHER);
         simpleItem(ModItems.ICHOR_LEATHER);
 
@@ -131,6 +132,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CORN);
         simpleItem(ModItems.CORN_SEEDS);
 
+        //Panes:
         paneItem(ModBlocks.CLEAR_TIBERGLASS_PANE, ModBlocks.CLEAR_TIBERGLASS);
         paneItem(ModBlocks.MOSAIC_TIBERGLASS_PANE, ModBlocks.MOSAIC_TIBERGLASS);
         paneItem(ModBlocks.GDI_TIBERGLASS_PANE, ModBlocks.GDI_TIBERGLASS);
@@ -153,20 +155,23 @@ public class ModItemModelProvider extends ItemModelProvider {
         paneItem(ModBlocks.WHITE_TIBERGLASS_PANE, ModBlocks.WHITE_TIBERGLASS);
         paneItem(ModBlocks.YELLOW_TIBERGLASS_PANE, ModBlocks.YELLOW_TIBERGLASS);
 
+        //Fences:
+        fenceItem(ModBlocks.PLAGUED_FENCE, ModBlocks.PLAGUED_PLANKS);
+        fenceItem(ModBlocks.EMBER_OAK_FENCE, ModBlocks.EMBER_OAK_PLANKS);
+        fenceItem(ModBlocks.DEAD_FENCE, ModBlocks.DEAD_PLANKS);
+        fenceItem(ModBlocks.MARIKA_OAK_FENCE, ModBlocks.MARIKA_OAK_PLANKS);
+
+        //Buttons:
+        buttonItem(ModBlocks.EMBER_OAK_BUTTON, ModBlocks.EMBER_OAK_PLANKS);
+        buttonItem(ModBlocks.DEAD_BUTTON, ModBlocks.DEAD_PLANKS);
+        buttonItem(ModBlocks.MARIKA_OAK_BUTTON, ModBlocks.MARIKA_OAK_PLANKS);
+        buttonItem(ModBlocks.PLAGUED_BUTTON, ModBlocks.PLAGUED_PLANKS);
+
+        //Block Items:
         simpleBlockItem(ModBlocks.PLAGUED_DOOR);
         simpleBlockItem(ModBlocks.EMBER_OAK_DOOR);
         simpleBlockItem(ModBlocks.DEAD_DOOR);
         simpleBlockItem(ModBlocks.MARIKA_OAK_DOOR);
-
-        fenceItem(ModBlocks.PLAGUED_FENCE, ModBlocks.PLAGUED_PLANKS);
-        buttonItem(ModBlocks.PLAGUED_BUTTON, ModBlocks.PLAGUED_PLANKS);
-
-        fenceItem(ModBlocks.EMBER_OAK_FENCE, ModBlocks.EMBER_OAK_PLANKS);
-        fenceItem(ModBlocks.DEAD_FENCE, ModBlocks.DEAD_PLANKS);
-        fenceItem(ModBlocks.MARIKA_OAK_FENCE, ModBlocks.MARIKA_OAK_PLANKS);
-        buttonItem(ModBlocks.EMBER_OAK_BUTTON, ModBlocks.EMBER_OAK_PLANKS);
-        buttonItem(ModBlocks.DEAD_BUTTON, ModBlocks.DEAD_PLANKS);
-        buttonItem(ModBlocks.MARIKA_OAK_BUTTON, ModBlocks.MARIKA_OAK_PLANKS);
 
         evenSimplerBlockItem(ModBlocks.PLAGUED_STAIRS);
         evenSimplerBlockItem(ModBlocks.EMBER_OAK_STAIRS);
@@ -190,6 +195,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.RED_TIBERCRETE_STAIRS);
         evenSimplerBlockItem(ModBlocks.WHITE_TIBERCRETE_STAIRS);
         evenSimplerBlockItem(ModBlocks.YELLOW_TIBERCRETE_STAIRS);
+
         evenSimplerBlockItem(ModBlocks.PLAGUED_SLAB);
         evenSimplerBlockItem(ModBlocks.EMBER_OAK_SLAB);
         evenSimplerBlockItem(ModBlocks.DEAD_SLAB);
@@ -252,6 +258,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.CRUENTUS_STONE_SLAB);
         evenSimplerBlockItem(ModBlocks.VINIFERA_STONE_STAIRS);
         evenSimplerBlockItem(ModBlocks.VINIFERA_STONE_SLAB);
+
         evenSimplerBlockItem(ModBlocks.PLAGUED_ANDESITE_STAIRS);
         evenSimplerBlockItem(ModBlocks.PLAGUED_ANDESITE_SLAB);
 
@@ -263,6 +270,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.PLAGUED_DIORITE_SLAB);
         evenSimplerBlockItem(ModBlocks.RIPARIUS_STONE_STAIRS);
         evenSimplerBlockItem(ModBlocks.RIPARIUS_STONE_SLAB);
+        evenSimplerBlockItem(ModBlocks.ABOREUS_STONE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.ABOREUS_STONE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.VINIFERA_STONE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.VINIFERA_STONE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.CRUENTUS_STONE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CRUENTUS_STONE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.RIPARIUS_STONE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.RIPARIUS_STONE_BRICK_SLAB);
 
         evenSimplerBlockItem(ModBlocks.BLACK_TIBERCRETE_BRICK_SLAB);
         evenSimplerBlockItem(ModBlocks.BLUE_TIBERCRETE_BRICK_SLAB);
@@ -281,10 +296,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.WHITE_TIBERCRETE_BRICK_SLAB);
         evenSimplerBlockItem(ModBlocks.YELLOW_TIBERCRETE_BRICK_SLAB);
 
+        //Trapdoors:
         trapdoorItem((ModBlocks.PLAGUED_TRAPDOOR));
         trapdoorItem((ModBlocks.EMBER_OAK_TRAPDOOR));
         trapdoorItem((ModBlocks.DEAD_TRAPDOOR));
         trapdoorItem((ModBlocks.MARIKA_OAK_TRAPDOOR));
+
+        //Walls:
         wallItem((ModBlocks.FIRESTONE_WALL), ModBlocks.FIRESTONE_BLOCK);
 
         wallItem((ModBlocks.INFESTED_COBBLE_WALL), ModBlocks.INFESTED_COBBLE);
@@ -332,12 +350,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem((ModBlocks.ABOREUS_STONE_WALL), ModBlocks.ABOREUS_STONE);
         wallItem((ModBlocks.VINIFERA_STONE_WALL), ModBlocks.VINIFERA_STONE);
         wallItem((ModBlocks.CRUENTUS_STONE_WALL), ModBlocks.CRUENTUS_STONE);
-
+        wallItem((ModBlocks.RIPARIUS_STONE_BRICK_WALL), ModBlocks.RIPARIUS_STONE_BRICKS);
+        wallItem((ModBlocks.ABOREUS_STONE_BRICK_WALL), ModBlocks.ABOREUS_STONE_BRICKS);
+        wallItem((ModBlocks.VINIFERA_STONE_BRICK_WALL), ModBlocks.VINIFERA_STONE_BRICKS);
+        wallItem((ModBlocks.CRUENTUS_STONE_BRICK_WALL), ModBlocks.CRUENTUS_STONE_BRICKS);
         wallItem((ModBlocks.RIPARIUS_CRYSTAL_WALL), ModBlocks.RIPARIUS_CRYSTAL);
         wallItem((ModBlocks.ABOREUS_CRYSTAL_WALL), ModBlocks.ABOREUS_CRYSTAL);
         wallItem((ModBlocks.VINIFERA_CRYSTAL_WALL), ModBlocks.VINIFERA_CRYSTAL);
         wallItem((ModBlocks.CRUENTUS_CRYSTAL_WALL), ModBlocks.CRUENTUS_CRYSTAL);
 
+        //Handheld Items:
         handheldItem(ModItems.PLAGUED_SWORD);
         handheldItem(ModItems.PLAGUED_PICKAXE);
         handheldItem(ModItems.PLAGUED_AXE);
@@ -360,6 +382,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.ALYTHUM_PAXEL);
         handheldItem(ModItems.ALYTHUM_HAMMER);
 
+        //Armors:
         trimmedArmorItem(ModItems.GUNDANIUM_HELMET);
         trimmedArmorItem(ModItems.GUNDANIUM_CHESTPLATE);
         trimmedArmorItem(ModItems.GUNDANIUM_LEGGINGS);
@@ -382,12 +405,16 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.GUNDANIUM_HORSE_ARMOR);
 
+
+        //Plants:
         simpleBlockItemBlockTexture(ModBlocks.HYACINTH);
         simpleBlockItemBlockTexture(ModBlocks.FLOWER_OF_LIFE);
         simpleBlockItemBlockTexture(ModBlocks.DEVILS_BLOOD);
 
+        //Spawn Eggs:
         withExistingParent(ModItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
+        //Signs:
         simpleItem(ModItems.PLAGUED_SIGN);
         simpleItem(ModItems.PLAGUED_HANGING_SIGN);
         simpleItem(ModItems.EMBER_OAK_SIGN);

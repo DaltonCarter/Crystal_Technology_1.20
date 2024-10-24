@@ -314,8 +314,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.PLAGUED_DIORITE_SLAB.get(),
                         ModBlocks.PLAGUED_DIORITE_STAIRS.get(),
                         ModBlocks.RIPARIUS_STONE_WALL.get(),
+                        ModBlocks.RIPARIUS_STONE_BRICK_WALL.get(),
                         ModBlocks.RIPARIUS_STONE_SLAB.get(),
+                        ModBlocks.RIPARIUS_STONE_BRICK_SLAB.get(),
                         ModBlocks.RIPARIUS_STONE_STAIRS.get(),
+                        ModBlocks.RIPARIUS_STONE_STAIRS.get(),
+                        ModBlocks.RIPARIUS_STONE_BRICKS.get(),
                         ModBlocks.VINIFERA_STONE_WALL.get(),
                         ModBlocks.VINIFERA_STONE_SLAB.get(),
                         ModBlocks.VINIFERA_STONE_STAIRS.get(),
@@ -336,7 +340,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.CRUENTUS_CRYSTAL_STAIRS.get(),
                         ModBlocks.ABOREUS_CRYSTAL_WALL.get(),
                         ModBlocks.ABOREUS_CRYSTAL_SLAB.get(),
-                        ModBlocks.ABOREUS_CRYSTAL_STAIRS.get()
+                        ModBlocks.ABOREUS_CRYSTAL_STAIRS.get(),
+                        ModBlocks.VINIFERA_STONE_BRICK_WALL.get(),
+                        ModBlocks.VINIFERA_STONE_BRICK_SLAB.get(),
+                        ModBlocks.VINIFERA_STONE_BRICK_STAIRS.get(),
+                        ModBlocks.CRUENTUS_STONE_BRICK_WALL.get(),
+                        ModBlocks.CRUENTUS_STONE_BRICK_SLAB.get(),
+                        ModBlocks.CRUENTUS_STONE_BRICK_STAIRS.get(),
+                        ModBlocks.ABOREUS_STONE_BRICK_WALL.get(),
+                        ModBlocks.ABOREUS_STONE_BRICK_SLAB.get(),
+                        ModBlocks.ABOREUS_STONE_BRICK_STAIRS.get()
 
 
                 );
@@ -675,6 +688,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.TIBERIUM_BLOCK.get(),
                 ModBlocks.TIBERIUM_BLUE_BLOCK.get(),
                 ModBlocks.RIPARIUS_STONE.get(),
+                ModBlocks.RIPARIUS_STONE_BRICKS.get(),
+                ModBlocks.RIPARIUS_STONE_BRICK_SLAB.get(),
+                ModBlocks.RIPARIUS_STONE_BRICK_STAIRS.get(),
+                ModBlocks.RIPARIUS_STONE_BRICK_WALL.get(),
                 ModBlocks.VINIFERA_STONE.get(),
                 ModBlocks.CRUENTUS_STONE.get(),
                 ModBlocks.ABOREUS_STONE.get(),
@@ -702,7 +719,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.CRUENTUS_STONE_STAIRS.get(),
                         ModBlocks.ABOREUS_STONE_WALL.get(),
                         ModBlocks.ABOREUS_STONE_SLAB.get(),
-                        ModBlocks.ABOREUS_STONE_STAIRS.get()
+                        ModBlocks.ABOREUS_STONE_STAIRS.get(),
+                        ModBlocks.VINIFERA_STONE_BRICK_WALL.get(),
+                        ModBlocks.VINIFERA_STONE_BRICK_SLAB.get(),
+                        ModBlocks.VINIFERA_STONE_BRICK_STAIRS.get(),
+                        ModBlocks.CRUENTUS_STONE_BRICK_WALL.get(),
+                        ModBlocks.CRUENTUS_STONE_BRICK_SLAB.get(),
+                        ModBlocks.CRUENTUS_STONE_BRICK_STAIRS.get(),
+                        ModBlocks.ABOREUS_STONE_BRICK_WALL.get(),
+                        ModBlocks.ABOREUS_STONE_BRICK_SLAB.get(),
+                        ModBlocks.ABOREUS_STONE_BRICK_STAIRS.get()
 
                 );
 
@@ -712,6 +738,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.DEAD_PLANKS.get()
 
                 );
+
+        this.tag(BlockTags.LOGS)
+                .addTags(ModTags.Blocks.MARIKA_OAK_LOGS,
+                        ModTags.Blocks.EMBER_OAK_LOGS,
+                        ModTags.Blocks.DEAD_LOGS,
+                        ModTags.Blocks.PLAGUED_LOGS);
 
         this.tag(BlockTags.PLANKS)
                 .addTags(ModTags.Blocks.MOD_PLANKS);
@@ -871,7 +903,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.RIPARIUS_CRYSTAL_WALL.get(),
                         ModBlocks.CRUENTUS_CRYSTAL_WALL.get(),
                         ModBlocks.ABOREUS_CRYSTAL_WALL.get(),
-                        ModBlocks.VINIFERA_CRYSTAL_WALL.get()
+                        ModBlocks.VINIFERA_CRYSTAL_WALL.get(),
+                        ModBlocks.RIPARIUS_STONE_BRICK_WALL.get(),
+                        ModBlocks.CRUENTUS_STONE_BRICK_WALL.get(),
+                        ModBlocks.ABOREUS_STONE_BRICK_WALL.get(),
+                        ModBlocks.VINIFERA_STONE_BRICK_WALL.get()
                 );
 
         this.tag(BlockTags.WOODEN_DOORS)

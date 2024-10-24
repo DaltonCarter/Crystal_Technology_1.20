@@ -35,7 +35,8 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, CrystalTech.MOD_ID);
 
-
+    public static final RegistryObject<Block> TEST_BLOCK = registerBlock("test_block",
+            () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
 
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
             () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.SOUND_BLOCK_SOUNDS)));
@@ -98,19 +99,19 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
     public static final RegistryObject<Block> RIPARIUS_CRYSTAL = registerBlock("riparius_crystal",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+            () -> new TiberiumCrystalBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
                     .noOcclusion().lightLevel(tiberiumglow)));
 
     public static final RegistryObject<Block> VINIFERA_CRYSTAL = registerBlock("vinifera_crystal",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+            () -> new TiberiumCrystalBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
                     .noOcclusion().lightLevel(tiberiumglow)));
 
     public static final RegistryObject<Block> CRUENTUS_CRYSTAL = registerBlock("cruentus_crystal",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+            () -> new TiberiumCrystalBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
                     .noOcclusion().lightLevel(tiberiumglow)));
 
     public static final RegistryObject<Block> ABOREUS_CRYSTAL = registerBlock("aboreus_crystal",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
+            () -> new TiberiumCrystalBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
                     .noOcclusion().lightLevel(tiberiumglow)));
 
     public static final RegistryObject<Block> SEEDED_DIRT = registerBlock("seeded_dirt",
@@ -898,6 +899,60 @@ public class ModBlocks {
     public static final RegistryObject<Block> ABOREUS_CRYSTAL_WALL = registerBlock("aboreus_crystal_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.AMETHYST)
                     .noOcclusion().lightLevel(tiberiumglow)));
+
+    public static final RegistryObject<Block> RIPARIUS_STONE_BRICKS = registerBlock("riparius_stone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
+
+    public static final RegistryObject<Block> RIPARIUS_STONE_BRICK_STAIRS = registerBlock("riparius_stone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.RIPARIUS_STONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+
+    public static final RegistryObject<Block> RIPARIUS_STONE_BRICK_SLAB = registerBlock("riparius_stone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> RIPARIUS_STONE_BRICK_WALL = registerBlock("riparius_stone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+
+    public static final RegistryObject<Block> VINIFERA_STONE_BRICKS = registerBlock("vinifera_stone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
+
+    public static final RegistryObject<Block> VINIFERA_STONE_BRICK_STAIRS = registerBlock("vinifera_stone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.VINIFERA_STONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+
+    public static final RegistryObject<Block> VINIFERA_STONE_BRICK_SLAB = registerBlock("vinifera_stone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> VINIFERA_STONE_BRICK_WALL = registerBlock("vinifera_stone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+
+    public static final RegistryObject<Block> CRUENTUS_STONE_BRICKS = registerBlock("cruentus_stone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
+
+    public static final RegistryObject<Block> CRUENTUS_STONE_BRICK_STAIRS = registerBlock("cruentus_stone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.CRUENTUS_STONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+
+    public static final RegistryObject<Block> CRUENTUS_STONE_BRICK_SLAB = registerBlock("cruentus_stone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> CRUENTUS_STONE_BRICK_WALL = registerBlock("cruentus_stone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+
+    public static final RegistryObject<Block> ABOREUS_STONE_BRICKS = registerBlock("aboreus_stone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
+
+    public static final RegistryObject<Block> ABOREUS_STONE_BRICK_STAIRS = registerBlock("aboreus_stone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.ABOREUS_STONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+
+    public static final RegistryObject<Block> ABOREUS_STONE_BRICK_SLAB = registerBlock("aboreus_stone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> ABOREUS_STONE_BRICK_WALL = registerBlock("aboreus_stone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+
+
 
     //End of Deco Blocks
 

@@ -404,6 +404,18 @@ Posted By: Dalton Carter
 -Added Recipies for Signs, Buttons, Paxel, and Hammer
 -Added ALOT of Tags, Including adding 3 of my wood types to Vanilla Planks Tags
 
+------------------------------------------------------------------------------
+
+10/19/2024 - 10/23/2024
+Version 0.4.72
+Posted By: Dalton Carter
+
+-Updated Textures for Tiberium Stones, and ALL Tiberglass
+-added Tiberium Stone Bricks, Slabs, stairs, and Walls
+-Slowing Sword Class added for "On-Hit" effect reference for weapons.
+-Looking into making Paxel COMPLETELY compatible with ANY Wood not just Vanilla and my own.
+-Test Block is Present for Texture Testing Purposes.
+
 
 ======================================================
 LEGACY 1.16.5 Changelog
