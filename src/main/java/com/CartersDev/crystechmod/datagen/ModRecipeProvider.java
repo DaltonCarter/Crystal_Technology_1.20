@@ -2388,6 +2388,16 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_LOG.get()), has(ModBlocks.MARIKA_OAK_LOG.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_G.get())
+                .pattern("TTT")
+                .pattern("IRI")
+                .pattern("TTT")
+                .define('R', Blocks.REDSTONE_LAMP)
+                .define('T', ModItems.TIBERIUM.get())
+                .define('I', ModItems.ILLUMINA_CRYSTAL.get())
+                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .save(consumer);
+
         //Shapeless Crafting:
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIBERIUM.get(), 9)
                 .requires(ModBlocks.TIBERIUM_BLOCK.get())
@@ -2764,15 +2774,50 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_SLAB.get(), ModBlocks.RIPARIUS_STONE.get(), 2);
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_STAIRS.get(), ModBlocks.RIPARIUS_STONE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_WALL.get(), ModBlocks.RIPARIUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_BRICKS.get(), ModBlocks.RIPARIUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE.get(), ModBlocks.RIPARIUS_STONE_BRICKS.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_BRICK_SLAB.get(), ModBlocks.RIPARIUS_STONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_BRICK_STAIRS.get(), ModBlocks.RIPARIUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_BRICK_WALL.get(), ModBlocks.RIPARIUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_BRICK_SLAB.get(), ModBlocks.RIPARIUS_STONE_BRICKS.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_BRICK_STAIRS.get(), ModBlocks.RIPARIUS_STONE_BRICKS.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_STONE_BRICK_WALL.get(), ModBlocks.RIPARIUS_STONE_BRICKS.get());
+
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_SLAB.get(), ModBlocks.VINIFERA_STONE.get(), 2);
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_STAIRS.get(), ModBlocks.VINIFERA_STONE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_WALL.get(), ModBlocks.VINIFERA_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_BRICKS.get(), ModBlocks.VINIFERA_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_STONE.get(), ModBlocks.VINIFERA_STONE_BRICKS.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_BRICK_SLAB.get(), ModBlocks.VINIFERA_STONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_BRICK_STAIRS.get(), ModBlocks.VINIFERA_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_BRICK_WALL.get(), ModBlocks.VINIFERA_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_BRICK_SLAB.get(), ModBlocks.VINIFERA_STONE_BRICKS.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_BRICK_STAIRS.get(), ModBlocks.VINIFERA_STONE_BRICKS.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VINIFERA_STONE_BRICK_WALL.get(), ModBlocks.VINIFERA_STONE_BRICKS.get());
+
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_SLAB.get(), ModBlocks.CRUENTUS_STONE.get(), 2);
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_STAIRS.get(), ModBlocks.CRUENTUS_STONE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_WALL.get(), ModBlocks.CRUENTUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_BRICKS.get(), ModBlocks.CRUENTUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE.get(), ModBlocks.CRUENTUS_STONE_BRICKS.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_BRICK_SLAB.get(), ModBlocks.CRUENTUS_STONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_BRICK_STAIRS.get(), ModBlocks.CRUENTUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_BRICK_WALL.get(), ModBlocks.CRUENTUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_BRICK_SLAB.get(), ModBlocks.CRUENTUS_STONE_BRICKS.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_BRICK_STAIRS.get(), ModBlocks.CRUENTUS_STONE_BRICKS.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRUENTUS_STONE_BRICK_WALL.get(), ModBlocks.CRUENTUS_STONE_BRICKS.get());
+
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_SLAB.get(), ModBlocks.ABOREUS_STONE.get(), 2);
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_STAIRS.get(), ModBlocks.ABOREUS_STONE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_WALL.get(), ModBlocks.ABOREUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_BRICKS.get(), ModBlocks.ABOREUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_STONE.get(), ModBlocks.ABOREUS_STONE_BRICKS.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_BRICK_SLAB.get(), ModBlocks.ABOREUS_STONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_BRICK_STAIRS.get(), ModBlocks.ABOREUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_BRICK_WALL.get(), ModBlocks.ABOREUS_STONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_BRICK_SLAB.get(), ModBlocks.ABOREUS_STONE_BRICKS.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_BRICK_STAIRS.get(), ModBlocks.ABOREUS_STONE_BRICKS.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ABOREUS_STONE_BRICK_WALL.get(), ModBlocks.ABOREUS_STONE_BRICKS.get());
 
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_CRYSTAL_SLAB.get(), ModBlocks.RIPARIUS_CRYSTAL.get(), 2);
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RIPARIUS_CRYSTAL_STAIRS.get(), ModBlocks.RIPARIUS_CRYSTAL.get());
@@ -3036,6 +3081,106 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RED_TIBERCRETE_BRICK_WALL.get(), ModBlocks.RED_TIBERCRETE_BRICKS.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.WHITE_TIBERCRETE_BRICK_WALL.get(), ModBlocks.WHITE_TIBERCRETE_BRICKS.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YELLOW_TIBERCRETE_BRICK_WALL.get(), ModBlocks.YELLOW_TIBERCRETE_BRICKS.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_B.get(), ModBlocks.CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_R.get(), ModBlocks.CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_P.get(), ModBlocks.CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get(), ModBlocks.CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get(), ModBlocks.CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get(), ModBlocks.CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get(), ModBlocks.CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LAMP_G.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_G.get(), ModBlocks.CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_R.get(), ModBlocks.CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_P.get(), ModBlocks.CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get(), ModBlocks.CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get(), ModBlocks.CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get(), ModBlocks.CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get(), ModBlocks.CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LAMP_B.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_G.get(), ModBlocks.CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_B.get(), ModBlocks.CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_P.get(), ModBlocks.CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get(), ModBlocks.CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get(), ModBlocks.CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get(), ModBlocks.CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get(), ModBlocks.CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LAMP_R.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_G.get(), ModBlocks.CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_R.get(), ModBlocks.CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_B.get(), ModBlocks.CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get(), ModBlocks.CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get(), ModBlocks.CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get(), ModBlocks.CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get(), ModBlocks.CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LAMP_P.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_B.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_R.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_P.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_G.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LIGHT.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_G.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_R.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_B.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_P.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LIGHT.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_G.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_B.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_P.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_R.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LIGHT.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_G.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_R.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_B.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_P.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LIGHT.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_G.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_R.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_B.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_P.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_G.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_R.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_B.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_P.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
+
 
 
 

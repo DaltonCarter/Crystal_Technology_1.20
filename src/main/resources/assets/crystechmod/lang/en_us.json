@@ -575,6 +575,18 @@
   "block.crystechmod.marika_oak_trapdoor": "Marika Oak Trapdoor",
   "block.crystechmod.marika_oak_stairs": "Marika Oak Stairs",
 
+  "block.crystechmod.crystal_core_lamp_g": "Green Crystal Core Lamp",
+  "block.crystechmod.inverted_crystal_core_lamp_g": "Inverted Green Crystal Core Lamp",
+  "block.crystechmod.crystal_core_lamp_b": "Blue Crystal Core Lamp",
+  "block.crystechmod.inverted_crystal_core_lamp_b": "Inverted Blue Crystal Core Lamp",
+  "block.crystechmod.crystal_core_lamp_r": "Red Crystal Core Lamp",
+  "block.crystechmod.inverted_crystal_core_lamp_r": "Inverted Red Crystal Core Lamp",
+  "block.crystechmod.crystal_core_lamp_p": "Purple Crystal Core Lamp",
+  "block.crystechmod.inverted_crystal_core_lamp_p": "Inverted Purple Crystal Core Lamp",
+
+  "block.crystechmod.crystal_core_light": "Crystal Core Light",
+  "block.crystechmod.inverted_crystal_core_light": "Inverted Crystal Core Light",
+
   "block.crystechmod.tiberium_grinder": "Tiberium Grinder",
 
 

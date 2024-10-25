@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:crystal_core_lamp_b"
+  },
+  "result": "crystechmod:inverted_crystal_core_lamp_r"
+}

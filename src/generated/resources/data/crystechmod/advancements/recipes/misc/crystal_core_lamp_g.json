@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:crystal_core_lamp_g"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tiberium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:tiberium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_tiberium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:crystal_core_lamp_g"
+    ]
+  },
+  "sends_telemetry_event": false
+}

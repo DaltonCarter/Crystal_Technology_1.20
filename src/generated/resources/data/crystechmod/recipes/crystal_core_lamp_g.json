@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "crystechmod:illumina_crystal"
+    },
+    "R": {
+      "item": "minecraft:redstone_lamp"
+    },
+    "T": {
+      "item": "crystechmod:tiberium"
+    }
+  },
+  "pattern": [
+    "TTT",
+    "IRI",
+    "TTT"
+  ],
+  "result": {
+    "item": "crystechmod:crystal_core_lamp_g"
+  },
+  "show_notification": true
+}

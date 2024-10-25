@@ -25,7 +25,6 @@ import java.util.function.Predicate;
 import static net.minecraft.world.item.HoeItem.changeIntoState;
 
 
-
 //The Below Class is all thanks to Kaupenjoe and Mekanism Tools!!!  The Code was edited by me to work together, but the parts themselves ARE NOT MY WORK!!!
 
 public class PaxelItem extends AxeItem implements Vanishable {
@@ -62,7 +61,7 @@ public class PaxelItem extends AxeItem implements Vanishable {
                 } else if (blockstate.getBlock() instanceof CampfireBlock && blockstate.getValue(CampfireBlock.LIT)) {
                     if (!level.isClientSide()) {
                         level.levelEvent((Player)null, 1009, blockpos, 0);
-                    }
+                   }
 
                     CampfireBlock.dowse(pContext.getPlayer(), level, blockpos, blockstate);
                     blockstate2 = blockstate.setValue(CampfireBlock.LIT, Boolean.valueOf(false));

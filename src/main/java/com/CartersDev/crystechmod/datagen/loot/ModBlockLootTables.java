@@ -33,6 +33,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         //Self Drops:
         this.dropSelf(ModBlocks.TEST_BLOCK.get());
 
+        this.dropSelf(ModBlocks.CRYSTAL_CORE_LAMP_G.get());
+        this.dropSelf(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get());
+        this.dropSelf(ModBlocks.CRYSTAL_CORE_LAMP_B.get());
+        this.dropSelf(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get());
+        this.dropSelf(ModBlocks.CRYSTAL_CORE_LAMP_R.get());
+        this.dropSelf(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get());
+        this.dropSelf(ModBlocks.CRYSTAL_CORE_LAMP_P.get());
+        this.dropSelf(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get());
+
+        this.dropSelf(ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
+
         this.dropSelf(ModBlocks.TIBERIUM_BLOCK.get());
         this.dropSelf(ModBlocks.TIBERIUM_BLUE_BLOCK.get());
         this.dropSelf(ModBlocks.TIBERIUM_RED_BLOCK.get());

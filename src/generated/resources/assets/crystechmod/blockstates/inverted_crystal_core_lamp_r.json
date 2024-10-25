@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "crystechmod:block/inverted_crystal_core_lamp_r_on"
+    },
+    "lit=true": {
+      "model": "crystechmod:block/inverted_crystal_core_lamp_r_off"
+    }
+  }
+}

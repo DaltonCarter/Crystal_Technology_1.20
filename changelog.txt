@@ -406,16 +406,18 @@ Posted By: Dalton Carter
 
 ------------------------------------------------------------------------------
 
-10/19/2024 - 10/23/2024
-Version 0.4.72
+10/19/2024 - 10/24/2024
+Version 0.4.8
 Posted By: Dalton Carter
 
+-Updated Version to 0.4.8
 -Updated Textures for Tiberium Stones, and ALL Tiberglass
 -added Tiberium Stone Bricks, Slabs, stairs, and Walls
 -Slowing Sword Class added for "On-Hit" effect reference for weapons.
--Looking into making Paxel COMPLETELY compatible with ANY Wood not just Vanilla and my own.
--Revised Paxel Class sent to Che for server testing.
+-Paxel Class Successfully modified for Compatibility
 -Test Block is Present for Texture Testing Purposes.
+-Started adding Crystal Core Lamps and Lights, 5 variants currently available in standard and Inverted forms, fully redstone
+compatible.
 
 
 ======================================================

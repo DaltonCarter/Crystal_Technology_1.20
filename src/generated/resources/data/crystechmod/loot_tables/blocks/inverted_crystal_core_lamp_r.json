@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "crystechmod:inverted_crystal_core_lamp_r"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "crystechmod:blocks/inverted_crystal_core_lamp_r"
+}

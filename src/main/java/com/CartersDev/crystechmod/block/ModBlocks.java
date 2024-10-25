@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
@@ -955,6 +956,50 @@ public class ModBlocks {
 
 
     //End of Deco Blocks
+
+
+    //Lamps, Lights, and Torch-likes:
+    public static final RegistryObject<Block> CRYSTAL_CORE_LAMP_G = registerBlock("crystal_core_lamp_g",
+            () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+
+    public static final RegistryObject<Block> INVERTED_CRYSTAL_CORE_LAMP_G = registerBlock("inverted_crystal_core_lamp_g",
+            () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+
+    public static final RegistryObject<Block> CRYSTAL_CORE_LAMP_B = registerBlock("crystal_core_lamp_b",
+            () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+
+    public static final RegistryObject<Block> INVERTED_CRYSTAL_CORE_LAMP_B = registerBlock("inverted_crystal_core_lamp_b",
+            () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+
+    public static final RegistryObject<Block> CRYSTAL_CORE_LAMP_R = registerBlock("crystal_core_lamp_r",
+            () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+
+    public static final RegistryObject<Block> INVERTED_CRYSTAL_CORE_LAMP_R = registerBlock("inverted_crystal_core_lamp_r",
+            () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+
+    public static final RegistryObject<Block> CRYSTAL_CORE_LAMP_P = registerBlock("crystal_core_lamp_p",
+            () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+
+    public static final RegistryObject<Block> INVERTED_CRYSTAL_CORE_LAMP_P = registerBlock("inverted_crystal_core_lamp_p",
+            () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+
+    public static final RegistryObject<Block> CRYSTAL_CORE_LIGHT = registerBlock("crystal_core_light",
+            () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+
+    public static final RegistryObject<Block> INVERTED_CRYSTAL_CORE_LIGHT = registerBlock("inverted_crystal_core_light",
+            () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+
+    //End of Lamps, Lights, and Torch-likes:
 
 
     //Wood:

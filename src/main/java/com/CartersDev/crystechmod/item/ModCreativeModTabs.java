@@ -429,6 +429,18 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     .title(Component.translatable("creativetab.crystal_technology_building_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
+                        output.accept(ModBlocks.CRYSTAL_CORE_LAMP_G.get());
+                        output.accept(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get());
+                        output.accept(ModBlocks.CRYSTAL_CORE_LAMP_B.get());
+                        output.accept(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get());
+                        output.accept(ModBlocks.CRYSTAL_CORE_LAMP_R.get());
+                        output.accept(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get());
+                        output.accept(ModBlocks.CRYSTAL_CORE_LAMP_P.get());
+                        output.accept(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get());
+
+
+                        output.accept(ModBlocks.CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
                         output.accept(ModBlocks.INFESTED_STONE_BRICKS.get());
                         output.accept(ModBlocks.INFESTED_STONE_BRICK_SLAB.get());
                         output.accept(ModBlocks.INFESTED_STONE_BRICK_STAIRS.get());

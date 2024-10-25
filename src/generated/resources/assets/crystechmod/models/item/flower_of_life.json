@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "crystechmod:block/flower_of_life"
-  }
+  "parent": "crystechmod:block/flower_of_life"
 }

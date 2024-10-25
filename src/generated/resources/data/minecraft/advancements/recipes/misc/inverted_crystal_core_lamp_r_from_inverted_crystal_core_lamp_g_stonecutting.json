@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_inverted_crystal_core_lamp_g": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:inverted_crystal_core_lamp_g"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:inverted_crystal_core_lamp_r_from_inverted_crystal_core_lamp_g_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_inverted_crystal_core_lamp_g",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:inverted_crystal_core_lamp_r_from_inverted_crystal_core_lamp_g_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

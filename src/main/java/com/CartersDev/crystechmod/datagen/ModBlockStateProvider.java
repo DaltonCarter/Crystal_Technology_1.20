@@ -4,11 +4,14 @@ import com.CartersDev.crystechmod.CrystalTech;
 
 import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.block.custom.CornCropBlock;
+import com.CartersDev.crystechmod.block.custom.CrystalCoreLampBlock;
+import com.CartersDev.crystechmod.block.custom.CrystalCoreLampDemo;
 import com.CartersDev.crystechmod.block.custom.StrawberryCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -562,7 +565,77 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ModelFile.UncheckedModelFile(modLoc("block/tiberium_grinder")));
 
 
+        //Lights, Lamps, and Torch-Likes:
+        customLamp(ModBlocks.CRYSTAL_CORE_LAMP_G.get(), CrystalCoreLampBlock.LIT, "crystal_core_lamp_g");
+        invertedCustomLamp(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get(), CrystalCoreLampBlock.LIT, "inverted_crystal_core_lamp_g");
+        customLamp(ModBlocks.CRYSTAL_CORE_LAMP_B.get(), CrystalCoreLampBlock.LIT, "crystal_core_lamp_b");
+        invertedCustomLamp(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get(), CrystalCoreLampBlock.LIT, "inverted_crystal_core_lamp_b");
+        customLamp(ModBlocks.CRYSTAL_CORE_LAMP_R.get(), CrystalCoreLampBlock.LIT, "crystal_core_lamp_r");
+        invertedCustomLamp(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get(), CrystalCoreLampBlock.LIT, "inverted_crystal_core_lamp_r");
+        customLamp(ModBlocks.CRYSTAL_CORE_LAMP_P.get(), CrystalCoreLampBlock.LIT, "crystal_core_lamp_p");
+        invertedCustomLamp(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get(), CrystalCoreLampBlock.LIT, "inverted_crystal_core_lamp_p");
+
+        customLamp(ModBlocks.CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_crystal_core_light");
+
+
     }
+
+    // All-purpose Custom Lamp method by Hrodebert:
+    // Creation example: customLamp(ModBlocks.TUNGSTEN_LAMP.get(),TungstenLamp.LIT,"tungsten_lamp");
+    private void customLamp(Block block, BooleanProperty property, String name) {
+        getVariantBuilder(block).forAllStates(state -> {
+            String name_on = name + "_on";
+            String name_off = name + "_off";
+            if(state.getValue(property)) {
+
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll(name_on,
+                        new ResourceLocation(CrystalTech.MOD_ID, "block/" + name_on)))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll(name_off,
+                        new ResourceLocation(CrystalTech.MOD_ID, "block/" + name)))};
+            }
+        });
+        String name_off = name + "_off";
+        simpleBlockItem(block, models().cubeAll(name,
+                new ResourceLocation(CrystalTech.MOD_ID, "block/" + name_off)));
+    }
+
+
+    private void invertedCustomLamp(Block block, BooleanProperty property, String name) {
+        getVariantBuilder(block).forAllStates(state -> {
+            String name_off = name + "_off";
+            String name_on = name + "_on";
+            if(state.getValue(property)) {
+
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll(name_off,
+                        new ResourceLocation(CrystalTech.MOD_ID, "block/" + name_off)))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll(name_on,
+                        new ResourceLocation(CrystalTech.MOD_ID, "block/" + name_on)))};
+            }
+        });
+        String name_on = name + "_on";
+        simpleBlockItem(block, models().cubeAll(name,
+                new ResourceLocation(CrystalTech.MOD_ID, "block/" + name)));
+    }
+
+
+    //Kaupenjoes Custom Lamp Method:
+//    private void customLamp() {
+//        getVariantBuilder(ModBlocks.CRYSTAL_CORE_LAMP.get()).forAllStates(state -> {
+//            if(state.getValue(CrystalCoreLampDemo.CLICKED)) {
+//                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("crystal_core_lamp_on",
+//                        new ResourceLocation(CrystalTech.MOD_ID, "block/" + "crystal_core_lamp_on")))};
+//            } else {
+//                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("crystal_core_lamp_off",
+//                        new ResourceLocation(CrystalTech.MOD_ID, "block/" +"crystal_core_lamp_off")))};
+//            }
+//        });
+//
+//        simpleBlockItem(ModBlocks.CRYSTAL_CORE_LAMP.get(), models().cubeAll("crystal_core_lamp_on",
+//                new ResourceLocation(CrystalTech.MOD_ID, "block/" +"crystal_core_lamp_on")));
+//    }
 
     public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
         ModelFile sign = models().sign(name(signBlock), texture);
