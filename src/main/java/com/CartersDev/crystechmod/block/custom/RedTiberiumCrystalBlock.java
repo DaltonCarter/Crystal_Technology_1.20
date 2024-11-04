@@ -9,10 +9,9 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -86,5 +85,34 @@ public class RedTiberiumCrystalBlock extends CropBlock {
         }
     }
 
+    @Override
+    public void playerWillDestroy(Level pLevel, BlockPos pPos, BlockState pState, Player pPlayer) {
+        super.playerWillDestroy(pLevel, pPos, pState, pPlayer);
+
+        String Enchantments = EnchantmentHelper.getEnchantments(pPlayer.getMainHandItem()).toString();
+
+        System.out.println(Enchantments);
+
+        if (!pLevel.isClientSide() && !Enchantments.contains("net.minecraft.world.item.enchantment.UntouchingEnchantment") && !pPlayer.isCreative()) {
+            float f = 4.0F;
+            pLevel.explode(null, pPos.getX(), pPos.getY(), pPos.getZ(), 4.0F, Level.ExplosionInteraction.TNT);
+        }
+
+    }
+
+
+    @Override
+    public boolean canDropFromExplosion(BlockState state, BlockGetter level, BlockPos pos, Explosion explosion) {
+        return true;
+    }
+
+    @Override
+    public void wasExploded(Level pLevel, BlockPos pPos, Explosion pExplosion) {
+        if (!pLevel.isClientSide()) {
+            float f = 4.0F;
+            pLevel.explode(null, pPos.getX(), pPos.getY(), pPos.getZ(), 2.0F, Level.ExplosionInteraction.TNT);
+        }
+        super.wasExploded(pLevel, pPos, pExplosion);
+    }
 
 }

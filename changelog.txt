@@ -419,6 +419,16 @@ Posted By: Dalton Carter
 -Started adding Crystal Core Lamps and Lights, 5 variants currently available in standard and Inverted forms, fully redstone
 compatible.
 
+------------------------------------------------------------------------------
+
+11/03/2024
+Version 0.4.81
+Posted By: Dalton Carter
+
+-Updated Version to 0.4.81
+-Blue, Red, and Purple Tiberium Crop Explosion logic reimplemented.
+-Fixed Tiberium dust not Planting Tiberium when targeting appropriate block(s)
+-Door Controller is present in code, but not functional, will not display right much less let me test functionality. (W.I.P)
 
 ======================================================
 LEGACY 1.16.5 Changelog

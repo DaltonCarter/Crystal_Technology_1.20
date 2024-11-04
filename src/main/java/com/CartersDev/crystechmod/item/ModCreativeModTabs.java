@@ -23,6 +23,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                 .displayItems((itemDisplayParameters, output) -> {
 
                     output.accept(ModBlocks.TEST_BLOCK.get());
+                    output.accept(ModBlocks.DOOR_CON.get());
 
                     output.accept(ModBlocks.BLOSSOM_SPOUT.get());
                     output.accept(ModBlocks.BLOSSOM_CENTER.get());

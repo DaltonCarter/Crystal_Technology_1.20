@@ -35,72 +35,77 @@ public class RedTiberiumDust extends ItemNameBlockItem {
         if (!pLevel.isClientSide() && pHand == InteractionHand.MAIN_HAND) {
             if (itemstack.is(ModItems.RED_TIBERIUM_DUST.get())) {
                 int SoilChance = rand.nextInt(10);
-                if (SoilChance >= 4) {
+                if(pLevel.getBlockState(pPos).getBlock() == ModBlocks.ICHOR_SOIL.get()){
+                    pLevel.playSound(null, pPos, SoundEvents.AMETHYST_BLOCK_RESONATE, SoundSource.BLOCKS, 1f, 1f);
+                    pLevel.setBlockAndUpdate(pPos.above(), ModBlocks.RED_TIBERIUM_CROP.get().defaultBlockState());
+                    itemstack.shrink(1);
+                    return InteractionResult.SUCCESS;
+                } else if (SoilChance >= 4) {
                     if (pLevel.getBlockState(pPos).getBlock() == ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get()) {
-                        System.out.println("Yellow Zone Cracked Dirt has been Seeded!");
+//                        System.out.println("Yellow Zone Cracked Dirt has been Seeded!");
                         pLevel.setBlockAndUpdate(pPos, ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get().defaultBlockState());
                         pLevel.playSound(null, pPos, SoundEvents.BONE_MEAL_USE, SoundSource.BLOCKS, 1f, 1f);
                         itemstack.shrink(1);
                         return InteractionResult.SUCCESS;
 
                     } else if (pLevel.getBlockState(pPos).getBlock() == ModBlocks.RED_ZONE_DIRT.get()) {
-                        System.out.println("Red Zone Dirt has been Seeded!");
+//                        System.out.println("Red Zone Dirt has been Seeded!");
                         pLevel.setBlockAndUpdate(pPos, ModBlocks.SEEDED_RED_ZONE_DIRT.get().defaultBlockState());
                         pLevel.playSound(null, pPos, SoundEvents.BONE_MEAL_USE, SoundSource.BLOCKS, 1f, 1f);
                         itemstack.shrink(1);
                         return InteractionResult.SUCCESS;
 
                     } else if (pLevel.getBlockState(pPos).getBlock() == Blocks.DIRT) {
-                        System.out.println("Dirt has been Seeded!");
+//                        System.out.println("Dirt has been Seeded!");
                         pLevel.setBlockAndUpdate(pPos, ModBlocks.SEEDED_DIRT.get().defaultBlockState());
                         pLevel.playSound(null, pPos, SoundEvents.BONE_MEAL_USE, SoundSource.BLOCKS, 1f, 1f);
                         itemstack.shrink(1);
                         return InteractionResult.SUCCESS;
 
                     } else if (pLevel.getBlockState(pPos).getBlock() == Blocks.GRASS_BLOCK) {
-                        System.out.println("Grass has been Seeded!");
+//                        System.out.println("Grass has been Seeded!");
                         pLevel.setBlockAndUpdate(pPos, ModBlocks.SEEDED_DIRT.get().defaultBlockState());
                         pLevel.playSound(null, pPos, SoundEvents.BONE_MEAL_USE, SoundSource.BLOCKS, 1f, 1f);
                         itemstack.shrink(1);
                         return InteractionResult.SUCCESS;
 
                     } else if (pLevel.getBlockState(pPos).getBlock() == Blocks.STONE) {
-                        System.out.println("Stone has been Infested!");
+//                        System.out.println("Stone has been Infested!");
                         pLevel.setBlockAndUpdate(pPos, ModBlocks.INFESTED_STONE.get().defaultBlockState());
                         pLevel.playSound(null, pPos, SoundEvents.BONE_MEAL_USE, SoundSource.BLOCKS, 1f, 1f);
                         itemstack.shrink(1);
                         return InteractionResult.SUCCESS;
 
                     } else if (pLevel.getBlockState(pPos).getBlock() == Blocks.STONE_BRICKS) {
-                        System.out.println("Stone Bricks have been Infested!");
+//                        System.out.println("Stone Bricks have been Infested!");
                         pLevel.setBlockAndUpdate(pPos, ModBlocks.INFESTED_STONE_BRICKS.get().defaultBlockState());
                         pLevel.playSound(null, pPos, SoundEvents.BONE_MEAL_USE, SoundSource.BLOCKS, 1f, 1f);
                         itemstack.shrink(1);
                         return InteractionResult.SUCCESS;
 
                     } else if (pLevel.getBlockState(pPos).getBlock() == Blocks.ANDESITE) {
-                        System.out.println("Andesite has been Infested!");
+//                        System.out.println("Andesite has been Infested!");
                         pLevel.setBlockAndUpdate(pPos, ModBlocks.INFESTED_ANDESITE.get().defaultBlockState());
                         pLevel.playSound(null, pPos, SoundEvents.BONE_MEAL_USE, SoundSource.BLOCKS, 1f, 1f);
                         itemstack.shrink(1);
                         return InteractionResult.SUCCESS;
 
                     } else if (pLevel.getBlockState(pPos).getBlock() == Blocks.GRANITE) {
-                        System.out.println("Granite has been Infested!");
+//                        System.out.println("Granite has been Infested!");
                         pLevel.setBlockAndUpdate(pPos, ModBlocks.INFESTED_GRANITE.get().defaultBlockState());
                         pLevel.playSound(null, pPos, SoundEvents.BONE_MEAL_USE, SoundSource.BLOCKS, 1f, 1f);
                         itemstack.shrink(1);
                         return InteractionResult.SUCCESS;
 
                     } else if (pLevel.getBlockState(pPos).getBlock() == Blocks.DIORITE) {
-                        System.out.println("Diorite has been Infested!");
+//                        System.out.println("Diorite has been Infested!");
                         pLevel.setBlockAndUpdate(pPos, ModBlocks.INFESTED_DIORITE.get().defaultBlockState());
                         pLevel.playSound(null, pPos, SoundEvents.BONE_MEAL_USE, SoundSource.BLOCKS, 1f, 1f);
                         itemstack.shrink(1);
                         return InteractionResult.SUCCESS;
 
                     } else if (pLevel.getBlockState(pPos).getBlock() == Blocks.COBBLESTONE) {
-                        System.out.println("Cobblestone has been Infested!");
+//                        System.out.println("Cobblestone has been Infested!");
                         pLevel.setBlockAndUpdate(pPos, ModBlocks.INFESTED_COBBLE.get().defaultBlockState());
                         pLevel.playSound(null, pPos, SoundEvents.BONE_MEAL_USE, SoundSource.BLOCKS, 1f, 1f);
                         itemstack.shrink(1);
@@ -111,14 +116,14 @@ public class RedTiberiumDust extends ItemNameBlockItem {
 //             System.out.println("Seeded soil has been found!");
                     int SoilChance2 = rand.nextInt(10);
                     if (SoilChance2 >= 7) {
-                        System.out.println("Ichor Soil has been created!");
+//                        System.out.println("Ichor Soil has been created!");
                         pLevel.setBlockAndUpdate(pPos, ModBlocks.ICHOR_SOIL.get().defaultBlockState());
                         pLevel.playSound(null, pPos, SoundEvents.BONE_MEAL_USE, SoundSource.BLOCKS, 1f, 1f);
                         itemstack.shrink(1);
                         return InteractionResult.SUCCESS;
 
                     } else {
-                        System.out.println("Tiberium Soil has been created!");
+//                        System.out.println("Tiberium Soil has been created!");
                         pLevel.setBlockAndUpdate(pPos, ModBlocks.TIBERIUM_SOIL.get().defaultBlockState());
                         pLevel.playSound(null, pPos, SoundEvents.BONE_MEAL_USE, SoundSource.BLOCKS, 1f, 1f);
                         itemstack.shrink(1);
