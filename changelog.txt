@@ -430,6 +430,21 @@ Posted By: Dalton Carter
 -Fixed Tiberium dust not Planting Tiberium when targeting appropriate block(s)
 -Door Controller is present in code, but not functional, will not display right much less let me test functionality. (W.I.P)
 
+
+------------------------------------------------------------------------------
+
+11/03/2024
+Version 0.4.82
+Posted By: Dalton Carter
+
+-Version to 0.4.82
+-added new Mob Effect, and Potion for wall climbing -- likely will not remain in its current state.
+-Ground Work for paintings implemented
+-Removed Sounds Folder from Repository. The Music I privately use for this MOD can't be redistributed.
+All information ABOUT the tracks will remain in the code.
+-Began Work on the Tiberium Infuser Currently bare bones, and Hard Coded. Will eventually implement Fluid AND Energy handling,
+as well as custom recipies. It will Use Kaupenjoes Gem Empowering Station Texture until I can make my own.
+
 ======================================================
 LEGACY 1.16.5 Changelog
 0.5.2
