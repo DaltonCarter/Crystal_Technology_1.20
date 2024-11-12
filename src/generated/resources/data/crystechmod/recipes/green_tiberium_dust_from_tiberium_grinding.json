@@ -1,0 +1,11 @@
+{
+  "type": "crystechmod:tiberium_grinding",
+  "ingredients": [
+    {
+      "item": "crystechmod:tiberium"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:green_tiberium_dust"
+  }
+}

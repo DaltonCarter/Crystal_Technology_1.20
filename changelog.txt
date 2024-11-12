@@ -433,7 +433,7 @@ Posted By: Dalton Carter
 
 ------------------------------------------------------------------------------
 
-11/03/2024
+11/11/2024
 Version 0.4.82
 Posted By: Dalton Carter
 
@@ -442,8 +442,10 @@ Posted By: Dalton Carter
 -Ground Work for paintings implemented
 -Removed Sounds Folder from Repository. The Music I privately use for this MOD can't be redistributed.
 All information ABOUT the tracks will remain in the code.
--Began Work on the Tiberium Infuser Currently bare bones, and Hard Coded. Will eventually implement Fluid AND Energy handling,
-as well as custom recipies. It will Use Kaupenjoes Gem Empowering Station Texture until I can make my own.
+-Began Work on the Tiberium Infuser Currently bare bones, has recipe datagen. Will eventually implement Fluid AND Energy handling.
+ It will Use Kaupenjoes Gem Empowering Station Texture until I can make my own.
+ -Tiberium Grinder now has Recipe Datagen.
+ -JEI added for Infuser, Fixed Show Recipe display area.
 
 ======================================================
 LEGACY 1.16.5 Changelog

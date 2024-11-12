@@ -3,6 +3,8 @@ package com.CartersDev.crystechmod.datagen;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
+import com.CartersDev.crystechmod.datagen.custom.TiberiumGrinderRecipeBuilder;
+import com.CartersDev.crystechmod.datagen.custom.TiberiumInfuserRecipeBuilder;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.util.ModTags;
 import net.minecraft.data.PackOutput;
@@ -29,6 +31,12 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
     private static final List<ItemLike> ALYTHUM_SMELTABLES = List.of(ModItems.RAW_ALYTHUM.get(),
             ModItems.ALYTHUM_DUST.get(), ModBlocks.ALYTHUM_ORE.get(), ModBlocks.DEEPSLATE_ALYTHUM_ORE.get(), ModBlocks.NETHER_ALYTHUM_ORE.get());
+
+    private static final List<ItemLike> GUNDANIUM_GRINDABLES = List.of(ModItems.RAW_GUNDANIUM.get(),
+            ModBlocks.GUNDANIUM_ORE.get(), ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get());
+
+    private static final List<ItemLike> ALYTHUM_GRINDABLES = List.of(ModItems.RAW_ALYTHUM.get(),
+             ModBlocks.ALYTHUM_ORE.get(), ModBlocks.DEEPSLATE_ALYTHUM_ORE.get(), ModBlocks.NETHER_ALYTHUM_ORE.get());
 
     private static final List<ItemLike> LG_CORE_STEEL = List.of(ModItems.LG_CORE_BLEND.get());
     private static final List<ItemLike> MG_CORE_STEEL = List.of(ModItems.MG_CORE_BLEND.get());
@@ -3181,9 +3189,42 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
 
+//Tiberium Grinder:
+        //Gundanium:
+        new TiberiumGrinderRecipeBuilder(ModItems.RAW_GUNDANIUM.get(), ModItems.GUNDANIUM_DUST.get(), 1)
+                .unlockedBy("has_gundanium_ore", has(ModBlocks.GUNDANIUM_ORE.get())).save(consumer);
+
+        //Alythum:
+
+        new TiberiumGrinderRecipeBuilder(ModItems.RAW_ALYTHUM.get(), ModItems.ALYTHUM_DUST.get(), 1)
+                .unlockedBy("has_alythum_ore", has(ModBlocks.ALYTHUM_ORE.get())).save(consumer);
+
+        //Tiberium:
+
+        new TiberiumGrinderRecipeBuilder(ModItems.TIBERIUM.get(), ModItems.GREEN_TIBERIUM_DUST.get(), 1)
+                .unlockedBy("has_tiberium", has(ModItems.TIBERIUM.get())).save(consumer);
+
+        new TiberiumGrinderRecipeBuilder(ModItems.TIBERIUM_BLUE.get(), ModItems.BLUE_TIBERIUM_DUST.get(), 1)
+                .unlockedBy("has_blue_tiberium", has(ModItems.TIBERIUM_BLUE.get())).save(consumer);
+
+        new TiberiumGrinderRecipeBuilder(ModItems.TIBERIUM_RED.get(), ModItems.RED_TIBERIUM_DUST.get(), 1)
+                .unlockedBy("has_red_tiberium", has(ModItems.TIBERIUM_RED.get())).save(consumer);
+
+        new TiberiumGrinderRecipeBuilder(ModItems.TIBERIUM_PURPLE.get(), ModItems.PURPLE_TIBERIUM_DUST.get(), 1)
+                .unlockedBy("has_purple_tiberium", has(ModItems.TIBERIUM_PURPLE.get())).save(consumer);
+
+        //Misc:
+
+        new TiberiumGrinderRecipeBuilder(ModBlocks.DEVILS_BLOOD.get(), ModItems.DEVILS_BLOOD_POWDER.get(), 1)
+                .unlockedBy("has_devils_blood", has(ModBlocks.DEVILS_BLOOD.get())).save(consumer);
+
+        new TiberiumGrinderRecipeBuilder(ModBlocks.YOKARAN_BLOOM.get(), ModItems.YOKARAN_BLOOM_POWDER.get(), 1)
+                .unlockedBy("has_yokaran_bloom", has(ModBlocks.YOKARAN_BLOOM.get())).save(consumer);
 
 
-
+//Tiberium Infuser:
+    new TiberiumInfuserRecipeBuilder(ModItems.ILLYRIM_BLEND.get(), ModItems.LG_CORE_INGOT.get(), 1)
+            .unlockedBy("has_tiberium", has(ModItems.TIBERIUM.get())).save(consumer);
 
 
 

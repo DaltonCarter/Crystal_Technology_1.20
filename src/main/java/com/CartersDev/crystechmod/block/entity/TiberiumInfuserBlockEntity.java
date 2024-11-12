@@ -1,6 +1,7 @@
 package com.CartersDev.crystechmod.block.entity;
 
 import com.CartersDev.crystechmod.item.ModItems;
+import com.CartersDev.crystechmod.recipe.TiberiumInfuserRecipe;
 import com.CartersDev.crystechmod.screen.TiberiumInfuserMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -26,6 +27,35 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Optional;
+
+
+/* For Multiple inputs:
+You need to make a List<Ingredient> instead of just an Ingredient. The modification should be similar to the thing
+we did in the ModArmorItem class. You change it to a NonNullList<Ingredient> and modify the serializeRecipeData method
+as such:
+
+            for (int i = 0; i < ingredients.size(); i++) {
+                jsonarray.add(ingredients.get(i).toJson());
+            }
+
+Don't forget to change the type from Ingredient to NonNullList<Ingredient> in all the relevant places such as
+constructors and whatnot and there you go. Should be everything :)
+
+
+Well, you will need to change quite a few things in the class. Instead of it only saving one Ingredient, you probably
+want to save all three, so just make three Ingredient fields (make sure they all have unique names of course!).
+This needs to be done in the RecipeBuilder as well as the static Result class. You then want to add two more
+ItemLike to both constructors to assign those new ingredient fields.
+Then you want to simply output all the ingredients in the serializeRecipeData method. Basically just adding all
+three of them to the jsonarray, so instead of just having
+jsonarray.add(ingredient.toJson());
+
+you'd call this once for each ingredient! In theory that should be it
+
+*/
+
+
 public class TiberiumInfuserBlockEntity extends BlockEntity implements MenuProvider {
 
     private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
@@ -38,10 +68,10 @@ public class TiberiumInfuserBlockEntity extends BlockEntity implements MenuProvi
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
-                case 0 -> stack.getItem() == ModItems.ILLYRIM_INGOT.get();
+                case 0 -> true;
                 case 1 -> true;
                 case 2 -> false;
-                case 3 ->stack.getItem() == ModItems.LG_CORE_BLEND.get();
+                case 3 -> true;
                 default -> super.isItemValid(slot, stack);
             };
         }
@@ -163,9 +193,12 @@ private int maxProgress = 100;
 
 
     private void craftItem() {
+        Optional<TiberiumInfuserRecipe> recipe = getCurrentRecipe();
+        ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
+
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
-        this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(ModItems.LG_CORE_INGOT.get(),
-                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + 1));
+        this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack( resultItem.getItem(),
+                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount()));
     }
 
     private void resetProgress() {
@@ -181,13 +214,27 @@ private int maxProgress = 100;
     }
 
     private boolean hasRecipe() {
-        return canInsertAmountIntoOutputSlot(1) && canInsertItemIntoOutputSlot(ModItems.LG_CORE_INGOT.get())
-                && hasRecipeItemInInputSlot();
+        Optional<TiberiumInfuserRecipe> recipe = getCurrentRecipe();
+
+        if (recipe.isEmpty()){
+            return false;
+        }
+
+        ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
+
+        return canInsertAmountIntoOutputSlot(resultItem.getCount())
+                && canInsertItemIntoOutputSlot(resultItem.getItem());
     }
 
-    private boolean hasRecipeItemInInputSlot() {
-        return this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == ModItems.ILLYRIM_INGOT.get();
+    private Optional<TiberiumInfuserRecipe> getCurrentRecipe() {
+        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
+        for(int i = 0; i < this.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, this.itemHandler.getStackInSlot(i));
+        }
+
+        return this.level.getRecipeManager().getRecipeFor(TiberiumInfuserRecipe.Type.INSTANCE, inventory, level);
     }
+
 
     private boolean canInsertItemIntoOutputSlot(@NotNull Item item) {
         return this.itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() || this.itemHandler.getStackInSlot(OUTPUT_SLOT).is(item);

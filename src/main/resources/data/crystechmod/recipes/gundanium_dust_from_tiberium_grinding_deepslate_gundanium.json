@@ -1,0 +1,12 @@
+{
+  "type": "crystechmod:tiberium_grinding",
+  "ingredients": [
+    {
+      "item": "crystechmod:deepslate_gundanium_ore"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "crystechmod:gundanium_dust"
+  }
+}

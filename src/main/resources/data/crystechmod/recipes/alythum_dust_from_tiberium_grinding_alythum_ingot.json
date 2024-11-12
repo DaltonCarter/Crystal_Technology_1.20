@@ -2,11 +2,11 @@
   "type": "crystechmod:tiberium_grinding",
   "ingredients": [
     {
-      "item": "crystechmod:tiberium_blue"
+      "item": "crystechmod:alythum_ingot"
     }
   ],
   "output": {
     "count": 1,
-    "item": "crystechmod:blue_tiberium_dust"
+    "item": "crystechmod:alythum_dust"
   }
 }

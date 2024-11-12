@@ -1,0 +1,12 @@
+{
+  "type": "crystechmod:tiberium_grinding",
+  "ingredients": [
+    {
+      "item": "crystechmod:alythum_ore"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "crystechmod:alythum_dust"
+  }
+}

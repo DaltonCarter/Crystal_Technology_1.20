@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:lg_core_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tiberium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:tiberium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_tiberium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:lg_core_ingot"
+    ]
+  },
+  "sends_telemetry_event": true
+}

@@ -16,6 +16,9 @@ public class ModRecipes {
 public static final RegistryObject<RecipeSerializer<TiberiumGrinderRecipe>> TIBERIUM_GRINDER_SERIALIZER =
         SERIALIZERS.register("tiberium_grinding", () -> TiberiumGrinderRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<TiberiumInfuserRecipe>> TIBERIUM_INFUSER_SERIALIZER =
+            SERIALIZERS.register("tiberium_infusing", () -> TiberiumInfuserRecipe.Serializer.INSTANCE);
+
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

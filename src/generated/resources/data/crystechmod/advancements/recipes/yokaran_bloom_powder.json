@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:yokaran_bloom_powder"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yokaran_bloom": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:yokaran_bloom"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_yokaran_bloom",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:yokaran_bloom_powder"
+    ]
+  },
+  "sends_telemetry_event": true
+}

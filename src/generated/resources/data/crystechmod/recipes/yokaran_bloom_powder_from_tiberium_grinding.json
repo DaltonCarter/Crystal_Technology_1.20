@@ -1,0 +1,11 @@
+{
+  "type": "crystechmod:tiberium_grinding",
+  "ingredients": [
+    {
+      "item": "crystechmod:yokaran_bloom"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:yokaran_bloom_powder"
+  }
+}

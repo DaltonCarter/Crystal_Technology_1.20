@@ -1,0 +1,11 @@
+{
+  "type": "crystechmod:tiberium_infusing",
+  "ingredients": [
+    {
+      "item": "crystechmod:illyrim_blend"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:lg_core_ingot"
+  }
+}

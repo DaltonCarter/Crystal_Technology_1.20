@@ -1,0 +1,11 @@
+{
+  "type": "crystechmod:tiberium_grinding",
+  "ingredients": [
+    {
+      "item": "crystechmod:raw_gundanium"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:gundanium_dust"
+  }
+}

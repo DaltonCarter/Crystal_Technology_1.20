@@ -2,11 +2,11 @@
   "type": "crystechmod:tiberium_grinding",
   "ingredients": [
     {
-      "item": "crystechmod:yokaran_bloom"
+      "item": "crystechmod:gundanium_ore"
     }
   ],
   "output": {
     "count": 2,
-    "item": "crystechmod:yokaran_bloom_powder"
+    "item": "crystechmod:gundanium_dust"
   }
 }
