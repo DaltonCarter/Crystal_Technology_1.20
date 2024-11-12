@@ -1,4 +1,4 @@
-// 1.20.1	2024-10-24T23:51:16.4841521	Item Models: crystechmod
+// 1.20.1	2024-11-06T15:11:24.5154288	Item Models: crystechmod
 7d9fe5e88433390f9cd29dab7e515bddd3fbdf4b assets/crystechmod/models/item/aboreus_crystal_slab.json
 0e376de85f99a387d23f7130ff296ce0b5fe876e assets/crystechmod/models/item/aboreus_crystal_stairs.json
 2ced509a911b88c37b68b1a1278f10fc986798c4 assets/crystechmod/models/item/aboreus_crystal_wall.json
@@ -451,6 +451,7 @@ fdbbbea3ded6c9361cdfb2ab7c2b309d54460246 assets/crystechmod/models/item/strawber
 97bfa1f993e6ce478247ac6d37f5d6a8dbe9244a assets/crystechmod/models/item/tiberium.json
 0567ecbfc6b7b64450c50fa636e3f1773839d6b6 assets/crystechmod/models/item/tiberium_blue.json
 7083f5d01abc511627ef32b5e9ecd819eebac76a assets/crystechmod/models/item/tiberium_fruit.json
+550bb382b83a9618200794c4c2d334011df102b5 assets/crystechmod/models/item/tiberium_infuser.json
 b0681dc42a0c6458ba7e2fff873008491fbbaebd assets/crystechmod/models/item/tiberium_leather.json
 213a9522b4d1105772033a4b5cf4bc5d622621d6 assets/crystechmod/models/item/tiberium_purple.json
 fac13ded77b098cd0d2da59eb227c0bcd77c0be1 assets/crystechmod/models/item/tiberium_red.json

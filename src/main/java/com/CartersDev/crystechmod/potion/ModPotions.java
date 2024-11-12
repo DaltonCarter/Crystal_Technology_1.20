@@ -17,6 +17,9 @@ public class ModPotions {
 public static final RegistryObject<Potion> FREEZE_POTION = POTIONS.register("freeze_potion",
         () -> new Potion(new MobEffectInstance(ModEffects.FREEZE.get(), 200, 0)));
 
+    public static final RegistryObject<Potion> CLIMBING_POTION = POTIONS.register("climbing_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.SLIMEY_EFFECT.get(), 200, 0)));
+
 
 
 

@@ -31,16 +31,16 @@ public class ModFluidTypes {
                     SoundEvents.HONEY_DRINK).canConvertToSource(true).canHydrate(true).canDrown(true));
 
     public static final RegistryObject<FluidType> MOLTEN_TIBERIUM_FLUID_TYPE = registerGreen("molten_tiberium_fluid",
-            FluidType.Properties.create().lightLevel(10).density(15).viscosity(5));
+            FluidType.Properties.create().lightLevel(10).density(15).viscosity(15));
 
     public static final RegistryObject<FluidType> MOLTEN_BLUE_TIBERIUM_FLUID_TYPE = registerBlue("molten_blue_tiberium_fluid",
-            FluidType.Properties.create().lightLevel(10).density(15).viscosity(5));
+            FluidType.Properties.create().lightLevel(10).density(15).viscosity(15));
 
     public static final RegistryObject<FluidType> MOLTEN_RED_TIBERIUM_FLUID_TYPE = registerRed("molten_red_tiberium_fluid",
-            FluidType.Properties.create().lightLevel(10).density(15).viscosity(5));
+            FluidType.Properties.create().lightLevel(10).density(15).viscosity(15));
 
     public static final RegistryObject<FluidType> MOLTEN_PURPLE_TIBERIUM_FLUID_TYPE = registerPurple("molten_purple_tiberium_fluid",
-            FluidType.Properties.create().lightLevel(10).density(15).viscosity(5));
+            FluidType.Properties.create().lightLevel(10).density(15).viscosity(15));
 
 
     private static RegistryObject<FluidType> register(String name, FluidType.Properties properties) {

@@ -18,7 +18,7 @@ public class ModVillagers {
             DeferredRegister.create(ForgeRegistries.POI_TYPES, CrystalTech.MOD_ID);
 
     public static final RegistryObject<PoiType> TIBERIUM_POI = POI_TYPES.register("tiberium_poi",
-            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.GREEN_TIBERIUM_CROP.get().getStateDefinition().getPossibleStates()),
+            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.TIBERIUM_GRINDER.get().getStateDefinition().getPossibleStates()),
                     1, 1));
 
 

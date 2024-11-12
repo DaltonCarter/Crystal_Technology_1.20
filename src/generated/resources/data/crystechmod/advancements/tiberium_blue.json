@@ -1,0 +1,38 @@
+{
+  "parent": "crystechmod:crystechmod",
+  "criteria": {
+    "has_tiberium_blue": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:tiberium_blue"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "DANGER!!! EXPLOSIVE! Handle with extreme care!"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "crystechmod:tiberium_blue"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Vinifera Tiberium"
+    }
+  },
+  "requirements": [
+    [
+      "has_tiberium_blue"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

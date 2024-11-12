@@ -21,6 +21,7 @@ public class ModFluids {
 //Tiberium Water
     public static final RegistryObject<FlowingFluid> SOURCE_TIBERIUM_WATER = FLUIDS.register("tiberium_water_source",
         () -> new ForgeFlowingFluid.Source(ModFluids.TIBERIUM_WATER_FLUID_PROPERTIES));
+
     public static final RegistryObject<FlowingFluid> FLOWING_TIBERIUM_WATER = FLUIDS.register("flowing_tiberium_water",
             () -> new ForgeFlowingFluid.Flowing(ModFluids.TIBERIUM_WATER_FLUID_PROPERTIES));
 
@@ -34,6 +35,7 @@ public class ModFluids {
 //Molten Tiberium
 public static final RegistryObject<FlowingFluid> SOURCE_MOLTEN_TIBERIUM = FLUIDS.register("molten_tiberium_source",
         () -> new ForgeFlowingFluid.Source(ModFluids.MOLTEN_TIBERIUM_FLUID_PROPERTIES));
+
     public static final RegistryObject<FlowingFluid> FLOWING_MOLTEN_TIBERIUM = FLUIDS.register("molten_flowing_tiberium",
             () -> new ForgeFlowingFluid.Flowing(ModFluids.MOLTEN_TIBERIUM_FLUID_PROPERTIES));
 
@@ -44,6 +46,7 @@ public static final RegistryObject<FlowingFluid> SOURCE_MOLTEN_TIBERIUM = FLUIDS
 
     public static final RegistryObject<FlowingFluid> SOURCE_MOLTEN_BLUE_TIBERIUM = FLUIDS.register("molten_blue_tiberium_source",
             () -> new ForgeFlowingFluid.Source(ModFluids.MOLTEN_BLUE_TIBERIUM_FLUID_PROPERTIES));
+
     public static final RegistryObject<FlowingFluid> FLOWING_MOLTEN_BLUE_TIBERIUM = FLUIDS.register("molten_flowing_blue_tiberium",
             () -> new ForgeFlowingFluid.Flowing(ModFluids.MOLTEN_BLUE_TIBERIUM_FLUID_PROPERTIES));
 
@@ -54,6 +57,7 @@ public static final RegistryObject<FlowingFluid> SOURCE_MOLTEN_TIBERIUM = FLUIDS
 
     public static final RegistryObject<FlowingFluid> SOURCE_MOLTEN_RED_TIBERIUM = FLUIDS.register("molten_red_tiberium_source",
             () -> new ForgeFlowingFluid.Source(ModFluids.MOLTEN_RED_TIBERIUM_FLUID_PROPERTIES));
+
     public static final RegistryObject<FlowingFluid> FLOWING_MOLTEN_RED_TIBERIUM = FLUIDS.register("molten_flowing_red_tiberium",
             () -> new ForgeFlowingFluid.Flowing(ModFluids.MOLTEN_RED_TIBERIUM_FLUID_PROPERTIES));
 
@@ -64,6 +68,7 @@ public static final RegistryObject<FlowingFluid> SOURCE_MOLTEN_TIBERIUM = FLUIDS
 
     public static final RegistryObject<FlowingFluid> SOURCE_MOLTEN_PURPLE_TIBERIUM = FLUIDS.register("molten_purple_tiberium_source",
             () -> new ForgeFlowingFluid.Source(ModFluids.MOLTEN_PURPLE_TIBERIUM_FLUID_PROPERTIES));
+
     public static final RegistryObject<FlowingFluid> FLOWING_MOLTEN_PURPLE_TIBERIUM = FLUIDS.register("molten_flowing_purple_tiberium",
             () -> new ForgeFlowingFluid.Flowing(ModFluids.MOLTEN_PURPLE_TIBERIUM_FLUID_PROPERTIES));
 

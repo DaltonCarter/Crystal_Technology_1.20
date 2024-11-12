@@ -92,6 +92,9 @@
   "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
   "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
 
+  "item.minecraft.potion.effect.climbing_potion": "Climbing Potion",
+  "item.minecraft.splash_potion.effect.climbing_potion": "Splash Potion of Climbing",
+  "item.minecraft.lingering_potion.effect.climbing_potion": "Lingering Potion of Climbing",
 
   "item.crystechmod.still_alone_music_disc": "Still Alone Music Disc",
   "item.crystechmod.still_alone_music_disc.desc": "Still Alone - by Bobek (Bobisfaction) and Swirekster.",
@@ -216,6 +219,8 @@
   "block.crystechmod.firestone_block": "Firestone Block",
   "block.crystechmod.firestone_wall": "Firestone Wall",
   "block.crystechmod.hyacinth": "Hyacinth",
+  "block.crystechmod.spitfire": "Spitfire",
+  "block.crystechmod.fulgurbloom": "Fulgurbloom",
   "block.crystechmod.flower_of_life": "Flower of Life",
   "block.crystechmod.devils_blood": "Devil's Blood",
   "block.crystechmod.yokaran_bloom": "Yokaran Bloom",
@@ -588,6 +593,7 @@
   "block.crystechmod.inverted_crystal_core_light": "Inverted Crystal Core Light",
 
   "block.crystechmod.tiberium_grinder": "Tiberium Grinder",
+  "block.crystechmod.tiberium_infuser": "Tiberium Infuser",
 
 
   "enchantment.crystechmod.lightning_striker": "Lightning Striker",
@@ -597,6 +603,7 @@
 
 
   "effect.crystechmod.freeze": "Freeze",
+  "effect.crystechmod.slimey_effect": "Slimey",
 
 
   "entity.minecraft.villager.crystechmod.tiberiumgatherer": "Tiberium Gatherer",

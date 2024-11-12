@@ -1378,6 +1378,23 @@ public class ModBlocks {
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.DEVILS_BLOOD,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
+    public static final RegistryObject<Block> SPITFIRE = registerBlock("spitfire",
+            () -> new SpitfireBlock(MobEffects.GLOWING, 5, BlockBehaviour.Properties
+                    .copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> POTTED_SPITFIRE = BLOCKS.register("potted_spitfire",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.SPITFIRE,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+    public static final RegistryObject<Block> FULGURBLOOM = registerBlock("fulgurbloom",
+            () -> new FulgurBloomBlock(MobEffects.MOVEMENT_SPEED, 5, BlockBehaviour.Properties
+                    .copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> POTTED_FULGURBLOOM = BLOCKS.register("potted_fulgurbloom",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.FULGURBLOOM,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+
     public static final RegistryObject<Block> FLOWER_OF_LIFE = registerBlock("flower_of_life",
             () -> new FlowerofLifeBlock(MobEffects.CONFUSION, 5, BlockBehaviour.Properties
                     .copy(Blocks.ALLIUM).noOcclusion().noCollission()));
@@ -1447,6 +1464,9 @@ public class ModBlocks {
     //Block Entities
     public static final RegistryObject<Block> TIBERIUM_GRINDER = registerBlock("tiberium_grinder",
             () -> new TiberiumGrinderBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> TIBERIUM_INFUSER = registerBlock("tiberium_infuser",
+            () -> new TiberiumInfuserBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     public static final RegistryObject<Block> PLAGUED_SIGN = BLOCKS.register("plagued_sign",
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.PLAGUED));

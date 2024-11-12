@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "has_tiberium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:tiberium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "crystechmod:textures/block/tiberium_block.png",
+    "description": {
+      "text": "What could this strange mineral be?"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "crystechmod:tiberium"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Crystal Technology"
+    }
+  },
+  "requirements": [
+    [
+      "has_tiberium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

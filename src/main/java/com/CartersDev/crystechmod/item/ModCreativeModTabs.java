@@ -23,7 +23,8 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                 .displayItems((itemDisplayParameters, output) -> {
 
                     output.accept(ModBlocks.TEST_BLOCK.get());
-                    output.accept(ModBlocks.DOOR_CON.get());
+//                    output.accept(ModBlocks.DOOR_CON.get());
+                    output.accept(ModBlocks.TIBERIUM_INFUSER.get());
 
                     output.accept(ModBlocks.BLOSSOM_SPOUT.get());
                     output.accept(ModBlocks.BLOSSOM_CENTER.get());
@@ -256,6 +257,8 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.FLOWER_OF_LIFE.get());
                         output.accept(ModBlocks.DEVILS_BLOOD.get());
                         output.accept(ModBlocks.YOKARAN_BLOOM.get());
+                        output.accept(ModBlocks.SPITFIRE.get());
+                        output.accept(ModBlocks.FULGURBLOOM.get());
 
                         output.accept(ModBlocks.TIBERIUM_SOIL.get());
                         output.accept(ModBlocks.ICHOR_SOIL.get());

@@ -51,6 +51,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.TIBERIUM_PURPLE_BLOCK.get());
         this.dropSelf(ModBlocks.NOD_CREST_LARGE.get());
         this.dropSelf(ModBlocks.YOKARAN_BLOOM.get());
+        this.dropSelf(ModBlocks.SPITFIRE.get());
+        this.dropSelf(ModBlocks.FULGURBLOOM.get());
 
 
 
@@ -366,6 +368,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.SOUND_BLOCK.get());
 
         this.dropSelf(ModBlocks.TIBERIUM_GRINDER.get());
+        this.dropSelf(ModBlocks.TIBERIUM_INFUSER.get());
 
         //End of Self Drops
 
@@ -375,6 +378,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.POTTED_HYACINTH.get(), createPotFlowerItemTable(ModBlocks.HYACINTH.get()));
         this.add(ModBlocks.POTTED_FLOWER_OF_LIFE.get(), createPotFlowerItemTable(ModBlocks.FLOWER_OF_LIFE.get()));
         this.add(ModBlocks.POTTED_DEVILS_BLOOD.get(), createPotFlowerItemTable(ModBlocks.DEVILS_BLOOD.get()));
+        this.add(ModBlocks.POTTED_FULGURBLOOM.get(), createPotFlowerItemTable(ModBlocks.FULGURBLOOM.get()));
+        this.add(ModBlocks.POTTED_SPITFIRE.get(), createPotFlowerItemTable(ModBlocks.SPITFIRE.get()));
 
         this.add(ModBlocks.PLAGUED_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.PLAGUED_SLAB.get()));

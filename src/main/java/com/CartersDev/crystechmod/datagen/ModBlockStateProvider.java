@@ -547,6 +547,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.DEVILS_BLOOD.get(), models().cross(blockTexture(ModBlocks.DEVILS_BLOOD.get()).getPath(),
                 blockTexture(ModBlocks.DEVILS_BLOOD.get())).renderType("cutout"));
 
+        simpleBlockWithItem(ModBlocks.SPITFIRE.get(), models().cross(blockTexture(ModBlocks.SPITFIRE.get()).getPath(),
+                blockTexture(ModBlocks.SPITFIRE.get())).renderType("cutout"));
+
+        simpleBlockWithItem(ModBlocks.FULGURBLOOM.get(), models().cross(blockTexture(ModBlocks.FULGURBLOOM.get()).getPath(),
+                blockTexture(ModBlocks.FULGURBLOOM.get())).renderType("cutout"));
+
         simpleBlockWithItem(ModBlocks.POTTED_HYACINTH.get(), models().singleTexture("potted_hyacinth",
                 new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.HYACINTH.get())).renderType("cutout"));
@@ -558,6 +564,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.POTTED_DEVILS_BLOOD.get(), models().singleTexture("potted_devils_blood",
                 new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.DEVILS_BLOOD.get())).renderType("cutout"));
+
+        simpleBlockWithItem(ModBlocks.POTTED_SPITFIRE.get(), models().singleTexture("potted_spitfire",
+                new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.SPITFIRE.get())).renderType("cutout"));
+
+        simpleBlockWithItem(ModBlocks.POTTED_FULGURBLOOM.get(), models().singleTexture("potted_fulgurbloom",
+                new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.FULGURBLOOM.get())).renderType("cutout"));
 
 
         // Machines and other Block Entities:
@@ -578,6 +592,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customLamp(ModBlocks.CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "crystal_core_light");
         invertedCustomLamp(ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_crystal_core_light");
 
+
+        //Horizontal Blocks:
+        horizontalBlock(ModBlocks.TIBERIUM_INFUSER.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/tiberium_infuser")));
 
     }
 

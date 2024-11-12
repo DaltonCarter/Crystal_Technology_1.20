@@ -11,11 +11,13 @@ import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModCreativeModTabs;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.loot.ModLootModifiers;
+import com.CartersDev.crystechmod.painting.ModPaintings;
 import com.CartersDev.crystechmod.particle.ModParticles;
 import com.CartersDev.crystechmod.potion.ModPotions;
 import com.CartersDev.crystechmod.recipe.ModRecipes;
 import com.CartersDev.crystechmod.screen.ModMenuTypes;
 import com.CartersDev.crystechmod.screen.TiberiumGrinderScreen;
+import com.CartersDev.crystechmod.screen.TiberiumInfuserScreen;
 import com.CartersDev.crystechmod.sound.ModSounds;
 import com.CartersDev.crystechmod.util.BetterBrewingRecipe;
 import com.CartersDev.crystechmod.util.ModWoodTypes;
@@ -26,6 +28,7 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -69,6 +72,7 @@ public class CrystalTech {
         ModFluidTypes.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+        ModPaintings.register(modEventBus);
         ModVillagers.register(modEventBus);
 
         ModSounds.register(modEventBus);
@@ -92,14 +96,18 @@ public class CrystalTech {
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
                     ModItems.QUALRIM_COMPOUND.get(), ModPotions.FREEZE_POTION.get()));
 
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.MUNDANE,
+                    Items.SLIME_BALL, ModPotions.CLIMBING_POTION.get()));
+
             //End of Potion Recipes
+
+
+            //Flowers
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.HYACINTH.getId(), ModBlocks.POTTED_HYACINTH);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.FLOWER_OF_LIFE.getId(), ModBlocks.POTTED_FLOWER_OF_LIFE);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.DEVILS_BLOOD.getId(), ModBlocks.POTTED_DEVILS_BLOOD);
-            //Flowers
-
-
-
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SPITFIRE.getId(), ModBlocks.POTTED_SPITFIRE);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.FULGURBLOOM.getId(), ModBlocks.POTTED_FULGURBLOOM);
             //End of flowers
 
         });
@@ -131,6 +139,7 @@ public class CrystalTech {
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
 
             MenuScreens.register(ModMenuTypes.TIBERIUM_GRINDER_MENU.get(), TiberiumGrinderScreen::new);
+            MenuScreens.register(ModMenuTypes.TIBERIUM_INFUSER_MENU.get(), TiberiumInfuserScreen::new);
 
             //Tiberium
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_TIBERIUM_CROP.get(), RenderType.cutout());

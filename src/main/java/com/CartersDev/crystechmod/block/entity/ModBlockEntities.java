@@ -18,6 +18,10 @@ public static final RegistryObject<BlockEntityType<TiberiumGrinderBlockEntity>> 
         BLOCK_ENTITIES.register("tiberium_grinder_be", () -> BlockEntityType.Builder.of(
                 TiberiumGrinderBlockEntity::new, ModBlocks.TIBERIUM_GRINDER.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<TiberiumInfuserBlockEntity>> TIBERIUM_INFUSER_BE =
+            BLOCK_ENTITIES.register("tiberium_infuser_be", () -> BlockEntityType.Builder.of(
+                    TiberiumInfuserBlockEntity::new, ModBlocks.TIBERIUM_INFUSER.get()).build(null));
+
     public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> MOD_SIGN =
             BLOCK_ENTITIES.register("mod_sign", () -> BlockEntityType.Builder.of(
                     ModSignBlockEntity::new, ModBlocks.PLAGUED_SIGN.get(), ModBlocks.PLAGUED_WALL_SIGN.get(),

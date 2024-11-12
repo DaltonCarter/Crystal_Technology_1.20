@@ -19,6 +19,9 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<TiberiumGrinderMenu>> TIBERIUM_GRINDER_MENU =
             registerMenuType("tiberium_grinder_menu", TiberiumGrinderMenu::new);
 
+    public static final RegistryObject<MenuType<TiberiumInfuserMenu>> TIBERIUM_INFUSER_MENU =
+            registerMenuType("tiberium_infuser_menu", TiberiumInfuserMenu::new);
+
 
 
 

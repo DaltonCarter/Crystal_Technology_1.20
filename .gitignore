@@ -20,6 +20,6 @@ build
 # other
 eclipse
 run
-
+sounds
 # Files from Forge MDK
 forge*changelog.txt

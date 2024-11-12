@@ -424,7 +424,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.MARIKA_OAK_SIGN);
         simpleItem(ModItems.MARIKA_OAK_HANGING_SIGN);
 
+        //Complex?:
+        complexBlock(ModBlocks.TIBERIUM_INFUSER.get());
     }
+
+    private ItemModelBuilder complexBlock(Block block) {
+        return withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(), new ResourceLocation(CrystalTech.MOD_ID,
+                "block/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
+    }
+
 
     // Shoutout to El_Redstoniano for making this
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
