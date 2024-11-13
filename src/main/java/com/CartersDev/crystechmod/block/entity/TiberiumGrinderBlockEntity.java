@@ -50,6 +50,8 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
+
+
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 300;

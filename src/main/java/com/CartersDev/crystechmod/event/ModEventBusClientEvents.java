@@ -3,6 +3,7 @@ package com.CartersDev.crystechmod.event;
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.block.entity.renderer.TiberiumGrinderBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.TiberiumInfuserBlockEntityRenderer;
 import com.CartersDev.crystechmod.entity.client.ModModelLayers;
 import com.CartersDev.crystechmod.entity.client.RhinoModel;
 import com.CartersDev.crystechmod.particle.ModParticles;
@@ -29,6 +30,7 @@ public class ModEventBusClientEvents {
     @SubscribeEvent
 public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.TIBERIUM_GRINDER_BE.get(), TiberiumGrinderBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.TIBERIUM_INFUSER_BE.get(), TiberiumInfuserBlockEntityRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.MOD_SIGN.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.MOD_HANGING_SIGN.get(), HangingSignRenderer::new);
 }

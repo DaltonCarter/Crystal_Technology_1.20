@@ -1,12 +1,21 @@
 package com.CartersDev.crystechmod.block.entity;
 
+import com.CartersDev.crystechmod.block.custom.TiberiumInfuserBlock;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.recipe.TiberiumInfuserRecipe;
 import com.CartersDev.crystechmod.screen.TiberiumInfuserMenu;
+import com.CartersDev.crystechmod.util.InventoryDirectionEntry;
+import com.CartersDev.crystechmod.util.InventoryDirectionWrapper;
+import com.CartersDev.crystechmod.util.ModEnergyStorage;
+import com.CartersDev.crystechmod.util.WrappedHandler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.Connection;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -16,17 +25,25 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.energy.IEnergyStorage;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.capability.IFluidHandler;
+import net.minecraftforge.fluids.capability.IFluidHandlerItem;
+import net.minecraftforge.fluids.capability.templates.FluidTank;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Map;
 import java.util.Optional;
 
 
@@ -63,15 +80,18 @@ public class TiberiumInfuserBlockEntity extends BlockEntity implements MenuProvi
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
+            if(!level.isClientSide()) {
+                level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+            }
         }
 
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
                 case 0 -> true;
-                case 1 -> true;
+                case 1 -> stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent();
                 case 2 -> false;
-                case 3 -> true;
+                case 3 -> stack.getItem() == Items.COAL;
                 default -> super.isItemValid(slot, stack);
             };
         }
@@ -84,9 +104,62 @@ public class TiberiumInfuserBlockEntity extends BlockEntity implements MenuProvi
 
 private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
+
+private final Map<Direction, LazyOptional<WrappedHandler>> directioWrappedHandlerMap =
+        new InventoryDirectionWrapper(itemHandler,
+                new InventoryDirectionEntry(Direction.DOWN, OUTPUT_SLOT, false),
+                new InventoryDirectionEntry(Direction.UP, INPUT_SLOT, true),
+                new InventoryDirectionEntry(Direction.NORTH, INPUT_SLOT, true),
+                new InventoryDirectionEntry(Direction.SOUTH, OUTPUT_SLOT, false),
+                new InventoryDirectionEntry(Direction.EAST, OUTPUT_SLOT, false),
+                new InventoryDirectionEntry(Direction.WEST, INPUT_SLOT, true)).directionsMap;
+
+private LazyOptional<IEnergyStorage> lazyEnergyHandler = LazyOptional.empty();
+private LazyOptional<IFluidHandler> lazyFluidHandler = LazyOptional.empty();
+
 protected final ContainerData data;
 private int progress = 0;
 private int maxProgress = 100;
+
+private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
+private final FluidTank FLUID_TANK = createFluidTank();
+
+    private FluidTank createFluidTank() {
+        return new FluidTank(64000) {
+            @Override
+            protected void onContentsChanged() {
+                setChanged();
+                if(!level.isClientSide()) {
+                    level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+                }
+            }
+
+            @Override
+            public boolean isFluidValid(FluidStack stack) {
+                return true;
+            }
+        };
+    }
+
+    private ModEnergyStorage createEnergyStorage() {
+        return new ModEnergyStorage(64000, 200) {
+            @Override
+            public void onEnergyChanged() {
+                setChanged();
+                getLevel().sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+            }
+        };
+    }
+
+    public ItemStack getRenderStack() {
+        ItemStack stack = itemHandler.getStackInSlot(OUTPUT_SLOT);
+
+        if(stack.isEmpty()) {
+            stack = itemHandler.getStackInSlot(INPUT_SLOT);
+        }
+        return stack;
+    }
+
 
     public TiberiumInfuserBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.TIBERIUM_INFUSER_BE.get(), pPos, pBlockState);
@@ -116,6 +189,14 @@ private int maxProgress = 100;
         };
     }
 
+    public IEnergyStorage getEnergyStorage() {
+        return this.ENERGY_STORAGE;
+    }
+
+    public FluidStack getFluid() {
+        return FLUID_TANK.getFluid();
+    }
+
     public void drops() {
         SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
         for (int i = 0; i < itemHandler.getSlots(); i++) {
@@ -138,8 +219,34 @@ private int maxProgress = 100;
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
 
+        if(cap == ForgeCapabilities.ENERGY){
+            return lazyEnergyHandler.cast();
+        }
+
+        if(cap == ForgeCapabilities.FLUID_HANDLER){
+            return lazyFluidHandler.cast();
+        }
+
         if(cap == ForgeCapabilities.ITEM_HANDLER) {
-            return lazyItemHandler.cast();
+            if(side == null) {
+                return lazyItemHandler.cast();
+            }
+
+            if(directioWrappedHandlerMap.containsKey(side)){
+                Direction localDirection = this.getBlockState().getValue(TiberiumInfuserBlock.FACING);
+
+                if(side == Direction.DOWN || side == Direction.UP){
+                    return directioWrappedHandlerMap.get(side).cast();
+                }
+
+                return switch (localDirection) {
+                  default -> directioWrappedHandlerMap.get(side.getOpposite()).cast();
+                  case EAST -> directioWrappedHandlerMap.get(side.getClockWise()).cast();
+                  case SOUTH -> directioWrappedHandlerMap.get(side).cast();
+                  case WEST -> directioWrappedHandlerMap.get(side.getCounterClockWise()).cast();
+                };
+
+            }
         }
 
         return super.getCapability(cap, side);
@@ -150,6 +257,8 @@ private int maxProgress = 100;
         super.onLoad();
 
         lazyItemHandler = LazyOptional.of(() -> itemHandler);
+        lazyEnergyHandler = LazyOptional.of(() -> ENERGY_STORAGE);
+        lazyFluidHandler = LazyOptional.of(() -> FLUID_TANK);
 
     }
 
@@ -157,6 +266,8 @@ private int maxProgress = 100;
     public void invalidateCaps() {
         super.invalidateCaps();
         lazyItemHandler.invalidate();
+        lazyEnergyHandler.invalidate();
+        lazyFluidHandler.invalidate();
 
     }
 
@@ -165,6 +276,8 @@ private int maxProgress = 100;
 
         pTag.put("inventory", itemHandler.serializeNBT());
         pTag.putInt("tiberium_infuser.progress", progress);
+        pTag.putInt("energy", ENERGY_STORAGE.getEnergyStored());
+        pTag = FLUID_TANK.writeToNBT(pTag);
 
         super.saveAdditional(pTag);
     }
@@ -174,21 +287,77 @@ private int maxProgress = 100;
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
         progress = pTag.getInt("tiberium_infuser.progress");
+        ENERGY_STORAGE.setEnergy(pTag.getInt("energy"));
+        FLUID_TANK.readFromNBT(pTag);
     }
 
 
     public void tick(Level level, BlockPos pPos, BlockState pState) {
+        fillEnergy();  //<------Place Holder for getting energy through wires etc...
+        fillFluid();  //<-------Also a placeholder.
+        
         if (isOutputSlotEmptyOrReceivable() && hasRecipe()) {
             increaseCraftingProcess();
+            extractEnergy();
             setChanged(level, pPos, pState);
 
             if (hasProgressFinished()) {
                 craftItem();
+                extractFluid();
                 resetProgress();
             }
         } else {
             resetProgress();
         }
+    }
+
+    private void extractFluid() {
+        this.FLUID_TANK.drain(500, IFluidHandler.FluidAction.EXECUTE);
+    }
+
+    private void fillFluid() {
+        if(hasFluidSourceInSlot(FLUID_SLOT)) {
+            transferitemFluidToTank(FLUID_SLOT);
+        }
+    }
+
+    private void transferitemFluidToTank(int fluidSlot) {
+        this.itemHandler.getStackInSlot(fluidSlot).getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).ifPresent(iFluidHandlerItem -> {
+            int drainAmount = Math.min(this.FLUID_TANK.getSpace(), 1000);
+
+            FluidStack stack = iFluidHandlerItem.drain(drainAmount, IFluidHandler.FluidAction.SIMULATE);
+            if(stack.getFluid() == Fluids.WATER) {
+                stack = iFluidHandlerItem.drain(drainAmount, IFluidHandler.FluidAction.EXECUTE);
+                fillTankWithWater(stack, iFluidHandlerItem.getContainer());
+            }
+        });
+    }
+
+    private void fillTankWithWater(FluidStack stack, @NotNull ItemStack container) {
+        this.FLUID_TANK.fill(new FluidStack(stack.getFluid(), stack.getAmount()), IFluidHandler.FluidAction.EXECUTE);
+
+        this.itemHandler.extractItem(FLUID_SLOT, 1, false);
+        this.itemHandler.insertItem(FLUID_SLOT, container, false);
+    }
+
+    private boolean hasFluidSourceInSlot(int fluidSlot) {
+        return this.itemHandler.getStackInSlot(fluidSlot).getCount() > 0 &&
+                this.itemHandler.getStackInSlot(fluidSlot).getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent();
+    }
+
+    private void extractEnergy() {
+        this.ENERGY_STORAGE.extractEnergy(100, false);
+    }
+
+    private void fillEnergy() {
+        if(hasEnergyItemInSlot(POWER_SLOT)) {
+            this.ENERGY_STORAGE.receiveEnergy(3200, false);
+        }
+    }
+
+    private boolean hasEnergyItemInSlot(int powerSlot) {
+        return !this.itemHandler.getStackInSlot(powerSlot).isEmpty() &&
+                this.itemHandler.getStackInSlot(powerSlot).getItem() == Items.COAL;
     }
 
 
@@ -223,7 +392,16 @@ private int maxProgress = 100;
         ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
 
         return canInsertAmountIntoOutputSlot(resultItem.getCount())
-                && canInsertItemIntoOutputSlot(resultItem.getItem());
+                && canInsertItemIntoOutputSlot(resultItem.getItem()) &&
+                hasEnoughEnergyToCraft() && hasEnoughFluidToCraft();
+    }
+
+    private boolean hasEnoughFluidToCraft() {
+        return this.FLUID_TANK.getFluidAmount() >= 500;
+    }
+
+    private boolean hasEnoughEnergyToCraft() {
+        return this.ENERGY_STORAGE.getEnergyStored() >= 100 * maxProgress;
     }
 
     private Optional<TiberiumInfuserRecipe> getCurrentRecipe() {
@@ -250,4 +428,21 @@ private int maxProgress = 100;
                 this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() < this.itemHandler.getStackInSlot(OUTPUT_SLOT)
                         .getMaxStackSize();
     }
+
+    @Override
+    public @Nullable Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public CompoundTag getUpdateTag() {
+        return saveWithoutMetadata();
+    }
+
+    @Override
+    public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
+        super.onDataPacket(net, pkt);
+    }
+
+
 }

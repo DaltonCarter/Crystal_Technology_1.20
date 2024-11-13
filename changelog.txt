@@ -447,6 +447,19 @@ All information ABOUT the tracks will remain in the code.
  -Tiberium Grinder now has Recipe Datagen.
  -JEI added for Infuser, Fixed Show Recipe display area.
 
+------------------------------------------------------------------------------
+
+11/12/2024
+Version 0.4.83
+Posted By: Dalton Carter
+
+-Version to 0.4.83
+-Tiberium Infuser 95% complete. Will be Updated once adding custom energy amounts,
+custom fluids and amounts has been added to the recipes.
+
+
+
+
 ======================================================
 LEGACY 1.16.5 Changelog
 0.5.2

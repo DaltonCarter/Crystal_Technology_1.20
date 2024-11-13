@@ -608,6 +608,9 @@
 
   "entity.minecraft.villager.crystechmod.tiberiumgatherer": "Tiberium Gatherer",
 
+  "crystechmod.tooltip.liquid.amount.with.capacity": "%s / %s mB",
+  "crystechmod.tooltip.liquid.amount": "%s mB",
+
 
   "sounds.crystechmod.chime": "Alert Chime",
   "sounds.crystechmod.sound_block_break": "Sound Block Broken",
