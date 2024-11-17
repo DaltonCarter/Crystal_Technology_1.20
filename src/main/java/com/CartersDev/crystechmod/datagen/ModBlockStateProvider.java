@@ -187,16 +187,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SOUND_BLOCK);
 
         //Rotated Pillar Blocks:
-        axisBlock(((RotatedPillarBlock) ModBlocks.BLOSSOM_SPOUT.get()), blockTexture(ModBlocks.BLOSSOM_SPOUT.get()),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/blossom_spout_top"));
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.BLOSSOM_CENTER.get()), blockTexture(ModBlocks.BLOSSOM_CENTER.get()),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/blossom_top"));
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.BLOSSOM_BASE.get()), blockTexture(ModBlocks.BLOSSOM_BASE.get()),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/blossom_top"));
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.BLOSSOM_ARM.get()), blockTexture(ModBlocks.BLOSSOM_CENTER.get()),blockTexture(ModBlocks.BLOSSOM_CENTER.get()));
+
 
 
         //Wood Blocks:
@@ -213,10 +207,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.PLAGUED_WOOD);
         blockItem(ModBlocks.STRIPPED_PLAGUED_LOG);
         blockItem(ModBlocks.STRIPPED_PLAGUED_WOOD);
-        blockItem(ModBlocks.BLOSSOM_SPOUT);
-        blockItem(ModBlocks.BLOSSOM_CENTER);
-        blockItem(ModBlocks.BLOSSOM_BASE);
-        blockItem(ModBlocks.BLOSSOM_ARM);
+
+
 
         leavesBlock(ModBlocks.PLAGUED_LEAVES);
 

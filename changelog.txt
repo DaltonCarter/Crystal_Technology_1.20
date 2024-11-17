@@ -457,6 +457,17 @@ Posted By: Dalton Carter
 -Tiberium Infuser 95% complete. Will be Updated once adding custom energy amounts,
 custom fluids and amounts has been added to the recipes.
 
+------------------------------------------------------------------------------
+
+11/15/2024 - 11/16/2024
+Version 0.4.84
+Posted By: Dalton Carter
+
+-Version to 0.4.84
+-Tiberium Infuser Texture and Model updated
+-Tiberium Grinder Texture, Model updated, and added Facing Property.
+-Tiberium Blossom Tree Models updated, Removed Blossom Tree Arm.
+
 
 
 

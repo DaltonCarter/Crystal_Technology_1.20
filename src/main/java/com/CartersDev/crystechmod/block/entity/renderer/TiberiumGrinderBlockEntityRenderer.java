@@ -1,5 +1,7 @@
 package com.CartersDev.crystechmod.block.entity.renderer;
 
+import com.CartersDev.crystechmod.block.custom.TiberiumGrinderBlock;
+import com.CartersDev.crystechmod.block.custom.TiberiumInfuserBlock;
 import com.CartersDev.crystechmod.block.entity.TiberiumGrinderBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
@@ -30,8 +32,9 @@ public class TiberiumGrinderBlockEntityRenderer implements BlockEntityRenderer<T
         ItemStack itemStack = pBlockEntity.getRenderStack();
 
         pPoseStack.pushPose();
-        pPoseStack.translate(0.5f, 0.75f, 0.5f);
+        pPoseStack.translate(0.5f, 1.0f, 0.5f);
         pPoseStack.scale(0.35f, 0.35f, 0.35f);
+        pPoseStack.mulPose(Axis.YN.rotationDegrees(pBlockEntity.getBlockState().getValue(TiberiumGrinderBlock.FACING).toYRot()));
         pPoseStack.mulPose(Axis.XP.rotationDegrees(270));
 
         itemRenderer.renderStatic(itemStack, ItemDisplayContext.FIXED, getLightLevel(pBlockEntity.getLevel(), pBlockEntity.getBlockPos()),

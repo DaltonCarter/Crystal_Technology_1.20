@@ -29,7 +29,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     output.accept(ModBlocks.BLOSSOM_SPOUT.get());
                     output.accept(ModBlocks.BLOSSOM_CENTER.get());
                     output.accept(ModBlocks.BLOSSOM_BASE.get());
-                    output.accept(ModBlocks.BLOSSOM_ARM.get());
+
 
                     output.accept(ModBlocks.NOD_CREST_LARGE.get());
                     output.accept(ModItems.RHINO_SPAWN_EGG.get());

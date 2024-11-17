@@ -1525,16 +1525,14 @@ public class ModBlocks {
                     .randomTicks()));
 
     public static final RegistryObject<Block> BLOSSOM_CENTER = registerBlock("blossom_center",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noLootTable()
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noLootTable().noOcclusion()
                     .randomTicks()));
 
     public static final RegistryObject<Block> BLOSSOM_BASE = registerBlock("blossom_base",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noLootTable()
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noLootTable().noOcclusion()
                     .randomTicks()));
 
-    public static final RegistryObject<Block> BLOSSOM_ARM = registerBlock("blossom_arm",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noLootTable()
-                    .randomTicks()));
+
     //End Blossom Tree
 
 
