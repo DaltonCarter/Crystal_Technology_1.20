@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "crystechmod:block/cs_tile_hg",
+    "side": "crystechmod:block/cs_pillar_hg"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/cs_catwalk_b_slab"
+    },
+    "type=double": {
+      "model": "crystechmod:block/cs_catwalk_b"
+    },
+    "type=top": {
+      "model": "crystechmod:block/cs_catwalk_b_slab_top"
+    }
+  }
+}

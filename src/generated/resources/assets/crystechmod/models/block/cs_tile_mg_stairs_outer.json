@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "crystechmod:block/cs_tile_mg",
+    "side": "crystechmod:block/cs_tile_mg",
+    "top": "crystechmod:block/cs_tile_mg"
+  }
+}

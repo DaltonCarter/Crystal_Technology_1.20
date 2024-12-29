@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "crystechmod:rz_sandstone"
+  },
+  "result": "crystechmod:smooth_rz_sandstone_slab"
+}

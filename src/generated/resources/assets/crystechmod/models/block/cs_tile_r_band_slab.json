@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "crystechmod:block/cs_tile_r_band",
+    "side": "crystechmod:block/cs_tile_r_band",
+    "top": "crystechmod:block/cs_tile_r_band"
+  }
+}

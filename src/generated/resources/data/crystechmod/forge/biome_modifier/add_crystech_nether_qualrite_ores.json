@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_nether",
+  "features": "crystechmod:crystech_nether_qualrite_placed",
+  "step": "underground_ores"
+}

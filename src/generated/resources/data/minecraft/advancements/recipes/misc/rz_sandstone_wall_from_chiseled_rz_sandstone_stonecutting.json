@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chiseled_rz_sandstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:chiseled_rz_sandstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:rz_sandstone_wall_from_chiseled_rz_sandstone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_chiseled_rz_sandstone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:rz_sandstone_wall_from_chiseled_rz_sandstone_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

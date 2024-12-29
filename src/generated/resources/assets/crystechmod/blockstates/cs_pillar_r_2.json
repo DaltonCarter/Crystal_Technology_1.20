@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "crystechmod:block/cs_pillar_r_2_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "crystechmod:block/cs_pillar_r_2"
+    },
+    "axis=z": {
+      "model": "crystechmod:block/cs_pillar_r_2_horizontal",
+      "x": 90
+    }
+  }
+}

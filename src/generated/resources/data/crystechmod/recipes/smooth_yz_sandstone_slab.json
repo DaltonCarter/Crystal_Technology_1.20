@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "crystechmod:smooth_yz_sandstone"
+    }
+  },
+  "pattern": [
+    "   ",
+    "   ",
+    "TTT"
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:smooth_yz_sandstone_slab"
+  },
+  "show_notification": true
+}

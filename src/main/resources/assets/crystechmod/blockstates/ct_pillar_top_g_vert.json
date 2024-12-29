@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "crystechmod:block/ct_pillar_top_g_vert2"
+    },
+    "facing=north": {
+      "model": "crystechmod:block/ct_pillar_top_g_vert"
+    },
+    "facing=south": {
+      "model": "crystechmod:block/ct_pillar_top_g_vert"
+    },
+    "facing=west": {
+      "model": "crystechmod:block/ct_pillar_top_g_vert2"
+    }
+  }
+}

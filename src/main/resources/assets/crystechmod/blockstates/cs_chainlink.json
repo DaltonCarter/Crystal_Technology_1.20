@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "crystechmod:block/cs_chainlink2"
+    },
+    "facing=north": {
+      "model": "crystechmod:block/cs_chainlink"
+    },
+    "facing=south": {
+      "model": "crystechmod:block/cs_chainlink"
+    },
+    "facing=west": {
+      "model": "crystechmod:block/cs_chainlink2"
+    }
+  }
+}

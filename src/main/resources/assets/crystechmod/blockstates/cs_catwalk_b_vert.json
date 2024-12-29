@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "crystechmod:block/cs_catwalk_b_vert2"
+    },
+    "facing=north": {
+      "model": "crystechmod:block/cs_catwalk_b_vert"
+    },
+    "facing=south": {
+      "model": "crystechmod:block/cs_catwalk_b_vert"
+    },
+    "facing=west": {
+      "model": "crystechmod:block/cs_catwalk_b_vert2"
+    }
+  }
+}

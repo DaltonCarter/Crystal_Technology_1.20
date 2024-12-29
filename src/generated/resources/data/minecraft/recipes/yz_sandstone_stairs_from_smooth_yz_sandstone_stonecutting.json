@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:smooth_yz_sandstone"
+  },
+  "result": "crystechmod:yz_sandstone_stairs"
+}

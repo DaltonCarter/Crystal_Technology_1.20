@@ -469,6 +469,40 @@ Posted By: Dalton Carter
 -Tiberium Blossom Tree Models updated, Removed Blossom Tree Arm.
 
 
+------------------------------------------------------------------------------
+
+11/19/2024 - ???
+Version ???
+Posted By: Dalton Carter
+
+-MASSIVE WORLD GEN UPDATE!!!
+-Version to ???
+-All 4 trees now have saplings and growth logic.
+-Ember Oaks and Marika Oaks have a regular and Mega variant.
+-Dead Trees added to general overworld World gen
+-World Gen for trees added.
+-Datagen for World gen added.
+-Adjusted Dead Tree World gen to just Forests and lowered amount.
+-Added Ore Gen for the Overworld, Nether, and End. ALL Mod Ores are now obtainable in game!
+-Added Flower Gen. Flowers now Spawn in a variety of Biomes.
+-Ground Work For Ore Gen in Custom Dimension, Flower, and Tree Generation for Custom Biomes implemented.
+-Added Terrablender Api to Dependencies
+-Added Custom Biomes, Overworld Region, and Surface Rules
+-Added Ember Glow Forest, Embran Valley, Amber Grove, and Hornsent Hills Biomes to the Overworld.
+-Biomes added to Worldgen DataGen
+-Custom Dimension is now Named The Vitric expanse *Coming Soon*
+-Plans for Dimension Biomes written out in comments Names and Zone Type only
+-Tiberium Geode added
+-Confirmed Custom Tracks DO play in Biomes, but only outside of creative.
+-Yellow/Red Zone Sandstone & variants added
+-Core Steel Deco Blocks added
+-Crystal Core Deco Blocks added
+-Red/Yellow/Blue Zone Biomes Created
+-Added Ore Doubling for Mod Ores in basic Tiberium Grinder
+-A LOT of recipes added
+-Vertical Slab/Panel Block added!
+
+
 
 
 ======================================================

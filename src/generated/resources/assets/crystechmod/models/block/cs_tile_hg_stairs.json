@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "crystechmod:block/cs_tile_hg",
+    "side": "crystechmod:block/cs_tile_hg",
+    "top": "crystechmod:block/cs_tile_hg"
+  }
+}

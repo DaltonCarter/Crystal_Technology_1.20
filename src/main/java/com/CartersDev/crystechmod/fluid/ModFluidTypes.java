@@ -28,7 +28,8 @@ public class ModFluidTypes {
 
     public static final RegistryObject<FluidType> TIBERIUM_WATER_FLUID_TYPE = register("tiberium_water_fluid",
             FluidType.Properties.create().lightLevel(2).density(15).viscosity(5).sound(SoundAction.get("drink"),
-                    SoundEvents.HONEY_DRINK).canConvertToSource(true).canHydrate(true).canDrown(true));
+                    SoundEvents.HONEY_DRINK).canConvertToSource(true).canHydrate(true).canDrown(true).canPushEntity(true)
+                    .canSwim(true).supportsBoating(true));
 
     public static final RegistryObject<FluidType> MOLTEN_TIBERIUM_FLUID_TYPE = registerGreen("molten_tiberium_fluid",
             FluidType.Properties.create().lightLevel(10).density(15).viscosity(15));

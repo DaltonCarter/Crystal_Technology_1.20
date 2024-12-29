@@ -38,6 +38,56 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.LG_CORE_BLOCK);
         blockWithItem(ModBlocks.MG_CORE_BLOCK);
         blockWithItem(ModBlocks.HG_CORE_BLOCK);
+        blockWithItem(ModBlocks.CS_SCAFFOLD);
+        blockWithItem(ModBlocks.CS_TILE_G);
+        blockWithItem(ModBlocks.CS_TILE_G_BAND);
+        blockWithItem(ModBlocks.CS_TILE_G_FRAME);
+        blockWithItem(ModBlocks.CS_TILE_B_BAND);
+        blockWithItem(ModBlocks.CS_TILE_B_FRAME);
+        blockWithItem(ModBlocks.CS_TILE_R_BAND);
+        blockWithItem(ModBlocks.CS_TILE_R_FRAME);
+        blockWithItem(ModBlocks.CS_TILE_P_BAND);
+        blockWithItem(ModBlocks.CS_TILE_P_FRAME);
+        blockWithItem(ModBlocks.CS_TILE_LG_BAND);
+        blockWithItem(ModBlocks.CS_TILE_LG_FRAME);
+        blockWithItem(ModBlocks.CS_TILE_MG_BAND);
+        blockWithItem(ModBlocks.CS_TILE_MG_FRAME);
+        blockWithItem(ModBlocks.CS_TILE_HG_BAND);
+        blockWithItem(ModBlocks.CS_TILE_HG_FRAME);
+        blockWithItem(ModBlocks.CS_TILE_B);
+        blockWithItem(ModBlocks.CS_TILE_R);
+        blockWithItem(ModBlocks.CS_TILE_P);
+        blockWithItem(ModBlocks.CS_TILE_LG);
+        blockWithItem(ModBlocks.CS_TILE_MG);
+        blockWithItem(ModBlocks.CS_TILE_HG);
+        blockWithItem(ModBlocks.CS_TILE);
+        blockWithItem(ModBlocks.CS_TILE_BR);
+        blockWithItem(ModBlocks.CS_TILE_YB);
+
+        blockWithItem(ModBlocks.CS_CATWALK_W);
+        blockWithItem(ModBlocks.CS_CATWALK_BL);
+        blockWithItem(ModBlocks.CS_CATWALK_G);
+        blockWithItem(ModBlocks.CS_CATWALK_B);
+        blockWithItem(ModBlocks.CS_CATWALK_R);
+        blockWithItem(ModBlocks.CS_CATWALK_P);
+
+        blockWithItem(ModBlocks.CT_PILLAR_TOP);
+        blockWithItem(ModBlocks.CT_PILLAR_TOP_G);
+        blockWithItem(ModBlocks.CT_PILLAR_TOP_B);
+        blockWithItem(ModBlocks.CT_PILLAR_TOP_R);
+        blockWithItem(ModBlocks.CT_PILLAR_TOP_P);
+
+        blockWithItem(ModBlocks.CT_TILE_2);
+        blockWithItem(ModBlocks.CT_TILE_G_2);
+        blockWithItem(ModBlocks.CT_TILE_B_2);
+        blockWithItem(ModBlocks.CT_TILE_R_2);
+        blockWithItem(ModBlocks.CT_TILE_P_2);
+
+        blockWithItem(ModBlocks.CT_TILE_3);
+        blockWithItem(ModBlocks.CT_TILE_G_3);
+        blockWithItem(ModBlocks.CT_TILE_B_3);
+        blockWithItem(ModBlocks.CT_TILE_R_3);
+        blockWithItem(ModBlocks.CT_TILE_P_3);
 
         blockWithItem(ModBlocks.TIBERIUM_BLOCK);
         blockWithItem(ModBlocks.TIBERIUM_BLUE_BLOCK);
@@ -186,11 +236,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ICHOR_SOIL);
         blockWithItem(ModBlocks.SOUND_BLOCK);
 
-        //Rotated Pillar Blocks:
-
-
-
-
+        //Sapling Blocks:
+        saplingBlock(ModBlocks.EMBER_OAK_SAPLING);
+        saplingBlock(ModBlocks.MARIKA_OAK_SAPLING);
+        saplingBlock(ModBlocks.PLAGUED_SAPLING);
+        saplingBlock(ModBlocks.DYING_SAPLING);
 
 
         //Wood Blocks:
@@ -256,6 +306,171 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_MARIKA_OAK_WOOD);
 
         leavesBlock(ModBlocks.MARIKA_OAK_LEAVES);
+
+        //Rotated Pillars:
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/lg_core_block"));
+        blockItem(ModBlocks.CS_PILLAR);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_G.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_g"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_g"));
+        blockItem(ModBlocks.CS_PILLAR_G);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_G_2.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_g_2"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_g"));
+        blockItem(ModBlocks.CS_PILLAR_G_2);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_G_3.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_g_3"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_g"));
+        blockItem(ModBlocks.CS_PILLAR_G_3);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_G_4.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_g_4"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_g"));
+        blockItem(ModBlocks.CS_PILLAR_G_4);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_B.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_b"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_b"));
+        blockItem(ModBlocks.CS_PILLAR_B);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_B_2.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_b_2"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_b"));
+        blockItem(ModBlocks.CS_PILLAR_B_2);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_B_3.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_b_3"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_b"));
+        blockItem(ModBlocks.CS_PILLAR_B_3);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_B_4.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_b_4"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_b"));
+        blockItem(ModBlocks.CS_PILLAR_B_4);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_R.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_r"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_r"));
+        blockItem(ModBlocks.CS_PILLAR_R);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_R_2.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_r_2"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_r"));
+        blockItem(ModBlocks.CS_PILLAR_R_2);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_R_3.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_r_3"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_r"));
+        blockItem(ModBlocks.CS_PILLAR_R_3);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_R_4.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_r_4"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_r"));
+        blockItem(ModBlocks.CS_PILLAR_R_4);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_P.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_p"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_p"));
+        blockItem(ModBlocks.CS_PILLAR_P);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_P_2.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_p_2"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_p"));
+        blockItem(ModBlocks.CS_PILLAR_P_2);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_P_3.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_p_3"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_p"));
+        blockItem(ModBlocks.CS_PILLAR_P_3);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_P_4.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_p_4"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_p"));
+        blockItem(ModBlocks.CS_PILLAR_P_4);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_LG.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_lg"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_lg"));
+        blockItem(ModBlocks.CS_PILLAR_LG);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_LG_2.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_lg_2"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_lg"));
+        blockItem(ModBlocks.CS_PILLAR_LG_2);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_LG_3.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_lg_3"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_lg"));
+        blockItem(ModBlocks.CS_PILLAR_LG_3);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_LG_4.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_lg_4"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_lg"));
+        blockItem(ModBlocks.CS_PILLAR_LG_4);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_MG.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_mg"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_mg"));
+        blockItem(ModBlocks.CS_PILLAR_MG);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_MG_2.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_mg_2"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_mg"));
+        blockItem(ModBlocks.CS_PILLAR_MG_2);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_MG_3.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_mg_3"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_mg"));
+        blockItem(ModBlocks.CS_PILLAR_MG_3);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_MG_4.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_mg_4"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_mg"));
+        blockItem(ModBlocks.CS_PILLAR_MG_4);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_HG.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_hg"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_hg"));
+        blockItem(ModBlocks.CS_PILLAR_HG);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_HG_2.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_hg_2"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_hg"));
+        blockItem(ModBlocks.CS_PILLAR_HG_2);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_HG_3.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_hg_3"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_hg"));
+        blockItem(ModBlocks.CS_PILLAR_HG_3);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_HG_4.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_hg_4"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_hg"));
+        blockItem(ModBlocks.CS_PILLAR_HG_4);
+
+
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CT_PILLAR.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_top"));
+        blockItem(ModBlocks.CT_PILLAR);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CT_PILLAR_2.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_2"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_top"));
+        blockItem(ModBlocks.CT_PILLAR_2);
+        
+        axisBlock(((RotatedPillarBlock) ModBlocks.CT_PILLAR_3.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_3"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_top"));
+        blockItem(ModBlocks.CT_PILLAR_3);
+        
+        axisBlock(((RotatedPillarBlock) ModBlocks.CT_PILLAR_G.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_g"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_top_g"));
+        blockItem(ModBlocks.CT_PILLAR_G);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CT_PILLAR_G_2.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_g_2"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_top_g"));
+        blockItem(ModBlocks.CT_PILLAR_G_2);
+        
+        axisBlock(((RotatedPillarBlock) ModBlocks.CT_PILLAR_B.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_b"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_top_b"));
+        blockItem(ModBlocks.CT_PILLAR_B);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CT_PILLAR_B_2.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_b_2"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_top_b"));
+        blockItem(ModBlocks.CT_PILLAR_B_2);
+        
+        axisBlock(((RotatedPillarBlock) ModBlocks.CT_PILLAR_R.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_r"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_top_r"));
+        blockItem(ModBlocks.CT_PILLAR_R);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CT_PILLAR_R_2.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_r_2"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_top_r"));
+        blockItem(ModBlocks.CT_PILLAR_R_2);
+        
+        axisBlock(((RotatedPillarBlock) ModBlocks.CT_PILLAR_P.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_p"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_top_p"));
+        blockItem(ModBlocks.CT_PILLAR_P);
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.CT_PILLAR_P_2.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_p_2"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/ct_pillar_top_p"));
+        blockItem(ModBlocks.CT_PILLAR_P_2);
+
+
 
         //Signs:
         signBlock(((StandingSignBlock) ModBlocks.PLAGUED_SIGN.get()), ((WallSignBlock) ModBlocks.PLAGUED_WALL_SIGN.get()),
@@ -364,6 +579,56 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) ModBlocks.CRUENTUS_CRYSTAL_STAIRS.get(), blockTexture(ModBlocks.CRUENTUS_CRYSTAL.get()));
         stairsBlock((StairBlock) ModBlocks.ABOREUS_CRYSTAL_STAIRS.get(), blockTexture(ModBlocks.ABOREUS_CRYSTAL.get()));
 
+        stairsBlock((StairBlock) ModBlocks.CS_SCAFFOLD_STAIRS.get(), blockTexture(ModBlocks.CS_SCAFFOLD.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_CATWALK_W_STAIRS.get(), blockTexture(ModBlocks.CS_CATWALK_W.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_CATWALK_BL_STAIRS.get(), blockTexture(ModBlocks.CS_CATWALK_BL.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_CATWALK_G_STAIRS.get(), blockTexture(ModBlocks.CS_CATWALK_G.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_CATWALK_B_STAIRS.get(), blockTexture(ModBlocks.CS_CATWALK_B.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_CATWALK_R_STAIRS.get(), blockTexture(ModBlocks.CS_CATWALK_R.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_CATWALK_P_STAIRS.get(), blockTexture(ModBlocks.CS_CATWALK_P.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_STAIRS.get(), blockTexture(ModBlocks.CS_TILE.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_BR_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_BR.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_YB_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_YB.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_G_BAND_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_G_BAND.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_G_FRAME_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_G_FRAME.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_B_BAND_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_B_BAND.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_B_FRAME_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_B_FRAME.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_R_BAND_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_R_BAND.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_R_FRAME_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_R_FRAME.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_P_BAND_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_P_BAND.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_P_FRAME_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_P_FRAME.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_LG_BAND_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_LG_BAND.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_LG_FRAME_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_LG_FRAME.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_MG_BAND_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_MG_BAND.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_MG_FRAME_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_MG_FRAME.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_HG_BAND_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_HG_BAND.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_HG_FRAME_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_HG_FRAME.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_G_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_G.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_B_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_B.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_R_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_R.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_P_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_P.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_LG_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_LG.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_MG_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_MG.get()));
+        stairsBlock((StairBlock) ModBlocks.CS_TILE_HG_STAIRS.get(), blockTexture(ModBlocks.CS_TILE_HG.get()));
+
+        stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS.get(), blockTexture(ModBlocks.CT_PILLAR_TOP.get()));
+        stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS_G.get(), blockTexture(ModBlocks.CT_PILLAR_TOP_G.get()));
+        stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS_B.get(), blockTexture(ModBlocks.CT_PILLAR_TOP_B.get()));
+        stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS_R.get(), blockTexture(ModBlocks.CT_PILLAR_TOP_R.get()));
+        stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS_P.get(), blockTexture(ModBlocks.CT_PILLAR_TOP_P.get()));
+
+        stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS_2.get(), blockTexture(ModBlocks.CT_TILE_2.get()));
+        stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS_G_2.get(), blockTexture(ModBlocks.CT_TILE_G_2.get()));
+        stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS_B_2.get(), blockTexture(ModBlocks.CT_TILE_B_2.get()));
+        stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS_R_2.get(), blockTexture(ModBlocks.CT_TILE_R_2.get()));
+        stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS_P_2.get(), blockTexture(ModBlocks.CT_TILE_P_2.get()));
+
+        stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS_3.get(), blockTexture(ModBlocks.CT_TILE_3.get()));
+        stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS_G_3.get(), blockTexture(ModBlocks.CT_TILE_G_3.get()));
+        stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS_B_3.get(), blockTexture(ModBlocks.CT_TILE_B_3.get()));
+        stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS_R_3.get(), blockTexture(ModBlocks.CT_TILE_R_3.get()));
+        stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS_P_3.get(), blockTexture(ModBlocks.CT_TILE_P_3.get()));
+
         //Slabs:
        slabBlock((SlabBlock) ModBlocks.PLAGUED_SLAB.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
        slabBlock((SlabBlock) ModBlocks.EMBER_OAK_SLAB.get(), blockTexture(ModBlocks.EMBER_OAK_PLANKS.get()), blockTexture(ModBlocks.EMBER_OAK_PLANKS.get()));
@@ -427,6 +692,56 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) ModBlocks.ABOREUS_CRYSTAL_SLAB.get(), blockTexture(ModBlocks.ABOREUS_CRYSTAL.get()), blockTexture(ModBlocks.ABOREUS_CRYSTAL.get()));
         slabBlock((SlabBlock) ModBlocks.CRUENTUS_CRYSTAL_SLAB.get(), blockTexture(ModBlocks.CRUENTUS_CRYSTAL.get()), blockTexture(ModBlocks.CRUENTUS_CRYSTAL.get()));
         slabBlock((SlabBlock) ModBlocks.VINIFERA_CRYSTAL_SLAB.get(), blockTexture(ModBlocks.VINIFERA_CRYSTAL.get()), blockTexture(ModBlocks.VINIFERA_CRYSTAL.get()));
+
+        slabBlock((SlabBlock) ModBlocks.CS_SCAFFOLD_SLAB.get(), blockTexture(ModBlocks.CS_SCAFFOLD.get()), blockTexture(ModBlocks.CS_SCAFFOLD.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_CATWALK_W_SLAB.get(), blockTexture(ModBlocks.CS_CATWALK_W.get()), blockTexture(ModBlocks.CS_CATWALK_W.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_CATWALK_BL_SLAB.get(), blockTexture(ModBlocks.CS_CATWALK_BL.get()), blockTexture(ModBlocks.CS_CATWALK_BL.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_CATWALK_B_SLAB.get(), blockTexture(ModBlocks.CS_CATWALK_B.get()), blockTexture(ModBlocks.CS_CATWALK_B.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_CATWALK_G_SLAB.get(), blockTexture(ModBlocks.CS_CATWALK_G.get()), blockTexture(ModBlocks.CS_CATWALK_G.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_CATWALK_R_SLAB.get(), blockTexture(ModBlocks.CS_CATWALK_R.get()), blockTexture(ModBlocks.CS_CATWALK_R.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_CATWALK_P_SLAB.get(), blockTexture(ModBlocks.CS_CATWALK_P.get()), blockTexture(ModBlocks.CS_CATWALK_P.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_SLAB.get(), blockTexture(ModBlocks.CS_TILE.get()), blockTexture(ModBlocks.CS_TILE.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_BR_SLAB.get(), blockTexture(ModBlocks.CS_TILE_BR.get()), blockTexture(ModBlocks.CS_TILE_BR.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_YB_SLAB.get(), blockTexture(ModBlocks.CS_TILE_YB.get()), blockTexture(ModBlocks.CS_TILE_YB.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_G_SLAB.get(), blockTexture(ModBlocks.CS_TILE_G.get()), blockTexture(ModBlocks.CS_TILE_G.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_G_BAND_SLAB.get(), blockTexture(ModBlocks.CS_TILE_G_BAND.get()), blockTexture(ModBlocks.CS_TILE_G_BAND.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_G_FRAME_SLAB.get(), blockTexture(ModBlocks.CS_TILE_G_FRAME.get()), blockTexture(ModBlocks.CS_TILE_G_FRAME.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_B_BAND_SLAB.get(), blockTexture(ModBlocks.CS_TILE_B_BAND.get()), blockTexture(ModBlocks.CS_TILE_B_BAND.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_B_FRAME_SLAB.get(), blockTexture(ModBlocks.CS_TILE_B_FRAME.get()), blockTexture(ModBlocks.CS_TILE_B_FRAME.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_R_BAND_SLAB.get(), blockTexture(ModBlocks.CS_TILE_R_BAND.get()), blockTexture(ModBlocks.CS_TILE_R_BAND.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_R_FRAME_SLAB.get(), blockTexture(ModBlocks.CS_TILE_R_FRAME.get()), blockTexture(ModBlocks.CS_TILE_R_FRAME.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_P_BAND_SLAB.get(), blockTexture(ModBlocks.CS_TILE_P_BAND.get()), blockTexture(ModBlocks.CS_TILE_P_BAND.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_P_FRAME_SLAB.get(), blockTexture(ModBlocks.CS_TILE_P_FRAME.get()), blockTexture(ModBlocks.CS_TILE_P_FRAME.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_LG_BAND_SLAB.get(), blockTexture(ModBlocks.CS_TILE_LG_BAND.get()), blockTexture(ModBlocks.CS_TILE_LG_BAND.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_LG_FRAME_SLAB.get(), blockTexture(ModBlocks.CS_TILE_LG_FRAME.get()), blockTexture(ModBlocks.CS_TILE_LG_FRAME.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_MG_BAND_SLAB.get(), blockTexture(ModBlocks.CS_TILE_MG_BAND.get()), blockTexture(ModBlocks.CS_TILE_MG_BAND.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_MG_FRAME_SLAB.get(), blockTexture(ModBlocks.CS_TILE_MG_FRAME.get()), blockTexture(ModBlocks.CS_TILE_MG_FRAME.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_HG_BAND_SLAB.get(), blockTexture(ModBlocks.CS_TILE_HG_BAND.get()), blockTexture(ModBlocks.CS_TILE_HG_BAND.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_HG_FRAME_SLAB.get(), blockTexture(ModBlocks.CS_TILE_HG_FRAME.get()), blockTexture(ModBlocks.CS_TILE_HG_FRAME.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_B_SLAB.get(), blockTexture(ModBlocks.CS_TILE_B.get()), blockTexture(ModBlocks.CS_TILE_B.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_R_SLAB.get(), blockTexture(ModBlocks.CS_TILE_R.get()), blockTexture(ModBlocks.CS_TILE_R.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_P_SLAB.get(), blockTexture(ModBlocks.CS_TILE_P.get()), blockTexture(ModBlocks.CS_TILE_P.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_LG_SLAB.get(), blockTexture(ModBlocks.CS_TILE_LG.get()), blockTexture(ModBlocks.CS_TILE_LG.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_MG_SLAB.get(), blockTexture(ModBlocks.CS_TILE_MG.get()), blockTexture(ModBlocks.CS_TILE_MG.get()));
+        slabBlock((SlabBlock) ModBlocks.CS_TILE_HG_SLAB.get(), blockTexture(ModBlocks.CS_TILE_HG.get()), blockTexture(ModBlocks.CS_TILE_HG.get()));
+
+        slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB.get(), blockTexture(ModBlocks.CT_PILLAR_TOP.get()), blockTexture(ModBlocks.CT_PILLAR_TOP.get()));
+        slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_G.get(), blockTexture(ModBlocks.CT_PILLAR_TOP_G.get()), blockTexture(ModBlocks.CT_PILLAR_TOP_G.get()));
+        slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_B.get(), blockTexture(ModBlocks.CT_PILLAR_TOP_B.get()), blockTexture(ModBlocks.CT_PILLAR_TOP_B.get()));
+        slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_R.get(), blockTexture(ModBlocks.CT_PILLAR_TOP_R.get()), blockTexture(ModBlocks.CT_PILLAR_TOP_R.get()));
+        slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_P.get(), blockTexture(ModBlocks.CT_PILLAR_TOP_P.get()), blockTexture(ModBlocks.CT_PILLAR_TOP_P.get()));
+
+        slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_2.get(), blockTexture(ModBlocks.CT_TILE_2.get()), blockTexture(ModBlocks.CT_TILE_2.get()));
+        slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_G_2.get(), blockTexture(ModBlocks.CT_TILE_G_2.get()), blockTexture(ModBlocks.CT_TILE_G_2.get()));
+        slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_B_2.get(), blockTexture(ModBlocks.CT_TILE_B_2.get()), blockTexture(ModBlocks.CT_TILE_B_2.get()));
+        slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_R_2.get(), blockTexture(ModBlocks.CT_TILE_R_2.get()), blockTexture(ModBlocks.CT_TILE_R_2.get()));
+        slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_P_2.get(), blockTexture(ModBlocks.CT_TILE_P_2.get()), blockTexture(ModBlocks.CT_TILE_P_2.get()));
+
+        slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_3.get(), blockTexture(ModBlocks.CT_TILE_3.get()), blockTexture(ModBlocks.CT_TILE_3.get()));
+        slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_G_3.get(), blockTexture(ModBlocks.CT_TILE_G_3.get()), blockTexture(ModBlocks.CT_TILE_G_3.get()));
+        slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_B_3.get(), blockTexture(ModBlocks.CT_TILE_B_3.get()), blockTexture(ModBlocks.CT_TILE_B_3.get()));
+        slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_R_3.get(), blockTexture(ModBlocks.CT_TILE_R_3.get()), blockTexture(ModBlocks.CT_TILE_R_3.get()));
+        slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_P_3.get(), blockTexture(ModBlocks.CT_TILE_P_3.get()), blockTexture(ModBlocks.CT_TILE_P_3.get()));
 
         //Buttons and Pressure Plates:
         buttonBlock((ButtonBlock) ModBlocks.PLAGUED_BUTTON.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
@@ -524,6 +839,49 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock((((WallBlock) ModBlocks.WHITE_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.WHITE_TIBERCRETE_BRICKS.get())));
         wallBlock((((WallBlock) ModBlocks.YELLOW_TIBERCRETE_BRICK_WALL.get())), blockTexture(( ModBlocks.YELLOW_TIBERCRETE_BRICKS.get())));
 
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_WALL.get())), blockTexture(( ModBlocks.CS_TILE.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_BR_WALL.get())), blockTexture(( ModBlocks.CS_TILE_BR.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_YB_WALL.get())), blockTexture(( ModBlocks.CS_TILE_YB.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_G_WALL.get())), blockTexture(( ModBlocks.CS_TILE_G.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_G_BAND_WALL.get())), blockTexture(( ModBlocks.CS_TILE_G_BAND.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_G_FRAME_WALL.get())), blockTexture(( ModBlocks.CS_TILE_G_FRAME.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_B_BAND_WALL.get())), blockTexture(( ModBlocks.CS_TILE_B_BAND.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_B_FRAME_WALL.get())), blockTexture(( ModBlocks.CS_TILE_B_FRAME.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_HG_BAND_WALL.get())), blockTexture(( ModBlocks.CS_TILE_HG_BAND.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_HG_FRAME_WALL.get())), blockTexture(( ModBlocks.CS_TILE_HG_FRAME.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_MG_BAND_WALL.get())), blockTexture(( ModBlocks.CS_TILE_MG_BAND.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_MG_FRAME_WALL.get())), blockTexture(( ModBlocks.CS_TILE_MG_FRAME.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_LG_BAND_WALL.get())), blockTexture(( ModBlocks.CS_TILE_LG_BAND.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_LG_FRAME_WALL.get())), blockTexture(( ModBlocks.CS_TILE_LG_FRAME.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_P_BAND_WALL.get())), blockTexture(( ModBlocks.CS_TILE_P_BAND.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_P_FRAME_WALL.get())), blockTexture(( ModBlocks.CS_TILE_P_FRAME.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_R_BAND_WALL.get())), blockTexture(( ModBlocks.CS_TILE_R_BAND.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_R_FRAME_WALL.get())), blockTexture(( ModBlocks.CS_TILE_R_FRAME.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_B_WALL.get())), blockTexture(( ModBlocks.CS_TILE_B.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_R_WALL.get())), blockTexture(( ModBlocks.CS_TILE_R.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_P_WALL.get())), blockTexture(( ModBlocks.CS_TILE_P.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_LG_WALL.get())), blockTexture(( ModBlocks.CS_TILE_LG.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_MG_WALL.get())), blockTexture(( ModBlocks.CS_TILE_MG.get())));
+        wallBlock((((WallBlock) ModBlocks.CS_TILE_HG_WALL.get())), blockTexture(( ModBlocks.CS_TILE_HG.get())));
+
+        wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL.get())), blockTexture(( ModBlocks.CT_PILLAR_TOP.get())));
+        wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_G.get())), blockTexture(( ModBlocks.CT_PILLAR_TOP_G.get())));
+        wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_B.get())), blockTexture(( ModBlocks.CT_PILLAR_TOP_B.get())));
+        wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_R.get())), blockTexture(( ModBlocks.CT_PILLAR_TOP_R.get())));
+        wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_P.get())), blockTexture(( ModBlocks.CT_PILLAR_TOP_P.get())));
+
+        wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_2.get())), blockTexture(( ModBlocks.CT_TILE_2.get())));
+        wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_G_2.get())), blockTexture(( ModBlocks.CT_TILE_G_2.get())));
+        wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_B_2.get())), blockTexture(( ModBlocks.CT_TILE_B_2.get())));
+        wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_R_2.get())), blockTexture(( ModBlocks.CT_TILE_R_2.get())));
+        wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_P_2.get())), blockTexture(( ModBlocks.CT_TILE_P_2.get())));
+
+        wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_3.get())), blockTexture(( ModBlocks.CT_TILE_3.get())));
+        wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_G_3.get())), blockTexture(( ModBlocks.CT_TILE_G_3.get())));
+        wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_B_3.get())), blockTexture(( ModBlocks.CT_TILE_B_3.get())));
+        wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_R_3.get())), blockTexture(( ModBlocks.CT_TILE_R_3.get())));
+        wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_P_3.get())), blockTexture(( ModBlocks.CT_TILE_P_3.get())));
+
 
         //Crops and Plants:
         makeStrawberryCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
@@ -589,6 +947,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(ModBlocks.TIBERIUM_INFUSER.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/tiberium_infuser")));
 
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     // All-purpose Custom Lamp method by Hrodebert:

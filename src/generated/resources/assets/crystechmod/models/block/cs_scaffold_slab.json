@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "crystechmod:block/cs_scaffold",
+    "side": "crystechmod:block/cs_scaffold",
+    "top": "crystechmod:block/cs_scaffold"
+  }
+}

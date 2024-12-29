@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "crystechmod:block/yz_sandstone_top",
+    "side": "crystechmod:block/yz_cut_sandstone"
+  }
+}

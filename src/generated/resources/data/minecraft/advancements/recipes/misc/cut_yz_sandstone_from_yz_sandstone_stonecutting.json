@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:cut_yz_sandstone_from_yz_sandstone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yz_sandstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:yz_sandstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_yz_sandstone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:cut_yz_sandstone_from_yz_sandstone_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -32,18 +32,15 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
     private static final List<ItemLike> ALYTHUM_SMELTABLES = List.of(ModItems.RAW_ALYTHUM.get(),
             ModItems.ALYTHUM_DUST.get(), ModBlocks.ALYTHUM_ORE.get(), ModBlocks.DEEPSLATE_ALYTHUM_ORE.get(), ModBlocks.NETHER_ALYTHUM_ORE.get());
 
-    private static final List<ItemLike> GUNDANIUM_GRINDABLES = List.of(ModItems.RAW_GUNDANIUM.get(),
-            ModBlocks.GUNDANIUM_ORE.get(), ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get());
-
-    private static final List<ItemLike> ALYTHUM_GRINDABLES = List.of(ModItems.RAW_ALYTHUM.get(),
-             ModBlocks.ALYTHUM_ORE.get(), ModBlocks.DEEPSLATE_ALYTHUM_ORE.get(), ModBlocks.NETHER_ALYTHUM_ORE.get());
+    private static final List<ItemLike> YELLOW_ZONE_SMELTABLES = List.of(ModBlocks.YZ_SANDSTONE.get());
+    private static final List<ItemLike> RED_ZONE_SMELTABLES = List.of(ModBlocks.RZ_SANDSTONE.get());
+    
 
     private static final List<ItemLike> LG_CORE_STEEL = List.of(ModItems.LG_CORE_BLEND.get());
     private static final List<ItemLike> MG_CORE_STEEL = List.of(ModItems.MG_CORE_BLEND.get());
     private static final List<ItemLike> HG_CORE_STEEL = List.of(ModItems.HG_CORE_BLEND.get());
     private static final List<ItemLike> ILLYRIM_ALLOY = List.of(ModItems.ILLYRIM_BLEND.get());
-    private static final List<ItemLike> INFESTED_CUTTABLES = List.of(ModBlocks.INFESTED_STONE_BRICKS.get(),
-            ModBlocks.INFESTED_STONE.get(), ModBlocks.INFESTED_COBBLE.get());
+
 
 
 
@@ -1998,6 +1995,95 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModBlocks.CRUENTUS_CRYSTAL.get()), has(ModBlocks.CRUENTUS_CRYSTAL.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("TTT")
+                .pattern("TTT")
+                .define('T', ModBlocks.YZ_SANDSTONE.get())
+                .unlockedBy(getHasName(ModBlocks.YZ_SANDSTONE.get()), has(ModBlocks.YZ_SANDSTONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_STAIRS.get(), 4)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.YZ_SANDSTONE.get())
+                .unlockedBy(getHasName(ModBlocks.YZ_SANDSTONE.get()), has(ModBlocks.YZ_SANDSTONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.YZ_SANDSTONE.get())
+                .unlockedBy(getHasName(ModBlocks.YZ_SANDSTONE.get()), has(ModBlocks.YZ_SANDSTONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SMOOTH_YZ_SANDSTONE_STAIRS.get(), 4)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.SMOOTH_YZ_SANDSTONE.get())
+                .unlockedBy(getHasName(ModBlocks.SMOOTH_YZ_SANDSTONE.get()), has(ModBlocks.SMOOTH_YZ_SANDSTONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SMOOTH_YZ_SANDSTONE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.SMOOTH_YZ_SANDSTONE.get())
+                .unlockedBy(getHasName(ModBlocks.SMOOTH_YZ_SANDSTONE.get()), has(ModBlocks.SMOOTH_YZ_SANDSTONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SMOOTH_RZ_SANDSTONE_STAIRS.get(), 4)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.SMOOTH_RZ_SANDSTONE.get())
+                .unlockedBy(getHasName(ModBlocks.SMOOTH_RZ_SANDSTONE.get()), has(ModBlocks.SMOOTH_RZ_SANDSTONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SMOOTH_RZ_SANDSTONE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.SMOOTH_RZ_SANDSTONE.get())
+                .unlockedBy(getHasName(ModBlocks.SMOOTH_RZ_SANDSTONE.get()), has(ModBlocks.SMOOTH_RZ_SANDSTONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE.get(), 1)
+                .pattern("   ")
+                .pattern(" TT")
+                .pattern(" TT")
+                .define('T', ModBlocks.YELLOW_ZONE_SAND.get())
+                .unlockedBy(getHasName(ModBlocks.YELLOW_ZONE_SAND.get()), has(ModBlocks.YELLOW_ZONE_SAND.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE_STAIRS.get(), 4)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.RZ_SANDSTONE.get())
+                .unlockedBy(getHasName(ModBlocks.RZ_SANDSTONE.get()), has(ModBlocks.RZ_SANDSTONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("TTT")
+                .define('T', ModBlocks.RZ_SANDSTONE.get())
+                .unlockedBy(getHasName(ModBlocks.RZ_SANDSTONE.get()), has(ModBlocks.RZ_SANDSTONE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE.get(), 1)
+                .pattern("   ")
+                .pattern(" TT")
+                .pattern(" TT")
+                .define('T', ModBlocks.RED_ZONE_SAND.get())
+                .unlockedBy(getHasName(ModBlocks.RED_ZONE_SAND.get()), has(ModBlocks.RED_ZONE_SAND.get()))
+                .save(consumer);
+
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CRUENTUS_CRYSTAL_STAIRS.get(), 4)
                 .pattern("T  ")
                 .pattern("TT ")
@@ -3189,15 +3275,101 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
 
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_SLAB.get(), ModBlocks.YZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CUT_YZ_SANDSTONE_SLAB.get(), ModBlocks.YZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_YZ_SANDSTONE_SLAB.get(), ModBlocks.YZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_STAIRS.get(), ModBlocks.YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_YZ_SANDSTONE_STAIRS.get(), ModBlocks.YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_WALL.get(), ModBlocks.YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CUT_YZ_SANDSTONE.get(), ModBlocks.YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CHISELED_YZ_SANDSTONE.get(), ModBlocks.YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_YZ_SANDSTONE.get(), ModBlocks.YZ_SANDSTONE.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_SLAB.get(), ModBlocks.CUT_YZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CUT_YZ_SANDSTONE_SLAB.get(), ModBlocks.CUT_YZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_YZ_SANDSTONE_SLAB.get(), ModBlocks.CUT_YZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_STAIRS.get(), ModBlocks.CUT_YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_YZ_SANDSTONE_STAIRS.get(), ModBlocks.CUT_YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_WALL.get(), ModBlocks.CUT_YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE.get(), ModBlocks.CUT_YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CHISELED_YZ_SANDSTONE.get(), ModBlocks.CUT_YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_YZ_SANDSTONE.get(), ModBlocks.CUT_YZ_SANDSTONE.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_SLAB.get(), ModBlocks.CHISELED_YZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CUT_YZ_SANDSTONE_SLAB.get(), ModBlocks.CHISELED_YZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_YZ_SANDSTONE_SLAB.get(), ModBlocks.CHISELED_YZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_STAIRS.get(), ModBlocks.CHISELED_YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_YZ_SANDSTONE_STAIRS.get(), ModBlocks.CHISELED_YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_WALL.get(), ModBlocks.CHISELED_YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CUT_YZ_SANDSTONE.get(), ModBlocks.CHISELED_YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE.get(), ModBlocks.CHISELED_YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_YZ_SANDSTONE.get(), ModBlocks.CHISELED_YZ_SANDSTONE.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_SLAB.get(), ModBlocks.SMOOTH_YZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CUT_YZ_SANDSTONE_SLAB.get(), ModBlocks.SMOOTH_YZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_YZ_SANDSTONE_SLAB.get(), ModBlocks.SMOOTH_YZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_STAIRS.get(), ModBlocks.SMOOTH_YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_YZ_SANDSTONE_STAIRS.get(), ModBlocks.SMOOTH_YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_WALL.get(), ModBlocks.SMOOTH_YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CUT_YZ_SANDSTONE.get(), ModBlocks.SMOOTH_YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE.get(), ModBlocks.SMOOTH_YZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CHISELED_YZ_SANDSTONE.get(), ModBlocks.SMOOTH_YZ_SANDSTONE.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE_SLAB.get(), ModBlocks.SMOOTH_RZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CUT_RZ_SANDSTONE_SLAB.get(), ModBlocks.SMOOTH_RZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_RZ_SANDSTONE_SLAB.get(), ModBlocks.SMOOTH_RZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE_STAIRS.get(), ModBlocks.SMOOTH_RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_RZ_SANDSTONE_STAIRS.get(), ModBlocks.SMOOTH_RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE_WALL.get(), ModBlocks.SMOOTH_RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CUT_RZ_SANDSTONE.get(), ModBlocks.SMOOTH_RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE.get(), ModBlocks.SMOOTH_RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CHISELED_YZ_SANDSTONE.get(), ModBlocks.SMOOTH_RZ_SANDSTONE.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE_SLAB.get(), ModBlocks.RZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CUT_RZ_SANDSTONE_SLAB.get(), ModBlocks.RZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_RZ_SANDSTONE_SLAB.get(), ModBlocks.RZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE_STAIRS.get(), ModBlocks.RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_RZ_SANDSTONE_STAIRS.get(), ModBlocks.RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE_WALL.get(), ModBlocks.RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CUT_RZ_SANDSTONE.get(), ModBlocks.RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CHISELED_RZ_SANDSTONE.get(), ModBlocks.RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_RZ_SANDSTONE.get(), ModBlocks.RZ_SANDSTONE.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE_SLAB.get(), ModBlocks.CUT_RZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CUT_RZ_SANDSTONE_SLAB.get(), ModBlocks.CUT_RZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_RZ_SANDSTONE_SLAB.get(), ModBlocks.CUT_RZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE_STAIRS.get(), ModBlocks.CUT_RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_RZ_SANDSTONE_STAIRS.get(), ModBlocks.CUT_RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE_WALL.get(), ModBlocks.CUT_RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE.get(), ModBlocks.CUT_RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CHISELED_RZ_SANDSTONE.get(), ModBlocks.CUT_RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_RZ_SANDSTONE.get(), ModBlocks.CUT_RZ_SANDSTONE.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE_SLAB.get(), ModBlocks.CHISELED_RZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CUT_RZ_SANDSTONE_SLAB.get(), ModBlocks.CHISELED_RZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_RZ_SANDSTONE_SLAB.get(), ModBlocks.CHISELED_RZ_SANDSTONE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE_STAIRS.get(), ModBlocks.CHISELED_RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_RZ_SANDSTONE_STAIRS.get(), ModBlocks.CHISELED_RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE_WALL.get(), ModBlocks.CHISELED_RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CUT_RZ_SANDSTONE.get(), ModBlocks.CHISELED_RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE.get(), ModBlocks.CHISELED_RZ_SANDSTONE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_RZ_SANDSTONE.get(), ModBlocks.CHISELED_RZ_SANDSTONE.get());
+
+       
+
 //Tiberium Grinder:
+
+
         //Gundanium:
-        new TiberiumGrinderRecipeBuilder(ModItems.RAW_GUNDANIUM.get(), ModItems.GUNDANIUM_DUST.get(), 1)
+        new TiberiumGrinderRecipeBuilder(ModItems.RAW_GUNDANIUM.get(), ModItems.GUNDANIUM_DUST.get(), 2)
                 .unlockedBy("has_gundanium_ore", has(ModBlocks.GUNDANIUM_ORE.get())).save(consumer);
+
 
         //Alythum:
 
-        new TiberiumGrinderRecipeBuilder(ModItems.RAW_ALYTHUM.get(), ModItems.ALYTHUM_DUST.get(), 1)
+        new TiberiumGrinderRecipeBuilder(ModItems.RAW_ALYTHUM.get(), ModItems.ALYTHUM_DUST.get(), 2)
                 .unlockedBy("has_alythum_ore", has(ModBlocks.ALYTHUM_ORE.get())).save(consumer);
+
 
         //Tiberium:
 

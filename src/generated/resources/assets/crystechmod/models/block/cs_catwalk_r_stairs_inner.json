@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "crystechmod:block/cs_catwalk_r",
+    "side": "crystechmod:block/cs_catwalk_r",
+    "top": "crystechmod:block/cs_catwalk_r"
+  }
+}

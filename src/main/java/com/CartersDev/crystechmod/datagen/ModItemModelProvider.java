@@ -196,6 +196,109 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.WHITE_TIBERCRETE_STAIRS);
         evenSimplerBlockItem(ModBlocks.YELLOW_TIBERCRETE_STAIRS);
 
+        evenSimplerBlockItem(ModBlocks.CS_SCAFFOLD_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_SCAFFOLD_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_CATWALK_W_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_CATWALK_W_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_CATWALK_BL_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_CATWALK_BL_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_CATWALK_B_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_CATWALK_B_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_CATWALK_G_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_CATWALK_G_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_CATWALK_R_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_CATWALK_R_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_CATWALK_P_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_CATWALK_P_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_BR_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_BR_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_YB_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_YB_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_G_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_G_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_B_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_B_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_R_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_R_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_P_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_P_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_LG_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_LG_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_MG_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_MG_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_HG_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_HG_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.CS_TILE_G_BAND_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_G_BAND_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_G_FRAME_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_G_FRAME_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.CS_TILE_B_BAND_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_B_BAND_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_B_FRAME_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_B_FRAME_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.CS_TILE_R_BAND_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_R_BAND_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_R_FRAME_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_R_FRAME_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.CS_TILE_P_BAND_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_P_BAND_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_P_FRAME_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_P_FRAME_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.CS_TILE_LG_BAND_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_LG_BAND_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_LG_FRAME_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_LG_FRAME_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.CS_TILE_MG_BAND_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_MG_BAND_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_MG_FRAME_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_MG_FRAME_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.CS_TILE_HG_BAND_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_HG_BAND_SLAB);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_HG_FRAME_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CS_TILE_HG_FRAME_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.CT_TILE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_SLAB);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_STAIRS_G);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_SLAB_G);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_STAIRS_B);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_SLAB_B);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_STAIRS_R);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_SLAB_R);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_STAIRS_P);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_SLAB_P);
+
+        evenSimplerBlockItem(ModBlocks.CT_TILE_STAIRS_2);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_SLAB_2);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_STAIRS_G_2);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_SLAB_G_2);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_STAIRS_B_2);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_SLAB_B_2);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_STAIRS_R_2);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_SLAB_R_2);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_STAIRS_P_2);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_SLAB_P_2);
+
+        evenSimplerBlockItem(ModBlocks.CT_TILE_STAIRS_3);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_SLAB_3);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_STAIRS_G_3);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_SLAB_G_3);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_STAIRS_B_3);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_SLAB_B_3);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_STAIRS_R_3);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_SLAB_R_3);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_STAIRS_P_3);
+        evenSimplerBlockItem(ModBlocks.CT_TILE_SLAB_P_3);
+
         evenSimplerBlockItem(ModBlocks.PLAGUED_SLAB);
         evenSimplerBlockItem(ModBlocks.EMBER_OAK_SLAB);
         evenSimplerBlockItem(ModBlocks.DEAD_SLAB);
@@ -304,6 +407,51 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //Walls:
         wallItem((ModBlocks.FIRESTONE_WALL), ModBlocks.FIRESTONE_BLOCK);
+        wallItem((ModBlocks.CS_TILE_WALL), ModBlocks.CS_TILE);
+        wallItem((ModBlocks.CS_TILE_BR_WALL), ModBlocks.CS_TILE_BR);
+        wallItem((ModBlocks.CS_TILE_YB_WALL), ModBlocks.CS_TILE_YB);
+        wallItem((ModBlocks.CS_TILE_G_WALL), ModBlocks.CS_TILE_G);
+        wallItem((ModBlocks.CS_TILE_G_BAND_WALL), ModBlocks.CS_TILE_G_BAND);
+        wallItem((ModBlocks.CS_TILE_G_FRAME_WALL), ModBlocks.CS_TILE_G_FRAME);
+        wallItem((ModBlocks.CS_TILE_B_BAND_WALL), ModBlocks.CS_TILE_B_BAND);
+        wallItem((ModBlocks.CS_TILE_B_FRAME_WALL), ModBlocks.CS_TILE_B_FRAME);
+        wallItem((ModBlocks.CS_TILE_HG_BAND_WALL), ModBlocks.CS_TILE_HG_BAND);
+        wallItem((ModBlocks.CS_TILE_HG_FRAME_WALL), ModBlocks.CS_TILE_HG_FRAME);
+        wallItem((ModBlocks.CS_TILE_MG_BAND_WALL), ModBlocks.CS_TILE_MG_BAND);
+        wallItem((ModBlocks.CS_TILE_MG_FRAME_WALL), ModBlocks.CS_TILE_MG_FRAME);
+        wallItem((ModBlocks.CS_TILE_LG_BAND_WALL), ModBlocks.CS_TILE_LG_BAND);
+        wallItem((ModBlocks.CS_TILE_LG_FRAME_WALL), ModBlocks.CS_TILE_LG_FRAME);
+        wallItem((ModBlocks.CS_TILE_P_BAND_WALL), ModBlocks.CS_TILE_P_BAND);
+        wallItem((ModBlocks.CS_TILE_P_FRAME_WALL), ModBlocks.CS_TILE_P_FRAME);
+        wallItem((ModBlocks.CS_TILE_R_BAND_WALL), ModBlocks.CS_TILE_R_BAND);
+        wallItem((ModBlocks.CS_TILE_R_FRAME_WALL), ModBlocks.CS_TILE_R_FRAME);
+        wallItem((ModBlocks.CS_TILE_B_WALL), ModBlocks.CS_TILE_B);
+        wallItem((ModBlocks.CS_TILE_R_WALL), ModBlocks.CS_TILE_R);
+        wallItem((ModBlocks.CS_TILE_P_WALL), ModBlocks.CS_TILE_P);
+        wallItem((ModBlocks.CS_TILE_LG_WALL), ModBlocks.CS_TILE_LG);
+        wallItem((ModBlocks.CS_TILE_MG_WALL), ModBlocks.CS_TILE_MG);
+        wallItem((ModBlocks.CS_TILE_HG_WALL), ModBlocks.CS_TILE_HG);
+
+        wallItem((ModBlocks.CT_TILE_WALL), ModBlocks.CT_PILLAR_TOP);
+        wallItem((ModBlocks.CT_TILE_WALL_G), ModBlocks.CT_PILLAR_TOP_G);
+        wallItem((ModBlocks.CT_TILE_WALL_B), ModBlocks.CT_PILLAR_TOP_B);
+        wallItem((ModBlocks.CT_TILE_WALL_R), ModBlocks.CT_PILLAR_TOP_R);
+        wallItem((ModBlocks.CT_TILE_WALL_P), ModBlocks.CT_PILLAR_TOP_P);
+
+        wallItem((ModBlocks.CT_TILE_WALL_2), ModBlocks.CT_TILE_2);
+        wallItem((ModBlocks.CT_TILE_WALL_G_2), ModBlocks.CT_TILE_G_2);
+        wallItem((ModBlocks.CT_TILE_WALL_B_2), ModBlocks.CT_TILE_B_2);
+        wallItem((ModBlocks.CT_TILE_WALL_R_2), ModBlocks.CT_TILE_R_2);
+        wallItem((ModBlocks.CT_TILE_WALL_P_2), ModBlocks.CT_TILE_P_2);
+
+        wallItem((ModBlocks.CT_TILE_WALL_3), ModBlocks.CT_TILE_3);
+        wallItem((ModBlocks.CT_TILE_WALL_G_3), ModBlocks.CT_TILE_G_3);
+        wallItem((ModBlocks.CT_TILE_WALL_B_3), ModBlocks.CT_TILE_B_3);
+        wallItem((ModBlocks.CT_TILE_WALL_R_3), ModBlocks.CT_TILE_R_3);
+        wallItem((ModBlocks.CT_TILE_WALL_P_3), ModBlocks.CT_TILE_P_3);
+
+
+
 
         wallItem((ModBlocks.INFESTED_COBBLE_WALL), ModBlocks.INFESTED_COBBLE);
         wallItem((ModBlocks.INFESTED_STONE_BRICK_WALL), ModBlocks.INFESTED_STONE_BRICKS);
@@ -426,6 +574,19 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //Complex?:
         complexBlock(ModBlocks.TIBERIUM_INFUSER.get());
+
+        //Saplings:
+
+        saplingItem(ModBlocks.PLAGUED_SAPLING);
+        saplingItem(ModBlocks.EMBER_OAK_SAPLING);
+        saplingItem(ModBlocks.MARIKA_OAK_SAPLING);
+        saplingItem(ModBlocks.DYING_SAPLING);
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(CrystalTech.MOD_ID,"block/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder complexBlock(Block block) {

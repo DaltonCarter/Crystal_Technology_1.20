@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/ct_tile_slab_p"
+    },
+    "type=double": {
+      "model": "crystechmod:block/ct_pillar_top_p"
+    },
+    "type=top": {
+      "model": "crystechmod:block/ct_tile_slab_p_top"
+    }
+  }
+}

@@ -167,6 +167,26 @@
     "crystechmod:plagued_granite_stairs",
     "crystechmod:plagued_diorite_wall",
     "crystechmod:plagued_diorite_slab",
-    "crystechmod:plagued_diorite_stairs"
+    "crystechmod:plagued_diorite_stairs",
+    "crystechmod:yz_sandstone",
+    "crystechmod:yz_sandstone_stairs",
+    "crystechmod:yz_sandstone_slab",
+    "crystechmod:yz_sandstone_wall",
+    "crystechmod:smooth_yz_sandstone",
+    "crystechmod:smooth_yz_sandstone_stairs",
+    "crystechmod:cut_yz_sandstone",
+    "crystechmod:chiseled_yz_sandstone",
+    "crystechmod:cut_yz_sandstone_slab",
+    "crystechmod:smooth_yz_sandstone_slab",
+    "crystechmod:rz_sandstone",
+    "crystechmod:rz_sandstone_stairs",
+    "crystechmod:rz_sandstone_slab",
+    "crystechmod:rz_sandstone_wall",
+    "crystechmod:smooth_rz_sandstone",
+    "crystechmod:smooth_rz_sandstone_stairs",
+    "crystechmod:cut_rz_sandstone",
+    "crystechmod:chiseled_rz_sandstone",
+    "crystechmod:cut_rz_sandstone_slab",
+    "crystechmod:smooth_rz_sandstone_slab"
   ]
 }

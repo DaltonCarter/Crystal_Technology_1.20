@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "id": "crystechmod:embran_valley"
+        },
+        {
+            "id": "crystechmod:hornsent_hills"
+        }
+    ]
+}

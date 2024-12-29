@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "crystechmod:block/rz_sandstone_top",
+    "side": "crystechmod:block/rz_cut_sandstone",
+    "top": "crystechmod:block/rz_sandstone_top"
+  }
+}

@@ -2,6 +2,7 @@ package com.CartersDev.crystechmod.sound;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import net.minecraft.client.resources.sounds.Sound;
+import net.minecraft.client.sounds.MusicManager;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.item.alchemy.Potion;
@@ -67,12 +68,14 @@ DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CrystalTech.MOD_ID);
     public static final RegistryObject<SoundEvent> VECTOR = RegisterSoundEvents("vector");
     public static final RegistryObject<SoundEvent> VOICE_RHYTHM_2 = RegisterSoundEvents("voice_rhythm_2");
 
+
 //End of Music
 
 
     public static final ForgeSoundType SOUND_BLOCK_SOUNDS = new ForgeSoundType(1f, 1f,
             ModSounds.SOUND_BLOCK_BREAK, ModSounds.SOUND_BLOCK_STEP, ModSounds.SOUND_BLOCK_PLACE,
             ModSounds.SOUND_BLOCK_HIT, ModSounds.SOUND_BLOCK_FALL);
+
 
 
 

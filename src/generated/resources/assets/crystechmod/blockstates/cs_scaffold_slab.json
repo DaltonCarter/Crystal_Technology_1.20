@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/cs_scaffold_slab"
+    },
+    "type=double": {
+      "model": "crystechmod:block/cs_scaffold"
+    },
+    "type=top": {
+      "model": "crystechmod:block/cs_scaffold_slab_top"
+    }
+  }
+}
