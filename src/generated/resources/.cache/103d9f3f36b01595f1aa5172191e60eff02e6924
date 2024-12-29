@@ -1,4 +1,4 @@
-// 1.20.1	2024-12-28T16:09:27.1096241	Registries
+// 1.20.1	2024-12-28T20:16:10.8602415	Registries
 7189beba5f9c0adce03a87325449330ad98dea75 data/crystechmod/forge/biome_modifier/add_crystech_end_enigma_ores.json
 1169502b0516b11583dcfd564ff850becfa02d40 data/crystechmod/forge/biome_modifier/add_crystech_end_kryon_ores.json
 f68f8d452172608b4cec13d15d274bac713d3bdd data/crystechmod/forge/biome_modifier/add_crystech_gundanium_ores.json
@@ -11,10 +11,10 @@ ed7451f636bc71dd656e3d814339ce6734c188fa data/crystechmod/forge/biome_modifier/a
 7f80efedea935851932d4908d24a6cafe82a0090 data/crystechmod/forge/biome_modifier/add_hyacinth.json
 ca96da79999a81f3a321c57b3b22758ad6d3ab32 data/crystechmod/forge/biome_modifier/add_tiberium_geode.json
 2e9616a52632c96534658d66db3227458f56061b data/crystechmod/forge/biome_modifier/add_tree_dead.json
-ed10d001b4edc4e9f050c8ca1cd8c60790120891 data/crystechmod/worldgen/biome/amber_grove.json
-a04025d80540c4071a637d47d5d530ecfa472e94 data/crystechmod/worldgen/biome/ember_glow_forest.json
-5752d6ab99b7a81046b836f67785bc24fa8e535d data/crystechmod/worldgen/biome/embran_valley.json
-50ef18e68d0ef79bb2eed64aabe7aad71314e732 data/crystechmod/worldgen/biome/hornsent_hills.json
+5e1d26f8bc4c8d4b91496e4ba97135bc3a316da2 data/crystechmod/worldgen/biome/amber_grove.json
+4f5d85d7c622025dae561d22abe96af6f9bd0d83 data/crystechmod/worldgen/biome/ember_glow_forest.json
+712ef092361c0a09d1290ad4f1e5ecc35fb84340 data/crystechmod/worldgen/biome/embran_valley.json
+b6e051bc9658e61aa794d6f011265d88db5ff6b5 data/crystechmod/worldgen/biome/hornsent_hills.json
 ee033fea43b58d95dbdb111da8bd6378c1404390 data/crystechmod/worldgen/configured_feature/dead.json
 bf6a3b8bff86c3979594d15c1d5acba089ef45a9 data/crystechmod/worldgen/configured_feature/ember.json
 7749e60921bb01e049d509fe9239ccc5730b3720 data/crystechmod/worldgen/configured_feature/end_crystech_enigma_ores.json

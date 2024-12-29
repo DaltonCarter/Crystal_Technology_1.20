@@ -64,6 +64,7 @@
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
       "minecraft:ore_gold_extra",
+      "minecraft:ore_ancient_debris_large",
       "crystechmod:crystech_gundanium_ores_placed",
       "crystechmod:crystech_illumina_ores_placed",
       "crystechmod:crystech_kryon_ores_placed"
@@ -75,10 +76,6 @@
     ],
     [
       "minecraft:glow_lichen",
-      "minecraft:patch_berry_common",
-      "minecraft:patch_grass_plain",
-      "minecraft:flower_cherry",
-      "minecraft:trees_cherry",
       "minecraft:forest_flowers",
       "minecraft:patch_large_fern",
       "minecraft:brown_mushroom_normal",

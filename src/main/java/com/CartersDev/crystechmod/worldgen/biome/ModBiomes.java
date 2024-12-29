@@ -127,8 +127,7 @@ public static void bootstrap(BootstapContext<Biome> context){
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
         globalOverworldGeneration(biomeBuilder);
-        BiomeDefaultFeatures.addCommonBerryBushes(biomeBuilder);
-        BiomeDefaultFeatures.addCherryGroveVegetation(biomeBuilder);
+
         BiomeDefaultFeatures.addForestFlowers(biomeBuilder);
         BiomeDefaultFeatures.addFerns(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
@@ -137,6 +136,7 @@ public static void bootstrap(BootstapContext<Biome> context){
 
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
+        biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, OrePlacements.ORE_ANCIENT_DEBRIS_LARGE);
         biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYSTECH_GUNDANIUM_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYSTECH_ILLUMINA_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYSTECH_KRYON_PLACED_KEY);
@@ -180,8 +180,7 @@ public static void bootstrap(BootstapContext<Biome> context){
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
         globalOverworldGeneration(biomeBuilder);
-        BiomeDefaultFeatures.addCommonBerryBushes(biomeBuilder);
-        BiomeDefaultFeatures.addCherryGroveVegetation(biomeBuilder);
+
         BiomeDefaultFeatures.addForestFlowers(biomeBuilder);
         BiomeDefaultFeatures.addFerns(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
@@ -190,6 +189,7 @@ public static void bootstrap(BootstapContext<Biome> context){
 
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
+        biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, OrePlacements.ORE_ANCIENT_DEBRIS_LARGE);
         biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYSTECH_GUNDANIUM_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYSTECH_ILLUMINA_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYSTECH_KRYON_PLACED_KEY);
@@ -231,8 +231,7 @@ public static void bootstrap(BootstapContext<Biome> context){
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
         globalOverworldGeneration(biomeBuilder);
-        BiomeDefaultFeatures.addCommonBerryBushes(biomeBuilder);
-        BiomeDefaultFeatures.addCherryGroveVegetation(biomeBuilder);
+
         BiomeDefaultFeatures.addForestFlowers(biomeBuilder);
         BiomeDefaultFeatures.addFerns(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
@@ -284,8 +283,7 @@ public static void bootstrap(BootstapContext<Biome> context){
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
         globalOverworldGeneration(biomeBuilder);
-        BiomeDefaultFeatures.addCommonBerryBushes(biomeBuilder);
-        BiomeDefaultFeatures.addCherryGroveVegetation(biomeBuilder);
+
         BiomeDefaultFeatures.addForestFlowers(biomeBuilder);
         BiomeDefaultFeatures.addFerns(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
