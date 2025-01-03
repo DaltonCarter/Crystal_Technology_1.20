@@ -94,6 +94,10 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     output.accept(ModItems.RAW_QUALRITE.get());
                     output.accept(ModItems.QUALRIM_COMPOUND.get());
 
+                    output.accept(ModItems.IRON_DUST.get());
+                    output.accept(ModItems.COPPER_DUST.get());
+                    output.accept(ModItems.GOLD_DUST.get());
+
                     output.accept(ModBlocks.GUNDANIUM_ORE.get());
                     output.accept(ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get());
                     output.accept(ModItems.GUNDANIUM_DUST.get());
@@ -125,6 +129,13 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     output.accept(ModItems.HG_CORE_INGOT.get());
                     output.accept(ModBlocks.HG_CORE_BLOCK.get());
 
+                    output.accept(ModItems.GRINDER_GEAR.get());
+                    output.accept(ModItems.ILLYRIM_GRINDER_GEAR.get());
+
+                    output.accept(ModItems.TIBERIUM_COMPOSITE_INGOT.get());
+                    output.accept(ModItems.ICHOR_COMPOSITE_INGOT.get());
+
+
                     output.accept(ModItems.GDI_EMBLEM.get());
                     output.accept(ModItems.NOD_EMBLEM.get());
                     output.accept(ModItems.WOLF_EMBLEM.get());
@@ -143,10 +154,17 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.EMBER_OAK_SAPLING.get());
                         output.accept(ModBlocks.MARIKA_OAK_SAPLING.get());
                         output.accept(ModItems.TIBERIUM_FRUIT.get());
-                        output.accept(ModItems.STRAWBERRY.get());
-                        output.accept(ModItems.CORN.get());
-                        output.accept(ModItems.STRAWBERRY_SEEDS.get());
-                        output.accept(ModItems.CORN_SEEDS.get());
+                        output.accept(ModItems.HEL_FRUIT_SEEDS.get());
+                        output.accept(ModItems.HEL_FRUIT.get());
+                        output.accept(ModItems.HEIM_BERRY_SEEDS.get());
+                        output.accept(ModItems.HEIM_BERRY.get());
+                        output.accept(ModItems.LAI_MELON_SEEDS.get());
+                        output.accept(ModItems.LAI_MELON_SLICE.get());
+                        output.accept(ModBlocks.LAI_MELON.get());
+                        output.accept(ModItems.SABER_CORN_SEEDS.get());
+                        output.accept(ModItems.SABER_CORN.get());
+                        output.accept(ModItems.RAW_INFECTED_MEAT.get());
+                        output.accept(ModItems.COOKED_INFECTED_MEAT.get());
                         output.accept(ModBlocks.HYACINTH.get());
                         output.accept(ModBlocks.FLOWER_OF_LIFE.get());
                         output.accept(ModBlocks.DEVILS_BLOOD.get());

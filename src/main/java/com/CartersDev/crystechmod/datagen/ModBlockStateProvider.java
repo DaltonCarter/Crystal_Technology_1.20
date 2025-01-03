@@ -3,10 +3,10 @@ package com.CartersDev.crystechmod.datagen;
 import com.CartersDev.crystechmod.CrystalTech;
 
 import com.CartersDev.crystechmod.block.ModBlocks;
-import com.CartersDev.crystechmod.block.custom.CornCropBlock;
+import com.CartersDev.crystechmod.block.custom.HeimBerryCropBlock;
+import com.CartersDev.crystechmod.block.custom.SaberCornCropBlock;
 import com.CartersDev.crystechmod.block.custom.CrystalCoreLampBlock;
-import com.CartersDev.crystechmod.block.custom.CrystalCoreLampDemo;
-import com.CartersDev.crystechmod.block.custom.StrawberryCropBlock;
+import com.CartersDev.crystechmod.block.custom.HelFruitCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -884,9 +884,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
         //Crops and Plants:
-        makeStrawberryCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
+        makeHelFruitCrop((CropBlock) ModBlocks.HEL_FRUIT_CROP.get(), "hel_fruit_stage", "hel_fruit_stage");
+        makeHeimBerryCrop((CropBlock) ModBlocks.HEIM_BERRY_CROP.get(), "heim_berry_stage", "heim_berry_stage");
 
-        makeCornCrop((CropBlock) ModBlocks.CORN_CROP.get(), "corn_stage_", "corn_stage_");
+        makeCornCrop((CropBlock) ModBlocks.SABER_CORN_CROP.get(), "saber_corn_stage_", "saber_corn_stage_");
 
         simpleBlockWithItem(ModBlocks.HYACINTH.get(), models().cross(blockTexture(ModBlocks.HYACINTH.get()).getPath(),
                 blockTexture(ModBlocks.HYACINTH.get())).renderType("cutout"));
@@ -1039,16 +1040,30 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
 
-    public void makeStrawberryCrop(CropBlock block, String modelName, String textureName) {
-        Function<BlockState, ConfiguredModel[]> function = state -> strawberryStates(state, block, modelName, textureName);
+    public void makeHeimBerryCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> heimBerryStates(state, block, modelName, textureName);
 
         getVariantBuilder(block).forAllStates(function);
     }
 
-    private ConfiguredModel[] strawberryStates(BlockState state, CropBlock block, String modelName, String textureName) {
+    private ConfiguredModel[] heimBerryStates(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((StrawberryCropBlock) block).getAgeProperty()),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/" + textureName + state.getValue(((StrawberryCropBlock) block).getAgeProperty()))).renderType("cutout"));
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((HeimBerryCropBlock) block).getAgeProperty()),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/" + textureName + state.getValue(((HeimBerryCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+    public void makeHelFruitCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> helFruitStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] helFruitStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((HelFruitCropBlock) block).getAgeProperty()),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/" + textureName + state.getValue(((HelFruitCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
     }
@@ -1062,8 +1077,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private ConfiguredModel[] cornStates(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CornCropBlock) block).getAgeProperty()),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/" + textureName + state.getValue(((CornCropBlock) block).getAgeProperty()))).renderType("cutout"));
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((SaberCornCropBlock) block).getAgeProperty()),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/" + textureName + state.getValue(((SaberCornCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
     }

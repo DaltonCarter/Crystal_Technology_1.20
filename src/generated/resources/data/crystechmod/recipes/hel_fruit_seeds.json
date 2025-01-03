@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:hel_fruit"
+    }
+  ],
+  "result": {
+    "item": "crystechmod:hel_fruit_seeds"
+  }
+}

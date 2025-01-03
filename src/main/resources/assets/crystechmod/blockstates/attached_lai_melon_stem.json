@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "crystechmod:block/attached_lai_melon_stem",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "crystechmod:block/attached_lai_melon_stem",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "crystechmod:block/attached_lai_melon_stem",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "crystechmod:block/attached_lai_melon_stem"
+    }
+  }
+}

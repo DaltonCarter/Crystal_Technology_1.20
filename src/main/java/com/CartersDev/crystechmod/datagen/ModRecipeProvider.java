@@ -32,9 +32,11 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
     private static final List<ItemLike> ALYTHUM_SMELTABLES = List.of(ModItems.RAW_ALYTHUM.get(),
             ModItems.ALYTHUM_DUST.get(), ModBlocks.ALYTHUM_ORE.get(), ModBlocks.DEEPSLATE_ALYTHUM_ORE.get(), ModBlocks.NETHER_ALYTHUM_ORE.get());
 
-    private static final List<ItemLike> YELLOW_ZONE_SMELTABLES = List.of(ModBlocks.YZ_SANDSTONE.get());
-    private static final List<ItemLike> RED_ZONE_SMELTABLES = List.of(ModBlocks.RZ_SANDSTONE.get());
-    
+    private static final List<ItemLike> IRON_DUST_SMELTABLES = List.of(ModItems.IRON_DUST.get());
+    private static final List<ItemLike> COPPER_DUST_SMELTABLES = List.of(ModItems.COPPER_DUST.get());
+    private static final List<ItemLike> GOLD_DUST_SMELTABLES = List.of(ModItems.GOLD_DUST.get());
+    private static final List<ItemLike> INFECTED_MEAT_SMELTABLES = List.of(ModItems.RAW_INFECTED_MEAT.get());
+
 
     private static final List<ItemLike> LG_CORE_STEEL = List.of(ModItems.LG_CORE_BLEND.get());
     private static final List<ItemLike> MG_CORE_STEEL = List.of(ModItems.MG_CORE_BLEND.get());
@@ -52,6 +54,17 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 
 //      Blasting and Smelting:
+        oreSmelting(consumer, INFECTED_MEAT_SMELTABLES, RecipeCategory.MISC, ModItems.COOKED_INFECTED_MEAT.get(), 0.25f, 200, "cooked_infected_meat");
+
+        oreSmelting(consumer, COPPER_DUST_SMELTABLES, RecipeCategory.MISC, Items.COPPER_INGOT, 0.25f, 200, "copper");
+        oreBlasting(consumer, COPPER_DUST_SMELTABLES, RecipeCategory.MISC, Items.COPPER_INGOT, 0.25f, 100, "copper");
+
+        oreSmelting(consumer, IRON_DUST_SMELTABLES, RecipeCategory.MISC, Items.IRON_INGOT, 0.25f, 200, "iron");
+        oreBlasting(consumer, IRON_DUST_SMELTABLES, RecipeCategory.MISC, Items.IRON_INGOT, 0.25f, 100, "iron");
+
+        oreSmelting(consumer, GOLD_DUST_SMELTABLES, RecipeCategory.MISC, Items.GOLD_INGOT, 0.25f, 200, "gold");
+        oreBlasting(consumer, GOLD_DUST_SMELTABLES, RecipeCategory.MISC, Items.GOLD_INGOT, 0.25f, 100, "gold");
+
         oreSmelting(consumer, GUNDANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.GUNDANIUM_INGOT.get(), 0.25f, 200, "gundanium");
         oreBlasting(consumer, GUNDANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.GUNDANIUM_INGOT.get(), 0.25f, 100, "gundanium");
 
@@ -73,6 +86,42 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
 
         //Shaped Crafting:
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TIBERIUM_GRINDER.get())
+                .pattern("GGG")
+                .pattern("GAG")
+                .pattern("CCC")
+                .define('A', ModItems.GRINDER_GEAR.get())
+                .define('G', ModItems.GUNDANIUM_INGOT.get())
+                .define('C', ModTags.Items.CONCRETES)
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GRINDER_GEAR.get())
+                .pattern("NTN")
+                .pattern("TNT")
+                .pattern("NTN")
+                .define('N', Items.IRON_NUGGET)
+                .define('T', Items.IRON_INGOT)
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ILLYRIM_GRINDER_GEAR.get())
+                .pattern("NTN")
+                .pattern("TNT")
+                .pattern("NTN")
+                .define('N', ModItems.GRINDER_GEAR.get())
+                .define('T', ModItems.ILLYRIM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LAI_MELON.get())
+                .pattern("TTT")
+                .pattern("TTT")
+                .pattern("TTT")
+                .define('T', ModItems.LAI_MELON_SLICE.get())
+                .unlockedBy(getHasName(ModItems.LAI_MELON_SLICE.get()), has(ModItems.LAI_MELON_SLICE.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TIBERIUM_BLOCK.get())
                 .pattern("TTT")
                 .pattern("TTT")
@@ -2848,6 +2897,30 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_LOG.get()), has(ModBlocks.MARIKA_OAK_LOG.get()))
                 .save(consumer);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LAI_MELON_SLICE.get(), 9)
+                .requires(ModBlocks.LAI_MELON.get())
+                .unlockedBy(getHasName(ModBlocks.LAI_MELON.get()), has(ModBlocks.LAI_MELON.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LAI_MELON_SEEDS.get(), 1)
+                .requires(ModItems.LAI_MELON_SLICE.get())
+                .unlockedBy(getHasName(ModBlocks.LAI_MELON.get()), has(ModBlocks.LAI_MELON.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SABER_CORN_SEEDS.get(), 1)
+                .requires(ModItems.SABER_CORN.get())
+                .unlockedBy(getHasName(ModItems.SABER_CORN.get()), has(ModItems.SABER_CORN.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HEIM_BERRY_SEEDS.get(), 1)
+                .requires(ModItems.HEIM_BERRY.get())
+                .unlockedBy(getHasName(ModItems.HEIM_BERRY.get()), has(ModItems.HEIM_BERRY.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HEL_FRUIT_SEEDS.get(), 1)
+                .requires(ModItems.HEL_FRUIT.get())
+                .unlockedBy(getHasName(ModItems.HEL_FRUIT.get()), has(ModItems.HEL_FRUIT.get()))
+                .save(consumer);
 
 
     //Stonecutter:
@@ -3359,8 +3432,19 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
 //Tiberium Grinder:
 
+        //Vanilla:
+
+        new TiberiumGrinderRecipeBuilder(Items.RAW_IRON, ModItems.IRON_DUST.get(), 2)
+                .unlockedBy("has_iron_ore", has(Blocks.IRON_ORE)).save(consumer);
+
+        new TiberiumGrinderRecipeBuilder(Items.RAW_COPPER, ModItems.COPPER_DUST.get(), 2)
+                .unlockedBy("has_copper_ore", has(Blocks.COPPER_ORE)).save(consumer);
+
+        new TiberiumGrinderRecipeBuilder(Items.RAW_GOLD, ModItems.GOLD_DUST.get(), 2)
+                .unlockedBy("has_gold_ore", has(Blocks.GOLD_ORE)).save(consumer);
 
         //Gundanium:
+
         new TiberiumGrinderRecipeBuilder(ModItems.RAW_GUNDANIUM.get(), ModItems.GUNDANIUM_DUST.get(), 2)
                 .unlockedBy("has_gundanium_ore", has(ModBlocks.GUNDANIUM_ORE.get())).save(consumer);
 

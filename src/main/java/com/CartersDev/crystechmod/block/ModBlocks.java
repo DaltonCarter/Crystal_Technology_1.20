@@ -20,10 +20,9 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -2335,14 +2334,28 @@ public class ModBlocks {
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.DEVILS_BLOOD,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
-
-    public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
-            () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)
+    public static final RegistryObject<Block> HEL_FRUIT_CROP = BLOCKS.register("hel_fruit_crop",
+            () -> new HelFruitCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)
                     .noOcclusion().noCollission()));
 
-    public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
-            () -> new CornCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)
+    public static final RegistryObject<Block> HEIM_BERRY_CROP = BLOCKS.register("heim_berry_crop",
+            () -> new HeimBerryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)
                     .noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> SABER_CORN_CROP = BLOCKS.register("saber_corn_crop",
+            () -> new SaberCornCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)
+                    .noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> LAI_MELON = registerBlock("lai_melon",
+            () -> new LaiMelonBlock(BlockBehaviour.Properties.copy(Blocks.MELON)));
+
+    public static final RegistryObject<Block> LAI_MELON_STEM = registerBlock("lai_melon_stem",
+            () -> new StemBlock((StemGrownBlock) LAI_MELON.get(),() -> ModItems.LAI_MELON_SEEDS.get(), BlockBehaviour.Properties.copy(Blocks.MELON_STEM)
+                    .noCollission()));
+
+    public static final RegistryObject<Block> ATTACHED_LAI_MELON_STEM = registerBlock("attached_lai_melon_stem",
+            () -> new AttachedStemBlock((StemGrownBlock) LAI_MELON.get(), ModItems.LAI_MELON_SEEDS, BlockBehaviour.Properties.copy(Blocks.ATTACHED_MELON_STEM)
+                    .noCollission()));
 
     public static final RegistryObject<Block> EMBER_OAK_SAPLING = registerBlock("ember_oak_sapling",
             () -> new SaplingBlock(new EmberTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)

@@ -4,15 +4,13 @@ package com.CartersDev.crystechmod.datagen.loot;
 import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.block.custom.*;
 import com.CartersDev.crystechmod.item.ModItems;
-import com.CartersDev.crystechmod.util.ModTags;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.StemBlock;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
@@ -20,7 +18,6 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -949,6 +946,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
 
         //Ore Drops:
+        this.add(ModBlocks.LAI_MELON.get(),
+                block -> createModGemOreDrops(ModBlocks.LAI_MELON.get(), ModItems.LAI_MELON_SLICE.get()));
+
         this.add(ModBlocks.AERIES_ORE.get(),
                 block -> createModGemOreDrops(ModBlocks.AERIES_ORE.get(), ModItems.AERIES_CRYSTAL.get()));
 
@@ -1014,11 +1014,28 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         //Crops Handling
         LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
-                .hasBlockStateProperties(ModBlocks.STRAWBERRY_CROP.get())
-                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(StrawberryCropBlock.AGE, 5));
+                .hasBlockStateProperties(ModBlocks.HEIM_BERRY_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(HelFruitCropBlock.AGE, 5));
 
-        this.add(ModBlocks.STRAWBERRY_CROP.get(), createCropDrops(ModBlocks.STRAWBERRY_CROP.get(), ModItems.STRAWBERRY.get(),
-                ModItems.STRAWBERRY_SEEDS.get(), lootitemcondition$builder));
+        this.add(ModBlocks.HEIM_BERRY_CROP.get(), createCropDrops(ModBlocks.HEIM_BERRY_CROP.get(), ModItems.HEIM_BERRY.get(),
+                ModItems.HEIM_BERRY_SEEDS.get(), lootitemcondition$builder));
+
+        LootItemCondition.Builder lootitemcondition$builder7 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.HEL_FRUIT_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(HelFruitCropBlock.AGE, 5));
+
+        this.add(ModBlocks.HEL_FRUIT_CROP.get(), createCropDrops(ModBlocks.HEL_FRUIT_CROP.get(), ModItems.HEL_FRUIT.get(),
+                ModItems.HEL_FRUIT_SEEDS.get(), lootitemcondition$builder7));
+
+        LootItemCondition.Builder lootitemcondition$builder8 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.LAI_MELON_STEM.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(StemBlock.AGE, 7));
+
+        this.add(ModBlocks.LAI_MELON_STEM.get(), createCropDrops(ModBlocks.LAI_MELON_STEM.get(), ModItems.LAI_MELON_SEEDS.get(),
+                ModItems.LAI_MELON_SEEDS.get(), lootitemcondition$builder8));
+
+        this.add(ModBlocks.ATTACHED_LAI_MELON_STEM.get(), createCropDrops(ModBlocks.ATTACHED_LAI_MELON_STEM.get(), ModItems.LAI_MELON_SEEDS.get(),
+                ModItems.LAI_MELON_SEEDS.get(), lootitemcondition$builder8));
 
 
 //        LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
@@ -1029,11 +1046,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 //                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 8)));
 
          LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
-                 .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
-                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 8));
+                 .hasBlockStateProperties(ModBlocks.SABER_CORN_CROP.get())
+                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SaberCornCropBlock.AGE, 8));
 
-        this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN.get(),
-                ModItems.CORN_SEEDS.get(), lootitemcondition$builder2));
+        this.add(ModBlocks.SABER_CORN_CROP.get(), createCropDrops(ModBlocks.SABER_CORN_CROP.get(), ModItems.SABER_CORN.get(),
+                ModItems.SABER_CORN_SEEDS.get(), lootitemcondition$builder2));
 
 
         LootItemCondition.Builder lootitemcondition$builder3 = LootItemBlockStatePropertyCondition

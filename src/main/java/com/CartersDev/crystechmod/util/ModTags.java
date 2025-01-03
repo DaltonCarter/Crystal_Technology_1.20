@@ -29,6 +29,7 @@ public class ModTags {
         public static final TagKey<Block> DEAD_LOGS= tag("dead_logs");
         public static final TagKey<Block> PLAGUED_LOGS= tag("plagued_logs");
         public static final TagKey<Block> MOD_PLANKS= tag("mod_planks");
+        public static final TagKey<Block> CONCRETES= tag("concretes");
 
 
 
@@ -48,6 +49,7 @@ public class ModTags {
         public static final TagKey<Item> DEAD_LOGS= tag("dead_logs");
         public static final TagKey<Item> PLAGUED_LOGS= tag("plagued_logs");
         public static final TagKey<Item> MOD_PLANKS= tag("mod_planks");
+        public static final TagKey<Item> CONCRETES= tag("concretes");
 
 
 

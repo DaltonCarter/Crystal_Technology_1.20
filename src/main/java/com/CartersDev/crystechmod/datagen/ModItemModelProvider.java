@@ -105,6 +105,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.KRYON_CRYSTAL);
 
         simpleItem(ModItems.GUNDANIUM_DUST);
+        simpleItem(ModItems.GRINDER_GEAR);
+        simpleItem(ModItems.ILLYRIM_GRINDER_GEAR);
+        simpleItem(ModItems.TIBERIUM_COMPOSITE_INGOT);
+        simpleItem(ModItems.ICHOR_COMPOSITE_INGOT);
+        simpleItem(ModItems.IRON_DUST);
+        simpleItem(ModItems.COPPER_DUST);
+        simpleItem(ModItems.GOLD_DUST);
         simpleItem(ModItems.GUNDANIUM_INGOT);
         simpleItem(ModItems.ALYTHUM_DUST);
         simpleItem(ModItems.ALYTHUM_INGOT);
@@ -127,10 +134,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.FIRESTONE);
 
         simpleItem(ModItems.TIBERIUM_FRUIT);
-        simpleItem(ModItems.STRAWBERRY);
-        simpleItem(ModItems.STRAWBERRY_SEEDS);
-        simpleItem(ModItems.CORN);
-        simpleItem(ModItems.CORN_SEEDS);
+        simpleItem(ModItems.HEIM_BERRY);
+        simpleItem(ModItems.HEL_FRUIT);
+        simpleItem(ModItems.LAI_MELON_SLICE);
+        simpleItem(ModItems.HEIM_BERRY_SEEDS);
+        simpleItem(ModItems.HEL_FRUIT_SEEDS);
+        simpleItem(ModItems.LAI_MELON_SEEDS);
+        simpleItem(ModItems.RAW_INFECTED_MEAT);
+        simpleItem(ModItems.COOKED_INFECTED_MEAT);
+        simpleItem(ModItems.SABER_CORN);
+        simpleItem(ModItems.SABER_CORN_SEEDS);
 
         //Panes:
         paneItem(ModBlocks.CLEAR_TIBERGLASS_PANE, ModBlocks.CLEAR_TIBERGLASS);

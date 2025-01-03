@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "minecraft:iron_nugget"
+    },
+    "T": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "NTN",
+    "TNT",
+    "NTN"
+  ],
+  "result": {
+    "item": "crystechmod:grinder_gear"
+  },
+  "show_notification": true
+}

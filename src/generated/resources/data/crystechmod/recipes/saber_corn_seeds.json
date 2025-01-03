@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:saber_corn"
+    }
+  ],
+  "result": {
+    "item": "crystechmod:saber_corn_seeds"
+  }
+}

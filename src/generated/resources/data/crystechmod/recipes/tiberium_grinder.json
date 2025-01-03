@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:grinder_gear"
+    },
+    "C": {
+      "tag": "crystechmod:concretes"
+    },
+    "G": {
+      "item": "crystechmod:gundanium_ingot"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GAG",
+    "CCC"
+  ],
+  "result": {
+    "item": "crystechmod:tiberium_grinder"
+  },
+  "show_notification": true
+}

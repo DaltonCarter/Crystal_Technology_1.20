@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "crystechmod:grinder_gear"
+    },
+    "T": {
+      "item": "crystechmod:illyrim_ingot"
+    }
+  },
+  "pattern": [
+    "NTN",
+    "TNT",
+    "NTN"
+  ],
+  "result": {
+    "item": "crystechmod:illyrim_grinder_gear"
+  },
+  "show_notification": true
+}

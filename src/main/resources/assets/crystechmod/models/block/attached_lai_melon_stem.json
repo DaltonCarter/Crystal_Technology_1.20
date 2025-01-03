@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/stem_fruit",
+  "textures": {
+    "stem": "crystechmod:block/lai_melon_stem",
+    "upperstem": "crystechmod:block/attached_lai_melon_stem"
+  }
+}

@@ -498,9 +498,18 @@ Posted By: Dalton Carter
 -Core Steel Deco Blocks added
 -Crystal Core Deco Blocks added
 -Red/Yellow/Blue Zone Biomes Created
--Added Ore Doubling for Mod Ores in basic Tiberium Grinder
+-Added Ore Doubling for Mod Ores and Raw Vanilla Ores in basic Tiberium Grinder
+-Added Vanilla Ore Dusts Iron, Copper, and Gold
 -A LOT of recipes added
 -Vertical Slab/Panel Block added!
+-Stawberry and Corn Removed
+-Heim Berry, Hel Fruit, Lai Melon, and Saber Corn added
+-Added Recipe for Tiberium Grinder
+-Added Mod Seeds to Grass Drops
+-Added Composite ingots, and Grinder Gears
+-added Vitric Meat, and Cooked Vitric Meat
+-Fixed Tag confliction Rendering Gundanium Ore un-mineable
+-MORE Recipes
 
 
 

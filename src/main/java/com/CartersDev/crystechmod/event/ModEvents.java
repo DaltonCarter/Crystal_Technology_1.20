@@ -66,15 +66,21 @@ public class ModEvents {
 
             //Level 1
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(Items.EMERALD,2),
-                    new ItemStack(ModItems.STRAWBERRY.get(), 12), 10, 8, 0.02f));
+                    new ItemStack(ModItems.HEIM_BERRY.get(), 12), 10, 8, 0.02f));
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(Items.EMERALD,2),
+                    new ItemStack(ModItems.HEL_FRUIT.get(), 12), 10, 8, 0.02f));
 
             //Level 2
             trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(Items.EMERALD,5),
-                    new ItemStack(ModItems.CORN.get(), 6), 5, 9, 0.035f));
+                    new ItemStack(ModItems.SABER_CORN.get(), 6), 5, 9, 0.035f));
 
             //Level 3
             trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(ModItems.TIBERIUM.get(),5),
-                    new ItemStack(ModItems.STRAWBERRY_SEEDS.get(), 2), 2, 13, 0.075f));
+                    new ItemStack(ModItems.HEIM_BERRY_SEEDS.get(), 2), 2, 13, 0.075f));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(ModItems.TIBERIUM.get(),5),
+                    new ItemStack(ModItems.HEL_FRUIT_SEEDS.get(), 2), 2, 13, 0.075f));
 
         }
 

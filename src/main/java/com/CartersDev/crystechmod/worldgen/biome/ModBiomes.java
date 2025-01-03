@@ -4,19 +4,26 @@ import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.entity.ModEntities;
 import com.CartersDev.crystechmod.sound.ModSounds;
 import com.CartersDev.crystechmod.worldgen.ModPlacedFeatures;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.Carvers;
+import net.minecraft.data.worldgen.biome.OverworldBiomes;
+import net.minecraft.data.worldgen.placement.MiscOverworldPlacements;
+import net.minecraft.data.worldgen.placement.NetherPlacements;
 import net.minecraft.data.worldgen.placement.OrePlacements;
+import net.minecraft.data.worldgen.placement.TreePlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.Musics;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 public class ModBiomes {
@@ -31,67 +38,67 @@ public class ModBiomes {
 
 //The Vitric Expanse:
     //Blue Zones:
-    public static final ResourceKey<Biome> CALIDIAN_MARSH = register("calidian_marsh");
-    public static final ResourceKey<Biome> GROVE_OF_LIFE = register("grove_of_life");
-    public static final ResourceKey<Biome> FOOTHILLS = register("foothills");
-    public static final ResourceKey<Biome> PRIMAL_JUNGLE = register("primal_jungle");
-
-
-        //Ember themed:
-    public static final ResourceKey<Biome> BURNING_HILLS = register("burning_hills");
-    public static final ResourceKey<Biome> EMBER_GROVE = register("ember_grove");
-    public static final ResourceKey<Biome> INFERNO_PEAK = register("inferno_peak");
-
-
-        //Marika themed:
-    public static final ResourceKey<Biome> UNTARNISHED_HILLS = register("untarnished_hills");
-    public static final ResourceKey<Biome> EVERGOLD_EXPANSE = register("evergold_expanse");
-    public static final ResourceKey<Biome> VALLEY_OF_GOLD = register("valley_of_gold");
-
-    //Yellow Zone:
-    public static final ResourceKey<Biome> DEAD_FOREST = register("dead_forest");
-    public static final ResourceKey<Biome> TIBERIAN_DESERT = register("tiberian_desert");
-    public static final ResourceKey<Biome> TIBERIAN_DESERT_HILLS = register("tiberian_desert_hills");
-    public static final ResourceKey<Biome> TIBERIAN_BADLANDS = register("tiberian_badlands");
-    public static final ResourceKey<Biome> TIBERIAN_HIGHLANDS = register("tiberian_highlands");
-    public static final ResourceKey<Biome> OLD_BATTLEFIELD = register("old_battlefield");
-    public static final ResourceKey<Biome> LOST_STEPPES = register("lost_steppes");
-    public static final ResourceKey<Biome> YELLOW_ZONE_SHORE = register("yellow_zone_shore");
-    public static final ResourceKey<Biome> INFECTED_RIVER = register("infected_river");
-    public static final ResourceKey<Biome> INFECTED_OCEAN = register("infected_ocean");
-    public static final ResourceKey<Biome> DRY_HILLS = register("dry_hills");
-    public static final ResourceKey<Biome> DRY_VALLEY = register("dry_valley");
-    public static final ResourceKey<Biome> FORGOTTEN_HIGHLANDS = register("forgotten_highlands");
-    public static final ResourceKey<Biome> RED_ZONE_BORDER = register("red_zone_border");
-    public static final ResourceKey<Biome> BLUE_ZONE_BORDER = register("blue_zone_border");
-    public static final ResourceKey<Biome> TIBERIAN_TAIGA = register("tiberian_taiga");
-    public static final ResourceKey<Biome> TIBERIAN_SWAMP = register("tiberian_swamp");
-    public static final ResourceKey<Biome> TIBERIAN_TUNDRA = register("tiberian_tundra");
-    public static final ResourceKey<Biome> CRYSTAL_FIELDS = register("crystal_fields");
-    public static final ResourceKey<Biome> OLD_TRENCHES = register("old_trenches");
-
-
-    //Red Zone:
-    public static final ResourceKey<Biome> ASHLANDS = register("ashlands");
-    public static final ResourceKey<Biome> BROODING_LANDS = register("brooding_lands");
-    public static final ResourceKey<Biome> WASTELAND = register("wasteland");
-    public static final ResourceKey<Biome> WASTELAND_HILLS = register("wasteland_hills");
-    public static final ResourceKey<Biome> SCORCHED_HILLS = register("scorched_hills");
-    public static final ResourceKey<Biome> SCORCHED_DESERT = register("scorched_desert");
-    public static final ResourceKey<Biome> YELLOW_ZONE_BORDER = register("yellow_zone_border");
-    public static final ResourceKey<Biome> ICHOR_MARSH = register("ichor_marsh");
-    public static final ResourceKey<Biome> ABYSSAL_MARSH = register("abyssal_marsh");
-    public static final ResourceKey<Biome> DEAD_PLAINS = register("dead_plains");
-    public static final ResourceKey<Biome> RED_ZONE_RIVER = register("red_zone_river");
-    public static final ResourceKey<Biome> RED_ZONE_SHORE = register("red_zone_shore");
-    public static final ResourceKey<Biome> FIRESTORM_PLAINS = register("firestorm_plains");
-    public static final ResourceKey<Biome> CRYSTALLINE_CANYON = register("crystalline_canyon");
-    public static final ResourceKey<Biome> CRYSTALLINE_HILLS = register("crystalline_hills");
-    public static final ResourceKey<Biome> DEAD_ZONE = register("dead_zone");
-    public static final ResourceKey<Biome> TIBERIAN_WASTES = register("tiberian_wastes");
-    public static final ResourceKey<Biome> PLAGUED_WOODS = register("plagued_woods");
-    public static final ResourceKey<Biome> ICHOR_BOG = register("ichor_bog");
-    public static final ResourceKey<Biome> OLD_WAR_ZONE = register("old_war_zone");
+//    public static final ResourceKey<Biome> CALIDIAN_MARSH = register("calidian_marsh");
+//    public static final ResourceKey<Biome> GROVE_OF_LIFE = register("grove_of_life");
+//    public static final ResourceKey<Biome> FOOTHILLS = register("foothills");
+//    public static final ResourceKey<Biome> PRIMAL_JUNGLE = register("primal_jungle");
+//
+//
+//        //Ember themed:
+//    public static final ResourceKey<Biome> BURNING_HILLS = register("burning_hills");
+//    public static final ResourceKey<Biome> EMBER_GROVE = register("ember_grove");
+//    public static final ResourceKey<Biome> INFERNO_PEAK = register("inferno_peak");
+//
+//
+//        //Marika themed:
+//    public static final ResourceKey<Biome> UNTARNISHED_HILLS = register("untarnished_hills");
+//    public static final ResourceKey<Biome> EVERGOLD_EXPANSE = register("evergold_expanse");
+//    public static final ResourceKey<Biome> VALLEY_OF_GOLD = register("valley_of_gold");
+//
+//    //Yellow Zone:
+//    public static final ResourceKey<Biome> DEAD_FOREST = register("dead_forest");
+//    public static final ResourceKey<Biome> TIBERIAN_DESERT = register("tiberian_desert");
+//    public static final ResourceKey<Biome> TIBERIAN_DESERT_HILLS = register("tiberian_desert_hills");
+//    public static final ResourceKey<Biome> TIBERIAN_BADLANDS = register("tiberian_badlands");
+//    public static final ResourceKey<Biome> TIBERIAN_HIGHLANDS = register("tiberian_highlands");
+//    public static final ResourceKey<Biome> OLD_BATTLEFIELD = register("old_battlefield");
+//    public static final ResourceKey<Biome> LOST_STEPPES = register("lost_steppes");
+//    public static final ResourceKey<Biome> YELLOW_ZONE_SHORE = register("yellow_zone_shore");
+//    public static final ResourceKey<Biome> INFECTED_RIVER = register("infected_river");
+//    public static final ResourceKey<Biome> INFECTED_OCEAN = register("infected_ocean");
+//    public static final ResourceKey<Biome> DRY_HILLS = register("dry_hills");
+//    public static final ResourceKey<Biome> DRY_VALLEY = register("dry_valley");
+//    public static final ResourceKey<Biome> FORGOTTEN_HIGHLANDS = register("forgotten_highlands");
+//    public static final ResourceKey<Biome> RED_ZONE_BORDER = register("red_zone_border");
+//    public static final ResourceKey<Biome> BLUE_ZONE_BORDER = register("blue_zone_border");
+//    public static final ResourceKey<Biome> TIBERIAN_TAIGA = register("tiberian_taiga");
+//    public static final ResourceKey<Biome> TIBERIAN_SWAMP = register("tiberian_swamp");
+//    public static final ResourceKey<Biome> TIBERIAN_TUNDRA = register("tiberian_tundra");
+//    public static final ResourceKey<Biome> CRYSTAL_FIELDS = register("crystal_fields");
+//    public static final ResourceKey<Biome> OLD_TRENCHES = register("old_trenches");
+//
+//
+//    //Red Zone:
+//    public static final ResourceKey<Biome> ASHLANDS = register("ashlands");
+//    public static final ResourceKey<Biome> BROODING_LANDS = register("brooding_lands");
+//    public static final ResourceKey<Biome> WASTELAND = register("wasteland");
+//    public static final ResourceKey<Biome> WASTELAND_HILLS = register("wasteland_hills");
+//    public static final ResourceKey<Biome> SCORCHED_HILLS = register("scorched_hills");
+//    public static final ResourceKey<Biome> SCORCHED_DESERT = register("scorched_desert");
+//    public static final ResourceKey<Biome> YELLOW_ZONE_BORDER = register("yellow_zone_border");
+//    public static final ResourceKey<Biome> ICHOR_MARSH = register("ichor_marsh");
+//    public static final ResourceKey<Biome> ABYSSAL_MARSH = register("abyssal_marsh");
+//    public static final ResourceKey<Biome> DEAD_PLAINS = register("dead_plains");
+//    public static final ResourceKey<Biome> RED_ZONE_RIVER = register("red_zone_river");
+//    public static final ResourceKey<Biome> RED_ZONE_SHORE = register("red_zone_shore");
+//    public static final ResourceKey<Biome> FIRESTORM_PLAINS = register("firestorm_plains");
+//    public static final ResourceKey<Biome> CRYSTALLINE_CANYON = register("crystalline_canyon");
+//    public static final ResourceKey<Biome> CRYSTALLINE_HILLS = register("crystalline_hills");
+//    public static final ResourceKey<Biome> DEAD_ZONE = register("dead_zone");
+//    public static final ResourceKey<Biome> TIBERIAN_WASTES = register("tiberian_wastes");
+//    public static final ResourceKey<Biome> PLAGUED_WOODS = register("plagued_woods");
+//    public static final ResourceKey<Biome> ICHOR_BOG = register("ichor_bog");
+//    public static final ResourceKey<Biome> OLD_WAR_ZONE = register("old_war_zone");
 
 
 
@@ -320,6 +327,46 @@ public static void bootstrap(BootstapContext<Biome> context){
                         .backgroundMusic(Musics.createGameMusic(ModSounds.DARK_VALLEY.getHolder().get())).build())
                 .build();
     }
+
+//    public static Biome warpedForest(HolderGetter<PlacedFeature> pPlacedFeatures, HolderGetter<ConfiguredWorldCarver<?>> pWorldCarvers) {
+//        MobSpawnSettings mobspawnsettings = (new MobSpawnSettings.Builder())
+//                .addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ENDERMAN, 1, 4, 4))
+//                .addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.STRIDER, 60, 1, 2))
+//                .addMobCharge(EntityType.ENDERMAN, 1.0D, 0.12D).build();
+//        BiomeGenerationSettings.Builder biomegenerationsettings$builder =
+//                (new BiomeGenerationSettings.Builder(pPlacedFeatures, pWorldCarvers))
+//                        .addCarver(GenerationStep.Carving.AIR, Carvers.NETHER_CAVE)
+//                        .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, MiscOverworldPlacements.SPRING_LAVA);
+//        BiomeDefaultFeatures.addDefaultMushrooms(biomegenerationsettings$builder);
+//        biomegenerationsettings$builder
+//                .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, NetherPlacements.SPRING_OPEN)
+//                .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, NetherPlacements.PATCH_FIRE)
+//                .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, NetherPlacements.PATCH_SOUL_FIRE)
+//                .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, NetherPlacements.GLOWSTONE_EXTRA)
+//                .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, NetherPlacements.GLOWSTONE)
+//                .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_MAGMA)
+//                .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, NetherPlacements.SPRING_CLOSED)
+//                .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, TreePlacements.WARPED_FUNGI)
+//                .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, NetherPlacements.WARPED_FOREST_VEGETATION)
+//                .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, NetherPlacements.NETHER_SPROUTS)
+//                .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, NetherPlacements.TWISTING_VINES);
+//        BiomeDefaultFeatures.addNetherDefaultOres(biomegenerationsettings$builder);
+//        return (new Biome.BiomeBuilder())
+//                .hasPrecipitation(false)
+//                .temperature(2.0F)
+//                .downfall(0.0F)
+//                .specialEffects((new BiomeSpecialEffects.Builder())
+//                        .waterColor(4159204)
+//                        .waterFogColor(329011)
+//                        .fogColor(1705242)
+//                        .skyColor(OverworldBiomes.calculateSkyColor(2.0F))
+//                        .ambientParticle(new AmbientParticleSettings(ParticleTypes.WARPED_SPORE, 0.01428F))
+//                        .ambientLoopSound(SoundEvents.AMBIENT_WARPED_FOREST_LOOP)
+//                        .ambientMoodSound(new AmbientMoodSettings(SoundEvents.AMBIENT_WARPED_FOREST_MOOD, 6000, 8, 2.0D))
+//                        .ambientAdditionsSound(new AmbientAdditionsSettings(SoundEvents.AMBIENT_WARPED_FOREST_ADDITIONS, 0.0111D))
+//                        .backgroundMusic(Musics.createGameMusic(SoundEvents.MUSIC_BIOME_WARPED_FOREST)).build())
+//                .mobSpawnSettings(mobspawnsettings).generationSettings(biomegenerationsettings$builder.build()).build();
+//    }
 
 //The Vitric Expanse:
     //Blue Zone:

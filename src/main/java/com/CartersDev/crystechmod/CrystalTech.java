@@ -64,12 +64,9 @@ public class CrystalTech {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-
-
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
         ModEnchantments.register(modEventBus);
-
 
         ModFluids.register(modEventBus);
         ModFluidTypes.register(modEventBus);
@@ -88,6 +85,7 @@ public class CrystalTech {
         ModParticles.register(modEventBus);
 
         ModTerraBlenderAPI.registerRegions();
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -153,6 +151,8 @@ public class CrystalTech {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_TIBERIUM_CROP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.RED_TIBERIUM_CROP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.PURPLE_TIBERIUM_CROP.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.LAI_MELON_STEM.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ATTACHED_LAI_MELON_STEM.get(), RenderType.cutout());
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEST_BLOCK.get(), RenderType.translucent());
 

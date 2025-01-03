@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "cooked_infected_meat",
+  "ingredient": {
+    "item": "crystechmod:raw_infected_meat"
+  },
+  "result": "crystechmod:cooked_infected_meat"
+}

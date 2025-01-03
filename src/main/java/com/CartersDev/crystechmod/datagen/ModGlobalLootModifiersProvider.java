@@ -24,6 +24,22 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
                 LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.TIBERIUM_FRUIT.get()));
 
+        add("hel_fruit_seeds_from_grass", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.HEL_FRUIT_SEEDS.get()));
+
+        add("heim_berry_seeds_from_grass", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.HEIM_BERRY_SEEDS.get()));
+
+        add("lai_melon_seeds_from_grass", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.LAI_MELON_SEEDS.get()));
+
+        add("saber_corn_seeds_from_grass", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.SABER_CORN_SEEDS.get()));
+
         add("tiberium_fruit_from_creeper", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("entities/creeper")).build() }, ModItems.TIBERIUM_FRUIT.get()));
 

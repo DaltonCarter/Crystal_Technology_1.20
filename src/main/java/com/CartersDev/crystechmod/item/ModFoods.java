@@ -13,13 +13,28 @@ public class ModFoods {
                     0.1f)
             .alwaysEat().build();
 
-    public static final FoodProperties STRAWBERRY = new FoodProperties.Builder().nutrition(2).fast()
+    public static final FoodProperties HEIM_BERRY = new FoodProperties.Builder().nutrition(4).fast()
             .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED,200),
                     0.1f).build();
 
-    public static final FoodProperties CORN = new FoodProperties.Builder().nutrition(6).fast()
+    public static final FoodProperties HEL_FRUIT = new FoodProperties.Builder().nutrition(2).fast()
+            .saturationMod(0.4f).effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED,200),
+                    0.1f).build();
+
+    public static final FoodProperties LAI_MELON_SLICE = new FoodProperties.Builder().nutrition(7).fast()
+            .saturationMod(0.8f).effect(() -> new MobEffectInstance(MobEffects.REGENERATION,200),
+                    0.1f).build();
+
+    public static final FoodProperties SABER_CORN = new FoodProperties.Builder().nutrition(6).fast()
             .saturationMod(0.5f).effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE,200),
                     0.1f).build();
+
+    public static final FoodProperties RAW_INFECTED_MEAT = new FoodProperties.Builder().nutrition(3).fast()
+            .saturationMod(0.3f).effect(() -> new MobEffectInstance(MobEffects.HUNGER,200),
+                    0.1f).build();
+
+    public static final FoodProperties COOKED_INFECTED_MEAT = new FoodProperties.Builder().nutrition(8).fast()
+            .saturationMod(0.8f).build();
 
 
 

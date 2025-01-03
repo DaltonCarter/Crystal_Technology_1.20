@@ -1,3 +1,6 @@
 {
-  "parent": "crystechmod:block/hyacinth"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "crystechmod:block/hyacinth"
+  }
 }

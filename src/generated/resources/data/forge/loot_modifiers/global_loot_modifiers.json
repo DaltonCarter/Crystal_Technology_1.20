@@ -1,7 +1,11 @@
 {
   "entries": [
+    "crystechmod:lai_melon_seeds_from_grass",
+    "crystechmod:saber_corn_seeds_from_grass",
     "crystechmod:lg_core_ingot_from_suspicious_sand",
     "crystechmod:tiberium_fruit_from_creeper",
+    "crystechmod:hel_fruit_seeds_from_grass",
+    "crystechmod:heim_berry_seeds_from_grass",
     "crystechmod:tiberium_fruit_from_grass",
     "crystechmod:lg_core_blend_from_jungle_temples"
   ],

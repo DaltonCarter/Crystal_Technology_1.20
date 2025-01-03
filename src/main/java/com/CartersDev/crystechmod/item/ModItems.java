@@ -25,17 +25,35 @@ public class ModItems {
 public static final RegistryObject<Item> TIBERIUM_FRUIT = ITEMS.register("tiberium_fruit",
         () -> new Item(new Item.Properties().food(ModFoods.TIBERIUM_FRUIT)));
 
-    public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
-            () -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
+    public static final RegistryObject<Item> HEIM_BERRY = ITEMS.register("heim_berry",
+            () -> new Item(new Item.Properties().food(ModFoods.HEIM_BERRY)));
 
-    public static final RegistryObject<Item> CORN = ITEMS.register("corn",
-            () -> new Item(new Item.Properties().food(ModFoods.CORN)));
+    public static final RegistryObject<Item> LAI_MELON_SLICE = ITEMS.register("lai_melon_slice",
+            () -> new Item(new Item.Properties().food(ModFoods.LAI_MELON_SLICE)));
 
-    public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
-            () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> HEL_FRUIT = ITEMS.register("hel_fruit",
+            () -> new Item(new Item.Properties().food(ModFoods.HEL_FRUIT)));
 
-    public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds",
-            () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SABER_CORN = ITEMS.register("saber_corn",
+            () -> new Item(new Item.Properties().food(ModFoods.SABER_CORN)));
+
+    public static final RegistryObject<Item> HEL_FRUIT_SEEDS = ITEMS.register("hel_fruit_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.HEL_FRUIT_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> LAI_MELON_SEEDS = ITEMS.register("lai_melon_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.LAI_MELON_STEM.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> HEIM_BERRY_SEEDS = ITEMS.register("heim_berry_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.HEIM_BERRY_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> SABER_CORN_SEEDS = ITEMS.register("saber_corn_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.SABER_CORN_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> RAW_INFECTED_MEAT = ITEMS.register("raw_infected_meat",
+            () -> new Item(new Item.Properties().food(ModFoods.RAW_INFECTED_MEAT)));
+
+    public static final RegistryObject<Item> COOKED_INFECTED_MEAT = ITEMS.register("cooked_infected_meat",
+            () -> new Item(new Item.Properties().food(ModFoods.COOKED_INFECTED_MEAT)));
 
 
 
@@ -90,6 +108,15 @@ public static final RegistryObject<Item> GREEN_TIBERIUM_DUST = ITEMS.register("g
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> GUNDANIUM_DUST = ITEMS.register("gundanium_dust",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> COPPER_DUST = ITEMS.register("copper_dust",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> IRON_DUST = ITEMS.register("iron_dust",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> GOLD_DUST = ITEMS.register("gold_dust",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ALYTHUM_DUST = ITEMS.register("alythum_dust",
@@ -485,6 +512,18 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> PLAGUED_STICK = ITEMS.register("plagued_stick",
         () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> GRINDER_GEAR = ITEMS.register("grinder_gear",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ILLYRIM_GRINDER_GEAR = ITEMS.register("illyrim_grinder_gear",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> TIBERIUM_COMPOSITE_INGOT = ITEMS.register("tiberium_composite_ingot",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ICHOR_COMPOSITE_INGOT = ITEMS.register("ichor_composite_ingot",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> TIBERIUM_LEATHER = ITEMS.register("tiberium_leather",
             () -> new Item(new Item.Properties()));

@@ -1,3 +1,6 @@
 {
-  "parent": "crystechmod:block/devils_blood"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "crystechmod:block/devils_blood"
+  }
 }

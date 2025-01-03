@@ -107,7 +107,7 @@ public class RhinoEntity extends Animal {
 
         this.goalSelector.addGoal(1, new BreedGoal(this, 1.15D));
         this.goalSelector.addGoal(1, new RhinoAttackGoal(this, 1.0D, true));
-        this.goalSelector.addGoal(2, new TemptGoal(this, 1.2D, Ingredient.of(ModItems.CORN.get()), false));
+        this.goalSelector.addGoal(2, new TemptGoal(this, 1.2D, Ingredient.of(ModItems.SABER_CORN.get()), false));
 
         this.goalSelector.addGoal(3, new FollowParentGoal(this, 1.1D));
 
@@ -136,7 +136,7 @@ public class RhinoEntity extends Animal {
 
     @Override
     public boolean isFood(ItemStack pStack) {
-        return pStack.is(ModItems.CORN.get());
+        return pStack.is(ModItems.SABER_CORN.get());
     }
 
     @Nullable

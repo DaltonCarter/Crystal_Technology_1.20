@@ -95,7 +95,14 @@ public class BlossomTreeSpoutBlock extends RotatedPillarBlock {
              }else if (worldIn.getBlockState(target).getBlock() == Blocks.COBBLESTONE) {
                  System.out.println("Cobblestone has been Infested!");
                  worldIn.setBlockAndUpdate(target, ModBlocks.INFESTED_COBBLE.get().defaultBlockState());
+             }else if (worldIn.getBlockState(target).getBlock() == Blocks.SAND) {
+                 System.out.println("Yellow Zone Sand has been created!");
+                 worldIn.setBlockAndUpdate(target, ModBlocks.YELLOW_ZONE_SAND.get().defaultBlockState());
+             }else if (worldIn.getBlockState(target).getBlock() == Blocks.RED_SAND) {
+                 System.out.println("Red Zone Sand has been created!");
+                 worldIn.setBlockAndUpdate(target, ModBlocks.RED_ZONE_SAND.get().defaultBlockState());
              }
+
          } else if (block.is(ModTags.Blocks.TIBERIUM_SEED_BLOCKS)) {
 //             System.out.println("Seeded soil has been found!");
              int SoilChance = random.nextInt(10);

@@ -31,6 +31,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     this.copy(ModTags.Blocks.TIBERCRETE_SANDS, ModTags.Items.TIBERCRETE_SANDS);
 
         this.copy(ModTags.Blocks.HAZMAT_GLASS_PANES, ModTags.Items.HAZMAT_GLASS_PANES);
+        this.copy(ModTags.Blocks.CONCRETES, ModTags.Items.CONCRETES);
 
         this.copy(ModTags.Blocks.EMBER_OAK_LOGS, ModTags.Items.EMBER_OAK_LOGS);
         this.copy(ModTags.Blocks.MARIKA_OAK_LOGS, ModTags.Items.MARIKA_OAK_LOGS);

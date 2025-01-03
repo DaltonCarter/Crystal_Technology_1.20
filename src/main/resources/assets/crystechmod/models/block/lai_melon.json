@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "crystechmod:block/lai_melon_top",
+    "side": "crystechmod:block/lai_melon_side"
+  }
+}

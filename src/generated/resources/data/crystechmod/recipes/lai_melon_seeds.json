@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:lai_melon_slice"
+    }
+  ],
+  "result": {
+    "item": "crystechmod:lai_melon_seeds"
+  }
+}

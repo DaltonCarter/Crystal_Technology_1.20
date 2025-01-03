@@ -30,10 +30,16 @@
   "item.crystechmod.molten_purple_tiberium_bucket": "Liquid Aboreus Tiberium Bucket",
   "item.crystechmod.tiberium_water_bucket": "Infected Water Bucket",
   "item.crystechmod.tiberium_fruit": "Tiberium Fruit",
-  "item.crystechmod.strawberry": "Strawberry",
-  "item.crystechmod.strawberry_seeds": "Strawberry Seeds",
-  "item.crystechmod.corn": "Corn",
-  "item.crystechmod.corn_seeds": "Corn Seeds",
+  "item.crystechmod.heim_berry": "Heim Berry",
+  "item.crystechmod.heim_berry_seeds": "Heim Berry Seeds",
+  "item.crystechmod.hel_fruit": "Hel Fruit",
+  "item.crystechmod.hel_fruit_seeds": "Hel Fruit Seeds",
+  "item.crystechmod.saber_corn": "Saber Corn",
+  "item.crystechmod.lai_melon_slice": "Lai Melon Slice",
+  "item.crystechmod.raw_infected_meat": "Raw Vitric Meat",
+  "item.crystechmod.cooked_infected_meat": "Cooked Vitric Meat",
+  "item.crystechmod.saber_corn_seeds": "Saber Corn Seeds",
+  "item.crystechmod.lai_melon_seeds": "Lai Melon Seeds",
   "item.crystechmod.plagued_stick": "Plagued Stick",
   "item.crystechmod.plagued_axe": "Plagued Axe",
   "item.crystechmod.plagued_pickaxe": "Plagued Pickaxe",
@@ -180,6 +186,14 @@
   "item.crystechmod.voice_rhythm_2_music_disc.desc": "Voice Rhythm 2 - by Frank Klepacki.",
   "item.crystechmod.devils_blood_powder": "Devil's Blood Powder",
   "item.crystechmod.yokaran_bloom_powder": "Yokaran Bloom Powder",
+
+  "item.crystechmod.iron_dust": "Iron Dust",
+  "item.crystechmod.gold_dust": "Gold Dust",
+  "item.crystechmod.copper_dust": "Copper Dust",
+  "item.crystechmod.grinder_gear": "Grinder Gear",
+  "item.crystechmod.illyrim_grinder_gear": "Illyrim Grinder Gear",
+  "item.crystechmod.tiberium_composite_ingot": "Tiberium Composite Ingot",
+  "item.crystechmod.ichor_composite_ingot": "Ichor Composite Ingot",
 
 
   "block.crystechmod.aeries_ore": "Aeries Ore",
@@ -336,6 +350,7 @@
   "block.crystechmod.red_zone_dirt": "Red Zone Dirt",
   "block.crystechmod.seeded_red_zone_dirt": "Seeded Red Zone Dirt",
   "block.crystechmod.red_zone_sand": "Red Zone Sand",
+  "block.crystechmod.lai_melon": "Lai Melon",
 
   "block.crystechmod.riparius_stone": "Riparius Stone",
   "block.crystechmod.riparius_stone_bricks": "Riparius Stone Bricks",
@@ -956,5 +971,5 @@
   "creativetab.crystal_technology_equipment_tab": "Crystal Technology Tools and Equipment",
   "creativetab.crystal_technology_tech_tab": "Crystal Technology Machines",
   "creativetab.crystal_technology_mob_tab": "Crystal Technology Creatures",
-  "creativetab.crystal_technology_plant_tab": "Crystal Technology Plants"
+  "creativetab.crystal_technology_plant_tab": "Crystal Technology Food/Plants"
 }
