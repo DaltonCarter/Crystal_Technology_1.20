@@ -1,11 +1,8 @@
 package com.CartersDev.crystechmod.sound;
 
 import com.CartersDev.crystechmod.CrystalTech;
-import net.minecraft.client.resources.sounds.Sound;
-import net.minecraft.client.sounds.MusicManager;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.item.alchemy.Potion;
 import net.minecraftforge.common.util.ForgeSoundType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,6 +20,7 @@ DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CrystalTech.MOD_ID);
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_FALL = RegisterSoundEvents("sound_block_fall");
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_PLACE = RegisterSoundEvents("sound_block_place");
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_HIT = RegisterSoundEvents("sound_block_hit");
+    public static final RegistryObject<SoundEvent> VITRIC_AMBIENT = RegisterSoundEvents("vitric_ambient");
 
 
     //Music
@@ -34,7 +32,7 @@ DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CrystalTech.MOD_ID);
     public static final RegistryObject<SoundEvent> EAGLES_DAWN = RegisterSoundEvents("eagles_dawn");
     public static final RegistryObject<SoundEvent> MANUFACTORY = RegisterSoundEvents("manufactory");
     public static final RegistryObject<SoundEvent> NECROFUNK = RegisterSoundEvents("necrofunk");
-    public static final RegistryObject<SoundEvent> OBSESSION_SOFTWARE = RegisterSoundEvents("obsession_software");
+    public static final RegistryObject<SoundEvent> SCOUTING = RegisterSoundEvents("scouting");
     public static final RegistryObject<SoundEvent> PRODIGAL_SON = RegisterSoundEvents("prodigal_son");
     public static final RegistryObject<SoundEvent> PYROTEK = RegisterSoundEvents("pyrotek");
     public static final RegistryObject<SoundEvent> REPENTANCE = RegisterSoundEvents("repentance");
@@ -52,7 +50,7 @@ DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CrystalTech.MOD_ID);
     public static final RegistryObject<SoundEvent> VALVES = RegisterSoundEvents("valves");
     public static final RegistryObject<SoundEvent> WHAT_LURKS = RegisterSoundEvents("what_lurks");
     public static final RegistryObject<SoundEvent> AIRSTRIKE = RegisterSoundEvents("airstrike");
-    public static final RegistryObject<SoundEvent> CANYON_CHASE = RegisterSoundEvents("canyon_chase");
+    public static final RegistryObject<SoundEvent> HEROISM_2 = RegisterSoundEvents("heroism_2");
     public static final RegistryObject<SoundEvent> CREEPING_UPON = RegisterSoundEvents("creeping_upon");
     public static final RegistryObject<SoundEvent> DEPTH_CHARGE = RegisterSoundEvents("depth_charge");
     public static final RegistryObject<SoundEvent> DRONE = RegisterSoundEvents("drone");
@@ -61,12 +59,15 @@ DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CrystalTech.MOD_ID);
     public static final RegistryObject<SoundEvent> RECON = RegisterSoundEvents("recon");
     public static final RegistryObject<SoundEvent> AWAITING = RegisterSoundEvents("awaiting");
     public static final RegistryObject<SoundEvent> DENSE = RegisterSoundEvents("dense");
-    public static final RegistryObject<SoundEvent> FLOATING = RegisterSoundEvents("floating");
+    public static final RegistryObject<SoundEvent> DERELICT = RegisterSoundEvents("derelict");
     public static final RegistryObject<SoundEvent> RUN = RegisterSoundEvents("run");
     public static final RegistryObject<SoundEvent> THE_SEARCH = RegisterSoundEvents("the_search");
     public static final RegistryObject<SoundEvent> TRENCHES = RegisterSoundEvents("trenches");
     public static final RegistryObject<SoundEvent> VECTOR = RegisterSoundEvents("vector");
     public static final RegistryObject<SoundEvent> VOICE_RHYTHM_2 = RegisterSoundEvents("voice_rhythm_2");
+
+
+    public static final RegistryObject<SoundEvent> VITRIC_EXPANSE_MUSIC = RegisterSoundEvents("vitric_expanse_music");
 
 
 //End of Music
@@ -75,6 +76,7 @@ DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CrystalTech.MOD_ID);
     public static final ForgeSoundType SOUND_BLOCK_SOUNDS = new ForgeSoundType(1f, 1f,
             ModSounds.SOUND_BLOCK_BREAK, ModSounds.SOUND_BLOCK_STEP, ModSounds.SOUND_BLOCK_PLACE,
             ModSounds.SOUND_BLOCK_HIT, ModSounds.SOUND_BLOCK_FALL);
+
 
 
 

@@ -3443,6 +3443,9 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         new TiberiumGrinderRecipeBuilder(Items.RAW_GOLD, ModItems.GOLD_DUST.get(), 2)
                 .unlockedBy("has_gold_ore", has(Blocks.GOLD_ORE)).save(consumer);
 
+        new TiberiumGrinderRecipeBuilder(Blocks.ANCIENT_DEBRIS, Items.NETHERITE_SCRAP, 2)
+                .unlockedBy("has_ancient_debris", has(Blocks.ANCIENT_DEBRIS)).save(consumer);
+
         //Gundanium:
 
         new TiberiumGrinderRecipeBuilder(ModItems.RAW_GUNDANIUM.get(), ModItems.GUNDANIUM_DUST.get(), 2)

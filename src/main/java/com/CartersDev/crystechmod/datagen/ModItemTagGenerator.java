@@ -13,6 +13,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.common.data.ForgeItemTagsProvider;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -38,6 +39,15 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.copy(ModTags.Blocks.DEAD_LOGS, ModTags.Items.DEAD_LOGS);
         this.copy(ModTags.Blocks.PLAGUED_LOGS, ModTags.Items.PLAGUED_LOGS);
         this.copy(ModTags.Blocks.MOD_PLANKS, ModTags.Items.MOD_PLANKS);
+
+        this.copy(ModTags.Blocks.GUNDANIUM_ORES, ModTags.Items.GUNDANIUM_ORES);
+        this.copy(ModTags.Blocks.ALYTHUM_ORES, ModTags.Items.ALYTHUM_ORES);
+        this.copy(ModTags.Blocks.QUALRITE_ORES, ModTags.Items.QUALRITE_ORES);
+        this.copy(ModTags.Blocks.AERIES_ORES, ModTags.Items.AERIES_ORES);
+        this.copy(ModTags.Blocks.ILLUMINA_ORES, ModTags.Items.ILLUMINA_ORES);
+        this.copy(ModTags.Blocks.KRYON_ORES, ModTags.Items.KRYON_ORES);
+        this.copy(ModTags.Blocks.ENIGMA_ORES, ModTags.Items.ENIGMA_ORES);
+        this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
 
 
         this.tag(ItemTags.PLANKS)
@@ -74,7 +84,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.EAGLES_DAWN_MUSIC_DISC.get(),
                         ModItems.MANUFACTORY_MUSIC_DISC.get(),
                         ModItems.NECROFUNK_MUSIC_DISC.get(),
-                        ModItems.OBSESSION_SOFTWARE_MUSIC_DISC.get(),
+                        ModItems.SCOUTING_MUSIC_DISC.get(),
                         ModItems.PRODIGAL_SON_MUSIC_DISC.get(),
                         ModItems.PYROTEK_MUSIC_DISC.get(),
                         ModItems.REPENTANCE_MUSIC_DISC.get(),
@@ -92,7 +102,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.VALVES_MUSIC_DISC.get(),
                         ModItems.WHAT_LURKS_MUSIC_DISC.get(),
                         ModItems.AIRSTRIKE_MUSIC_DISC.get(),
-                        ModItems.CANYON_CHASE_MUSIC_DISC.get(),
+                        ModItems.HEROISM_2_MUSIC_DISC.get(),
                         ModItems.CREEPING_UPON_MUSIC_DISC.get(),
                         ModItems.DEPTH_CHARGE_MUSIC_DISC.get(),
                         ModItems.DRONE_MUSIC_DISC.get(),
@@ -101,7 +111,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.RECON_MUSIC_DISC.get(),
                         ModItems.AWAITING_MUSIC_DISC.get(),
                         ModItems.DENSE_MUSIC_DISC.get(),
-                        ModItems.FLOATING_MUSIC_DISC.get(),
+                        ModItems.DERELICT_MUSIC_DISC.get(),
                         ModItems.RUN_MUSIC_DISC.get(),
                         ModItems.THE_SEARCH_MUSIC_DISC.get(),
                         ModItems.TRENCHES_MUSIC_DISC.get(),
@@ -117,7 +127,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.EAGLES_DAWN_MUSIC_DISC.get(),
                         ModItems.MANUFACTORY_MUSIC_DISC.get(),
                         ModItems.NECROFUNK_MUSIC_DISC.get(),
-                        ModItems.OBSESSION_SOFTWARE_MUSIC_DISC.get(),
+                        ModItems.SCOUTING_MUSIC_DISC.get(),
                         ModItems.PRODIGAL_SON_MUSIC_DISC.get(),
                         ModItems.PYROTEK_MUSIC_DISC.get(),
                         ModItems.REPENTANCE_MUSIC_DISC.get(),
@@ -135,7 +145,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.VALVES_MUSIC_DISC.get(),
                         ModItems.WHAT_LURKS_MUSIC_DISC.get(),
                         ModItems.AIRSTRIKE_MUSIC_DISC.get(),
-                        ModItems.CANYON_CHASE_MUSIC_DISC.get(),
+                        ModItems.HEROISM_2_MUSIC_DISC.get(),
                         ModItems.CREEPING_UPON_MUSIC_DISC.get(),
                         ModItems.DEPTH_CHARGE_MUSIC_DISC.get(),
                         ModItems.DRONE_MUSIC_DISC.get(),
@@ -144,7 +154,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.RECON_MUSIC_DISC.get(),
                         ModItems.AWAITING_MUSIC_DISC.get(),
                         ModItems.DENSE_MUSIC_DISC.get(),
-                        ModItems.FLOATING_MUSIC_DISC.get(),
+                        ModItems.DERELICT_MUSIC_DISC.get(),
                         ModItems.RUN_MUSIC_DISC.get(),
                         ModItems.THE_SEARCH_MUSIC_DISC.get(),
                         ModItems.TRENCHES_MUSIC_DISC.get(),
@@ -156,6 +166,18 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.tag(ModTags.Items.STICKS)
                 .add(ModItems.PLAGUED_STICK.get(),
                         Items.STICK);
+
+        this.tag(Tags.Items.GEMS)
+                .add(
+                        ModItems.AERIES_CRYSTAL.get(),
+                        ModItems.ILLUMINA_CRYSTAL.get(),
+                        ModItems.KRYON_CRYSTAL.get(),
+                        ModItems.ENIGMA_CRYSTAL.get(),
+                        ModItems.TIBERIUM.get(),
+                        ModItems.TIBERIUM_BLUE.get(),
+                        ModItems.TIBERIUM_RED.get(),
+                        ModItems.TIBERIUM_PURPLE.get()
+                );
 
         this.tag(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.PLAGUED_LOG.get().asItem())

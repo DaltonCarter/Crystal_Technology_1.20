@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "crystechmod:block/vitric_rose_bottom"
+    },
+    "half=upper": {
+      "model": "crystechmod:block/vitric_rose_top"
+    }
+  }
+}

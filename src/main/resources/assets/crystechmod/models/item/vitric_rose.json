@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "crystechmod:item/canyon_chase_music_disc"
+    "layer0": "crystechmod:block/vitric_rose_top"
   }
 }

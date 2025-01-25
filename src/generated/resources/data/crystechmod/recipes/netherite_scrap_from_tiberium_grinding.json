@@ -1,0 +1,12 @@
+{
+  "type": "crystechmod:tiberium_grinding",
+  "ingredients": [
+    {
+      "item": "minecraft:ancient_debris"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "minecraft:netherite_scrap"
+  }
+}

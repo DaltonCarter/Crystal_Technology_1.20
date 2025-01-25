@@ -892,6 +892,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.HYACINTH.get(), models().cross(blockTexture(ModBlocks.HYACINTH.get()).getPath(),
                 blockTexture(ModBlocks.HYACINTH.get())).renderType("cutout"));
 
+        simpleBlockWithItem(ModBlocks.VITRIC_BLOOM.get(), models().cross(blockTexture(ModBlocks.VITRIC_BLOOM.get()).getPath(),
+                blockTexture(ModBlocks.VITRIC_BLOOM.get())).renderType("cutout"));
+
         simpleBlockWithItem(ModBlocks.FLOWER_OF_LIFE.get(), models().cross(blockTexture(ModBlocks.FLOWER_OF_LIFE.get()).getPath(),
                 blockTexture(ModBlocks.FLOWER_OF_LIFE.get())).renderType("cutout"));
 
@@ -905,6 +908,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(ModBlocks.FULGURBLOOM.get())).renderType("cutout"));
 
         simpleBlockWithItem(ModBlocks.POTTED_HYACINTH.get(), models().singleTexture("potted_hyacinth",
+                new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.HYACINTH.get())).renderType("cutout"));
+
+        simpleBlockWithItem(ModBlocks.POTTED_VITRIC_BLOOM.get(), models().singleTexture("potted_vitric_bloom",
                 new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.HYACINTH.get())).renderType("cutout"));
 

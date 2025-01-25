@@ -39,8 +39,8 @@ public class ModBiomeModifiers {
 
     //Flowers:
     public static final ResourceKey<BiomeModifier> ADD_HYACINTH = registerKey("add_hyacinth");
-    public static final ResourceKey<BiomeModifier> ADD_SPITFIRE = registerKey("add_spitfire");
-    public static final ResourceKey<BiomeModifier> ADD_FULGURBLOOM = registerKey("add_fulgurbloom");
+    public static final ResourceKey<BiomeModifier> ADD_DEVILS_BLOOD = registerKey("add_devils_blood");
+    public static final ResourceKey<BiomeModifier> ADD_YOKARAN_BLOOM = registerKey("add_yokaran_bloom");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -111,6 +111,16 @@ public class ModBiomeModifiers {
         context.register(ADD_HYACINTH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.HYACINTH_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_DEVILS_BLOOD, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_NETHER),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DEVILS_BLOOD_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_YOKARAN_BLOOM, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_NETHER),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.YOKARAN_BLOOM_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
     }

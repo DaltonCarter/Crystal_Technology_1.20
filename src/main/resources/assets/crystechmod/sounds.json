@@ -11,6 +11,12 @@
       "crystechmod:sound_block_break"
     ]
   },
+  "vitric_ambient": {
+    "subtitle": "sounds.crystechmod.vitric_ambient",
+    "sounds": [
+      "crystechmod:vitric_ambient"
+    ]
+  },
   "sound_block_step": {
     "subtitle": "sounds.crystechmod.sound_block_step",
     "sounds": [
@@ -99,10 +105,10 @@
       }
     ]
   },
-  "obsession_software": {
+  "scouting": {
     "sounds": [
       {
-        "name": "crystechmod:obsession_software",
+        "name": "crystechmod:scouting",
         "stream": true
       }
     ]
@@ -243,10 +249,10 @@
       }
     ]
   },
-  "canyon_chase": {
+  "heroism_2": {
     "sounds": [
       {
-        "name": "crystechmod:canyon_chase",
+        "name": "crystechmod:heroism_2",
         "stream": true
       }
     ]
@@ -315,10 +321,10 @@
       }
     ]
   },
-  "floating": {
+  "derelict": {
     "sounds": [
       {
-        "name": "crystechmod:floating",
+        "name": "crystechmod:derelict",
         "stream": true
       }
     ]
@@ -359,6 +365,183 @@
     "sounds": [
       {
         "name": "crystechmod:voice_rhythm_2",
+        "stream": true
+      }
+    ]
+  },
+  "vitric_expanse_music": {
+    "sounds": [
+      {
+        "name": "crystechmod:voice_rhythm_2",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:still_alone",
+        "stream": true
+      },
+
+      {
+        "name": "crystechmod:hyouhaku_wandering",
+        "stream": true
+      },
+
+      {
+        "name": "crystechmod:corroded_valves",
+        "stream": true
+      },
+
+      {
+        "name": "crystechmod:dark_machinations",
+        "stream": true
+      },
+
+      {
+        "name": "crystechmod:dark_valley",
+        "stream": true
+      },
+
+      {
+        "name": "crystechmod:eagles_dawn",
+        "stream": true
+      },
+
+      {
+        "name": "crystechmod:manufactory",
+        "stream": true
+      },
+
+      {
+        "name": "crystechmod:necrofunk",
+        "stream": true
+      },
+
+      {
+        "name": "crystechmod:scouting",
+        "stream": true
+      },
+
+      {
+        "name": "crystechmod:prodigal_son",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:pyrotek",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:repentance",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:space_echo",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:tombs",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:unyielding",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:wires",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:xenophile",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:approach",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:dusk_hour",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:ts_dusk_hour",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:heroism",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:lone_trooper",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:pharotek",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:valves",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:what_lurks",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:airstrike",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:heroism_2",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:creeping_upon",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:depth_charge",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:drone",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:on_the_prowl",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:rain_in_the_night",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:recon",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:awaiting",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:dense",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:derelict",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:run",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:the_search",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:trenches",
+        "stream": true
+      },
+      {
+        "name": "crystechmod:vector",
         "stream": true
       }
     ]

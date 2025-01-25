@@ -32,7 +32,7 @@ public class TiberiumSoilBlock extends Block {
             Block aboveBlock = aboveState.getBlock();
 
 
-            if (aboveBlock == Blocks.AIR) {
+            if (aboveBlock == Blocks.AIR || aboveBlock == Blocks.TALL_GRASS || aboveBlock == Blocks.GRASS) {
                 Random random = new Random();
                 int number = random.nextInt(10);
 
@@ -45,31 +45,37 @@ public class TiberiumSoilBlock extends Block {
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.GREEN_TIBERIUM_CROP.get().defaultBlockState());
                 }
 
-            } else if (aboveState.is(ModTags.Blocks.TIBERIUM_VULNERABLE_WOOD)) {
+            } else if (aboveState.is(ModTags.Blocks.TIBERIUM_VULNERABLE_SAPLINGS)  && !worldIn.getBlockState(abovePos).is(ModBlocks.PLAGUED_SAPLING.get()) ) {
                 Random random = new Random();
                 int number = random.nextInt(10);
 
-                if(number > 7){
+                if (number > 7) {
 
-                    System.out.println("A Tree has contracted Tiberium Plague!.");
-//                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.PLAGUED_LOG.get().getDefaultState());
+                    System.out.println("A sapling has contracted Tiberium Plague!.");
+                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.PLAGUED_SAPLING.get().defaultBlockState());
                 }
-            } else if (aboveState.is(ModTags.Blocks.VULNERABLE_LEAVES) ) {
+
+            }else if (aboveState.is(ModTags.Blocks.TIBERIUM_FLOWERS) && !worldIn.getBlockState(abovePos).is(ModBlocks.VITRIC_ROSE.get()) && !worldIn.getBlockState(abovePos).is(ModBlocks.VITRIC_BLOOM.get()) ) {
                 Random random = new Random();
                 int number = random.nextInt(10);
 
-                if(number > 7){
+                if (number <= 7) {
 
-                    System.out.println("Tree Leaves have contracted Tiberium Plague!.");
-//                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.PLAGUED_LEAVES.get().getDefaultState());
+                    System.out.println("A flower has contracted Tiberium Plague!.");
+                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.VITRIC_BLOOM.get().defaultBlockState());
+                }else {
+
+                    System.out.println("A flower has contracted Tiberium Plague!.");
+                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.VITRIC_ROSE.get().defaultBlockState());
                 }
+
             }
+        }}
 
 
-            //tree and plant corruption
 
-        }
-    }
+
+
 
     @Override
     public boolean canDropFromExplosion(BlockState state, BlockGetter level, BlockPos pos, Explosion explosion) {

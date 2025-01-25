@@ -11,13 +11,19 @@
     "fog_color": 16770928,
     "foliage_color": 16108544,
     "grass_color": 16766474,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
     "music": {
       "max_delay": 24000,
       "min_delay": 12000,
       "replace_current_music": false,
-      "sound": "crystechmod:dark_valley"
+      "sound": "crystechmod:vitric_expanse_music"
     },
-    "sky_color": 16766474,
+    "sky_color": 7972607,
     "water_color": 255,
     "water_fog_color": 255
   },
@@ -32,12 +38,15 @@
       "crystechmod:tiberium_geode_placed"
     ],
     [
+      "minecraft:fossil_upper",
+      "minecraft:fossil_lower",
       "minecraft:monster_room",
       "minecraft:monster_room_deep"
     ],
     [],
     [],
     [
+      "crystechmod:ct_glowstone_placed",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -63,8 +72,10 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "minecraft:ore_gold_extra",
-      "minecraft:ore_ancient_debris_large",
+      "minecraft:disk_sand",
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel",
+      "crystechmod:crystech_ancient_debris_placed",
       "crystechmod:crystech_gundanium_ores_placed",
       "crystechmod:crystech_illumina_ores_placed",
       "crystechmod:crystech_kryon_ores_placed"
@@ -78,6 +89,8 @@
       "minecraft:glow_lichen",
       "minecraft:forest_flowers",
       "minecraft:patch_large_fern",
+      "minecraft:patch_grass_badlands",
+      "minecraft:patch_grass_forest",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
@@ -140,7 +153,7 @@
         "type": "minecraft:piglin",
         "maxCount": 4,
         "minCount": 4,
-        "weight": 9
+        "weight": 4
       },
       {
         "type": "minecraft:pillager",

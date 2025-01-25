@@ -1,6 +1,7 @@
 {
   "carvers": {
     "air": [
+      "minecraft:canyon",
       "minecraft:cave",
       "minecraft:cave_extra_underground",
       "minecraft:canyon"
@@ -11,11 +12,17 @@
     "fog_color": 16729927,
     "foliage_color": 10682368,
     "grass_color": 16714250,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
     "music": {
       "max_delay": 24000,
       "min_delay": 12000,
       "replace_current_music": false,
-      "sound": "crystechmod:corroded_valves"
+      "sound": "crystechmod:vitric_expanse_music"
     },
     "particle": {
       "options": {
@@ -35,15 +42,19 @@
     ],
     [
       "minecraft:amethyst_geode",
+      "minecraft:forest_rock",
       "crystechmod:tiberium_geode_placed"
     ],
     [
+      "minecraft:fossil_upper",
+      "minecraft:fossil_lower",
       "minecraft:monster_room",
       "minecraft:monster_room_deep"
     ],
     [],
     [],
     [
+      "crystechmod:ct_magma_placed",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -69,8 +80,10 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "minecraft:ore_gold_extra",
-      "minecraft:ore_ancient_debris_large",
+      "minecraft:disk_sand",
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel",
+      "crystechmod:crystech_ancient_debris_placed",
       "crystechmod:crystech_gundanium_ores_placed",
       "crystechmod:crystech_illumina_ores_placed",
       "crystechmod:crystech_kryon_ores_placed"
@@ -81,9 +94,12 @@
       "minecraft:spring_lava"
     ],
     [
+      "minecraft:lake_lava_surface",
       "minecraft:glow_lichen",
       "minecraft:forest_flowers",
       "minecraft:patch_large_fern",
+      "minecraft:patch_grass_badlands",
+      "minecraft:patch_grass_forest",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
@@ -96,7 +112,7 @@
       "minecraft:freeze_top_layer"
     ]
   ],
-  "has_precipitation": true,
+  "has_precipitation": false,
   "spawn_costs": {},
   "spawners": {
     "ambient": [
@@ -146,7 +162,7 @@
         "type": "minecraft:magma_cube",
         "maxCount": 4,
         "minCount": 4,
-        "weight": 8
+        "weight": 4
       },
       {
         "type": "minecraft:spider",

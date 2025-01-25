@@ -2293,12 +2293,24 @@ public class ModBlocks {
             () -> new YokaranBloomBlock(BlockBehaviour.Properties.copy(Blocks.LILAC)
                     .noOcclusion().noCollission()));
 
+    public static final RegistryObject<Block> VITRIC_ROSE = registerBlock("vitric_rose",
+            () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.LILAC)
+                    .noOcclusion().noCollission()));
+
     public static final RegistryObject<Block> DEVILS_BLOOD = registerBlock("devils_blood",
             () -> new DevilsBloodBlock(MobEffects.BLINDNESS, 5, BlockBehaviour.Properties
                     .copy(Blocks.ALLIUM).noOcclusion().noCollission()));
 
     public static final RegistryObject<Block> POTTED_DEVILS_BLOOD = BLOCKS.register("potted_devils_blood",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.DEVILS_BLOOD,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+    public static final RegistryObject<Block> VITRIC_BLOOM = registerBlock("vitric_bloom",
+            () -> new FlowerBlock(MobEffects.POISON, 5, BlockBehaviour.Properties
+                    .copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> POTTED_VITRIC_BLOOM = BLOCKS.register("potted_vitric_bloom",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.VITRIC_BLOOM,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
     public static final RegistryObject<Block> SPITFIRE = registerBlock("spitfire",
@@ -2481,11 +2493,11 @@ public class ModBlocks {
                     .randomTicks().lightLevel(blossomglow)));
 
     public static final RegistryObject<Block> BLOSSOM_CENTER = registerBlock("blossom_center",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noLootTable().noOcclusion()
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noLootTable().noOcclusion()
                     .randomTicks().lightLevel(blossomglow)));
 
     public static final RegistryObject<Block> BLOSSOM_BASE = registerBlock("blossom_base",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noLootTable().noOcclusion()
+            () -> new BlossomTreeBaseBlock(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noLootTable().noOcclusion()
                     .randomTicks().lightLevel(blossomglow)));
 
 

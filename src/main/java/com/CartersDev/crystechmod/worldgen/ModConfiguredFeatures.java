@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.GeodeBlockSettings;
 import net.minecraft.world.level.levelgen.GeodeCrackSettings;
 import net.minecraft.world.level.levelgen.GeodeLayerSettings;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
@@ -21,6 +22,7 @@ import net.minecraft.world.level.levelgen.feature.featuresize.ThreeLayersFeature
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedBlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.*;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
@@ -48,6 +50,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_ENIGMA_ORE_KEY = registerKey("enigma_ores");
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_ALYTHUM_ORE_KEY = registerKey("alythum_ores");
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_QUALRITE_ORE_KEY = registerKey("qualrite_ores");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_ANCIENT_DEBRIS_KEY = registerKey("ct_ancient_debris");
 
         //Nether:
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_NETHER_ALYTHUM_ORE_KEY = registerKey("nether_alythum_ores");
@@ -66,6 +69,17 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?,?>> HYACINTH_KEY = registerKey("hyacinth");
     public static final ResourceKey<ConfiguredFeature<?,?>> SPITFIRE_KEY = registerKey("spitfire");
     public static final ResourceKey<ConfiguredFeature<?,?>> FULGURBLOOM_KEY = registerKey("fulgurbloom");
+    public static final ResourceKey<ConfiguredFeature<?,?>> FLOWER_OF_LIFE_KEY = registerKey("flower_of_life");
+    public static final ResourceKey<ConfiguredFeature<?,?>> YOKARAN_BLOOM_KEY = registerKey("yokaran_bloom");
+    public static final ResourceKey<ConfiguredFeature<?,?>> DEVILS_BLOOD_KEY = registerKey("devils_blood");
+
+    //Overworld Features:
+        //Disks:
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_MAGMA_KEY = registerKey("ct_magma");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_GLOWSTONE_KEY = registerKey("ct_glowstone");
+
+        //Springs:
+
 
     public static void bootstrap (BootstapContext<ConfiguredFeature<?, ?>> context) {
 
@@ -73,7 +87,7 @@ public class ModConfiguredFeatures {
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
         RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
-        RuleTest dimensionStoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+
 
         List<OreConfiguration.TargetBlockState> gundaniumOre = List.of(
                 OreConfiguration.target(stoneReplaceables, ModBlocks.GUNDANIUM_ORE.get().defaultBlockState()),
@@ -102,6 +116,10 @@ public class ModConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> qualriteOre = List.of(
                 OreConfiguration.target(stoneReplaceables, ModBlocks.QUALRITE_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_QUALRITE_ORE.get().defaultBlockState()));
+
+        List<OreConfiguration.TargetBlockState> ctAncientDebris = List.of(
+                OreConfiguration.target(stoneReplaceables, Blocks.ANCIENT_DEBRIS.defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, Blocks.ANCIENT_DEBRIS.defaultBlockState()));
 
         //Trees:
         register(context, PLAGUED_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
@@ -154,8 +172,14 @@ public class ModConfiguredFeatures {
 
         //Overworld Ores:
         register(context,CRYSTECH_GUNDANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(gundaniumOre, 8));
+        register(context,CRYSTECH_ALYTHUM_ORE_KEY, Feature.ORE, new OreConfiguration(alythumOre, 5));
         register(context,CRYSTECH_KRYON_ORE_KEY, Feature.ORE, new OreConfiguration(kryonOre, 4));
         register(context,CRYSTECH_ILLUMINA_ORE_KEY, Feature.ORE, new OreConfiguration(illuminaOre, 4));
+        register(context,CRYSTECH_AERIES_ORE_KEY, Feature.ORE, new OreConfiguration(aeriesOre, 4));
+        register(context,CRYSTECH_QUALRITE_ORE_KEY, Feature.ORE, new OreConfiguration(qualriteOre, 4));
+        register(context,CRYSTECH_ENIGMA_ORE_KEY, Feature.ORE, new OreConfiguration(enigmaOre, 5));
+        register(context, CRYSTECH_ANCIENT_DEBRIS_KEY, Feature.ORE, new OreConfiguration(ctAncientDebris, 4));
+
 
         //Nether Ores:
         register(context,CRYSTECH_NETHER_AERIES_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables, ModBlocks.NETHER_AERIES_ORE.get().defaultBlockState(), 4));
@@ -190,19 +214,37 @@ public class ModConfiguredFeatures {
 
         //Flowers:
         register(context, HYACINTH_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                new RandomPatchConfiguration(32, 12, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.HYACINTH.get())))));
 
         register(context, SPITFIRE_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                new RandomPatchConfiguration(64, 12, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SPITFIRE.get())))));
 
         register(context, FULGURBLOOM_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                new RandomPatchConfiguration(64, 12, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.FULGURBLOOM.get())))));
 
+        register(context, FLOWER_OF_LIFE_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(64, 12, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.FLOWER_OF_LIFE.get())))));
+
+        register(context, YOKARAN_BLOOM_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(64, 12, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.YOKARAN_BLOOM.get())))));
+
+        register(context, DEVILS_BLOOD_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(64, 12, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.DEVILS_BLOOD.get())))));
 
 
+//Misc Overworld:
+        //Discs:
+        register(context, CT_MAGMA_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.MAGMA_BLOCK), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK)), UniformInt.of(1, 3), 1));
+        register(context, CT_GLOWSTONE_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.GLOWSTONE), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK)), UniformInt.of(1, 2), 1));
+
+
+        //springs
 
 
 

@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-02T17:24:38.7814317	Loot Tables
+// 1.20.1	2025-01-22T21:39:16.8642299	Loot Tables
 03c6f95925fa38635ca3601903e1d452029caabd data/crystechmod/loot_tables/blocks/aboreus_crystal.json
 d0beb68b81b414280026c89df98ac8685d552502 data/crystechmod/loot_tables/blocks/aboreus_crystal_slab.json
 119389378ebef86e266227fdae475e18f84de5e1 data/crystechmod/loot_tables/blocks/aboreus_crystal_stairs.json
@@ -584,6 +584,7 @@ a3a47456c0a3b50f7064958180ea4cdb18427349 data/crystechmod/loot_tables/blocks/pot
 37b5be1a9e821a8a4291d71e48310270b5d7e864 data/crystechmod/loot_tables/blocks/potted_fulgurbloom.json
 583a79f9b875aa5e3adc261ef5b5318d5d4f3bce data/crystechmod/loot_tables/blocks/potted_hyacinth.json
 810fec92e0502ec8ff1c4cd8d6b861b6101ec0c9 data/crystechmod/loot_tables/blocks/potted_spitfire.json
+fe87f6f43280ded04b85e6332b781bd9e62567ee data/crystechmod/loot_tables/blocks/potted_vitric_bloom.json
 7c12f6c2ec0cad89d13fec122d5ca0087fbd8832 data/crystechmod/loot_tables/blocks/purple_tibercrete.json
 2a44fdc11e749c257b33c4cddfe58afd546c16cf data/crystechmod/loot_tables/blocks/purple_tibercrete_bricks.json
 60fb479cf1ae4f014a2ea6e50ecbf572dffd712f data/crystechmod/loot_tables/blocks/purple_tibercrete_brick_slab.json
@@ -667,6 +668,8 @@ b264c73291aace0290170f2e7d100b627f66612a data/crystechmod/loot_tables/blocks/vin
 97900162e499d6962cf3c5b447bbec300e4e796c data/crystechmod/loot_tables/blocks/vinifera_stone_slab.json
 2f4083caedc914f7779012d296b197ac322bdb41 data/crystechmod/loot_tables/blocks/vinifera_stone_stairs.json
 9ff9c1fff123f38657f9a5aa9ab35dd23ede4251 data/crystechmod/loot_tables/blocks/vinifera_stone_wall.json
+23a3154f5134ee7d265aa76e41a39c04affc8c6e data/crystechmod/loot_tables/blocks/vitric_bloom.json
+67a83426c0e7bcd4be868c568224217caf38275a data/crystechmod/loot_tables/blocks/vitric_rose.json
 1d140ba710ae4a193775768c1945cda1c542b5bb data/crystechmod/loot_tables/blocks/white_tibercrete.json
 f5cfd959c0bacd1dcd373a2b381660ab77186769 data/crystechmod/loot_tables/blocks/white_tibercrete_bricks.json
 25219b152b2dfa815243fccca130b7d5f4f08334 data/crystechmod/loot_tables/blocks/white_tibercrete_brick_slab.json

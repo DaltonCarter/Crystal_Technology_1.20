@@ -53,6 +53,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.YOKARAN_BLOOM.get());
         this.dropSelf(ModBlocks.SPITFIRE.get());
         this.dropSelf(ModBlocks.FULGURBLOOM.get());
+        this.dropSelf(ModBlocks.VITRIC_BLOOM.get());
+        this.dropSelf(ModBlocks.VITRIC_ROSE.get());
 
 
 
@@ -637,6 +639,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.POTTED_DEVILS_BLOOD.get(), createPotFlowerItemTable(ModBlocks.DEVILS_BLOOD.get()));
         this.add(ModBlocks.POTTED_FULGURBLOOM.get(), createPotFlowerItemTable(ModBlocks.FULGURBLOOM.get()));
         this.add(ModBlocks.POTTED_SPITFIRE.get(), createPotFlowerItemTable(ModBlocks.SPITFIRE.get()));
+        this.add(ModBlocks.POTTED_VITRIC_BLOOM.get(), createPotFlowerItemTable(ModBlocks.VITRIC_BLOOM.get()));
 
         //Slabs:
         this.add(ModBlocks.PLAGUED_SLAB.get(),

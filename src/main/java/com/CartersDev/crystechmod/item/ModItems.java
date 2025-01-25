@@ -370,9 +370,9 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
             () -> new RecordItem(6, ModSounds.NECROFUNK,
                     new Item.Properties().stacksTo(1), 4460));
 
-    public static final RegistryObject<Item> OBSESSION_SOFTWARE_MUSIC_DISC = ITEMS.register("obsession_software_music_disc",
-            () -> new RecordItem(6, ModSounds.OBSESSION_SOFTWARE,
-                    new Item.Properties().stacksTo(1), 4660));
+    public static final RegistryObject<Item> SCOUTING_MUSIC_DISC = ITEMS.register("scouting_music_disc",
+            () -> new RecordItem(6, ModSounds.SCOUTING,
+                    new Item.Properties().stacksTo(1), 5180));
 
     public static final RegistryObject<Item> PRODIGAL_SON_MUSIC_DISC = ITEMS.register("prodigal_son_music_disc",
             () -> new RecordItem(6, ModSounds.PRODIGAL_SON,
@@ -412,7 +412,7 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> DUSK_HOUR_MUSIC_DISC = ITEMS.register("dusk_hour_music_disc",
             () -> new RecordItem(6, ModSounds.DUSK_HOUR,
-                    new Item.Properties().stacksTo(1), 5160));
+                    new Item.Properties().stacksTo(1), 4740));
 
     public static final RegistryObject<Item> TS_DUSK_HOUR_MUSIC_DISC = ITEMS.register("ts_dusk_hour_music_disc",
             () -> new RecordItem(6, ModSounds.TS_DUSK_HOUR,
@@ -424,27 +424,27 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> LONE_TROOPER_MUSIC_DISC = ITEMS.register("lone_trooper_music_disc",
             () -> new RecordItem(6, ModSounds.LONE_TROOPER,
-                    new Item.Properties().stacksTo(1), 5640));
+                    new Item.Properties().stacksTo(1), 6720));
 
     public static final RegistryObject<Item> PHAROTEK_MUSIC_DISC = ITEMS.register("pharotek_music_disc",
             () -> new RecordItem(6, ModSounds.PHAROTEK,
-                    new Item.Properties().stacksTo(1), 5620));
+                    new Item.Properties().stacksTo(1), 5960));
 
     public static final RegistryObject<Item> VALVES_MUSIC_DISC = ITEMS.register("valves_music_disc",
             () -> new RecordItem(6, ModSounds.VALVES,
-                    new Item.Properties().stacksTo(1), 5240));
+                    new Item.Properties().stacksTo(1), 6200));
 
     public static final RegistryObject<Item> WHAT_LURKS_MUSIC_DISC = ITEMS.register("what_lurks_music_disc",
             () -> new RecordItem(6, ModSounds.WHAT_LURKS,
-                    new Item.Properties().stacksTo(1), 6340));
+                    new Item.Properties().stacksTo(1), 5680));
 
     public static final RegistryObject<Item> AIRSTRIKE_MUSIC_DISC = ITEMS.register("airstrike_music_disc",
             () -> new RecordItem(6, ModSounds.AIRSTRIKE,
                     new Item.Properties().stacksTo(1), 3940));
 
-    public static final RegistryObject<Item> CANYON_CHASE_MUSIC_DISC = ITEMS.register("canyon_chase_music_disc",
-            () -> new RecordItem(6, ModSounds.CANYON_CHASE,
-                    new Item.Properties().stacksTo(1), 3240));
+    public static final RegistryObject<Item> HEROISM_2_MUSIC_DISC = ITEMS.register("heroism_2_music_disc",
+            () -> new RecordItem(6, ModSounds.HEROISM_2,
+                    new Item.Properties().stacksTo(1), 4920));
 
     public static final RegistryObject<Item> CREEPING_UPON_MUSIC_DISC = ITEMS.register("creeping_upon_music_disc",
             () -> new RecordItem(6, ModSounds.CREEPING_UPON,
@@ -478,9 +478,9 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
             () -> new RecordItem(6, ModSounds.DENSE,
                     new Item.Properties().stacksTo(1), 6040));
 
-    public static final RegistryObject<Item> FLOATING_MUSIC_DISC = ITEMS.register("floating_music_disc",
-            () -> new RecordItem(6, ModSounds.FLOATING,
-                    new Item.Properties().stacksTo(1), 5620));
+    public static final RegistryObject<Item> DERELICT_MUSIC_DISC = ITEMS.register("derelict_music_disc",
+            () -> new RecordItem(6, ModSounds.DERELICT,
+                    new Item.Properties().stacksTo(1), 7200));
 
     public static final RegistryObject<Item> RUN_MUSIC_DISC = ITEMS.register("run_music_disc",
             () -> new RecordItem(6, ModSounds.RUN,

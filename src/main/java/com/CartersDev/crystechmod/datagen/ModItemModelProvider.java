@@ -60,7 +60,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.EAGLES_DAWN_MUSIC_DISC);
         simpleItem(ModItems.MANUFACTORY_MUSIC_DISC);
         simpleItem(ModItems.NECROFUNK_MUSIC_DISC);
-        simpleItem(ModItems.OBSESSION_SOFTWARE_MUSIC_DISC);
+        simpleItem(ModItems.SCOUTING_MUSIC_DISC);
         simpleItem(ModItems.PRODIGAL_SON_MUSIC_DISC);
         simpleItem(ModItems.PYROTEK_MUSIC_DISC);
         simpleItem(ModItems.REPENTANCE_MUSIC_DISC);
@@ -78,7 +78,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.VALVES_MUSIC_DISC);
         simpleItem(ModItems.WHAT_LURKS_MUSIC_DISC);
         simpleItem(ModItems.AIRSTRIKE_MUSIC_DISC);
-        simpleItem(ModItems.CANYON_CHASE_MUSIC_DISC);
+        simpleItem(ModItems.HEROISM_2_MUSIC_DISC);
         simpleItem(ModItems.CREEPING_UPON_MUSIC_DISC);
         simpleItem(ModItems.DEPTH_CHARGE_MUSIC_DISC);
         simpleItem(ModItems.DRONE_MUSIC_DISC);
@@ -87,7 +87,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RECON_MUSIC_DISC);
         simpleItem(ModItems.AWAITING_MUSIC_DISC);
         simpleItem(ModItems.DENSE_MUSIC_DISC);
-        simpleItem(ModItems.FLOATING_MUSIC_DISC);
+        simpleItem(ModItems.DERELICT_MUSIC_DISC);
         simpleItem(ModItems.RUN_MUSIC_DISC);
         simpleItem(ModItems.THE_SEARCH_MUSIC_DISC);
         simpleItem(ModItems.TRENCHES_MUSIC_DISC);

@@ -9,6 +9,8 @@
     "minecraft:stone_bricks",
     "minecraft:andesite",
     "minecraft:diorite",
-    "minecraft:granite"
+    "minecraft:granite",
+    "minecraft:sand",
+    "minecraft:red_sand"
   ]
 }

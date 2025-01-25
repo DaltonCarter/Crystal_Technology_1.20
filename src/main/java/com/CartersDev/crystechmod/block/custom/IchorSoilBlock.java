@@ -2,6 +2,7 @@ package com.CartersDev.crystechmod.block.custom;
 
 
 import com.CartersDev.crystechmod.block.ModBlocks;
+import com.CartersDev.crystechmod.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -29,7 +30,7 @@ public class IchorSoilBlock extends Block {
             Block aboveBlock = aboveState.getBlock();
 
 
-            if (aboveBlock == Blocks.AIR) {
+            if (aboveBlock == Blocks.AIR || aboveBlock == Blocks.TALL_GRASS || aboveBlock == Blocks.GRASS) {
                 Random random = new Random();
                 int number = random.nextInt(20);
 
@@ -45,6 +46,30 @@ public class IchorSoilBlock extends Block {
                 }else {
                     System.out.println("A patch of Riparius Tiberium has sprouted!.");
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.GREEN_TIBERIUM_CROP.get().defaultBlockState());
+                }
+
+            }else if (aboveState.is(ModTags.Blocks.TIBERIUM_VULNERABLE_SAPLINGS) && !worldIn.getBlockState(abovePos).is(ModBlocks.PLAGUED_SAPLING.get()) ) {
+                Random random = new Random();
+                int number = random.nextInt(10);
+
+                if (number > 7 ) {
+
+                    System.out.println("A sapling has contracted Tiberium Plague!.");
+                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.PLAGUED_SAPLING.get().defaultBlockState());
+                }
+
+            }else if (aboveState.is(ModTags.Blocks.TIBERIUM_FLOWERS) && !worldIn.getBlockState(abovePos).is(ModBlocks.VITRIC_ROSE.get()) && !worldIn.getBlockState(abovePos).is(ModBlocks.VITRIC_BLOOM.get()) ) {
+                Random random = new Random();
+                int number = random.nextInt(10);
+
+                if (number <= 7 ) {
+
+                    System.out.println("A flower has contracted Tiberium Plague!.");
+                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.VITRIC_BLOOM.get().defaultBlockState());
+                }else {
+
+                    System.out.println("A flower has contracted Tiberium Plague!.");
+                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.VITRIC_ROSE.get().defaultBlockState());
                 }
 
             }

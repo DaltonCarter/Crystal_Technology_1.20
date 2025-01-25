@@ -36,8 +36,49 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         Blocks.STONE_BRICKS,
                         Blocks.ANDESITE,
                         Blocks.DIORITE,
-                        Blocks.GRANITE
+                        Blocks.GRANITE,
+                        Blocks.SAND,
+                        Blocks.RED_SAND
                 );
+
+        this.tag(ModTags.Blocks.VULNERABLE_LEAVES)
+                .add(
+                        ModBlocks.DEAD_LEAVES.get(),
+                        ModBlocks.EMBER_OAK_LEAVES.get(),
+                        ModBlocks.MARIKA_OAK_LEAVES.get()
+
+                )
+                .addTags(BlockTags.LEAVES);
+
+        this.tag(ModTags.Blocks.TIBERIUM_VULNERABLE_WOOD)
+                .addTags(BlockTags.LOGS
+                );
+
+        this.tag(ModTags.Blocks.TIBERIUM_VULNERABLE_SAPLINGS)
+                .addTags(BlockTags.SAPLINGS
+                );
+
+        this.tag(ModTags.Blocks.TIBERIUM_FLOWERS)
+                .addTags(BlockTags.FLOWERS,
+                        BlockTags.TALL_FLOWERS
+                );
+
+        this.tag(BlockTags.FLOWERS)
+                .add(ModBlocks.FULGURBLOOM.get(),
+                        ModBlocks.SPITFIRE.get(),
+                        ModBlocks.HYACINTH.get(),
+                        ModBlocks.FLOWER_OF_LIFE.get(),
+                        ModBlocks.VITRIC_BLOOM.get(),
+                        ModBlocks.DEVILS_BLOOD.get()
+                );
+
+        this.tag(BlockTags.TALL_FLOWERS)
+                .add(ModBlocks.YOKARAN_BLOOM.get(),
+                        ModBlocks.VITRIC_ROSE.get()
+                );
+
+
+
 
         this.tag(ModTags.Blocks.HAZMAT_GLASS_PANES)
                 .add(
@@ -626,6 +667,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.CT_TILE_B_VERT_3.get(),
                         ModBlocks.CT_TILE_R_VERT_3.get(),
                         ModBlocks.CT_TILE_P_VERT_3.get(),
+                        ModBlocks.TIBERIUM_GRINDER.get(),
                         ModBlocks.CT_TILE_WALL_P_3.get()
 
 
@@ -1028,7 +1070,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.CRUENTUS_STONE_BRICK_STAIRS.get(),
                         ModBlocks.ABOREUS_STONE_BRICK_WALL.get(),
                         ModBlocks.ABOREUS_STONE_BRICK_SLAB.get(),
-                        ModBlocks.ABOREUS_STONE_BRICK_STAIRS.get()
+                        ModBlocks.ABOREUS_STONE_BRICK_STAIRS.get(),
+                        ModBlocks.TIBERIUM_GRINDER.get()
 
                 );
 
@@ -1400,6 +1443,75 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.END_KRYON_ORE.get(),
                         ModBlocks.NETHER_ALYTHUM_ORE.get(),
                         ModBlocks.NETHER_QUALRITE_ORE.get()
+                );
+
+        this.tag(ModTags.Blocks.GUNDANIUM_ORES)
+                .add(
+                        ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get(),
+                        ModBlocks.GUNDANIUM_ORE.get()
+                );
+
+        this.tag(ModTags.Blocks.ALYTHUM_ORES)
+                .add(
+                        ModBlocks.ALYTHUM_ORE.get(),
+                        ModBlocks.DEEPSLATE_ALYTHUM_ORE.get(),
+                        ModBlocks.NETHER_ALYTHUM_ORE.get()
+                );
+
+        this.tag(ModTags.Blocks.AERIES_ORES)
+                .add(
+                        ModBlocks.AERIES_ORE.get(),
+                        ModBlocks.DEEPSLATE_AERIES_ORE.get(),
+                        ModBlocks.NETHER_AERIES_ORE.get()
+                );
+
+        this.tag(ModTags.Blocks.QUALRITE_ORES)
+                .add(
+                        ModBlocks.NETHER_QUALRITE_ORE.get(),
+                        ModBlocks.QUALRITE_ORE.get(),
+                        ModBlocks.DEEPSLATE_QUALRITE_ORE.get()
+                );
+
+        this.tag(ModTags.Blocks.ILLUMINA_ORES)
+                .add(
+                        ModBlocks.ILLUMINA_ORE.get(),
+                        ModBlocks.DEEPSLATE_ILLUMINA_ORE.get()
+                );
+
+        this.tag(ModTags.Blocks.KRYON_ORES)
+                .add(
+                        ModBlocks.KRYON_ORE.get(),
+                        ModBlocks.DEEPSLATE_KRYON_ORE.get(),
+                        ModBlocks.NETHER_KRYON_ORE.get(),
+                        ModBlocks.END_KRYON_ORE.get()
+                );
+
+        this.tag(ModTags.Blocks.ENIGMA_ORES)
+                .add(
+                        ModBlocks.END_ENIGMA_ORE.get(),
+                        ModBlocks.ENIGMA_ORE.get(),
+                        ModBlocks.DEEPSLATE_ENIGMA_ORE.get()
+                );
+
+        this.tag(Tags.Blocks.ORES)
+                .addTags(ModTags.Blocks.GUNDANIUM_ORES,
+                        ModTags.Blocks.ALYTHUM_ORES,
+                        ModTags.Blocks.QUALRITE_ORES,
+                        ModTags.Blocks.AERIES_ORES,
+                        ModTags.Blocks.ILLUMINA_ORES,
+                        ModTags.Blocks.KRYON_ORES,
+                        ModTags.Blocks.ENIGMA_ORES
+
+                );
+
+        this.tag(BlockTags.DIRT)
+                .add(ModBlocks.RED_ZONE_DIRT.get(),
+                        ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(),
+                        ModBlocks.SEEDED_RED_ZONE_DIRT.get(),
+                        ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(),
+                        ModBlocks.SEEDED_DIRT.get(),
+                        ModBlocks.TIBERIUM_SOIL.get(),
+                        ModBlocks.ICHOR_SOIL.get()
                 );
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)

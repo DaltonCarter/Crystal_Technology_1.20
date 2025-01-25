@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-02T18:58:12.4264711	Item Models: crystechmod
+// 1.20.1	2025-01-20T21:28:55.9101489	Item Models: crystechmod
 7d9fe5e88433390f9cd29dab7e515bddd3fbdf4b assets/crystechmod/models/item/aboreus_crystal_slab.json
 0e376de85f99a387d23f7130ff296ce0b5fe876e assets/crystechmod/models/item/aboreus_crystal_stairs.json
 2ced509a911b88c37b68b1a1278f10fc986798c4 assets/crystechmod/models/item/aboreus_crystal_wall.json
@@ -86,7 +86,6 @@ fbdda91606fa11d9c028004e8f84cb3f0b8bc1aa assets/crystechmod/models/item/brown_ti
 17f060499297552263bd3aed83fe08850207195c assets/crystechmod/models/item/brown_tibercrete_stairs.json
 8149241c9e9eb15c3aedcbf54922626d2e0abdc1 assets/crystechmod/models/item/brown_tibercrete_wall.json
 b7f425d0fab225ae161609c1b75f45a4f9633ee6 assets/crystechmod/models/item/brown_tiberglass_pane.json
-6213c30c68a2b25c126feaa298abe8c58a91a7d0 assets/crystechmod/models/item/canyon_chase_music_disc.json
 6a16f8504884f1afeaae1328bb1af2c42b836191 assets/crystechmod/models/item/clear_tiberglass_pane.json
 fee112ae8495711dc5b4defda8ce67c0527f71d0 assets/crystechmod/models/item/cooked_infected_meat.json
 ff0c89671142f1b7cc8b218c39f6087508adc4fa assets/crystechmod/models/item/copper_dust.json
@@ -253,6 +252,7 @@ bcc931091e1be1e2878e20e106c89cfde809d0d1 assets/crystechmod/models/item/dead_sta
 eb8436174b35108352b20f8dd8db4e93de9981f8 assets/crystechmod/models/item/dead_trapdoor.json
 917a16d893f4f16bea24222606e0b1421171bbf7 assets/crystechmod/models/item/dense_music_disc.json
 2064271001775c4f3a48a8fbcab70c22046c4bd5 assets/crystechmod/models/item/depth_charge_music_disc.json
+4f3dc69544a16a66c9160902f157304a071afbcb assets/crystechmod/models/item/derelict_music_disc.json
 9874dcfb4cfd2d71d0c459b4b1f94f527ab36852 assets/crystechmod/models/item/devils_blood.json
 3d3ccc190d7e7292eb5199939359c16411f0c317 assets/crystechmod/models/item/devils_blood_powder.json
 c22396a14d3151771616bb31735f5a21a22064fb assets/crystechmod/models/item/drone_music_disc.json
@@ -273,7 +273,6 @@ db2728f1cde624f7b1bc9d359d52e11507c179b4 assets/crystechmod/models/item/ember_oa
 a8c7c15e83426f6890c67a3c19af6b0ed4471f00 assets/crystechmod/models/item/enigma_crystal.json
 03b9a675cf9bfd6655ef33a571eef5ab9c6e8599 assets/crystechmod/models/item/firestone.json
 87ef185c96cd4543c0a7f5912bef0cfa5c5a19d0 assets/crystechmod/models/item/firestone_wall.json
-96f5d20822e5da0deb6da455c2b473b94fedfbf0 assets/crystechmod/models/item/floating_music_disc.json
 90e5f4dbd2b70c657d618678c9abe68e34285d1e assets/crystechmod/models/item/flower_of_life.json
 c3a48797f512912e14245b3290752381368ca216 assets/crystechmod/models/item/gdi_emblem.json
 1dba912632e5bab88ea7716daf29e983e760bda6 assets/crystechmod/models/item/gdi_tiberglass_pane.json
@@ -439,6 +438,7 @@ b292251f7760c34bf62a5bc0bbf0226c915f408c assets/crystechmod/models/item/heim_ber
 dd2944db560d6ae98b0730b2aa7c0f37c9c4358b assets/crystechmod/models/item/heim_berry_seeds.json
 28383fd2e1f75a8b1263f18e7c7e50f293ffb494 assets/crystechmod/models/item/hel_fruit.json
 a5f724cc89ec3f848e651886c62168fad01dd336 assets/crystechmod/models/item/hel_fruit_seeds.json
+dfa006ba0369236b197f8d5a32383f4795e33483 assets/crystechmod/models/item/heroism_2_music_disc.json
 87056ad81b527fd36707ef1ffdef431fd78eee64 assets/crystechmod/models/item/heroism_music_disc.json
 9fb15a86ba147cebe82a90110a17559d1aae4964 assets/crystechmod/models/item/hg_core_blend.json
 b5c9c6eee8ae2e50a82f9815b0208381dfe344f6 assets/crystechmod/models/item/hg_core_ingot.json
@@ -509,7 +509,6 @@ c099650f6843954ce2692c6fc116d636eff23925 assets/crystechmod/models/item/mg_core_
 0441371e845c7080423851fb996e46dc5f62ad1d assets/crystechmod/models/item/necrofunk_music_disc.json
 75e65dae040a46e5b72b6dc376cee6ec2b3d585a assets/crystechmod/models/item/nod_emblem.json
 af9d447ae4b6ed15fedd5d82a789b2c3022bdec4 assets/crystechmod/models/item/nod_tiberglass_pane.json
-2e73d9a5a284a520456832067221d7348b85f014 assets/crystechmod/models/item/obsession_software_music_disc.json
 10565932c8cb360afb22b2e456ce3743f1251dee assets/crystechmod/models/item/on_the_prowl_music_disc.json
 2114219d8319d59069fe45b4673d56ed6b96f605 assets/crystechmod/models/item/orange_tibercrete_brick_slab.json
 75255b8796b95834a33765bce1698db69d168083 assets/crystechmod/models/item/orange_tibercrete_brick_stairs.json
@@ -592,6 +591,7 @@ d435952c1c37f02a1292f843a3a8e4ea78e5c229 assets/crystechmod/models/item/riparius
 000efca619abbfd27a44ddfdb713f627730c400d assets/crystechmod/models/item/run_music_disc.json
 e99967e78b0432ac0ee6dc9a334778fc988ca02c assets/crystechmod/models/item/saber_corn.json
 77230dd6316acf4caee74d81772897938502d6fe assets/crystechmod/models/item/saber_corn_seeds.json
+285082673b70f8a28c7117133a06ca036ac5a028 assets/crystechmod/models/item/scouting_music_disc.json
 8eb601f3269a4ef0d08e68d8a8e44755b95f5a04 assets/crystechmod/models/item/space_echo_music_disc.json
 b4faf6e3098816e73498ea2fce1af700abefc4ff assets/crystechmod/models/item/still_alone_music_disc.json
 54e1dfbbf448bc2983ca308273d671ac4810f6b3 assets/crystechmod/models/item/the_search_music_disc.json

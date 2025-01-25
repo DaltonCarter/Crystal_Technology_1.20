@@ -510,6 +510,16 @@ Posted By: Dalton Carter
 -added Vitric Meat, and Cooked Vitric Meat
 -Fixed Tag confliction Rendering Gundanium Ore un-mineable
 -MORE Recipes
+-Tiberium Infection Logic For the Blossom Tree & Soils is finally complete...FOR NOW
+-Added Vitric Flowers
+-Added Vitric Expanse Music Sound Event (Playlist) For mod Biomes
+-Logs touching the ground when targeted by the Blossom tree now have a small chance to turn into ANOTHER
+Blossom Tree instead of a Plagued Log.
+-Added Misc Features to flesh out Biomes and add flexibility
+-Currently 10/50 Vitric Expanse Biomes are Ready.
+-Began work on Surface Rules
+-Fixed Certain Tag errors, added new tags for functionality, more Vanilla/Forge compatibility
+-Added Ambient Track for mod Biomes in the Vitric Expanse
 
 
 
