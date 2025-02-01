@@ -818,6 +818,38 @@ public class ModBlocks {
     public static final RegistryObject<Block> PLAGUED_DIORITE_WALL = registerBlock("plagued_diorite_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
+    public static final RegistryObject<Block> VITRIC_DEEPSLATE = registerBlock("vitric_deepslate",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+
+    public static final RegistryObject<Block> VITRIC_DEEPSLATE_BRICKS = registerBlock("vitric_deepslate_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS)));
+
+    public static final RegistryObject<Block> VITRIC_DEEPSLATE_BRICK_STAIRS = registerBlock("vitric_deepslate_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.VITRIC_DEEPSLATE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICK_STAIRS)));
+
+    public static final RegistryObject<Block> VITRIC_DEEPSLATE_BRICK_SLAB = registerBlock("vitric_deepslate_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> VITRIC_DEEPSLATE_BRICK_WALL = registerBlock("vitric_deepslate_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICK_WALL)));
+
+
+
+    public static final RegistryObject<Block> VITRIC_DEEPSLATE_TILES = registerBlock("vitric_deepslate_tiles",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES)));
+
+    public static final RegistryObject<Block> VITRIC_DEEPSLATE_TILE_STAIRS = registerBlock("vitric_deepslate_tile_stairs",
+            () -> new StairBlock(() -> ModBlocks.VITRIC_DEEPSLATE_TILES.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILE_STAIRS)));
+
+    public static final RegistryObject<Block> VITRIC_DEEPSLATE_TILE_SLAB = registerBlock("vitric_deepslate_tile_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILE_SLAB)));
+
+    public static final RegistryObject<Block> VITRIC_DEEPSLATE_TILE_WALL = registerBlock("vitric_deepslate_tile_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILE_WALL)));
+
+
     public static final RegistryObject<Block> YZ_SANDSTONE = registerBlock("yz_sandstone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
 

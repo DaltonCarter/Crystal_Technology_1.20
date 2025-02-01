@@ -81,7 +81,7 @@ public class ModBiomes {
 //    public static final ResourceKey<Biome> TIBERIAN_SWAMP = register("tiberian_swamp");
 //    public static final ResourceKey<Biome> TIBERIAN_TUNDRA = register("tiberian_tundra");
 //    public static final ResourceKey<Biome> CRYSTAL_FIELDS = register("crystal_fields");
-//    public static final ResourceKey<Biome> OLD_TRENCHES = register("old_trenches");
+//    public static final ResourceKey<Biome> YELLOW_ZONE_SHORE` = register("yellow_zone_shore");
 //
 //
 //    //Red Zone:
@@ -126,6 +126,25 @@ public static void bootstrap(BootstapContext<Biome> context){
         BiomeDefaultFeatures.addSurfaceFreezing(builder);
     }
 
+    public static void vitricExpanseYZGeneration(BiomeGenerationSettings.Builder builder) {
+        ModBiomeDefaultFeatures.addYZCarversAndLakes(builder);
+        BiomeDefaultFeatures.addDefaultCrystalFormations(builder);
+        BiomeDefaultFeatures.addDefaultMonsterRoom(builder);
+        ModBiomeDefaultFeatures.addYZUndergroundVariety(builder);
+        BiomeDefaultFeatures.addDefaultSprings(builder);
+        BiomeDefaultFeatures.addSurfaceFreezing(builder);
+    }
+
+    public static void vitricExpanseRZGeneration(BiomeGenerationSettings.Builder builder) {
+        ModBiomeDefaultFeatures.addRZCarversAndLakes(builder);
+        BiomeDefaultFeatures.addDefaultCrystalFormations(builder);
+        BiomeDefaultFeatures.addDefaultMonsterRoom(builder);
+        ModBiomeDefaultFeatures.addRZUndergroundVariety(builder);
+        BiomeDefaultFeatures.addDefaultSprings(builder);
+        BiomeDefaultFeatures.addSurfaceFreezing(builder);
+    }
+
+
     //OVERWORLD:
     public static Biome emberGlowForest(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
@@ -138,8 +157,9 @@ public static void bootstrap(BootstapContext<Biome> context){
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER))
+//
                         .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CT_MAGMA_PLACED_KEY)
-                        .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, MiscOverworldPlacements.SPRING_LAVA)
+
                        ;
 
 
@@ -256,7 +276,7 @@ public static void bootstrap(BootstapContext<Biome> context){
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER))
                         .addCarver(GenerationStep.Carving.AIR, Carvers.CANYON)
                         .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CT_MAGMA_PLACED_KEY)
-                        .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, MiscOverworldPlacements.LAKE_LAVA_SURFACE)
+
                         ;
 
         BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
@@ -618,7 +638,7 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
             BiomeGenerationSettings.Builder biomeBuilder =
                     new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER))
                             .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CT_MAGMA_PLACED_KEY)
-                            .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, MiscOverworldPlacements.LAKE_LAVA_SURFACE)
+                            .addFeature(GenerationStep.Decoration.LAKES, MiscOverworldPlacements.LAKE_LAVA_SURFACE)
 
                     ;
 
@@ -681,7 +701,7 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER))
-                        .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, MiscOverworldPlacements.LAKE_LAVA_SURFACE)
+                        .addFeature(GenerationStep.Decoration.LAKES, MiscOverworldPlacements.LAKE_LAVA_SURFACE)
 
                 ;
 
@@ -748,7 +768,7 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER))
                         .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CT_MAGMA_PLACED_KEY)
-                        .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, MiscOverworldPlacements.LAKE_LAVA_SURFACE)
+                        .addFeature(GenerationStep.Decoration.LAKES, MiscOverworldPlacements.LAKE_LAVA_SURFACE)
 
                 ;
 

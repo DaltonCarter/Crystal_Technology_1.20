@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "crystechmod:block/vitric_deepslate_top",
+    "side": "crystechmod:block/vitric_deepslate"
+  }
+}

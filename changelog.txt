@@ -520,6 +520,10 @@ Blossom Tree instead of a Plagued Log.
 -Began work on Surface Rules
 -Fixed Certain Tag errors, added new tags for functionality, more Vanilla/Forge compatibility
 -Added Ambient Track for mod Biomes in the Vitric Expanse
+-Added Vitric Deepslate, Bricks, Tiles, and ect...
+-Added World Carvers for Yellow Zone and Red Zone Caves and Canyons
+-Compiled select Mod features into "Default Mod Feature" groups
+-Added A LOT of new features for biomes
 
 
 

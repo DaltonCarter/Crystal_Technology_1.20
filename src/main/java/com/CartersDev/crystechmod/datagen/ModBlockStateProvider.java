@@ -154,6 +154,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.FIRESTONE_BLOCK);
 
+        blockWithItem(ModBlocks.VITRIC_DEEPSLATE_BRICKS);
+        blockWithItem(ModBlocks.VITRIC_DEEPSLATE_TILES);
+
         blockWithItem((ModBlocks.CLEAR_TIBERGLASS));
         blockWithItem((ModBlocks.MOSAIC_TIBERGLASS));
         blockWithItem((ModBlocks.GDI_TIBERGLASS));
@@ -308,6 +311,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.MARIKA_OAK_LEAVES);
 
         //Rotated Pillars:
+        axisBlock(((RotatedPillarBlock) ModBlocks.VITRIC_DEEPSLATE.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/vitric_deepslate"),
+                new ResourceLocation(CrystalTech.MOD_ID, "block/vitric_deepslate_top"));
+        blockItem(ModBlocks.VITRIC_DEEPSLATE);
+
         axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar"),
                 new ResourceLocation(CrystalTech.MOD_ID, "block/lg_core_block"));
         blockItem(ModBlocks.CS_PILLAR);
@@ -574,6 +581,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) ModBlocks.ABOREUS_STONE_STAIRS.get(), blockTexture(ModBlocks.ABOREUS_STONE.get()));
         stairsBlock((StairBlock) ModBlocks.ABOREUS_STONE_BRICK_STAIRS.get(), blockTexture(ModBlocks.ABOREUS_STONE_BRICKS.get()));
 
+        stairsBlock((StairBlock) ModBlocks.VITRIC_DEEPSLATE_BRICK_STAIRS.get(), blockTexture(ModBlocks.VITRIC_DEEPSLATE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.VITRIC_DEEPSLATE_TILE_STAIRS.get(), blockTexture(ModBlocks.VITRIC_DEEPSLATE_TILES.get()));
+
         stairsBlock((StairBlock) ModBlocks.RIPARIUS_CRYSTAL_STAIRS.get(), blockTexture(ModBlocks.RIPARIUS_CRYSTAL.get()));
         stairsBlock((StairBlock) ModBlocks.VINIFERA_CRYSTAL_STAIRS.get(), blockTexture(ModBlocks.VINIFERA_CRYSTAL.get()));
         stairsBlock((StairBlock) ModBlocks.CRUENTUS_CRYSTAL_STAIRS.get(), blockTexture(ModBlocks.CRUENTUS_CRYSTAL.get()));
@@ -639,6 +649,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
        slabBlock((SlabBlock) ModBlocks.PLAGUED_STONE_SLAB.get(), blockTexture(ModBlocks.INFESTED_STONE.get()), blockTexture(ModBlocks.INFESTED_STONE.get()));
        slabBlock((SlabBlock) ModBlocks.PLAGUED_GRANITE_SLAB.get(), blockTexture(ModBlocks.INFESTED_GRANITE.get()), blockTexture(ModBlocks.INFESTED_GRANITE.get()));
        slabBlock((SlabBlock) ModBlocks.PLAGUED_DIORITE_SLAB.get(), blockTexture(ModBlocks.INFESTED_DIORITE.get()), blockTexture(ModBlocks.INFESTED_DIORITE.get()));
+
+       slabBlock((SlabBlock) ModBlocks.VITRIC_DEEPSLATE_BRICK_SLAB.get(), blockTexture(ModBlocks.VITRIC_DEEPSLATE_BRICKS.get()), blockTexture(ModBlocks.VITRIC_DEEPSLATE_BRICKS.get()));
+       slabBlock((SlabBlock) ModBlocks.VITRIC_DEEPSLATE_TILE_SLAB.get(), blockTexture(ModBlocks.VITRIC_DEEPSLATE_TILES.get()), blockTexture(ModBlocks.VITRIC_DEEPSLATE_TILES.get()));
 
         slabBlock((SlabBlock) ModBlocks.BLACK_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.BLACK_TIBERCRETE.get()), blockTexture(ModBlocks.BLACK_TIBERCRETE.get()));
         slabBlock((SlabBlock) ModBlocks.BLUE_TIBERCRETE_SLAB.get(), blockTexture(ModBlocks.BLUE_TIBERCRETE.get()), blockTexture(ModBlocks.BLUE_TIBERCRETE.get()));
@@ -790,6 +803,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         wallBlock((((WallBlock) ModBlocks.RIPARIUS_STONE_WALL.get())), blockTexture(( ModBlocks.RIPARIUS_STONE.get())));
         wallBlock((((WallBlock) ModBlocks.RIPARIUS_STONE_BRICK_WALL.get())), blockTexture(( ModBlocks.RIPARIUS_STONE_BRICKS.get())));
+
+        wallBlock((((WallBlock) ModBlocks.VITRIC_DEEPSLATE_BRICK_WALL.get())), blockTexture(( ModBlocks.VITRIC_DEEPSLATE_BRICKS.get())));
+        wallBlock((((WallBlock) ModBlocks.VITRIC_DEEPSLATE_TILE_WALL.get())), blockTexture(( ModBlocks.VITRIC_DEEPSLATE_TILES.get())));
 
         wallBlock((((WallBlock) ModBlocks.VINIFERA_STONE_WALL.get())), blockTexture(( ModBlocks.VINIFERA_STONE.get())));
         wallBlock((((WallBlock) ModBlocks.VINIFERA_STONE_BRICK_WALL.get())), blockTexture(( ModBlocks.VINIFERA_STONE_BRICKS.get())));

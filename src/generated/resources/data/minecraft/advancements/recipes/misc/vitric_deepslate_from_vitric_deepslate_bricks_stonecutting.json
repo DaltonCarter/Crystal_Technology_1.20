@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:vitric_deepslate_from_vitric_deepslate_bricks_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vitric_deepslate_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:vitric_deepslate_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_vitric_deepslate_bricks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:vitric_deepslate_from_vitric_deepslate_bricks_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

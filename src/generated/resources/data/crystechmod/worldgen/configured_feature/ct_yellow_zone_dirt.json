@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:disk",
+  "config": {
+    "half_height": 2,
+    "radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "max_inclusive": 5,
+        "min_inclusive": 1
+      }
+    },
+    "state_provider": {
+      "fallback": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "crystechmod:yellow_zone_cracked_dirt"
+        }
+      },
+      "rules": []
+    },
+    "target": {
+      "type": "minecraft:matching_blocks",
+      "blocks": [
+        "minecraft:dirt",
+        "minecraft:grass_block",
+        "crystechmod:seeded_dirt",
+        "crystechmod:red_zone_dirt",
+        "crystechmod:seeded_yellow_zone_cracked_dirt",
+        "crystechmod:seeded_red_zone_dirt"
+      ]
+    }
+  }
+}

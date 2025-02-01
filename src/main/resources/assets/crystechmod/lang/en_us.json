@@ -354,6 +354,19 @@
   "block.crystechmod.red_zone_sand": "Red Zone Sand",
   "block.crystechmod.lai_melon": "Lai Melon",
 
+  "block.crystechmod.vitric_bloom": "Vitric Bloom",
+  "block.crystechmod.vitric_rose": "Vitric Rose",
+
+  "block.crystechmod.vitric_deepslate": "Vitric Deepslate",
+  "block.crystechmod.vitric_deepslate_bricks": "Vitric Deepslate Bricks",
+  "block.crystechmod.vitric_deepslate_brick_stairs": "Vitric Deepslate Brick Stairs",
+  "block.crystechmod.vitric_deepslate_brick_slab": "Vitric Deepslate Brick Slab",
+  "block.crystechmod.vitric_deepslate_brick_wall": "Vitric Deepslate Brick Wall",
+  "block.crystechmod.vitric_deepslate_tiles": "Vitric Deepslate Tiles",
+  "block.crystechmod.vitric_deepslate_tile_stairs": "Vitric Deepslate Tile Stairs",
+  "block.crystechmod.vitric_deepslate_tile_slab": "Vitric Deepslate Tile Slab",
+  "block.crystechmod.vitric_deepslate_tile_wall": "Vitric Deepslate Tile Wall",
+
   "block.crystechmod.riparius_stone": "Riparius Stone",
   "block.crystechmod.riparius_stone_bricks": "Riparius Stone Bricks",
   "block.crystechmod.riparius_stone_brick_slab": "Riparius Stone Brick Slab",

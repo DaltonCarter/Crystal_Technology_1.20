@@ -209,8 +209,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.WHITE_TIBERCRETE_STAIRS);
         evenSimplerBlockItem(ModBlocks.YELLOW_TIBERCRETE_STAIRS);
 
+        evenSimplerBlockItem(ModBlocks.VITRIC_DEEPSLATE_TILE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.VITRIC_DEEPSLATE_BRICK_STAIRS);
+
         evenSimplerBlockItem(ModBlocks.CS_SCAFFOLD_STAIRS);
         evenSimplerBlockItem(ModBlocks.CS_SCAFFOLD_SLAB);
+        evenSimplerBlockItem(ModBlocks.VITRIC_DEEPSLATE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.VITRIC_DEEPSLATE_TILE_SLAB);
         evenSimplerBlockItem(ModBlocks.CS_CATWALK_W_STAIRS);
         evenSimplerBlockItem(ModBlocks.CS_CATWALK_W_SLAB);
         evenSimplerBlockItem(ModBlocks.CS_CATWALK_BL_STAIRS);
@@ -464,6 +469,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem((ModBlocks.CT_TILE_WALL_P_3), ModBlocks.CT_TILE_P_3);
 
 
+        wallItem((ModBlocks.VITRIC_DEEPSLATE_BRICK_WALL), ModBlocks.VITRIC_DEEPSLATE_BRICKS);
+        wallItem((ModBlocks.VITRIC_DEEPSLATE_TILE_WALL), ModBlocks.VITRIC_DEEPSLATE_TILES);
 
 
         wallItem((ModBlocks.INFESTED_COBBLE_WALL), ModBlocks.INFESTED_COBBLE);

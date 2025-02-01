@@ -63,6 +63,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ILLUMINA_BLOCK.get());
         this.dropSelf(ModBlocks.KRYON_BLOCK.get());
 
+        this.dropSelf(ModBlocks.VITRIC_DEEPSLATE.get());
+        this.dropSelf(ModBlocks.VITRIC_DEEPSLATE_BRICKS.get());
+        this.dropSelf(ModBlocks.VITRIC_DEEPSLATE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.VITRIC_DEEPSLATE_BRICK_STAIRS.get());
+
+        this.dropSelf(ModBlocks.VITRIC_DEEPSLATE_TILES.get());
+        this.dropSelf(ModBlocks.VITRIC_DEEPSLATE_TILE_WALL.get());
+        this.dropSelf(ModBlocks.VITRIC_DEEPSLATE_TILE_STAIRS.get());
+
         this.dropSelf(ModBlocks.GUNDANIUM_BLOCK.get());
         this.dropSelf(ModBlocks.ALYTHUM_BLOCK.get());
         this.dropSelf(ModBlocks.ILLYRIM_BLOCK.get());
@@ -644,6 +653,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         //Slabs:
         this.add(ModBlocks.PLAGUED_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.PLAGUED_SLAB.get()));
+
+        this.add(ModBlocks.VITRIC_DEEPSLATE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.VITRIC_DEEPSLATE_BRICK_SLAB.get()));
+
+        this.add(ModBlocks.VITRIC_DEEPSLATE_TILE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.VITRIC_DEEPSLATE_TILE_SLAB.get()));
 
         this.add(ModBlocks.EMBER_OAK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.EMBER_OAK_SLAB.get()));

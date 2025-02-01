@@ -33,6 +33,14 @@ public class ModTags {
         public static final TagKey<Block> CONCRETES= tag("concretes");
         public static final TagKey<Block> TIBERIUM_FLOWERS= tag("tiberium_flowers");
 
+
+        //Worldgen & Carvers
+        public static final TagKey<Block> VITRIC_EXPANSE_STONES= tag("vitric_expanse_stones");
+
+        public static final TagKey<Block> VITRIC_EXPANSE_YZ_CARVER= tag("vitric_expanse_yz_carver");
+        public static final TagKey<Block> VITRIC_EXPANSE_RZ_CARVER= tag("vitric_expanse_rz_carver");
+
+        //Ores:
         public static final TagKey<Block> GUNDANIUM_ORES= tag("gundanium_ores");
         public static final TagKey<Block> ALYTHUM_ORES= tag("alythum_ores");
         public static final TagKey<Block> AERIES_ORES= tag("aeries_ores");

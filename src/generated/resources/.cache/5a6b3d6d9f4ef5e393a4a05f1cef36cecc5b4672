@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-22T22:28:32.2552461	Tags for minecraft:item mod id crystechmod
+// 1.20.1	2025-01-30T15:21:25.1581751	Tags for minecraft:item mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/items/aeries_ores.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/items/alythum_ores.json
 46de90b7b6a6a287548f896235af80124a350b93 data/crystechmod/tags/items/concretes.json
@@ -14,6 +14,7 @@ c7bbac2058df90e9377b5e00ecc05db2c0213cad data/crystechmod/tags/items/kryon_ores.
 7ff009a6ce8d964af59c35e91e257d0fca7cfd07 data/crystechmod/tags/items/plagued_logs.json
 ecf2a3889f87177c168a6ffc2c5f25e077381f19 data/crystechmod/tags/items/sticks.json
 39acdcf33383e05a367faca9c1c896cc6cdba9c0 data/crystechmod/tags/items/tibercrete_sands.json
+d1f3b267efaa0e25e62f7c95f49be08e24c1a785 data/forge/tags/items/dusts.json
 2e0f8661c75c39419b1d57f9ec8c99eba7866bf2 data/forge/tags/items/gems.json
 ddd39588a828097998b3e381633c9bafbc6202a5 data/forge/tags/items/ores.json
 30d6b9e14647b96ad4fe3ced67c6c5869760118b data/minecraft/tags/items/creeper_drop_music_discs.json

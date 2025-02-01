@@ -220,7 +220,7 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> GUNDANIUM_HAMMER = ITEMS.register("gundanium_hammer",
             () -> new HammerItem(ModToolTiers.GUNDANIUM, 1, -1f,
-                    new Item.Properties()));
+                    new Item.Properties().durability(1500)));
 
     public static final RegistryObject<Item> ALYTHUM_SWORD = ITEMS.register("alythum_sword",
             () -> new SwordItem(ModToolTiers.ALYTHUM, 4, -1.5f,
@@ -248,7 +248,7 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> ALYTHUM_HAMMER = ITEMS.register("alythum_hammer",
             () -> new HammerItem(ModToolTiers.ALYTHUM, 3, -2f,
-                    new Item.Properties()));
+                    new Item.Properties().durability(5000)));
 
     public static final RegistryObject<Item> PLAGUED_BOW = ITEMS.register("plagued_bow",
             () -> new BowItem(new Item.Properties().durability(684)));

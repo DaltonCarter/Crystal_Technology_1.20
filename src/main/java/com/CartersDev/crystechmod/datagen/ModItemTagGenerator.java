@@ -53,6 +53,13 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.tag(ItemTags.PLANKS)
                 .addTag(ModTags.Items.MOD_PLANKS);
 
+        this.tag(Tags.Items.DUSTS)
+                .add(ModItems.IRON_DUST.get(),
+                    ModItems.GOLD_DUST.get(),
+                    ModItems.ALYTHUM_DUST.get(),
+                    ModItems.GUNDANIUM_DUST.get(),
+                        ModItems.COPPER_DUST.get());
+
 
         this.tag(ItemTags.TRIMMABLE_ARMOR)
                 .add(

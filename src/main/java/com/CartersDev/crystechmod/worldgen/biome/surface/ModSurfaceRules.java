@@ -110,17 +110,18 @@ public class ModSurfaceRules {
                     SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, SNOW_BLOCK)
             );
 
-            SurfaceRules.RuleSource gravelStoneSurface = SurfaceRules.sequence(
-                    SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, GRAVEL),
-                    SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, STONE)
+            SurfaceRules.RuleSource yellowZoneSurface = SurfaceRules.sequence(
+                    SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, YELLOW_ZONE_CRACKED_DIRT),
+                    SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, INFESTED_STONE)
             );
 
-            SurfaceRules.RuleSource gravelBeachSurface = SurfaceRules.sequence(
+            SurfaceRules.RuleSource redZoneSurface = SurfaceRules.sequence(
                     SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove63, AIR), SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove62, WATER), GRAVEL))),
-                    SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, GRAVEL)
+                    SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, INFESTED_STONE)
             );
 
             SurfaceRules.RuleSource yzBeach = SurfaceRules.sequence(
+                    SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove63, AIR), SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove62, TIBERIUM_WATER), YELLOW_ZONE_SAND))),
                     SurfaceRules.ifTrue(surfaceNoiseAbove(1.5D), GRAVEL), YELLOW_ZONE_SAND
             );
 
@@ -139,26 +140,20 @@ public class ModSurfaceRules {
                     RED_ZONE_SAND
             );
 
-//            SurfaceRules.RuleSource mixedColdDesertSurface = SurfaceRules.sequence(
-//                    SurfaceRules.ifTrue(surfaceNoiseAbove(3.4D), powderedSnowSurface),
-//                    SurfaceRules.sequence(SurfaceRules.ifTrue(surfaceNoiseAbove(2.6D), snowSurface),
-//                            gravelStoneSurface
-//                    ));
-
 //            SurfaceRules.RuleSource volcanoSurface = SurfaceRules.sequence(
 //                    SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, BASALT),
 //                    SMOOTH_BASALT
 //            );
 
             // Sandstone linings
-//            SurfaceRules.RuleSource sandstoneLinedSand = SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, SANDSTONE), SAND);
-//            SurfaceRules.RuleSource lushDesertSandstoneLinedOrangeSand = SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, ORANGE_SANDSTONE), mixedLushDesertSurface);
-//            SurfaceRules.RuleSource blackSandstoneLining = SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, BLACK_SANDSTONE), BLACK_SAND);
-//            SurfaceRules.RuleSource coldDesertStoneLinedGravelSnow = SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, STONE), mixedColdDesertSurface);
+            SurfaceRules.RuleSource yellowZoneSandstoneLinedSand = SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, YELLOW_ZONE_SANDSTONE), YELLOW_ZONE_SAND);
+            SurfaceRules.RuleSource yellowZoneBeach = SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, YELLOW_ZONE_SANDSTONE), yzBeach);
+            SurfaceRules.RuleSource redZoneSandstoneLinedSand = SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, RED_ZONE_SANDSTONE), RED_ZONE_SAND);
+            SurfaceRules.RuleSource redZoneBeach = SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, RED_ZONE_SANDSTONE), rzBeach);
 //
             return SurfaceRules.sequence(
-                    SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.HORNSENT_HILLS),
-                            SurfaceRules.ifTrue(surfaceNoiseAbove(1.9D), STONE)
+                    SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.INFERNO_PEAK),
+                            SurfaceRules.ifTrue(SurfaceRules.steep(), MAGMA)
                     ));
 //                    SurfaceRules.ifTrue(SurfaceRules.isBiome(BOPBiomes.ROCKY_RAINFOREST),
 //                            SurfaceRules.sequence(SurfaceRules.ifTrue(surfaceNoiseAbove(4.0D), LIGHT_BLUE_TERRACOTTA),
@@ -175,10 +170,10 @@ public class ModSurfaceRules {
 //                                                    SurfaceRules.ifTrue(SurfaceRules.isBiome(BOPBiomes.DRYLAND),
 //                                                            SurfaceRules.ifTrue(surfaceNoiseAbove(1.75D), sandstoneLinedSand)
 //                                                    ),
-//                                                    SurfaceRules.ifTrue(SurfaceRules.isBiome(BOPBiomes.DUNE_BEACH), sandstoneLinedSand),
-//                                                    SurfaceRules.ifTrue(SurfaceRules.isBiome(BOPBiomes.COLD_DESERT), coldDesertStoneLinedGravelSnow),
-//                                                    SurfaceRules.ifTrue(SurfaceRules.isBiome(BOPBiomes.LUSH_DESERT), lushDesertSandstoneLinedOrangeSand),
-//                                                    SurfaceRules.ifTrue(SurfaceRules.isBiome(BOPBiomes.VOLCANIC_PLAINS), blackSandstoneLining)
+//                                                    SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.YELLOW_ZONE_SHORE), yellowZoneSandstoneLinedSand),
+//                                                    SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.TIBERIAN_DESERT, ModBiomes.TIBERIAN_DESERT_HILLS), yellowZoneDesertSurface),
+//                                                    SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.SCORCHED_DESERT), redZoneDesertSurface),
+//                                                    SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.RED_ZONE_SHORE), redZoneSandstoneLining)
 //                                            )
 //                                    ),
 //                                    SurfaceRules.ifTrue(
@@ -250,7 +245,8 @@ public class ModSurfaceRules {
 //                                                    SurfaceRules.ifTrue(SurfaceRules.isBiome(BOPBiomes.CRAG, BOPBiomes.ROCKY_RAINFOREST), GRAVEL),
 //                                                    SurfaceRules.ifTrue(
 //                                                            SurfaceRules.isBiome(BOPBiomes.VOLCANO),
-//                                                            SurfaceRules.ifTrue(surfaceNoiseAbove(2.7D), SMOOTH_BASALT)
+//                                                            SurfaceRules.ifTrue(surfaceNoiseAbove(2.7D), SMOOTH_BASALT),
+//                                                            SurfaceRules.steep()
 //                                                    )
 //                                            )
 //                                    )

@@ -2,6 +2,7 @@ package com.CartersDev.crystechmod.worldgen;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
+import com.CartersDev.crystechmod.util.ModTags;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -52,6 +53,22 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_QUALRITE_ORE_KEY = registerKey("qualrite_ores");
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_ANCIENT_DEBRIS_KEY = registerKey("ct_ancient_debris");
 
+        //Stones & Dirts:
+    public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_YELLOW_ZONE_DIRT_KEY = registerKey("yellow_zone_dirt");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_SEEDED_YELLOW_ZONE_DIRT_KEY = registerKey("seeded_yellow_zone_dirt");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_RED_ZONE_DIRT_KEY = registerKey("red_zone_dirt");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_SEEDED_RED_ZONE_DIRT_KEY = registerKey("seeded_red_zone_dirt");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_INFESTED_GRANITE_KEY = registerKey("infested_granite");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_INFESTED_DIORITE_KEY = registerKey("infested_diorite");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_INFESTED_ANDESITE_KEY = registerKey("infested_andesite");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_VITRIC_DEEPSLATE_KEY = registerKey("vitric_deepslate");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_RIPARIUS_STONE_CLUMP_KEY = registerKey("ct_riparius_stone_clump");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_VINIFERA_STONE_CLUMP_KEY = registerKey("ct_vinifera_stone_clump");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_CRUENTUS_STONE_CLUMP_KEY = registerKey("ct_cruentus_stone_clump");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_ABOREUS_STONE_CLUMP_KEY = registerKey("ct_aboreus_stone_clump");
+
+
+
         //Nether:
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_NETHER_ALYTHUM_ORE_KEY = registerKey("nether_alythum_ores");
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_NETHER_QUALRITE_ORE_KEY = registerKey("nether_qualrite_ores");
@@ -77,12 +94,38 @@ public class ModConfiguredFeatures {
         //Disks:
     public static final ResourceKey<ConfiguredFeature<?,?>> CT_MAGMA_KEY = registerKey("ct_magma");
     public static final ResourceKey<ConfiguredFeature<?,?>> CT_GLOWSTONE_KEY = registerKey("ct_glowstone");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_YELLOW_ZONE_SAND_KEY = registerKey("ct_yellow_zone_sand");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_RED_ZONE_SAND_KEY = registerKey("ct_red_zone_sand");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_TIBERIUM_SOIL_KEY = registerKey("ct_tiberium_soil");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_ICHOR_SOIL_KEY = registerKey("ct_ichor_soil");
+    
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_DIRT_KEY = registerKey("ct_dirt");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_YELLOW_ZONE_DIRT_KEY = registerKey("ct_yellow_zone_dirt");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_RED_ZONE_DIRT_KEY = registerKey("ct_red_zone_dirt");
+
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_SEEDED_DIRT_KEY = registerKey("ct_seeded_dirt");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_SEEDED_YELLOW_ZONE_DIRT_KEY = registerKey("ct_seeded_yellow_zone_dirt");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_SEEDED_RED_ZONE_DIRT_KEY = registerKey("ct_seeded_red_zone_dirt");
 
         //Springs:
+    
+        //Lakes:
+
+        //Blobs:
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_RIPARIUS_STONE_KEY = registerKey("ct_riparius_stone");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_VINIFERA_STONE_KEY = registerKey("ct_vinifera_stone");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_CRUENTUS_STONE_KEY = registerKey("ct_cruentus_stone");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_ABOREUS_STONE_KEY = registerKey("ct_aboreus_stone");
+
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_RIPARIUS_CRYSTAL_KEY = registerKey("ct_riparius_crystal");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_VINIFERA_CRYSTAL_KEY = registerKey("ct_vinifera_crystal");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_CRUENTUS_CRYSTAL_KEY = registerKey("ct_cruentus_crystal");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_ABOREUS_CRYSTAL_KEY = registerKey("ct_aboreus_crystal");
 
 
     public static void bootstrap (BootstapContext<ConfiguredFeature<?, ?>> context) {
 
+        RuleTest vitricExpanseBaseStone = new TagMatchTest(ModTags.Blocks.VITRIC_EXPANSE_STONES);
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
@@ -120,6 +163,8 @@ public class ModConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> ctAncientDebris = List.of(
                 OreConfiguration.target(stoneReplaceables, Blocks.ANCIENT_DEBRIS.defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, Blocks.ANCIENT_DEBRIS.defaultBlockState()));
+
+
 
         //Trees:
         register(context, PLAGUED_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
@@ -171,14 +216,32 @@ public class ModConfiguredFeatures {
                 )).ignoreVines().build());
 
         //Overworld Ores:
-        register(context,CRYSTECH_GUNDANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(gundaniumOre, 8));
-        register(context,CRYSTECH_ALYTHUM_ORE_KEY, Feature.ORE, new OreConfiguration(alythumOre, 5));
-        register(context,CRYSTECH_KRYON_ORE_KEY, Feature.ORE, new OreConfiguration(kryonOre, 4));
-        register(context,CRYSTECH_ILLUMINA_ORE_KEY, Feature.ORE, new OreConfiguration(illuminaOre, 4));
-        register(context,CRYSTECH_AERIES_ORE_KEY, Feature.ORE, new OreConfiguration(aeriesOre, 4));
-        register(context,CRYSTECH_QUALRITE_ORE_KEY, Feature.ORE, new OreConfiguration(qualriteOre, 4));
-        register(context,CRYSTECH_ENIGMA_ORE_KEY, Feature.ORE, new OreConfiguration(enigmaOre, 5));
-        register(context, CRYSTECH_ANCIENT_DEBRIS_KEY, Feature.ORE, new OreConfiguration(ctAncientDebris, 4));
+        register(context,CRYSTECH_GUNDANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(gundaniumOre, 10));
+        register(context,CRYSTECH_ALYTHUM_ORE_KEY, Feature.ORE, new OreConfiguration(alythumOre, 8));
+        register(context,CRYSTECH_KRYON_ORE_KEY, Feature.ORE, new OreConfiguration(kryonOre, 6));
+        register(context,CRYSTECH_ILLUMINA_ORE_KEY, Feature.ORE, new OreConfiguration(illuminaOre, 6));
+        register(context,CRYSTECH_AERIES_ORE_KEY, Feature.ORE, new OreConfiguration(aeriesOre, 6));
+        register(context,CRYSTECH_QUALRITE_ORE_KEY, Feature.ORE, new OreConfiguration(qualriteOre, 6));
+        register(context,CRYSTECH_ENIGMA_ORE_KEY, Feature.ORE, new OreConfiguration(enigmaOre, 7));
+        register(context, CRYSTECH_ANCIENT_DEBRIS_KEY, Feature.ORE, new OreConfiguration(ctAncientDebris, 5));
+
+        //Alt Ores for the Vitric Expanse:
+        register(context, CRYSTECH_YELLOW_ZONE_DIRT_KEY, Feature.ORE, new OreConfiguration(vitricExpanseBaseStone, ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get().defaultBlockState(), 33));
+        register(context, CRYSTECH_SEEDED_YELLOW_ZONE_DIRT_KEY, Feature.ORE, new OreConfiguration(vitricExpanseBaseStone, ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get().defaultBlockState(), 33));
+        register(context, CRYSTECH_RED_ZONE_DIRT_KEY, Feature.ORE, new OreConfiguration(vitricExpanseBaseStone, ModBlocks.RED_ZONE_DIRT.get().defaultBlockState(), 33));
+        register(context, CRYSTECH_SEEDED_RED_ZONE_DIRT_KEY, Feature.ORE, new OreConfiguration(vitricExpanseBaseStone, ModBlocks.SEEDED_RED_ZONE_DIRT.get().defaultBlockState(), 33));
+
+        register(context, CRYSTECH_INFESTED_GRANITE_KEY, Feature.ORE, new OreConfiguration(vitricExpanseBaseStone, ModBlocks.INFESTED_GRANITE.get().defaultBlockState(), 64));
+        register(context, CRYSTECH_INFESTED_DIORITE_KEY, Feature.ORE, new OreConfiguration(vitricExpanseBaseStone, ModBlocks.INFESTED_DIORITE.get().defaultBlockState(), 64));
+        register(context, CRYSTECH_INFESTED_ANDESITE_KEY, Feature.ORE, new OreConfiguration(vitricExpanseBaseStone, ModBlocks.INFESTED_ANDESITE.get().defaultBlockState(), 64));
+
+        register(context, CRYSTECH_VITRIC_DEEPSLATE_KEY, Feature.ORE, new OreConfiguration(vitricExpanseBaseStone, ModBlocks.VITRIC_DEEPSLATE.get().defaultBlockState(), 64));
+
+        register(context, CT_RIPARIUS_STONE_CLUMP_KEY, Feature.ORE, new OreConfiguration(vitricExpanseBaseStone, ModBlocks.RIPARIUS_STONE.get().defaultBlockState(), 33));
+        register(context, CT_VINIFERA_STONE_CLUMP_KEY, Feature.ORE, new OreConfiguration(vitricExpanseBaseStone, ModBlocks.VINIFERA_STONE.get().defaultBlockState(), 33));
+        register(context, CT_CRUENTUS_STONE_CLUMP_KEY, Feature.ORE, new OreConfiguration(vitricExpanseBaseStone, ModBlocks.CRUENTUS_STONE.get().defaultBlockState(), 33));
+        register(context, CT_ABOREUS_STONE_CLUMP_KEY, Feature.ORE, new OreConfiguration(vitricExpanseBaseStone, ModBlocks.ABOREUS_STONE.get().defaultBlockState(), 33));
+
 
 
         //Nether Ores:
@@ -239,12 +302,39 @@ public class ModConfiguredFeatures {
 
 
 //Misc Overworld:
+        //Blobs:
+        register(context, CT_RIPARIUS_STONE_KEY, Feature.FOREST_ROCK, new BlockStateConfiguration(ModBlocks.RIPARIUS_STONE.get().defaultBlockState()));
+        register(context, CT_VINIFERA_STONE_KEY, Feature.FOREST_ROCK, new BlockStateConfiguration(ModBlocks.VINIFERA_STONE.get().defaultBlockState()));
+        register(context, CT_CRUENTUS_STONE_KEY, Feature.FOREST_ROCK, new BlockStateConfiguration(ModBlocks.CRUENTUS_STONE.get().defaultBlockState()));
+        register(context, CT_ABOREUS_STONE_KEY, Feature.FOREST_ROCK, new BlockStateConfiguration(ModBlocks.ABOREUS_STONE.get().defaultBlockState()));
+
+        register(context, CT_RIPARIUS_CRYSTAL_KEY, Feature.FOREST_ROCK, new BlockStateConfiguration(ModBlocks.RIPARIUS_CRYSTAL.get().defaultBlockState()));
+        register(context, CT_VINIFERA_CRYSTAL_KEY, Feature.FOREST_ROCK, new BlockStateConfiguration(ModBlocks.VINIFERA_CRYSTAL.get().defaultBlockState()));
+        register(context, CT_CRUENTUS_CRYSTAL_KEY, Feature.FOREST_ROCK, new BlockStateConfiguration(ModBlocks.CRUENTUS_CRYSTAL.get().defaultBlockState()));
+        register(context, CT_ABOREUS_CRYSTAL_KEY, Feature.FOREST_ROCK, new BlockStateConfiguration(ModBlocks.ABOREUS_CRYSTAL.get().defaultBlockState()));
+        
         //Discs:
         register(context, CT_MAGMA_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.MAGMA_BLOCK), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK)), UniformInt.of(1, 3), 1));
         register(context, CT_GLOWSTONE_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.GLOWSTONE), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK)), UniformInt.of(1, 2), 1));
 
+        register(context, CT_YELLOW_ZONE_SAND_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.YELLOW_ZONE_SAND.get()), BlockPredicate.matchesBlocks(List.of(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.YZ_SANDSTONE.get())), UniformInt.of(2, 6), 2));
+        register(context, CT_RED_ZONE_SAND_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.RED_ZONE_SAND.get()), BlockPredicate.matchesBlocks(List.of(ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get(), ModBlocks.RZ_SANDSTONE.get())), UniformInt.of(2, 6), 2));
 
-        //springs
+
+        register(context, CT_TIBERIUM_SOIL_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.TIBERIUM_SOIL.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK)), UniformInt.of(1, 5), 2));
+        register(context, CT_ICHOR_SOIL_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.ICHOR_SOIL.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK)), UniformInt.of(1, 3), 1));
+
+        register(context, CT_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.GRASS_BLOCK), BlockPredicate.matchesBlocks(List.of(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get(), ModBlocks.SEEDED_DIRT.get())), UniformInt.of(1, 5), 2));
+        register(context, CT_SEEDED_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.SEEDED_DIRT.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get())), UniformInt.of(1, 5), 2));
+
+        register(context, CT_YELLOW_ZONE_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.SEEDED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get())), UniformInt.of(1, 5), 2));
+        register(context, CT_SEEDED_YELLOW_ZONE_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get())), UniformInt.of(1, 5), 2));
+
+        register(context, CT_RED_ZONE_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.RED_ZONE_DIRT.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.SEEDED_DIRT.get(), ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get())), UniformInt.of(1, 5), 2));
+        register(context, CT_SEEDED_RED_ZONE_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.SEEDED_RED_ZONE_DIRT.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get())), UniformInt.of(1, 5), 2));
+        //Springs
+
+        //Lakes
 
 
 

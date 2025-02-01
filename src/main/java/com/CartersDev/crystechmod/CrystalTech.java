@@ -57,6 +57,9 @@ public class CrystalTech {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public CrystalTech() {
+
+
+
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModTabs.register(modEventBus);
@@ -75,6 +78,8 @@ public class CrystalTech {
         ModPaintings.register(modEventBus);
         ModVillagers.register(modEventBus);
 
+
+
         ModSounds.register(modEventBus);
         ModEntities.register(modEventBus);
 
@@ -85,6 +90,7 @@ public class CrystalTech {
         ModParticles.register(modEventBus);
 
         ModTerraBlenderAPI.registerRegions();
+
 
         modEventBus.addListener(this::commonSetup);
 
@@ -116,10 +122,12 @@ public class CrystalTech {
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.overworld());
 
 
+
         });
 
 
     }
+
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 

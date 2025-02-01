@@ -1,0 +1,24 @@
+{
+  "values": [
+    "#crystechmod:vitric_expanse_stones",
+    "#crystechmod:gundanium_ores",
+    "#crystechmod:alythum_ores",
+    "#minecraft:iron_ores",
+    "#minecraft:copper_ores",
+    "crystechmod:tiberium_water_block",
+    "crystechmod:molten_tiberium_block",
+    "crystechmod:molten_blue_tiberium_block",
+    "crystechmod:yellow_zone_cracked_dirt",
+    "crystechmod:seeded_yellow_zone_cracked_dirt",
+    "minecraft:gravel",
+    "minecraft:suspicious_gravel",
+    "crystechmod:yz_sandstone",
+    "crystechmod:yellow_zone_sand",
+    "minecraft:calcite",
+    "minecraft:snow",
+    "minecraft:packed_ice",
+    "crystechmod:riparius_stone",
+    "crystechmod:vinifera_stone",
+    "crystechmod:tiberium_soil"
+  ]
+}

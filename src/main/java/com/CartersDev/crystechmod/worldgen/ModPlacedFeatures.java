@@ -2,6 +2,7 @@ package com.CartersDev.crystechmod.worldgen;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
+import com.CartersDev.crystechmod.fluid.ModFluids;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
@@ -13,7 +14,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraft.world.level.material.Fluids;
 
@@ -48,6 +48,27 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> CRYSTECH_END_ENIGMA_PLACED_KEY = registerKey("crystech_end_enigma_placed");
     public static final ResourceKey<PlacedFeature> CRYSTECH_END_KRYON_PLACED_KEY = registerKey("crystech_end_kryon_placed");
 
+    public static final ResourceKey<PlacedFeature> CRYSTECH_YELLOW_ZONE_DIRT_PLACED_KEY = registerKey("crystech_yellow_zone_dirt_placed");
+    public static final ResourceKey<PlacedFeature> CRYSTECH_SEEDED_YELLOW_ZONE_DIRT_PLACED_KEY = registerKey("crystech_seeded_yellow_zone_dirt_placed");
+    public static final ResourceKey<PlacedFeature> CRYSTECH_RED_ZONE_DIRT_PLACED_KEY = registerKey("crystech_red_zone_dirt_placed");
+    public static final ResourceKey<PlacedFeature> CRYSTECH_SEEDED_RED_ZONE_DIRT_PLACED_KEY = registerKey("crystech_seeded_red_zone_dirt_placed");
+
+    public static final ResourceKey<PlacedFeature> CRYSTECH_INFESTED_GRANITE_UPPER_PLACED_KEY = registerKey("crystech_infested_granite_upper_placed");
+    public static final ResourceKey<PlacedFeature> CRYSTECH_INFESTED_GRANITE_LOWER_PLACED_KEY = registerKey("crystech_infested_granite_lower_placed");
+
+    public static final ResourceKey<PlacedFeature> CRYSTECH_INFESTED_DIORITE_UPPER_PLACED_KEY = registerKey("crystech_infested_diorite_upper_placed");
+    public static final ResourceKey<PlacedFeature> CRYSTECH_INFESTED_DIORITE_LOWER_PLACED_KEY = registerKey("crystech_infested_diorite_lower_placed");
+
+    public static final ResourceKey<PlacedFeature> CRYSTECH_INFESTED_ANDESITE_UPPER_PLACED_KEY = registerKey("crystech_infested_andesite_upper_placed");
+    public static final ResourceKey<PlacedFeature> CRYSTECH_INFESTED_ANDESITE_LOWER_PLACED_KEY = registerKey("crystech_infested_andesite_lower_placed");
+
+    public static final ResourceKey<PlacedFeature> CRYSTECH_VITRIC_DEEPSLATE_PLACED_KEY = registerKey("crystech_vitric_deepslate_placed");
+
+    public static final ResourceKey<PlacedFeature> CT_RIPARIUS_STONE_CLUMP_PLACED_KEY = registerKey("ct_riparius_stone_clump_placed");
+    public static final ResourceKey<PlacedFeature> CT_VINIFERA_STONE_CLUMP_PLACED_KEY = registerKey("ct_vinifera_stone_clump_placed");
+    public static final ResourceKey<PlacedFeature> CT_CRUENTUS_STONE_CLUMP_PLACED_KEY = registerKey("ct_cruentus_stone_clump_placed");
+    public static final ResourceKey<PlacedFeature> CT_ABOREUS_STONE_CLUMP_PLACED_KEY = registerKey("ct_aboreus_stone_clump_placed");
+
     //Geode:
     public static final ResourceKey<PlacedFeature> TIBERIUM_GEODE_PLACED_KEY = registerKey("tiberium_geode_placed");
 
@@ -63,9 +84,37 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> CT_MAGMA_PLACED_KEY = registerKey("ct_magma_placed");
     public static final ResourceKey<PlacedFeature> CT_GLOWSTONE_PLACED_KEY = registerKey("ct_glowstone_placed");
 
+    public static final ResourceKey<PlacedFeature> CT_YELLOW_ZONE_SAND_KEY = registerKey("ct_yellow_zone_sand_placed");
+    public static final ResourceKey<PlacedFeature> CT_RED_ZONE_SAND_PLACED_KEY = registerKey("ct_red_zone_sand_placed");
+
+    public static final ResourceKey<PlacedFeature> CT_TIBERIUM_SOIL_PLACED_KEY = registerKey("ct_tiberium_soil_placed");
+    public static final ResourceKey<PlacedFeature> CT_ICHOR_SOIL_PLACED_KEY = registerKey("ct_ichor_soil_placed");
+
+    public static final ResourceKey<PlacedFeature> CT_DIRT_PLACED_KEY = registerKey("ct_dirt_placed");
+    public static final ResourceKey<PlacedFeature> CT_YELLOW_ZONE_DIRT_PLACED_KEY = registerKey("ct_yellow_zone_dirt_placed");
+    public static final ResourceKey<PlacedFeature> CT_RED_ZONE_DIRT_PLACED_KEY = registerKey("ct_red_zone_dirt_placed");
+
+    public static final ResourceKey<PlacedFeature> CT_SEEDED_DIRT_PLACED_KEY = registerKey("ct_seeded_dirt_placed");
+    public static final ResourceKey<PlacedFeature> CT_SEEDED_YELLOW_ZONE_DIRT_PLACED_KEY = registerKey("ct_seeded_yellow_zone_dirt_placed");
+    public static final ResourceKey<PlacedFeature> CT_SEEDED_RED_ZONE_DIRT_PLACED_KEY = registerKey("ct_seeded_red_zone_dirt_placed");
+
+
+    //Blobs:
+
+    public static final ResourceKey<PlacedFeature> CT_RIPARIUS_STONE_PLACED_KEY = registerKey("ct_riparius_stone_placed");
+    public static final ResourceKey<PlacedFeature> CT_VINIFERA_STONE_PLACED_KEY = registerKey("ct_vinifera_stone_placed");
+    public static final ResourceKey<PlacedFeature> CT_CRUENTUS_STONE_PLACED_KEY = registerKey("ct_cruentus_stone_placed");
+    public static final ResourceKey<PlacedFeature> CT_ABOREUS_STONE_PLACED_KEY = registerKey("ct_aboreus_stone_placed");
+
+    public static final ResourceKey<PlacedFeature> CT_RIPARIUS_CRYSTAL_PLACED_KEY = registerKey("ct_riparius_crystal_placed");
+    public static final ResourceKey<PlacedFeature> CT_VINIFERA_CRYSTAL_PLACED_KEY = registerKey("ct_vinifera_crystal_placed");
+    public static final ResourceKey<PlacedFeature> CT_CRUENTUS_CRYSTAL_PLACED_KEY = registerKey("ct_cruentus_crystal_placed");
+    public static final ResourceKey<PlacedFeature> CT_ABOREUS_CRYSTAL_PLACED_KEY = registerKey("ct_aboreus_crystal_placed");
+    
     //Springs:
 
-    //Overworld Features:
+    //Lakes:
+
 
 public static void bootstrap(BootstapContext<PlacedFeature> context) {
     HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -96,6 +145,10 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
     register(context, EMBER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.EMBER_KEY),
             VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.5f, 1),
                     ModBlocks.EMBER_OAK_SAPLING.get()));
+
+    register(context, PLAGUED_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PLAGUED_KEY),
+            VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.5f, 2),
+                    ModBlocks.PLAGUED_SAPLING.get()));
 
     //Ores:
             //Overworld:
@@ -130,6 +183,73 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
     register(context, CRYSTECH_DEBRIS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_ANCIENT_DEBRIS_KEY),
             ModOrePlacement.rareOrePlacement(5,
                     HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(30))));
+
+
+
+    //Alt Stones and dirts for the Vitric Expanse:
+
+    register(context, CRYSTECH_YELLOW_ZONE_DIRT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_YELLOW_ZONE_DIRT_KEY),
+            ModOrePlacement.commonOrePlacement(7,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(160))));
+
+    register(context, CRYSTECH_SEEDED_YELLOW_ZONE_DIRT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_SEEDED_YELLOW_ZONE_DIRT_KEY),
+            ModOrePlacement.commonOrePlacement(7,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(160))));
+
+    register(context, CRYSTECH_RED_ZONE_DIRT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_RED_ZONE_DIRT_KEY),
+            ModOrePlacement.commonOrePlacement(7,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(160))));
+
+    register(context, CRYSTECH_SEEDED_RED_ZONE_DIRT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_SEEDED_RED_ZONE_DIRT_KEY),
+            ModOrePlacement.commonOrePlacement(7,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(160))));
+
+
+    register(context, CRYSTECH_INFESTED_GRANITE_UPPER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_INFESTED_GRANITE_KEY),
+            ModOrePlacement.rareOrePlacement(6,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(64), VerticalAnchor.absolute(128))));
+
+    register(context, CRYSTECH_INFESTED_GRANITE_LOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_INFESTED_GRANITE_KEY),
+            ModOrePlacement.commonOrePlacement(2,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(60))));
+
+    register(context, CRYSTECH_INFESTED_DIORITE_UPPER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_INFESTED_DIORITE_KEY),
+            ModOrePlacement.rareOrePlacement(6,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(64), VerticalAnchor.absolute(128))));
+
+    register(context, CRYSTECH_INFESTED_DIORITE_LOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_INFESTED_DIORITE_KEY),
+            ModOrePlacement.commonOrePlacement(2,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(60))));
+
+    register(context, CRYSTECH_INFESTED_ANDESITE_UPPER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_INFESTED_ANDESITE_KEY),
+            ModOrePlacement.rareOrePlacement(6,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(64), VerticalAnchor.absolute(128))));
+
+    register(context, CRYSTECH_INFESTED_ANDESITE_LOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_INFESTED_ANDESITE_KEY),
+            ModOrePlacement.commonOrePlacement(2,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(60))));
+
+    register(context, CRYSTECH_VITRIC_DEEPSLATE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_VITRIC_DEEPSLATE_KEY),
+            ModOrePlacement.commonOrePlacement(4,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(0))));
+
+    register(context, CT_RIPARIUS_STONE_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_RIPARIUS_STONE_CLUMP_KEY),
+            ModOrePlacement.commonOrePlacement(2,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(60))));
+
+    register(context, CT_VINIFERA_STONE_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_VINIFERA_STONE_CLUMP_KEY),
+            ModOrePlacement.commonOrePlacement(2,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(60))));
+
+    register(context, CT_CRUENTUS_STONE_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_CRUENTUS_STONE_CLUMP_KEY),
+            ModOrePlacement.commonOrePlacement(2,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(0))));
+
+    register(context, CT_ABOREUS_STONE_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_ABOREUS_STONE_CLUMP_KEY),
+            ModOrePlacement.commonOrePlacement(2,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(0))));
+
+
 
 
     //Nether:
@@ -192,9 +312,65 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
     register(context, CT_GLOWSTONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_GLOWSTONE_KEY),
             List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
+    register(context, CT_YELLOW_ZONE_SAND_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_YELLOW_ZONE_SAND_KEY),
+            List.of(CountPlacement.of(3), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BlockPredicateFilter.forPredicate(BlockPredicate.matchesFluids(Fluids.WATER, ModFluids.SOURCE_TIBERIUM_WATER.get())), BiomeFilter.biome()));
+
+    register(context, CT_RED_ZONE_SAND_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_RED_ZONE_SAND_KEY),
+            List.of(CountPlacement.of(3), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BlockPredicateFilter.forPredicate(BlockPredicate.matchesFluids(Fluids.WATER, ModFluids.SOURCE_TIBERIUM_WATER.get())), BiomeFilter.biome()));
+
+    register(context, CT_TIBERIUM_SOIL_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_TIBERIUM_SOIL_KEY),
+            List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+    register(context, CT_ICHOR_SOIL_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_ICHOR_SOIL_KEY),
+            List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+    register(context, CT_DIRT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_DIRT_KEY),
+            List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+    register(context, CT_SEEDED_DIRT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_SEEDED_DIRT_KEY),
+            List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+    register(context, CT_YELLOW_ZONE_DIRT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_YELLOW_ZONE_DIRT_KEY),
+            List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+    register(context, CT_SEEDED_YELLOW_ZONE_DIRT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_SEEDED_YELLOW_ZONE_DIRT_KEY),
+            List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+    register(context, CT_RED_ZONE_DIRT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_RED_ZONE_DIRT_KEY),
+            List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+    register(context, CT_SEEDED_RED_ZONE_DIRT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_SEEDED_RED_ZONE_DIRT_KEY),
+            List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+    //Blobs:
+
+    register(context, CT_RIPARIUS_STONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_RIPARIUS_STONE_KEY),
+            List.of(CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+    register(context, CT_VINIFERA_STONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_VINIFERA_STONE_KEY),
+            List.of(CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+    register(context, CT_CRUENTUS_STONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_CRUENTUS_STONE_KEY),
+            List.of(CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+    register(context, CT_ABOREUS_STONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_ABOREUS_STONE_KEY),
+            List.of(CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+    register(context, CT_RIPARIUS_CRYSTAL_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_RIPARIUS_CRYSTAL_KEY),
+            List.of(CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+    register(context, CT_VINIFERA_CRYSTAL_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_VINIFERA_CRYSTAL_KEY),
+            List.of(CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+    register(context, CT_CRUENTUS_CRYSTAL_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_CRUENTUS_CRYSTAL_KEY),
+            List.of(CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+    register(context, CT_ABOREUS_CRYSTAL_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_ABOREUS_CRYSTAL_KEY),
+            List.of(CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+    
     //Springs:
 
-
+    //Lakes:
 
 }
 

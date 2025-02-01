@@ -5,6 +5,7 @@ import com.CartersDev.crystechmod.worldgen.ModBiomeModifiers;
 import com.CartersDev.crystechmod.worldgen.ModConfiguredFeatures;
 import com.CartersDev.crystechmod.worldgen.ModPlacedFeatures;
 import com.CartersDev.crystechmod.worldgen.biome.ModBiomes;
+import com.CartersDev.crystechmod.worldgen.carvers.ModCarvers;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
@@ -18,6 +19,7 @@ import java.util.concurrent.CompletableFuture;
 public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
 
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
+            .add(Registries.CONFIGURED_CARVER, ModCarvers::bootstrap)
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
             .add(Registries.BIOME, ModBiomes::bootstrap)

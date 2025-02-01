@@ -404,11 +404,6 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModItems.MARIKA_OAK_SIGN.get());
                         output.accept(ModItems.MARIKA_OAK_HANGING_SIGN.get());
 
-                        output.accept(ModBlocks.INFESTED_ANDESITE.get());
-                        output.accept(ModBlocks.PLAGUED_ANDESITE_STAIRS.get());
-                        output.accept(ModBlocks.PLAGUED_ANDESITE_SLAB.get());
-                        output.accept(ModBlocks.PLAGUED_ANDESITE_WALL.get());
-
                         output.accept(ModBlocks.INFESTED_COBBLE.get());
                         output.accept(ModBlocks.INFESTED_COBBLE_SLAB.get());
                         output.accept(ModBlocks.INFESTED_COBBLE_STAIRS.get());
@@ -428,6 +423,22 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.PLAGUED_GRANITE_STAIRS.get());
                         output.accept(ModBlocks.PLAGUED_GRANITE_SLAB.get());
                         output.accept(ModBlocks.PLAGUED_GRANITE_WALL.get());
+
+                        output.accept(ModBlocks.INFESTED_ANDESITE.get());
+                        output.accept(ModBlocks.PLAGUED_ANDESITE_STAIRS.get());
+                        output.accept(ModBlocks.PLAGUED_ANDESITE_SLAB.get());
+                        output.accept(ModBlocks.PLAGUED_ANDESITE_WALL.get());
+
+                        output.accept(ModBlocks.VITRIC_DEEPSLATE.get());
+                        output.accept(ModBlocks.VITRIC_DEEPSLATE_BRICKS.get());
+                        output.accept(ModBlocks.VITRIC_DEEPSLATE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.VITRIC_DEEPSLATE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.VITRIC_DEEPSLATE_BRICK_WALL.get());
+
+                        output.accept(ModBlocks.VITRIC_DEEPSLATE_TILES.get());
+                        output.accept(ModBlocks.VITRIC_DEEPSLATE_TILE_STAIRS.get());
+                        output.accept(ModBlocks.VITRIC_DEEPSLATE_TILE_SLAB.get());
+                        output.accept(ModBlocks.VITRIC_DEEPSLATE_TILE_WALL.get());
 
                         output.accept(ModBlocks.RIPARIUS_STONE.get());
                         output.accept(ModBlocks.RIPARIUS_STONE_STAIRS.get());

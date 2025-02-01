@@ -1,14 +1,7 @@
 {
   "values": [
-    "crystechmod:deepslate_aeries_ore",
-    "crystechmod:nether_aeries_ore",
     "crystechmod:deepslate_enigma_ore",
-    "crystechmod:end_enigma_ore",
-    "crystechmod:deepslate_illumina_ore",
-    "crystechmod:deepslate_kryon_ore",
-    "crystechmod:nether_kryon_ore",
-    "crystechmod:end_kryon_ore",
-    "crystechmod:nether_alythum_ore",
-    "crystechmod:nether_qualrite_ore"
+    "crystechmod:enigma_ore",
+    "crystechmod:end_enigma_ore"
   ]
 }

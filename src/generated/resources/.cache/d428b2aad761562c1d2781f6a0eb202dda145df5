@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-20T21:28:55.9101489	Item Models: crystechmod
+// 1.20.1	2025-01-29T01:33:27.3893369	Item Models: crystechmod
 7d9fe5e88433390f9cd29dab7e515bddd3fbdf4b assets/crystechmod/models/item/aboreus_crystal_slab.json
 0e376de85f99a387d23f7130ff296ce0b5fe876e assets/crystechmod/models/item/aboreus_crystal_stairs.json
 2ced509a911b88c37b68b1a1278f10fc986798c4 assets/crystechmod/models/item/aboreus_crystal_wall.json
@@ -618,6 +618,12 @@ f7561c5adee3d153de480f27e7b947220b694ec6 assets/crystechmod/models/item/vinifera
 97667635dff44082bc28f22e2a467921fde8207c assets/crystechmod/models/item/vinifera_stone_slab.json
 0eef7d2aa5afbe8aca0858af26c3e4a7a60cb86d assets/crystechmod/models/item/vinifera_stone_stairs.json
 a039969901458750d6a96395083f53367de701b6 assets/crystechmod/models/item/vinifera_stone_wall.json
+75968cb6f1dc69a1e6839985e49698ef65bcdc18 assets/crystechmod/models/item/vitric_deepslate_brick_slab.json
+9e3d9d9dd70f36583714391c4d4bba57a8af26c3 assets/crystechmod/models/item/vitric_deepslate_brick_stairs.json
+2863d14a76d37c62734152ebb546e5f1fe3a40de assets/crystechmod/models/item/vitric_deepslate_brick_wall.json
+82a96e32411c28af55b9491ba4752e9b08f859b5 assets/crystechmod/models/item/vitric_deepslate_tile_slab.json
+3f37a2c7fb2794d9949ee6e86a330ce102c60d48 assets/crystechmod/models/item/vitric_deepslate_tile_stairs.json
+3ebf5fccb62801b142e3a4a16f079f2196c7f646 assets/crystechmod/models/item/vitric_deepslate_tile_wall.json
 ed261cc022ece248e1c6a6ff0c95a64d2acd1f6a assets/crystechmod/models/item/voice_rhythm_2_music_disc.json
 af9ed268b2a674dca23198dbd4d87d009c45eacc assets/crystechmod/models/item/what_lurks_music_disc.json
 cdd31d934f5180f44c93bab70e0a761929573895 assets/crystechmod/models/item/white_tibercrete_brick_slab.json

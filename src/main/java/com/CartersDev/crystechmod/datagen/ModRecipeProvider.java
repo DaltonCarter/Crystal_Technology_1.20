@@ -3428,6 +3428,25 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RZ_SANDSTONE.get(), ModBlocks.CHISELED_RZ_SANDSTONE.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.SMOOTH_RZ_SANDSTONE.get(), ModBlocks.CHISELED_RZ_SANDSTONE.get());
 
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VITRIC_DEEPSLATE_BRICKS.get(), ModBlocks.VITRIC_DEEPSLATE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VITRIC_DEEPSLATE_TILES.get(), ModBlocks.VITRIC_DEEPSLATE.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VITRIC_DEEPSLATE.get(), ModBlocks.VITRIC_DEEPSLATE_BRICKS.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VITRIC_DEEPSLATE_TILES.get(), ModBlocks.VITRIC_DEEPSLATE_BRICKS.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VITRIC_DEEPSLATE_BRICKS.get(), ModBlocks.VITRIC_DEEPSLATE_TILES.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VITRIC_DEEPSLATE.get(), ModBlocks.VITRIC_DEEPSLATE_TILES.get());
+
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VITRIC_DEEPSLATE_BRICK_WALL.get(), ModBlocks.VITRIC_DEEPSLATE_BRICKS.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VITRIC_DEEPSLATE_BRICK_SLAB.get(), ModBlocks.VITRIC_DEEPSLATE_BRICKS.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VITRIC_DEEPSLATE_BRICK_STAIRS.get(), ModBlocks.VITRIC_DEEPSLATE_BRICKS.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VITRIC_DEEPSLATE_TILE_WALL.get(), ModBlocks.VITRIC_DEEPSLATE_TILES.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VITRIC_DEEPSLATE_TILE_SLAB.get(), ModBlocks.VITRIC_DEEPSLATE_TILES.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VITRIC_DEEPSLATE_TILE_STAIRS.get(), ModBlocks.VITRIC_DEEPSLATE_TILES.get());
+
+
        
 
 //Tiberium Grinder:
