@@ -136,7 +136,7 @@ public class CrystalTech {
             ComposterBlock.COMPOSTABLES.put(ModBlocks.PLAGUED_SAPLING.get(),0.35f);
 
 
-            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.vitricExpanse());
+//            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.vitricExpanse());
 
 
 
