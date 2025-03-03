@@ -80,7 +80,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.HG_CORE_BLOCK.get());
         this.dropSelf(ModBlocks.FIRESTONE_BLOCK.get());
 
-        this.dropSelf(ModBlocks.INFESTED_STONE.get());
+
         this.dropSelf(ModBlocks.INFESTED_STONE_BRICKS.get());
         this.dropSelf(ModBlocks.INFESTED_COBBLE.get());
         this.dropSelf(ModBlocks.INFESTED_ANDESITE.get());
@@ -965,7 +965,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         //Ore Drops:
         this.add(ModBlocks.LAI_MELON.get(),
-                block -> createModGemOreDrops(ModBlocks.LAI_MELON.get(), ModItems.LAI_MELON_SLICE.get()));
+                block -> createModOreDrops(ModBlocks.LAI_MELON.get(), ModItems.LAI_MELON_SLICE.get()));
+
+        this.add(ModBlocks.INFESTED_STONE.get(),
+                block -> createModCobbleLikeDrops(ModBlocks.INFESTED_STONE.get(), ModBlocks.INFESTED_COBBLE.get()));
 
         this.add(ModBlocks.AERIES_ORE.get(),
                 block -> createModGemOreDrops(ModBlocks.AERIES_ORE.get(), ModItems.AERIES_CRYSTAL.get()));
@@ -1126,6 +1129,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                         LootItem.lootTableItem(item)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 5.0F)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+    }
+
+    protected LootTable.Builder createModCobbleLikeDrops(Block pBlock, Block pBlock2) {
+        return createSilkTouchDispatchTable(pBlock,
+                this.applyExplosionDecay(pBlock,
+                        LootItem.lootTableItem(pBlock2)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 1.0F)))
+                               ));
     }
 
     @Override

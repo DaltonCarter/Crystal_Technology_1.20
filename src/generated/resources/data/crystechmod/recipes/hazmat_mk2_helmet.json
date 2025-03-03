@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "crystechmod:hazmat_mk1_helmet"
+    },
+    "I": {
+      "item": "crystechmod:ichor_leather"
+    },
+    "T": {
+      "item": "crystechmod:tiberium_composite_ingot"
+    }
+  },
+  "pattern": [
+    "TTT",
+    "IHI",
+    "   "
+  ],
+  "result": {
+    "item": "crystechmod:hazmat_mk2_helmet"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:gundanium_dust"
+    },
+    {
+      "item": "crystechmod:gundanium_dust"
+    },
+    {
+      "item": "crystechmod:alythum_dust"
+    },
+    {
+      "item": "crystechmod:alythum_dust"
+    },
+    {
+      "item": "crystechmod:qualrim_compound"
+    },
+    {
+      "item": "crystechmod:qualrim_compound"
+    }
+  ],
+  "result": {
+    "item": "crystechmod:illyrim_blend"
+  }
+}

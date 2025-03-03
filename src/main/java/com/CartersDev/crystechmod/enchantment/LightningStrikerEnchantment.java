@@ -12,6 +12,14 @@ public class LightningStrikerEnchantment extends Enchantment {
         super(pRarity, pCategory, pApplicableSlots);
     }
 
+    public int getMinCost(int pEnchantmentLevel) {
+        return 15;
+    }
+
+    public int getMaxCost(int pEnchantmentLevel) {
+        return super.getMinCost(pEnchantmentLevel) + 50;
+    }
+
     @Override
     public void doPostAttack(LivingEntity pAttacker, Entity pTarget, int pLevel) {
 

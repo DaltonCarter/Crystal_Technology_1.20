@@ -1,0 +1,12 @@
+{
+  "feature": "crystechmod:ct_cruentus_crystal_large_column",
+  "placement": [
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 1
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

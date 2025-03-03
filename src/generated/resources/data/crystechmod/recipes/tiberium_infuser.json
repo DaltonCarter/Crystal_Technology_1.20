@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:alythum_ingot"
+    },
+    "G": {
+      "item": "crystechmod:gundanium_block"
+    },
+    "I": {
+      "item": "crystechmod:illumina_crystal"
+    },
+    "K": {
+      "item": "crystechmod:kryon_crystal"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "pattern": [
+    "AIA",
+    "KRK",
+    "GKG"
+  ],
+  "result": {
+    "item": "crystechmod:tiberium_infuser"
+  },
+  "show_notification": true
+}

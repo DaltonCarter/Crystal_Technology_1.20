@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:illyrim_block"
+    },
+    "I": {
+      "item": "crystechmod:illyrim_ingot"
+    },
+    "S": {
+      "tag": "crystechmod:sticks"
+    }
+  },
+  "pattern": [
+    "IBI",
+    "ISI",
+    " S "
+  ],
+  "result": {
+    "item": "crystechmod:illyrim_hammer"
+  },
+  "show_notification": true
+}

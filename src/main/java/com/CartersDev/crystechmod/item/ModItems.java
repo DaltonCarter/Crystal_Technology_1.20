@@ -55,6 +55,12 @@ public static final RegistryObject<Item> TIBERIUM_FRUIT = ITEMS.register("tiberi
     public static final RegistryObject<Item> COOKED_INFECTED_MEAT = ITEMS.register("cooked_infected_meat",
             () -> new Item(new Item.Properties().food(ModFoods.COOKED_INFECTED_MEAT)));
 
+    public static final RegistryObject<Item> ZAIRAN_FRUIT_SALAD = ITEMS.register("zairan_fruit_salad",
+            () -> new Item(new Item.Properties().food(ModFoods.ZAIRAN_FRUIT_SALAD)));
+
+    public static final RegistryObject<Item> SABER_BREAD = ITEMS.register("saber_bread",
+            () -> new Item(new Item.Properties().food(ModFoods.SABER_BREAD)));
+
 
 
 //End of Foods
@@ -252,6 +258,37 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> PLAGUED_BOW = ITEMS.register("plagued_bow",
             () -> new BowItem(new Item.Properties().durability(684)));
+
+    public static final RegistryObject<Item> ILLYRIM_SWORD = ITEMS.register("illyrim_sword",
+            () -> new SwordItem(ModToolTiers.ILLYRIM, 6, -1.0f,
+                    new Item.Properties()));
+
+
+
+
+    public static final RegistryObject<Item> ILLYRIM_AXE = ITEMS.register("illyrim_axe",
+            () -> new AxeItem(ModToolTiers.ILLYRIM, 9, -1.5f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ILLYRIM_PICKAXE = ITEMS.register("illyrim_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.ILLYRIM, 5, -1.5f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ILLYRIM_SHOVEL = ITEMS.register("illyrim_shovel",
+            () -> new ShovelItem(ModToolTiers.ILLYRIM, 4, -1f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ILLYRIM_HOE = ITEMS.register("illyrim_hoe",
+            () -> new HoeItem(ModToolTiers.ILLYRIM, 0, 1f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ILLYRIM_PAXEL = ITEMS.register("illyrim_paxel",
+            () -> new PaxelItem(ModToolTiers.ILLYRIM, 5, 2f,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ILLYRIM_HAMMER = ITEMS.register("illyrim_hammer",
+            () -> new HammerItem(ModToolTiers.ILLYRIM, 5, -2f,
+                    new Item.Properties().durability(10000)));
     //End Tools
 
 
@@ -324,6 +361,23 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
     public static final RegistryObject<Item> HAZMAT_MK2_BOOTS = ITEMS.register("hazmat_mk2_boots",
             () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK2, ArmorItem.Type.BOOTS,
                     new Item.Properties()));
+
+    public static final RegistryObject<Item> ILLYRIM_HELMET = ITEMS.register("illyrim_helmet",
+            () -> new ArmorItem(ModArmorMaterials.ILLYRIM, ArmorItem.Type.HELMET,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ILLYRIM_CHESTPLATE = ITEMS.register("illyrim_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.ILLYRIM, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ILLYRIM_LEGGINGS = ITEMS.register("illyrim_leggings",
+            () -> new ArmorItem(ModArmorMaterials.ILLYRIM, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> ILLYRIM_BOOTS = ITEMS.register("illyrim_boots",
+            () -> new ArmorItem(ModArmorMaterials.ILLYRIM, ArmorItem.Type.BOOTS,
+                    new Item.Properties()));
+
 
     //End Armors
 

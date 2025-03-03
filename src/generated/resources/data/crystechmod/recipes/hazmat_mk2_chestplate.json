@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "crystechmod:hazmat_mk1_chestplate"
+    },
+    "I": {
+      "item": "crystechmod:ichor_leather"
+    },
+    "T": {
+      "item": "crystechmod:tiberium_composite_ingot"
+    }
+  },
+  "pattern": [
+    "I I",
+    "THT",
+    "TTT"
+  ],
+  "result": {
+    "item": "crystechmod:hazmat_mk2_chestplate"
+  },
+  "show_notification": true
+}

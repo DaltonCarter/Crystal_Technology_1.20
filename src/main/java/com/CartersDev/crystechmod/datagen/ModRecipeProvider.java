@@ -5,6 +5,8 @@ import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.datagen.custom.TiberiumGrinderRecipeBuilder;
 import com.CartersDev.crystechmod.datagen.custom.TiberiumInfuserRecipeBuilder;
+import com.CartersDev.crystechmod.fluid.ModFluidTypes;
+import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.util.ModTags;
 import net.minecraft.data.PackOutput;
@@ -18,6 +20,7 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.minecraftforge.fluids.FluidStack;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Iterator;
@@ -94,6 +97,25 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('G', ModItems.GUNDANIUM_INGOT.get())
                 .define('C', ModTags.Items.CONCRETES)
                 .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SABER_BREAD.get())
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModItems.SABER_CORN.get())
+                .unlockedBy(getHasName(ModItems.SABER_CORN.get()), has(ModItems.SABER_CORN.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ZAIRAN_FRUIT_SALAD.get())
+                .pattern("GGG")
+                .pattern("ABA")
+                .pattern("LLL")
+                .define('A', ModItems.HEIM_BERRY.get())
+                .define('G', ModItems.HEL_FRUIT.get())
+                .define('L', ModItems.LAI_MELON_SLICE.get())
+                .define('B', Items.BOWL)
+                .unlockedBy(getHasName(ModItems.HEIM_BERRY.get()), has(ModItems.HEIM_BERRY.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GRINDER_GEAR.get())
@@ -2378,6 +2400,8 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
                 .save(consumer);
 
+
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALYTHUM_PICKAXE.get())
                 .pattern("AAA")
                 .pattern(" S ")
@@ -2459,6 +2483,145 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ILLYRIM_SWORD.get())
+                .pattern(" I ")
+                .pattern(" I ")
+                .pattern(" S ")
+                .define('I', ModItems.ILLYRIM_INGOT.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ILLYRIM_PICKAXE.get())
+                .pattern("III")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('I', ModItems.ILLYRIM_INGOT.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ILLYRIM_AXE.get())
+                .pattern(" II")
+                .pattern(" SI")
+                .pattern(" S ")
+                .define('I', ModItems.ILLYRIM_INGOT.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ILLYRIM_SHOVEL.get())
+                .pattern(" I ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('I', ModItems.ILLYRIM_INGOT.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ILLYRIM_HOE.get())
+                .pattern(" II")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('I', ModItems.ILLYRIM_INGOT.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ILLYRIM_HAMMER.get())
+                .pattern("IBI")
+                .pattern("ISI")
+                .pattern(" S ")
+                .define('I', ModItems.ILLYRIM_INGOT.get())
+                .define('B', ModBlocks.ILLYRIM_BLOCK.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ILLYRIM_PAXEL.get())
+                .pattern("CSC")
+                .pattern("IHP")
+                .pattern(" H ")
+                .define('P', ModItems.ILLYRIM_PICKAXE.get())
+                .define('I', ModItems.ILLYRIM_AXE.get())
+                .define('S', ModItems.ILLYRIM_SHOVEL.get())
+                .define('C', ModItems.MG_CORE_INGOT.get())
+                .define('H', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ILLYRIM_HELMET.get())
+                .pattern("III")
+                .pattern("I I")
+                .pattern("   ")
+                .define('I', ModItems.ILLYRIM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ILLYRIM_CHESTPLATE.get())
+                .pattern("I I")
+                .pattern("III")
+                .pattern("III")
+                .define('I', ModItems.ILLYRIM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ILLYRIM_LEGGINGS.get())
+                .pattern("III")
+                .pattern("I I")
+                .pattern("I I")
+                .define('I', ModItems.ILLYRIM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ILLYRIM_BOOTS.get())
+                .pattern("   ")
+                .pattern("I I")
+                .pattern("I I")
+                .define('I', ModItems.ILLYRIM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HAZMAT_MK2_HELMET.get())
+                .pattern("TTT")
+                .pattern("IHI")
+                .pattern("   ")
+                .define('I', ModItems.ICHOR_LEATHER.get())
+                .define('H', ModItems.HAZMAT_MK1_HELMET.get())
+                .define('T', ModItems.TIBERIUM_COMPOSITE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.HAZMAT_MK1_HELMET.get()), has(ModItems.HAZMAT_MK1_HELMET.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HAZMAT_MK2_CHESTPLATE.get())
+                .pattern("I I")
+                .pattern("THT")
+                .pattern("TTT")
+                .define('I', ModItems.ICHOR_LEATHER.get())
+                .define('H', ModItems.HAZMAT_MK1_CHESTPLATE.get())
+                .define('T', ModItems.TIBERIUM_COMPOSITE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.HAZMAT_MK1_CHESTPLATE.get()), has(ModItems.HAZMAT_MK1_CHESTPLATE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HAZMAT_MK2_LEGGINGS.get())
+                .pattern("THT")
+                .pattern("T T")
+                .pattern("I I")
+                .define('I', ModItems.ICHOR_LEATHER.get())
+                .define('H', ModItems.HAZMAT_MK1_LEGGINGS.get())
+                .define('T', ModItems.TIBERIUM_COMPOSITE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.HAZMAT_MK1_LEGGINGS.get()), has(ModItems.HAZMAT_MK1_LEGGINGS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HAZMAT_MK2_BOOTS.get())
+                .pattern("   ")
+                .pattern("THT")
+                .pattern("I I")
+                .define('I', ModItems.ICHOR_LEATHER.get())
+                .define('H', ModItems.HAZMAT_MK1_BOOTS.get())
+                .define('T', ModItems.TIBERIUM_COMPOSITE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.HAZMAT_MK1_BOOTS.get()), has(ModItems.HAZMAT_MK1_BOOTS.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PLAGUED_HANGING_SIGN.get())
                 .pattern("C C")
                 .pattern("SSS")
@@ -2538,6 +2701,18 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('R', Blocks.REDSTONE_LAMP)
                 .define('T', ModItems.TIBERIUM.get())
                 .define('I', ModItems.ILLUMINA_CRYSTAL.get())
+                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TIBERIUM_INFUSER.get())
+                .pattern("AIA")
+                .pattern("KRK")
+                .pattern("GKG")
+                .define('R', Blocks.REDSTONE_BLOCK)
+                .define('G', ModBlocks.GUNDANIUM_BLOCK.get())
+                .define('A', ModItems.ALYTHUM_INGOT.get())
+                .define('I', ModItems.ILLUMINA_CRYSTAL.get())
+                .define('K', ModItems.KRYON_CRYSTAL.get())
                 .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
                 .save(consumer);
 
@@ -2920,6 +3095,22 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HEL_FRUIT_SEEDS.get(), 1)
                 .requires(ModItems.HEL_FRUIT.get())
                 .unlockedBy(getHasName(ModItems.HEL_FRUIT.get()), has(ModItems.HEL_FRUIT.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ILLYRIM_BLEND.get(), 1)
+                .requires(ModItems.GUNDANIUM_DUST.get(),2)
+                .requires(ModItems.ALYTHUM_DUST.get(),2)
+                .requires(ModItems.QUALRIM_COMPOUND.get(),2)
+                .unlockedBy(getHasName(ModItems.QUALRIM_COMPOUND.get()), has(ModItems.QUALRIM_COMPOUND.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LG_CORE_BLEND.get(), 1)
+                .requires(ModItems.GUNDANIUM_DUST.get())
+                .requires(ModItems.ILLYRIM_BLEND.get())
+                .requires(ModItems.ALYTHUM_DUST.get())
+                .requires(ModItems.GREEN_TIBERIUM_DUST.get())
+                .requires(ModItems.BLUE_TIBERIUM_DUST.get())
+                .unlockedBy(getHasName(ModItems.ILLYRIM_BLEND.get()), has(ModItems.ILLYRIM_BLEND.get()))
                 .save(consumer);
 
 
@@ -3456,7 +3647,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         new TiberiumGrinderRecipeBuilder(Items.RAW_IRON, ModItems.IRON_DUST.get(), 2)
                 .unlockedBy("has_iron_ore", has(Blocks.IRON_ORE)).save(consumer);
 
-        new TiberiumGrinderRecipeBuilder(Items.RAW_COPPER, ModItems.COPPER_DUST.get(), 2)
+        new TiberiumGrinderRecipeBuilder(Items.RAW_COPPER, ModItems.COPPER_DUST.get(),2)
                 .unlockedBy("has_copper_ore", has(Blocks.COPPER_ORE)).save(consumer);
 
         new TiberiumGrinderRecipeBuilder(Items.RAW_GOLD, ModItems.GOLD_DUST.get(), 2)
@@ -3501,8 +3692,65 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
 
 //Tiberium Infuser:
-    new TiberiumInfuserRecipeBuilder(ModItems.ILLYRIM_BLEND.get(), ModItems.LG_CORE_INGOT.get(), 1)
-            .unlockedBy("has_tiberium", has(ModItems.TIBERIUM.get())).save(consumer);
+        new TiberiumInfuserRecipeBuilder(Items.LEATHER, ModItems.TIBERIUM_LEATHER.get(), 1, 100, 10,
+                new FluidStack(ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 500))
+                .unlockedBy("has_tiberium_bucket", has(ModItems.MOLTEN_TIBERIUM_BUCKET.get())).save(consumer);
+
+        new TiberiumInfuserRecipeBuilder(ModItems.TIBERIUM_LEATHER.get(), ModItems.ICHOR_LEATHER.get(), 1, 300, 30,
+                new FluidStack(ModFluids.SOURCE_MOLTEN_RED_TIBERIUM.get(), 1000))
+                .unlockedBy("has_red_tiberium_bucket", has(ModItems.MOLTEN_RED_TIBERIUM_BUCKET.get())).save(consumer);
+
+    new TiberiumInfuserRecipeBuilder(ModItems.RAW_QUALRITE.get(), ModItems.QUALRIM_COMPOUND.get(), 1, 250, 20,
+            new FluidStack(ModFluids.SOURCE_MOLTEN_BLUE_TIBERIUM.get(), 1000))
+            .unlockedBy("has_qualrite", has(ModItems.RAW_QUALRITE.get())).save(consumer);
+
+        new TiberiumInfuserRecipeBuilder(ModItems.GUNDANIUM_INGOT.get(), ModItems.TIBERIUM_COMPOSITE_INGOT.get(), 1, 500, 25,
+                new FluidStack(ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 1000))
+                .unlockedBy("has_tiberium_bucket", has(ModItems.MOLTEN_TIBERIUM_BUCKET.get())).save(consumer);
+
+        new TiberiumInfuserRecipeBuilder(ModItems.TIBERIUM_COMPOSITE_INGOT.get(), ModItems.ICHOR_COMPOSITE_INGOT.get(), 1, 750, 20,
+                new FluidStack(ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM.get(), 1000))
+                .unlockedBy("has_purple_tiberium_bucket", has(ModItems.MOLTEN_PURPLE_TIBERIUM_BUCKET.get())).save(consumer);
+
+        new TiberiumInfuserRecipeBuilder(Blocks.SAND, ModBlocks.YELLOW_ZONE_SAND.get(), 1, 100, 1,
+                new FluidStack(ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 100))
+                .unlockedBy("has_tiberium_bucket", has(ModItems.MOLTEN_TIBERIUM_BUCKET.get())).save(consumer);
+
+        new TiberiumInfuserRecipeBuilder(Blocks.RED_SAND, ModBlocks.RED_ZONE_SAND.get(), 1, 100, 1,
+                new FluidStack(ModFluids.SOURCE_MOLTEN_RED_TIBERIUM.get(), 100))
+                .unlockedBy("has_red_tiberium_bucket", has(ModItems.MOLTEN_RED_TIBERIUM_BUCKET.get())).save(consumer);
+
+        new TiberiumInfuserRecipeBuilder(Blocks.STONE, ModBlocks.INFESTED_STONE.get(), 1, 100, 1,
+                new FluidStack(ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 100))
+                .unlockedBy("has_tiberium_bucket", has(ModItems.MOLTEN_TIBERIUM_BUCKET.get())).save(consumer);
+
+        new TiberiumInfuserRecipeBuilder(Blocks.GRANITE, ModBlocks.INFESTED_GRANITE.get(), 1, 100, 1,
+                new FluidStack(ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 100))
+                .unlockedBy("has_tiberium_bucket", has(ModItems.MOLTEN_TIBERIUM_BUCKET.get())).save(consumer);
+
+        new TiberiumInfuserRecipeBuilder(Blocks.DIORITE, ModBlocks.INFESTED_DIORITE.get(), 1, 100, 1,
+                new FluidStack(ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 100))
+                .unlockedBy("has_tiberium_bucket", has(ModItems.MOLTEN_TIBERIUM_BUCKET.get())).save(consumer);
+
+        new TiberiumInfuserRecipeBuilder(Blocks.ANDESITE, ModBlocks.INFESTED_ANDESITE.get(), 1, 100, 1,
+                new FluidStack(ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 100))
+                .unlockedBy("has_tiberium_bucket", has(ModItems.MOLTEN_TIBERIUM_BUCKET.get())).save(consumer);
+
+        new TiberiumInfuserRecipeBuilder(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.TIBERIUM_SOIL.get(), 1, 300, 4,
+                new FluidStack(ModFluids.SOURCE_MOLTEN_BLUE_TIBERIUM.get(), 200))
+                .unlockedBy("has_blue_tiberium_bucket", has(ModItems.MOLTEN_BLUE_TIBERIUM_BUCKET.get())).save(consumer);
+
+        new TiberiumInfuserRecipeBuilder(ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.ICHOR_SOIL.get(), 1, 500, 10,
+                new FluidStack(ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM.get(), 500))
+                .unlockedBy("has_purple_tiberium_bucket", has(ModItems.MOLTEN_PURPLE_TIBERIUM_BUCKET.get())).save(consumer);
+
+        new TiberiumInfuserRecipeBuilder(ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get(), 1, 200, 2,
+                new FluidStack(ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 100))
+                .unlockedBy("has_tiberium_bucket", has(ModItems.MOLTEN_TIBERIUM_BUCKET.get())).save(consumer);
+
+        new TiberiumInfuserRecipeBuilder(ModBlocks.SEEDED_DIRT.get(), ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), 1, 100, 1,
+                new FluidStack(ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 100))
+                .unlockedBy("has_tiberium_bucket", has(ModItems.MOLTEN_TIBERIUM_BUCKET.get())).save(consumer);
 
 
 

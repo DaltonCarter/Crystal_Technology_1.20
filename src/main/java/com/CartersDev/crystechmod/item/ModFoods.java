@@ -36,6 +36,12 @@ public class ModFoods {
     public static final FoodProperties COOKED_INFECTED_MEAT = new FoodProperties.Builder().nutrition(8).fast()
             .saturationMod(0.8f).build();
 
+    public static final FoodProperties ZAIRAN_FRUIT_SALAD = new FoodProperties.Builder().nutrition(13).fast()
+            .saturationMod(1.4f).effect(() -> new MobEffectInstance(MobEffects.REGENERATION,400),
+                    0.2f).build();
+
+    public static final FoodProperties SABER_BREAD = new FoodProperties.Builder().nutrition(10).fast()
+            .saturationMod(0.5f).build();
 
 
 

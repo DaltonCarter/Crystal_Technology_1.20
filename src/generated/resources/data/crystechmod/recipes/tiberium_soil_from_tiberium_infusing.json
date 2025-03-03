@@ -1,0 +1,15 @@
+{
+  "type": "crystechmod:tiberium_infusing",
+  "craftTime": 300,
+  "energyAmount": 4,
+  "fluidAmount": 200,
+  "fluidType": "crystechmod:molten_blue_tiberium_source",
+  "ingredients": [
+    {
+      "item": "crystechmod:yellow_zone_cracked_dirt"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:tiberium_soil"
+  }
+}

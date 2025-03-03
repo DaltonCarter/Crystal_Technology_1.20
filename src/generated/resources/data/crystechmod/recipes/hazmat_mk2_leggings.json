@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "crystechmod:hazmat_mk1_leggings"
+    },
+    "I": {
+      "item": "crystechmod:ichor_leather"
+    },
+    "T": {
+      "item": "crystechmod:tiberium_composite_ingot"
+    }
+  },
+  "pattern": [
+    "THT",
+    "T T",
+    "I I"
+  ],
+  "result": {
+    "item": "crystechmod:hazmat_mk2_leggings"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:lake",
+  "config": {
+    "barrier": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "crystechmod:cruentus_stone"
+      }
+    },
+    "fluid": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "crystechmod:molten_red_tiberium_block",
+        "Properties": {
+          "level": "0"
+        }
+      }
+    }
+  }
+}

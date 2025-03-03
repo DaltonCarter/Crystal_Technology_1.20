@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-30T15:21:25.1581751	Tags for minecraft:item mod id crystechmod
+// 1.20.1	2025-03-02T17:26:57.4874862	Tags for minecraft:item mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/items/aeries_ores.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/items/alythum_ores.json
 46de90b7b6a6a287548f896235af80124a350b93 data/crystechmod/tags/items/concretes.json
@@ -21,4 +21,4 @@ ddd39588a828097998b3e381633c9bafbc6202a5 data/forge/tags/items/ores.json
 e0721fc7760819c2882cc2896aeb4f60de8a8dad data/minecraft/tags/items/logs_that_burn.json
 30d6b9e14647b96ad4fe3ced67c6c5869760118b data/minecraft/tags/items/music_discs.json
 d9c70a57faa76abf1f524057aecf79f0d34ab8db data/minecraft/tags/items/planks.json
-7a19fd90233dbcf16f92c524b61edd7543a99b6d data/minecraft/tags/items/trimmable_armor.json
+0b440178f75b44dc634bf2ea65fda6296b465209 data/minecraft/tags/items/trimmable_armor.json

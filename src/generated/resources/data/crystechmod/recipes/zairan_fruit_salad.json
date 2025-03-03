@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:heim_berry"
+    },
+    "B": {
+      "item": "minecraft:bowl"
+    },
+    "G": {
+      "item": "crystechmod:hel_fruit"
+    },
+    "L": {
+      "item": "crystechmod:lai_melon_slice"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "ABA",
+    "LLL"
+  ],
+  "result": {
+    "item": "crystechmod:zairan_fruit_salad"
+  },
+  "show_notification": true
+}

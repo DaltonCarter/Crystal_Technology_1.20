@@ -31,4 +31,9 @@ public class ModToolTiers {
                     ModTags.Blocks.NEEDS_ALYTHUM_TOOL, () -> Ingredient.of(ModItems.ALYTHUM_INGOT.get())),
             new ResourceLocation(CrystalTech.MOD_ID, "alythum"), List.of(Tiers.DIAMOND), List.of());
 
+
+    public static final Tier ILLYRIM = TierSortingRegistry.registerTier(
+            new ForgeTier(4, 2500, 9.0f, 5f, 15,
+                    ModTags.Blocks.NEEDS_ILLYRIM_TOOL, () -> Ingredient.of(ModItems.ILLYRIM_INGOT.get())),
+            new ResourceLocation(CrystalTech.MOD_ID, "illyrim"), List.of(Tiers.NETHERITE), List.of());
 }

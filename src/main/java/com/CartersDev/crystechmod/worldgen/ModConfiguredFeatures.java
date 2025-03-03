@@ -2,7 +2,10 @@ package com.CartersDev.crystechmod.worldgen;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
+import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.util.ModTags;
+import com.CartersDev.crystechmod.worldgen.ModFeatureTypes.ModFeatures;
+import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -11,6 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.GeodeBlockSettings;
 import net.minecraft.world.level.levelgen.GeodeCrackSettings;
@@ -18,6 +22,7 @@ import net.minecraft.world.level.levelgen.GeodeLayerSettings;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.LakeFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.ThreeLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
@@ -82,6 +87,10 @@ public class ModConfiguredFeatures {
         //Geode:
      public static final ResourceKey<ConfiguredFeature<?,?>> TIBERIUM_GEODE_KEY = registerKey("tiberium_geode");
 
+     public static final ResourceKey<ConfiguredFeature<?,?>> VITRIC_AMETHYST_GEODE_KEY = registerKey("vitric_amethyst_geode");
+     public static final ResourceKey<ConfiguredFeature<?,?>> VITRIC_TIBERIUM_GEODE_KEY = registerKey("vitric_tiberium_geode");
+     public static final ResourceKey<ConfiguredFeature<?,?>> VITRIC_ICHOR_GEODE_KEY = registerKey("vitric_ichor_geode");
+
     //Flowers:
     public static final ResourceKey<ConfiguredFeature<?,?>> HYACINTH_KEY = registerKey("hyacinth");
     public static final ResourceKey<ConfiguredFeature<?,?>> SPITFIRE_KEY = registerKey("spitfire");
@@ -108,8 +117,43 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?,?>> CT_SEEDED_RED_ZONE_DIRT_KEY = registerKey("ct_seeded_red_zone_dirt");
 
         //Springs:
-    
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_INFECTED_WATER_SPRING_KEY = registerKey("ct_infected_water_spring");
+
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_MOLTEN_RIPARIUS_SPRING_KEY = registerKey("ct_molten_riparius_spring");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_MOLTEN_VINIFERA_SPRING_KEY = registerKey("ct_molten_vinifera_spring");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_MOLTEN_CRUENTUS_SPRING_KEY = registerKey("ct_molten_cruentus_spring");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_MOLTEN_ABOREUS_SPRING_KEY = registerKey("ct_molten_aboreus_spring");
+
         //Lakes:
+     public static final ResourceKey<ConfiguredFeature<?,?>> CT_INFECTED_WATER_LAKE_KEY = registerKey("ct_infected_water_lake");
+
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_MOLTEN_RIPARIUS_LAKE_KEY = registerKey("ct_molten_riparius_lake");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_MOLTEN_VINIFERA_LAKE_KEY = registerKey("ct_molten_vinifera_lake");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_MOLTEN_CRUENTUS_LAKE_KEY = registerKey("ct_molten_cruentus_lake");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_MOLTEN_ABOREUS_LAKE_KEY = registerKey("ct_molten_aboreus_lake");
+
+        //Small Columns:
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_RIPARIUS_STONE_SMALL_COLUMN_KEY = registerKey("ct_riparius_stone_small_column");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_VINIFERA_STONE_SMALL_COLUMN_KEY = registerKey("ct_vinifera_stone_small_column");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_CRUENTUS_STONE_SMALL_COLUMN_KEY = registerKey("ct_cruentus_stone_small_column");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_ABOREUS_STONE_SMALL_COLUMN_KEY = registerKey("ct_aboreus_stone_small_column");
+
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_RIPARIUS_CRYSTAL_SMALL_COLUMN_KEY = registerKey("ct_riparius_crystal_small_column");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_VINIFERA_CRYSTAL_SMALL_COLUMN_KEY = registerKey("ct_vinifera_crystal_small_column");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_CRUENTUS_CRYSTAL_SMALL_COLUMN_KEY = registerKey("ct_cruentus_crystal_small_column");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_ABOREUS_CRYSTAL_SMALL_COLUMN_KEY = registerKey("ct_aboreus_crystal_small_column");
+
+
+        //Large Columns:
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_RIPARIUS_STONE_LARGE_COLUMN_KEY = registerKey("ct_riparius_stone_large_column");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_VINIFERA_STONE_LARGE_COLUMN_KEY = registerKey("ct_vinifera_stone_large_column");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_CRUENTUS_STONE_LARGE_COLUMN_KEY = registerKey("ct_cruentus_stone_large_column");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_ABOREUS_STONE_LARGE_COLUMN_KEY = registerKey("ct_aboreus_stone_large_column");
+
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_RIPARIUS_CRYSTAL_LARGE_COLUMN_KEY = registerKey("ct_riparius_crystal_large_column");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_VINIFERA_CRYSTAL_LARGE_COLUMN_KEY = registerKey("ct_vinifera_crystal_large_column");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_CRUENTUS_CRYSTAL_LARGE_COLUMN_KEY = registerKey("ct_cruentus_crystal_large_column");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_ABOREUS_CRYSTAL_LARGE_COLUMN_KEY = registerKey("ct_aboreus_crystal_large_column");
 
         //Blobs:
     public static final ResourceKey<ConfiguredFeature<?,?>> CT_RIPARIUS_STONE_KEY = registerKey("ct_riparius_stone");
@@ -267,12 +311,55 @@ public class ModConfiguredFeatures {
                         new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true,
                         UniformInt.of(4, 6), UniformInt.of(3, 4),
                         UniformInt.of(1, 2), -16, 16, 0.05D, 1));
+
+        register(context, VITRIC_TIBERIUM_GEODE_KEY, Feature.GEODE,
+                new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
+                        BlockStateProvider.simple(ModBlocks.INFESTED_STONE.get()),
+                        BlockStateProvider.simple(ModBlocks.TIBERIUM_SOIL.get()),
+                        BlockStateProvider.simple(ModBlocks.RIPARIUS_STONE.get()),
+                        BlockStateProvider.simple(ModBlocks.VITRIC_DEEPSLATE.get()),
+                        List.of(ModBlocks.TIBERIUM_SOIL.get().defaultBlockState(), ModBlocks.GUNDANIUM_ORE.get().defaultBlockState(), ModBlocks.ALYTHUM_ORE.get().defaultBlockState()),
+                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
+                        new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true,
+                        UniformInt.of(4, 6), UniformInt.of(3, 4),
+                        UniformInt.of(1, 2), -16, 16, 0.05D, 1));
+
+        register(context, VITRIC_ICHOR_GEODE_KEY, Feature.GEODE,
+                new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
+                        BlockStateProvider.simple(ModBlocks.ABOREUS_CRYSTAL.get()),
+                        BlockStateProvider.simple(ModBlocks.ICHOR_SOIL.get()),
+                        BlockStateProvider.simple(ModBlocks.ABOREUS_STONE.get()),
+                        BlockStateProvider.simple(ModBlocks.VITRIC_DEEPSLATE.get()),
+                        List.of(ModBlocks.TIBERIUM_SOIL.get().defaultBlockState(), ModBlocks.ICHOR_SOIL.get().defaultBlockState(), ModBlocks.GUNDANIUM_ORE.get().defaultBlockState(), ModBlocks.ALYTHUM_ORE.get().defaultBlockState()),
+                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
+                        new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true,
+                        UniformInt.of(4, 6), UniformInt.of(3, 4),
+                        UniformInt.of(1, 2), -16, 16, 0.05D, 1));
         //MAXIMUM SETTINGS
 //                        new GeodeLayerSettings(1.7D, 1.2D, 2.5D, 3.5D),
 //                        new GeodeCrackSettings(0.25D, 1.5D, 1), 0.5D, 0.1D,
 //                        true, UniformInt.of(3, 8),
 //                        UniformInt.of(2, 6), UniformInt.of(1, 2),
 //                        -18, 18, 0.075D, 1));
+
+        register(context, VITRIC_AMETHYST_GEODE_KEY, Feature.GEODE,
+        new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
+        BlockStateProvider.simple(Blocks.AMETHYST_BLOCK),
+        BlockStateProvider.simple(Blocks.BUDDING_AMETHYST),
+        BlockStateProvider.simple(ModBlocks.INFESTED_STONE.get()),
+        BlockStateProvider.simple(ModBlocks.VITRIC_DEEPSLATE.get()),
+        List.of(Blocks.SMALL_AMETHYST_BUD.defaultBlockState(),
+        Blocks.MEDIUM_AMETHYST_BUD.defaultBlockState(),
+        Blocks.LARGE_AMETHYST_BUD.defaultBlockState(),
+        Blocks.AMETHYST_CLUSTER.defaultBlockState()),
+        BlockTags.FEATURES_CANNOT_REPLACE,
+        BlockTags.GEODE_INVALID_BLOCKS),
+        new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
+        new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D,
+        true, UniformInt.of(4, 6), UniformInt.of(3, 4),
+        UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
 
         //Flowers:
@@ -332,12 +419,44 @@ public class ModConfiguredFeatures {
 
         register(context, CT_RED_ZONE_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.RED_ZONE_DIRT.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.SEEDED_DIRT.get(), ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get())), UniformInt.of(1, 5), 2));
         register(context, CT_SEEDED_RED_ZONE_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.SEEDED_RED_ZONE_DIRT.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get())), UniformInt.of(1, 5), 2));
+
         //Springs
+        register(context, CT_INFECTED_WATER_SPRING_KEY, Feature.SPRING, new SpringConfiguration(ModFluids.SOURCE_TIBERIUM_WATER.get().defaultFluidState(), true, 4, 1, HolderSet.direct(Block::builtInRegistryHolder, Blocks.STONE, Blocks.GRANITE, Blocks.DIORITE, Blocks.ANDESITE, Blocks.DEEPSLATE, Blocks.TUFF, Blocks.CALCITE, Blocks.DIRT, ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get(), ModBlocks.INFESTED_STONE.get(), ModBlocks.INFESTED_DIORITE.get(), ModBlocks.INFESTED_GRANITE.get(), ModBlocks.INFESTED_ANDESITE.get())));
+
+        register(context, CT_MOLTEN_RIPARIUS_SPRING_KEY, Feature.SPRING, new SpringConfiguration(ModFluids.SOURCE_MOLTEN_TIBERIUM.get().defaultFluidState(), true, 4, 1, HolderSet.direct(Block::builtInRegistryHolder, Blocks.STONE, Blocks.GRANITE, Blocks.DIORITE, Blocks.ANDESITE, Blocks.DEEPSLATE, Blocks.TUFF, Blocks.CALCITE, Blocks.DIRT, ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get(), ModBlocks.INFESTED_STONE.get(), ModBlocks.INFESTED_DIORITE.get(), ModBlocks.INFESTED_GRANITE.get(), ModBlocks.INFESTED_ANDESITE.get())));
+        register(context, CT_MOLTEN_VINIFERA_SPRING_KEY, Feature.SPRING, new SpringConfiguration(ModFluids.SOURCE_MOLTEN_BLUE_TIBERIUM.get().defaultFluidState(), true, 4, 1, HolderSet.direct(Block::builtInRegistryHolder, Blocks.STONE, Blocks.GRANITE, Blocks.DIORITE, Blocks.ANDESITE, Blocks.DEEPSLATE, Blocks.TUFF, Blocks.CALCITE, Blocks.DIRT, ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get(), ModBlocks.INFESTED_STONE.get(), ModBlocks.INFESTED_DIORITE.get(), ModBlocks.INFESTED_GRANITE.get(), ModBlocks.INFESTED_ANDESITE.get())));
+        register(context, CT_MOLTEN_CRUENTUS_SPRING_KEY, Feature.SPRING, new SpringConfiguration(ModFluids.SOURCE_MOLTEN_RED_TIBERIUM.get().defaultFluidState(), true, 4, 1, HolderSet.direct(Block::builtInRegistryHolder, Blocks.STONE, Blocks.GRANITE, Blocks.DIORITE, Blocks.ANDESITE, Blocks.DEEPSLATE, Blocks.TUFF, Blocks.CALCITE, Blocks.DIRT, ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get(), ModBlocks.INFESTED_STONE.get(), ModBlocks.INFESTED_DIORITE.get(), ModBlocks.INFESTED_GRANITE.get(), ModBlocks.INFESTED_ANDESITE.get())));
+        register(context, CT_MOLTEN_ABOREUS_SPRING_KEY, Feature.SPRING, new SpringConfiguration(ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM.get().defaultFluidState(), true, 4, 1, HolderSet.direct(Block::builtInRegistryHolder, Blocks.STONE, Blocks.GRANITE, Blocks.DIORITE, Blocks.ANDESITE, Blocks.DEEPSLATE, Blocks.TUFF, Blocks.CALCITE, Blocks.DIRT, ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get(), ModBlocks.INFESTED_STONE.get(), ModBlocks.INFESTED_DIORITE.get(), ModBlocks.INFESTED_GRANITE.get(), ModBlocks.INFESTED_ANDESITE.get())));
 
         //Lakes
+        register(context, CT_INFECTED_WATER_LAKE_KEY, Feature.LAKE, new LakeFeature.Configuration(BlockStateProvider.simple(ModBlocks.TIBERIUM_WATER_BLOCK.get().defaultBlockState()), BlockStateProvider.simple(ModBlocks.INFESTED_STONE.get().defaultBlockState())));
 
+        register(context, CT_MOLTEN_RIPARIUS_LAKE_KEY, Feature.LAKE, new LakeFeature.Configuration(BlockStateProvider.simple(ModBlocks.MOLTEN_TIBERIUM_BLOCK.get().defaultBlockState()), BlockStateProvider.simple(ModBlocks.RIPARIUS_STONE.get().defaultBlockState())));
+        register(context, CT_MOLTEN_VINIFERA_LAKE_KEY, Feature.LAKE, new LakeFeature.Configuration(BlockStateProvider.simple(ModBlocks.MOLTEN_BLUE_TIBERIUM_BLOCK.get().defaultBlockState()), BlockStateProvider.simple(ModBlocks.VINIFERA_STONE.get().defaultBlockState())));
+        register(context, CT_MOLTEN_CRUENTUS_LAKE_KEY, Feature.LAKE, new LakeFeature.Configuration(BlockStateProvider.simple(ModBlocks.MOLTEN_RED_TIBERIUM_BLOCK.get().defaultBlockState()), BlockStateProvider.simple(ModBlocks.CRUENTUS_STONE.get().defaultBlockState())));
+        register(context, CT_MOLTEN_ABOREUS_LAKE_KEY, Feature.LAKE, new LakeFeature.Configuration(BlockStateProvider.simple(ModBlocks.MOLTEN_PURPLE_TIBERIUM_BLOCK.get().defaultBlockState()), BlockStateProvider.simple(ModBlocks.ABOREUS_STONE.get().defaultBlockState())));
 
+        //Small Columns:
+        register(context, CT_RIPARIUS_STONE_SMALL_COLUMN_KEY, ModFeatures.RIPARIUS_STONE_COLUMNS.get(), new ColumnFeatureConfiguration(ConstantInt.of(1), UniformInt.of(1, 4)));
+        register(context, CT_VINIFERA_STONE_SMALL_COLUMN_KEY, ModFeatures.VINIFERA_STONE_COLUMNS.get(), new ColumnFeatureConfiguration(ConstantInt.of(1), UniformInt.of(1, 4)));
+        register(context, CT_CRUENTUS_STONE_SMALL_COLUMN_KEY, ModFeatures.CRUENTUS_STONE_COLUMNS.get(), new ColumnFeatureConfiguration(ConstantInt.of(1), UniformInt.of(1, 4)));
+        register(context, CT_ABOREUS_STONE_SMALL_COLUMN_KEY, ModFeatures.ABOREUS_STONE_COLUMNS.get(), new ColumnFeatureConfiguration(ConstantInt.of(1), UniformInt.of(1, 4)));
 
+        register(context, CT_RIPARIUS_CRYSTAL_SMALL_COLUMN_KEY, ModFeatures.RIPARIUS_CRYSTAL_COLUMNS.get(), new ColumnFeatureConfiguration(ConstantInt.of(1), UniformInt.of(1, 4)));
+        register(context, CT_VINIFERA_CRYSTAL_SMALL_COLUMN_KEY, ModFeatures.VINIFERA_CRYSTAL_COLUMNS.get(), new ColumnFeatureConfiguration(ConstantInt.of(1), UniformInt.of(1, 4)));
+        register(context, CT_CRUENTUS_CRYSTAL_SMALL_COLUMN_KEY, ModFeatures.CRUENTUS_CRYSTAL_COLUMNS.get(), new ColumnFeatureConfiguration(ConstantInt.of(1), UniformInt.of(1, 4)));
+        register(context, CT_ABOREUS_CRYSTAL_SMALL_COLUMN_KEY, ModFeatures.ABOREUS_CRYSTAL_COLUMNS.get(), new ColumnFeatureConfiguration(ConstantInt.of(1), UniformInt.of(1, 4)));
+
+        //Large Columns:
+        register(context, CT_RIPARIUS_STONE_LARGE_COLUMN_KEY, ModFeatures.RIPARIUS_STONE_COLUMNS.get(), new ColumnFeatureConfiguration(UniformInt.of(2, 3), UniformInt.of(5, 10)));
+        register(context, CT_VINIFERA_STONE_LARGE_COLUMN_KEY, ModFeatures.VINIFERA_STONE_COLUMNS.get(), new ColumnFeatureConfiguration(UniformInt.of(2, 3), UniformInt.of(5, 10)));
+        register(context, CT_CRUENTUS_STONE_LARGE_COLUMN_KEY, ModFeatures.CRUENTUS_STONE_COLUMNS.get(), new ColumnFeatureConfiguration(UniformInt.of(2, 3), UniformInt.of(5, 10)));
+        register(context, CT_ABOREUS_STONE_LARGE_COLUMN_KEY, ModFeatures.ABOREUS_STONE_COLUMNS.get(), new ColumnFeatureConfiguration(UniformInt.of(2, 3), UniformInt.of(5, 10)));
+
+        register(context, CT_RIPARIUS_CRYSTAL_LARGE_COLUMN_KEY, ModFeatures.RIPARIUS_CRYSTAL_COLUMNS.get(), new ColumnFeatureConfiguration(UniformInt.of(2, 3), UniformInt.of(5, 10)));
+        register(context, CT_VINIFERA_CRYSTAL_LARGE_COLUMN_KEY, ModFeatures.VINIFERA_CRYSTAL_COLUMNS.get(), new ColumnFeatureConfiguration(UniformInt.of(2, 3), UniformInt.of(5, 10)));
+        register(context, CT_CRUENTUS_CRYSTAL_LARGE_COLUMN_KEY, ModFeatures.CRUENTUS_CRYSTAL_COLUMNS.get(), new ColumnFeatureConfiguration(UniformInt.of(2, 3), UniformInt.of(5, 10)));
+        register(context, CT_ABOREUS_CRYSTAL_LARGE_COLUMN_KEY, ModFeatures.ABOREUS_CRYSTAL_COLUMNS.get(), new ColumnFeatureConfiguration(UniformInt.of(2, 3), UniformInt.of(5, 10)));
 
     }
 

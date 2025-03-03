@@ -1,8 +1,13 @@
 package com.CartersDev.crystechmod.block.entity;
 
+import com.CartersDev.crystechmod.block.custom.TiberiumGrinderBlock;
+import com.CartersDev.crystechmod.block.custom.TiberiumInfuserBlock;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.recipe.TiberiumGrinderRecipe;
 import com.CartersDev.crystechmod.screen.TiberiumGrinderMenu;
+import com.CartersDev.crystechmod.util.InventoryDirectionEntry;
+import com.CartersDev.crystechmod.util.InventoryDirectionWrapper;
+import com.CartersDev.crystechmod.util.WrappedHandler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -30,6 +35,7 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Map;
 import java.util.Optional;
 
 
@@ -50,7 +56,14 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
-
+    private final Map<Direction, LazyOptional<WrappedHandler>> directioWrappedHandlerMap =
+            new InventoryDirectionWrapper(itemHandler,
+                    new InventoryDirectionEntry(Direction.DOWN, OUTPUT_SLOT, false),
+                    new InventoryDirectionEntry(Direction.UP, INPUT_SLOT, true),
+                    new InventoryDirectionEntry(Direction.NORTH, INPUT_SLOT, true),
+                    new InventoryDirectionEntry(Direction.SOUTH, OUTPUT_SLOT, false),
+                    new InventoryDirectionEntry(Direction.EAST, OUTPUT_SLOT, false),
+                    new InventoryDirectionEntry(Direction.WEST, INPUT_SLOT, true)).directionsMap;
 
     protected final ContainerData data;
     private int progress = 0;
@@ -97,6 +110,21 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
             return lazyItemHandler.cast();
         }
 
+        if(directioWrappedHandlerMap.containsKey(side)){
+            Direction localDirection = this.getBlockState().getValue(TiberiumGrinderBlock.FACING);
+
+            if(side == Direction.DOWN || side == Direction.UP){
+                return directioWrappedHandlerMap.get(side).cast();
+            }
+
+            return switch (localDirection) {
+                default -> directioWrappedHandlerMap.get(side.getOpposite()).cast();
+                case EAST -> directioWrappedHandlerMap.get(side.getClockWise()).cast();
+                case SOUTH -> directioWrappedHandlerMap.get(side).cast();
+                case WEST -> directioWrappedHandlerMap.get(side.getCounterClockWise()).cast();
+            };
+
+        }
         return super.getCapability(cap, side);
     }
 

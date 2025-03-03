@@ -12,17 +12,25 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
 
 public class TiberiumInfuserRecipe implements Recipe<SimpleContainer> {
     private final NonNullList<Ingredient> inputItems;
     private final ItemStack output;
     private final ResourceLocation id;
+    private final int craftTime;
+    private final int energyAmount;
+    private final FluidStack fluidStack;
 
-    public TiberiumInfuserRecipe(NonNullList<Ingredient> inputItems, ItemStack output, ResourceLocation id) {
+    public TiberiumInfuserRecipe(NonNullList<Ingredient> inputItems, ItemStack output, ResourceLocation id, int craftTime, int energyAmount, FluidStack fluidStack) {
         this.inputItems = inputItems;
         this.output = output;
         this.id = id;
+        this.craftTime = craftTime;
+        this.energyAmount = energyAmount;
+        this.fluidStack = fluidStack;
     }
 
 
@@ -57,6 +65,18 @@ public class TiberiumInfuserRecipe implements Recipe<SimpleContainer> {
         return this.inputItems;
     }
 
+    public int getCraftTime() {
+        return craftTime;
+    }
+
+    public int getEnergyAmount() {
+        return energyAmount;
+    }
+
+    public FluidStack getFluidStack() {
+        return fluidStack;
+    }
+
     @Override
     public ResourceLocation getId() {
         return id;
@@ -88,6 +108,9 @@ public class TiberiumInfuserRecipe implements Recipe<SimpleContainer> {
         public TiberiumInfuserRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "output"));
 
+            FluidStack fluidStack = new FluidStack(ForgeRegistries.FLUIDS.getValue(new ResourceLocation(pSerializedRecipe.get("fluidType").getAsString())),
+                    pSerializedRecipe.get("fluidAmount").getAsInt());
+
             JsonArray ingredients = GsonHelper.getAsJsonArray(pSerializedRecipe, "ingredients");
 
             NonNullList<Ingredient> inputs = NonNullList.withSize(1, Ingredient.EMPTY);
@@ -95,19 +118,27 @@ public class TiberiumInfuserRecipe implements Recipe<SimpleContainer> {
             for(int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
+            int craftTime = pSerializedRecipe.get("craftTime").getAsInt();
+            int energyAmount = pSerializedRecipe.get("energyAmount").getAsInt();
 
-            return new TiberiumInfuserRecipe(inputs, output, pRecipeId);
+            return new TiberiumInfuserRecipe(inputs, output, pRecipeId, craftTime, energyAmount, fluidStack);
         }
 
 
     @Override
     public @Nullable TiberiumInfuserRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
         NonNullList<Ingredient> inputs = NonNullList.withSize(pBuffer.readInt(), Ingredient.EMPTY);
+        FluidStack fluidStack = pBuffer.readFluidStack();
+
         for(int i = 0; i < inputs.size(); i++) {
             inputs.set(i, Ingredient.fromNetwork(pBuffer));
         }
+
+        int craftTime = pBuffer.readInt();
+        int energyAmount = pBuffer.readInt();
+
         ItemStack output = pBuffer.readItem();
-        return new TiberiumInfuserRecipe(inputs, output, pRecipeId);
+        return new TiberiumInfuserRecipe(inputs, output, pRecipeId, craftTime, energyAmount, fluidStack );
     }
 
     @Override
@@ -115,9 +146,14 @@ public class TiberiumInfuserRecipe implements Recipe<SimpleContainer> {
 
         pBuffer.writeInt(pRecipe.inputItems.size());
 
+        pBuffer.writeFluidStack(pRecipe.fluidStack);
+
         for(Ingredient ingredient : pRecipe.getIngredients()) {
             ingredient.toNetwork(pBuffer);
         }
+
+        pBuffer.writeInt(pRecipe.craftTime);
+        pBuffer.writeInt(pRecipe.energyAmount);
 
         pBuffer.writeItemStack(pRecipe.getResultItem(null), false);
 

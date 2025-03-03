@@ -125,6 +125,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.VITRIC_DEEPSLATE_TILE_SLAB.get(),
                 ModBlocks.VITRIC_DEEPSLATE_TILE_WALL.get(),
 
+                ModBlocks.TIBERIUM_INFUSER.get(),
+
                 ModBlocks.TIBERIUM_BLUE_BLOCK.get(),
                 ModBlocks.TIBERIUM_RED_BLOCK.get(),
                 ModBlocks.TIBERIUM_PURPLE_BLOCK.get(),
@@ -681,9 +683,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.TIBERIUM_GRINDER.get(),
                         ModBlocks.CT_TILE_WALL_P_3.get()
 
-
-
-
                 );
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
@@ -717,6 +716,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.PLAGUED_TRAPDOOR.get(),
                         ModBlocks.PLAGUED_PLANKS.get(),
+                        ModBlocks.LAI_MELON.get(),
                         ModBlocks.PLAGUED_BUTTON.get(),
                         ModBlocks.PLAGUED_DOOR.get(),
                         ModBlocks.PLAGUED_PRESSURE_PLATE.get(),
@@ -1244,6 +1244,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(ModTags.Blocks.NEEDS_GUNDANIUM_TOOL)
                 .add(ModBlocks.CS_SCAFFOLD.get(),
                         ModBlocks.CS_SCAFFOLD_VERT.get(),
+                        ModBlocks.TIBERIUM_INFUSER.get(),
                         ModBlocks.CS_CHAINLINK.get(),
                         ModBlocks.CS_TILE.get(),
                         ModBlocks.VITRIC_DEEPSLATE.get(),

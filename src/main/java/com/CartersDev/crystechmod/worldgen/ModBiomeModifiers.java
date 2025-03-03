@@ -21,10 +21,7 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_GUNDANIUM_ORES = registerKey("add_crystech_gundanium_ores");
     public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_KRYON_ORES = registerKey("add_crystech_kryon_ores");
     public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_ILLUMINA_ORES = registerKey("add_crystech_illumina_ores");
-    public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_AERIES_ORES = registerKey("add_crystech_aeries_ores");
-    public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_ENIGMA_ORES = registerKey("add_crystech_enigma_ores");
-    public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_ALYTHUM_ORES = registerKey("add_crystech_alythum_ores");
-    public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_QUALRITE_ORES = registerKey("add_crystech_qualrite_ores");
+
 
     public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_NETHER_ALYTHUM_ORES = registerKey("add_crystech_nether_alythum_ores");
     public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_NETHER_QUALRITE_ORES = registerKey("add_crystech_nether_qualrite_ores");

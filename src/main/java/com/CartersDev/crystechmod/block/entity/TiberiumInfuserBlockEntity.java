@@ -119,7 +119,13 @@ private LazyOptional<IFluidHandler> lazyFluidHandler = LazyOptional.empty();
 
 protected final ContainerData data;
 private int progress = 0;
-private int maxProgress = 100;
+private int maxProgress = 0;
+private final int DEFAULT_MAX_PROGRESS = 100;
+
+    private int energyAmount = 0;
+    private final int DEFAULT_ENERGY_AMOUNT = 100;
+
+    private FluidStack neededFluidStack = FluidStack.EMPTY;
 
 private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 private final FluidTank FLUID_TANK = createFluidTank();
@@ -276,6 +282,11 @@ private final FluidTank FLUID_TANK = createFluidTank();
 
         pTag.put("inventory", itemHandler.serializeNBT());
         pTag.putInt("tiberium_infuser.progress", progress);
+        pTag.putInt("tiberium_infuser.max_progress", maxProgress);
+        pTag.putInt("tiberium_infuser.energy_amount", energyAmount);
+
+        neededFluidStack.writeToNBT(pTag);
+
         pTag.putInt("energy", ENERGY_STORAGE.getEnergyStored());
         pTag = FLUID_TANK.writeToNBT(pTag);
 
@@ -287,6 +298,9 @@ private final FluidTank FLUID_TANK = createFluidTank();
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
         progress = pTag.getInt("tiberium_infuser.progress");
+        maxProgress = pTag.getInt("tiberium_infuser.max_progress");
+        energyAmount = pTag.getInt("tiberium_infuser.energy_amount");
+        neededFluidStack = FluidStack.loadFluidStackFromNBT(pTag);
         ENERGY_STORAGE.setEnergy(pTag.getInt("energy"));
         FLUID_TANK.readFromNBT(pTag);
     }
@@ -312,7 +326,7 @@ private final FluidTank FLUID_TANK = createFluidTank();
     }
 
     private void extractFluid() {
-        this.FLUID_TANK.drain(500, IFluidHandler.FluidAction.EXECUTE);
+        this.FLUID_TANK.drain(neededFluidStack.getAmount(), IFluidHandler.FluidAction.EXECUTE);
     }
 
     private void fillFluid() {
@@ -326,10 +340,10 @@ private final FluidTank FLUID_TANK = createFluidTank();
             int drainAmount = Math.min(this.FLUID_TANK.getSpace(), 1000);
 
             FluidStack stack = iFluidHandlerItem.drain(drainAmount, IFluidHandler.FluidAction.SIMULATE);
-            if(stack.getFluid() == Fluids.WATER) {
+
                 stack = iFluidHandlerItem.drain(drainAmount, IFluidHandler.FluidAction.EXECUTE);
                 fillTankWithWater(stack, iFluidHandlerItem.getContainer());
-            }
+
         });
     }
 
@@ -346,13 +360,23 @@ private final FluidTank FLUID_TANK = createFluidTank();
     }
 
     private void extractEnergy() {
-        this.ENERGY_STORAGE.extractEnergy(100, false);
+        this.ENERGY_STORAGE.extractEnergy(energyAmount, false);
+
     }
 
     private void fillEnergy() {
-        if(hasEnergyItemInSlot(POWER_SLOT)) {
-            this.ENERGY_STORAGE.receiveEnergy(3200, false);
+        if(hasEnergyItemInSlot(POWER_SLOT) && ENERGY_STORAGE.getEnergyStored() < ENERGY_STORAGE.getMaxEnergyStored()) {
+            for(int i = 0; i < 32; i++) {
+                this.ENERGY_STORAGE.receiveEnergy(100, false);
+            }
+            consumeFuel();
+
+
         }
+    }
+
+    private void consumeFuel(){
+        this.itemHandler.getStackInSlot(3).shrink(1);
     }
 
     private boolean hasEnergyItemInSlot(int powerSlot) {
@@ -382,12 +406,17 @@ private final FluidTank FLUID_TANK = createFluidTank();
         this.progress++;
     }
 
+
     private boolean hasRecipe() {
         Optional<TiberiumInfuserRecipe> recipe = getCurrentRecipe();
 
         if (recipe.isEmpty()){
             return false;
         }
+
+        maxProgress = recipe.get().getCraftTime();
+        energyAmount = recipe.get().getEnergyAmount();
+        neededFluidStack = recipe.get().getFluidStack();
 
         ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
 
@@ -397,11 +426,11 @@ private final FluidTank FLUID_TANK = createFluidTank();
     }
 
     private boolean hasEnoughFluidToCraft() {
-        return this.FLUID_TANK.getFluidAmount() >= 500;
+        return this.FLUID_TANK.getFluidAmount() >= neededFluidStack.getAmount();
     }
 
     private boolean hasEnoughEnergyToCraft() {
-        return this.ENERGY_STORAGE.getEnergyStored() >= 100 * maxProgress;
+        return this.ENERGY_STORAGE.getEnergyStored() >= energyAmount * maxProgress;
     }
 
     private Optional<TiberiumInfuserRecipe> getCurrentRecipe() {

@@ -22,7 +22,12 @@ public enum ModArmorMaterials implements ArmorMaterial {
             SoundEvents.ARMOR_EQUIP_IRON, 0.5f, 0.1f, () -> Ingredient.of(ModItems.GUNDANIUM_INGOT.get())),
 
     ALYTHUM("alythum", 35, new int[] {4, 7, 9, 4}, 12,
-    SoundEvents.ARMOR_EQUIP_IRON, 2.0f, 0.2f, () -> Ingredient.of(ModItems.ALYTHUM_INGOT.get()));
+            SoundEvents.ARMOR_EQUIP_IRON, 2.0f, 0.2f, () -> Ingredient.of(ModItems.ALYTHUM_INGOT.get())),
+
+    ILLYRIM("illyrim", 40, new int[] {6, 9, 11, 6}, 15,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 5.0f, 0.4f, () -> Ingredient.of(ModItems.ILLYRIM_INGOT.get()));
+
+
 
     private final String name;
     private final int durabilityMultiplier;

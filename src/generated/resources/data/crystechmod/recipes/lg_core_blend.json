@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:gundanium_dust"
+    },
+    {
+      "item": "crystechmod:illyrim_blend"
+    },
+    {
+      "item": "crystechmod:alythum_dust"
+    },
+    {
+      "item": "crystechmod:green_tiberium_dust"
+    },
+    {
+      "item": "crystechmod:blue_tiberium_dust"
+    }
+  ],
+  "result": {
+    "item": "crystechmod:lg_core_blend"
+  }
+}

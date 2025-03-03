@@ -3,10 +3,13 @@ package com.CartersDev.crystechmod.util;
 import com.CartersDev.crystechmod.CrystalTech;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraftforge.common.Tags;
 
 public class ModTags {
 
@@ -15,6 +18,7 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_PLAGUED_TOOL = tag("needs_plagued_tool");
         public static final TagKey<Block> NEEDS_GUNDANIUM_TOOL = tag("needs_gundanium_tool");
         public static final TagKey<Block> NEEDS_ALYTHUM_TOOL = tag("needs_alythum_tool");
+        public static final TagKey<Block> NEEDS_ILLYRIM_TOOL = tag("needs_alythum_tool");
         public static final TagKey<Block> PAXEL_MINEABLE = tag("mineable/paxel");
         public static final TagKey<Block> VULNERABLE_LEAVES = tag("vulnerable_leaves");
         public static final TagKey<Block> TIBERIUM_VULNERABLE_WOOD= tag("tiberium_vulnerable_wood");
@@ -61,7 +65,6 @@ public class ModTags {
         public static final TagKey<Item> TIBERCRETE_SANDS= tag("tibercrete_sands");
         public static final TagKey<Item> STICKS= tag("sticks");
         public static final TagKey<Item> HAZMAT_GLASS_PANES= tag("hazmat_glass_panes");
-        public static final TagKey<Item> HAZMAT_GLASS_PANES2= tag("hazmat_glass_panes2");
         public static final TagKey<Item> EMBER_OAK_LOGS= tag("ember_oak_logs");
         public static final TagKey<Item> MARIKA_OAK_LOGS= tag("marika_oak_logs");
         public static final TagKey<Item> DEAD_LOGS= tag("dead_logs");
@@ -87,7 +90,19 @@ public class ModTags {
         }
     }
 
+    public static class Fluids {
+        public static final TagKey<Fluid> MOLTEN_GREEN_TIBERIUM = tag("molten_green_tiberium");
+        public static final TagKey<Fluid> MOLTEN_BLUE_TIBERIUM = tag("molten_blue_tiberium");
+        public static final TagKey<Fluid> MOLTEN_RED_TIBERIUM = tag("molten_red_tiberium");
+        public static final TagKey<Fluid> MOLTEN_PURPLE_TIBERIUM = tag("molten_purple_tiberium");
+        public static final TagKey<Fluid> TIBERIUM_WATER = tag("tiberium_water");
 
+
+
+        private static TagKey<Fluid> tag(String name) {
+            return FluidTags.create(new ResourceLocation(CrystalTech.MOD_ID, name));
+        }
+    }
 
 
 }

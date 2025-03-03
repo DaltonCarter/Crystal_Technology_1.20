@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "crystechmod:mg_core_ingot"
+    },
+    "H": {
+      "tag": "crystechmod:sticks"
+    },
+    "I": {
+      "item": "crystechmod:illyrim_axe"
+    },
+    "P": {
+      "item": "crystechmod:illyrim_pickaxe"
+    },
+    "S": {
+      "item": "crystechmod:illyrim_shovel"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "IHP",
+    " H "
+  ],
+  "result": {
+    "item": "crystechmod:illyrim_paxel"
+  },
+  "show_notification": true
+}

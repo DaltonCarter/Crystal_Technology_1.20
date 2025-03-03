@@ -1,0 +1,15 @@
+{
+  "type": "crystechmod:tiberium_infusing",
+  "craftTime": 100,
+  "energyAmount": 1,
+  "fluidAmount": 100,
+  "fluidType": "crystechmod:molten_red_tiberium_source",
+  "ingredients": [
+    {
+      "item": "minecraft:red_sand"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:red_zone_sand"
+  }
+}

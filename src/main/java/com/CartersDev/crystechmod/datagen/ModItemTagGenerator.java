@@ -70,15 +70,19 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.ALYTHUM_HELMET.get(),
                         ModItems.ALYTHUM_CHESTPLATE.get(),
                         ModItems.ALYTHUM_LEGGINGS.get(),
-                        ModItems.ALYTHUM_BOOTS.get());
-                        ModItems.HAZMAT_MK1_HELMET.get();
-                        ModItems.HAZMAT_MK1_CHESTPLATE.get();
-                        ModItems.HAZMAT_MK1_LEGGINGS.get();
-                        ModItems.HAZMAT_MK1_BOOTS.get();
-                        ModItems.HAZMAT_MK2_HELMET.get();
-                        ModItems.HAZMAT_MK2_CHESTPLATE.get();
-                        ModItems.HAZMAT_MK2_LEGGINGS.get();
-                        ModItems.HAZMAT_MK2_BOOTS.get();
+                        ModItems.ALYTHUM_BOOTS.get(),
+                        ModItems.ILLYRIM_HELMET.get(),
+                        ModItems.ILLYRIM_CHESTPLATE.get(),
+                        ModItems.ILLYRIM_LEGGINGS.get(),
+                        ModItems.ILLYRIM_BOOTS.get(),
+                        ModItems.HAZMAT_MK1_HELMET.get(),
+                        ModItems.HAZMAT_MK1_CHESTPLATE.get(),
+                        ModItems.HAZMAT_MK1_LEGGINGS.get(),
+                        ModItems.HAZMAT_MK1_BOOTS.get(),
+                        ModItems.HAZMAT_MK2_HELMET.get(),
+                        ModItems.HAZMAT_MK2_CHESTPLATE.get(),
+                        ModItems.HAZMAT_MK2_LEGGINGS.get(),
+                        ModItems.HAZMAT_MK2_BOOTS.get());
 
 
 

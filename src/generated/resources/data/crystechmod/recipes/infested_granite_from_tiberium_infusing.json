@@ -1,0 +1,15 @@
+{
+  "type": "crystechmod:tiberium_infusing",
+  "craftTime": 100,
+  "energyAmount": 1,
+  "fluidAmount": 100,
+  "fluidType": "crystechmod:molten_tiberium_source",
+  "ingredients": [
+    {
+      "item": "minecraft:granite"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:infested_granite"
+  }
+}

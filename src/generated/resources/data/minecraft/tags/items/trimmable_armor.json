@@ -7,6 +7,18 @@
     "crystechmod:alythum_helmet",
     "crystechmod:alythum_chestplate",
     "crystechmod:alythum_leggings",
-    "crystechmod:alythum_boots"
+    "crystechmod:alythum_boots",
+    "crystechmod:illyrim_helmet",
+    "crystechmod:illyrim_chestplate",
+    "crystechmod:illyrim_leggings",
+    "crystechmod:illyrim_boots",
+    "crystechmod:hazmat_mk1_helmet",
+    "crystechmod:hazmat_mk1_chestplate",
+    "crystechmod:hazmat_mk1_leggings",
+    "crystechmod:hazmat_mk1_boots",
+    "crystechmod:hazmat_mk2_helmet",
+    "crystechmod:hazmat_mk2_chestplate",
+    "crystechmod:hazmat_mk2_leggings",
+    "crystechmod:hazmat_mk2_boots"
   ]
 }

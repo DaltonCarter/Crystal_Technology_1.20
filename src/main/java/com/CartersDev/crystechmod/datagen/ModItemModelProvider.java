@@ -137,6 +137,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.HEIM_BERRY);
         simpleItem(ModItems.HEL_FRUIT);
         simpleItem(ModItems.LAI_MELON_SLICE);
+        simpleItem(ModItems.SABER_BREAD);
+        simpleItem(ModItems.ZAIRAN_FRUIT_SALAD);
         simpleItem(ModItems.HEIM_BERRY_SEEDS);
         simpleItem(ModItems.HEL_FRUIT_SEEDS);
         simpleItem(ModItems.LAI_MELON_SEEDS);
@@ -550,6 +552,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.ALYTHUM_PAXEL);
         handheldItem(ModItems.ALYTHUM_HAMMER);
 
+        handheldItem(ModItems.ILLYRIM_PICKAXE);
+        handheldItem(ModItems.ILLYRIM_AXE);
+        handheldItem(ModItems.ILLYRIM_SHOVEL);
+        handheldItem(ModItems.ILLYRIM_HOE);
+        handheldItem(ModItems.ILLYRIM_PAXEL);
+        handheldItem(ModItems.ILLYRIM_HAMMER);
+
         //Armors:
         trimmedArmorItem(ModItems.GUNDANIUM_HELMET);
         trimmedArmorItem(ModItems.GUNDANIUM_CHESTPLATE);
@@ -560,6 +569,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.ALYTHUM_CHESTPLATE);
         trimmedArmorItem(ModItems.ALYTHUM_LEGGINGS);
         trimmedArmorItem(ModItems.ALYTHUM_BOOTS);
+
+        trimmedArmorItem(ModItems.ILLYRIM_HELMET);
+        trimmedArmorItem(ModItems.ILLYRIM_CHESTPLATE);
+        trimmedArmorItem(ModItems.ILLYRIM_LEGGINGS);
+        trimmedArmorItem(ModItems.ILLYRIM_BOOTS);
 
         trimmedArmorItem(ModItems.HAZMAT_MK1_HELMET);
         trimmedArmorItem(ModItems.HAZMAT_MK1_CHESTPLATE);

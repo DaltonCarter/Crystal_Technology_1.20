@@ -1,0 +1,15 @@
+{
+  "type": "crystechmod:tiberium_infusing",
+  "craftTime": 500,
+  "energyAmount": 25,
+  "fluidAmount": 1000,
+  "fluidType": "crystechmod:molten_tiberium_source",
+  "ingredients": [
+    {
+      "item": "crystechmod:gundanium_ingot"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:tiberium_composite_ingot"
+  }
+}

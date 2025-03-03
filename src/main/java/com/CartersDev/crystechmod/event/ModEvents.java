@@ -88,9 +88,14 @@ public class ModEvents {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack enchantedBook = EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.LIGHTNING_STRIKER.get(), 1));
 
+            ItemStack enchantedBook2 = EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.VITRIC_HARVESTER.get(), 1));
+
             //Level 1
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(ModItems.TIBERIUM_BLUE.get(),20),
                     enchantedBook, 2, 8, 0.02f));
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(ModItems.TIBERIUM_RED.get(),20),
+                    enchantedBook2, 2, 8, 0.02f));
 
         }
 

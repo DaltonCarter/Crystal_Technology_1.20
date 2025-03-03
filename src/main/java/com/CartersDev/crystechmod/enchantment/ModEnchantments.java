@@ -20,6 +20,11 @@ public static RegistryObject<Enchantment> LIGHTNING_STRIKER =
                 new LightningStrikerEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.WEAPON,
                         EquipmentSlot.MAINHAND));
 
+    public static RegistryObject<Enchantment> VITRIC_HARVESTER =
+            ENCHANTMENTS.register("vitric_harvester", () ->
+                    new VitricHarvesterEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentCategory.DIGGER,
+                            EquipmentSlot.MAINHAND));
+
 
     public static void register(IEventBus eventBus) {
         ENCHANTMENTS.register(eventBus);

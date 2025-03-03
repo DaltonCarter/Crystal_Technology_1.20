@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hazmat_mk1_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:hazmat_mk1_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:hazmat_mk2_chestplate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_hazmat_mk1_chestplate",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:hazmat_mk2_chestplate"
+    ]
+  },
+  "sends_telemetry_event": false
+}

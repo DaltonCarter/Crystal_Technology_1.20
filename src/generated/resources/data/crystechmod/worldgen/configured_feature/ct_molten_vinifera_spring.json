@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:spring_feature",
+  "config": {
+    "hole_count": 1,
+    "requires_block_below": true,
+    "rock_count": 4,
+    "state": {
+      "Name": "crystechmod:molten_blue_tiberium_source",
+      "Properties": {
+        "falling": "true"
+      }
+    },
+    "valid_blocks": [
+      "minecraft:stone",
+      "minecraft:granite",
+      "minecraft:diorite",
+      "minecraft:andesite",
+      "minecraft:deepslate",
+      "minecraft:tuff",
+      "minecraft:calcite",
+      "minecraft:dirt",
+      "crystechmod:yellow_zone_cracked_dirt",
+      "crystechmod:seeded_yellow_zone_cracked_dirt",
+      "crystechmod:seeded_dirt",
+      "crystechmod:red_zone_dirt",
+      "crystechmod:seeded_red_zone_dirt",
+      "crystechmod:infested_stone",
+      "crystechmod:infested_diorite",
+      "crystechmod:infested_granite",
+      "crystechmod:infested_andesite"
+    ]
+  }
+}

@@ -33,6 +33,8 @@
   "item.crystechmod.heim_berry": "Heim Berry",
   "item.crystechmod.heim_berry_seeds": "Heim Berry Seeds",
   "item.crystechmod.hel_fruit": "Hel Fruit",
+  "item.crystechmod.zairan_fruit_salad": "Zairan Fruit Salad",
+  "item.crystechmod.saber_bread": "Saber Bread",
   "item.crystechmod.hel_fruit_seeds": "Hel Fruit Seeds",
   "item.crystechmod.saber_corn": "Saber Corn",
   "item.crystechmod.lai_melon_slice": "Lai Melon Slice",
@@ -70,11 +72,11 @@
   "item.crystechmod.alythum_leggings": "Alythum Leggings",
   "item.crystechmod.alythum_boots": "Alythum Boots",
   "item.crystechmod.hazmat_mk1_helmet": "Tiberium Hazmat Helmet",
-  "item.crystechmod.hazmat_mk1_chestplate": "Tiberium Chestplate",
+  "item.crystechmod.hazmat_mk1_chestplate": "Tiberium Hazmat Chestplate",
   "item.crystechmod.hazmat_mk1_leggings": "Tiberium Hazmat Leggings",
   "item.crystechmod.hazmat_mk1_boots": "Tiberium Hazmat Boots",
   "item.crystechmod.hazmat_mk2_helmet": "Red Zone Hazmat Helmet",
-  "item.crystechmod.hazmat_mk2_chestplate": "Red Zone Chestplate",
+  "item.crystechmod.hazmat_mk2_chestplate": "Red Zone Hazmat Chestplate",
   "item.crystechmod.hazmat_mk2_leggings": "Red Zone Hazmat Leggings",
   "item.crystechmod.hazmat_mk2_boots": "Red Zone Hazmat Boots",
   "item.crystechmod.tiberium_leather": "Tiberium Plagued Leather",
@@ -84,6 +86,19 @@
   "item.crystechmod.alythum_axe": "Alythum Axe",
   "item.crystechmod.alythum_hoe": "Alythum Hoe",
   "item.crystechmod.alythum_shovel": "Alythum Shovel",
+
+  "item.crystechmod.illyrim_sword": "Illyrim Sword",
+  "item.crystechmod.illyrim_pickaxe": "Illyrim Pickaxe",
+  "item.crystechmod.illyrim_axe": "Illyrim Axe",
+  "item.crystechmod.illyrim_hoe": "Illyrim Hoe",
+  "item.crystechmod.illyrim_shovel": "Illyrim Shovel",
+  "item.crystechmod.illyrim_paxel": "Illyrim Paxel",
+  "item.crystechmod.illyrim_hammer": "Illyrim Hammer",
+
+  "item.crystechmod.illyrim_helmet": "Illyrim Helmet",
+  "item.crystechmod.illyrim_chestplate": "Illyrim Chestplate",
+  "item.crystechmod.illyrim_leggings": "Illyrim Leggings",
+  "item.crystechmod.illyrim_boots": "Illyrim Boots",
 
   "item.crystechmod.rhino_spawn_egg": "Rhino Spawn Egg",
 
@@ -962,7 +977,48 @@
   "biome.crystechmod.embran_valley": "Embran Valley",
   "biome.crystechmod.hornsent_hills": "Hornsent Hills",
 
+  "biome.crystechmod.calidian_marsh": "Calidian Marsh",
+  "biome.crystechmod.grove_of_life": "Grove of Life",
+  "biome.crystechmod.foothills": "Foothills",
+  "biome.crystechmod.primal_jungle": "Primal Jungle",
 
+  "biome.crystechmod.blue_and_yellow_zone_border": "Blue/Yellow Zone Border",
+  "biome.crystechmod.burning_hills": "Burning Hills",
+  "biome.crystechmod.ember_grove": "Ember Grove",
+  "biome.crystechmod.inferno_peak": "Inferno Peak",
+
+  "biome.crystechmod.untarnished_hills": "Untarnished Hills",
+  "biome.crystechmod.evergold_expanse": "Evergold Expanse",
+  "biome.crystechmod.valley_of_gold": "Valley of Gold",
+  "biome.crystechmod.dead_forest": "Dead Forest",
+
+  "biome.crystechmod.tiberian_desert": "Tiberian Desert",
+  "biome.crystechmod.tiberian_desert_hills": "Tiberian Desert Hills",
+  "biome.crystechmod.tiberian_highlands": "Tiberian Highlands",
+  "biome.crystechmod.tiberian_badlands": "Tiberian Badlands",
+
+  "biome.crystechmod.old_battlefield": "Old Battlefield",
+  "biome.crystechmod.lost_steppes": "Lost Steppes",
+  "biome.crystechmod.yellow_zone_shore": "Yellow Zone Shore",
+  "biome.crystechmod.yellow_zone_stony_shore": "Yellow Zone Stony Shore",
+  "biome.crystechmod.infected_river": "Infected River",
+
+  "biome.crystechmod.infected_ocean": "Infected Ocean",
+  "biome.crystechmod.dry_hills": "Dry Hills",
+  "biome.crystechmod.dry_valley": "Dry Valley",
+  "biome.crystechmod.forgotten_highlands": "Forgotten Highlands",
+
+  "biome.crystechmod.red_and_yellow_zone_border": "Red/Yellow Zone Border",
+  "biome.crystechmod.ruined_city": "Ruined City",
+  "biome.crystechmod.tiberian_taiga": "Tiberian Taiga",
+  "biome.crystechmod.tiberian_swamp": "Tiberian Swamp",
+
+  "biome.crystechmod.tiberian_woods": "Tiberian Woods",
+  "biome.crystechmod.crystal_fields": "Crystal Fields",
+  "biome.crystechmod.tiberian_stone_fields": "Tiberian Stone Fields",
+
+
+  "enchantment.crystechmod.vitric_harvester": "Vitric Harvester",
 
   "sounds.crystechmod.chime": "Alert Chime",
   "sounds.crystechmod.sound_block_break": "Sound Block Broken",

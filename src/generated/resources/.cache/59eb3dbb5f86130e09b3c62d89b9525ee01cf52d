@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-29T01:27:42.0373428	Loot Tables
+// 1.20.1	2025-03-02T14:47:00.0016458	Loot Tables
 03c6f95925fa38635ca3601903e1d452029caabd data/crystechmod/loot_tables/blocks/aboreus_crystal.json
 d0beb68b81b414280026c89df98ac8685d552502 data/crystechmod/loot_tables/blocks/aboreus_crystal_slab.json
 119389378ebef86e266227fdae475e18f84de5e1 data/crystechmod/loot_tables/blocks/aboreus_crystal_stairs.json
@@ -442,7 +442,7 @@ ff110b6446d46267f0d732390793926d3d75b7d8 data/crystechmod/loot_tables/blocks/inf
 c21d1e042b9b83e6b6d8527ca34e7d24bd126655 data/crystechmod/loot_tables/blocks/infested_cobble_wall.json
 58103be4e649be8f1edd5a38a20c38f0cdbc5c64 data/crystechmod/loot_tables/blocks/infested_diorite.json
 3c8be84bd3176b684febcaecb35ac38578146030 data/crystechmod/loot_tables/blocks/infested_granite.json
-124d4766885b168d86829ca78fbc0ae04f241a58 data/crystechmod/loot_tables/blocks/infested_stone.json
+e793d580f8e7becb356d92921762b0d4c2e909f7 data/crystechmod/loot_tables/blocks/infested_stone.json
 d744c8950aeb9a04c15349bcdc856eb859e87e24 data/crystechmod/loot_tables/blocks/infested_stone_bricks.json
 bd4861015c679dcd7e90ef4735a15df210ef97cf data/crystechmod/loot_tables/blocks/infested_stone_brick_slab.json
 2bd85d30d2efc8ea7d5677ffb6fb91e7569328b8 data/crystechmod/loot_tables/blocks/infested_stone_brick_stairs.json
@@ -454,7 +454,7 @@ f82844e640a4e35769a5a88e0483c8972af20d03 data/crystechmod/loot_tables/blocks/inv
 33a710f5049c780caf53b34e39ef8c9bef806f12 data/crystechmod/loot_tables/blocks/inverted_crystal_core_light.json
 a6fd9f111cfb89e66a70fef45533f93b2ff7d297 data/crystechmod/loot_tables/blocks/kryon_block.json
 eff9a6f1767dfea2abc474e125bfa5f5b5ece382 data/crystechmod/loot_tables/blocks/kryon_ore.json
-3aea9816810fb9b098d6f30f46c19d48c3e3a627 data/crystechmod/loot_tables/blocks/lai_melon.json
+38dfcee6e448b4c4bf7add6b3ffe2051c0834b4a data/crystechmod/loot_tables/blocks/lai_melon.json
 7c772e6343ac3f014aef1288ac511a036afd50d0 data/crystechmod/loot_tables/blocks/lai_melon_stem.json
 f2f3fff6119d631b21a400ff45756327c16449d6 data/crystechmod/loot_tables/blocks/lg_core_block.json
 06915554da5a686be4bac1e7a6064e931d56cff8 data/crystechmod/loot_tables/blocks/light_blue_tibercrete.json

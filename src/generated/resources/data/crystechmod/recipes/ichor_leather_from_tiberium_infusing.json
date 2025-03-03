@@ -1,0 +1,15 @@
+{
+  "type": "crystechmod:tiberium_infusing",
+  "craftTime": 300,
+  "energyAmount": 30,
+  "fluidAmount": 1000,
+  "fluidType": "crystechmod:molten_red_tiberium_source",
+  "ingredients": [
+    {
+      "item": "crystechmod:tiberium_leather"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:ichor_leather"
+  }
+}

@@ -3,6 +3,8 @@ package com.CartersDev.crystechmod.worldgen;
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.fluid.ModFluids;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
@@ -11,9 +13,12 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.heightproviders.UniformHeight;
+import net.minecraft.world.level.levelgen.heightproviders.VeryBiasedToBottomHeight;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraft.world.level.material.Fluids;
 
@@ -72,6 +77,10 @@ public class ModPlacedFeatures {
     //Geode:
     public static final ResourceKey<PlacedFeature> TIBERIUM_GEODE_PLACED_KEY = registerKey("tiberium_geode_placed");
 
+    public static final ResourceKey<PlacedFeature> VITRIC_TIBERIUM_GEODE_PLACED_KEY = registerKey("vitric_tiberium_geode_placed");
+    public static final ResourceKey<PlacedFeature> VITRIC_ICHOR_GEODE_PLACED_KEY = registerKey("vitric_ichor_geode_placed");
+    public static final ResourceKey<PlacedFeature> VITRIC_AMETHYST_GEODE_PLACED_KEY = registerKey("vitric_amethyst_geode_placed");
+
     //Flowers:
     public static final ResourceKey<PlacedFeature> HYACINTH_PLACED_KEY = registerKey("hyacinth_placed");
     public static final ResourceKey<PlacedFeature> SPITFIRE_PLACED_KEY = registerKey("spitfire_placed");
@@ -112,8 +121,55 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> CT_ABOREUS_CRYSTAL_PLACED_KEY = registerKey("ct_aboreus_crystal_placed");
     
     //Springs:
+    public static final ResourceKey<PlacedFeature> CT_INFECTED_WATER_SPRING_PLACED_KEY = registerKey("ct_infected_water_spring_placed");
+
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_RIPARIUS_SPRING_UPPER_PLACED_KEY = registerKey("ct_molten_riparius_spring_upper_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_VINIFERA_SPRING_UPPER_PLACED_KEY = registerKey("ct_molten_vinifera_spring_upper_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_CRUENTUS_SPRING_UPPER_PLACED_KEY = registerKey("ct_molten_cruentus_spring_upper_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_ABOREUS_SPRING_UPPER_PLACED_KEY = registerKey("ct_molten_aboreus_spring_upper_placed");
+
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_RIPARIUS_SPRING_LOWER_PLACED_KEY = registerKey("ct_molten_riparius_spring_lower_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_VINIFERA_SPRING_LOWER_PLACED_KEY = registerKey("ct_molten_vinifera_spring_lower_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_CRUENTUS_SPRING_LOWER_PLACED_KEY = registerKey("ct_molten_cruentus_spring_lower_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_ABOREUS_SPRING_LOWER_PLACED_KEY = registerKey("ct_molten_aboreus_spring_lower_placed");
 
     //Lakes:
+    public static final ResourceKey<PlacedFeature> CT_INFECTED_WATER_SURFACE_LAKE_PLACED_KEY = registerKey("ct_infected_water_surface_lake_placed");
+
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_RIPARIUS_SURFACE_LAKE_PLACED_KEY = registerKey("ct_molten_riparius_surface_lake_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_VINIFERA_SURFACE_LAKE_PLACED_KEY = registerKey("ct_molten_vinifera_surface_lake_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_CRUENTUS_SURFACE_LAKE_PLACED_KEY = registerKey("ct_molten_cruentus_surface_lake_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_ABOREUS_SURFACE_LAKE_PLACED_KEY = registerKey("ct_molten_aboreus_surface_lake_placed");
+
+    public static final ResourceKey<PlacedFeature> CT_INFECTED_WATER_UNDERGROUND_LAKE_PLACED_KEY = registerKey("ct_infected_water_underground_lake_placed");
+
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_RIPARIUS_UNDERGROUND_LAKE_PLACED_KEY = registerKey("ct_molten_riparius_underground_lake_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_VINIFERA_UNDERGROUND_LAKE_PLACED_KEY = registerKey("ct_molten_vinifera_underground_lake_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_CRUENTUS_UNDERGROUND_LAKE_PLACED_KEY = registerKey("ct_molten_cruentus_underground_lake_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_ABOREUS_UNDERGROUND_LAKE_PLACED_KEY = registerKey("ct_molten_aboreus_underground_lake_placed");
+
+    //Small Columns:
+    public static final ResourceKey<PlacedFeature> CT_RIPARIUS_STONE_SMALL_COLUMN_PLACED_KEY = registerKey("ct_riparius_stone_small_column_placed");
+    public static final ResourceKey<PlacedFeature> CT_VINIFERA_STONE_SMALL_COLUMN_PLACED_KEY = registerKey("ct_vinifera_stone_small_column_placed");
+    public static final ResourceKey<PlacedFeature> CT_CRUENTUS_STONE_SMALL_COLUMN_PLACED_KEY = registerKey("ct_cruentus_stone_small_column_placed");
+    public static final ResourceKey<PlacedFeature> CT_ABOREUS_STONE_SMALL_COLUMN_PLACED_KEY = registerKey("ct_aboreus_stone_small_column_placed");
+
+    public static final ResourceKey<PlacedFeature> CT_RIPARIUS_CRYSTAL_SMALL_COLUMN_PLACED_KEY = registerKey("ct_riparius_crystal_small_column_placed");
+    public static final ResourceKey<PlacedFeature> CT_VINIFERA_CRYSTAL_SMALL_COLUMN_PLACED_KEY = registerKey("ct_vinifera_crystal_small_column_placed");
+    public static final ResourceKey<PlacedFeature> CT_CRUENTUS_CRYSTAL_SMALL_COLUMN_PLACED_KEY = registerKey("ct_cruentus_crystal_small_column_placed");
+    public static final ResourceKey<PlacedFeature> CT_ABOREUS_CRYSTAL_SMALL_COLUMN_PLACED_KEY = registerKey("ct_aboreus_crystal_small_column_placed");
+
+    //Large Columns:
+    public static final ResourceKey<PlacedFeature> CT_RIPARIUS_STONE_LARGE_COLUMN_PLACED_KEY = registerKey("ct_riparius_stone_large_column_placed");
+    public static final ResourceKey<PlacedFeature> CT_VINIFERA_STONE_LARGE_COLUMN_PLACED_KEY = registerKey("ct_vinifera_stone_large_column_placed");
+    public static final ResourceKey<PlacedFeature> CT_CRUENTUS_STONE_LARGE_COLUMN_PLACED_KEY = registerKey("ct_cruentus_stone_large_column_placed");
+    public static final ResourceKey<PlacedFeature> CT_ABOREUS_STONE_LARGE_COLUMN_PLACED_KEY = registerKey("ct_aboreus_stone_large_column_placed");
+
+    public static final ResourceKey<PlacedFeature> CT_RIPARIUS_CRYSTAL_LARGE_COLUMN_PLACED_KEY = registerKey("ct_riparius_crystal_large_column_placed");
+    public static final ResourceKey<PlacedFeature> CT_VINIFERA_CRYSTAL_LARGE_COLUMN_PLACED_KEY = registerKey("ct_vinifera_crystal_large_column_placed");
+    public static final ResourceKey<PlacedFeature> CT_CRUENTUS_CRYSTAL_LARGE_COLUMN_PLACED_KEY = registerKey("ct_cruentus_crystal_large_column_placed");
+    public static final ResourceKey<PlacedFeature> CT_ABOREUS_CRYSTAL_LARGE_COLUMN_PLACED_KEY = registerKey("ct_aboreus_crystal_large_column_placed");
+
 
 
 public static void bootstrap(BootstapContext<PlacedFeature> context) {
@@ -284,6 +340,21 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(30)),
                     BiomeFilter.biome()));
 
+    register(context, VITRIC_AMETHYST_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.VITRIC_AMETHYST_GEODE_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(60), InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(30)),
+                    BiomeFilter.biome()));
+
+    register(context, VITRIC_ICHOR_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.VITRIC_ICHOR_GEODE_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(60), InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(30)),
+                    BiomeFilter.biome()));
+
+    register(context, VITRIC_TIBERIUM_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.VITRIC_TIBERIUM_GEODE_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(60), InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(30)),
+                    BiomeFilter.biome()));
+
 
     //Flowers:
     register(context, HYACINTH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.HYACINTH_KEY),
@@ -369,8 +440,144 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
             List.of(CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
     
     //Springs:
+    register(context, CT_INFECTED_WATER_SPRING_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_INFECTED_WATER_SPRING_KEY),
+            List.of(CountPlacement.of(25), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
+
+    register(context, CT_MOLTEN_RIPARIUS_SPRING_LOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_RIPARIUS_SPRING_KEY),
+            List.of(CountPlacement.of(25), InSquarePlacement.spread(), HeightRangePlacement.of(VeryBiasedToBottomHeight.of(VerticalAnchor.bottom(), VerticalAnchor.belowTop(8), 8)), BiomeFilter.biome()));
+
+    register(context, CT_MOLTEN_VINIFERA_SPRING_LOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_VINIFERA_SPRING_KEY),
+            List.of(CountPlacement.of(25), InSquarePlacement.spread(), HeightRangePlacement.of(VeryBiasedToBottomHeight.of(VerticalAnchor.bottom(), VerticalAnchor.belowTop(8), 8)), BiomeFilter.biome()));
+
+    register(context, CT_MOLTEN_CRUENTUS_SPRING_LOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_CRUENTUS_SPRING_KEY),
+            List.of(CountPlacement.of(25), InSquarePlacement.spread(), HeightRangePlacement.of(VeryBiasedToBottomHeight.of(VerticalAnchor.bottom(), VerticalAnchor.belowTop(8), 8)), BiomeFilter.biome()));
+
+    register(context, CT_MOLTEN_ABOREUS_SPRING_LOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_ABOREUS_SPRING_KEY),
+            List.of(CountPlacement.of(25), InSquarePlacement.spread(), HeightRangePlacement.of(VeryBiasedToBottomHeight.of(VerticalAnchor.bottom(), VerticalAnchor.belowTop(8), 8)), BiomeFilter.biome()));
+
+
+    register(context, CT_MOLTEN_RIPARIUS_SPRING_UPPER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_RIPARIUS_SPRING_KEY),
+            List.of(CountPlacement.of(15), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
+
+    register(context, CT_MOLTEN_VINIFERA_SPRING_UPPER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_VINIFERA_SPRING_KEY),
+            List.of(CountPlacement.of(15), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
+
+    register(context, CT_MOLTEN_CRUENTUS_SPRING_UPPER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_CRUENTUS_SPRING_KEY),
+            List.of(CountPlacement.of(15), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
+
+    register(context, CT_MOLTEN_ABOREUS_SPRING_UPPER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_ABOREUS_SPRING_KEY),
+            List.of(CountPlacement.of(15), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
+
 
     //Lakes:
+    register(context, CT_INFECTED_WATER_SURFACE_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_INFECTED_WATER_LAKE_KEY),
+    List.of(RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+
+    register(context, CT_INFECTED_WATER_UNDERGROUND_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_INFECTED_WATER_LAKE_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(9), InSquarePlacement.spread(),  HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.top())),
+                    EnvironmentScanPlacement.scanningFor(Direction.DOWN, BlockPredicate.allOf(BlockPredicate.not(BlockPredicate.ONLY_IN_AIR_PREDICATE),
+                            BlockPredicate.insideWorld(new BlockPos(0, -5, 0))), 32), SurfaceRelativeThresholdFilter.of(Heightmap.Types.OCEAN_FLOOR_WG,
+                            Integer.MIN_VALUE, -5), BiomeFilter.biome()));
+
+
+    register(context, CT_MOLTEN_RIPARIUS_SURFACE_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_RIPARIUS_LAKE_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+
+    register(context, CT_MOLTEN_RIPARIUS_UNDERGROUND_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_RIPARIUS_LAKE_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(9), InSquarePlacement.spread(),  HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.top())),
+                    EnvironmentScanPlacement.scanningFor(Direction.DOWN, BlockPredicate.allOf(BlockPredicate.not(BlockPredicate.ONLY_IN_AIR_PREDICATE),
+                            BlockPredicate.insideWorld(new BlockPos(0, -5, 0))), 32), SurfaceRelativeThresholdFilter.of(Heightmap.Types.OCEAN_FLOOR_WG,
+                            Integer.MIN_VALUE, -5), BiomeFilter.biome()));
+
+
+    register(context, CT_MOLTEN_VINIFERA_SURFACE_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_VINIFERA_LAKE_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+
+    register(context, CT_MOLTEN_VINIFERA_UNDERGROUND_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_VINIFERA_LAKE_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(9), InSquarePlacement.spread(),  HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.top())),
+                    EnvironmentScanPlacement.scanningFor(Direction.DOWN, BlockPredicate.allOf(BlockPredicate.not(BlockPredicate.ONLY_IN_AIR_PREDICATE),
+                            BlockPredicate.insideWorld(new BlockPos(0, -5, 0))), 32), SurfaceRelativeThresholdFilter.of(Heightmap.Types.OCEAN_FLOOR_WG,
+                            Integer.MIN_VALUE, -5), BiomeFilter.biome()));
+
+
+    register(context, CT_MOLTEN_CRUENTUS_SURFACE_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_CRUENTUS_LAKE_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+
+    register(context, CT_MOLTEN_CRUENTUS_UNDERGROUND_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_CRUENTUS_LAKE_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(9), InSquarePlacement.spread(),  HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.top())),
+                    EnvironmentScanPlacement.scanningFor(Direction.DOWN, BlockPredicate.allOf(BlockPredicate.not(BlockPredicate.ONLY_IN_AIR_PREDICATE),
+                            BlockPredicate.insideWorld(new BlockPos(0, -5, 0))), 32), SurfaceRelativeThresholdFilter.of(Heightmap.Types.OCEAN_FLOOR_WG,
+                            Integer.MIN_VALUE, -5), BiomeFilter.biome()));
+
+
+    register(context, CT_MOLTEN_ABOREUS_SURFACE_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_ABOREUS_LAKE_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+
+    register(context, CT_MOLTEN_ABOREUS_UNDERGROUND_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_ABOREUS_LAKE_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(9), InSquarePlacement.spread(),  HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.top())),
+                    EnvironmentScanPlacement.scanningFor(Direction.DOWN, BlockPredicate.allOf(BlockPredicate.not(BlockPredicate.ONLY_IN_AIR_PREDICATE),
+                            BlockPredicate.insideWorld(new BlockPos(0, -5, 0))), 32), SurfaceRelativeThresholdFilter.of(Heightmap.Types.OCEAN_FLOOR_WG,
+                            Integer.MIN_VALUE, -5), BiomeFilter.biome()));
+
+    //Small Columns:
+    register(context, CT_RIPARIUS_STONE_SMALL_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_RIPARIUS_STONE_SMALL_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(2), BiomeFilter.biome()));
+
+    register(context, CT_VINIFERA_STONE_SMALL_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_VINIFERA_STONE_SMALL_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(2), BiomeFilter.biome()));
+
+    register(context, CT_CRUENTUS_STONE_SMALL_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_CRUENTUS_STONE_SMALL_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(2), BiomeFilter.biome()));
+
+    register(context, CT_ABOREUS_STONE_SMALL_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_ABOREUS_STONE_SMALL_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(2), BiomeFilter.biome()));
+
+
+    register(context, CT_RIPARIUS_CRYSTAL_SMALL_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_RIPARIUS_CRYSTAL_SMALL_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(2), BiomeFilter.biome()));
+
+    register(context, CT_VINIFERA_CRYSTAL_SMALL_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_VINIFERA_CRYSTAL_SMALL_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(2), BiomeFilter.biome()));
+
+    register(context, CT_CRUENTUS_CRYSTAL_SMALL_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_CRUENTUS_CRYSTAL_SMALL_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(2), BiomeFilter.biome()));
+
+    register(context, CT_ABOREUS_CRYSTAL_SMALL_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_ABOREUS_CRYSTAL_SMALL_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(2), BiomeFilter.biome()));
+
+
+    //Large Columns:
+    register(context, CT_RIPARIUS_STONE_LARGE_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_RIPARIUS_STONE_LARGE_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(1), BiomeFilter.biome()));
+
+    register(context, CT_VINIFERA_STONE_LARGE_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_VINIFERA_STONE_LARGE_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(1), BiomeFilter.biome()));
+
+    register(context, CT_CRUENTUS_STONE_LARGE_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_CRUENTUS_STONE_LARGE_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(1), BiomeFilter.biome()));
+
+    register(context, CT_ABOREUS_STONE_LARGE_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_ABOREUS_STONE_LARGE_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(1), BiomeFilter.biome()));
+
+
+    register(context, CT_RIPARIUS_CRYSTAL_LARGE_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_RIPARIUS_CRYSTAL_LARGE_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(1), BiomeFilter.biome()));
+
+    register(context, CT_VINIFERA_CRYSTAL_LARGE_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_VINIFERA_CRYSTAL_LARGE_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(1), BiomeFilter.biome()));
+
+    register(context, CT_CRUENTUS_CRYSTAL_LARGE_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_CRUENTUS_CRYSTAL_LARGE_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(1), BiomeFilter.biome()));
+
+    register(context, CT_ABOREUS_CRYSTAL_LARGE_COLUMN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_ABOREUS_CRYSTAL_LARGE_COLUMN_KEY),
+            List.of(CountOnEveryLayerPlacement.of(1), BiomeFilter.biome()));
+
+
 
 }
 

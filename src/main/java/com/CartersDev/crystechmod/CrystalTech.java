@@ -22,6 +22,7 @@ import com.CartersDev.crystechmod.sound.ModSounds;
 import com.CartersDev.crystechmod.util.BetterBrewingRecipe;
 import com.CartersDev.crystechmod.util.ModWoodTypes;
 import com.CartersDev.crystechmod.villager.ModVillagers;
+import com.CartersDev.crystechmod.worldgen.ModFeatureTypes.ModFeatures;
 import com.CartersDev.crystechmod.worldgen.biome.ModTerraBlenderAPI;
 import com.CartersDev.crystechmod.worldgen.biome.surface.ModSurfaceRules;
 import com.mojang.logging.LogUtils;
@@ -33,6 +34,7 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -91,6 +93,7 @@ public class CrystalTech {
 
         ModTerraBlenderAPI.registerRegions();
 
+        ModFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -119,7 +122,21 @@ public class CrystalTech {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.VITRIC_BLOOM.getId(), ModBlocks.POTTED_VITRIC_BLOOM);
             //End of flowers
 
-            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.overworld());
+            ComposterBlock.COMPOSTABLES.put(ModItems.LAI_MELON_SEEDS.get(),0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.HEIM_BERRY_SEEDS.get(),0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.HEL_FRUIT_SEEDS.get(),0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.SABER_CORN_SEEDS.get(),0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.LAI_MELON_SLICE.get(),0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.HEIM_BERRY.get(),0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.HEL_FRUIT.get(),0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.SABER_CORN.get(),0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.DYING_SAPLING.get(),0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.EMBER_OAK_SAPLING.get(),0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.MARIKA_OAK_SAPLING.get(),0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.PLAGUED_SAPLING.get(),0.35f);
+
+
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.vitricExpanse());
 
 
 

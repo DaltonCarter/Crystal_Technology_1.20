@@ -96,13 +96,25 @@ public class BlueTiberiumCrystalBlock extends CropBlock {
 
         System.out.println(Enchantments);
 
-        if (!pLevel.isClientSide() && !Enchantments.contains("net.minecraft.world.item.enchantment.UntouchingEnchantment") && !pPlayer.isCreative()) {
-            float f = 4.0F;
-            pLevel.explode(null, pPos.getX(), pPos.getY(), pPos.getZ(), 4.0F, Level.ExplosionInteraction.TNT);
+        if (!pLevel.isClientSide() && !pPlayer.isCreative() && !hasEnchantment(Enchantments)) {
+                float f = 4.0F;
+                pLevel.explode(null, pPos.getX(), pPos.getY(), pPos.getZ(), 4.0F, Level.ExplosionInteraction.TNT);
+
+
         }
 
     }
 
+
+public boolean hasEnchantment (String enchantments) {
+        if (enchantments.contains("com.CartersDev.crystechmod.enchantment.VitricHarvesterEnchantment") ||
+                enchantments.contains("net.minecraft.world.item.enchantment.UntouchingEnchantment")) {
+            System.out.println("PING PONG");
+            return true;
+        }
+    System.out.println("GOD DAMN IT NAPPA!");
+        return false;
+}
 
     @Override
     public boolean canDropFromExplosion(BlockState state, BlockGetter level, BlockPos pos, Explosion explosion) {

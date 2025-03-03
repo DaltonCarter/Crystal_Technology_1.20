@@ -161,8 +161,10 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModItems.LAI_MELON_SEEDS.get());
                         output.accept(ModItems.LAI_MELON_SLICE.get());
                         output.accept(ModBlocks.LAI_MELON.get());
+                        output.accept(ModItems.ZAIRAN_FRUIT_SALAD.get());
                         output.accept(ModItems.SABER_CORN_SEEDS.get());
                         output.accept(ModItems.SABER_CORN.get());
+                        output.accept(ModItems.SABER_BREAD.get());
                         output.accept(ModItems.RAW_INFECTED_MEAT.get());
                         output.accept(ModItems.COOKED_INFECTED_MEAT.get());
                         output.accept(ModBlocks.HYACINTH.get());
@@ -225,6 +227,14 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModItems.ALYTHUM_PAXEL.get());
                         output.accept(ModItems.ALYTHUM_HAMMER.get());
 
+                        output.accept(ModItems.ILLYRIM_SWORD.get());
+                        output.accept(ModItems.ILLYRIM_PICKAXE.get());
+                        output.accept(ModItems.ILLYRIM_AXE.get());
+                        output.accept(ModItems.ILLYRIM_SHOVEL.get());
+                        output.accept(ModItems.ILLYRIM_HOE.get());
+                        output.accept(ModItems.ILLYRIM_PAXEL.get());
+                        output.accept(ModItems.ILLYRIM_HAMMER.get());
+
                         output.accept(ModItems.HAZMAT_MK1_HELMET.get());
                         output.accept(ModItems.HAZMAT_MK1_CHESTPLATE.get());
                         output.accept(ModItems.HAZMAT_MK1_LEGGINGS.get());
@@ -244,6 +254,13 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModItems.ALYTHUM_CHESTPLATE.get());
                         output.accept(ModItems.ALYTHUM_LEGGINGS.get());
                         output.accept(ModItems.ALYTHUM_BOOTS.get());
+
+                        output.accept(ModItems.ILLYRIM_HELMET.get());
+                        output.accept(ModItems.ILLYRIM_CHESTPLATE.get());
+                        output.accept(ModItems.ILLYRIM_LEGGINGS.get());
+                        output.accept(ModItems.ILLYRIM_BOOTS.get());
+
+
 
                         output.accept(ModItems.GUNDANIUM_HORSE_ARMOR.get());
                     })
