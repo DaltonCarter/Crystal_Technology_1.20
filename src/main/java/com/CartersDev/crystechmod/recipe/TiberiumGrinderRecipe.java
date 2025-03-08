@@ -119,7 +119,7 @@ public class TiberiumGrinderRecipe implements Recipe<SimpleContainer> {
                 inputs.set(i, Ingredient.fromNetwork(pBuffer));
             }
 
-            int craftTime = pBuffer.readInt();
+
 
 
             ItemStack output = pBuffer.readItem();

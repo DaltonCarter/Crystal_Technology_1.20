@@ -236,7 +236,7 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
 
         ItemStack result = recipe.get().getResultItem(getLevel().registryAccess());
 
-        return recipe.isPresent() && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
+        return canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
 
     }
 
