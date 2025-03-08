@@ -180,6 +180,7 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
 
     //Tools
+        //Plagued Tools:
     public static final RegistryObject<Item> PLAGUED_SWORD = ITEMS.register("plagued_sword",
             () -> new SwordItem(ModToolTiers.PLAGUED, 2, -1.5f,
                     new Item.Properties()));
@@ -200,6 +201,11 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
             () -> new HoeItem(ModToolTiers.PLAGUED, 0, -2f,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> PLAGUED_BOW = ITEMS.register("plagued_bow",
+            () -> new BowItem(new Item.Properties().durability(684)));
+
+
+        //Gundanium Tools:
     public static final RegistryObject<Item> GUNDANIUM_SWORD = ITEMS.register("gundanium_sword",
             () -> new SwordItem(ModToolTiers.GUNDANIUM, 3, -2f,
                     new Item.Properties()));
@@ -228,6 +234,11 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
             () -> new HammerItem(ModToolTiers.GUNDANIUM, 1, -1f,
                     new Item.Properties().durability(1500)));
 
+    public static final RegistryObject<Item> GUNDANIUM_EXCAVATOR = ITEMS.register("gundanium_excavator",
+            () -> new ExcavatorItem(ModToolTiers.GUNDANIUM, 1, -1f,
+                    new Item.Properties().durability(1500)));
+
+        //Alythum Tools:
     public static final RegistryObject<Item> ALYTHUM_SWORD = ITEMS.register("alythum_sword",
             () -> new SwordItem(ModToolTiers.ALYTHUM, 4, -1.5f,
                     new Item.Properties()));
@@ -256,15 +267,15 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
             () -> new HammerItem(ModToolTiers.ALYTHUM, 3, -2f,
                     new Item.Properties().durability(5000)));
 
-    public static final RegistryObject<Item> PLAGUED_BOW = ITEMS.register("plagued_bow",
-            () -> new BowItem(new Item.Properties().durability(684)));
+    public static final RegistryObject<Item> ALYTHUM_EXCAVATOR = ITEMS.register("alythum_excavator",
+            () -> new ExcavatorItem(ModToolTiers.ALYTHUM, 3, -2f,
+                    new Item.Properties().durability(5000)));
 
+
+        //Illyrim Tools:
     public static final RegistryObject<Item> ILLYRIM_SWORD = ITEMS.register("illyrim_sword",
             () -> new SwordItem(ModToolTiers.ILLYRIM, 6, -1.0f,
                     new Item.Properties()));
-
-
-
 
     public static final RegistryObject<Item> ILLYRIM_AXE = ITEMS.register("illyrim_axe",
             () -> new AxeItem(ModToolTiers.ILLYRIM, 9, -1.5f,
@@ -288,6 +299,10 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> ILLYRIM_HAMMER = ITEMS.register("illyrim_hammer",
             () -> new HammerItem(ModToolTiers.ILLYRIM, 5, -2f,
+                    new Item.Properties().durability(10000)));
+
+    public static final RegistryObject<Item> ILLYRIM_EXCAVATOR = ITEMS.register("illyrim_excavator",
+            () -> new ExcavatorItem(ModToolTiers.ILLYRIM, 5, -2f,
                     new Item.Properties().durability(10000)));
     //End Tools
 

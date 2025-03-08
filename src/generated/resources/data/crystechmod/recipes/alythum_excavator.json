@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "crystechmod:alythum_shovel"
+    },
+    "I": {
+      "item": "crystechmod:alythum_ingot"
+    },
+    "S": {
+      "tag": "crystechmod:sticks"
+    }
+  },
+  "pattern": [
+    " II",
+    " GI",
+    "S  "
+  ],
+  "result": {
+    "item": "crystechmod:alythum_excavator"
+  },
+  "show_notification": true
+}

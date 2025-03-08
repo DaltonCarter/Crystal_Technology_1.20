@@ -1,13 +1,11 @@
 package com.CartersDev.crystechmod.block.entity;
 
 import com.CartersDev.crystechmod.block.custom.TiberiumInfuserBlock;
+import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.recipe.TiberiumInfuserRecipe;
 import com.CartersDev.crystechmod.screen.TiberiumInfuserMenu;
-import com.CartersDev.crystechmod.util.InventoryDirectionEntry;
-import com.CartersDev.crystechmod.util.InventoryDirectionWrapper;
-import com.CartersDev.crystechmod.util.ModEnergyStorage;
-import com.CartersDev.crystechmod.util.WrappedHandler;
+import com.CartersDev.crystechmod.util.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -29,6 +27,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -142,7 +141,7 @@ private final FluidTank FLUID_TANK = createFluidTank();
 
             @Override
             public boolean isFluidValid(FluidStack stack) {
-                return true;
+                return stack.getFluid().is(ModTags.Fluids.INFUSER_FLUIDS);
             }
         };
     }
@@ -340,18 +339,20 @@ private final FluidTank FLUID_TANK = createFluidTank();
             int drainAmount = Math.min(this.FLUID_TANK.getSpace(), 1000);
 
             FluidStack stack = iFluidHandlerItem.drain(drainAmount, IFluidHandler.FluidAction.SIMULATE);
-
+            if(stack.getFluid().is(ModTags.Fluids.INFUSER_FLUIDS)) {
                 stack = iFluidHandlerItem.drain(drainAmount, IFluidHandler.FluidAction.EXECUTE);
                 fillTankWithWater(stack, iFluidHandlerItem.getContainer());
-
+            }
         });
     }
 
     private void fillTankWithWater(FluidStack stack, @NotNull ItemStack container) {
+        if(this.FLUID_TANK.isEmpty() || this.FLUID_TANK.getFluid().isFluidEqual(stack)){
         this.FLUID_TANK.fill(new FluidStack(stack.getFluid(), stack.getAmount()), IFluidHandler.FluidAction.EXECUTE);
 
         this.itemHandler.extractItem(FLUID_SLOT, 1, false);
         this.itemHandler.insertItem(FLUID_SLOT, container, false);
+        }
     }
 
     private boolean hasFluidSourceInSlot(int fluidSlot) {
@@ -418,11 +419,21 @@ private final FluidTank FLUID_TANK = createFluidTank();
         energyAmount = recipe.get().getEnergyAmount();
         neededFluidStack = recipe.get().getFluidStack();
 
+
         ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
 
         return canInsertAmountIntoOutputSlot(resultItem.getCount())
                 && canInsertItemIntoOutputSlot(resultItem.getItem()) &&
-                hasEnoughEnergyToCraft() && hasEnoughFluidToCraft();
+                hasEnoughEnergyToCraft() && isCorrectRecipeFluid() && hasEnoughFluidToCraft();
+    }
+
+    private boolean isCorrectRecipeFluid(){
+        FluidStack fluidStack = FLUID_TANK.getFluid();
+        Optional<TiberiumInfuserRecipe> recipe = getCurrentRecipe();
+        FluidStack requiredFluid = recipe.get().getFluidStack();
+
+        return fluidStack.containsFluid(requiredFluid);
+
     }
 
     private boolean hasEnoughFluidToCraft() {

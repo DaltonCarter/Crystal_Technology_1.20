@@ -49,6 +49,38 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.copy(ModTags.Blocks.ENIGMA_ORES, ModTags.Items.ENIGMA_ORES);
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
 
+        this.tag(ModTags.Items.GRINDABLE)
+                .add(
+                        Items.RAW_COPPER,
+                        Items.RAW_IRON,
+                        Items.RAW_GOLD,
+                        Items.ANCIENT_DEBRIS,
+                        ModItems.RAW_ALYTHUM.get(),
+                        ModItems.RAW_GUNDANIUM.get(),
+                        Items.COPPER_INGOT,
+                        Items.IRON_INGOT,
+                        Items.GOLD_INGOT,
+                        ModItems.GUNDANIUM_INGOT.get(),
+                        ModItems.ALYTHUM_INGOT.get(),
+                        ModItems.ILLYRIM_INGOT.get(),
+                        ModItems.LG_CORE_INGOT.get(),
+                        ModItems.MG_CORE_INGOT.get(),
+                        ModItems.HG_CORE_INGOT.get()
+                );
+
+        this.tag(ModTags.Items.GRINDING_RESULT)
+                .add(
+                        Items.NETHERITE_SCRAP,
+                        ModItems.ALYTHUM_DUST.get(),
+                        ModItems.GUNDANIUM_DUST.get(),
+                        ModItems.IRON_DUST.get(),
+                        ModItems.COPPER_DUST.get(),
+                        ModItems.GOLD_DUST.get(),
+                        ModItems.ILLYRIM_BLEND.get(),
+                        ModItems.LG_CORE_BLEND.get(),
+                        ModItems.MG_CORE_BLEND.get(),
+                        ModItems.HG_CORE_BLEND.get()
+                );
 
         this.tag(ItemTags.PLANKS)
                 .addTag(ModTags.Items.MOD_PLANKS);

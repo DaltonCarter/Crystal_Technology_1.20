@@ -24,7 +24,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     ALYTHUM("alythum", 35, new int[] {4, 7, 9, 4}, 12,
             SoundEvents.ARMOR_EQUIP_IRON, 2.0f, 0.2f, () -> Ingredient.of(ModItems.ALYTHUM_INGOT.get())),
 
-    ILLYRIM("illyrim", 40, new int[] {6, 9, 11, 6}, 15,
+    ILLYRIM("illyrim", 40, new int[] {10, 14, 10, 8}, 15,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 5.0f, 0.4f, () -> Ingredient.of(ModItems.ILLYRIM_INGOT.get()));
 
 

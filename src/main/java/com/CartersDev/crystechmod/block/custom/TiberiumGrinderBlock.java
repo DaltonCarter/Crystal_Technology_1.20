@@ -25,15 +25,15 @@ import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
 public class TiberiumGrinderBlock  extends BaseEntityBlock {
+        public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 16, 16);
-
-    public TiberiumGrinderBlock(Properties pProperties) {
+        public TiberiumGrinderBlock(Properties pProperties) {
         super(pProperties);
     }
 
-    public BlockState rotate(BlockState pState, Rotation pRot) {
+    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 16, 16);
+
+        public BlockState rotate(BlockState pState, Rotation pRot) {
         return pState.setValue(FACING, pRot.rotate(pState.getValue(FACING)));
     }
 
@@ -46,6 +46,7 @@ public class TiberiumGrinderBlock  extends BaseEntityBlock {
         return SHAPE;
     }
 
+
     @Override
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext pContext) {
         return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite());
@@ -56,7 +57,10 @@ public class TiberiumGrinderBlock  extends BaseEntityBlock {
         pBuilder.add(FACING);
     }
 
-    @Override
+
+    /* Block Entity */
+
+        @Override
     public RenderShape getRenderShape(BlockState pState) {
         return RenderShape.MODEL;
     }

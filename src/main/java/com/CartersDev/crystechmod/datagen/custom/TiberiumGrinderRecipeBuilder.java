@@ -2,7 +2,6 @@ package com.CartersDev.crystechmod.datagen.custom;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.recipe.TiberiumGrinderRecipe;
-import com.CartersDev.crystechmod.recipe.TiberiumInfuserRecipe;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.advancements.Advancement;
@@ -26,12 +25,15 @@ public class TiberiumGrinderRecipeBuilder implements RecipeBuilder {
     private final Item result;
     private final Ingredient ingredient;
     private final int count;
+
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
 
     public TiberiumGrinderRecipeBuilder(ItemLike ingredient, ItemLike result, int count) {
         this.ingredient = Ingredient.of(ingredient);
         this.result = result.asItem();
         this.count = count;
+
+
     }
 
     @Override
@@ -67,6 +69,7 @@ public class TiberiumGrinderRecipeBuilder implements RecipeBuilder {
         private final Item result;
         private final Ingredient ingredient;
         private final int count;
+
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
 
@@ -75,6 +78,7 @@ public class TiberiumGrinderRecipeBuilder implements RecipeBuilder {
             this.id = pId;
             this.result = pResult;
             this.count = pCount;
+
             this.ingredient = ingredient;
             this.advancement = pAdvancement;
             this.advancementId = pAdvancementId;
@@ -88,9 +92,13 @@ public class TiberiumGrinderRecipeBuilder implements RecipeBuilder {
             pJson.add("ingredients", jsonarray);
             JsonObject jsonobject = new JsonObject();
             jsonobject.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
+
+
             if (this.count > 1) {
                 jsonobject.addProperty("count", this.count);
             }
+
+
 
             pJson.add("output", jsonobject);
         }
@@ -106,12 +114,12 @@ public class TiberiumGrinderRecipeBuilder implements RecipeBuilder {
             return TiberiumGrinderRecipe.Serializer.INSTANCE;
         }
 
-        @Nullable
+        @javax.annotation.Nullable
         public JsonObject serializeAdvancement() {
             return this.advancement.serializeToJson();
         }
 
-        @Nullable
+        @javax.annotation.Nullable
         public ResourceLocation getAdvancementId() {
             return this.advancementId;
         }

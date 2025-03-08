@@ -218,6 +218,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModItems.GUNDANIUM_HOE.get());
                         output.accept(ModItems.GUNDANIUM_PAXEL.get());
                         output.accept(ModItems.GUNDANIUM_HAMMER.get());
+                        output.accept(ModItems.GUNDANIUM_EXCAVATOR.get());
 
                         output.accept(ModItems.ALYTHUM_SWORD.get());
                         output.accept(ModItems.ALYTHUM_PICKAXE.get());
@@ -226,6 +227,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModItems.ALYTHUM_HOE.get());
                         output.accept(ModItems.ALYTHUM_PAXEL.get());
                         output.accept(ModItems.ALYTHUM_HAMMER.get());
+                        output.accept(ModItems.ALYTHUM_EXCAVATOR.get());
 
                         output.accept(ModItems.ILLYRIM_SWORD.get());
                         output.accept(ModItems.ILLYRIM_PICKAXE.get());
@@ -234,6 +236,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModItems.ILLYRIM_HOE.get());
                         output.accept(ModItems.ILLYRIM_PAXEL.get());
                         output.accept(ModItems.ILLYRIM_HAMMER.get());
+                        output.accept(ModItems.ILLYRIM_EXCAVATOR.get());
 
                         output.accept(ModItems.HAZMAT_MK1_HELMET.get());
                         output.accept(ModItems.HAZMAT_MK1_CHESTPLATE.get());

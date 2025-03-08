@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "crystechmod:illyrim_shovel"
+    },
+    "I": {
+      "item": "crystechmod:illyrim_ingot"
+    },
+    "S": {
+      "tag": "crystechmod:sticks"
+    }
+  },
+  "pattern": [
+    " II",
+    " GI",
+    "S  "
+  ],
+  "result": {
+    "item": "crystechmod:illyrim_excavator"
+  },
+  "show_notification": true
+}

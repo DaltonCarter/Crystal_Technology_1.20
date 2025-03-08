@@ -1,0 +1,11 @@
+{
+  "type": "crystechmod:tiberium_grinding",
+  "ingredients": [
+    {
+      "item": "crystechmod:lg_core_ingot"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:lg_core_blend"
+  }
+}

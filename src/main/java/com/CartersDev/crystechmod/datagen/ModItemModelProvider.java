@@ -543,6 +543,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.GUNDANIUM_HOE);
         handheldItem(ModItems.GUNDANIUM_PAXEL);
         handheldItem(ModItems.GUNDANIUM_HAMMER);
+        handheldItem(ModItems.GUNDANIUM_EXCAVATOR);
 
         handheldItem(ModItems.ALYTHUM_SWORD);
         handheldItem(ModItems.ALYTHUM_PICKAXE);
@@ -551,6 +552,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.ALYTHUM_HOE);
         handheldItem(ModItems.ALYTHUM_PAXEL);
         handheldItem(ModItems.ALYTHUM_HAMMER);
+        handheldItem(ModItems.ALYTHUM_EXCAVATOR);
 
         handheldItem(ModItems.ILLYRIM_PICKAXE);
         handheldItem(ModItems.ILLYRIM_AXE);
@@ -558,6 +560,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.ILLYRIM_HOE);
         handheldItem(ModItems.ILLYRIM_PAXEL);
         handheldItem(ModItems.ILLYRIM_HAMMER);
+        handheldItem(ModItems.ILLYRIM_EXCAVATOR);
 
         //Armors:
         trimmedArmorItem(ModItems.GUNDANIUM_HELMET);

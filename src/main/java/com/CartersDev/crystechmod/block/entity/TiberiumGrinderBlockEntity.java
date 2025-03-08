@@ -7,6 +7,7 @@ import com.CartersDev.crystechmod.recipe.TiberiumGrinderRecipe;
 import com.CartersDev.crystechmod.screen.TiberiumGrinderMenu;
 import com.CartersDev.crystechmod.util.InventoryDirectionEntry;
 import com.CartersDev.crystechmod.util.InventoryDirectionWrapper;
+import com.CartersDev.crystechmod.util.ModTags;
 import com.CartersDev.crystechmod.util.WrappedHandler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -26,6 +27,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -45,9 +47,20 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
-            if(!level.isClientSide()) {
+            if(!level.isClientSide()){
                 level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
             }
+        }
+
+
+
+        @Override
+        public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+            return switch (slot) {
+                case 0 -> stack.is(ModTags.Items.GRINDABLE);
+                case 1 -> stack.is(ModTags.Items.GRINDING_RESULT);
+                default -> super.isItemValid(slot, stack);
+            };
         }
     };
 
@@ -65,9 +78,18 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
                     new InventoryDirectionEntry(Direction.EAST, OUTPUT_SLOT, false),
                     new InventoryDirectionEntry(Direction.WEST, INPUT_SLOT, true)).directionsMap;
 
+    public ItemStack getRenderStack() {
+        if(itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty()) {
+            return itemHandler.getStackInSlot(INPUT_SLOT);
+        } else {
+            return itemHandler.getStackInSlot(OUTPUT_SLOT);
+        }
+    }
+
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 300;
+    private final int DEFAULT_MAX_PROGRESS = 300;
 
     public TiberiumGrinderBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.TIBERIUM_GRINDER_BE.get(), pPos, pBlockState);
@@ -83,7 +105,7 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
 
             @Override
             public void set(int pIndex, int pValue) {
-                switch (pIndex) {
+                switch(pIndex) {
                     case 0 -> TiberiumGrinderBlockEntity.this.progress = pValue;
                     case 1 -> TiberiumGrinderBlockEntity.this.maxProgress = pValue;
                 }
@@ -96,24 +118,35 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
         };
     }
 
-    public ItemStack getRenderStack() {
-        if(itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty()) {
-            return itemHandler.getStackInSlot(INPUT_SLOT);
-        } else {
-            return itemHandler.getStackInSlot(OUTPUT_SLOT);
+    public void drops() {
+        SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
+        for(int i = 0; i < itemHandler.getSlots(); i++){
+            inventory.setItem(i, itemHandler.getStackInSlot(i));
         }
+        Containers.dropContents(this.level, this.worldPosition, inventory);
+    }
+
+    @Override
+    public Component getDisplayName() {
+        return Component.literal("Tiberium Grinder");
+    }
+
+    @Override
+    public @Nullable AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
+        return new TiberiumGrinderMenu(pContainerId, pPlayerInventory, this, this.data);
     }
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        if(cap == ForgeCapabilities.ITEM_HANDLER) {
-            return lazyItemHandler.cast();
-        }
+        if (cap == ForgeCapabilities.ITEM_HANDLER) {
+            if(side == null) {
+                return lazyItemHandler.cast();
+            }
 
-        if(directioWrappedHandlerMap.containsKey(side)){
+        if(directioWrappedHandlerMap.containsKey(side)) {
             Direction localDirection = this.getBlockState().getValue(TiberiumGrinderBlock.FACING);
 
-            if(side == Direction.DOWN || side == Direction.UP){
+            if (side == Direction.DOWN || side == Direction.UP) {
                 return directioWrappedHandlerMap.get(side).cast();
             }
 
@@ -123,10 +156,12 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
                 case SOUTH -> directioWrappedHandlerMap.get(side).cast();
                 case WEST -> directioWrappedHandlerMap.get(side.getCounterClockWise()).cast();
             };
-
+        }
         }
         return super.getCapability(cap, side);
     }
+
+
 
     @Override
     public void onLoad() {
@@ -143,28 +178,12 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
         lazyItemHandler.invalidate();
     }
 
-    public void drops() {
-        SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
-        for(int i = 0; i < itemHandler.getSlots(); i++){
-            inventory.setItem(i, itemHandler.getStackInSlot(i));
-        }
-        Containers.dropContents(this.level, this.worldPosition, inventory);
-    }
-
-    @Override
-    public Component getDisplayName() {
-        return Component.translatable("block.crystechmod.tiberium_grinder");
-    }
-
-    @Override
-    public @Nullable AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
-        return new TiberiumGrinderMenu(pContainerId, pPlayerInventory, this, this.data);
-    }
 
     @Override
     protected void saveAdditional(CompoundTag pTag) {
         pTag.put("inventory", itemHandler.serializeNBT());
         pTag.putInt("tiberium_grinder.progress", progress);
+
         super.saveAdditional(pTag);
     }
 
@@ -173,7 +192,9 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
         progress = pTag.getInt("tiberium_grinder.progress");
+
     }
+
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
         if(hasRecipe()) {
@@ -190,7 +211,6 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
     }
 
 
-
     private boolean hasProgressFinished() {
         return progress >= maxProgress;
     }
@@ -201,7 +221,7 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
 
     private void craftItem() {
        Optional<TiberiumGrinderRecipe> recipe = getCurrentRecipe();
-       ItemStack result = recipe.get().getResultItem(null);
+       ItemStack result = recipe.get().getResultItem(getLevel().registryAccess());
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
 
         this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),
@@ -213,10 +233,11 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
         if(recipe.isEmpty()){
             return false;
         }
-        ItemStack result = recipe.get().getResultItem(null);
-        
-        return canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
-        
+
+        ItemStack result = recipe.get().getResultItem(getLevel().registryAccess());
+
+        return recipe.isPresent() && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
+
     }
 
     private Optional<TiberiumGrinderRecipe> getCurrentRecipe() {
@@ -233,7 +254,7 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
     }
 
     private boolean canInsertAmountIntoOutputSlot(int count) {
-        return this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + count <= this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
+        return this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize() >= this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + count;
     }
 
     private void resetProgress() {
@@ -249,4 +270,9 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
     public CompoundTag getUpdateTag() {
         return saveWithoutMetadata();
     }
+
+
+
+
+
 }

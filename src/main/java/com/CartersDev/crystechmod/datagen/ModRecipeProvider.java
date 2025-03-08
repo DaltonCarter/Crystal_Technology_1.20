@@ -2326,6 +2326,16 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GUNDANIUM_EXCAVATOR.get())
+                .pattern(" II")
+                .pattern(" GI")
+                .pattern("S  ")
+                .define('I', ModItems.GUNDANIUM_INGOT.get())
+                .define('G', ModItems.GUNDANIUM_SHOVEL.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_SHOVEL.get()), has(ModItems.GUNDANIUM_SHOVEL.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALYTHUM_HELMET.get())
                 .pattern("AAA")
                 .pattern("A A")
@@ -2400,8 +2410,6 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
                 .save(consumer);
 
-
-
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALYTHUM_PICKAXE.get())
                 .pattern("AAA")
                 .pattern(" S ")
@@ -2446,6 +2454,26 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('B', ModBlocks.ALYTHUM_BLOCK.get())
                 .define('S', ModTags.Items.STICKS)
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALYTHUM_EXCAVATOR.get())
+                .pattern(" II")
+                .pattern(" GI")
+                .pattern("S  ")
+                .define('I', ModItems.ALYTHUM_INGOT.get())
+                .define('G', ModItems.ALYTHUM_SHOVEL.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.ALYTHUM_SHOVEL.get()), has(ModItems.ALYTHUM_SHOVEL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ILLYRIM_EXCAVATOR.get())
+                .pattern(" II")
+                .pattern(" GI")
+                .pattern("S  ")
+                .define('I', ModItems.ILLYRIM_INGOT.get())
+                .define('G', ModItems.ILLYRIM_SHOVEL.get())
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.ILLYRIM_SHOVEL.get()), has(ModItems.ILLYRIM_SHOVEL.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GUNDANIUM_HAMMER.get())
@@ -3100,7 +3128,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ILLYRIM_BLEND.get(), 1)
                 .requires(ModItems.GUNDANIUM_DUST.get(),2)
                 .requires(ModItems.ALYTHUM_DUST.get(),2)
-                .requires(ModItems.QUALRIM_COMPOUND.get(),2)
+                .requires(ModItems.QUALRIM_COMPOUND.get())
                 .unlockedBy(getHasName(ModItems.QUALRIM_COMPOUND.get()), has(ModItems.QUALRIM_COMPOUND.get()))
                 .save(consumer);
 
@@ -3666,6 +3694,22 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
         new TiberiumGrinderRecipeBuilder(ModItems.RAW_ALYTHUM.get(), ModItems.ALYTHUM_DUST.get(), 2)
                 .unlockedBy("has_alythum_ore", has(ModBlocks.ALYTHUM_ORE.get())).save(consumer);
+
+        //Illyrim:
+
+        new TiberiumGrinderRecipeBuilder(ModItems.ILLYRIM_INGOT.get(), ModItems.ILLYRIM_BLEND.get(), 1)
+                .unlockedBy("has_illyrim_blend", has(ModItems.ILLYRIM_BLEND.get())).save(consumer);
+
+        //Core Steel:
+
+        new TiberiumGrinderRecipeBuilder(ModItems.LG_CORE_INGOT.get(), ModItems.LG_CORE_BLEND.get(), 1)
+                .unlockedBy("has_lg_core_blend", has(ModItems.LG_CORE_BLEND.get())).save(consumer);
+
+        new TiberiumGrinderRecipeBuilder(ModItems.MG_CORE_INGOT.get(), ModItems.MG_CORE_BLEND.get(), 1)
+                .unlockedBy("has_mg_core_blend", has(ModItems.MG_CORE_BLEND.get())).save(consumer);
+
+        new TiberiumGrinderRecipeBuilder(ModItems.HG_CORE_INGOT.get(), ModItems.HG_CORE_BLEND.get(), 1)
+                .unlockedBy("has_hg_core_blend", has(ModItems.HG_CORE_BLEND.get())).save(consumer);
 
 
         //Tiberium:

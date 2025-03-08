@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-02T17:26:57.4823655	Item Models: crystechmod
+// 1.20.1	2025-03-05T23:18:41.3914971	Item Models: crystechmod
 7d9fe5e88433390f9cd29dab7e515bddd3fbdf4b assets/crystechmod/models/item/aboreus_crystal_slab.json
 0e376de85f99a387d23f7130ff296ce0b5fe876e assets/crystechmod/models/item/aboreus_crystal_stairs.json
 2ced509a911b88c37b68b1a1278f10fc986798c4 assets/crystechmod/models/item/aboreus_crystal_wall.json
@@ -34,6 +34,7 @@ f684693a9195afbd9efc657a9067522ead930e1d assets/crystechmod/models/item/alythum_
 74f8cc6c5369c184ba3fe56af79c139cc607fa28 assets/crystechmod/models/item/alythum_chestplate_quartz_trim.json
 8f51a9ffc3cec4595ca7612f956944ce094b4781 assets/crystechmod/models/item/alythum_chestplate_redstone_trim.json
 1f9d60d9cb6ffb1cdcb739aa65e32619a1c88a35 assets/crystechmod/models/item/alythum_dust.json
+ed1bd9b141e8be2b659559b048922f48497665af assets/crystechmod/models/item/alythum_excavator.json
 934a5d5a61b45c08aac85b54ba82d1fa5fe6aa35 assets/crystechmod/models/item/alythum_hammer.json
 2cb7ba1a8ceb7457959c73aab7258a376d8f3481 assets/crystechmod/models/item/alythum_helmet.json
 88c9fbde6a87e343d0337b6ee0139d86d67291d2 assets/crystechmod/models/item/alythum_helmet_amethyst_trim.json
@@ -316,6 +317,7 @@ a67d19b972b30296434c13de38624eae852398b2 assets/crystechmod/models/item/gundaniu
 5ddb30315d5b2902a055122177faf9d0fecc17e2 assets/crystechmod/models/item/gundanium_chestplate_quartz_trim.json
 1a3fe2a86514b1181f7c37551636a51f2baea37b assets/crystechmod/models/item/gundanium_chestplate_redstone_trim.json
 8a69579cae433365ab5104d9a723b2bc5dd6c40c assets/crystechmod/models/item/gundanium_dust.json
+fd861fc63e07d0673513d54337a1243ece984a67 assets/crystechmod/models/item/gundanium_excavator.json
 30e22763794afa7a456182fb34573bca42a56612 assets/crystechmod/models/item/gundanium_hammer.json
 5c1d31d88cd79c1990dd170207184d03a64e8dce assets/crystechmod/models/item/gundanium_helmet.json
 a1cb0c925156fe5e6e4c32b2b74db79e6b260d8e assets/crystechmod/models/item/gundanium_helmet_amethyst_trim.json
@@ -471,6 +473,7 @@ f0d22f103ed7e769250668433ff1edc5d3907e84 assets/crystechmod/models/item/illyrim_
 135168c55fd938b73d01a68938facaf6a6ed544c assets/crystechmod/models/item/illyrim_chestplate_netherite_trim.json
 420b2e3abf6a6c197a0bf0e7370864764b7f3a82 assets/crystechmod/models/item/illyrim_chestplate_quartz_trim.json
 55f2708308e8125191385e5d74ef1151be4e2937 assets/crystechmod/models/item/illyrim_chestplate_redstone_trim.json
+323ca7c12251cb7142d499b5ea1827c2d8111d35 assets/crystechmod/models/item/illyrim_excavator.json
 86bc20cc4c7af03b1976f294644e8e207dbd2149 assets/crystechmod/models/item/illyrim_grinder_gear.json
 a8bd0ca1d94da9bfcd4bf420094b71b9b7faa2f2 assets/crystechmod/models/item/illyrim_hammer.json
 9fa26caa792fa78e299c2649496970ed0172565b assets/crystechmod/models/item/illyrim_helmet.json

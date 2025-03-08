@@ -528,6 +528,7 @@ Blossom Tree instead of a Plagued Log.
 -Added More Foods
 -Added Compostable items
 -Tiberium Infuser Implemented, Tiberium Grinder updated to work with Item Pipes
+-Added Excavator Item
 
 
 

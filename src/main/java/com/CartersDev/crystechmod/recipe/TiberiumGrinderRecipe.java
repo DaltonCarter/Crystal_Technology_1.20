@@ -12,6 +12,8 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
 
 public class TiberiumGrinderRecipe implements Recipe<SimpleContainer> {
@@ -19,25 +21,25 @@ public class TiberiumGrinderRecipe implements Recipe<SimpleContainer> {
     private final ItemStack output;
     private final ResourceLocation id;
 
+
+
     public TiberiumGrinderRecipe(NonNullList<Ingredient> inputItems, ItemStack output, ResourceLocation id) {
         this.inputItems = inputItems;
         this.output = output;
         this.id = id;
+
+
     }
 
 
     @Override
     public boolean matches(SimpleContainer pContainer, Level pLevel) {
-        if(pLevel.isClientSide()) {
+        if(pLevel.isClientSide()){
             return false;
         }
 
-        return inputItems.get(0).test( pContainer.getItem(0));
-    }
 
-    @Override
-    public NonNullList<Ingredient> getIngredients() {
-        return inputItems;
+        return inputItems.get(0).test(pContainer.getItem(0));
     }
 
     @Override
@@ -55,6 +57,13 @@ public class TiberiumGrinderRecipe implements Recipe<SimpleContainer> {
         return output.copy();
     }
 
+
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return this.inputItems;
+    }
+
+
     @Override
     public ResourceLocation getId() {
         return id;
@@ -62,7 +71,7 @@ public class TiberiumGrinderRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return Serializer.INSTANCE;
+        return TiberiumGrinderRecipe.Serializer.INSTANCE;
     }
 
     @Override
@@ -71,13 +80,13 @@ public class TiberiumGrinderRecipe implements Recipe<SimpleContainer> {
     }
 
     public static class Type implements RecipeType<TiberiumGrinderRecipe> {
-        public static final Type INSTANCE = new Type();
+        public static final TiberiumGrinderRecipe.Type INSTANCE = new TiberiumGrinderRecipe.Type();
         public static final String ID = "tiberium_grinding";
     }
 
     public static class Serializer implements RecipeSerializer<TiberiumGrinderRecipe> {
 
-        public static final Serializer INSTANCE  = new Serializer();
+        public static final TiberiumGrinderRecipe.Serializer INSTANCE  = new Serializer();
         public static final ResourceLocation ID = new ResourceLocation(CrystalTech.MOD_ID, "tiberium_grinding");
 
 
@@ -85,6 +94,7 @@ public class TiberiumGrinderRecipe implements Recipe<SimpleContainer> {
         @Override
         public TiberiumGrinderRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "output"));
+
 
             JsonArray ingredients = GsonHelper.getAsJsonArray(pSerializedRecipe, "ingredients");
 
@@ -94,29 +104,43 @@ public class TiberiumGrinderRecipe implements Recipe<SimpleContainer> {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
 
+
+
             return new TiberiumGrinderRecipe(inputs, output, pRecipeId);
         }
+
 
         @Override
         public @Nullable TiberiumGrinderRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
             NonNullList<Ingredient> inputs = NonNullList.withSize(pBuffer.readInt(), Ingredient.EMPTY);
+
+
             for(int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromNetwork(pBuffer));
             }
+
+            int craftTime = pBuffer.readInt();
+
+
             ItemStack output = pBuffer.readItem();
-            return new TiberiumGrinderRecipe(inputs, output, pRecipeId);
+            return new TiberiumGrinderRecipe( inputs, output, pRecipeId);
         }
 
         @Override
         public void toNetwork(FriendlyByteBuf pBuffer, TiberiumGrinderRecipe pRecipe) {
 
-        pBuffer.writeInt(pRecipe.inputItems.size());
+            pBuffer.writeInt(pRecipe.inputItems.size());
 
-        for(Ingredient ingredient : pRecipe.getIngredients()) {
-            ingredient.toNetwork(pBuffer);
-        }
 
-        pBuffer.writeItemStack(pRecipe.getResultItem(null), false);
+
+            for(Ingredient ingredient : pRecipe.getIngredients()) {
+                ingredient.toNetwork(pBuffer);
+            }
+
+
+
+
+            pBuffer.writeItemStack(pRecipe.getResultItem(null), false);
 
         }
     }

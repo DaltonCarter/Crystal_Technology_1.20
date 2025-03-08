@@ -45,5 +45,13 @@ public class ModFluidTagGenerator extends FluidTagsProvider {
                 .add(ModFluids.SOURCE_TIBERIUM_WATER.get()
                 );
 
+        this.tag(ModTags.Fluids.INFUSER_FLUIDS)
+                .addTags(ModTags.Fluids.MOLTEN_GREEN_TIBERIUM,
+                ModTags.Fluids.MOLTEN_BLUE_TIBERIUM,
+                ModTags.Fluids.MOLTEN_RED_TIBERIUM,
+                ModTags.Fluids.MOLTEN_PURPLE_TIBERIUM
+                );
+
+
     }
 }
