@@ -116,6 +116,9 @@ public static final RegistryObject<Item> GREEN_TIBERIUM_DUST = ITEMS.register("g
     public static final RegistryObject<Item> GUNDANIUM_DUST = ITEMS.register("gundanium_dust",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> HARMONIUM_DUST = ITEMS.register("harmonium_dust",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> COPPER_DUST = ITEMS.register("copper_dust",
             () -> new Item(new Item.Properties()));
 
@@ -156,11 +159,18 @@ public static final RegistryObject<Item> GREEN_TIBERIUM_DUST = ITEMS.register("g
     public static final RegistryObject<Item> RAW_GUNDANIUM = ITEMS.register("raw_gundanium",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> RAW_HARMONIUM = ITEMS.register("raw_harmonium",
+            () -> new Item(new Item.Properties()));
+
+
     public static final RegistryObject<Item> RAW_ALYTHUM = ITEMS.register("raw_alythum",
             () -> new Item(new Item.Properties()));
 
 public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gundanium_ingot",
         () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> HARMONIUM_INGOT = ITEMS.register("harmonium_ingot",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ALYTHUM_INGOT = ITEMS.register("alythum_ingot",
             () -> new Item(new Item.Properties()));
@@ -581,6 +591,30 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> PLAGUED_STICK = ITEMS.register("plagued_stick",
         () -> new Item(new Item.Properties()));
+
+
+
+
+    public static final RegistryObject<Item> HARMONIC_RELAY = ITEMS.register("harmonic_relay",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> HARMONIC_CIRCUIT = ITEMS.register("harmonic_circuit",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ILLUMINATE_COMPONENT = ITEMS.register("illuminate_component",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> KRYONIC_CAPACITOR = ITEMS.register("kryonic_capacitor",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> KRYONIC_RESERVOIR = ITEMS.register("kryonic_reservoir",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> HARMONIC_FOCUS = ITEMS.register("harmonic_focus",
+            () -> new Item(new Item.Properties()));
+
+
+
 
     public static final RegistryObject<Item> GRINDER_GEAR = ITEMS.register("grinder_gear",
             () -> new Item(new Item.Properties()));

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "harmonium",
+  "ingredient": {
+    "item": "crystechmod:deepslate_harmonium_ore"
+  },
+  "result": "crystechmod:harmonium_ingot"
+}

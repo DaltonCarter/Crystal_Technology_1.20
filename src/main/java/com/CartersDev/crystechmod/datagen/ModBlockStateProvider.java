@@ -33,6 +33,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //Basic Block States:
         blockWithItem(ModBlocks.GUNDANIUM_BLOCK);
+        blockWithItem(ModBlocks.GUNDANIUM_MACHINE_CORE);
+        blockWithItem(ModBlocks.ALYTHUM_MACHINE_CORE);
+        blockWithItem(ModBlocks.VITRIC_MACHINE_CORE);
+        blockWithItem(ModBlocks.CRYSTAL_CORE_MACHINE_CORE);
+
         blockWithItem(ModBlocks.ALYTHUM_BLOCK);
         blockWithItem(ModBlocks.ILLYRIM_BLOCK);
         blockWithItem(ModBlocks.LG_CORE_BLOCK);
@@ -98,6 +103,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem((ModBlocks.ENIGMA_BLOCK));
         blockWithItem((ModBlocks.ILLUMINA_BLOCK));
         blockWithItem((ModBlocks.KRYON_BLOCK));
+        blockWithItem((ModBlocks.HARMONIUM_BLOCK));
 
         blockWithItem(ModBlocks.GUNDANIUM_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_GUNDANIUM_ORE);
@@ -114,6 +120,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_KRYON_ORE);
         blockWithItem(ModBlocks.NETHER_KRYON_ORE);
         blockWithItem(ModBlocks.END_KRYON_ORE);
+
+        blockWithItem(ModBlocks.HARMONIUM_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_HARMONIUM_ORE);
+        blockWithItem(ModBlocks.NETHER_HARMONIUM_ORE);
+        blockWithItem(ModBlocks.END_HARMONIUM_ORE);
 
         blockWithItem(ModBlocks.ENIGMA_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_ENIGMA_ORE);
@@ -965,6 +976,88 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         customLamp(ModBlocks.CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "crystal_core_light");
         invertedCustomLamp(ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_crystal_core_light");
+        customLamp(ModBlocks.VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_vert_crystal_core_light");
+
+        customLamp(ModBlocks.BLACK_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "black_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_BLACK_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_black_crystal_core_light");
+        customLamp(ModBlocks.BLACK_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "black_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_BLACK_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_black_vert_crystal_core_light");
+
+        customLamp(ModBlocks.BLUE_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "blue_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_BLUE_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_blue_crystal_core_light");
+        customLamp(ModBlocks.BLUE_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "blue_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_BLUE_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_blue_vert_crystal_core_light");
+
+        customLamp(ModBlocks.BROWN_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "brown_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_BROWN_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_brown_crystal_core_light");
+        customLamp(ModBlocks.BROWN_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "brown_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_BROWN_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_brown_vert_crystal_core_light");
+
+        customLamp(ModBlocks.CYAN_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "cyan_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_CYAN_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_cyan_crystal_core_light");
+        customLamp(ModBlocks.CYAN_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "cyan_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_CYAN_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_cyan_vert_crystal_core_light");
+
+        customLamp(ModBlocks.FLAME_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "flame_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_FLAME_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_flame_crystal_core_light");
+        customLamp(ModBlocks.FLAME_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "flame_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_FLAME_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_flame_vert_crystal_core_light");
+
+        customLamp(ModBlocks.GREEN_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "green_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_GREEN_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_green_crystal_core_light");
+        customLamp(ModBlocks.GREEN_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "green_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_GREEN_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_green_vert_crystal_core_light");
+
+        customLamp(ModBlocks.GREY_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "grey_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_GREY_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_grey_crystal_core_light");
+        customLamp(ModBlocks.GREY_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "grey_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_GREY_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_grey_vert_crystal_core_light");
+
+        customLamp(ModBlocks.LIGHT_BLUE_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "light_blue_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_LIGHT_BLUE_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_light_blue_crystal_core_light");
+        customLamp(ModBlocks.LIGHT_BLUE_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "light_blue_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_LIGHT_BLUE_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_light_blue_vert_crystal_core_light");
+
+        customLamp(ModBlocks.LIGHT_GREY_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "light_grey_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_LIGHT_GREY_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_light_grey_crystal_core_light");
+        customLamp(ModBlocks.LIGHT_GREY_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "light_grey_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_LIGHT_GREY_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_light_grey_vert_crystal_core_light");
+
+        customLamp(ModBlocks.LIME_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "lime_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_LIME_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_lime_crystal_core_light");
+        customLamp(ModBlocks.LIME_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "lime_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_LIME_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_lime_vert_crystal_core_light");
+
+        customLamp(ModBlocks.MAGENTA_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "magenta_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_MAGENTA_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_magenta_crystal_core_light");
+        customLamp(ModBlocks.MAGENTA_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "magenta_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_MAGENTA_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_magenta_vert_crystal_core_light");
+
+        customLamp(ModBlocks.ORANGE_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "orange_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_ORANGE_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_orange_crystal_core_light");
+        customLamp(ModBlocks.ORANGE_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "orange_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_ORANGE_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_orange_vert_crystal_core_light");
+
+        customLamp(ModBlocks.PINK_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "pink_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_PINK_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_pink_crystal_core_light");
+        customLamp(ModBlocks.PINK_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "pink_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_PINK_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_pink_vert_crystal_core_light");
+
+        customLamp(ModBlocks.PURPLE_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "purple_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_PURPLE_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_purple_crystal_core_light");
+        customLamp(ModBlocks.PURPLE_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "purple_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_PURPLE_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_purple_vert_crystal_core_light");
+
+        customLamp(ModBlocks.RED_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "red_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_RED_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_red_crystal_core_light");
+        customLamp(ModBlocks.RED_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "red_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_RED_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_red_vert_crystal_core_light");
+
+        customLamp(ModBlocks.WHITE_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "white_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_WHITE_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_white_crystal_core_light");
+        customLamp(ModBlocks.WHITE_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "white_vert_crystal_core_light");
+        invertedCustomLamp(ModBlocks.INVERTED_WHITE_VERT_CRYSTAL_CORE_LIGHT.get(), CrystalCoreLampBlock.LIT, "inverted_white_vert_crystal_core_light");
 
 
         //Horizontal Blocks:

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_harmonium_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:harmonium_dust"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:harmonium_ingot_from_smelting_harmonium_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_harmonium_dust",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:harmonium_ingot_from_smelting_harmonium_dust"
+    ]
+  },
+  "sends_telemetry_event": false
+}

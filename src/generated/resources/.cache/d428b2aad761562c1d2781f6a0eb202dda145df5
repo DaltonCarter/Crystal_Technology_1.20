@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-05T23:18:41.3914971	Item Models: crystechmod
+// 1.20.1	2025-03-25T02:26:24.5223487	Item Models: crystechmod
 7d9fe5e88433390f9cd29dab7e515bddd3fbdf4b assets/crystechmod/models/item/aboreus_crystal_slab.json
 0e376de85f99a387d23f7130ff296ce0b5fe876e assets/crystechmod/models/item/aboreus_crystal_stairs.json
 2ced509a911b88c37b68b1a1278f10fc986798c4 assets/crystechmod/models/item/aboreus_crystal_wall.json
@@ -348,6 +348,11 @@ d2f0aa89380c80edbe3b8e95a2ea24f7de0238d7 assets/crystechmod/models/item/gundaniu
 7f131f9b2e7efc86a97a52b288fd5cd3fd0d26ff assets/crystechmod/models/item/gundanium_pickaxe.json
 ec3ff548a7dd2701d7870db04e4d4c08e681b94d assets/crystechmod/models/item/gundanium_shovel.json
 bfde0f19b528bc3970728101e4892a5c19046ee3 assets/crystechmod/models/item/gundanium_sword.json
+79808aae779a9fd46d62179e87da9ac690cf958e assets/crystechmod/models/item/harmonic_circuit.json
+514a875c446cf81815f5b4052ff1e103d8bbdcbc assets/crystechmod/models/item/harmonic_focus.json
+1ee135f51cd4871ef5c0686d9ff264970c2eca69 assets/crystechmod/models/item/harmonic_relay.json
+7e131ba361c0e34ff5713a9b435eb8de492e1865 assets/crystechmod/models/item/harmonium_dust.json
+a758209d284f000284bfc16c7d8c12ebe266b0b0 assets/crystechmod/models/item/harmonium_ingot.json
 4173915a81ada42cdc6223617725cdae95df9b62 assets/crystechmod/models/item/hazmat_mk1_boots.json
 3ee4e8cd6b41353b654b6511c380266ee63e979e assets/crystechmod/models/item/hazmat_mk1_boots_amethyst_trim.json
 34cb831304bd90e77f564a3462561fab7f96d662 assets/crystechmod/models/item/hazmat_mk1_boots_copper_trim.json
@@ -448,6 +453,7 @@ b90e7273575f55602eac234498cdeadfd77d61c7 assets/crystechmod/models/item/hyacinth
 d60e1a607572b0246e190152169237821ad62867 assets/crystechmod/models/item/hyouhaku_wandering_music_disc.json
 57403b35dbe9c31ff49c85bf57d853d3fedb2e32 assets/crystechmod/models/item/ichor_composite_ingot.json
 dde7b626b0312aa6d48d0285a9d2ddb87d9fb18c assets/crystechmod/models/item/ichor_leather.json
+fd8906755cbc909506caee95c7ad0939f3fd82d6 assets/crystechmod/models/item/illuminate_component.json
 49609bd2e8b5291f56f3dd7f9517de98ed050f38 assets/crystechmod/models/item/illumina_crystal.json
 0e0c9414adf8cb0d306af76ec8c440b2b744047d assets/crystechmod/models/item/illyrim_axe.json
 88061eed2a0c937eb10d6e40abcff4eae72efb99 assets/crystechmod/models/item/illyrim_blend.json
@@ -510,6 +516,8 @@ c5a9047f2099bae1fc73a4273057cbcf7868bf1d assets/crystechmod/models/item/infested
 5b83726ac7d04ffb04477c3b2900639d84a603f1 assets/crystechmod/models/item/infested_stone_brick_stairs.json
 1cdc60078b27ffe0598ea07c528d144585da59c6 assets/crystechmod/models/item/infested_stone_brick_wall.json
 a5085d74ed29b673acd3ae4869c9b0f352666bf1 assets/crystechmod/models/item/iron_dust.json
+6638f2580f169b7e368ddad4ed9a60a437cf2125 assets/crystechmod/models/item/kryonic_capacitor.json
+1c1b67450a65b8aada4ce68f2b3ed2f9ef0170e7 assets/crystechmod/models/item/kryonic_reservoir.json
 920acc3091d9ed157150c2c157028160faab4521 assets/crystechmod/models/item/kryon_crystal.json
 04b3bd18e4aa9d3c0a6ffb6c3b287ace9f70c976 assets/crystechmod/models/item/lai_melon_seeds.json
 c7df66b1127bfa6d0ff3ca146c0fbdbc1e88014f assets/crystechmod/models/item/lai_melon_slice.json
@@ -620,6 +628,7 @@ e2f1ae4cf0a8952fbde6865f4df056386f5c1c2f assets/crystechmod/models/item/pyrotek_
 5934eaefbfc51a3463a8be73c7585b9e78bb164e assets/crystechmod/models/item/rain_in_the_night_music_disc.json
 9c2141d64958d03b2492a5dc30a28f2270a1da37 assets/crystechmod/models/item/raw_alythum.json
 87442d6c30b7d494f7daa391ed4fa71483cbd025 assets/crystechmod/models/item/raw_gundanium.json
+426e9ceaabe1e12ed8440fd07e8f3c151c0973a3 assets/crystechmod/models/item/raw_harmonium.json
 5bf45dd4d64e01f23c145a909f82a1f95593dffb assets/crystechmod/models/item/raw_infected_meat.json
 b457cb9a281c196512fd1dd430fdc93f9a46299c assets/crystechmod/models/item/raw_qualrite.json
 99fbcc16de3f3cccb0d97b4eed8e090db995f8ce assets/crystechmod/models/item/recon_music_disc.json

@@ -35,6 +35,9 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
     private static final List<ItemLike> ALYTHUM_SMELTABLES = List.of(ModItems.RAW_ALYTHUM.get(),
             ModItems.ALYTHUM_DUST.get(), ModBlocks.ALYTHUM_ORE.get(), ModBlocks.DEEPSLATE_ALYTHUM_ORE.get(), ModBlocks.NETHER_ALYTHUM_ORE.get());
 
+    private static final List<ItemLike> HARMONIUM_SMELTABLES = List.of(ModItems.RAW_HARMONIUM.get(),
+            ModItems.HARMONIUM_DUST.get(), ModBlocks.HARMONIUM_ORE.get(), ModBlocks.DEEPSLATE_HARMONIUM_ORE.get(), ModBlocks.NETHER_HARMONIUM_ORE.get(), ModBlocks.END_HARMONIUM_ORE.get());
+
     private static final List<ItemLike> IRON_DUST_SMELTABLES = List.of(ModItems.IRON_DUST.get());
     private static final List<ItemLike> COPPER_DUST_SMELTABLES = List.of(ModItems.COPPER_DUST.get());
     private static final List<ItemLike> GOLD_DUST_SMELTABLES = List.of(ModItems.GOLD_DUST.get());
@@ -71,6 +74,9 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         oreSmelting(consumer, GUNDANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.GUNDANIUM_INGOT.get(), 0.25f, 200, "gundanium");
         oreBlasting(consumer, GUNDANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.GUNDANIUM_INGOT.get(), 0.25f, 100, "gundanium");
 
+        oreSmelting(consumer, HARMONIUM_SMELTABLES, RecipeCategory.MISC, ModItems.HARMONIUM_INGOT.get(), 0.25f, 200, "harmonium");
+        oreBlasting(consumer, HARMONIUM_SMELTABLES, RecipeCategory.MISC, ModItems.HARMONIUM_INGOT.get(), 0.25f, 100, "harmonium");
+
         oreSmelting(consumer, ALYTHUM_SMELTABLES, RecipeCategory.MISC, ModItems.ALYTHUM_INGOT.get(), 0.25f, 200, "alythum");
         oreBlasting(consumer, ALYTHUM_SMELTABLES, RecipeCategory.MISC, ModItems.ALYTHUM_INGOT.get(), 0.25f, 100, "alythum");
 
@@ -91,9 +97,10 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         //Shaped Crafting:
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TIBERIUM_GRINDER.get())
                 .pattern("GGG")
-                .pattern("GAG")
+                .pattern("AMA")
                 .pattern("CCC")
                 .define('A', ModItems.GRINDER_GEAR.get())
+                .define('M', ModBlocks.GUNDANIUM_MACHINE_CORE.get())
                 .define('G', ModItems.GUNDANIUM_INGOT.get())
                 .define('C', ModTags.Items.CONCRETES)
                 .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
@@ -214,6 +221,14 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("GGG")
                 .define('G', ModItems.GUNDANIUM_INGOT.get())
                 .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.HARMONIUM_BLOCK.get())
+                .pattern("HHH")
+                .pattern("HHH")
+                .pattern("HHH")
+                .define('H', ModItems.HARMONIUM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.HARMONIUM_INGOT.get()), has(ModItems.HARMONIUM_INGOT.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALYTHUM_BLOCK.get())
@@ -2732,17 +2747,754 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
                 .save(consumer);
 
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TIBERIUM_INFUSER.get())
                 .pattern("AIA")
-                .pattern("KRK")
-                .pattern("GKG")
-                .define('R', Blocks.REDSTONE_BLOCK)
-                .define('G', ModBlocks.GUNDANIUM_BLOCK.get())
+                .pattern("KMK")
+                .pattern("GRG")
+                .define('R', ModTags.Items.GLASS)
+                .define('G', ModBlocks.TIBERIUM_BLOCK.get())
+                .define('M', ModBlocks.GUNDANIUM_MACHINE_CORE.get())
                 .define('A', ModItems.ALYTHUM_INGOT.get())
                 .define('I', ModItems.ILLUMINA_CRYSTAL.get())
                 .define('K', ModItems.KRYON_CRYSTAL.get())
                 .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
                 .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GUNDANIUM_MACHINE_CORE.get())
+                .pattern("IGI")
+                .pattern("GRG")
+                .pattern("IGI")
+                .define('G', ModTags.Items.GLASS)
+                .define('R', Blocks.REDSTONE_BLOCK)
+                .define('I', ModItems.GUNDANIUM_INGOT.get())
+
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALYTHUM_MACHINE_CORE.get())
+                .pattern("IKI")
+                .pattern("TMT")
+                .pattern("IKI")
+                .define('K', ModItems.KRYON_CRYSTAL.get())
+                .define('T', ModBlocks.TIBERIUM_BLUE_BLOCK.get())
+                .define('M', ModBlocks.GUNDANIUM_MACHINE_CORE.get())
+                .define('I', ModItems.ALYTHUM_INGOT.get())
+
+                .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD.get())
+                .pattern("C C")
+                .pattern(" C ")
+                .pattern("C C")
+                .define('C', ModItems.LG_CORE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_SCAFFOLD.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_SCAFFOLD.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_CATWALK_W_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_CATWALK_W.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_CATWALK_W_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_CATWALK_W.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_CATWALK_B_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_CATWALK_B.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_CATWALK_B_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_CATWALK_B.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_CATWALK_BL_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_CATWALK_BL.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_CATWALK_BL_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_CATWALK_BL.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_CATWALK_G_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_CATWALK_G.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_CATWALK_G_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_CATWALK_G.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_CATWALK_R_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_CATWALK_R.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_CATWALK_R_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_CATWALK_R.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_CATWALK_P_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_CATWALK_P.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_CATWALK_P_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_CATWALK_P.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_G_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_G.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_G_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_G.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_G_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_G.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_B_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_B.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_B_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_B.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_B_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_B.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_R_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_R.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_R_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_R.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_R_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_R.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_P_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_P.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_P_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_P.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_P_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_P.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_BR_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_BR.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_BR_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_BR.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_BR_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_BR.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_YB_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_YB.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_YB_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_YB.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_YB_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_YB.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_G_BAND_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_G_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_G_BAND_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_G_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_G_BAND_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_G_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_B_BAND_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_B_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_B_BAND_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_B_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_B_BAND_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_B_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_R_BAND_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_R_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_R_BAND_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_R_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_R_BAND_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_R_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_P_BAND_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_P_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_P_BAND_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_P_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_P_BAND_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_P_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_G_FRAME_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_G_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_G_FRAME_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_G_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_G_FRAME_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_G_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_B_FRAME_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_B_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_B_FRAME_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_B_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_B_FRAME_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_B_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_R_FRAME_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_R_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_R_FRAME_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_R_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_R_FRAME_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_R_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_P_FRAME_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_P_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_P_FRAME_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_P_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_P_FRAME_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_P_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_LG_FRAME_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_LG_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_LG_FRAME_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_LG_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_LG_FRAME_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_LG_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_MG_FRAME_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_MG_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_MG_FRAME_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_MG_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_MG_FRAME_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_MG_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_HG_FRAME_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_HG_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_HG_FRAME_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_HG_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_HG_FRAME_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_HG_FRAME.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_LG_BAND_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_LG_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_LG_BAND_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_LG_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_LG_BAND_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_LG_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_MG_BAND_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_MG_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_MG_BAND_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_MG_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_MG_BAND_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_MG_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_HG_BAND_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_HG_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_HG_BAND_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_HG_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_HG_BAND_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_HG_BAND.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_LG_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_LG.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_LG_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_LG.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_LG_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_LG.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_MG_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_MG.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_MG_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_MG.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_MG_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_MG.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_HG_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_HG.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_HG_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_HG.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_HG_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.CS_TILE_HG.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_CHAINLINK.get(), 6)
+                .pattern(" IC")
+                .pattern(" CI")
+                .pattern(" IC")
+                .define('I', ModItems.LG_CORE_INGOT.get())
+                .define('C', Items.CHAIN)
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
 
         //Shapeless Crafting:
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIBERIUM.get(), 9)
@@ -2788,6 +3540,11 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GUNDANIUM_INGOT.get(), 9)
                 .requires(ModBlocks.GUNDANIUM_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.GUNDANIUM_BLOCK.get()), has(ModBlocks.GUNDANIUM_BLOCK.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HARMONIUM_INGOT.get(), 9)
+                .requires(ModBlocks.HARMONIUM_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.HARMONIUM_BLOCK.get()), has(ModBlocks.HARMONIUM_BLOCK.get()))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ALYTHUM_INGOT.get(), 9)
@@ -3468,6 +4225,11 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.WHITE_TIBERCRETE_BRICK_WALL.get(), ModBlocks.WHITE_TIBERCRETE_BRICKS.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YELLOW_TIBERCRETE_BRICK_WALL.get(), ModBlocks.YELLOW_TIBERCRETE_BRICKS.get());
 
+
+
+
+
+
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_B.get(), ModBlocks.CRYSTAL_CORE_LAMP_G.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_R.get(), ModBlocks.CRYSTAL_CORE_LAMP_G.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_P.get(), ModBlocks.CRYSTAL_CORE_LAMP_G.get());
@@ -3566,6 +4328,105 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get(), ModBlocks.VERT_CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LIGHT.get(), ModBlocks.VERT_CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.VERT_CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get(), ModBlocks.INVERTED_VERT_CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LIGHT.get(), ModBlocks.INVERTED_VERT_CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.INVERTED_VERT_CRYSTAL_CORE_LIGHT.get());
+
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_BLACK_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_BLACK_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.BLACK_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.BLACK_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_BLUE_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_BLUE_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.BLUE_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.BLUE_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_BROWN_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_BROWN_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.BROWN_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.BROWN_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CYAN_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_CYAN_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CYAN_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CYAN_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_FLAME_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_FLAME_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.FLAME_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.FLAME_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_GREEN_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_GREEN_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.GREEN_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.GREEN_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_GREY_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_GREY_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.GREY_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.GREY_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_LIGHT_BLUE_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_LIGHT_BLUE_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_LIGHT_GREY_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_LIGHT_GREY_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LIGHT_GREY_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LIGHT_GREY_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_LIME_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_LIME_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LIME_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LIME_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_MAGENTA_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_MAGENTA_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.MAGENTA_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.MAGENTA_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_ORANGE_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_ORANGE_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ORANGE_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.ORANGE_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_PINK_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_PINK_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PINK_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PINK_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_PURPLE_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_PURPLE_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PURPLE_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.PURPLE_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_RED_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_RED_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RED_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.RED_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_WHITE_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.INVERTED_WHITE_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.WHITE_VERT_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.WHITE_CRYSTAL_CORE_LIGHT.get(), ModBlocks.CRYSTAL_CORE_LIGHT.get());
+
+
+
 
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.YZ_SANDSTONE_SLAB.get(), ModBlocks.YZ_SANDSTONE.get(), 2);
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CUT_YZ_SANDSTONE_SLAB.get(), ModBlocks.YZ_SANDSTONE.get(), 2);
@@ -3666,9 +4527,270 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.VITRIC_DEEPSLATE_TILE_STAIRS.get(), ModBlocks.VITRIC_DEEPSLATE_TILES.get());
 
 
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD_VERT.get(), ModBlocks.CS_SCAFFOLD.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_W_VERT.get(), ModBlocks.CS_CATWALK_W.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_BL_VERT.get(), ModBlocks.CS_CATWALK_BL.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_G_VERT.get(), ModBlocks.CS_CATWALK_G.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_B_VERT.get(), ModBlocks.CS_CATWALK_B.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_R_VERT.get(), ModBlocks.CS_CATWALK_R.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_P_VERT.get(), ModBlocks.CS_CATWALK_P.get(), 2);
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD_SLAB.get(), ModBlocks.CS_SCAFFOLD.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_W_SLAB.get(), ModBlocks.CS_CATWALK_W.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_BL_SLAB.get(), ModBlocks.CS_CATWALK_BL.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_G_SLAB.get(), ModBlocks.CS_CATWALK_G.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_B_SLAB.get(), ModBlocks.CS_CATWALK_B.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_R_SLAB.get(), ModBlocks.CS_CATWALK_R.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_P_SLAB.get(), ModBlocks.CS_CATWALK_P.get(), 2);
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD.get(), ModBlocks.CS_CATWALK_W.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD.get(), ModBlocks.CS_CATWALK_BL.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD.get(), ModBlocks.CS_CATWALK_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD.get(), ModBlocks.CS_CATWALK_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD.get(), ModBlocks.CS_CATWALK_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD.get(), ModBlocks.CS_CATWALK_P.get());
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_W.get(), ModBlocks.CS_SCAFFOLD.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_BL.get(), ModBlocks.CS_SCAFFOLD.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_B.get(), ModBlocks.CS_SCAFFOLD.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_G.get(), ModBlocks.CS_SCAFFOLD.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_P.get(), ModBlocks.CS_SCAFFOLD.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_R.get(), ModBlocks.CS_SCAFFOLD.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD_STAIRS.get(), ModBlocks.CS_SCAFFOLD.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_W_STAIRS.get(), ModBlocks.CS_CATWALK_W.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_BL_STAIRS.get(), ModBlocks.CS_CATWALK_BL.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_B_STAIRS.get(), ModBlocks.CS_CATWALK_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_G_STAIRS.get(), ModBlocks.CS_CATWALK_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_P_STAIRS.get(), ModBlocks.CS_CATWALK_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_CATWALK_R_STAIRS.get(), ModBlocks.CS_CATWALK_P.get());
+
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_BR.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_YB.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G_BAND.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B_BAND.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R_BAND.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P_BAND.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG_BAND.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G_FRAME.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B_FRAME.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R_FRAME.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P_FRAME.get(), ModBlocks.LG_CORE_BLOCK.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG_FRAME.get(), ModBlocks.LG_CORE_BLOCK.get());
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_BR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_YB.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_LG.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_G_BAND.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_B_BAND.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_R_BAND.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_P_BAND.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_LG_BAND.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_G_FRAME.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_B_FRAME.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_R_FRAME.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_P_FRAME.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.LG_CORE_BLOCK.get(), ModBlocks.CS_TILE_LG_FRAME.get());
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_G.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_G_2.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_G_3.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_G_4.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_B.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_B_2.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_B_3.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_B_4.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_R.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_R_2.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_R_3.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_R_4.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_P.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_P_2.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_P_3.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_P_4.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_LG.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_LG_2.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_LG_3.get(), ModBlocks.CS_PILLAR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_LG_4.get(), ModBlocks.CS_PILLAR.get());
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_G_2.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_G_3.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_G_4.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_B_2.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_B_3.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_B_4.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_R_2.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_R_3.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_R_4.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_P_2.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_P_3.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_P_4.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_LG.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_LG_2.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_LG_3.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR.get(), ModBlocks.CS_PILLAR_LG_4.get());
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_G.get(), ModBlocks.CS_TILE_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_G_2.get(), ModBlocks.CS_TILE_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_G_3.get(), ModBlocks.CS_TILE_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_G_4.get(), ModBlocks.CS_TILE_G.get());
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_B.get(), ModBlocks.CS_TILE_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_B_2.get(), ModBlocks.CS_TILE_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_B_3.get(), ModBlocks.CS_TILE_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_B_4.get(), ModBlocks.CS_TILE_B.get());
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_R.get(), ModBlocks.CS_TILE_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_R_2.get(), ModBlocks.CS_TILE_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_R_3.get(), ModBlocks.CS_TILE_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_R_4.get(), ModBlocks.CS_TILE_R.get());
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_P.get(), ModBlocks.CS_TILE_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_P_2.get(), ModBlocks.CS_TILE_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_P_3.get(), ModBlocks.CS_TILE_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_P_4.get(), ModBlocks.CS_TILE_P.get());
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_LG.get(), ModBlocks.CS_TILE_LG.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_LG_2.get(), ModBlocks.CS_TILE_LG.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_LG_3.get(), ModBlocks.CS_TILE_LG.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_PILLAR_LG_4.get(), ModBlocks.CS_TILE_LG.get());
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G.get(), ModBlocks.CS_PILLAR_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G.get(), ModBlocks.CS_PILLAR_G_2.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G.get(), ModBlocks.CS_PILLAR_G_3.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G.get(), ModBlocks.CS_PILLAR_G_4.get());
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B.get(), ModBlocks.CS_PILLAR_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B.get(), ModBlocks.CS_PILLAR_B_2.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B.get(), ModBlocks.CS_PILLAR_B_3.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B.get(), ModBlocks.CS_PILLAR_B_4.get());
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R.get(), ModBlocks.CS_PILLAR_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R.get(), ModBlocks.CS_PILLAR_R_2.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R.get(), ModBlocks.CS_PILLAR_R_3.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R.get(), ModBlocks.CS_PILLAR_R_4.get());
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P.get(), ModBlocks.CS_PILLAR_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P.get(), ModBlocks.CS_PILLAR_P_2.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P.get(), ModBlocks.CS_PILLAR_P_3.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P.get(), ModBlocks.CS_PILLAR_P_4.get());
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG.get(), ModBlocks.CS_PILLAR_LG.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG.get(), ModBlocks.CS_PILLAR_LG_2.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG.get(), ModBlocks.CS_PILLAR_LG_3.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG.get(), ModBlocks.CS_PILLAR_LG_4.get());
+        
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_VERT.get(), ModBlocks.CS_TILE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G_VERT.get(), ModBlocks.CS_TILE_G.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B_VERT.get(), ModBlocks.CS_TILE_B.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R_VERT.get(), ModBlocks.CS_TILE_R.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P_VERT.get(), ModBlocks.CS_TILE_P.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_BR_VERT.get(), ModBlocks.CS_TILE_BR.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_YB_VERT.get(), ModBlocks.CS_TILE_YB.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG_VERT.get(), ModBlocks.CS_TILE_LG.get(), 2);
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G_BAND_VERT.get(), ModBlocks.CS_TILE_G_BAND.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B_BAND_VERT.get(), ModBlocks.CS_TILE_B_BAND.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R_BAND_VERT.get(), ModBlocks.CS_TILE_R_BAND.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P_BAND_VERT.get(), ModBlocks.CS_TILE_P_BAND.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG_BAND_VERT.get(), ModBlocks.CS_TILE_LG_BAND.get(), 2);
+        
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G_FRAME_VERT.get(), ModBlocks.CS_TILE_G_FRAME.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B_FRAME_VERT.get(), ModBlocks.CS_TILE_B_FRAME.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R_FRAME_VERT.get(), ModBlocks.CS_TILE_R_FRAME.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P_FRAME_VERT.get(), ModBlocks.CS_TILE_P_FRAME.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG_FRAME_VERT.get(), ModBlocks.CS_TILE_LG_FRAME.get(), 2);
+
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_SLAB.get(), ModBlocks.CS_TILE.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G_SLAB.get(), ModBlocks.CS_TILE_G.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B_SLAB.get(), ModBlocks.CS_TILE_B.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R_SLAB.get(), ModBlocks.CS_TILE_R.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P_SLAB.get(), ModBlocks.CS_TILE_P.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_BR_SLAB.get(), ModBlocks.CS_TILE_BR.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_YB_SLAB.get(), ModBlocks.CS_TILE_YB.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG_SLAB.get(), ModBlocks.CS_TILE_LG.get(), 2);
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G_BAND_SLAB.get(), ModBlocks.CS_TILE_G_BAND.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B_BAND_SLAB.get(), ModBlocks.CS_TILE_B_BAND.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R_BAND_SLAB.get(), ModBlocks.CS_TILE_R_BAND.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P_BAND_SLAB.get(), ModBlocks.CS_TILE_P_BAND.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG_BAND_SLAB.get(), ModBlocks.CS_TILE_LG_BAND.get(), 2);
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G_FRAME_SLAB.get(), ModBlocks.CS_TILE_G_FRAME.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B_FRAME_SLAB.get(), ModBlocks.CS_TILE_B_FRAME.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R_FRAME_SLAB.get(), ModBlocks.CS_TILE_R_FRAME.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P_FRAME_SLAB.get(), ModBlocks.CS_TILE_P_FRAME.get(), 2);
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG_FRAME_SLAB.get(), ModBlocks.CS_TILE_LG_FRAME.get(), 2);
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_STAIRS.get(), ModBlocks.CS_TILE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G_STAIRS.get(), ModBlocks.CS_TILE_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B_STAIRS.get(), ModBlocks.CS_TILE_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R_STAIRS.get(), ModBlocks.CS_TILE_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P_STAIRS.get(), ModBlocks.CS_TILE_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_BR_STAIRS.get(), ModBlocks.CS_TILE_BR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_YB_STAIRS.get(), ModBlocks.CS_TILE_YB.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG_STAIRS.get(), ModBlocks.CS_TILE_LG.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G_BAND_STAIRS.get(), ModBlocks.CS_TILE_G_BAND.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B_BAND_STAIRS.get(), ModBlocks.CS_TILE_B_BAND.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R_BAND_STAIRS.get(), ModBlocks.CS_TILE_R_BAND.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P_BAND_STAIRS.get(), ModBlocks.CS_TILE_P_BAND.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG_BAND_STAIRS.get(), ModBlocks.CS_TILE_LG_BAND.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G_FRAME_STAIRS.get(), ModBlocks.CS_TILE_G_FRAME.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B_FRAME_STAIRS.get(), ModBlocks.CS_TILE_B_FRAME.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R_FRAME_STAIRS.get(), ModBlocks.CS_TILE_R_FRAME.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P_FRAME_STAIRS.get(), ModBlocks.CS_TILE_P_FRAME.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG_FRAME_STAIRS.get(), ModBlocks.CS_TILE_LG_FRAME.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_WALL.get(), ModBlocks.CS_TILE.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G_WALL.get(), ModBlocks.CS_TILE_G.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B_WALL.get(), ModBlocks.CS_TILE_B.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R_WALL.get(), ModBlocks.CS_TILE_R.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P_WALL.get(), ModBlocks.CS_TILE_P.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_BR_WALL.get(), ModBlocks.CS_TILE_BR.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_YB_WALL.get(), ModBlocks.CS_TILE_YB.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG_WALL.get(), ModBlocks.CS_TILE_LG.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G_BAND_WALL.get(), ModBlocks.CS_TILE_G_BAND.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B_BAND_WALL.get(), ModBlocks.CS_TILE_B_BAND.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R_BAND_WALL.get(), ModBlocks.CS_TILE_R_BAND.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P_BAND_WALL.get(), ModBlocks.CS_TILE_P_BAND.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG_BAND_WALL.get(), ModBlocks.CS_TILE_LG_BAND.get());
+
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_G_FRAME_WALL.get(), ModBlocks.CS_TILE_G_FRAME.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_B_FRAME_WALL.get(), ModBlocks.CS_TILE_B_FRAME.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_R_FRAME_WALL.get(), ModBlocks.CS_TILE_R_FRAME.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_P_FRAME_WALL.get(), ModBlocks.CS_TILE_P_FRAME.get());
+        stonecutterResultFromBase(consumer, RecipeCategory.MISC, ModBlocks.CS_TILE_LG_FRAME_WALL.get(), ModBlocks.CS_TILE_LG_FRAME.get());
+
+
+
+
+
        
 
-//Tiberium Grinder:
+//Basic Tiberium Grinder:
 
         //Vanilla:
 
@@ -3689,6 +4811,10 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         new TiberiumGrinderRecipeBuilder(ModItems.RAW_GUNDANIUM.get(), ModItems.GUNDANIUM_DUST.get(), 2)
                 .unlockedBy("has_gundanium_ore", has(ModBlocks.GUNDANIUM_ORE.get())).save(consumer);
 
+        //Harmonium:
+
+        new TiberiumGrinderRecipeBuilder(ModItems.RAW_HARMONIUM.get(), ModItems.HARMONIUM_DUST.get(), 2)
+                .unlockedBy("has_harmonium_ore", has(ModBlocks.HARMONIUM_ORE.get())).save(consumer);
 
         //Alythum:
 

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "crystechmod:alythum_ingot"
+    },
+    "K": {
+      "item": "crystechmod:kryon_crystal"
+    },
+    "M": {
+      "item": "crystechmod:gundanium_machine_core"
+    },
+    "T": {
+      "item": "crystechmod:tiberium_blue_block"
+    }
+  },
+  "pattern": [
+    "IKI",
+    "TMT",
+    "IKI"
+  ],
+  "result": {
+    "item": "crystechmod:alythum_machine_core"
+  },
+  "show_notification": true
+}

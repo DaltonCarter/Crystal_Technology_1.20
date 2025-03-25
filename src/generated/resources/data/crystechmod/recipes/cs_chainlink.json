@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:chain"
+    },
+    "I": {
+      "item": "crystechmod:lg_core_ingot"
+    }
+  },
+  "pattern": [
+    " IC",
+    " CI",
+    " IC"
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:cs_chainlink"
+  },
+  "show_notification": true
+}

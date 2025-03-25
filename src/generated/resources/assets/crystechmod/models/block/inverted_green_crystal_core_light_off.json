@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "crystechmod:block/inverted_green_crystal_core_light_off"
+  }
+}

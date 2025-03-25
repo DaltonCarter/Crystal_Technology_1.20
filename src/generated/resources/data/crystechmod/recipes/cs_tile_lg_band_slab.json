@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "crystechmod:cs_tile_lg_band"
+    }
+  },
+  "pattern": [
+    "   ",
+    "   ",
+    "CCC"
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:cs_tile_lg_band_slab"
+  },
+  "show_notification": true
+}

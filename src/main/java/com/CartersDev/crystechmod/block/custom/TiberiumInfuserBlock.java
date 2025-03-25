@@ -27,6 +27,8 @@ import org.jetbrains.annotations.Nullable;
 
 public class TiberiumInfuserBlock extends BaseEntityBlock {
 
+    private static Properties MACHINE_CORE;
+
     /* HORIZONTAL FACING AND VOXEL SHAPE */
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;

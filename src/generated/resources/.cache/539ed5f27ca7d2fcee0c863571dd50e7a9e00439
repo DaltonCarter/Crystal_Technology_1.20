@@ -1,10 +1,11 @@
-// 1.20.1	2025-03-02T22:10:52.5112562	Tags for minecraft:block mod id crystechmod
+// 1.20.1	2025-03-24T23:18:54.8088033	Tags for minecraft:block mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/blocks/aeries_ores.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/blocks/alythum_ores.json
 46de90b7b6a6a287548f896235af80124a350b93 data/crystechmod/tags/blocks/concretes.json
 1b1bb8b2e7aecfb7d82d771a540fcafffe25b6ed data/crystechmod/tags/blocks/dead_logs.json
 9e69fb63880d9644913e3c1febc7b5019ed06a98 data/crystechmod/tags/blocks/ember_oak_logs.json
-1b0f08b2d33a1109df65998d88ad33daa39ff735 data/crystechmod/tags/blocks/enigma_ores.json
+569b96ed4a3700478598d59a0249f011c9e779f0 data/crystechmod/tags/blocks/enigma_ores.json
+385384748b1de16a26be84aa4324801acb1e776d data/crystechmod/tags/blocks/glass.json
 4cadb914e0eab48bbce75c6e6b2093818996d44e data/crystechmod/tags/blocks/gundanium_ores.json
 3c0db247b35cadbc078a1b88ac98777330717935 data/crystechmod/tags/blocks/hazmat_glass_panes.json
 fde81393ef244e7ec272ed755f993f402ff61d5d data/crystechmod/tags/blocks/hazmat_glass_panes2.json
@@ -12,9 +13,9 @@ fde81393ef244e7ec272ed755f993f402ff61d5d data/crystechmod/tags/blocks/hazmat_gla
 c7bbac2058df90e9377b5e00ecc05db2c0213cad data/crystechmod/tags/blocks/kryon_ores.json
 76338cc754cb5d1030cd4159192e0089f6c09fae data/crystechmod/tags/blocks/marika_oak_logs.json
 82362cfbd1836db13c7e9d36c8712821e795ac55 data/crystechmod/tags/blocks/mineable/paxel.json
-6f26951c87f015d1bbce7825b3ebdb33f469e045 data/crystechmod/tags/blocks/mod_planks.json
+b97904e909222fd61767ad7160b0c32323c6852d data/crystechmod/tags/blocks/mod_planks.json
 3178a8dc515fd657eb6257877831f9193585fa8c data/crystechmod/tags/blocks/needs_alythum_tool.json
-1c426f4dc625a679f4f23b6ff4b22aff02c997db data/crystechmod/tags/blocks/needs_gundanium_tool.json
+ddc8a0e47616e069a2a00c47dec667051c8da0b1 data/crystechmod/tags/blocks/needs_gundanium_tool.json
 d77f4c0b4a5c5eb15aa8cf1d058cb63a549f3b8f data/crystechmod/tags/blocks/needs_plagued_tool.json
 7ff009a6ce8d964af59c35e91e257d0fca7cfd07 data/crystechmod/tags/blocks/plagued_logs.json
 39acdcf33383e05a367faca9c1c896cc6cdba9c0 data/crystechmod/tags/blocks/tibercrete_sands.json
@@ -24,12 +25,12 @@ c97feb22c8a99095b8a5883f79d9ce36df98e112 data/crystechmod/tags/blocks/tiberium_f
 2845e53f6a89058a250f3e910ae423d9287d29c2 data/crystechmod/tags/blocks/tiberium_viable_blocks.json
 347d7db9633b91359c616fd62d97385b7de8bc73 data/crystechmod/tags/blocks/tiberium_vulnerable_saplings.json
 b147fcff5c0b4d72df1cb7809b063b2562180832 data/crystechmod/tags/blocks/tiberium_vulnerable_wood.json
-b2ff4f77ed08ae3755b1680a6b577108638917cc data/crystechmod/tags/blocks/vitric_expanse_rz_carver.json
+b19f776c390198bea3b60ab82ac48ddc549aeefd data/crystechmod/tags/blocks/vitric_expanse_rz_carver.json
 34c34804a740758e66ce6a3d9520e7c50688f8b0 data/crystechmod/tags/blocks/vitric_expanse_stones.json
-9e5a7d74ec0d83298b83a53a96885c32ef378daf data/crystechmod/tags/blocks/vitric_expanse_yz_carver.json
+a285676a30bd782543b8ac891420002170b9cee9 data/crystechmod/tags/blocks/vitric_expanse_yz_carver.json
 2409e82b8e5cc72778616dd6a9efc300494af5ea data/crystechmod/tags/blocks/vulnerable_leaves.json
 ddfcad38a7999881b28206520a3ccb5ad0d0f46d data/forge/tags/blocks/needs_netherite_tool.json
-ddd39588a828097998b3e381633c9bafbc6202a5 data/forge/tags/blocks/ores.json
+e2d60a30c639fae5d82d5448ed75c1c2f18fee78 data/forge/tags/blocks/ores.json
 293b0928861f3e8f109904e7953c31f175e3c4f5 data/minecraft/tags/blocks/dirt.json
 c6aab69a244678a9783a3baff90174fb529ed517 data/minecraft/tags/blocks/fences.json
 669ec66f0d6f7ecfcfb062efab82e9ea3128fcbd data/minecraft/tags/blocks/fence_gates.json
@@ -38,7 +39,7 @@ c6aab69a244678a9783a3baff90174fb529ed517 data/minecraft/tags/blocks/fences.json
 7469d34aacc37cbec82468d3eb2d3892f56a9277 data/minecraft/tags/blocks/logs.json
 e0721fc7760819c2882cc2896aeb4f60de8a8dad data/minecraft/tags/blocks/logs_that_burn.json
 5921bae2cd5332c6c228feaad9db64bf1b77c963 data/minecraft/tags/blocks/mineable/axe.json
-ad5d0e418de9786145d9bcba4a6f4078e98847e6 data/minecraft/tags/blocks/mineable/pickaxe.json
+c0152d3f0d504b83773bdcc9c90cb5f86dbee551 data/minecraft/tags/blocks/mineable/pickaxe.json
 f7b7b0cbf5fe1937fbbe024c9f0807f12d845845 data/minecraft/tags/blocks/mineable/shovel.json
 0df83178f153cf69d244fec1aa474fe690fb2834 data/minecraft/tags/blocks/needs_diamond_tool.json
 3224cc97f8308ace7b69adee2ceb0093ac0d357a data/minecraft/tags/blocks/needs_iron_tool.json

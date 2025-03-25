@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:lg_core_block"
+  },
+  "result": "crystechmod:cs_tile_g"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "crystechmod:cs_catwalk_bl"
+  },
+  "result": "crystechmod:cs_catwalk_bl_vert"
+}

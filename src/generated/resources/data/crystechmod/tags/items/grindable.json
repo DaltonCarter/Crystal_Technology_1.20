@@ -14,6 +14,11 @@
     "crystechmod:illyrim_ingot",
     "crystechmod:lg_core_ingot",
     "crystechmod:mg_core_ingot",
-    "crystechmod:hg_core_ingot"
+    "crystechmod:harmonium_ingot",
+    "crystechmod:raw_harmonium",
+    "crystechmod:hg_core_ingot",
+    "#crystechmod:alythum_ores",
+    "#crystechmod:gundanium_ores",
+    "#crystechmod:enigma_ores"
   ]
 }

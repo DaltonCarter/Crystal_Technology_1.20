@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:cs_tile_b"
+  },
+  "result": "crystechmod:cs_tile_b_wall"
+}

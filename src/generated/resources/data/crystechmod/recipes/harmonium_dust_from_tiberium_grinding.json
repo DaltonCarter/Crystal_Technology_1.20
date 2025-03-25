@@ -1,0 +1,12 @@
+{
+  "type": "crystechmod:tiberium_grinding",
+  "ingredients": [
+    {
+      "item": "crystechmod:raw_harmonium"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "crystechmod:harmonium_dust"
+  }
+}

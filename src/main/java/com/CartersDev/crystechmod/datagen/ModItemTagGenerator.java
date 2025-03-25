@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.common.data.ForgeItemTagsProvider;
+import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -41,12 +42,14 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.copy(ModTags.Blocks.MOD_PLANKS, ModTags.Items.MOD_PLANKS);
 
         this.copy(ModTags.Blocks.GUNDANIUM_ORES, ModTags.Items.GUNDANIUM_ORES);
+        this.copy(ModTags.Blocks.HARMONIUM_ORES, ModTags.Items.HARMONIUM_ORES);
         this.copy(ModTags.Blocks.ALYTHUM_ORES, ModTags.Items.ALYTHUM_ORES);
         this.copy(ModTags.Blocks.QUALRITE_ORES, ModTags.Items.QUALRITE_ORES);
         this.copy(ModTags.Blocks.AERIES_ORES, ModTags.Items.AERIES_ORES);
         this.copy(ModTags.Blocks.ILLUMINA_ORES, ModTags.Items.ILLUMINA_ORES);
         this.copy(ModTags.Blocks.KRYON_ORES, ModTags.Items.KRYON_ORES);
         this.copy(ModTags.Blocks.ENIGMA_ORES, ModTags.Items.ENIGMA_ORES);
+        this.copy(ModTags.Blocks.GLASS, ModTags.Items.GLASS);
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
 
         this.tag(ModTags.Items.GRINDABLE)
@@ -65,8 +68,13 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.ILLYRIM_INGOT.get(),
                         ModItems.LG_CORE_INGOT.get(),
                         ModItems.MG_CORE_INGOT.get(),
+                        ModItems.HARMONIUM_INGOT.get(),
+                        ModItems.RAW_HARMONIUM.get(),
                         ModItems.HG_CORE_INGOT.get()
-                );
+                )
+                .addTags(ModTags.Items.ALYTHUM_ORES,
+                        ModTags.Items.GUNDANIUM_ORES,
+                        ModTags.Items.HARMONIUM_ORES);
 
         this.tag(ModTags.Items.GRINDING_RESULT)
                 .add(
@@ -79,7 +87,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.ILLYRIM_BLEND.get(),
                         ModItems.LG_CORE_BLEND.get(),
                         ModItems.MG_CORE_BLEND.get(),
-                        ModItems.HG_CORE_BLEND.get()
+                        ModItems.HG_CORE_BLEND.get(),
+                        ModItems.HARMONIUM_DUST.get()
                 );
 
         this.tag(ItemTags.PLANKS)

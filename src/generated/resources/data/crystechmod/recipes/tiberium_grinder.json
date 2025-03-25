@@ -10,11 +10,14 @@
     },
     "G": {
       "item": "crystechmod:gundanium_ingot"
+    },
+    "M": {
+      "item": "crystechmod:gundanium_machine_core"
     }
   },
   "pattern": [
     "GGG",
-    "GAG",
+    "AMA",
     "CCC"
   ],
   "result": {

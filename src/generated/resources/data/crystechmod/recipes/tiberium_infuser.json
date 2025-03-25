@@ -6,7 +6,7 @@
       "item": "crystechmod:alythum_ingot"
     },
     "G": {
-      "item": "crystechmod:gundanium_block"
+      "item": "crystechmod:tiberium_block"
     },
     "I": {
       "item": "crystechmod:illumina_crystal"
@@ -14,14 +14,17 @@
     "K": {
       "item": "crystechmod:kryon_crystal"
     },
+    "M": {
+      "item": "crystechmod:gundanium_machine_core"
+    },
     "R": {
-      "item": "minecraft:redstone_block"
+      "tag": "crystechmod:glass"
     }
   },
   "pattern": [
     "AIA",
-    "KRK",
-    "GKG"
+    "KMK",
+    "GRG"
   ],
   "result": {
     "item": "crystechmod:tiberium_infuser"

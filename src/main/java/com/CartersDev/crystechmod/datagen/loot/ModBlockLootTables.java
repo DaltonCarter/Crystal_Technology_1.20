@@ -33,6 +33,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         //Self Drops:
         this.dropSelf(ModBlocks.TEST_BLOCK.get());
 
+        this.dropSelf(ModBlocks.GUNDANIUM_MACHINE_CORE.get());
+        this.dropSelf(ModBlocks.ALYTHUM_MACHINE_CORE.get());
+        this.dropSelf(ModBlocks.VITRIC_MACHINE_CORE.get());
+        this.dropSelf(ModBlocks.CRYSTAL_CORE_MACHINE_CORE.get());
+
         this.dropSelf(ModBlocks.CRYSTAL_CORE_LAMP_G.get());
         this.dropSelf(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get());
         this.dropSelf(ModBlocks.CRYSTAL_CORE_LAMP_B.get());
@@ -44,6 +49,88 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.dropSelf(ModBlocks.CRYSTAL_CORE_LIGHT.get());
         this.dropSelf(ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.BLACK_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_BLACK_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.BLACK_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_BLACK_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.BLUE_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_BLUE_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.BLUE_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_BLUE_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.BROWN_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_BROWN_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.BROWN_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_BROWN_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.CYAN_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_CYAN_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.CYAN_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_CYAN_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.FLAME_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_FLAME_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.FLAME_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_FLAME_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.GREEN_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_GREEN_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.GREEN_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_GREEN_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.GREY_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_GREY_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.GREY_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_GREY_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.LIGHT_BLUE_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_LIGHT_BLUE_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_LIGHT_BLUE_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.LIGHT_GREY_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_LIGHT_GREY_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.LIGHT_GREY_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_LIGHT_GREY_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.LIME_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_LIME_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.LIME_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_LIME_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.MAGENTA_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_MAGENTA_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.MAGENTA_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_MAGENTA_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.ORANGE_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_ORANGE_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.ORANGE_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_ORANGE_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.PINK_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_PINK_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.PINK_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_PINK_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.PURPLE_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_PURPLE_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.PURPLE_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_PURPLE_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.RED_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_RED_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.RED_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_RED_VERT_CRYSTAL_CORE_LIGHT.get());
+
+        this.dropSelf(ModBlocks.WHITE_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_WHITE_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.WHITE_VERT_CRYSTAL_CORE_LIGHT.get());
+        this.dropSelf(ModBlocks.INVERTED_WHITE_VERT_CRYSTAL_CORE_LIGHT.get());
 
         this.dropSelf(ModBlocks.TIBERIUM_BLOCK.get());
         this.dropSelf(ModBlocks.TIBERIUM_BLUE_BLOCK.get());
@@ -62,6 +149,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ENIGMA_BLOCK.get());
         this.dropSelf(ModBlocks.ILLUMINA_BLOCK.get());
         this.dropSelf(ModBlocks.KRYON_BLOCK.get());
+        this.dropSelf(ModBlocks.HARMONIUM_BLOCK.get());
 
         this.dropSelf(ModBlocks.VITRIC_DEEPSLATE.get());
         this.dropSelf(ModBlocks.VITRIC_DEEPSLATE_BRICKS.get());
@@ -1029,6 +1117,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.NETHER_QUALRITE_ORE.get(),
                 block -> createModOreDrops(ModBlocks.NETHER_QUALRITE_ORE.get(), ModItems.RAW_QUALRITE.get()));
+
+
+        this.add(ModBlocks.HARMONIUM_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.HARMONIUM_ORE.get(), ModItems.RAW_HARMONIUM.get()));
+
+        this.add(ModBlocks.DEEPSLATE_HARMONIUM_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.DEEPSLATE_HARMONIUM_ORE.get(), ModItems.RAW_HARMONIUM.get()));
+
+        this.add(ModBlocks.NETHER_HARMONIUM_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.NETHER_HARMONIUM_ORE.get(), ModItems.RAW_HARMONIUM.get()));
+
+        this.add(ModBlocks.END_HARMONIUM_ORE.get(),
+                block -> createModGemOreDrops(ModBlocks.END_HARMONIUM_ORE.get(), ModItems.RAW_HARMONIUM.get()));
 
         //End of Ore Drops
 

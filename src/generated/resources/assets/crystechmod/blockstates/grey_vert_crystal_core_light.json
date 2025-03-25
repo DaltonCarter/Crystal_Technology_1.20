@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "crystechmod:block/grey_vert_crystal_core_light_off"
+    },
+    "lit=true": {
+      "model": "crystechmod:block/grey_vert_crystal_core_light_on"
+    }
+  }
+}

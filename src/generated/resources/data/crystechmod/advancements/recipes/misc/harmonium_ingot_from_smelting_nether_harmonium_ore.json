@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nether_harmonium_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:nether_harmonium_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:harmonium_ingot_from_smelting_nether_harmonium_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_nether_harmonium_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:harmonium_ingot_from_smelting_nether_harmonium_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

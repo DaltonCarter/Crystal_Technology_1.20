@@ -21,15 +21,18 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_GUNDANIUM_ORES = registerKey("add_crystech_gundanium_ores");
     public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_KRYON_ORES = registerKey("add_crystech_kryon_ores");
     public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_ILLUMINA_ORES = registerKey("add_crystech_illumina_ores");
+    public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_HARMONIUM_ORES = registerKey("add_crystech_harmonium_ores");
 
 
     public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_NETHER_ALYTHUM_ORES = registerKey("add_crystech_nether_alythum_ores");
     public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_NETHER_QUALRITE_ORES = registerKey("add_crystech_nether_qualrite_ores");
     public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_NETHER_KRYON_ORES = registerKey("add_crystech_nether_kryon_ores");
     public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_NETHER_AERIES_ORES = registerKey("add_crystech_nether_aeries_ores");
+    public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_NETHER_HARMONIUM_ORES = registerKey("add_crystech_nether_harmonium_ores");
 
     public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_END_ENIGMA_ORES = registerKey("add_crystech_end_enigma_ores");
     public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_END_KRYON_ORES = registerKey("add_crystech_end_kryon_ores");
+    public static final ResourceKey<BiomeModifier> ADD_CRYSTECH_END_HARMONIUM_ORES = registerKey("add_crystech_end_harmonium_ores");
 
     //Geode:
     public static final ResourceKey<BiomeModifier> ADD_TIBERIUM_GEODE = registerKey("add_tiberium_geode");
@@ -56,6 +59,11 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CRYSTECH_GUNDANIUM_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
+        context.register(ADD_CRYSTECH_HARMONIUM_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CRYSTECH_HARMONIUM_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
         context.register(ADD_CRYSTECH_KRYON_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CRYSTECH_KRYON_PLACED_KEY)),
@@ -70,6 +78,11 @@ public class ModBiomeModifiers {
         context.register(ADD_CRYSTECH_NETHER_ALYTHUM_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CRYSTECH_NETHER_ALYTHUM_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_CRYSTECH_NETHER_HARMONIUM_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_NETHER),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CRYSTECH_NETHER_HARMONIUM_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
         context.register(ADD_CRYSTECH_NETHER_QUALRITE_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
@@ -96,6 +109,11 @@ public class ModBiomeModifiers {
         context.register(ADD_CRYSTECH_END_KRYON_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CRYSTECH_END_KRYON_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_CRYSTECH_END_HARMONIUM_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CRYSTECH_END_HARMONIUM_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
             //Geode:

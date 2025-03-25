@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_harmonium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:raw_harmonium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:harmonium_ingot_from_blasting_raw_harmonium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_harmonium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:harmonium_ingot_from_blasting_raw_harmonium"
+    ]
+  },
+  "sends_telemetry_event": false
+}

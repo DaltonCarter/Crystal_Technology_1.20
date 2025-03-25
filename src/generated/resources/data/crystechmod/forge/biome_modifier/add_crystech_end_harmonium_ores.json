@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_end",
+  "features": "crystechmod:crystech_end_harmonium_placed",
+  "step": "underground_ores"
+}

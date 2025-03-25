@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "crystechmod:glass"
+    },
+    "I": {
+      "item": "crystechmod:gundanium_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "pattern": [
+    "IGI",
+    "GRG",
+    "IGI"
+  ],
+  "result": {
+    "item": "crystechmod:gundanium_machine_core"
+  },
+  "show_notification": true
+}

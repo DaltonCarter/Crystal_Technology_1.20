@@ -44,14 +44,17 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> CRYSTECH_AERIES_PLACED_KEY = registerKey("crystech_aeries_ores_placed");
     public static final ResourceKey<PlacedFeature> CRYSTECH_ENIGMA_PLACED_KEY = registerKey("crystech_enigma_ores_placed");
     public static final ResourceKey<PlacedFeature> CRYSTECH_DEBRIS_PLACED_KEY = registerKey("crystech_ancient_debris_placed");
+    public static final ResourceKey<PlacedFeature> CRYSTECH_HARMONIUM_PLACED_KEY = registerKey("crystech_harmonium_placed");
 
     public static final ResourceKey<PlacedFeature> CRYSTECH_NETHER_ALYTHUM_PLACED_KEY = registerKey("crystech_nether_alythum_placed");
     public static final ResourceKey<PlacedFeature> CRYSTECH_NETHER_QUALRITE_PLACED_KEY = registerKey("crystech_nether_qualrite_placed");
     public static final ResourceKey<PlacedFeature> CRYSTECH_NETHER_AERIES_PLACED_KEY = registerKey("crystech_nether_aeries_placed");
     public static final ResourceKey<PlacedFeature> CRYSTECH_NETHER_KRYON_PLACED_KEY = registerKey("crystech_nether_kryon_placed");
+    public static final ResourceKey<PlacedFeature> CRYSTECH_NETHER_HARMONIUM_PLACED_KEY = registerKey("crystech_nether_harmonium_placed");
 
     public static final ResourceKey<PlacedFeature> CRYSTECH_END_ENIGMA_PLACED_KEY = registerKey("crystech_end_enigma_placed");
     public static final ResourceKey<PlacedFeature> CRYSTECH_END_KRYON_PLACED_KEY = registerKey("crystech_end_kryon_placed");
+    public static final ResourceKey<PlacedFeature> CRYSTECH_END_HARMONIUM_PLACED_KEY = registerKey("crystech_end_harmonium_placed");
 
     public static final ResourceKey<PlacedFeature> CRYSTECH_YELLOW_ZONE_DIRT_PLACED_KEY = registerKey("crystech_yellow_zone_dirt_placed");
     public static final ResourceKey<PlacedFeature> CRYSTECH_SEEDED_YELLOW_ZONE_DIRT_PLACED_KEY = registerKey("crystech_seeded_yellow_zone_dirt_placed");
@@ -212,6 +215,10 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
             ModOrePlacement.commonOrePlacement(6,
                     HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(40))));
 
+    register(context, CRYSTECH_HARMONIUM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_HARMONIUM_ORE_KEY),
+            ModOrePlacement.commonOrePlacement(6,
+                    HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(40))));
+
     register(context, CRYSTECH_ALYTHUM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_ALYTHUM_ORE_KEY),
             ModOrePlacement.commonOrePlacement(5,
                     HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(30))));
@@ -221,7 +228,7 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
                     HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(40))));
 
     register(context, CRYSTECH_ILLUMINA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_ILLUMINA_ORE_KEY),
-            ModOrePlacement.commonOrePlacement(3,
+            ModOrePlacement.commonOrePlacement(5,
                     HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(30))));
 
     register(context, CRYSTECH_AERIES_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_AERIES_ORE_KEY),
@@ -310,11 +317,15 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
 
     //Nether:
     register(context, CRYSTECH_NETHER_ALYTHUM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_NETHER_ALYTHUM_ORE_KEY),
-            ModOrePlacement.commonOrePlacement(5,
+            ModOrePlacement.commonOrePlacement(8,
                     HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(100))));
 
     register(context, CRYSTECH_NETHER_QUALRITE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_NETHER_QUALRITE_ORE_KEY),
-            ModOrePlacement.commonOrePlacement(5,
+            ModOrePlacement.commonOrePlacement(6,
+                    HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(100))));
+
+    register(context, CRYSTECH_NETHER_HARMONIUM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_NETHER_HARMONIUM_ORE_KEY),
+            ModOrePlacement.commonOrePlacement(6,
                     HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(100))));
 
     register(context, CRYSTECH_NETHER_KRYON_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_NETHER_KRYON_ORE_KEY),
@@ -331,6 +342,10 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
                     HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
 
     register(context, CRYSTECH_END_KRYON_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_END_KRYON_ORE_KEY),
+            ModOrePlacement.commonOrePlacement(5,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
+
+    register(context, CRYSTECH_END_HARMONIUM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_END_HARMONIUM_ORE_KEY),
             ModOrePlacement.commonOrePlacement(5,
                     HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
 

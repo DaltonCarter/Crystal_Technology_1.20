@@ -105,6 +105,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.KRYON_CRYSTAL);
 
         simpleItem(ModItems.GUNDANIUM_DUST);
+        simpleItem(ModItems.HARMONIUM_DUST);
         simpleItem(ModItems.GRINDER_GEAR);
         simpleItem(ModItems.ILLYRIM_GRINDER_GEAR);
         simpleItem(ModItems.TIBERIUM_COMPOSITE_INGOT);
@@ -113,6 +114,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.COPPER_DUST);
         simpleItem(ModItems.GOLD_DUST);
         simpleItem(ModItems.GUNDANIUM_INGOT);
+        simpleItem(ModItems.HARMONIUM_INGOT);
         simpleItem(ModItems.ALYTHUM_DUST);
         simpleItem(ModItems.ALYTHUM_INGOT);
         simpleItem(ModItems.LG_CORE_BLEND);
@@ -125,6 +127,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ILLYRIM_INGOT);
         simpleItem(ModItems.RAW_QUALRITE);
         simpleItem(ModItems.RAW_ALYTHUM);
+        simpleItem(ModItems.RAW_HARMONIUM);
         simpleItem(ModItems.RAW_GUNDANIUM);
         simpleItem(ModItems.QUALRIM_COMPOUND);
         simpleItem(ModItems.GDI_EMBLEM);
@@ -132,6 +135,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.WOLF_EMBLEM);
         simpleItem(ModItems.PLAGUED_STICK);
         simpleItem(ModItems.FIRESTONE);
+        simpleItem(ModItems.ILLUMINATE_COMPONENT);
+        simpleItem(ModItems.HARMONIC_RELAY);
+        simpleItem(ModItems.HARMONIC_CIRCUIT);
+        simpleItem(ModItems.HARMONIC_FOCUS);
+        simpleItem(ModItems.KRYONIC_CAPACITOR);
+        simpleItem(ModItems.KRYONIC_RESERVOIR);
 
         simpleItem(ModItems.TIBERIUM_FRUIT);
         simpleItem(ModItems.HEIM_BERRY);

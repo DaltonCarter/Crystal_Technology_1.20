@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:harmonium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "crystechmod:harmonium_ingot"
+  }
+}

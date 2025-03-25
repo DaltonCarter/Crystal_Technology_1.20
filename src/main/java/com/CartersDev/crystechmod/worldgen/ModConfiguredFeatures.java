@@ -57,6 +57,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_ALYTHUM_ORE_KEY = registerKey("alythum_ores");
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_QUALRITE_ORE_KEY = registerKey("qualrite_ores");
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_ANCIENT_DEBRIS_KEY = registerKey("ct_ancient_debris");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_HARMONIUM_ORE_KEY = registerKey("ct_harmonium");
 
         //Stones & Dirts:
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_YELLOW_ZONE_DIRT_KEY = registerKey("yellow_zone_dirt");
@@ -79,10 +80,12 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_NETHER_QUALRITE_ORE_KEY = registerKey("nether_qualrite_ores");
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_NETHER_KRYON_ORE_KEY = registerKey("nether_kryon_ores");
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_NETHER_AERIES_ORE_KEY = registerKey("nether_aeries_ores");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_NETHER_HARMONIUM_ORE_KEY = registerKey("nether_harmonium");
 
         //End:
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_END_KRYON_ORE_KEY = registerKey("end_crystech_kryon_ores");
     public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_END_ENIGMA_ORE_KEY = registerKey("end_crystech_enigma_ores");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CRYSTECH_END_HARMONIUM_ORE_KEY = registerKey("end_crystech_harmonium_ores");
 
         //Geode:
      public static final ResourceKey<ConfiguredFeature<?,?>> TIBERIUM_GEODE_KEY = registerKey("tiberium_geode");
@@ -180,6 +183,10 @@ public class ModConfiguredFeatures {
                 OreConfiguration.target(stoneReplaceables, ModBlocks.GUNDANIUM_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get().defaultBlockState()));
 
+        List<OreConfiguration.TargetBlockState> harmoniumOre = List.of(
+                OreConfiguration.target(stoneReplaceables, ModBlocks.HARMONIUM_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_HARMONIUM_ORE.get().defaultBlockState()));
+
         List<OreConfiguration.TargetBlockState> kryonOre = List.of(
                 OreConfiguration.target(stoneReplaceables, ModBlocks.KRYON_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_KRYON_ORE.get().defaultBlockState()));
@@ -262,8 +269,9 @@ public class ModConfiguredFeatures {
         //Overworld Ores:
         register(context,CRYSTECH_GUNDANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(gundaniumOre, 10));
         register(context,CRYSTECH_ALYTHUM_ORE_KEY, Feature.ORE, new OreConfiguration(alythumOre, 8));
+        register(context,CRYSTECH_HARMONIUM_ORE_KEY, Feature.ORE, new OreConfiguration(harmoniumOre, 10));
         register(context,CRYSTECH_KRYON_ORE_KEY, Feature.ORE, new OreConfiguration(kryonOre, 6));
-        register(context,CRYSTECH_ILLUMINA_ORE_KEY, Feature.ORE, new OreConfiguration(illuminaOre, 6));
+        register(context,CRYSTECH_ILLUMINA_ORE_KEY, Feature.ORE, new OreConfiguration(illuminaOre, 10));
         register(context,CRYSTECH_AERIES_ORE_KEY, Feature.ORE, new OreConfiguration(aeriesOre, 6));
         register(context,CRYSTECH_QUALRITE_ORE_KEY, Feature.ORE, new OreConfiguration(qualriteOre, 6));
         register(context,CRYSTECH_ENIGMA_ORE_KEY, Feature.ORE, new OreConfiguration(enigmaOre, 7));
@@ -290,13 +298,15 @@ public class ModConfiguredFeatures {
 
         //Nether Ores:
         register(context,CRYSTECH_NETHER_AERIES_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables, ModBlocks.NETHER_AERIES_ORE.get().defaultBlockState(), 4));
-        register(context,CRYSTECH_NETHER_QUALRITE_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables, ModBlocks.NETHER_QUALRITE_ORE.get().defaultBlockState(), 4));
-        register(context,CRYSTECH_NETHER_ALYTHUM_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables, ModBlocks.NETHER_ALYTHUM_ORE.get().defaultBlockState(), 5));
+        register(context,CRYSTECH_NETHER_QUALRITE_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables, ModBlocks.NETHER_QUALRITE_ORE.get().defaultBlockState(), 6));
+        register(context,CRYSTECH_NETHER_ALYTHUM_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables, ModBlocks.NETHER_ALYTHUM_ORE.get().defaultBlockState(), 8));
+        register(context,CRYSTECH_NETHER_HARMONIUM_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables, ModBlocks.NETHER_HARMONIUM_ORE.get().defaultBlockState(), 8));
         register(context,CRYSTECH_NETHER_KRYON_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables, ModBlocks.NETHER_KRYON_ORE.get().defaultBlockState(), 5));
 
         //End Ores:
         register(context,CRYSTECH_END_ENIGMA_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables, ModBlocks.END_ENIGMA_ORE.get().defaultBlockState(), 5));
         register(context,CRYSTECH_END_KRYON_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables, ModBlocks.END_KRYON_ORE.get().defaultBlockState(), 6));
+        register(context,CRYSTECH_END_HARMONIUM_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables, ModBlocks.END_HARMONIUM_ORE.get().defaultBlockState(), 6));
 
         //Geodes:
         register(context, TIBERIUM_GEODE_KEY, Feature.GEODE,

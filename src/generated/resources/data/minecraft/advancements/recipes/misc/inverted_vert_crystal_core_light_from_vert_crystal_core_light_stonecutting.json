@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:inverted_vert_crystal_core_light_from_vert_crystal_core_light_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vert_crystal_core_light": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:vert_crystal_core_light"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_vert_crystal_core_light",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:inverted_vert_crystal_core_light_from_vert_crystal_core_light_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

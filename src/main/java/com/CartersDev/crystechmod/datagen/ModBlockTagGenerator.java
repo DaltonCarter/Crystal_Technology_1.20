@@ -132,6 +132,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.TIBERIUM_PURPLE_BLOCK.get(),
                 ModBlocks.GUNDANIUM_ORE.get(),
                 ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get(),
+                        ModBlocks.HARMONIUM_ORE.get(),
+                        ModBlocks.DEEPSLATE_HARMONIUM_ORE.get(),
+                        ModBlocks.NETHER_HARMONIUM_ORE.get(),
+                        ModBlocks.END_HARMONIUM_ORE.get(),
+                        ModBlocks.HARMONIUM_BLOCK.get(),
                 ModBlocks.GUNDANIUM_BLOCK.get(),
                 ModBlocks.AERIES_BLOCK.get(),
                 ModBlocks.AERIES_ORE.get(),
@@ -1099,6 +1104,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
          .addTag(ModTags.Blocks.VITRIC_EXPANSE_STONES)
          .addTag(ModTags.Blocks.GUNDANIUM_ORES)
          .addTag(ModTags.Blocks.ALYTHUM_ORES)
+         .addTag(ModTags.Blocks.HARMONIUM_ORES)
          .addTag(BlockTags.IRON_ORES)
          .addTag(BlockTags.COPPER_ORES)
          .add(ModBlocks.TIBERIUM_WATER_BLOCK.get(),
@@ -1120,6 +1126,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(ModTags.Blocks.VITRIC_EXPANSE_RZ_CARVER)
                 .addTag(ModTags.Blocks.VITRIC_EXPANSE_STONES)
                 .addTag(ModTags.Blocks.GUNDANIUM_ORES)
+                .addTag(ModTags.Blocks.HARMONIUM_ORES)
                 .addTag(ModTags.Blocks.ALYTHUM_ORES)
                 .addTag(BlockTags.IRON_ORES)
                 .addTag(BlockTags.COPPER_ORES)
@@ -1156,6 +1163,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(ModTags.Blocks.MOD_PLANKS)
                 .add(ModBlocks.MARIKA_OAK_PLANKS.get(),
                         ModBlocks.EMBER_OAK_PLANKS.get(),
+                        ModBlocks.PLAGUED_PLANKS.get(),
                         ModBlocks.DEAD_PLANKS.get()
 
                 );
@@ -1245,6 +1253,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CS_SCAFFOLD.get(),
                         ModBlocks.CS_SCAFFOLD_VERT.get(),
                         ModBlocks.TIBERIUM_INFUSER.get(),
+                        ModBlocks.HARMONIUM_ORE.get(),
+                        ModBlocks.DEEPSLATE_HARMONIUM_ORE.get(),
+                        ModBlocks.NETHER_HARMONIUM_ORE.get(),
+                        ModBlocks.END_HARMONIUM_ORE.get(),
+                        ModBlocks.HARMONIUM_BLOCK.get(),
                         ModBlocks.CS_CHAINLINK.get(),
                         ModBlocks.CS_TILE.get(),
                         ModBlocks.VITRIC_DEEPSLATE.get(),
@@ -1556,6 +1569,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.END_KRYON_ORE.get()
                 );
 
+        this.tag(ModTags.Blocks.HARMONIUM_ORES)
+                .add(
+                        ModBlocks.HARMONIUM_ORE.get(),
+                        ModBlocks.DEEPSLATE_HARMONIUM_ORE.get(),
+                        ModBlocks.NETHER_HARMONIUM_ORE.get(),
+                        ModBlocks.END_HARMONIUM_ORE.get()
+                );
+
         this.tag(ModTags.Blocks.ENIGMA_ORES)
                 .add(
                         ModBlocks.END_ENIGMA_ORE.get(),
@@ -1570,6 +1591,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModTags.Blocks.AERIES_ORES,
                         ModTags.Blocks.ILLUMINA_ORES,
                         ModTags.Blocks.KRYON_ORES,
+                        ModTags.Blocks.HARMONIUM_ORES,
                         ModTags.Blocks.ENIGMA_ORES
 
                 );
@@ -1765,6 +1787,32 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.MARIKA_OAK_LEAVES.get(),
                 ModBlocks.DEAD_LEAVES.get(),
                 ModBlocks.EMBER_OAK_LEAVES.get()
+
+                );
+
+        this.tag(ModTags.Blocks.GLASS)
+                .add(Blocks.GLASS,
+                        ModBlocks.CLEAR_TIBERGLASS.get(),
+                        ModBlocks.MOSAIC_TIBERGLASS.get(),
+                        ModBlocks.GDI_TIBERGLASS.get(),
+                        ModBlocks.NOD_TIBERGLASS.get(),
+                        ModBlocks.WOLF_TIBERGLASS.get(),
+                        ModBlocks.BLACK_TIBERGLASS.get(),
+                        ModBlocks.BLUE_TIBERGLASS.get(),
+                        ModBlocks.BROWN_TIBERGLASS.get(),
+                        ModBlocks.CYAN_TIBERGLASS.get(),
+                        ModBlocks.GRAY_TIBERGLASS.get(),
+                        ModBlocks.GREEN_TIBERGLASS.get(),
+                        ModBlocks.LIGHT_BLUE_TIBERGLASS.get(),
+                        ModBlocks.LIGHT_GRAY_TIBERGLASS.get(),
+                        ModBlocks.LIME_TIBERGLASS.get(),
+                        ModBlocks.MAGENTA_TIBERGLASS.get(),
+                        ModBlocks.ORANGE_TIBERGLASS.get(),
+                        ModBlocks.PINK_TIBERGLASS.get(),
+                        ModBlocks.PURPLE_TIBERGLASS.get(),
+                        ModBlocks.RED_TIBERGLASS.get(),
+                        ModBlocks.WHITE_TIBERGLASS.get(),
+                        ModBlocks.YELLOW_TIBERGLASS.get()
 
                 );
 

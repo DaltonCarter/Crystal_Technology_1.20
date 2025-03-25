@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "crystechmod:cs_tile"
+    }
+  },
+  "pattern": [
+    "   ",
+    "CCC",
+    "CCC"
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:cs_tile_wall"
+  },
+  "show_notification": true
+}

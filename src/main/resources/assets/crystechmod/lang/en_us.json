@@ -5,10 +5,13 @@
   "item.crystechmod.kryon_crystal": "Kryon Crystal",
   "item.crystechmod.raw_qualrite": "Raw Qualrite",
   "item.crystechmod.raw_gundanium": "Raw Gundanium",
+  "item.crystechmod.raw_harmonium": "Raw Harmonium",
   "item.crystechmod.raw_alythum": "Raw Alythum",
   "item.crystechmod.qualrim_compound": "Qualrim Compound",
   "item.crystechmod.gundanium_dust": "Gundanium Dust",
+  "item.crystechmod.harmonium_dust": "Harmonium Dust",
   "item.crystechmod.gundanium_ingot": "Gundanium Ingot",
+  "item.crystechmod.harmonium_ingot": "Harmonium Ingot",
   "item.crystechmod.alythum_dust": "Alythum Dust",
   "item.crystechmod.alythum_ingot": "Alythum Ingot",
   "item.crystechmod.illyrim_blend": "Illyrim Blend",
@@ -214,6 +217,12 @@
   "item.crystechmod.illyrim_grinder_gear": "Illyrim Grinder Gear",
   "item.crystechmod.tiberium_composite_ingot": "Tiberium Composite Ingot",
   "item.crystechmod.ichor_composite_ingot": "Ichor Composite Ingot",
+  "item.crystechmod.harmonic_relay": "Harmonic Relay",
+  "item.crystechmod.harmonic_circuit": "Harmonic Circuit",
+  "item.crystechmod.harmonic_focus": "Harmonic Focus",
+  "item.crystechmod.illuminate_component": "Illuminate Component",
+  "item.crystechmod.kryonic_capacitor": "Kryonic Component",
+  "item.crystechmod.kryonic_reservoir": "Kryonic Reservoir",
 
 
   "block.crystechmod.aeries_ore": "Aeries Ore",
@@ -949,6 +958,99 @@
 
   "block.crystechmod.crystal_core_light": "Crystal Core Light",
   "block.crystechmod.inverted_crystal_core_light": "Inverted Crystal Core Light",
+  "block.crystechmod.vert_crystal_core_light": "Crystal Core Light Alt",
+  "block.crystechmod.inverted_vert_crystal_core_light": "Inverted Crystal Core Light Alt",
+
+  "block.crystechmod.black_crystal_core_light": "Black Crystal Core Light",
+  "block.crystechmod.inverted_black_crystal_core_light": "Inverted Black Crystal Core Light",
+  "block.crystechmod.black_vert_crystal_core_light": "Black Crystal Core Light Alt",
+  "block.crystechmod.inverted_black_vert_crystal_core_light": "Inverted Black Crystal Core Light Alt",
+
+  "block.crystechmod.blue_crystal_core_light": "Blue Crystal Core Light",
+  "block.crystechmod.inverted_blue_crystal_core_light": "Inverted Blue Crystal Core Light",
+  "block.crystechmod.blue_vert_crystal_core_light": "Blue Crystal Core Light Alt",
+  "block.crystechmod.inverted_blue_vert_crystal_core_light": "Inverted Blue Crystal Core Light Alt",
+
+  "block.crystechmod.brown_crystal_core_light": "Brown Crystal Core Light",
+  "block.crystechmod.inverted_brown_crystal_core_light": "Inverted Brown Crystal Core Light",
+  "block.crystechmod.brown_vert_crystal_core_light": "Brown Crystal Core Light Alt",
+  "block.crystechmod.inverted_brown_vert_crystal_core_light": "Inverted Brown Crystal Core Light Alt",
+
+  "block.crystechmod.cyan_crystal_core_light": "Cyan Crystal Core Light",
+  "block.crystechmod.inverted_cyan_crystal_core_light": "Inverted Cyan Crystal Core Light",
+  "block.crystechmod.cyan_vert_crystal_core_light": "Cyan Crystal Core Light Alt",
+  "block.crystechmod.inverted_cyan_vert_crystal_core_light": "Inverted Cyan Crystal Core Light Alt",
+
+  "block.crystechmod.flame_crystal_core_light": "Flame Crystal Core Light",
+  "block.crystechmod.inverted_flame_crystal_core_light": "Inverted Flame Crystal Core Light",
+  "block.crystechmod.flame_vert_crystal_core_light": "Flame Crystal Core Light Alt",
+  "block.crystechmod.inverted_flame_vert_crystal_core_light": "Inverted Flame Crystal Core Light Alt",
+
+  "block.crystechmod.green_crystal_core_light": "Green Crystal Core Light",
+  "block.crystechmod.inverted_green_crystal_core_light": "Inverted Green Crystal Core Light",
+  "block.crystechmod.green_vert_crystal_core_light": "Green Crystal Core Light Alt",
+  "block.crystechmod.inverted_green_vert_crystal_core_light": "Inverted Green Crystal Core Light Alt",
+
+  "block.crystechmod.grey_crystal_core_light": "Grey Crystal Core Light",
+  "block.crystechmod.inverted_grey_crystal_core_light": "Inverted Grey Crystal Core Light",
+  "block.crystechmod.grey_vert_crystal_core_light": "Grey Crystal Core Light Alt",
+  "block.crystechmod.inverted_grey_vert_crystal_core_light": "Inverted Grey Crystal Core Light Alt",
+
+  "block.crystechmod.light_blue_crystal_core_light": "Light Blue Crystal Core Light",
+  "block.crystechmod.inverted_light_blue_crystal_core_light": "Inverted Light Blue Crystal Core Light",
+  "block.crystechmod.light_blue_vert_crystal_core_light": "Light Blue Crystal Core Light Alt",
+  "block.crystechmod.inverted_light_blue_vert_crystal_core_light": "Inverted Light Blue Crystal Core Light Alt",
+
+  "block.crystechmod.light_grey_crystal_core_light": "Light Grey Crystal Core Light",
+  "block.crystechmod.inverted_light_grey_crystal_core_light": "Inverted Light Grey Crystal Core Light",
+  "block.crystechmod.light_grey_vert_crystal_core_light": "Light Grey Crystal Core Light Alt",
+  "block.crystechmod.inverted_light_grey_vert_crystal_core_light": "Inverted Light Grey Crystal Core Light Alt",
+
+  "block.crystechmod.lime_crystal_core_light": "Lime Crystal Core Light",
+  "block.crystechmod.inverted_lime_crystal_core_light": "Inverted Lime Crystal Core Light",
+  "block.crystechmod.lime_vert_crystal_core_light": "Lime Crystal Core Light Alt",
+  "block.crystechmod.inverted_lime_vert_crystal_core_light": "Inverted Lime Crystal Core Light Alt",
+
+  "block.crystechmod.magenta_crystal_core_light": "Magenta Crystal Core Light",
+  "block.crystechmod.inverted_magenta_crystal_core_light": "Inverted Magenta Crystal Core Light",
+  "block.crystechmod.magenta_vert_crystal_core_light": "Magenta Crystal Core Light Alt",
+  "block.crystechmod.inverted_magenta_vert_crystal_core_light": "Inverted Magenta Crystal Core Light Alt",
+
+  "block.crystechmod.orange_crystal_core_light": "Orange Crystal Core Light",
+  "block.crystechmod.inverted_orange_crystal_core_light": "Inverted Orange Crystal Core Light",
+  "block.crystechmod.orange_vert_crystal_core_light": "Orange Crystal Core Light Alt",
+  "block.crystechmod.inverted_orange_vert_crystal_core_light": "Inverted Orange Crystal Core Light Alt",
+
+  "block.crystechmod.pink_crystal_core_light": "Pink Crystal Core Light",
+  "block.crystechmod.inverted_pink_crystal_core_light": "Inverted Pink Crystal Core Light",
+  "block.crystechmod.pink_vert_crystal_core_light": "Pink Crystal Core Light Alt",
+  "block.crystechmod.inverted_pink_vert_crystal_core_light": "Inverted Pink Crystal Core Light Alt",
+
+  "block.crystechmod.purple_crystal_core_light": "Purple Crystal Core Light",
+  "block.crystechmod.inverted_purple_crystal_core_light": "Inverted Purple Crystal Core Light",
+  "block.crystechmod.purple_vert_crystal_core_light": "Purple Crystal Core Light Alt",
+  "block.crystechmod.inverted_purple_vert_crystal_core_light": "Inverted Purple Crystal Core Light Alt",
+
+  "block.crystechmod.red_crystal_core_light": "Red Crystal Core Light",
+  "block.crystechmod.inverted_red_crystal_core_light": "Inverted Red Crystal Core Light",
+  "block.crystechmod.red_vert_crystal_core_light": "Red Crystal Core Light Alt",
+  "block.crystechmod.inverted_red_vert_crystal_core_light": "Inverted Red Crystal Core Light Alt",
+
+  "block.crystechmod.white_crystal_core_light": "White Crystal Core Light",
+  "block.crystechmod.inverted_white_crystal_core_light": "Inverted White Crystal Core Light",
+  "block.crystechmod.white_vert_crystal_core_light": "White Crystal Core Light Alt",
+  "block.crystechmod.inverted_white_vert_crystal_core_light": "Inverted White Crystal Core Light Alt",
+
+  "block.crystechmod.harmonium_ore": "Harmonium Ore",
+  "block.crystechmod.deepslate_harmonium_ore": "Deepslate Harmonium Ore",
+  "block.crystechmod.nether_harmonium_ore": "Nether Harmonium Ore",
+  "block.crystechmod.end_harmonium_ore": "End Harmonium Ore",
+  "block.crystechmod.harmonium_block": "Harmonium Block",
+
+  "block.crystechmod.gundanium_machine_core": "Gundanium Machine Core",
+  "block.crystechmod.alythum_machine_core": "Alythum Machine Core",
+  "block.crystechmod.vitric_machine_core": "Vitric Machine Core",
+  "block.crystechmod.crystal_core_machine_core": "Crystal Core Machine Core",
 
   "block.crystechmod.tiberium_grinder": "Tiberium Grinder",
   "block.crystechmod.tiberium_infuser": "Tiberium Infuser",
@@ -966,11 +1068,7 @@
   "effect.crystechmod.freeze": "Freeze",
   "effect.crystechmod.slimey_effect": "Slimey",
 
-
-
   "entity.minecraft.villager.crystechmod.tiberiumgatherer": "Tiberium Gatherer",
-
-
 
   "crystechmod.tooltip.liquid.amount.with.capacity": "%s / %s mB",
   "crystechmod.tooltip.liquid.amount": "%s mB",

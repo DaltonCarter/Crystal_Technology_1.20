@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "crystechmod:block/crystal_core_machine_core"
+    }
+  }
+}

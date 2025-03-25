@@ -105,6 +105,15 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     output.accept(ModItems.GUNDANIUM_INGOT.get());
                     output.accept(ModBlocks.GUNDANIUM_BLOCK.get());
 
+                    output.accept(ModBlocks.HARMONIUM_ORE.get());
+                    output.accept(ModBlocks.DEEPSLATE_HARMONIUM_ORE.get());
+                    output.accept(ModBlocks.NETHER_HARMONIUM_ORE.get());
+                    output.accept(ModBlocks.END_HARMONIUM_ORE.get());
+                    output.accept(ModItems.HARMONIUM_DUST.get());
+                    output.accept(ModItems.RAW_HARMONIUM.get());
+                    output.accept(ModItems.HARMONIUM_INGOT.get());
+                    output.accept(ModBlocks.HARMONIUM_BLOCK.get());
+
                     output.accept(ModBlocks.ALYTHUM_ORE.get());
                     output.accept(ModBlocks.DEEPSLATE_ALYTHUM_ORE.get());
                     output.accept(ModBlocks.NETHER_ALYTHUM_ORE.get());
@@ -193,6 +202,16 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     .title(Component.translatable("creativetab.crystal_technology_tech_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
+                        output.accept(ModItems.HARMONIC_RELAY.get());
+                        output.accept(ModItems.HARMONIC_CIRCUIT.get());
+                        output.accept(ModItems.HARMONIC_FOCUS.get());
+                        output.accept(ModItems.ILLUMINATE_COMPONENT.get());
+                        output.accept(ModItems.KRYONIC_CAPACITOR.get());
+                        output.accept(ModItems.KRYONIC_RESERVOIR.get());
+                        output.accept(ModBlocks.GUNDANIUM_MACHINE_CORE.get());
+                        output.accept(ModBlocks.ALYTHUM_MACHINE_CORE.get());
+                        output.accept(ModBlocks.VITRIC_MACHINE_CORE.get());
+                        output.accept(ModBlocks.CRYSTAL_CORE_MACHINE_CORE.get());
                         output.accept(ModBlocks.TIBERIUM_GRINDER.get());
                         output.accept(ModBlocks.TIBERIUM_INFUSER.get());
 
@@ -538,8 +557,91 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get());
                         output.accept(ModBlocks.CRYSTAL_CORE_LAMP_P.get());
                         output.accept(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get());
+
                         output.accept(ModBlocks.CRYSTAL_CORE_LIGHT.get());
                         output.accept(ModBlocks.INVERTED_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.BLACK_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_BLACK_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.BLACK_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_BLACK_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.BLUE_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_BLUE_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.BLUE_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_BLUE_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.BROWN_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_BROWN_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.BROWN_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_BROWN_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.CYAN_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_CYAN_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.CYAN_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_CYAN_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.FLAME_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_FLAME_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.FLAME_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_FLAME_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.GREEN_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_GREEN_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.GREEN_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_GREEN_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.GREY_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_GREY_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.GREY_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_GREY_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.LIGHT_BLUE_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_LIGHT_BLUE_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_LIGHT_BLUE_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.LIGHT_GREY_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_LIGHT_GREY_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.LIGHT_GREY_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_LIGHT_GREY_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.LIME_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_LIME_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.LIME_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_LIME_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.MAGENTA_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_MAGENTA_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.MAGENTA_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_MAGENTA_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.ORANGE_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_ORANGE_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.ORANGE_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_ORANGE_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.PINK_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_PINK_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.PINK_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_PINK_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.PURPLE_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_PURPLE_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.PURPLE_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_PURPLE_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.RED_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_RED_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.RED_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_RED_VERT_CRYSTAL_CORE_LIGHT.get());
+
+                        output.accept(ModBlocks.WHITE_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_WHITE_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.WHITE_VERT_CRYSTAL_CORE_LIGHT.get());
+                        output.accept(ModBlocks.INVERTED_WHITE_VERT_CRYSTAL_CORE_LIGHT.get());
 
                         output.accept(ModBlocks.INFESTED_STONE_BRICKS.get());
                         output.accept(ModBlocks.INFESTED_STONE_BRICK_SLAB.get());

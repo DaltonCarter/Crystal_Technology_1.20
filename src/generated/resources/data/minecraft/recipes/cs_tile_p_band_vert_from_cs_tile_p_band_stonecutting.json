@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "crystechmod:cs_tile_p_band"
+  },
+  "result": "crystechmod:cs_tile_p_band_vert"
+}

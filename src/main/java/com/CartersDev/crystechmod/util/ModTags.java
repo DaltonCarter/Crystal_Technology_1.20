@@ -36,6 +36,7 @@ public class ModTags {
         public static final TagKey<Block> MOD_PLANKS= tag("mod_planks");
         public static final TagKey<Block> CONCRETES= tag("concretes");
         public static final TagKey<Block> TIBERIUM_FLOWERS= tag("tiberium_flowers");
+        public static final TagKey<Block> GLASS = tag("glass");
 
 
         //Worldgen & Carvers
@@ -52,6 +53,7 @@ public class ModTags {
         public static final TagKey<Block> KRYON_ORES= tag("kryon_ores");
         public static final TagKey<Block> ENIGMA_ORES= tag("enigma_ores");
         public static final TagKey<Block> QUALRITE_ORES= tag("enigma_ores");
+        public static final TagKey<Block> HARMONIUM_ORES= tag("enigma_ores");
 
 
 
@@ -63,6 +65,7 @@ public class ModTags {
 
     public static class Items {
         public static final TagKey<Item> TIBERCRETE_SANDS= tag("tibercrete_sands");
+        public static final TagKey<Item> GLASS= tag("glass");
         public static final TagKey<Item> STICKS= tag("sticks");
         public static final TagKey<Item> HAZMAT_GLASS_PANES= tag("hazmat_glass_panes");
         public static final TagKey<Item> EMBER_OAK_LOGS= tag("ember_oak_logs");
@@ -79,6 +82,7 @@ public class ModTags {
         public static final TagKey<Item> KRYON_ORES= tag("kryon_ores");
         public static final TagKey<Item> ENIGMA_ORES= tag("enigma_ores");
         public static final TagKey<Item> QUALRITE_ORES= tag("enigma_ores");
+        public static final TagKey<Item> HARMONIUM_ORES= tag("enigma_ores");
 
         public static final TagKey<Item> GRINDABLE= tag("grindable");
         public static final TagKey<Item> GRINDING_RESULT= tag("grinding_result");

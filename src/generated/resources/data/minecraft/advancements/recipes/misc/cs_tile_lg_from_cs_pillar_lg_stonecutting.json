@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cs_pillar_lg": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:cs_pillar_lg"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:cs_tile_lg_from_cs_pillar_lg_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_cs_pillar_lg",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:cs_tile_lg_from_cs_pillar_lg_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}
