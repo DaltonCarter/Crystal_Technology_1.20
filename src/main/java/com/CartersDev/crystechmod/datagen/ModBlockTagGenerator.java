@@ -1518,15 +1518,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                  ModBlocks.NETHER_QUALRITE_ORE.get(),
                  ModBlocks.ICHOR_SOIL.get(),
                  ModBlocks.RED_TIBERIUM_CROP.get(),
-                 ModBlocks.PURPLE_TIBERIUM_CROP.get()
+                 ModBlocks.PURPLE_TIBERIUM_CROP.get(),
+                 ModBlocks.ENIGMA_ORE.get(),
+                 ModBlocks.DEEPSLATE_ENIGMA_ORE.get(),
+                 ModBlocks.END_ENIGMA_ORE.get()
                 );
 
-        this.tag(ModTags.Blocks.NEEDS_ALYTHUM_TOOL)
-                .add(
-                        ModBlocks.DEEPSLATE_ENIGMA_ORE.get(),
-                        ModBlocks.ENIGMA_ORE.get(),
-                        ModBlocks.END_ENIGMA_ORE.get()
-                );
+
 
         this.tag(ModTags.Blocks.GUNDANIUM_ORES)
                 .add(

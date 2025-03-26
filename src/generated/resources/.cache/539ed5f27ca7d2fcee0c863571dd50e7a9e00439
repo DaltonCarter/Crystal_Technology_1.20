@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-24T23:18:54.8088033	Tags for minecraft:block mod id crystechmod
+// 1.20.1	2025-03-25T18:44:19.6849373	Tags for minecraft:block mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/blocks/aeries_ores.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/blocks/alythum_ores.json
 46de90b7b6a6a287548f896235af80124a350b93 data/crystechmod/tags/blocks/concretes.json
@@ -14,7 +14,6 @@ c7bbac2058df90e9377b5e00ecc05db2c0213cad data/crystechmod/tags/blocks/kryon_ores
 76338cc754cb5d1030cd4159192e0089f6c09fae data/crystechmod/tags/blocks/marika_oak_logs.json
 82362cfbd1836db13c7e9d36c8712821e795ac55 data/crystechmod/tags/blocks/mineable/paxel.json
 b97904e909222fd61767ad7160b0c32323c6852d data/crystechmod/tags/blocks/mod_planks.json
-3178a8dc515fd657eb6257877831f9193585fa8c data/crystechmod/tags/blocks/needs_alythum_tool.json
 ddc8a0e47616e069a2a00c47dec667051c8da0b1 data/crystechmod/tags/blocks/needs_gundanium_tool.json
 d77f4c0b4a5c5eb15aa8cf1d058cb63a549f3b8f data/crystechmod/tags/blocks/needs_plagued_tool.json
 7ff009a6ce8d964af59c35e91e257d0fca7cfd07 data/crystechmod/tags/blocks/plagued_logs.json
@@ -41,7 +40,7 @@ e0721fc7760819c2882cc2896aeb4f60de8a8dad data/minecraft/tags/blocks/logs_that_bu
 5921bae2cd5332c6c228feaad9db64bf1b77c963 data/minecraft/tags/blocks/mineable/axe.json
 c0152d3f0d504b83773bdcc9c90cb5f86dbee551 data/minecraft/tags/blocks/mineable/pickaxe.json
 f7b7b0cbf5fe1937fbbe024c9f0807f12d845845 data/minecraft/tags/blocks/mineable/shovel.json
-0df83178f153cf69d244fec1aa474fe690fb2834 data/minecraft/tags/blocks/needs_diamond_tool.json
+8bca9fd80ca24370a1e5ed4a77e2160b3f127569 data/minecraft/tags/blocks/needs_diamond_tool.json
 3224cc97f8308ace7b69adee2ceb0093ac0d357a data/minecraft/tags/blocks/needs_iron_tool.json
 7b6f4336a362cad1d539a2b35777c4895d62f921 data/minecraft/tags/blocks/needs_stone_tool.json
 47c9fc79d86b8bb397efe5201247b61b2a11932b data/minecraft/tags/blocks/planks.json
