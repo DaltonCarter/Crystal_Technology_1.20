@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "working=false": {
+      "model": "crystechmod:block/vitric_tiberium_macerator"
+    },
+    "working=true": {
+      "model": "crystechmod:block/vitric_tiberium_macerator_on"
+    }
+  }
+}

@@ -467,7 +467,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.SOUND_BLOCK.get());
 
         this.dropSelf(ModBlocks.TIBERIUM_GRINDER.get());
+        this.dropSelf(ModBlocks.TIBERIUM_MACERATOR.get());
+        this.dropSelf(ModBlocks.ALYTHUM_TIBERIUM_MACERATOR.get());
+        this.dropSelf(ModBlocks.VITRIC_TIBERIUM_MACERATOR.get());
+        this.dropSelf(ModBlocks.CRYSTAL_CORE_TIBERIUM_MACERATOR.get());
         this.dropSelf(ModBlocks.TIBERIUM_INFUSER.get());
+        this.dropSelf(ModBlocks.ALYTHUM_TIBERIUM_INFUSER.get());
+        this.dropSelf(ModBlocks.VITRIC_TIBERIUM_INFUSER.get());
+        this.dropSelf(ModBlocks.CRYSTAL_CORE_TIBERIUM_INFUSER.get());
 
         this.dropSelf(ModBlocks.PLAGUED_SAPLING.get());
         this.dropSelf(ModBlocks.EMBER_OAK_SAPLING.get());

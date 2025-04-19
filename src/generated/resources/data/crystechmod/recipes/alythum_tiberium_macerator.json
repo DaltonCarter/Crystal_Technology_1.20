@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:harmonium_ingot"
+    },
+    "C": {
+      "item": "crystechmod:kryonic_capacitor"
+    },
+    "I": {
+      "item": "crystechmod:tiberium_macerator"
+    },
+    "K": {
+      "item": "crystechmod:illuminate_component"
+    },
+    "M": {
+      "item": "crystechmod:alythum_machine_core"
+    },
+    "R": {
+      "item": "crystechmod:harmonic_circuit"
+    }
+  },
+  "pattern": [
+    "AIA",
+    "KMK",
+    "CRC"
+  ],
+  "result": {
+    "item": "crystechmod:alythum_tiberium_macerator"
+  },
+  "show_notification": true
+}

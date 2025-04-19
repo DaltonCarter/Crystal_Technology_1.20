@@ -5,6 +5,7 @@ import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.datagen.custom.TiberiumGrinderRecipeBuilder;
 import com.CartersDev.crystechmod.datagen.custom.TiberiumInfuserRecipeBuilder;
+import com.CartersDev.crystechmod.datagen.custom.TiberiumMaceratorRecipeBuilder;
 import com.CartersDev.crystechmod.fluid.ModFluidTypes;
 import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModItems;
@@ -2747,7 +2748,6 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
                 .save(consumer);
 
-
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TIBERIUM_INFUSER.get())
                 .pattern("AIA")
                 .pattern("KMK")
@@ -2758,6 +2758,76 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('A', ModItems.ALYTHUM_INGOT.get())
                 .define('I', ModItems.ILLUMINA_CRYSTAL.get())
                 .define('K', ModItems.KRYON_CRYSTAL.get())
+                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALYTHUM_TIBERIUM_INFUSER.get())
+                .pattern("AIA")
+                .pattern("KMK")
+                .pattern("GRC")
+                .define('R', ModItems.HARMONIC_RELAY.get())
+                .define('G', ModItems.KRYONIC_RESERVOIR.get())
+                .define('C', ModItems.KRYONIC_CAPACITOR.get())
+                .define('M', ModBlocks.ALYTHUM_MACHINE_CORE.get())
+                .define('A', ModItems.HARMONIUM_INGOT.get())
+                .define('I', ModBlocks.TIBERIUM_INFUSER.get())
+                .define('K', ModItems.ILLUMINATE_COMPONENT.get())
+                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VITRIC_TIBERIUM_INFUSER.get())
+                .pattern("AIA")
+                .pattern("TMB")
+                .pattern("RVP")
+                .define('M', ModBlocks.VITRIC_MACHINE_CORE.get())
+                .define('A', ModItems.ILLYRIM_INGOT.get())
+                .define('V', ModItems.VITRIC_CIRCUIT.get())
+                .define('I', ModBlocks.ALYTHUM_TIBERIUM_INFUSER.get())
+                .define('T', ModBlocks.TIBERIUM_BLOCK.get())
+                .define('B', ModBlocks.TIBERIUM_BLUE_BLOCK.get())
+                .define('R', ModBlocks.TIBERIUM_RED_BLOCK.get())
+                .define('P', ModBlocks.TIBERIUM_PURPLE_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TIBERIUM_MACERATOR.get())
+                .pattern("AIA")
+                .pattern("KMK")
+                .pattern("CRC")
+                .define('R', ModItems.HARMONIC_RELAY.get())
+                .define('C', ModItems.KRYONIC_CAPACITOR.get())
+                .define('M', ModBlocks.GUNDANIUM_MACHINE_CORE.get())
+                .define('A', ModItems.GUNDANIUM_INGOT.get())
+                .define('I', ModBlocks.TIBERIUM_GRINDER.get())
+                .define('K', ModItems.GRINDER_GEAR.get())
+                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALYTHUM_TIBERIUM_MACERATOR.get())
+                .pattern("AIA")
+                .pattern("KMK")
+                .pattern("CRC")
+                .define('R', ModItems.HARMONIC_CIRCUIT.get())
+                .define('C', ModItems.KRYONIC_CAPACITOR.get())
+                .define('M', ModBlocks.ALYTHUM_MACHINE_CORE.get())
+                .define('A', ModItems.HARMONIUM_INGOT.get())
+                .define('I', ModBlocks.TIBERIUM_MACERATOR.get())
+                .define('K', ModItems.ILLUMINATE_COMPONENT.get())
+                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VITRIC_TIBERIUM_MACERATOR.get())
+                .pattern("AIA")
+                .pattern("TMB")
+                .pattern("RCP")
+                .define('M', ModBlocks.VITRIC_MACHINE_CORE.get())
+                .define('A', ModItems.ILLYRIM_GRINDER_GEAR.get())
+                .define('C', ModItems.HARMONIC_CIRCUIT.get())
+                .define('I', ModBlocks.ALYTHUM_TIBERIUM_MACERATOR.get())
+                .define('T', ModBlocks.TIBERIUM_BLOCK.get())
+                .define('B', ModBlocks.TIBERIUM_BLUE_BLOCK.get())
+                .define('R', ModBlocks.TIBERIUM_RED_BLOCK.get())
+                .define('P', ModBlocks.TIBERIUM_PURPLE_BLOCK.get())
                 .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
                 .save(consumer);
 
@@ -2774,14 +2844,102 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALYTHUM_MACHINE_CORE.get())
                 .pattern("IKI")
-                .pattern("TMT")
+                .pattern("TMC")
                 .pattern("IKI")
-                .define('K', ModItems.KRYON_CRYSTAL.get())
-                .define('T', ModBlocks.TIBERIUM_BLUE_BLOCK.get())
+                .define('K', ModItems.HARMONIC_RELAY.get())
+                .define('T', ModItems.HARMONIC_CIRCUIT.get())
+                .define('C', ModItems.KRYONIC_CAPACITOR.get())
                 .define('M', ModBlocks.GUNDANIUM_MACHINE_CORE.get())
                 .define('I', ModItems.ALYTHUM_INGOT.get())
 
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VITRIC_MACHINE_CORE.get())
+                .pattern("IKI")
+                .pattern("TMC")
+                .pattern("IKI")
+                .define('K', ModItems.ILLUMINATE_COMPONENT.get())
+                .define('T', ModItems.HARMONIC_CIRCUIT.get())
+                .define('C', ModItems.VITRIC_CIRCUIT.get())
+                .define('M', ModBlocks.ALYTHUM_MACHINE_CORE.get())
+                .define('I', ModItems.HARMONIUM_INGOT.get())
+
+                .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.VITRIC_CIRCUIT.get())
+                .pattern("TCB")
+                .pattern("CSC")
+                .pattern("RCP")
+                .define('C', ModItems.TIBERIUM_COMPOSITE_INGOT.get())
+                .define('T', ModBlocks.TIBERIUM_BLOCK.get())
+                .define('B', ModBlocks.TIBERIUM_BLUE_BLOCK.get())
+                .define('R', ModBlocks.TIBERIUM_RED_BLOCK.get())
+                .define('P', ModBlocks.TIBERIUM_PURPLE_BLOCK.get())
+                .define('S', Items.REDSTONE)
+                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HARMONIC_CIRCUIT.get())
+                .pattern("ICI")
+                .pattern("CRC")
+                .pattern("ICI")
+                .define('C', ModItems.HARMONIUM_INGOT.get())
+                .define('I', ModItems.ILLUMINA_CRYSTAL.get())
+                .define('R', Blocks.REDSTONE_BLOCK)
+                .unlockedBy(getHasName(ModItems.ILLUMINA_CRYSTAL.get()), has(ModItems.ILLUMINA_CRYSTAL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HARMONIC_FOCUS.get())
+                .pattern("KCI")
+                .pattern("CRC")
+                .pattern("ACE")
+                .define('C', ModItems.HARMONIUM_INGOT.get())
+                .define('I', ModBlocks.ILLUMINA_BLOCK.get())
+                .define('K', ModBlocks.KRYON_BLOCK.get())
+                .define('A', ModBlocks.AERIES_BLOCK.get())
+                .define('E', ModBlocks.ENIGMA_BLOCK.get())
+                .define('R', ModItems.HARMONIC_CIRCUIT.get())
+                .unlockedBy(getHasName(ModItems.HARMONIUM_INGOT.get()), has(ModItems.HARMONIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HARMONIC_RELAY.get())
+                .pattern("  R")
+                .pattern(" H ")
+                .pattern("R  ")
+                .define('H', ModItems.HARMONIUM_INGOT.get())
+                .define('R', Items.REDSTONE)
+                .unlockedBy(getHasName(ModItems.HARMONIUM_INGOT.get()), has(ModItems.HARMONIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ILLUMINATE_COMPONENT.get())
+                .pattern("  R")
+                .pattern(" H ")
+                .pattern("R  ")
+                .define('H', ModItems.HARMONIC_RELAY.get())
+                .define('R', ModItems.ILLUMINA_CRYSTAL.get())
+                .unlockedBy(getHasName(ModItems.HARMONIUM_INGOT.get()), has(ModItems.HARMONIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.KRYONIC_CAPACITOR.get())
+                .pattern("KHK")
+                .pattern("HRH")
+                .pattern("KHK")
+                .define('H', ModItems.HARMONIC_RELAY.get())
+                .define('K', ModItems.KRYON_CRYSTAL.get())
+                .define('R', ModBlocks.HARMONIUM_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.HARMONIUM_INGOT.get()), has(ModItems.HARMONIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.KRYONIC_RESERVOIR.get())
+                .pattern("KHK")
+                .pattern("HRH")
+                .pattern("KHK")
+                .define('H', ModItems.HARMONIUM_INGOT.get())
+                .define('K', ModItems.KRYON_CRYSTAL.get())
+                .define('R', Items.WATER_BUCKET)
+                .unlockedBy(getHasName(ModItems.HARMONIUM_INGOT.get()), has(ModItems.HARMONIUM_INGOT.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD.get())
@@ -4790,7 +4948,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
        
 
-//Basic Tiberium Grinder:
+//Passive Tiberium Grinder:
 
         //Vanilla:
 
@@ -4810,6 +4968,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
         new TiberiumGrinderRecipeBuilder(ModItems.RAW_GUNDANIUM.get(), ModItems.GUNDANIUM_DUST.get(), 2)
                 .unlockedBy("has_gundanium_ore", has(ModBlocks.GUNDANIUM_ORE.get())).save(consumer);
+
 
         //Harmonium:
 
@@ -4859,6 +5018,93 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
         new TiberiumGrinderRecipeBuilder(ModBlocks.YOKARAN_BLOOM.get(), ModItems.YOKARAN_BLOOM_POWDER.get(), 1)
                 .unlockedBy("has_yokaran_bloom", has(ModBlocks.YOKARAN_BLOOM.get())).save(consumer);
+
+
+
+
+
+//Tiberium Macerator:
+        //Ores
+            //Vanilla
+        new TiberiumMaceratorRecipeBuilder(Items.RAW_IRON, ModItems.IRON_DUST.get(), 2, 100, 10)
+                .unlockedBy("has_iron_ore", has(Blocks.IRON_ORE)).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(Items.RAW_COPPER, ModItems.COPPER_DUST.get(),2,  100, 10)
+                .unlockedBy("has_copper_ore", has(Blocks.COPPER_ORE)).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(Items.RAW_GOLD, ModItems.GOLD_DUST.get(), 2,  100, 10)
+                .unlockedBy("has_gold_ore", has(Blocks.GOLD_ORE)).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(Blocks.ANCIENT_DEBRIS, Items.NETHERITE_SCRAP, 2,  150, 10)
+                .unlockedBy("has_ancient_debris", has(Blocks.ANCIENT_DEBRIS)).save(consumer);
+        //Gundanium:
+
+        new TiberiumMaceratorRecipeBuilder(ModItems.RAW_GUNDANIUM.get(), ModItems.GUNDANIUM_DUST.get(), 2,  100, 10)
+                .unlockedBy("has_gundanium_ore", has(ModBlocks.GUNDANIUM_ORE.get())).save(consumer);
+
+
+        //Harmonium:
+
+        new TiberiumMaceratorRecipeBuilder(ModItems.RAW_HARMONIUM.get(), ModItems.HARMONIUM_DUST.get(), 2, 100, 10)
+                .unlockedBy("has_harmonium_ore", has(ModBlocks.HARMONIUM_ORE.get())).save(consumer);
+
+        //Alythum:
+
+        new TiberiumMaceratorRecipeBuilder(ModItems.RAW_ALYTHUM.get(), ModItems.ALYTHUM_DUST.get(), 2, 100, 10)
+                .unlockedBy("has_alythum_ore", has(ModBlocks.ALYTHUM_ORE.get())).save(consumer);
+
+        //Illyrim:
+
+        new TiberiumMaceratorRecipeBuilder(ModItems.ILLYRIM_INGOT.get(), ModItems.ILLYRIM_BLEND.get(), 1, 200, 20)
+                .unlockedBy("has_illyrim_blend", has(ModItems.ILLYRIM_BLEND.get())).save(consumer);
+
+        //Core Steel:
+
+        new TiberiumMaceratorRecipeBuilder(ModItems.LG_CORE_INGOT.get(), ModItems.LG_CORE_BLEND.get(), 1, 200, 20)
+                .unlockedBy("has_lg_core_blend", has(ModItems.LG_CORE_BLEND.get())).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(ModItems.MG_CORE_INGOT.get(), ModItems.MG_CORE_BLEND.get(), 1, 200, 20)
+                .unlockedBy("has_mg_core_blend", has(ModItems.MG_CORE_BLEND.get())).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(ModItems.HG_CORE_INGOT.get(), ModItems.HG_CORE_BLEND.get(), 1, 200, 20)
+                .unlockedBy("has_hg_core_blend", has(ModItems.HG_CORE_BLEND.get())).save(consumer);
+        
+            //Misc
+        new TiberiumMaceratorRecipeBuilder(ModBlocks.DEVILS_BLOOD.get(), ModItems.DEVILS_BLOOD_POWDER.get(), 2, 200, 20)
+                .unlockedBy("has_devils_blood", has(ModBlocks.DEVILS_BLOOD.get())).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(ModBlocks.YOKARAN_BLOOM.get(), ModItems.YOKARAN_BLOOM_POWDER.get(), 2, 200, 20)
+                .unlockedBy("has_yokaran_bloom", has(ModBlocks.YOKARAN_BLOOM.get())).save(consumer);
+        
+        //Stones
+        new TiberiumMaceratorRecipeBuilder(Blocks.STONE, Blocks.COBBLESTONE, 1, 200, 20)
+                .unlockedBy("has_stone", has(Blocks.STONE)).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(Blocks.COBBLESTONE, Blocks.GRAVEL, 1, 150, 20)
+                .unlockedBy("has_cobble", has(Blocks.COBBLESTONE)).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(Blocks.GRAVEL, Blocks.SAND, 1, 100, 20)
+                .unlockedBy("has_cobble", has(Blocks.GRAVEL)).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(ModBlocks.INFESTED_STONE.get(), ModBlocks.INFESTED_COBBLE.get(), 1, 200, 20)
+                .unlockedBy("has_infested_stone", has(ModBlocks.INFESTED_STONE.get())).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(ModBlocks.INFESTED_COBBLE.get(), ModBlocks.YELLOW_ZONE_SAND.get(), 1, 150, 20)
+                .unlockedBy("has_infested_stone", has(ModBlocks.INFESTED_COBBLE.get())).save(consumer);
+
+
+        //Tiberium
+        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM.get(), ModItems.GREEN_TIBERIUM_DUST.get(), 2,  150, 5)
+                .unlockedBy("has_tiberium", has(ModItems.TIBERIUM.get())).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM_BLUE.get(), ModItems.BLUE_TIBERIUM_DUST.get(), 2, 200, 10)
+                .unlockedBy("has_blue_tiberium", has(ModItems.TIBERIUM_BLUE.get())).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM_RED.get(), ModItems.RED_TIBERIUM_DUST.get(), 2, 200, 15)
+                .unlockedBy("has_red_tiberium", has(ModItems.TIBERIUM_RED.get())).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM_PURPLE.get(), ModItems.PURPLE_TIBERIUM_DUST.get(), 2, 200, 20)
+                .unlockedBy("has_purple_tiberium", has(ModItems.TIBERIUM_PURPLE.get())).save(consumer);
 
 
 //Tiberium Infuser:
@@ -4921,6 +5167,10 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         new TiberiumInfuserRecipeBuilder(ModBlocks.SEEDED_DIRT.get(), ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), 1, 100, 1,
                 new FluidStack(ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 100))
                 .unlockedBy("has_tiberium_bucket", has(ModItems.MOLTEN_TIBERIUM_BUCKET.get())).save(consumer);
+
+        new TiberiumInfuserRecipeBuilder(Blocks.DEEPSLATE, ModBlocks.VITRIC_DEEPSLATE.get(), 1, 100, 20,
+                new FluidStack(ModFluids.SOURCE_MOLTEN_RED_TIBERIUM.get(), 1000))
+                .unlockedBy("has_red_tiberium_bucket", has(ModItems.MOLTEN_RED_TIBERIUM_BUCKET.get())).save(consumer);
 
 
 

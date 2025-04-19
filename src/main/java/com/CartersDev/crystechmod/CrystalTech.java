@@ -15,16 +15,23 @@ import com.CartersDev.crystechmod.painting.ModPaintings;
 import com.CartersDev.crystechmod.particle.ModParticles;
 import com.CartersDev.crystechmod.potion.ModPotions;
 import com.CartersDev.crystechmod.recipe.ModRecipes;
-import com.CartersDev.crystechmod.screen.ModMenuTypes;
-import com.CartersDev.crystechmod.screen.TiberiumGrinderScreen;
-import com.CartersDev.crystechmod.screen.TiberiumInfuserScreen;
+import com.CartersDev.crystechmod.screen.*;
+import com.CartersDev.crystechmod.screen.grinderScreen.TiberiumGrinderScreen;
+import com.CartersDev.crystechmod.screen.infuserScreen.AlythumTiberiumInfuserScreen;
+import com.CartersDev.crystechmod.screen.infuserScreen.CrystalCoreTiberiumInfuserScreen;
+import com.CartersDev.crystechmod.screen.infuserScreen.TiberiumInfuserScreen;
+import com.CartersDev.crystechmod.screen.infuserScreen.VitricTiberiumInfuserScreen;
+import com.CartersDev.crystechmod.screen.maceratorMenu.AlythumTiberiumMaceratorMenu;
+import com.CartersDev.crystechmod.screen.maceratorScreen.AlythumTiberiumMaceratorScreen;
+import com.CartersDev.crystechmod.screen.maceratorScreen.CrystalCoreTiberiumMaceratorScreen;
+import com.CartersDev.crystechmod.screen.maceratorScreen.TiberiumMaceratorScreen;
+import com.CartersDev.crystechmod.screen.maceratorScreen.VitricTiberiumMaceratorScreen;
 import com.CartersDev.crystechmod.sound.ModSounds;
 import com.CartersDev.crystechmod.util.BetterBrewingRecipe;
 import com.CartersDev.crystechmod.util.ModWoodTypes;
 import com.CartersDev.crystechmod.villager.ModVillagers;
 import com.CartersDev.crystechmod.worldgen.ModFeatureTypes.ModFeatures;
 import com.CartersDev.crystechmod.worldgen.biome.ModTerraBlenderAPI;
-import com.CartersDev.crystechmod.worldgen.biome.surface.ModSurfaceRules;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -49,7 +56,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import org.slf4j.Logger;
-import terrablender.api.SurfaceRuleManager;
 
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -170,7 +176,18 @@ public class CrystalTech {
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
 
             MenuScreens.register(ModMenuTypes.TIBERIUM_GRINDER_MENU.get(), TiberiumGrinderScreen::new);
+
+            MenuScreens.register(ModMenuTypes.TIBERIUM_MACERATOR_MENU.get(), TiberiumMaceratorScreen::new);
+            MenuScreens.register(ModMenuTypes.ALYTHUM_TIBERIUM_MACERATOR_MENU.get(), AlythumTiberiumMaceratorScreen::new);
+            MenuScreens.register(ModMenuTypes.VITRIC_TIBERIUM_MACERATOR_MENU.get(), VitricTiberiumMaceratorScreen::new);
+            MenuScreens.register(ModMenuTypes.CRYSTAL_CORE_TIBERIUM_MACERATOR_MENU.get(), CrystalCoreTiberiumMaceratorScreen::new);
+
+
+
             MenuScreens.register(ModMenuTypes.TIBERIUM_INFUSER_MENU.get(), TiberiumInfuserScreen::new);
+            MenuScreens.register(ModMenuTypes.ALYTHUM_TIBERIUM_INFUSER_MENU.get(), AlythumTiberiumInfuserScreen::new);
+            MenuScreens.register(ModMenuTypes.VITRIC_TIBERIUM_INFUSER_MENU.get(), VitricTiberiumInfuserScreen::new);
+            MenuScreens.register(ModMenuTypes.CRYSTAL_CORE_TIBERIUM_INFUSER_MENU.get(), CrystalCoreTiberiumInfuserScreen::new);
 
             //Tiberium
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_TIBERIUM_CROP.get(), RenderType.cutout());

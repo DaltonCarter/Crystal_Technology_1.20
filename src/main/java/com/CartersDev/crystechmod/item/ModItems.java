@@ -21,7 +21,9 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, CrystalTech.MOD_ID);
 
-//Foods & Seeds
+
+
+    //Foods & Seeds
 public static final RegistryObject<Item> TIBERIUM_FRUIT = ITEMS.register("tiberium_fruit",
         () -> new Item(new Item.Properties().food(ModFoods.TIBERIUM_FRUIT)));
 
@@ -611,6 +613,9 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> HARMONIC_FOCUS = ITEMS.register("harmonic_focus",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> VITRIC_CIRCUIT = ITEMS.register("vitric_circuit",
             () -> new Item(new Item.Properties()));
 
 

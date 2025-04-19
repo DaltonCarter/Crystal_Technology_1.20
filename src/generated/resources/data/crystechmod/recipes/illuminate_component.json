@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "crystechmod:harmonic_relay"
+    },
+    "R": {
+      "item": "crystechmod:illumina_crystal"
+    }
+  },
+  "pattern": [
+    "  R",
+    " H ",
+    "R  "
+  ],
+  "result": {
+    "item": "crystechmod:illuminate_component"
+  },
+  "show_notification": true
+}

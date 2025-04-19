@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "crystechmod:harmonic_relay"
+    },
+    "K": {
+      "item": "crystechmod:kryon_crystal"
+    },
+    "R": {
+      "item": "crystechmod:harmonium_block"
+    }
+  },
+  "pattern": [
+    "KHK",
+    "HRH",
+    "KHK"
+  ],
+  "result": {
+    "item": "crystechmod:kryonic_capacitor"
+  },
+  "show_notification": true
+}

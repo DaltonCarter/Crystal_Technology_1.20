@@ -1,0 +1,14 @@
+{
+  "type": "crystechmod:tiberium_macerating",
+  "craftTime": 100,
+  "energyAmount": 10,
+  "ingredients": [
+    {
+      "item": "minecraft:raw_copper"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "crystechmod:copper_dust"
+  }
+}

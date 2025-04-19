@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:tiberium_blue_block"
+    },
+    "C": {
+      "item": "crystechmod:tiberium_composite_ingot"
+    },
+    "P": {
+      "item": "crystechmod:tiberium_purple_block"
+    },
+    "R": {
+      "item": "crystechmod:tiberium_red_block"
+    },
+    "S": {
+      "item": "minecraft:redstone"
+    },
+    "T": {
+      "item": "crystechmod:tiberium_block"
+    }
+  },
+  "pattern": [
+    "TCB",
+    "CSC",
+    "RCP"
+  ],
+  "result": {
+    "item": "crystechmod:vitric_circuit"
+  },
+  "show_notification": true
+}

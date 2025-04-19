@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:tiberium_macerating",
+  "craftTime": 200,
+  "energyAmount": 20,
+  "ingredients": [
+    {
+      "item": "crystechmod:infested_stone"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:infested_cobble"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:gundanium_ingot"
+    },
+    "C": {
+      "item": "crystechmod:kryonic_capacitor"
+    },
+    "I": {
+      "item": "crystechmod:tiberium_grinder"
+    },
+    "K": {
+      "item": "crystechmod:grinder_gear"
+    },
+    "M": {
+      "item": "crystechmod:gundanium_machine_core"
+    },
+    "R": {
+      "item": "crystechmod:harmonic_relay"
+    }
+  },
+  "pattern": [
+    "AIA",
+    "KMK",
+    "CRC"
+  ],
+  "result": {
+    "item": "crystechmod:tiberium_macerator"
+  },
+  "show_notification": true
+}

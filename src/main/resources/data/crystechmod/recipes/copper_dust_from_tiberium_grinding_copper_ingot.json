@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:tiberium_grinding",
+
+  "ingredients": [
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "crystechmod:copper_dust"
+  }
+}

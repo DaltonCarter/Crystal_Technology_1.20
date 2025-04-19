@@ -1,0 +1,14 @@
+{
+  "type": "crystechmod:tiberium_macerating",
+  "craftTime": 100,
+  "energyAmount": 10,
+  "ingredients": [
+    {
+      "item": "crystechmod:raw_gundanium"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "crystechmod:gundanium_dust"
+  }
+}

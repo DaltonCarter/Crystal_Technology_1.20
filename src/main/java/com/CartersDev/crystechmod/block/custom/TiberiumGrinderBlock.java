@@ -1,7 +1,8 @@
 package com.CartersDev.crystechmod.block.custom;
 
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
-import com.CartersDev.crystechmod.block.entity.TiberiumGrinderBlockEntity;
+import com.CartersDev.crystechmod.block.entity.grinder.TiberiumGrinderBlockEntity;
+import com.CartersDev.crystechmod.util.ModBlockstateProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -17,6 +18,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -25,13 +27,16 @@ import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
 public class TiberiumGrinderBlock  extends BaseEntityBlock {
-        public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+
 
         public TiberiumGrinderBlock(Properties pProperties) {
         super(pProperties);
+
     }
 
-    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 16, 16);
+    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 12, 16);
 
         public BlockState rotate(BlockState pState, Rotation pRot) {
         return pState.setValue(FACING, pRot.rotate(pState.getValue(FACING)));

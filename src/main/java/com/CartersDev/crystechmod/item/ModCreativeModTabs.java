@@ -202,18 +202,31 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     .title(Component.translatable("creativetab.crystal_technology_tech_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
+
+
                         output.accept(ModItems.HARMONIC_RELAY.get());
                         output.accept(ModItems.HARMONIC_CIRCUIT.get());
+                        output.accept(ModItems.VITRIC_CIRCUIT.get());
                         output.accept(ModItems.HARMONIC_FOCUS.get());
                         output.accept(ModItems.ILLUMINATE_COMPONENT.get());
                         output.accept(ModItems.KRYONIC_CAPACITOR.get());
                         output.accept(ModItems.KRYONIC_RESERVOIR.get());
+
                         output.accept(ModBlocks.GUNDANIUM_MACHINE_CORE.get());
                         output.accept(ModBlocks.ALYTHUM_MACHINE_CORE.get());
                         output.accept(ModBlocks.VITRIC_MACHINE_CORE.get());
                         output.accept(ModBlocks.CRYSTAL_CORE_MACHINE_CORE.get());
+
                         output.accept(ModBlocks.TIBERIUM_GRINDER.get());
+                        output.accept(ModBlocks.TIBERIUM_MACERATOR.get());
+                        output.accept(ModBlocks.ALYTHUM_TIBERIUM_MACERATOR.get());
+                        output.accept(ModBlocks.VITRIC_TIBERIUM_MACERATOR.get());
+                        output.accept(ModBlocks.CRYSTAL_CORE_TIBERIUM_MACERATOR.get());
+
                         output.accept(ModBlocks.TIBERIUM_INFUSER.get());
+                        output.accept(ModBlocks.ALYTHUM_TIBERIUM_INFUSER.get());
+                        output.accept(ModBlocks.VITRIC_TIBERIUM_INFUSER.get());
+                        output.accept(ModBlocks.CRYSTAL_CORE_TIBERIUM_INFUSER.get());
 
                     })
                     .build());

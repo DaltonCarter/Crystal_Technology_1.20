@@ -532,6 +532,9 @@ Blossom Tree instead of a Plagued Log.
 -Added Harmonium
 -Added Harmonium Crafting Components
 -Added A LOT of crystal core lights.
+-Added Recipes
+-Implemented Tiered Machinery
+-Updated Textures, and Tweaked Models
 
 
 

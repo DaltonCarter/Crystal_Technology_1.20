@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:tiberium_macerating",
+  "craftTime": 200,
+  "energyAmount": 20,
+  "ingredients": [
+    {
+      "item": "crystechmod:hg_core_ingot"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:hg_core_blend"
+  }
+}

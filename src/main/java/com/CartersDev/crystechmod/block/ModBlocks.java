@@ -2775,8 +2775,31 @@ public class ModBlocks {
     public static final RegistryObject<Block> TIBERIUM_GRINDER = registerBlock("tiberium_grinder",
             () -> new TiberiumGrinderBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
+    public static final RegistryObject<Block> TIBERIUM_MACERATOR = registerBlock("tiberium_macerator",
+            () -> new TiberiumMaceratorBlock(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> ALYTHUM_TIBERIUM_MACERATOR = registerBlock("alythum_tiberium_macerator",
+            () -> new TiberiumMaceratorBlock(2, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> VITRIC_TIBERIUM_MACERATOR = registerBlock("vitric_tiberium_macerator",
+            () -> new TiberiumMaceratorBlock(3, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> CRYSTAL_CORE_TIBERIUM_MACERATOR = registerBlock("crystal_core_tiberium_macerator",
+            () -> new TiberiumMaceratorBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+
+
     public static final RegistryObject<Block> TIBERIUM_INFUSER = registerBlock("tiberium_infuser",
-            () -> new TiberiumInfuserBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new TiberiumInfuserBlock(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> ALYTHUM_TIBERIUM_INFUSER = registerBlock("alythum_tiberium_infuser",
+            () -> new TiberiumInfuserBlock(2, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> VITRIC_TIBERIUM_INFUSER = registerBlock("vitric_tiberium_infuser",
+            () -> new TiberiumInfuserBlock(3, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> CRYSTAL_CORE_TIBERIUM_INFUSER = registerBlock("crystal_core_tiberium_infuser",
+            () -> new TiberiumInfuserBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
         //Signs:
 

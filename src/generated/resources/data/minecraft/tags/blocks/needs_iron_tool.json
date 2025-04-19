@@ -45,6 +45,10 @@
     "crystechmod:aboreus_stone_brick_wall",
     "crystechmod:aboreus_stone_brick_slab",
     "crystechmod:aboreus_stone_brick_stairs",
-    "crystechmod:tiberium_grinder"
+    "crystechmod:tiberium_grinder",
+    "crystechmod:tiberium_macerator",
+    "crystechmod:alythum_tiberium_macerator",
+    "crystechmod:vitric_tiberium_macerator",
+    "crystechmod:crystal_core_tiberium_macerator"
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "type": "crystechmod:tiberium_macerating",
+  "craftTime": 200,
+  "energyAmount": 20,
+  "ingredients": [
+    {
+      "item": "crystechmod:harmonium_ingot"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "crystechmod:harmonium_dust"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "crystechmod:tiberium_macerating",
+  "craftTime": 200,
+  "energyAmount": 20,
+  "ingredients": [
+    {
+      "item": "crystechmod:nether_alythum_ore"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "crystechmod:alythum_dust"
+  }
+}

@@ -141,6 +141,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.HARMONIC_FOCUS);
         simpleItem(ModItems.KRYONIC_CAPACITOR);
         simpleItem(ModItems.KRYONIC_RESERVOIR);
+        simpleItem(ModItems.VITRIC_CIRCUIT);
 
         simpleItem(ModItems.TIBERIUM_FRUIT);
         simpleItem(ModItems.HEIM_BERRY);
@@ -619,7 +620,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.MARIKA_OAK_HANGING_SIGN);
 
         //Complex?:
-        complexBlock(ModBlocks.TIBERIUM_INFUSER.get());
+//        complexBlock(ModBlocks.TIBERIUM_INFUSER.get());
 
         //Saplings:
 

@@ -50,7 +50,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.copy(ModTags.Blocks.KRYON_ORES, ModTags.Items.KRYON_ORES);
         this.copy(ModTags.Blocks.ENIGMA_ORES, ModTags.Items.ENIGMA_ORES);
         this.copy(ModTags.Blocks.GLASS, ModTags.Items.GLASS);
+        this.copy(ModTags.Blocks.GRINDABLE_FLOWERS, ModTags.Items.GRINDABLE_FLOWERS);
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
+
 
         this.tag(ModTags.Items.GRINDABLE)
                 .add(
@@ -60,6 +62,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         Items.ANCIENT_DEBRIS,
                         ModItems.RAW_ALYTHUM.get(),
                         ModItems.RAW_GUNDANIUM.get(),
+                        ModItems.TIBERIUM.get(),
+                        ModItems.TIBERIUM_BLUE.get(),
+                        ModItems.TIBERIUM_RED.get(),
+                        ModItems.TIBERIUM_PURPLE.get(),
                         Items.COPPER_INGOT,
                         Items.IRON_INGOT,
                         Items.GOLD_INGOT,
@@ -74,7 +80,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 )
                 .addTags(ModTags.Items.ALYTHUM_ORES,
                         ModTags.Items.GUNDANIUM_ORES,
-                        ModTags.Items.HARMONIUM_ORES);
+                        ModTags.Items.HARMONIUM_ORES,
+                        ModTags.Items.GRINDABLE_FLOWERS);
 
         this.tag(ModTags.Items.GRINDING_RESULT)
                 .add(
@@ -88,6 +95,12 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.LG_CORE_BLEND.get(),
                         ModItems.MG_CORE_BLEND.get(),
                         ModItems.HG_CORE_BLEND.get(),
+                        ModItems.BLUE_TIBERIUM_DUST.get(),
+                        ModItems.GREEN_TIBERIUM_DUST.get(),
+                        ModItems.PURPLE_TIBERIUM_DUST.get(),
+                        ModItems.RED_TIBERIUM_DUST.get(),
+                        ModItems.YOKARAN_BLOOM_POWDER.get(),
+                        ModItems.DEVILS_BLOOD_POWDER.get(),
                         ModItems.HARMONIUM_DUST.get()
                 );
 

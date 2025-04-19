@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "crystechmod:harmonium_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "  R",
+    " H ",
+    "R  "
+  ],
+  "result": {
+    "item": "crystechmod:harmonic_relay"
+  },
+  "show_notification": true
+}

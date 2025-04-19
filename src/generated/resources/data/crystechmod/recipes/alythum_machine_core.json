@@ -2,22 +2,25 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "C": {
+      "item": "crystechmod:kryonic_capacitor"
+    },
     "I": {
       "item": "crystechmod:alythum_ingot"
     },
     "K": {
-      "item": "crystechmod:kryon_crystal"
+      "item": "crystechmod:harmonic_relay"
     },
     "M": {
       "item": "crystechmod:gundanium_machine_core"
     },
     "T": {
-      "item": "crystechmod:tiberium_blue_block"
+      "item": "crystechmod:harmonic_circuit"
     }
   },
   "pattern": [
     "IKI",
-    "TMT",
+    "TMC",
     "IKI"
   ],
   "result": {

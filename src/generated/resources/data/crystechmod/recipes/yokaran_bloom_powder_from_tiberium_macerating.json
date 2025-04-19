@@ -1,0 +1,14 @@
+{
+  "type": "crystechmod:tiberium_macerating",
+  "craftTime": 200,
+  "energyAmount": 20,
+  "ingredients": [
+    {
+      "item": "crystechmod:yokaran_bloom"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "crystechmod:yokaran_bloom_powder"
+  }
+}

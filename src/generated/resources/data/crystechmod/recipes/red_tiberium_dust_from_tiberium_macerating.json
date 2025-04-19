@@ -1,0 +1,14 @@
+{
+  "type": "crystechmod:tiberium_macerating",
+  "craftTime": 200,
+  "energyAmount": 15,
+  "ingredients": [
+    {
+      "item": "crystechmod:tiberium_red"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "crystechmod:red_tiberium_dust"
+  }
+}

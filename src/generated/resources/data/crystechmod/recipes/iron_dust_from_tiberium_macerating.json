@@ -1,0 +1,14 @@
+{
+  "type": "crystechmod:tiberium_macerating",
+  "craftTime": 100,
+  "energyAmount": 10,
+  "ingredients": [
+    {
+      "item": "minecraft:raw_iron"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "crystechmod:iron_dust"
+  }
+}

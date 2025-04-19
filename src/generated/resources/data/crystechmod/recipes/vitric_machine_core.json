@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "crystechmod:vitric_circuit"
+    },
+    "I": {
+      "item": "crystechmod:harmonium_ingot"
+    },
+    "K": {
+      "item": "crystechmod:illuminate_component"
+    },
+    "M": {
+      "item": "crystechmod:alythum_machine_core"
+    },
+    "T": {
+      "item": "crystechmod:harmonic_circuit"
+    }
+  },
+  "pattern": [
+    "IKI",
+    "TMC",
+    "IKI"
+  ],
+  "result": {
+    "item": "crystechmod:vitric_machine_core"
+  },
+  "show_notification": true
+}

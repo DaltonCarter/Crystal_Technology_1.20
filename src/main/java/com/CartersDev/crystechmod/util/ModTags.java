@@ -37,6 +37,7 @@ public class ModTags {
         public static final TagKey<Block> CONCRETES= tag("concretes");
         public static final TagKey<Block> TIBERIUM_FLOWERS= tag("tiberium_flowers");
         public static final TagKey<Block> GLASS = tag("glass");
+        public static final TagKey<Block> GRINDABLE_FLOWERS = tag("grindable_flowers");
 
 
         //Worldgen & Carvers
@@ -85,6 +86,7 @@ public class ModTags {
         public static final TagKey<Item> HARMONIUM_ORES= tag("enigma_ores");
 
         public static final TagKey<Item> GRINDABLE= tag("grindable");
+        public static final TagKey<Item> GRINDABLE_FLOWERS= tag("grindable_flowers");
         public static final TagKey<Item> GRINDING_RESULT= tag("grinding_result");
 
 

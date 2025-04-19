@@ -960,8 +960,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
         // Machines and other Block Entities:
-        simpleBlockWithItem(ModBlocks.TIBERIUM_GRINDER.get(),
-                new ModelFile.UncheckedModelFile(modLoc("block/tiberium_grinder")));
+//        simpleBlockWithItem(ModBlocks.TIBERIUM_GRINDER.get(),
+//                new ModelFile.UncheckedModelFile(modLoc("block/tiberium_grinder")));
 
 
         //Lights, Lamps, and Torch-Likes:
@@ -1061,8 +1061,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
         //Horizontal Blocks:
-        horizontalBlock(ModBlocks.TIBERIUM_INFUSER.get(),
-                new ModelFile.UncheckedModelFile(modLoc("block/tiberium_infuser")));
+//        horizontalBlock(ModBlocks.TIBERIUM_INFUSER.get(),
+//                new ModelFile.UncheckedModelFile(modLoc("block/tiberium_infuser")));
 
     }
 

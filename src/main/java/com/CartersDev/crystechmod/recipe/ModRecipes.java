@@ -1,8 +1,6 @@
 package com.CartersDev.crystechmod.recipe;
 
 import com.CartersDev.crystechmod.CrystalTech;
-import com.CartersDev.crystechmod.screen.TiberiumGrinderMenu;
-import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,6 +13,9 @@ public class ModRecipes {
 
 public static final RegistryObject<RecipeSerializer<TiberiumGrinderRecipe>> TIBERIUM_GRINDER_SERIALIZER =
         SERIALIZERS.register("tiberium_grinding", () -> TiberiumGrinderRecipe.Serializer.INSTANCE);
+
+    public static final RegistryObject<RecipeSerializer<TiberiumMaceratorRecipe>> TIBERIUM_MACERATOR_SERIALIZER =
+            SERIALIZERS.register("tiberium_macerating", () -> TiberiumMaceratorRecipe.Serializer.INSTANCE);
 
     public static final RegistryObject<RecipeSerializer<TiberiumInfuserRecipe>> TIBERIUM_INFUSER_SERIALIZER =
             SERIALIZERS.register("tiberium_infusing", () -> TiberiumInfuserRecipe.Serializer.INSTANCE);

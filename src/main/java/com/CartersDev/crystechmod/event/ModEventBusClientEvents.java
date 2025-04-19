@@ -2,8 +2,15 @@ package com.CartersDev.crystechmod.event;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
-import com.CartersDev.crystechmod.block.entity.renderer.TiberiumGrinderBlockEntityRenderer;
-import com.CartersDev.crystechmod.block.entity.renderer.TiberiumInfuserBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.grinder.TiberiumGrinderBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.infuser.AlythumTiberiumInfuserBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.infuser.CrystalCoreTiberiumInfuserBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.infuser.TiberiumInfuserBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.infuser.VitricTiberiumInfuserBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.macerator.AlythumTiberiumMaceratorBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.macerator.CrystalCoreTiberiumMaceratorBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.macerator.TiberiumMaceratorBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.macerator.VitricTiberiumMaceratorBlockEntityRenderer;
 import com.CartersDev.crystechmod.entity.client.ModModelLayers;
 import com.CartersDev.crystechmod.entity.client.RhinoModel;
 import com.CartersDev.crystechmod.particle.ModParticles;
@@ -30,7 +37,15 @@ public class ModEventBusClientEvents {
     @SubscribeEvent
 public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.TIBERIUM_GRINDER_BE.get(), TiberiumGrinderBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.TIBERIUM_MACERATOR_BE.get(), TiberiumMaceratorBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.ALYTHUM_TIBERIUM_MACERATOR_BE.get(), AlythumTiberiumMaceratorBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.VITRIC_TIBERIUM_MACERATOR_BE.get(), VitricTiberiumMaceratorBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.CRYSTAL_CORE_TIBERIUM_MACERATOR_BE.get(), CrystalCoreTiberiumMaceratorBlockEntityRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.TIBERIUM_INFUSER_BE.get(), TiberiumInfuserBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.ALYTHUM_TIBERIUM_INFUSER_BE.get(), AlythumTiberiumInfuserBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.VITRIC_TIBERIUM_INFUSER_BE.get(), VitricTiberiumInfuserBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.CRYSTAL_CORE_TIBERIUM_INFUSER_BE.get(), CrystalCoreTiberiumInfuserBlockEntityRenderer::new);
+
         event.registerBlockEntityRenderer(ModBlockEntities.MOD_SIGN.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.MOD_HANGING_SIGN.get(), HangingSignRenderer::new);
 }

@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-24T20:52:42.9262536	Block States: crystechmod
+// 1.20.1	2025-04-11T16:32:45.3627531	Block States: crystechmod
 b96cfdc734a704501413713f3f2c8cfcb4ba2a5c assets/crystechmod/blockstates/aboreus_crystal.json
 cfa53ad3b1b79f5848cd890be949c4da34124a52 assets/crystechmod/blockstates/aboreus_crystal_slab.json
 e4c2d40939bfc8e33a33de6fa0cf12ac158358b4 assets/crystechmod/blockstates/aboreus_crystal_stairs.json
@@ -651,8 +651,6 @@ a5f3846b176b17b7541a26710e7e8e4455d3ef85 assets/crystechmod/blockstates/stripped
 9f66d5476c8ffc1a58cbe1b860817db3ccf01345 assets/crystechmod/blockstates/test_block.json
 b239231357a085a06557a57665c9acd176b494c9 assets/crystechmod/blockstates/tiberium_block.json
 31409fdddc30700c2894f6ae08f5057915bb6517 assets/crystechmod/blockstates/tiberium_blue_block.json
-a6e6478f57671688c74ba4d29ddd7632432d5de5 assets/crystechmod/blockstates/tiberium_grinder.json
-e5da2780144e474179ac83381463dc915dc7430d assets/crystechmod/blockstates/tiberium_infuser.json
 a2671ad6735005995b649c94f251d79cf16dbdf7 assets/crystechmod/blockstates/tiberium_purple_block.json
 f2f19f35c76264b12f096bd513d6e85d4e9b17ee assets/crystechmod/blockstates/tiberium_red_block.json
 3547b738879cd9d9cc1c5101d1c8f958ce85e830 assets/crystechmod/blockstates/tiberium_soil.json
@@ -2586,7 +2584,6 @@ a6605b6bdef0dc93cff859106edb51e8046ac3b3 assets/crystechmod/models/item/stripped
 3c23dc85071dabc4b4abd6b9dd57fa845cc393a5 assets/crystechmod/models/item/test_block.json
 36a9bf6fbbdce493c3c5150fbf5fa1b50f26c783 assets/crystechmod/models/item/tiberium_block.json
 3b9b6ff8e6d8ab1d6011298e1453fea912610509 assets/crystechmod/models/item/tiberium_blue_block.json
-d8fbc4a78c2e48bbe9d1b8751c8dac807995e223 assets/crystechmod/models/item/tiberium_grinder.json
 df2b48231060298b9565b1ee3b002859c32903a9 assets/crystechmod/models/item/tiberium_purple_block.json
 c42c85faa08e7d764668648b7feaaf92dc971f33 assets/crystechmod/models/item/tiberium_red_block.json
 57f45039ebfa2ad33586adb34bb7afcf403d2156 assets/crystechmod/models/item/tiberium_soil.json

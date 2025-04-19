@@ -2,6 +2,10 @@
   "values": [
     "crystechmod:tiberium_block",
     "crystechmod:sound_block",
+    "crystechmod:gundanium_machine_core",
+    "crystechmod:alythum_machine_core",
+    "crystechmod:vitric_machine_core",
+    "crystechmod:crystal_core_machine_core",
     "crystechmod:vitric_deepslate",
     "crystechmod:vitric_deepslate_bricks",
     "crystechmod:vitric_deepslate_brick_stairs",
@@ -11,7 +15,15 @@
     "crystechmod:vitric_deepslate_tile_stairs",
     "crystechmod:vitric_deepslate_tile_slab",
     "crystechmod:vitric_deepslate_tile_wall",
+    "crystechmod:tiberium_grinder",
+    "crystechmod:tiberium_macerator",
+    "crystechmod:alythum_tiberium_macerator",
+    "crystechmod:vitric_tiberium_macerator",
+    "crystechmod:crystal_core_tiberium_macerator",
     "crystechmod:tiberium_infuser",
+    "crystechmod:alythum_tiberium_infuser",
+    "crystechmod:vitric_tiberium_infuser",
+    "crystechmod:crystal_core_tiberium_infuser",
     "crystechmod:tiberium_blue_block",
     "crystechmod:tiberium_red_block",
     "crystechmod:tiberium_purple_block",
@@ -565,7 +577,6 @@
     "crystechmod:ct_tile_b_vert_3",
     "crystechmod:ct_tile_r_vert_3",
     "crystechmod:ct_tile_p_vert_3",
-    "crystechmod:tiberium_grinder",
     "crystechmod:ct_tile_wall_p_3"
   ]
 }

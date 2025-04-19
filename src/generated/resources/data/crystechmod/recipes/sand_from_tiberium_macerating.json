@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:tiberium_macerating",
+  "craftTime": 100,
+  "energyAmount": 20,
+  "ingredients": [
+    {
+      "item": "minecraft:gravel"
+    }
+  ],
+  "output": {
+    "item": "minecraft:sand"
+  }
+}

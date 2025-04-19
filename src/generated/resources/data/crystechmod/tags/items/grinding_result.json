@@ -10,6 +10,12 @@
     "crystechmod:lg_core_blend",
     "crystechmod:mg_core_blend",
     "crystechmod:hg_core_blend",
+    "crystechmod:blue_tiberium_dust",
+    "crystechmod:green_tiberium_dust",
+    "crystechmod:purple_tiberium_dust",
+    "crystechmod:red_tiberium_dust",
+    "crystechmod:yokaran_bloom_powder",
+    "crystechmod:devils_blood_powder",
     "crystechmod:harmonium_dust"
   ]
 }

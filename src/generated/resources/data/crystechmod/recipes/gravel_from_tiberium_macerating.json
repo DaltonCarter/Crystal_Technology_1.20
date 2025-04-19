@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:tiberium_macerating",
+  "craftTime": 150,
+  "energyAmount": 20,
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone"
+    }
+  ],
+  "output": {
+    "item": "minecraft:gravel"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:illyrim_grinder_gear"
+    },
+    "B": {
+      "item": "crystechmod:tiberium_blue_block"
+    },
+    "C": {
+      "item": "crystechmod:harmonic_circuit"
+    },
+    "I": {
+      "item": "crystechmod:alythum_tiberium_macerator"
+    },
+    "M": {
+      "item": "crystechmod:vitric_machine_core"
+    },
+    "P": {
+      "item": "crystechmod:tiberium_purple_block"
+    },
+    "R": {
+      "item": "crystechmod:tiberium_red_block"
+    },
+    "T": {
+      "item": "crystechmod:tiberium_block"
+    }
+  },
+  "pattern": [
+    "AIA",
+    "TMB",
+    "RCP"
+  ],
+  "result": {
+    "item": "crystechmod:vitric_tiberium_macerator"
+  },
+  "show_notification": true
+}

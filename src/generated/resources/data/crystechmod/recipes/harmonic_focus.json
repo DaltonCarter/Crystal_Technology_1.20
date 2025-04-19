@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:aeries_block"
+    },
+    "C": {
+      "item": "crystechmod:harmonium_ingot"
+    },
+    "E": {
+      "item": "crystechmod:enigma_block"
+    },
+    "I": {
+      "item": "crystechmod:illumina_block"
+    },
+    "K": {
+      "item": "crystechmod:kryon_block"
+    },
+    "R": {
+      "item": "crystechmod:harmonic_circuit"
+    }
+  },
+  "pattern": [
+    "KCI",
+    "CRC",
+    "ACE"
+  ],
+  "result": {
+    "item": "crystechmod:harmonic_focus"
+  },
+  "show_notification": true
+}
