@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-15T23:32:43.6325034	Loot Tables
+// 1.20.1	2025-06-12T19:34:36.0810788	Loot Tables
 03c6f95925fa38635ca3601903e1d452029caabd data/crystechmod/loot_tables/blocks/aboreus_crystal.json
 d0beb68b81b414280026c89df98ac8685d552502 data/crystechmod/loot_tables/blocks/aboreus_crystal_slab.json
 119389378ebef86e266227fdae475e18f84de5e1 data/crystechmod/loot_tables/blocks/aboreus_crystal_stairs.json
@@ -460,6 +460,8 @@ cb88b5e914a4153a0f344f76d67fcbc786a80515 data/crystechmod/loot_tables/blocks/hei
 0c0949c96caddb402cd82c85ad9093a9ddf28a75 data/crystechmod/loot_tables/blocks/illumina_block.json
 a5f5f44b9ccea077cb30ddbabdce02fe7196e356 data/crystechmod/loot_tables/blocks/illumina_ore.json
 4e0e6909081b82ed2e2ad123649ee83dda2a092a data/crystechmod/loot_tables/blocks/illyrim_block.json
+f0902475e3c01daf82ec6dabeddc518d2834735e data/crystechmod/loot_tables/blocks/inert_ichor_soil.json
+64de4bcdaa229db0969abd137e508ce6e89e332b data/crystechmod/loot_tables/blocks/inert_vitric_soil.json
 7a636dbd9e40e7b73bd587465a68d024f1515805 data/crystechmod/loot_tables/blocks/infested_andesite.json
 0f052e43c9815fdb5543f2e613bbc2d06124a79b data/crystechmod/loot_tables/blocks/infested_cobble.json
 df19e2b382cc46b5b98615abcaaf2a4f9b0a0759 data/crystechmod/loot_tables/blocks/infested_cobble_slab.json

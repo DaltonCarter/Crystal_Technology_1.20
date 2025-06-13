@@ -360,6 +360,8 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
 
                         output.accept(ModBlocks.TIBERIUM_SOIL.get());
                         output.accept(ModBlocks.ICHOR_SOIL.get());
+                        output.accept(ModBlocks.INERT_VITRIC_SOIL.get());
+                        output.accept(ModBlocks.INERT_ICHOR_SOIL.get());
                         output.accept(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get());
                         output.accept(ModBlocks.RED_ZONE_DIRT.get());
                         output.accept(ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get());

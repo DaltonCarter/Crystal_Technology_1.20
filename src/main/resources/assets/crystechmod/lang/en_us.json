@@ -270,6 +270,8 @@
   "block.crystechmod.yokaran_bloom": "Yokaran Bloom",
   "block.crystechmod.tiberium_soil": "Tiberium Soil",
   "block.crystechmod.ichor_soil": "Ichor Soil",
+  "block.crystechmod.inert_vitric_soil": "Inert Vitric Soil",
+  "block.crystechmod.inert_ichor_soil": "Inert Ichor Soil",
   "block.crystechmod.plagued_log": "Plagued Log",
   "block.crystechmod.plagued_wood": "Plagued Wood",
   "block.crystechmod.stripped_plagued_log": "Stripped Plagued Log",

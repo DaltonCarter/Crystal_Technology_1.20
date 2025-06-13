@@ -19,8 +19,8 @@ import net.minecraftforge.common.IPlantable;
 
 import java.util.Random;
 
-public class TiberiumSoilBlock extends Block {
-    public TiberiumSoilBlock(Properties properties) { super(properties);}
+public class InertVitricSoilBlock extends Block {
+    public InertVitricSoilBlock(Properties properties) { super(properties);}
 
 
     public void tick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource rand){
@@ -32,30 +32,7 @@ public class TiberiumSoilBlock extends Block {
             Block aboveBlock = aboveState.getBlock();
 
 
-            if (aboveBlock == Blocks.AIR || aboveBlock == Blocks.TALL_GRASS || aboveBlock == Blocks.GRASS) {
-                Random random = new Random();
-                int number = random.nextInt(10);
-
-                if(number > 7){
-
-//                    System.out.println("A patch of Vinifera Tiberium has sprouted!.");
-                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.BLUE_TIBERIUM_CROP.get().defaultBlockState());
-                }else {
-//                    System.out.println("A patch of Riparius Tiberium has sprouted!.");
-                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.GREEN_TIBERIUM_CROP.get().defaultBlockState());
-                }
-
-            } else if (aboveState.is(ModTags.Blocks.TIBERIUM_VULNERABLE_SAPLINGS)  && !worldIn.getBlockState(abovePos).is(ModBlocks.PLAGUED_SAPLING.get()) ) {
-                Random random = new Random();
-                int number = random.nextInt(10);
-
-                if (number > 7) {
-
-//                    System.out.println("A sapling has contracted Tiberium Plague!.");
-                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.PLAGUED_SAPLING.get().defaultBlockState());
-                }
-
-            }else if (aboveState.is(ModTags.Blocks.TIBERIUM_FLOWERS) && !worldIn.getBlockState(abovePos).is(ModBlocks.VITRIC_ROSE.get()) && !worldIn.getBlockState(abovePos).is(ModBlocks.VITRIC_BLOOM.get()) ) {
+          if (aboveState.is(ModTags.Blocks.TIBERIUM_FLOWERS) && !worldIn.getBlockState(abovePos).is(ModBlocks.VITRIC_ROSE.get()) && !worldIn.getBlockState(abovePos).is(ModBlocks.VITRIC_BLOOM.get()) ) {
                 Random random = new Random();
                 int number = random.nextInt(10);
 

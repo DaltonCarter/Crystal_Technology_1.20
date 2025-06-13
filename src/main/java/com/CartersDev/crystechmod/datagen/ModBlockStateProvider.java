@@ -38,6 +38,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.VITRIC_MACHINE_CORE);
         blockWithItem(ModBlocks.CRYSTAL_CORE_MACHINE_CORE);
 
+        blockWithItem(ModBlocks.INERT_VITRIC_SOIL);
+        blockWithItem(ModBlocks.INERT_ICHOR_SOIL);
+
         blockWithItem(ModBlocks.ALYTHUM_BLOCK);
         blockWithItem(ModBlocks.ILLYRIM_BLOCK);
         blockWithItem(ModBlocks.LG_CORE_BLOCK);

@@ -107,6 +107,24 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.INERT_VITRIC_SOIL.get(), 5)
+                .pattern("ISI")
+                .pattern("SSS")
+                .pattern("ISI")
+                .define('I', ModItems.MG_CORE_INGOT.get())
+                .define('S', ModBlocks.TIBERIUM_SOIL.get())
+                .unlockedBy(getHasName(ModBlocks.TIBERIUM_SOIL.get()), has(ModBlocks.TIBERIUM_SOIL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.INERT_ICHOR_SOIL.get(), 5)
+                .pattern("ISI")
+                .pattern("SSS")
+                .pattern("ISI")
+                .define('I', ModItems.HG_CORE_INGOT.get())
+                .define('S', ModBlocks.ICHOR_SOIL.get())
+                .unlockedBy(getHasName(ModBlocks.ICHOR_SOIL.get()), has(ModBlocks.ICHOR_SOIL.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SABER_BREAD.get())
                 .pattern("   ")
                 .pattern("   ")
@@ -2749,13 +2767,13 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TIBERIUM_INFUSER.get())
-                .pattern("AIA")
+                .pattern("HIH")
                 .pattern("KMK")
                 .pattern("GRG")
                 .define('R', ModTags.Items.GLASS)
                 .define('G', ModBlocks.TIBERIUM_BLOCK.get())
                 .define('M', ModBlocks.GUNDANIUM_MACHINE_CORE.get())
-                .define('A', ModItems.ALYTHUM_INGOT.get())
+                .define('H', ModItems.HARMONIUM_INGOT.get())
                 .define('I', ModItems.ILLUMINA_CRYSTAL.get())
                 .define('K', ModItems.KRYON_CRYSTAL.get())
                 .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
@@ -2769,7 +2787,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('G', ModItems.KRYONIC_RESERVOIR.get())
                 .define('C', ModItems.KRYONIC_CAPACITOR.get())
                 .define('M', ModBlocks.ALYTHUM_MACHINE_CORE.get())
-                .define('A', ModItems.HARMONIUM_INGOT.get())
+                .define('A', ModItems.ALYTHUM_INGOT.get())
                 .define('I', ModBlocks.TIBERIUM_INFUSER.get())
                 .define('K', ModItems.ILLUMINATE_COMPONENT.get())
                 .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))

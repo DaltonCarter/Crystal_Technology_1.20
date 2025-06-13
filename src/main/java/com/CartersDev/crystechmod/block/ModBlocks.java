@@ -51,11 +51,19 @@ public class ModBlocks {
     //Terrain Blocks:
         //Natural Terrain Blocks:
     public static final RegistryObject<Block> TIBERIUM_SOIL = registerBlock("tiberium_soil",
-            () -> new TiberiumSoilBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+            () -> new TiberiumSoilBlock(BlockBehaviour.Properties.copy(Blocks.DIRT)
                     .strength(3f, 1200f).randomTicks()));
 
     public static final RegistryObject<Block> ICHOR_SOIL = registerBlock("ichor_soil",
             () -> new IchorSoilBlock(BlockBehaviour.Properties.copy(Blocks.DIRT)
+                    .strength(3f, 1200f).randomTicks()));
+
+    public static final RegistryObject<Block> INERT_VITRIC_SOIL = registerBlock("inert_vitric_soil",
+            () -> new InertVitricSoilBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(3f, 1200f).randomTicks()));
+
+    public static final RegistryObject<Block> INERT_ICHOR_SOIL = registerBlock("inert_ichor_soil",
+            () -> new InertIchorSoilBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(3f, 1200f).randomTicks()));
 
     public static final RegistryObject<Block> INFESTED_STONE = registerBlock("infested_stone",

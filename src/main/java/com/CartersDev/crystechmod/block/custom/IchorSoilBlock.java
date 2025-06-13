@@ -35,16 +35,16 @@ public class IchorSoilBlock extends Block {
                 int number = random.nextInt(20);
 
                 if(number >10 && number < 15 ){
-                    System.out.println("A patch of Vinifera Tiberium has sprouted!.");
+//                    System.out.println("A patch of Vinifera Tiberium has sprouted!.");
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.BLUE_TIBERIUM_CROP.get().defaultBlockState());
                 }else if (number > 14 && number < 18) {
-                    System.out.println("A patch of Cruentus Tiberium has sprouted!.");
+//                    System.out.println("A patch of Cruentus Tiberium has sprouted!.");
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.RED_TIBERIUM_CROP.get().defaultBlockState());
                 }else if (number > 17 && number <= 20) {
-                    System.out.println("A patch of Aboreus Tiberium has sprouted!.");
+//                    System.out.println("A patch of Aboreus Tiberium has sprouted!.");
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.PURPLE_TIBERIUM_CROP.get().defaultBlockState());
                 }else {
-                    System.out.println("A patch of Riparius Tiberium has sprouted!.");
+//                    System.out.println("A patch of Riparius Tiberium has sprouted!.");
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.GREEN_TIBERIUM_CROP.get().defaultBlockState());
                 }
 
@@ -54,7 +54,7 @@ public class IchorSoilBlock extends Block {
 
                 if (number > 7 ) {
 
-                    System.out.println("A sapling has contracted Tiberium Plague!.");
+//                    System.out.println("A sapling has contracted Tiberium Plague!.");
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.PLAGUED_SAPLING.get().defaultBlockState());
                 }
 
@@ -64,11 +64,11 @@ public class IchorSoilBlock extends Block {
 
                 if (number <= 7 ) {
 
-                    System.out.println("A flower has contracted Tiberium Plague!.");
+//                    System.out.println("A flower has contracted Tiberium Plague!.");
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.VITRIC_BLOOM.get().defaultBlockState());
                 }else {
 
-                    System.out.println("A flower has contracted Tiberium Plague!.");
+//                    System.out.println("A flower has contracted Tiberium Plague!.");
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.VITRIC_ROSE.get().defaultBlockState());
                 }
 

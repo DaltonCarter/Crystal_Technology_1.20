@@ -1,7 +1,6 @@
 package com.CartersDev.crystechmod.block.custom;
 
 
-
 import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.util.ModTags;
 import net.minecraft.core.BlockPos;
@@ -19,9 +18,8 @@ import net.minecraftforge.common.IPlantable;
 
 import java.util.Random;
 
-public class TiberiumSoilBlock extends Block {
-    public TiberiumSoilBlock(Properties properties) { super(properties);}
-
+public class InertIchorSoilBlock extends Block {
+    public InertIchorSoilBlock(Properties properties) { super(properties);}
 
     public void tick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource rand){
         super.tick(state, worldIn, pos, rand);
@@ -32,24 +30,11 @@ public class TiberiumSoilBlock extends Block {
             Block aboveBlock = aboveState.getBlock();
 
 
-            if (aboveBlock == Blocks.AIR || aboveBlock == Blocks.TALL_GRASS || aboveBlock == Blocks.GRASS) {
+          if (aboveState.is(ModTags.Blocks.TIBERIUM_VULNERABLE_SAPLINGS) && !worldIn.getBlockState(abovePos).is(ModBlocks.PLAGUED_SAPLING.get()) ) {
                 Random random = new Random();
                 int number = random.nextInt(10);
 
-                if(number > 7){
-
-//                    System.out.println("A patch of Vinifera Tiberium has sprouted!.");
-                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.BLUE_TIBERIUM_CROP.get().defaultBlockState());
-                }else {
-//                    System.out.println("A patch of Riparius Tiberium has sprouted!.");
-                    worldIn.setBlockAndUpdate(abovePos, ModBlocks.GREEN_TIBERIUM_CROP.get().defaultBlockState());
-                }
-
-            } else if (aboveState.is(ModTags.Blocks.TIBERIUM_VULNERABLE_SAPLINGS)  && !worldIn.getBlockState(abovePos).is(ModBlocks.PLAGUED_SAPLING.get()) ) {
-                Random random = new Random();
-                int number = random.nextInt(10);
-
-                if (number > 7) {
+                if (number > 7 ) {
 
 //                    System.out.println("A sapling has contracted Tiberium Plague!.");
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.PLAGUED_SAPLING.get().defaultBlockState());
@@ -59,7 +44,7 @@ public class TiberiumSoilBlock extends Block {
                 Random random = new Random();
                 int number = random.nextInt(10);
 
-                if (number <= 7) {
+                if (number <= 7 ) {
 
 //                    System.out.println("A flower has contracted Tiberium Plague!.");
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.VITRIC_BLOOM.get().defaultBlockState());
@@ -70,17 +55,10 @@ public class TiberiumSoilBlock extends Block {
                 }
 
             }
-        }}
 
-
-
-
-
-
-    @Override
-    public boolean canDropFromExplosion(BlockState state, BlockGetter level, BlockPos pos, Explosion explosion) {
-        return true;
+        }
     }
+
 
     @Override
     public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, IPlantable plantable) {
@@ -89,6 +67,10 @@ public class TiberiumSoilBlock extends Block {
         if (plant == ModBlocks.GREEN_TIBERIUM_CROP.get()){
             return true;
         } else if (plant == ModBlocks.BLUE_TIBERIUM_CROP.get()) {
+            return true;
+        }else if (plant == ModBlocks.RED_TIBERIUM_CROP.get()) {
+            return true;
+        }else if (plant == ModBlocks.PURPLE_TIBERIUM_CROP.get()) {
             return true;
         } else if (plant instanceof SaplingBlock) {
             return true;
@@ -99,4 +81,8 @@ public class TiberiumSoilBlock extends Block {
         }
     }
 
+    @Override
+    public boolean canDropFromExplosion(BlockState state, BlockGetter level, BlockPos pos, Explosion explosion) {
+        return true;
+    }
 }

@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-11T16:32:45.3627531	Block States: crystechmod
+// 1.20.1	2025-06-12T19:34:36.0561549	Block States: crystechmod
 b96cfdc734a704501413713f3f2c8cfcb4ba2a5c assets/crystechmod/blockstates/aboreus_crystal.json
 cfa53ad3b1b79f5848cd890be949c4da34124a52 assets/crystechmod/blockstates/aboreus_crystal_slab.json
 e4c2d40939bfc8e33a33de6fa0cf12ac158358b4 assets/crystechmod/blockstates/aboreus_crystal_stairs.json
@@ -400,6 +400,8 @@ c4e338b64a527321e1f8b2e8a2945fd5280b20e2 assets/crystechmod/blockstates/ichor_so
 bc6fb542b962702913fcb9ff3d7a515cede41031 assets/crystechmod/blockstates/illumina_block.json
 2d1da373a7ffaf8e2292f3d582c1985f0a091c54 assets/crystechmod/blockstates/illumina_ore.json
 ee0adc9d980dd6f42c28c3bdb07a31275945d542 assets/crystechmod/blockstates/illyrim_block.json
+1a739e9eb39ddadec814afd4d1664896b9aef06c assets/crystechmod/blockstates/inert_ichor_soil.json
+aba510d949ecbd8a48663d492d44636b11109b70 assets/crystechmod/blockstates/inert_vitric_soil.json
 e3796b45dc15aa94eb51441135d9ef2fd4094af8 assets/crystechmod/blockstates/infested_andesite.json
 a692abf5587ed44b9a92e451cc554451f57f7265 assets/crystechmod/blockstates/infested_cobble.json
 f190da980d1d8475eeaef4a5cf11a24acf300d48 assets/crystechmod/blockstates/infested_cobble_slab.json
@@ -1571,6 +1573,8 @@ b4952e4066c4e16f510c7564f7d9f70f06fe2335 assets/crystechmod/models/block/hyacint
 30b61ed8eb96c765463b8a6f5365dc28f0c57443 assets/crystechmod/models/block/illumina_block.json
 e3d9f58de380a660be64e7a906f148ac6fe3a89f assets/crystechmod/models/block/illumina_ore.json
 3c667768e39f49dbe8432e694f93dba853f15d3b assets/crystechmod/models/block/illyrim_block.json
+6c56043d289dfcb91e51270d9e6c7477043a2b2b assets/crystechmod/models/block/inert_ichor_soil.json
+26e03f7091372d4f1487ca271310fb2111ebdb1a assets/crystechmod/models/block/inert_vitric_soil.json
 0f9a187e3e9587c77392118b7f94b2c9bd181860 assets/crystechmod/models/block/infested_andesite.json
 c296aa85c04c109468e25b6851ac300c6da99dc7 assets/crystechmod/models/block/infested_cobble.json
 994bb1dc039048716c62155c0fbe01b432e5932d assets/crystechmod/models/block/infested_cobble_slab.json
@@ -2445,6 +2449,8 @@ dd91b37ffe5c49292b47b3fa2ff38a361a9a3fd8 assets/crystechmod/models/item/harmoniu
 19f8fc0ebd6ddacf76ab74a812a44db25c11f6bc assets/crystechmod/models/item/illumina_block.json
 7bc1d4ff0031a108c3171deb9d0496028a26a5f0 assets/crystechmod/models/item/illumina_ore.json
 6d933d04347be0005dc19d986e342827ee46762d assets/crystechmod/models/item/illyrim_block.json
+b8476879761cb0c48070d9494da2965c12ab77fb assets/crystechmod/models/item/inert_ichor_soil.json
+dee3a59f308a1b52e0c2e89965eba985dc7fc550 assets/crystechmod/models/item/inert_vitric_soil.json
 2003bbfc5d755512b028d4296e5f424d6b902354 assets/crystechmod/models/item/infested_andesite.json
 42f278c9576072fc29572bec7f0f3db681082aca assets/crystechmod/models/item/infested_cobble.json
 c5d7aab11829cc96b5830422c7a2f1d43b96305e assets/crystechmod/models/item/infested_diorite.json

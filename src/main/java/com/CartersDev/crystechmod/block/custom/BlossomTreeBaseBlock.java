@@ -44,7 +44,7 @@ public class BlossomTreeBaseBlock extends Block {
     public void growBlossomTree(BlockPos pos1, BlockPos pos2, ServerLevel worldIn) {
 
 
-        System.out.println("A Blossom Tree has Matured!");
+//        System.out.println("A Blossom Tree has Matured!");
         worldIn.setBlockAndUpdate(pos1, ModBlocks.BLOSSOM_CENTER.get().defaultBlockState());
         worldIn.setBlockAndUpdate(pos2, ModBlocks.BLOSSOM_SPOUT.get().defaultBlockState());
 
