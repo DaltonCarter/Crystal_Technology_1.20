@@ -35,6 +35,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.dropSelf(ModBlocks.INERT_VITRIC_SOIL.get());
         this.dropSelf(ModBlocks.INERT_ICHOR_SOIL.get());
+        this.dropSelf(ModBlocks.POWERED_KILN.get());
 
         this.dropSelf(ModBlocks.GUNDANIUM_MACHINE_CORE.get());
         this.dropSelf(ModBlocks.ALYTHUM_MACHINE_CORE.get());

@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-12T19:34:36.1079393	Tags for minecraft:block mod id crystechmod
+// 1.20.1	2025-06-12T20:23:52.8556934	Tags for minecraft:block mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/blocks/aeries_ores.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/blocks/alythum_ores.json
 46de90b7b6a6a287548f896235af80124a350b93 data/crystechmod/tags/blocks/concretes.json
@@ -15,7 +15,7 @@ c7bbac2058df90e9377b5e00ecc05db2c0213cad data/crystechmod/tags/blocks/kryon_ores
 76338cc754cb5d1030cd4159192e0089f6c09fae data/crystechmod/tags/blocks/marika_oak_logs.json
 82362cfbd1836db13c7e9d36c8712821e795ac55 data/crystechmod/tags/blocks/mineable/paxel.json
 b97904e909222fd61767ad7160b0c32323c6852d data/crystechmod/tags/blocks/mod_planks.json
-d5006268e42dfed354c1b14deed7071a8484759d data/crystechmod/tags/blocks/needs_gundanium_tool.json
+8385048c9ff4109afb6ceff6a5b236200fefa0fc data/crystechmod/tags/blocks/needs_gundanium_tool.json
 d77f4c0b4a5c5eb15aa8cf1d058cb63a549f3b8f data/crystechmod/tags/blocks/needs_plagued_tool.json
 7ff009a6ce8d964af59c35e91e257d0fca7cfd07 data/crystechmod/tags/blocks/plagued_logs.json
 39acdcf33383e05a367faca9c1c896cc6cdba9c0 data/crystechmod/tags/blocks/tibercrete_sands.json
@@ -39,7 +39,7 @@ c6aab69a244678a9783a3baff90174fb529ed517 data/minecraft/tags/blocks/fences.json
 7469d34aacc37cbec82468d3eb2d3892f56a9277 data/minecraft/tags/blocks/logs.json
 e0721fc7760819c2882cc2896aeb4f60de8a8dad data/minecraft/tags/blocks/logs_that_burn.json
 5921bae2cd5332c6c228feaad9db64bf1b77c963 data/minecraft/tags/blocks/mineable/axe.json
-d1b43f4724fb42c4f47f35009f06eb43971b8ad7 data/minecraft/tags/blocks/mineable/pickaxe.json
+27c36520fa5b46765b044e55b78408715b9ebcb8 data/minecraft/tags/blocks/mineable/pickaxe.json
 dd6b58c2c6ce4b232b32c4cb3660f8c13d258cb8 data/minecraft/tags/blocks/mineable/shovel.json
 8bca9fd80ca24370a1e5ed4a77e2160b3f127569 data/minecraft/tags/blocks/needs_diamond_tool.json
 e0076fdd1852f50e82ebc29cb4a0f6f9a3d1a4be data/minecraft/tags/blocks/needs_iron_tool.json

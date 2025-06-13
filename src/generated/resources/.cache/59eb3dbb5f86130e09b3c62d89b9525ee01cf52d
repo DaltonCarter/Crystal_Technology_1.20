@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-12T19:34:36.0810788	Loot Tables
+// 1.20.1	2025-06-12T20:23:52.8263038	Loot Tables
 03c6f95925fa38635ca3601903e1d452029caabd data/crystechmod/loot_tables/blocks/aboreus_crystal.json
 d0beb68b81b414280026c89df98ac8685d552502 data/crystechmod/loot_tables/blocks/aboreus_crystal_slab.json
 119389378ebef86e266227fdae475e18f84de5e1 data/crystechmod/loot_tables/blocks/aboreus_crystal_stairs.json
@@ -658,6 +658,7 @@ a3a47456c0a3b50f7064958180ea4cdb18427349 data/crystechmod/loot_tables/blocks/pot
 583a79f9b875aa5e3adc261ef5b5318d5d4f3bce data/crystechmod/loot_tables/blocks/potted_hyacinth.json
 810fec92e0502ec8ff1c4cd8d6b861b6101ec0c9 data/crystechmod/loot_tables/blocks/potted_spitfire.json
 fe87f6f43280ded04b85e6332b781bd9e62567ee data/crystechmod/loot_tables/blocks/potted_vitric_bloom.json
+91e5b6eb2f1dfb8425a67a7e6255de9d461bd425 data/crystechmod/loot_tables/blocks/powered_kiln.json
 72e856bf72c821ca7a8aad8258c7fb88ef381f9a data/crystechmod/loot_tables/blocks/purple_crystal_core_light.json
 7c12f6c2ec0cad89d13fec122d5ca0087fbd8832 data/crystechmod/loot_tables/blocks/purple_tibercrete.json
 2a44fdc11e749c257b33c4cddfe58afd546c16cf data/crystechmod/loot_tables/blocks/purple_tibercrete_bricks.json

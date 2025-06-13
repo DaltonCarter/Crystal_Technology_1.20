@@ -144,6 +144,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.VITRIC_TIBERIUM_INFUSER.get(),
                         ModBlocks.CRYSTAL_CORE_TIBERIUM_INFUSER.get(),
 
+                        ModBlocks.POWERED_KILN.get(),
+
                         ModBlocks.TIBERIUM_BLUE_BLOCK.get(),
                         ModBlocks.TIBERIUM_RED_BLOCK.get(),
                         ModBlocks.TIBERIUM_PURPLE_BLOCK.get(),
@@ -1284,6 +1286,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.ALYTHUM_TIBERIUM_INFUSER.get(),
                         ModBlocks.VITRIC_TIBERIUM_INFUSER.get(),
                         ModBlocks.CRYSTAL_CORE_TIBERIUM_INFUSER.get(),
+                        ModBlocks.POWERED_KILN.get(),
                         ModBlocks.HARMONIUM_ORE.get(),
                         ModBlocks.DEEPSLATE_HARMONIUM_ORE.get(),
                         ModBlocks.NETHER_HARMONIUM_ORE.get(),

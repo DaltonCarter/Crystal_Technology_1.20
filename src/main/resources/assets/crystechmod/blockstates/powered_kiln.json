@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "working=false": {
+      "model": "crystechmod:block/powered_kiln"
+    },
+    "working=true": {
+      "model": "crystechmod:block/powered_kiln_on"
+    }
+  }
+}

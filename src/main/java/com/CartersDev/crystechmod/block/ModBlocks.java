@@ -2809,6 +2809,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRYSTAL_CORE_TIBERIUM_INFUSER = registerBlock("crystal_core_tiberium_infuser",
             () -> new TiberiumInfuserBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
+
+
+    public static final RegistryObject<Block> POWERED_KILN = registerBlock("powered_kiln",
+            () -> new PoweredKilnBlock(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
         //Signs:
 
     public static final RegistryObject<Block> PLAGUED_SIGN = BLOCKS.register("plagued_sign",

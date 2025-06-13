@@ -228,6 +228,8 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.VITRIC_TIBERIUM_INFUSER.get());
                         output.accept(ModBlocks.CRYSTAL_CORE_TIBERIUM_INFUSER.get());
 
+                        output.accept(ModBlocks.POWERED_KILN.get());
+
                     })
                     .build());
 
