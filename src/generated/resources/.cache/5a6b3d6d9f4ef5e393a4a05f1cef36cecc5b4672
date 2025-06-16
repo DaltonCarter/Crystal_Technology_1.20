@@ -1,18 +1,20 @@
-// 1.20.1	2025-04-15T23:32:43.6659307	Tags for minecraft:item mod id crystechmod
+// 1.20.1	2025-06-16T02:39:50.6720359	Tags for minecraft:item mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/items/aeries_ores.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/items/alythum_ores.json
-46de90b7b6a6a287548f896235af80124a350b93 data/crystechmod/tags/items/concretes.json
+6b38af71a7ebba97f729de43e6ee84033f8e45cc data/crystechmod/tags/items/concretes.json
 1b1bb8b2e7aecfb7d82d771a540fcafffe25b6ed data/crystechmod/tags/items/dead_logs.json
 9e69fb63880d9644913e3c1febc7b5019ed06a98 data/crystechmod/tags/items/ember_oak_logs.json
 569b96ed4a3700478598d59a0249f011c9e779f0 data/crystechmod/tags/items/enigma_ores.json
 385384748b1de16a26be84aa4324801acb1e776d data/crystechmod/tags/items/glass.json
-34a9d4d80fe52bb6cd232d189446bd9564e8ef9c data/crystechmod/tags/items/grindable.json
+a8e7e3f6d6338195309b47ce04ce06eee3f12c9f data/crystechmod/tags/items/grindable.json
 f9541d478a6479b3fadbd51f6a062c8d4fb28ca3 data/crystechmod/tags/items/grindable_flowers.json
-af36858f88267e6d43e9ca9e9571f981d877c179 data/crystechmod/tags/items/grinding_result.json
+2076cea0c2ef3d2faf79c3a66f54652174efb49f data/crystechmod/tags/items/grinding_result.json
 4cadb914e0eab48bbce75c6e6b2093818996d44e data/crystechmod/tags/items/gundanium_ores.json
 3c0db247b35cadbc078a1b88ac98777330717935 data/crystechmod/tags/items/hazmat_glass_panes.json
 816d980d5ac7ce159aff209b52ee0952d2d1eed8 data/crystechmod/tags/items/illumina_ores.json
 c7bbac2058df90e9377b5e00ecc05db2c0213cad data/crystechmod/tags/items/kryon_ores.json
+8e9f4d45f1dba2b0a87813068b8c4b5fb62d114a data/crystechmod/tags/items/maceratable.json
+8e347e3a3530b7dc9a484f7ac66e615bf5f07537 data/crystechmod/tags/items/macerating_result.json
 76338cc754cb5d1030cd4159192e0089f6c09fae data/crystechmod/tags/items/marika_oak_logs.json
 b97904e909222fd61767ad7160b0c32323c6852d data/crystechmod/tags/items/mod_planks.json
 7ff009a6ce8d964af59c35e91e257d0fca7cfd07 data/crystechmod/tags/items/plagued_logs.json

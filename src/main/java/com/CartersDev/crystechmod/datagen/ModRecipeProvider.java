@@ -60,6 +60,10 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 
+//     Powered Smelting:
+
+
+
 //      Blasting and Smelting:
         oreSmelting(consumer, INFECTED_MEAT_SMELTABLES, RecipeCategory.MISC, ModItems.COOKED_INFECTED_MEAT.get(), 0.25f, 200, "cooked_infected_meat");
 
@@ -5044,84 +5048,84 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 //Tiberium Macerator:
         //Ores
             //Vanilla
-        new TiberiumMaceratorRecipeBuilder(Items.RAW_IRON, ModItems.IRON_DUST.get(), 2, 100, 10)
+        new TiberiumMaceratorRecipeBuilder(Items.RAW_IRON, ModItems.IRON_DUST.get(), 2, 100, 10, true)
                 .unlockedBy("has_iron_ore", has(Blocks.IRON_ORE)).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(Items.RAW_COPPER, ModItems.COPPER_DUST.get(),2,  100, 10)
+        new TiberiumMaceratorRecipeBuilder(Items.RAW_COPPER, ModItems.COPPER_DUST.get(),2,  100, 10, true)
                 .unlockedBy("has_copper_ore", has(Blocks.COPPER_ORE)).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(Items.RAW_GOLD, ModItems.GOLD_DUST.get(), 2,  100, 10)
+        new TiberiumMaceratorRecipeBuilder(Items.RAW_GOLD, ModItems.GOLD_DUST.get(), 2,  100, 10, true)
                 .unlockedBy("has_gold_ore", has(Blocks.GOLD_ORE)).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(Blocks.ANCIENT_DEBRIS, Items.NETHERITE_SCRAP, 2,  150, 10)
+        new TiberiumMaceratorRecipeBuilder(Blocks.ANCIENT_DEBRIS, Items.NETHERITE_SCRAP, 2,  150, 10, true)
                 .unlockedBy("has_ancient_debris", has(Blocks.ANCIENT_DEBRIS)).save(consumer);
         //Gundanium:
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.RAW_GUNDANIUM.get(), ModItems.GUNDANIUM_DUST.get(), 2,  100, 10)
+        new TiberiumMaceratorRecipeBuilder(ModItems.RAW_GUNDANIUM.get(), ModItems.GUNDANIUM_DUST.get(), 2,  100, 10, true)
                 .unlockedBy("has_gundanium_ore", has(ModBlocks.GUNDANIUM_ORE.get())).save(consumer);
 
 
         //Harmonium:
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.RAW_HARMONIUM.get(), ModItems.HARMONIUM_DUST.get(), 2, 100, 10)
+        new TiberiumMaceratorRecipeBuilder(ModItems.RAW_HARMONIUM.get(), ModItems.HARMONIUM_DUST.get(), 2, 100, 10, true)
                 .unlockedBy("has_harmonium_ore", has(ModBlocks.HARMONIUM_ORE.get())).save(consumer);
 
         //Alythum:
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.RAW_ALYTHUM.get(), ModItems.ALYTHUM_DUST.get(), 2, 100, 10)
+        new TiberiumMaceratorRecipeBuilder(ModItems.RAW_ALYTHUM.get(), ModItems.ALYTHUM_DUST.get(), 2, 100, 10, true)
                 .unlockedBy("has_alythum_ore", has(ModBlocks.ALYTHUM_ORE.get())).save(consumer);
 
         //Illyrim:
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.ILLYRIM_INGOT.get(), ModItems.ILLYRIM_BLEND.get(), 1, 200, 20)
+        new TiberiumMaceratorRecipeBuilder(ModItems.ILLYRIM_INGOT.get(), ModItems.ILLYRIM_BLEND.get(), 1, 200, 20, false)
                 .unlockedBy("has_illyrim_blend", has(ModItems.ILLYRIM_BLEND.get())).save(consumer);
 
         //Core Steel:
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.LG_CORE_INGOT.get(), ModItems.LG_CORE_BLEND.get(), 1, 200, 20)
+        new TiberiumMaceratorRecipeBuilder(ModItems.LG_CORE_INGOT.get(), ModItems.LG_CORE_BLEND.get(), 1, 200, 20, false)
                 .unlockedBy("has_lg_core_blend", has(ModItems.LG_CORE_BLEND.get())).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.MG_CORE_INGOT.get(), ModItems.MG_CORE_BLEND.get(), 1, 200, 20)
+        new TiberiumMaceratorRecipeBuilder(ModItems.MG_CORE_INGOT.get(), ModItems.MG_CORE_BLEND.get(), 1, 200, 20, false)
                 .unlockedBy("has_mg_core_blend", has(ModItems.MG_CORE_BLEND.get())).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.HG_CORE_INGOT.get(), ModItems.HG_CORE_BLEND.get(), 1, 200, 20)
+        new TiberiumMaceratorRecipeBuilder(ModItems.HG_CORE_INGOT.get(), ModItems.HG_CORE_BLEND.get(), 1, 200, 20, false)
                 .unlockedBy("has_hg_core_blend", has(ModItems.HG_CORE_BLEND.get())).save(consumer);
         
             //Misc
-        new TiberiumMaceratorRecipeBuilder(ModBlocks.DEVILS_BLOOD.get(), ModItems.DEVILS_BLOOD_POWDER.get(), 2, 200, 20)
+        new TiberiumMaceratorRecipeBuilder(ModBlocks.DEVILS_BLOOD.get(), ModItems.DEVILS_BLOOD_POWDER.get(), 2, 200, 20, true)
                 .unlockedBy("has_devils_blood", has(ModBlocks.DEVILS_BLOOD.get())).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModBlocks.YOKARAN_BLOOM.get(), ModItems.YOKARAN_BLOOM_POWDER.get(), 2, 200, 20)
+        new TiberiumMaceratorRecipeBuilder(ModBlocks.YOKARAN_BLOOM.get(), ModItems.YOKARAN_BLOOM_POWDER.get(), 2, 200, 20, true)
                 .unlockedBy("has_yokaran_bloom", has(ModBlocks.YOKARAN_BLOOM.get())).save(consumer);
         
         //Stones
-        new TiberiumMaceratorRecipeBuilder(Blocks.STONE, Blocks.COBBLESTONE, 1, 200, 20)
+        new TiberiumMaceratorRecipeBuilder(Blocks.STONE, Blocks.COBBLESTONE, 1, 200, 20, false)
                 .unlockedBy("has_stone", has(Blocks.STONE)).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(Blocks.COBBLESTONE, Blocks.GRAVEL, 1, 150, 20)
+        new TiberiumMaceratorRecipeBuilder(Blocks.COBBLESTONE, Blocks.GRAVEL, 1, 150, 20, false)
                 .unlockedBy("has_cobble", has(Blocks.COBBLESTONE)).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(Blocks.GRAVEL, Blocks.SAND, 1, 100, 20)
+        new TiberiumMaceratorRecipeBuilder(Blocks.GRAVEL, Blocks.SAND, 1, 100, 20, false)
                 .unlockedBy("has_cobble", has(Blocks.GRAVEL)).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModBlocks.INFESTED_STONE.get(), ModBlocks.INFESTED_COBBLE.get(), 1, 200, 20)
+        new TiberiumMaceratorRecipeBuilder(ModBlocks.INFESTED_STONE.get(), ModBlocks.INFESTED_COBBLE.get(), 1, 200, 20, false)
                 .unlockedBy("has_infested_stone", has(ModBlocks.INFESTED_STONE.get())).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModBlocks.INFESTED_COBBLE.get(), ModBlocks.YELLOW_ZONE_SAND.get(), 1, 150, 20)
+        new TiberiumMaceratorRecipeBuilder(ModBlocks.INFESTED_COBBLE.get(), ModBlocks.YELLOW_ZONE_SAND.get(), 1, 150, 20, false)
                 .unlockedBy("has_infested_stone", has(ModBlocks.INFESTED_COBBLE.get())).save(consumer);
 
 
         //Tiberium
-        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM.get(), ModItems.GREEN_TIBERIUM_DUST.get(), 2,  150, 5)
+        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM.get(), ModItems.GREEN_TIBERIUM_DUST.get(), 2,  150, 5, true)
                 .unlockedBy("has_tiberium", has(ModItems.TIBERIUM.get())).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM_BLUE.get(), ModItems.BLUE_TIBERIUM_DUST.get(), 2, 200, 10)
+        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM_BLUE.get(), ModItems.BLUE_TIBERIUM_DUST.get(), 2, 200, 10, true)
                 .unlockedBy("has_blue_tiberium", has(ModItems.TIBERIUM_BLUE.get())).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM_RED.get(), ModItems.RED_TIBERIUM_DUST.get(), 2, 200, 15)
+        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM_RED.get(), ModItems.RED_TIBERIUM_DUST.get(), 2, 200, 15, true)
                 .unlockedBy("has_red_tiberium", has(ModItems.TIBERIUM_RED.get())).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM_PURPLE.get(), ModItems.PURPLE_TIBERIUM_DUST.get(), 2, 200, 20)
+        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM_PURPLE.get(), ModItems.PURPLE_TIBERIUM_DUST.get(), 2, 200, 20, true)
                 .unlockedBy("has_purple_tiberium", has(ModItems.TIBERIUM_PURPLE.get())).save(consumer);
 
 

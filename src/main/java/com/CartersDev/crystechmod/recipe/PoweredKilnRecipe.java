@@ -14,22 +14,20 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-public class TiberiumMaceratorRecipe implements Recipe<SimpleContainer> {
+public class PoweredKilnRecipe implements Recipe<SimpleContainer> {
 
     private final NonNullList<Ingredient> inputItems;
     private final ItemStack output;
     private final ResourceLocation id;
     private final int craftTime;
     private final int energyAmount;
-    private final boolean multiply;
 
-    public TiberiumMaceratorRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> inputItems, int craftTime, int energyAmount, boolean multiply) {
+    public PoweredKilnRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> inputItems, int craftTime, int energyAmount) {
         this.inputItems = inputItems;
         this.output = output;
         this.id = id;
         this.craftTime = craftTime;
         this.energyAmount = energyAmount;
-        this.multiply = multiply;
     }
 
 
@@ -70,10 +68,6 @@ public class TiberiumMaceratorRecipe implements Recipe<SimpleContainer> {
         return energyAmount;
     }
 
-    public boolean isMultiply() {
-        return multiply;
-    }
-
     @Override
     public ResourceLocation getId() {
         return id;
@@ -89,21 +83,21 @@ public class TiberiumMaceratorRecipe implements Recipe<SimpleContainer> {
         return Type.INSTANCE;
     }
 
-    public static class Type implements RecipeType<TiberiumMaceratorRecipe> {
+    public static class Type implements RecipeType<PoweredKilnRecipe> {
         private Type() { }
         public static final Type INSTANCE = new Type();
-        public static final String ID = "tiberium_macerating";
+        public static final String ID = "powered_smelting";
     }
 
-    public static class Serializer implements RecipeSerializer<TiberiumMaceratorRecipe> {
+    public static class Serializer implements RecipeSerializer<PoweredKilnRecipe> {
 
-        public static final TiberiumMaceratorRecipe.Serializer INSTANCE  = new TiberiumMaceratorRecipe.Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(CrystalTech.MOD_ID, "tiberium_macerating");
+        public static final PoweredKilnRecipe.Serializer INSTANCE  = new PoweredKilnRecipe.Serializer();
+        public static final ResourceLocation ID = new ResourceLocation(CrystalTech.MOD_ID, "powered_smelting");
 
 
 
         @Override
-        public TiberiumMaceratorRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
+        public PoweredKilnRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "output"));
 
 
@@ -117,15 +111,14 @@ public class TiberiumMaceratorRecipe implements Recipe<SimpleContainer> {
 
             int craftTime = pSerializedRecipe.get("craftTime").getAsInt();
             int energyAmount = pSerializedRecipe.get("energyAmount").getAsInt();
-            boolean multiply = pSerializedRecipe.get("multiply").getAsBoolean();
 
 
-            return new TiberiumMaceratorRecipe(pRecipeId, output, inputs, craftTime, energyAmount, multiply);
+            return new PoweredKilnRecipe(pRecipeId, output, inputs, craftTime, energyAmount);
         }
 
 
         @Override
-        public @Nullable TiberiumMaceratorRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
+        public @Nullable PoweredKilnRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
             NonNullList<Ingredient> inputs = NonNullList.withSize(pBuffer.readInt(), Ingredient.EMPTY);
 
 
@@ -135,13 +128,12 @@ public class TiberiumMaceratorRecipe implements Recipe<SimpleContainer> {
 
             int craftTime = pBuffer.readInt();
             int energyAmount = pBuffer.readInt();
-            boolean multiply = pBuffer.readBoolean();
             ItemStack output = pBuffer.readItem();
-            return new TiberiumMaceratorRecipe(pRecipeId, output, inputs, craftTime, energyAmount, multiply);
+            return new PoweredKilnRecipe(pRecipeId, output, inputs, craftTime, energyAmount);
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf pBuffer, TiberiumMaceratorRecipe pRecipe) {
+        public void toNetwork(FriendlyByteBuf pBuffer, PoweredKilnRecipe pRecipe) {
 
             pBuffer.writeInt(pRecipe.inputItems.size());
 
@@ -151,7 +143,6 @@ public class TiberiumMaceratorRecipe implements Recipe<SimpleContainer> {
 
             pBuffer.writeInt(pRecipe.craftTime);
             pBuffer.writeInt(pRecipe.energyAmount);
-            pBuffer.writeBoolean(pRecipe.multiply);
             pBuffer.writeItemStack(pRecipe.getResultItem(null), false);
 
         }

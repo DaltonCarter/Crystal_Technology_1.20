@@ -20,6 +20,9 @@ public static final RegistryObject<RecipeSerializer<TiberiumGrinderRecipe>> TIBE
     public static final RegistryObject<RecipeSerializer<TiberiumInfuserRecipe>> TIBERIUM_INFUSER_SERIALIZER =
             SERIALIZERS.register("tiberium_infusing", () -> TiberiumInfuserRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<PoweredKilnRecipe>> POWERED_KILN_SERIALIZER =
+            SERIALIZERS.register("powered_smelting", () -> PoweredKilnRecipe.Serializer.INSTANCE);
+
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

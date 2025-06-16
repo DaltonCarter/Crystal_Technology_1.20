@@ -26,6 +26,7 @@ import com.CartersDev.crystechmod.screen.maceratorScreen.AlythumTiberiumMacerato
 import com.CartersDev.crystechmod.screen.maceratorScreen.CrystalCoreTiberiumMaceratorScreen;
 import com.CartersDev.crystechmod.screen.maceratorScreen.TiberiumMaceratorScreen;
 import com.CartersDev.crystechmod.screen.maceratorScreen.VitricTiberiumMaceratorScreen;
+import com.CartersDev.crystechmod.screen.poweredKilnScreen.PoweredKilnScreen;
 import com.CartersDev.crystechmod.sound.ModSounds;
 import com.CartersDev.crystechmod.util.BetterBrewingRecipe;
 import com.CartersDev.crystechmod.util.ModWoodTypes;
@@ -188,6 +189,10 @@ public class CrystalTech {
             MenuScreens.register(ModMenuTypes.ALYTHUM_TIBERIUM_INFUSER_MENU.get(), AlythumTiberiumInfuserScreen::new);
             MenuScreens.register(ModMenuTypes.VITRIC_TIBERIUM_INFUSER_MENU.get(), VitricTiberiumInfuserScreen::new);
             MenuScreens.register(ModMenuTypes.CRYSTAL_CORE_TIBERIUM_INFUSER_MENU.get(), CrystalCoreTiberiumInfuserScreen::new);
+
+
+
+            MenuScreens.register(ModMenuTypes.POWERED_KILN_MENU.get(), PoweredKilnScreen::new);
 
             //Tiberium
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_TIBERIUM_CROP.get(), RenderType.cutout());

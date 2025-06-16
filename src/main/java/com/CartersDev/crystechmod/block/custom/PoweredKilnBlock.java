@@ -1,10 +1,7 @@
 package com.CartersDev.crystechmod.block.custom;
 
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
-import com.CartersDev.crystechmod.block.entity.macerator.AlythumTiberiumMaceratorBlockEntity;
-import com.CartersDev.crystechmod.block.entity.macerator.CrystalCoreTiberiumMaceratorBlockEntity;
-import com.CartersDev.crystechmod.block.entity.macerator.TiberiumMaceratorBlockEntity;
-import com.CartersDev.crystechmod.block.entity.macerator.VitricTiberiumMaceratorBlockEntity;
+import com.CartersDev.crystechmod.block.entity.poweredkiln.PoweredKilnBlockEntity;
 import com.CartersDev.crystechmod.util.ModBlockstateProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -32,8 +29,8 @@ import org.jetbrains.annotations.Nullable;
 
 public class PoweredKilnBlock extends BaseEntityBlock {
     public static final BooleanProperty WORKING = ModBlockstateProperties.WORKING;
-    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static IntegerProperty MACHINE_CORE_LVL = ModBlockstateProperties.MACHINE_CORE_LVL;
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     public PoweredKilnBlock(int machineCoreLvl, Properties pProperties) {
         super(pProperties);
@@ -83,8 +80,8 @@ public class PoweredKilnBlock extends BaseEntityBlock {
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pMovedByPiston) {
         if(pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-            if(blockEntity instanceof TiberiumMaceratorBlockEntity) {
-                ((TiberiumMaceratorBlockEntity) blockEntity).drops();
+            if(blockEntity instanceof PoweredKilnBlockEntity) {
+                ((PoweredKilnBlockEntity) blockEntity).drops();
 //            } else if (blockEntity instanceof AlythumTiberiumMaceratorBlockEntity) {
 //                ((AlythumTiberiumMaceratorBlockEntity) blockEntity).drops();
 //            }else if (blockEntity instanceof VitricTiberiumMaceratorBlockEntity) {
@@ -101,8 +98,8 @@ public class PoweredKilnBlock extends BaseEntityBlock {
 
         if(!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if(entity instanceof TiberiumMaceratorBlockEntity) {
-                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (TiberiumMaceratorBlockEntity) entity, pPos);
+            if(entity instanceof PoweredKilnBlockEntity) {
+                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (PoweredKilnBlockEntity) entity, pPos);
 //            } else if (entity instanceof AlythumTiberiumMaceratorBlockEntity) {
 //                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (AlythumTiberiumMaceratorBlockEntity) entity, pPos);
 //            } else if (entity instanceof VitricTiberiumMaceratorBlockEntity) {
@@ -124,7 +121,7 @@ public class PoweredKilnBlock extends BaseEntityBlock {
     public @Nullable BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
          int lvl = pState.getValue(MACHINE_CORE_LVL);
         return switch (lvl) {
-            case 1 -> new TiberiumMaceratorBlockEntity(pPos, pState);
+            case 1 -> new PoweredKilnBlockEntity(pPos, pState);
 //            case 2 -> new AlythumTiberiumMaceratorBlockEntity(pPos, pState);
 //            case 3 -> new VitricTiberiumMaceratorBlockEntity(pPos, pState);
 //            case 4 -> new CrystalCoreTiberiumMaceratorBlockEntity(pPos, pState);
@@ -139,7 +136,7 @@ public class PoweredKilnBlock extends BaseEntityBlock {
         }
         int lvl = pState.getValue(MACHINE_CORE_LVL);
         return switch (lvl){
-            case 1 -> createTickerHelper(pBlockEntityType, ModBlockEntities.TIBERIUM_MACERATOR_BE.get(),
+            case 1 -> createTickerHelper(pBlockEntityType, ModBlockEntities.POWERED_KILN_BE.get(),
                     ((pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1)));
 //            case 2 -> createTickerHelper(pBlockEntityType, ModBlockEntities.ALYTHUM_TIBERIUM_MACERATOR_BE.get(),
 //                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));

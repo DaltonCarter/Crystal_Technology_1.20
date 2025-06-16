@@ -1,7 +1,7 @@
-// 1.20.1	2025-06-12T20:23:52.8556934	Tags for minecraft:block mod id crystechmod
+// 1.20.1	2025-06-16T02:39:50.67053	Tags for minecraft:block mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/blocks/aeries_ores.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/blocks/alythum_ores.json
-46de90b7b6a6a287548f896235af80124a350b93 data/crystechmod/tags/blocks/concretes.json
+6b38af71a7ebba97f729de43e6ee84033f8e45cc data/crystechmod/tags/blocks/concretes.json
 1b1bb8b2e7aecfb7d82d771a540fcafffe25b6ed data/crystechmod/tags/blocks/dead_logs.json
 9e69fb63880d9644913e3c1febc7b5019ed06a98 data/crystechmod/tags/blocks/ember_oak_logs.json
 569b96ed4a3700478598d59a0249f011c9e779f0 data/crystechmod/tags/blocks/enigma_ores.json
@@ -12,6 +12,8 @@ f9541d478a6479b3fadbd51f6a062c8d4fb28ca3 data/crystechmod/tags/blocks/grindable_
 fde81393ef244e7ec272ed755f993f402ff61d5d data/crystechmod/tags/blocks/hazmat_glass_panes2.json
 816d980d5ac7ce159aff209b52ee0952d2d1eed8 data/crystechmod/tags/blocks/illumina_ores.json
 c7bbac2058df90e9377b5e00ecc05db2c0213cad data/crystechmod/tags/blocks/kryon_ores.json
+8e9f4d45f1dba2b0a87813068b8c4b5fb62d114a data/crystechmod/tags/blocks/maceratable.json
+8e347e3a3530b7dc9a484f7ac66e615bf5f07537 data/crystechmod/tags/blocks/macerating_result.json
 76338cc754cb5d1030cd4159192e0089f6c09fae data/crystechmod/tags/blocks/marika_oak_logs.json
 82362cfbd1836db13c7e9d36c8712821e795ac55 data/crystechmod/tags/blocks/mineable/paxel.json
 b97904e909222fd61767ad7160b0c32323c6852d data/crystechmod/tags/blocks/mod_planks.json

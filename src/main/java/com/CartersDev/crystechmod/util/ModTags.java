@@ -38,6 +38,9 @@ public class ModTags {
         public static final TagKey<Block> TIBERIUM_FLOWERS= tag("tiberium_flowers");
         public static final TagKey<Block> GLASS = tag("glass");
         public static final TagKey<Block> GRINDABLE_FLOWERS = tag("grindable_flowers");
+        public static final TagKey<Block> MACERATABLE = tag("maceratable");
+        public static final TagKey<Block> MACERATING_RESULT = tag("macerating_result");
+
 
 
         //Worldgen & Carvers
@@ -88,6 +91,8 @@ public class ModTags {
         public static final TagKey<Item> GRINDABLE= tag("grindable");
         public static final TagKey<Item> GRINDABLE_FLOWERS= tag("grindable_flowers");
         public static final TagKey<Item> GRINDING_RESULT= tag("grinding_result");
+        public static final TagKey<Item> MACERATABLE = tag("maceratable");
+        public static final TagKey<Item> MACERATING_RESULT = tag("macerating_result");
 
 
 

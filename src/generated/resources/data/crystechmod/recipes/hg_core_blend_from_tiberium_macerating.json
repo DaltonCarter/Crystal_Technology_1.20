@@ -7,6 +7,7 @@
       "item": "crystechmod:hg_core_ingot"
     }
   ],
+  "multiply": false,
   "output": {
     "item": "crystechmod:hg_core_blend"
   }

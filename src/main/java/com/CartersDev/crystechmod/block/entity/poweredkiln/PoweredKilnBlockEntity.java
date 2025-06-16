@@ -1,11 +1,12 @@
-package com.CartersDev.crystechmod.block.entity.macerator;
+package com.CartersDev.crystechmod.block.entity.poweredkiln;
 
 
-import com.CartersDev.crystechmod.block.custom.TiberiumMaceratorBlock;
+
+import com.CartersDev.crystechmod.block.custom.PoweredKilnBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
-import com.CartersDev.crystechmod.recipe.TiberiumMaceratorRecipe;
-import com.CartersDev.crystechmod.screen.maceratorMenu.TiberiumMaceratorMenu;
-import com.CartersDev.crystechmod.screen.maceratorMenu.VitricTiberiumMaceratorMenu;
+
+import com.CartersDev.crystechmod.recipe.PoweredKilnRecipe;
+import com.CartersDev.crystechmod.screen.poweredKilnMenu.PoweredKilnMenu;
 import com.CartersDev.crystechmod.util.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -40,10 +41,10 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Map;
 import java.util.Optional;
 
-import static com.CartersDev.crystechmod.block.custom.TiberiumMaceratorBlock.WORKING;
+import static com.CartersDev.crystechmod.block.custom.PoweredKilnBlock.WORKING;
 
 
-public class VitricTiberiumMaceratorBlockEntity extends BlockEntity implements MenuProvider {
+public class PoweredKilnBlockEntity extends BlockEntity implements MenuProvider {
 
     ItemStackHandler itemHandler = new ItemStackHandler(3) {
         @Override
@@ -95,7 +96,7 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
 
     private ModEnergyStorage createEnergyStorage() {
-        return new ModEnergyStorage(270000, 4000) {
+        return new ModEnergyStorage(90000, 1000) {
             @Override
             public void onEnergyChanged() {
                 setChanged();
@@ -113,14 +114,14 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
         return stack;
     }
 
-    public VitricTiberiumMaceratorBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.VITRIC_TIBERIUM_MACERATOR_BE.get(), pPos, pBlockState);
+    public PoweredKilnBlockEntity(BlockPos pPos, BlockState pBlockState) {
+        super(ModBlockEntities.POWERED_KILN_BE.get(), pPos, pBlockState);
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
                 return switch (pIndex){
-                    case 0 -> VitricTiberiumMaceratorBlockEntity.this.progress;
-                    case 1 -> VitricTiberiumMaceratorBlockEntity.this.max_progress;
+                    case 0 -> PoweredKilnBlockEntity.this.progress;
+                    case 1 -> PoweredKilnBlockEntity.this.max_progress;
                     default -> 0;
                 };
             }
@@ -128,8 +129,8 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
             @Override
             public void set(int pIndex, int pValue) {
                  switch (pIndex){
-                    case 0 -> VitricTiberiumMaceratorBlockEntity.this.progress = pValue;
-                    case 1 -> VitricTiberiumMaceratorBlockEntity.this.max_progress = pValue;
+                    case 0 -> PoweredKilnBlockEntity.this.progress = pValue;
+                    case 1 -> PoweredKilnBlockEntity.this.max_progress = pValue;
                 };
             }
 
@@ -154,12 +155,12 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
     @Override
     public Component getDisplayName() {
-        return Component.literal("Vitricium Macerator");
+        return Component.literal("Powered Kiln");
     }
 
     @Override
     public @Nullable AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
-        return new VitricTiberiumMaceratorMenu(pContainerId, pPlayerInventory, this, this.data);
+        return new PoweredKilnMenu(pContainerId, pPlayerInventory, this, this.data);
     }
 
     @Override
@@ -175,17 +176,17 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
             }
 
             if (directioWrappedHandlerMap.containsKey(side)) {
-                Direction localDirection = this.getBlockState().getValue(TiberiumMaceratorBlock.FACING);
+                Direction localDirection = this.getBlockState().getValue(PoweredKilnBlock.FACING);
 
                 if (side == Direction.DOWN || side == Direction.UP) {
                     return directioWrappedHandlerMap.get(side).cast();
                 }
 
                 return switch (localDirection) {
-                    default -> directioWrappedHandlerMap.get(side.getOpposite()).cast();
                     case EAST -> directioWrappedHandlerMap.get(side.getClockWise()).cast();
                     case SOUTH -> directioWrappedHandlerMap.get(side).cast();
                     case WEST -> directioWrappedHandlerMap.get(side.getCounterClockWise()).cast();
+                    default -> directioWrappedHandlerMap.get(side.getOpposite()).cast();
                 };
 
             }
@@ -211,9 +212,9 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
     @Override
     protected void saveAdditional(CompoundTag pTag) {
         pTag.put("inventory", itemHandler.serializeNBT());
-        pTag.putInt("tiberium_macerator.progress", progress);
-        pTag.putInt("tiberium_macerator.max_progress", max_progress);
-        pTag.putInt("tiberium_macerator.energyAmount", energyAmount);
+        pTag.putInt("powered_kiln.progress", progress);
+        pTag.putInt("powered_kiln.max_progress", max_progress);
+        pTag.putInt("powered_kiln.energyAmount", energyAmount);
         pTag.putInt("energy", ENERGY_STORAGE.getEnergyStored());
         super.saveAdditional(pTag);
     }
@@ -222,9 +223,9 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
     public void load(CompoundTag pTag) {
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
-        progress = pTag.getInt("tiberium_macerator.progress");
-        max_progress = pTag.getInt("tiberium_macerator.max_progress");
-        energyAmount = pTag.getInt("tiberium_macerator.energyAmount");
+        progress = pTag.getInt("powered_kiln.progress");
+        max_progress = pTag.getInt("powered_kiln.max_progress");
+        energyAmount = pTag.getInt("powered_kiln.energyAmount");
         ENERGY_STORAGE.setEnergy(pTag.getInt("energy"));
     }
 
@@ -277,19 +278,14 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
     }
 
     private void craftItem() {
-        Optional<TiberiumMaceratorRecipe> recipe = getCurrentRecipe();
+        Optional<PoweredKilnRecipe> recipe = getCurrentRecipe();
 
         ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
 
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
 
-        if (recipe.get().isMultiply()) {
-            this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
-                    this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount() + 2));
-        }else {
-            this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
-                    this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount()));
-        }
+        this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
+                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount()));
 
     }
 
@@ -310,14 +306,14 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
     private boolean hasRecipe() {
 
-        Optional<TiberiumMaceratorRecipe> recipe = getCurrentRecipe();
+        Optional<PoweredKilnRecipe> recipe = getCurrentRecipe();
 
 
         if (recipe.isEmpty()) {
             return false;
         }
 
-        max_progress = recipe.get().getCraftTime() / 3;
+        max_progress = recipe.get().getCraftTime();
         energyAmount = recipe.get().getEnergyAmount();
 
         ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
@@ -332,12 +328,12 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
     }
 
-    private Optional<TiberiumMaceratorRecipe> getCurrentRecipe() {
+    private Optional<PoweredKilnRecipe> getCurrentRecipe() {
         SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
         for(int i = 0; i < this.itemHandler.getSlots(); i++) {
             inventory.setItem(i, this.itemHandler.getStackInSlot(i));
         }
-        return this.level.getRecipeManager().getRecipeFor(TiberiumMaceratorRecipe.Type.INSTANCE, inventory, level);
+        return this.level.getRecipeManager().getRecipeFor(PoweredKilnRecipe.Type.INSTANCE, inventory, level);
     }
 
 
@@ -347,7 +343,7 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
     private boolean canInsertAmountIntoOutputSlot(int count) {
         return this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize() >=
-                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + count + 2;
+                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + count;
     }
 
     private boolean isOutputSlotEmptyorRecieveable() {

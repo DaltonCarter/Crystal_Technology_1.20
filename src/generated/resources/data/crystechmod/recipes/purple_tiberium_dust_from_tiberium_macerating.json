@@ -7,6 +7,7 @@
       "item": "crystechmod:tiberium_purple"
     }
   ],
+  "multiply": true,
   "output": {
     "count": 2,
     "item": "crystechmod:purple_tiberium_dust"

@@ -1274,6 +1274,60 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                 );
 
+        this.tag(ModTags.Blocks.CONCRETES)
+                .add(ModBlocks.BLACK_TIBERCRETE.get(),
+                        ModBlocks.RED_TIBERCRETE.get(),
+                        ModBlocks.BLUE_TIBERCRETE.get(),
+                        ModBlocks.BROWN_TIBERCRETE.get(),
+                        ModBlocks.CYAN_TIBERCRETE.get(),
+                        ModBlocks.GRAY_TIBERCRETE.get(),
+                        ModBlocks.GREEN_TIBERCRETE.get(),
+                        ModBlocks.LIGHT_BLUE_TIBERCRETE.get(),
+                        ModBlocks.LIGHT_GRAY_TIBERCRETE.get(),
+                        ModBlocks.LIME_TIBERCRETE.get(),
+                        ModBlocks.MAGENTA_TIBERCRETE.get(),
+                        ModBlocks.ORANGE_TIBERCRETE.get(),
+                        ModBlocks.PINK_TIBERCRETE.get(),
+                        ModBlocks.PURPLE_TIBERCRETE.get(),
+                        ModBlocks.YELLOW_TIBERCRETE.get(),
+                        ModBlocks.WHITE_TIBERCRETE.get(),
+                        Blocks.BLACK_CONCRETE,
+                        Blocks.BLUE_CONCRETE,
+                        Blocks.BROWN_CONCRETE,
+                        Blocks.CYAN_CONCRETE,
+                        Blocks.GRAY_CONCRETE,
+                        Blocks.GREEN_CONCRETE,
+                        Blocks.LIGHT_BLUE_CONCRETE,
+                        Blocks.LIGHT_GRAY_CONCRETE,
+                        Blocks.LIME_CONCRETE,
+                        Blocks.MAGENTA_CONCRETE,
+                        Blocks.ORANGE_CONCRETE,
+                        Blocks.PINK_CONCRETE,
+                        Blocks.PURPLE_CONCRETE,
+                        Blocks.RED_CONCRETE,
+                        Blocks.WHITE_CONCRETE,
+                        Blocks.YELLOW_CONCRETE
+
+                );
+
+
+        this.tag(ModTags.Blocks.MACERATABLE)
+                .add(ModBlocks.INFESTED_STONE.get(),
+                        Blocks.STONE,
+                        Blocks.COBBLESTONE,
+                        Blocks.GRAVEL
+
+                );
+
+
+        this.tag(ModTags.Blocks.MACERATING_RESULT)
+                .add(ModBlocks.INFESTED_COBBLE.get(),
+                        Blocks.SAND,
+                        Blocks.COBBLESTONE,
+                        Blocks.GRAVEL
+
+                );
+
 
         this.tag(ModTags.Blocks.NEEDS_GUNDANIUM_TOOL)
                 .add(ModBlocks.CS_SCAFFOLD.get(),

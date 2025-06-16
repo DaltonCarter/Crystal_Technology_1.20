@@ -51,6 +51,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.copy(ModTags.Blocks.ENIGMA_ORES, ModTags.Items.ENIGMA_ORES);
         this.copy(ModTags.Blocks.GLASS, ModTags.Items.GLASS);
         this.copy(ModTags.Blocks.GRINDABLE_FLOWERS, ModTags.Items.GRINDABLE_FLOWERS);
+        this.copy(ModTags.Blocks.MACERATABLE, ModTags.Items.MACERATABLE);
+        this.copy(ModTags.Blocks.MACERATING_RESULT, ModTags.Items.MACERATING_RESULT);
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
 
 
@@ -79,6 +81,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.HG_CORE_INGOT.get()
                 )
                 .addTags(ModTags.Items.ALYTHUM_ORES,
+                ModTags.Items.MACERATABLE,
                         ModTags.Items.GUNDANIUM_ORES,
                         ModTags.Items.HARMONIUM_ORES,
                         ModTags.Items.GRINDABLE_FLOWERS);
@@ -102,6 +105,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.YOKARAN_BLOOM_POWDER.get(),
                         ModItems.DEVILS_BLOOD_POWDER.get(),
                         ModItems.HARMONIUM_DUST.get()
+                )
+                .addTags(
+                        ModTags.Items.MACERATING_RESULT
                 );
 
         this.tag(ItemTags.PLANKS)

@@ -12,6 +12,7 @@ import com.CartersDev.crystechmod.block.entity.macerator.AlythumTiberiumMacerato
 import com.CartersDev.crystechmod.block.entity.macerator.CrystalCoreTiberiumMaceratorBlockEntity;
 import com.CartersDev.crystechmod.block.entity.macerator.TiberiumMaceratorBlockEntity;
 import com.CartersDev.crystechmod.block.entity.macerator.VitricTiberiumMaceratorBlockEntity;
+import com.CartersDev.crystechmod.block.entity.poweredkiln.PoweredKilnBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -61,6 +62,11 @@ public static final RegistryObject<BlockEntityType<TiberiumGrinderBlockEntity>> 
     public static final RegistryObject<BlockEntityType<CrystalCoreTiberiumInfuserBlockEntity>> CRYSTAL_CORE_TIBERIUM_INFUSER_BE =
             BLOCK_ENTITIES.register("crystal_core_tiberium_infuser_be", () -> BlockEntityType.Builder.of(
                     CrystalCoreTiberiumInfuserBlockEntity::new, ModBlocks.CRYSTAL_CORE_TIBERIUM_INFUSER.get()).build(null));
+
+
+    public static final RegistryObject<BlockEntityType<PoweredKilnBlockEntity>> POWERED_KILN_BE =
+            BLOCK_ENTITIES.register("powered_kiln_be", () -> BlockEntityType.Builder.of(
+                    PoweredKilnBlockEntity::new, ModBlocks.POWERED_KILN.get()).build(null));
 
 
 
