@@ -9,16 +9,18 @@
                 }
             ],
             "recipe": {
-                "type": "crystechmod:powered_smelting",
-                "craftTime": 150,
-                "energyAmount": 10,
+                "type": "crystechmod:tiberium_macerating",
+                "craftTime": 200,
+                "energyAmount": 20,
                 "ingredients": [
                     {
-                        "item": "mekanism:dust_uranium"
+                        "item": "minecraft:charcoal"
                     }
                 ],
+                "multiply": false,
                 "output": {
-                    "item": "mekanism:ingot_uranium"
+                    "count": 1,
+                    "item": "mekanism:dust_charcoal"
                 }
             }
         }
