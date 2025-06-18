@@ -26,7 +26,12 @@ import com.CartersDev.crystechmod.screen.maceratorScreen.AlythumTiberiumMacerato
 import com.CartersDev.crystechmod.screen.maceratorScreen.CrystalCoreTiberiumMaceratorScreen;
 import com.CartersDev.crystechmod.screen.maceratorScreen.TiberiumMaceratorScreen;
 import com.CartersDev.crystechmod.screen.maceratorScreen.VitricTiberiumMaceratorScreen;
+import com.CartersDev.crystechmod.screen.poweredKilnMenu.CrystalCoreKilnMenu;
+import com.CartersDev.crystechmod.screen.poweredKilnMenu.VitricKilnMenu;
+import com.CartersDev.crystechmod.screen.poweredKilnScreen.AlythumKilnScreen;
+import com.CartersDev.crystechmod.screen.poweredKilnScreen.CrystalCoreKilnScreen;
 import com.CartersDev.crystechmod.screen.poweredKilnScreen.PoweredKilnScreen;
+import com.CartersDev.crystechmod.screen.poweredKilnScreen.VitricKilnScreen;
 import com.CartersDev.crystechmod.sound.ModSounds;
 import com.CartersDev.crystechmod.util.BetterBrewingRecipe;
 import com.CartersDev.crystechmod.util.ModWoodTypes;
@@ -193,6 +198,9 @@ public class CrystalTech {
 
 
             MenuScreens.register(ModMenuTypes.POWERED_KILN_MENU.get(), PoweredKilnScreen::new);
+            MenuScreens.register(ModMenuTypes.ALYTHUM_KILN_MENU.get(), AlythumKilnScreen::new);
+            MenuScreens.register(ModMenuTypes.VITRIC_KILN_MENU.get(), VitricKilnScreen::new);
+            MenuScreens.register(ModMenuTypes.CRYSTAL_CORE_KILN_MENU.get(), CrystalCoreKilnScreen::new);
 
             //Tiberium
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_TIBERIUM_CROP.get(), RenderType.cutout());

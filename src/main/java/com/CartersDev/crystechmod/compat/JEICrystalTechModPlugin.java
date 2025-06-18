@@ -2,12 +2,14 @@ package com.CartersDev.crystechmod.compat;
 
 
 import com.CartersDev.crystechmod.CrystalTech;
+import com.CartersDev.crystechmod.recipe.PoweredKilnRecipe;
 import com.CartersDev.crystechmod.recipe.TiberiumGrinderRecipe;
 import com.CartersDev.crystechmod.recipe.TiberiumInfuserRecipe;
 import com.CartersDev.crystechmod.recipe.TiberiumMaceratorRecipe;
 import com.CartersDev.crystechmod.screen.grinderScreen.TiberiumGrinderScreen;
 import com.CartersDev.crystechmod.screen.infuserScreen.TiberiumInfuserScreen;
 import com.CartersDev.crystechmod.screen.maceratorScreen.TiberiumMaceratorScreen;
+import com.CartersDev.crystechmod.screen.poweredKilnScreen.PoweredKilnScreen;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IGuiHandlerRegistration;
@@ -31,6 +33,7 @@ public class JEICrystalTechModPlugin implements IModPlugin {
         registration.addRecipeCategories(new TiberiumGrindingCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new TiberiumMaceratingCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new TiberiumInfuserCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new PoweredKilnCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -47,6 +50,10 @@ public class JEICrystalTechModPlugin implements IModPlugin {
         RecipeManager infuserRecipeManager = Minecraft.getInstance().level.getRecipeManager();
         List<TiberiumInfuserRecipe> infuseingRecipes = infuserRecipeManager.getAllRecipesFor(TiberiumInfuserRecipe.Type.INSTANCE);
         registration.addRecipes(TiberiumInfuserCategory.TIBERIUM_INFUSING_TYPE, infuseingRecipes);
+
+        RecipeManager poweredKilnRecipeManager = Minecraft.getInstance().level.getRecipeManager();
+        List<PoweredKilnRecipe> poweredKilnRecipes = poweredKilnRecipeManager.getAllRecipesFor(PoweredKilnRecipe.Type.INSTANCE);
+        registration.addRecipes(PoweredKilnCategory.POWERED_KILN_TYPE, poweredKilnRecipes);
     }
 
     @Override
@@ -59,5 +66,8 @@ public class JEICrystalTechModPlugin implements IModPlugin {
 
         registration.addRecipeClickArea(TiberiumInfuserScreen.class, 70, 35, 20, 30,
                 TiberiumInfuserCategory.TIBERIUM_INFUSING_TYPE);
+
+        registration.addRecipeClickArea(PoweredKilnScreen.class, 80, 35, 20, 30,
+                PoweredKilnCategory.POWERED_KILN_TYPE);
     }
 }

@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:powered_smelting",
+  "craftTime": 150,
+  "energyAmount": 10,
+  "ingredients": [
+    {
+      "item": "minecraft:stripped_birch_log"
+    }
+  ],
+  "output": {
+    "item": "minecraft:charcoal"
+  }
+}

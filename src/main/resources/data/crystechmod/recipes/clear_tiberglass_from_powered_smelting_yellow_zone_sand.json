@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:powered_smelting",
+  "craftTime": 150,
+  "energyAmount": 10,
+  "ingredients": [
+    {
+      "item": "crystechmod:yellow_zone_sand"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:clear_tiberglass"
+  }
+}

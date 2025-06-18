@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:powered_smelting",
+  "craftTime": 150,
+  "energyAmount": 10,
+  "ingredients": [
+    {
+      "item": "minecraft:white_terracotta"
+    }
+  ],
+  "output": {
+    "item": "minecraft:white_glazed_terracotta"
+  }
+}

@@ -85,12 +85,12 @@ public class AlloyKilnBlock extends BaseEntityBlock {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
             if(blockEntity instanceof TiberiumMaceratorBlockEntity) {
                 ((TiberiumMaceratorBlockEntity) blockEntity).drops();
-            } else if (blockEntity instanceof AlythumTiberiumMaceratorBlockEntity) {
-                ((AlythumTiberiumMaceratorBlockEntity) blockEntity).drops();
-            }else if (blockEntity instanceof VitricTiberiumMaceratorBlockEntity) {
-                ((VitricTiberiumMaceratorBlockEntity) blockEntity).drops();
-            }else if (blockEntity instanceof CrystalCoreTiberiumMaceratorBlockEntity) {
-                ((CrystalCoreTiberiumMaceratorBlockEntity) blockEntity).drops();
+//            } else if (blockEntity instanceof AlythumTiberiumMaceratorBlockEntity) {
+//                ((AlythumTiberiumMaceratorBlockEntity) blockEntity).drops();
+//            }else if (blockEntity instanceof VitricTiberiumMaceratorBlockEntity) {
+//                ((VitricTiberiumMaceratorBlockEntity) blockEntity).drops();
+//            }else if (blockEntity instanceof CrystalCoreTiberiumMaceratorBlockEntity) {
+//                ((CrystalCoreTiberiumMaceratorBlockEntity) blockEntity).drops();
             }
         }
         super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
@@ -103,14 +103,14 @@ public class AlloyKilnBlock extends BaseEntityBlock {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof TiberiumMaceratorBlockEntity) {
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (TiberiumMaceratorBlockEntity) entity, pPos);
-            } else if (entity instanceof AlythumTiberiumMaceratorBlockEntity) {
-                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (AlythumTiberiumMaceratorBlockEntity) entity, pPos);
-            } else if (entity instanceof VitricTiberiumMaceratorBlockEntity) {
-                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (VitricTiberiumMaceratorBlockEntity) entity, pPos);
-            } else if (entity instanceof CrystalCoreTiberiumMaceratorBlockEntity) {
-                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (CrystalCoreTiberiumMaceratorBlockEntity) entity, pPos);
-            } else {
-                throw new IllegalStateException("The Container Provider is AWOL!");
+//            } else if (entity instanceof AlythumTiberiumMaceratorBlockEntity) {
+//                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (AlythumTiberiumMaceratorBlockEntity) entity, pPos);
+//            } else if (entity instanceof VitricTiberiumMaceratorBlockEntity) {
+//                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (VitricTiberiumMaceratorBlockEntity) entity, pPos);
+//            } else if (entity instanceof CrystalCoreTiberiumMaceratorBlockEntity) {
+//                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (CrystalCoreTiberiumMaceratorBlockEntity) entity, pPos);
+//            } else {
+//                throw new IllegalStateException("The Container Provider is AWOL!");
             }
         }
 
@@ -125,9 +125,9 @@ public class AlloyKilnBlock extends BaseEntityBlock {
          int lvl = pState.getValue(MACHINE_CORE_LVL);
         return switch (lvl) {
             case 1 -> new TiberiumMaceratorBlockEntity(pPos, pState);
-            case 2 -> new AlythumTiberiumMaceratorBlockEntity(pPos, pState);
-            case 3 -> new VitricTiberiumMaceratorBlockEntity(pPos, pState);
-            case 4 -> new CrystalCoreTiberiumMaceratorBlockEntity(pPos, pState);
+//            case 2 -> new AlythumTiberiumMaceratorBlockEntity(pPos, pState);
+//            case 3 -> new VitricTiberiumMaceratorBlockEntity(pPos, pState);
+//            case 4 -> new CrystalCoreTiberiumMaceratorBlockEntity(pPos, pState);
             default -> throw new IllegalStateException("Unexpected value: " + lvl);
         };
     }
@@ -141,12 +141,12 @@ public class AlloyKilnBlock extends BaseEntityBlock {
         return switch (lvl){
             case 1 -> createTickerHelper(pBlockEntityType, ModBlockEntities.TIBERIUM_MACERATOR_BE.get(),
                     ((pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1)));
-            case 2 -> createTickerHelper(pBlockEntityType, ModBlockEntities.ALYTHUM_TIBERIUM_MACERATOR_BE.get(),
-                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
-            case 3 -> createTickerHelper(pBlockEntityType, ModBlockEntities.VITRIC_TIBERIUM_MACERATOR_BE.get(),
-                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
-            case 4 ->createTickerHelper(pBlockEntityType, ModBlockEntities.CRYSTAL_CORE_TIBERIUM_MACERATOR_BE.get(),
-                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
+//            case 2 -> createTickerHelper(pBlockEntityType, ModBlockEntities.ALYTHUM_TIBERIUM_MACERATOR_BE.get(),
+//                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
+//            case 3 -> createTickerHelper(pBlockEntityType, ModBlockEntities.VITRIC_TIBERIUM_MACERATOR_BE.get(),
+//                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
+//            case 4 ->createTickerHelper(pBlockEntityType, ModBlockEntities.CRYSTAL_CORE_TIBERIUM_MACERATOR_BE.get(),
+//                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
             default -> throw new IllegalStateException("Unexpected value: " + lvl);
         };
 

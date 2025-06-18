@@ -53,7 +53,82 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.copy(ModTags.Blocks.GRINDABLE_FLOWERS, ModTags.Items.GRINDABLE_FLOWERS);
         this.copy(ModTags.Blocks.MACERATABLE, ModTags.Items.MACERATABLE);
         this.copy(ModTags.Blocks.MACERATING_RESULT, ModTags.Items.MACERATING_RESULT);
+
+        this.copy(ModTags.Blocks.SMELTABLE, ModTags.Items.SMELTABLE);
+        this.copy(ModTags.Blocks.SMELTING_RESULT, ModTags.Items.SMELTING_RESULT);
+
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
+
+        this.tag(ModTags.Items.SMELTING)
+                .add(
+                        Items.BEEF,
+                        Items.CHICKEN,
+                        Items.PORKCHOP,
+                        Items.RABBIT,
+                        Items.MUTTON,
+                        Items.COD,
+                        Items.SALMON,
+                        Items.POTATO,
+                        Items.RAW_IRON,
+                        Items.RAW_COPPER,
+                        Items.RAW_GOLD,
+                        Items.KELP,
+                        Items.CLAY_BALL,
+                        Items.CHORUS_FRUIT,
+                        ModItems.RAW_ALYTHUM.get(),
+                        ModItems.RAW_GUNDANIUM.get(),
+                        ModItems.RAW_HARMONIUM.get(),
+                        ModItems.RAW_INFECTED_MEAT.get(),
+                        ModItems.IRON_DUST.get(),
+                        ModItems.GOLD_DUST.get(),
+                        ModItems.COPPER_DUST.get(),
+                        ModItems.GUNDANIUM_DUST.get(),
+                        ModItems.ALYTHUM_DUST.get(),
+                        ModItems.HARMONIUM_DUST.get(),
+                        ModItems.ILLYRIM_BLEND.get(),
+                        ModItems.LG_CORE_BLEND.get(),
+                        ModItems.MG_CORE_BLEND.get(),
+                        ModItems.HG_CORE_BLEND.get()
+                )
+                .addTags(ModTags.Items.SMELTABLE);
+
+
+        this.tag(ModTags.Items.SMELTING_RESULT_2)
+                .add(
+                        Items.COOKED_BEEF,
+                        Items.COOKED_CHICKEN,
+                        Items.COOKED_PORKCHOP,
+                        Items.COOKED_RABBIT,
+                        Items.COOKED_MUTTON,
+                        Items.COOKED_COD,
+                        Items.COOKED_SALMON,
+                        Items.BAKED_POTATO,
+                        Items.IRON_NUGGET,
+                        Items.IRON_INGOT,
+                        Items.COPPER_INGOT,
+                        Items.GOLD_INGOT,
+                        Items.DRIED_KELP,
+                        Items.BRICK,
+                        Items.POPPED_CHORUS_FRUIT,
+                        Items.CHARCOAL,
+                        Items.GREEN_DYE,
+                        Items.LIME_DYE,
+                        Items.NETHER_BRICK,
+                        Items.NETHERITE_SCRAP,
+                        ModItems.ALYTHUM_INGOT.get(),
+                        ModItems.GUNDANIUM_INGOT.get(),
+                        ModItems.HARMONIUM_INGOT.get(),
+                        ModItems.COOKED_INFECTED_MEAT.get(),
+                        ModItems.ILLYRIM_INGOT.get(),
+                        ModItems.LG_CORE_INGOT.get(),
+                        ModItems.MG_CORE_INGOT.get(),
+                        ModItems.HG_CORE_INGOT.get()
+                )
+                .addTags(ModTags.Items.SMELTING_RESULT);
+
+
+
+
 
 
         this.tag(ModTags.Items.GRINDABLE)

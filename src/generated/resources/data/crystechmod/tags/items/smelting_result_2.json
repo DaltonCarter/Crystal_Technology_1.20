@@ -1,0 +1,33 @@
+{
+  "values": [
+    "minecraft:cooked_beef",
+    "minecraft:cooked_chicken",
+    "minecraft:cooked_porkchop",
+    "minecraft:cooked_rabbit",
+    "minecraft:cooked_mutton",
+    "minecraft:cooked_cod",
+    "minecraft:cooked_salmon",
+    "minecraft:baked_potato",
+    "minecraft:iron_nugget",
+    "minecraft:iron_ingot",
+    "minecraft:copper_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:dried_kelp",
+    "minecraft:brick",
+    "minecraft:popped_chorus_fruit",
+    "minecraft:charcoal",
+    "minecraft:green_dye",
+    "minecraft:lime_dye",
+    "minecraft:nether_brick",
+    "minecraft:netherite_scrap",
+    "crystechmod:alythum_ingot",
+    "crystechmod:gundanium_ingot",
+    "crystechmod:harmonium_ingot",
+    "crystechmod:cooked_infected_meat",
+    "crystechmod:illyrim_ingot",
+    "crystechmod:lg_core_ingot",
+    "crystechmod:mg_core_ingot",
+    "crystechmod:hg_core_ingot",
+    "#crystechmod:smelting_result"
+  ]
+}

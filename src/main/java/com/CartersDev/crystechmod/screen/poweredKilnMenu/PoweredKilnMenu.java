@@ -36,9 +36,9 @@ public class PoweredKilnMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
-            this.addSlot(new SlotItemHandler(iItemHandler, 0, 80, 11));
+            this.addSlot(new SlotItemHandler(iItemHandler, 0, 56, 17));
             this.addSlot(new SlotItemHandler(iItemHandler,1,134,59));
-            this.addSlot(new SlotItemHandler(iItemHandler,2,80,59));
+            this.addSlot(new SlotItemHandler(iItemHandler,2,116,35));
 
         });
 
@@ -55,9 +55,18 @@ public class PoweredKilnMenu extends AbstractContainerMenu {
     public int getScaledProgress() {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);
-        int progressArrowSize = 26;
+        int progressArrowSize = 24;
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
+    }
+
+    public int getScaledProgress2() {
+        int progress = this.data.get(0);
+        int maxProgress = this.data.get(1);
+        int progressFlameSize = 13;
+
+
+        return maxProgress != 0 && progress != 0 ? progress * progressFlameSize / maxProgress : 0;
     }
 
 

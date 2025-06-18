@@ -12,6 +12,9 @@ import com.CartersDev.crystechmod.block.entity.renderer.macerator.CrystalCoreTib
 import com.CartersDev.crystechmod.block.entity.renderer.macerator.TiberiumMaceratorBlockEntityRenderer;
 import com.CartersDev.crystechmod.block.entity.renderer.macerator.VitricTiberiumMaceratorBlockEntityRenderer;
 import com.CartersDev.crystechmod.block.entity.renderer.poweredkiln.PoweredKilnBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.poweredkiln.AlythumKilnBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.poweredkiln.VitricKilnBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.poweredkiln.CrystalCoreKilnBlockEntityRenderer;
 import com.CartersDev.crystechmod.entity.client.ModModelLayers;
 import com.CartersDev.crystechmod.entity.client.RhinoModel;
 import com.CartersDev.crystechmod.particle.ModParticles;
@@ -48,6 +51,9 @@ public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.CRYSTAL_CORE_TIBERIUM_INFUSER_BE.get(), CrystalCoreTiberiumInfuserBlockEntityRenderer::new);
 
         event.registerBlockEntityRenderer(ModBlockEntities.POWERED_KILN_BE.get(), PoweredKilnBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.ALYTHUM_KILN_BE.get(), AlythumKilnBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.VITRIC_KILN_BE.get(), VitricKilnBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.CRYSTAL_CORE_KILN_BE.get(), CrystalCoreKilnBlockEntityRenderer::new);
 
         event.registerBlockEntityRenderer(ModBlockEntities.MOD_SIGN.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.MOD_HANGING_SIGN.get(), HangingSignRenderer::new);

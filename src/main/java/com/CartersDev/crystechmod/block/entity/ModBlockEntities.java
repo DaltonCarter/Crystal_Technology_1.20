@@ -12,7 +12,10 @@ import com.CartersDev.crystechmod.block.entity.macerator.AlythumTiberiumMacerato
 import com.CartersDev.crystechmod.block.entity.macerator.CrystalCoreTiberiumMaceratorBlockEntity;
 import com.CartersDev.crystechmod.block.entity.macerator.TiberiumMaceratorBlockEntity;
 import com.CartersDev.crystechmod.block.entity.macerator.VitricTiberiumMaceratorBlockEntity;
+import com.CartersDev.crystechmod.block.entity.poweredkiln.AlythumKilnBlockEntity;
+import com.CartersDev.crystechmod.block.entity.poweredkiln.CrystalCoreKilnBlockEntity;
 import com.CartersDev.crystechmod.block.entity.poweredkiln.PoweredKilnBlockEntity;
+import com.CartersDev.crystechmod.block.entity.poweredkiln.VitricKilnBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -64,9 +67,22 @@ public static final RegistryObject<BlockEntityType<TiberiumGrinderBlockEntity>> 
                     CrystalCoreTiberiumInfuserBlockEntity::new, ModBlocks.CRYSTAL_CORE_TIBERIUM_INFUSER.get()).build(null));
 
 
+
     public static final RegistryObject<BlockEntityType<PoweredKilnBlockEntity>> POWERED_KILN_BE =
             BLOCK_ENTITIES.register("powered_kiln_be", () -> BlockEntityType.Builder.of(
                     PoweredKilnBlockEntity::new, ModBlocks.POWERED_KILN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<AlythumKilnBlockEntity>> ALYTHUM_KILN_BE =
+            BLOCK_ENTITIES.register("alythum_kiln_be", () -> BlockEntityType.Builder.of(
+                    AlythumKilnBlockEntity::new, ModBlocks.ALYTHUM_KILN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<VitricKilnBlockEntity>> VITRIC_KILN_BE =
+            BLOCK_ENTITIES.register("vitric_kiln_be", () -> BlockEntityType.Builder.of(
+                    VitricKilnBlockEntity::new, ModBlocks.VITRIC_KILN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<CrystalCoreKilnBlockEntity>> CRYSTAL_CORE_KILN_BE =
+            BLOCK_ENTITIES.register("crystal_core_kiln_be", () -> BlockEntityType.Builder.of(
+                    CrystalCoreKilnBlockEntity::new, ModBlocks.CRYSTAL_CORE_KILN.get()).build(null));
 
 
 

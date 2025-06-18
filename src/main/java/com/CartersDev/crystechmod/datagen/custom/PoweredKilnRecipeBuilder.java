@@ -70,6 +70,7 @@ public class PoweredKilnRecipeBuilder implements RecipeBuilder {
         private final Item result;
         private final Ingredient ingredient;
 
+
         private final int count;
         private final int craftTime;
         private final int energyAmount;

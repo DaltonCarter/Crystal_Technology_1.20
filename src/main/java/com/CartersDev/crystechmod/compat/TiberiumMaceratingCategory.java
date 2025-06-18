@@ -40,7 +40,7 @@ private final IDrawable icon;
 
     @Override
     public Component getTitle() {
-        return Component.translatable("block.crystechmod.tiberium_macerator");
+        return Component.literal("Vitricium Macerator");
     }
 
     @Override

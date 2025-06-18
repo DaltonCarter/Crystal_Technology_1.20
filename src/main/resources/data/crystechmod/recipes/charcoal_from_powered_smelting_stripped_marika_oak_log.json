@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:powered_smelting",
+  "craftTime": 150,
+  "energyAmount": 10,
+  "ingredients": [
+    {
+      "item": "crystechmod:stripped_marika_oak_log"
+    }
+  ],
+  "output": {
+    "item": "minecraft:charcoal"
+  }
+}

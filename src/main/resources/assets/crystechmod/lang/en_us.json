@@ -1067,6 +1067,9 @@
   "block.crystechmod.crystal_core_tiberium_infuser": "Ultimate Tiberium Infuser",
 
   "block.crystechmod.powered_kiln": "Basic Kiln",
+  "block.crystechmod.alythum_kiln": "Improved Kiln",
+  "block.crystechmod.vitric_kiln": "Advanced Kiln",
+  "block.crystechmod.crystal_core_kiln": "Ultimate Kiln",
 
 
   "enchantment.crystechmod.lightning_striker": "Lightning Striker",

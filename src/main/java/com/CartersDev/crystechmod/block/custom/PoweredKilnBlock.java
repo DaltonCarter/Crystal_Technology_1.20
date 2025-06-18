@@ -1,7 +1,10 @@
 package com.CartersDev.crystechmod.block.custom;
 
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
+import com.CartersDev.crystechmod.block.entity.poweredkiln.AlythumKilnBlockEntity;
+import com.CartersDev.crystechmod.block.entity.poweredkiln.CrystalCoreKilnBlockEntity;
 import com.CartersDev.crystechmod.block.entity.poweredkiln.PoweredKilnBlockEntity;
+import com.CartersDev.crystechmod.block.entity.poweredkiln.VitricKilnBlockEntity;
 import com.CartersDev.crystechmod.util.ModBlockstateProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -82,12 +85,12 @@ public class PoweredKilnBlock extends BaseEntityBlock {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
             if(blockEntity instanceof PoweredKilnBlockEntity) {
                 ((PoweredKilnBlockEntity) blockEntity).drops();
-//            } else if (blockEntity instanceof AlythumTiberiumMaceratorBlockEntity) {
-//                ((AlythumTiberiumMaceratorBlockEntity) blockEntity).drops();
-//            }else if (blockEntity instanceof VitricTiberiumMaceratorBlockEntity) {
-//                ((VitricTiberiumMaceratorBlockEntity) blockEntity).drops();
-//            }else if (blockEntity instanceof CrystalCoreTiberiumMaceratorBlockEntity) {
-//                ((CrystalCoreTiberiumMaceratorBlockEntity) blockEntity).drops();
+            } else if (blockEntity instanceof AlythumKilnBlockEntity) {
+                ((AlythumKilnBlockEntity) blockEntity).drops();
+            }else if (blockEntity instanceof VitricKilnBlockEntity) {
+                ((VitricKilnBlockEntity) blockEntity).drops();
+            }else if (blockEntity instanceof CrystalCoreKilnBlockEntity) {
+                ((CrystalCoreKilnBlockEntity) blockEntity).drops();
             }
         }
         super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
@@ -100,14 +103,14 @@ public class PoweredKilnBlock extends BaseEntityBlock {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof PoweredKilnBlockEntity) {
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (PoweredKilnBlockEntity) entity, pPos);
-//            } else if (entity instanceof AlythumTiberiumMaceratorBlockEntity) {
-//                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (AlythumTiberiumMaceratorBlockEntity) entity, pPos);
-//            } else if (entity instanceof VitricTiberiumMaceratorBlockEntity) {
-//                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (VitricTiberiumMaceratorBlockEntity) entity, pPos);
-//            } else if (entity instanceof CrystalCoreTiberiumMaceratorBlockEntity) {
-//                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (CrystalCoreTiberiumMaceratorBlockEntity) entity, pPos);
-//            } else {
-//                throw new IllegalStateException("The Container Provider is AWOL!");
+            } else if (entity instanceof AlythumKilnBlockEntity) {
+                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (AlythumKilnBlockEntity) entity, pPos);
+            } else if (entity instanceof VitricKilnBlockEntity) {
+                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (VitricKilnBlockEntity) entity, pPos);
+            } else if (entity instanceof CrystalCoreKilnBlockEntity) {
+                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (CrystalCoreKilnBlockEntity) entity, pPos);
+            } else {
+                throw new IllegalStateException("The Container Provider is AWOL!");
             }
         }
 
@@ -122,9 +125,9 @@ public class PoweredKilnBlock extends BaseEntityBlock {
          int lvl = pState.getValue(MACHINE_CORE_LVL);
         return switch (lvl) {
             case 1 -> new PoweredKilnBlockEntity(pPos, pState);
-//            case 2 -> new AlythumTiberiumMaceratorBlockEntity(pPos, pState);
-//            case 3 -> new VitricTiberiumMaceratorBlockEntity(pPos, pState);
-//            case 4 -> new CrystalCoreTiberiumMaceratorBlockEntity(pPos, pState);
+            case 2 -> new AlythumKilnBlockEntity(pPos, pState);
+            case 3 -> new VitricKilnBlockEntity(pPos, pState);
+            case 4 -> new CrystalCoreKilnBlockEntity(pPos, pState);
             default -> throw new IllegalStateException("Unexpected value: " + lvl);
         };
     }
@@ -138,12 +141,12 @@ public class PoweredKilnBlock extends BaseEntityBlock {
         return switch (lvl){
             case 1 -> createTickerHelper(pBlockEntityType, ModBlockEntities.POWERED_KILN_BE.get(),
                     ((pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1)));
-//            case 2 -> createTickerHelper(pBlockEntityType, ModBlockEntities.ALYTHUM_TIBERIUM_MACERATOR_BE.get(),
-//                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
-//            case 3 -> createTickerHelper(pBlockEntityType, ModBlockEntities.VITRIC_TIBERIUM_MACERATOR_BE.get(),
-//                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
-//            case 4 ->createTickerHelper(pBlockEntityType, ModBlockEntities.CRYSTAL_CORE_TIBERIUM_MACERATOR_BE.get(),
-//                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
+            case 2 -> createTickerHelper(pBlockEntityType, ModBlockEntities.ALYTHUM_KILN_BE.get(),
+                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
+            case 3 -> createTickerHelper(pBlockEntityType, ModBlockEntities.VITRIC_KILN_BE.get(),
+                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
+            case 4 ->createTickerHelper(pBlockEntityType, ModBlockEntities.CRYSTAL_CORE_KILN_BE.get(),
+                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
             default -> throw new IllegalStateException("Unexpected value: " + lvl);
         };
 

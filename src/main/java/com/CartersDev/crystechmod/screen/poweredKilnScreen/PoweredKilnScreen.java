@@ -77,7 +77,11 @@ public class PoweredKilnScreen extends AbstractContainerScreen<PoweredKilnMenu> 
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
-            guiGraphics.blit(TEXTURE, x + 85, y + 30, 176, 0, 8, menu.getScaledProgress());
+            int k = this.menu.getScaledProgress();
+            int i = this.menu.getScaledProgress2();
+            guiGraphics.blit(TEXTURE,  x + 57, y + 36 + 12 - i, 176, 12 - i, 14, i + 1);
+
+            guiGraphics.blit(TEXTURE, x + 79, y + 34, 176, 14, k + 1, 16);
         }
     }
 

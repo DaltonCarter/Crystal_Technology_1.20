@@ -10,7 +10,10 @@ import com.CartersDev.crystechmod.screen.maceratorMenu.AlythumTiberiumMaceratorM
 import com.CartersDev.crystechmod.screen.maceratorMenu.CrystalCoreTiberiumMaceratorMenu;
 import com.CartersDev.crystechmod.screen.maceratorMenu.TiberiumMaceratorMenu;
 import com.CartersDev.crystechmod.screen.maceratorMenu.VitricTiberiumMaceratorMenu;
+import com.CartersDev.crystechmod.screen.poweredKilnMenu.AlythumKilnMenu;
+import com.CartersDev.crystechmod.screen.poweredKilnMenu.CrystalCoreKilnMenu;
 import com.CartersDev.crystechmod.screen.poweredKilnMenu.PoweredKilnMenu;
+import com.CartersDev.crystechmod.screen.poweredKilnMenu.VitricKilnMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -56,6 +59,15 @@ public class ModMenuTypes {
 
     public static final RegistryObject<MenuType<PoweredKilnMenu>> POWERED_KILN_MENU =
             registerMenuType("powered_kiln_menu", PoweredKilnMenu::new);
+
+    public static final RegistryObject<MenuType<AlythumKilnMenu>> ALYTHUM_KILN_MENU =
+            registerMenuType("alythum_kiln_menu", AlythumKilnMenu::new);
+
+    public static final RegistryObject<MenuType<VitricKilnMenu>> VITRIC_KILN_MENU =
+            registerMenuType("vitric_kiln_menu", VitricKilnMenu::new);
+
+    public static final RegistryObject<MenuType<CrystalCoreKilnMenu>> CRYSTAL_CORE_KILN_MENU =
+            registerMenuType("crystal_core_kiln_menu", CrystalCoreKilnMenu::new);
 
 
 

@@ -40,6 +40,8 @@ public class ModTags {
         public static final TagKey<Block> GRINDABLE_FLOWERS = tag("grindable_flowers");
         public static final TagKey<Block> MACERATABLE = tag("maceratable");
         public static final TagKey<Block> MACERATING_RESULT = tag("macerating_result");
+        public static final TagKey<Block> SMELTABLE = tag("smeltable");
+        public static final TagKey<Block> SMELTING_RESULT = tag("smelting_result");
 
 
 
@@ -93,6 +95,10 @@ public class ModTags {
         public static final TagKey<Item> GRINDING_RESULT= tag("grinding_result");
         public static final TagKey<Item> MACERATABLE = tag("maceratable");
         public static final TagKey<Item> MACERATING_RESULT = tag("macerating_result");
+        public static final TagKey<Item> SMELTING = tag("smelting");
+        public static final TagKey<Item> SMELTING_RESULT_2 = tag("smelting_result_2");
+        public static final TagKey<Item> SMELTABLE = tag("smeltable");
+        public static final TagKey<Item> SMELTING_RESULT = tag("smelting_result");
 
 
 

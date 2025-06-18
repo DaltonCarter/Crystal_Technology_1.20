@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-16T02:39:50.6720359	Tags for minecraft:item mod id crystechmod
+// 1.20.1	2025-06-17T19:40:29.6548438	Tags for minecraft:item mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/items/aeries_ores.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/items/alythum_ores.json
 6b38af71a7ebba97f729de43e6ee84033f8e45cc data/crystechmod/tags/items/concretes.json
@@ -18,6 +18,10 @@ c7bbac2058df90e9377b5e00ecc05db2c0213cad data/crystechmod/tags/items/kryon_ores.
 76338cc754cb5d1030cd4159192e0089f6c09fae data/crystechmod/tags/items/marika_oak_logs.json
 b97904e909222fd61767ad7160b0c32323c6852d data/crystechmod/tags/items/mod_planks.json
 7ff009a6ce8d964af59c35e91e257d0fca7cfd07 data/crystechmod/tags/items/plagued_logs.json
+ee5b7fa627624f169c1f928bb2933cee6d008256 data/crystechmod/tags/items/smeltable.json
+faff32d0d442832b903319dcec459546ecdc76b6 data/crystechmod/tags/items/smelting.json
+ee6c95b24ed7fb71ba4fb4b4ee72ce886ce3b2ba data/crystechmod/tags/items/smelting_result.json
+dd441d87baa2b0ce51464c0dc26b92b873357115 data/crystechmod/tags/items/smelting_result_2.json
 ecf2a3889f87177c168a6ffc2c5f25e077381f19 data/crystechmod/tags/items/sticks.json
 39acdcf33383e05a367faca9c1c896cc6cdba9c0 data/crystechmod/tags/items/tibercrete_sands.json
 d1f3b267efaa0e25e62f7c95f49be08e24c1a785 data/forge/tags/items/dusts.json

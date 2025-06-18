@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:powered_smelting",
+  "craftTime": 150,
+  "energyAmount": 10,
+  "ingredients": [
+    {
+      "item": "crystechmod:deepslate_harmonium_ore"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:harmonium_ingot"
+  }
+}
