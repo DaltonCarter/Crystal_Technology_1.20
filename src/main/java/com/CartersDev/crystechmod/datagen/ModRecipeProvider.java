@@ -2778,7 +2778,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('H', ModItems.HARMONIUM_INGOT.get())
                 .define('I', ModItems.ILLUMINA_CRYSTAL.get())
                 .define('K', ModItems.KRYON_CRYSTAL.get())
-                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALYTHUM_TIBERIUM_INFUSER.get())
@@ -2792,7 +2792,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('A', ModItems.ALYTHUM_INGOT.get())
                 .define('I', ModBlocks.TIBERIUM_INFUSER.get())
                 .define('K', ModItems.ILLUMINATE_COMPONENT.get())
-                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VITRIC_TIBERIUM_INFUSER.get())
@@ -2807,7 +2807,49 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('B', ModBlocks.TIBERIUM_BLUE_BLOCK.get())
                 .define('R', ModBlocks.TIBERIUM_RED_BLOCK.get())
                 .define('P', ModBlocks.TIBERIUM_PURPLE_BLOCK.get())
-                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.POWERED_KILN.get())
+                .pattern("HIH")
+                .pattern("KMK")
+                .pattern("FRB")
+                .define('R', ModTags.Items.GLASS)
+                .define('F', Blocks.FURNACE)
+                .define('B', Blocks.BLAST_FURNACE)
+                .define('M', ModBlocks.GUNDANIUM_MACHINE_CORE.get())
+                .define('H', ModItems.HARMONIUM_INGOT.get())
+                .define('I', ModItems.ILLUMINA_CRYSTAL.get())
+                .define('K', ModItems.KRYON_CRYSTAL.get())
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALYTHUM_KILN.get())
+                .pattern("AIA")
+                .pattern("KMK")
+                .pattern("CRC")
+                .define('R', ModItems.HARMONIC_RELAY.get())
+                .define('C', ModItems.KRYONIC_CAPACITOR.get())
+                .define('M', ModBlocks.ALYTHUM_MACHINE_CORE.get())
+                .define('A', ModItems.ALYTHUM_INGOT.get())
+                .define('I', ModBlocks.POWERED_KILN.get())
+                .define('K', ModItems.ILLUMINATE_COMPONENT.get())
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VITRIC_KILN.get())
+                .pattern("AIA")
+                .pattern("TMB")
+                .pattern("RVP")
+                .define('M', ModBlocks.VITRIC_MACHINE_CORE.get())
+                .define('A', ModItems.ILLYRIM_INGOT.get())
+                .define('V', ModItems.VITRIC_CIRCUIT.get())
+                .define('I', ModBlocks.ALYTHUM_KILN.get())
+                .define('T', ModBlocks.TIBERIUM_BLOCK.get())
+                .define('B', ModBlocks.TIBERIUM_BLUE_BLOCK.get())
+                .define('R', ModBlocks.TIBERIUM_RED_BLOCK.get())
+                .define('P', ModBlocks.TIBERIUM_PURPLE_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TIBERIUM_MACERATOR.get())
@@ -2820,7 +2862,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('A', ModItems.GUNDANIUM_INGOT.get())
                 .define('I', ModBlocks.TIBERIUM_GRINDER.get())
                 .define('K', ModItems.GRINDER_GEAR.get())
-                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALYTHUM_TIBERIUM_MACERATOR.get())
@@ -2833,7 +2875,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('A', ModItems.HARMONIUM_INGOT.get())
                 .define('I', ModBlocks.TIBERIUM_MACERATOR.get())
                 .define('K', ModItems.ILLUMINATE_COMPONENT.get())
-                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VITRIC_TIBERIUM_MACERATOR.get())
@@ -2848,7 +2890,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('B', ModBlocks.TIBERIUM_BLUE_BLOCK.get())
                 .define('R', ModBlocks.TIBERIUM_RED_BLOCK.get())
                 .define('P', ModBlocks.TIBERIUM_PURPLE_BLOCK.get())
-                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GUNDANIUM_MACHINE_CORE.get())
@@ -4317,6 +4359,12 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
         new PoweredKilnRecipeBuilder(ModItems.HG_CORE_BLEND.get(), ModItems.HG_CORE_INGOT.get(), 1, 150, 10)
                 .unlockedBy("has_hg_core_blend", has(ModItems.HG_CORE_BLEND.get())).save(consumer);
+
+        new PoweredKilnRecipeBuilder(ModBlocks.RED_ZONE_SAND.get(), ModBlocks.CLEAR_TIBERGLASS.get(), 1, 150, 10)
+                .unlockedBy("has_red_zone_sand", has(ModBlocks.RED_ZONE_SAND.get())).save(consumer);
+
+        new PoweredKilnRecipeBuilder(ModBlocks.YELLOW_ZONE_SAND.get(), ModBlocks.CLEAR_TIBERGLASS.get(), 1, 150, 10)
+                .unlockedBy("has_yellow_zone_sand", has(ModBlocks.YELLOW_ZONE_SAND.get())).save(consumer);
 
 
 

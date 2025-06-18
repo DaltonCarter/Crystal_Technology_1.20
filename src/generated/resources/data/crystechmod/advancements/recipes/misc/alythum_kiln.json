@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "crystechmod:tiberium_macerator"
+        "recipe": "crystechmod:alythum_kiln"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "crystechmod:tiberium_macerator"
+      "crystechmod:alythum_kiln"
     ]
   },
   "sends_telemetry_event": false

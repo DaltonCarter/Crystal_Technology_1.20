@@ -1,0 +1,28 @@
+{
+    "type": "forge:conditional",
+    "recipes": [
+        {
+            "conditions": [
+                {
+                    "type": "forge:mod_loaded",
+                    "modid": "mekanism"
+                }
+            ],
+            "recipe": {
+                "type": "crystechmod:tiberium_macerating",
+                "craftTime": 200,
+                "energyAmount": 20,
+                "ingredients": [
+                    {
+                        "item": "mekanism:raw_lead"
+                    }
+                ],
+                "multiply": true,
+                "output": {
+                    "count": 2,
+                    "item": "mekanism:dust_lead"
+                }
+            }
+        }
+    ]
+}

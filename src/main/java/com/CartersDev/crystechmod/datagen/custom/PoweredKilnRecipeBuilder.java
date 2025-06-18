@@ -114,7 +114,7 @@ public class PoweredKilnRecipeBuilder implements RecipeBuilder {
         public ResourceLocation getId() {
 
             return new ResourceLocation(CrystalTech.MOD_ID,
-                    ForgeRegistries.ITEMS.getKey(this.result).getPath() + "_from_powered_smelting");
+                    ForgeRegistries.ITEMS.getKey(this.result).getPath() + "_from_powered_smelting_" + ingredient.hashCode());
         }
 
         @Override
