@@ -28,6 +28,7 @@
     "crystechmod:lg_core_ingot",
     "crystechmod:mg_core_ingot",
     "crystechmod:hg_core_ingot",
-    "#crystechmod:smelting_result"
+    "#crystechmod:smelting_result",
+    "#forge:ingots"
   ]
 }

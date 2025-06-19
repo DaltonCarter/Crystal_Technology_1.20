@@ -2814,7 +2814,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("HIH")
                 .pattern("KMK")
                 .pattern("FRB")
-                .define('R', ModTags.Items.GLASS)
+                .define('R', ModItems.HARMONIC_RELAY.get())
                 .define('F', Blocks.FURNACE)
                 .define('B', Blocks.BLAST_FURNACE)
                 .define('M', ModBlocks.GUNDANIUM_MACHINE_CORE.get())

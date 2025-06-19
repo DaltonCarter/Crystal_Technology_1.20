@@ -82,6 +82,19 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.DEVILS_BLOOD.get()
                 );
 
+        this.tag(Tags.Blocks.ORES)
+                .add(ModBlocks.GUNDANIUM_ORE.get(),
+                        ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get(),
+                        ModBlocks.DEEPSLATE_ALYTHUM_ORE.get(),
+                        ModBlocks.ALYTHUM_ORE.get(),
+                        ModBlocks.NETHER_ALYTHUM_ORE.get(),
+                        ModBlocks.HARMONIUM_ORE.get(),
+                        ModBlocks.DEEPSLATE_HARMONIUM_ORE.get(),
+                        ModBlocks.NETHER_HARMONIUM_ORE.get(),
+                        ModBlocks.END_HARMONIUM_ORE.get()
+
+                );
+
 
 
         this.tag(ModTags.Blocks.HAZMAT_GLASS_PANES)

@@ -28,6 +28,9 @@
     "crystechmod:lg_core_blend",
     "crystechmod:mg_core_blend",
     "crystechmod:hg_core_blend",
-    "#crystechmod:smeltable"
+    "#crystechmod:smeltable",
+    "#forge:ores",
+    "#forge:dusts",
+    "#forge:raw_materials"
   ]
 }

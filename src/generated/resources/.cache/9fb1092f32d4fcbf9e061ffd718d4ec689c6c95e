@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-18T01:35:27.1133426	Recipes
+// 1.20.1	2025-06-19T16:14:50.5145901	Recipes
 3fc2eae5c76cb50e88664398e799ce2cb0633dc1 data/crystechmod/advancements/recipes/alythum_dust.json
 a201be6f6b66c5d9906b1a28004dcc2aa64342f1 data/crystechmod/advancements/recipes/blue_tiberium_dust.json
 52bb3cd0c0e98ea40a23c89a974b8afe4aeaccff data/crystechmod/advancements/recipes/clear_tiberglass.json
@@ -1080,7 +1080,7 @@ b0a03bf8d906a4e5981e8aea704d8b23669fd059 data/crystechmod/recipes/plagued_stone_
 7dda057fc9aa5bb5b6d07badbb175c7a6de84d70 data/crystechmod/recipes/plagued_sword.json
 9ae9bbf83d80982921ab7abe24a1f62995514e1a data/crystechmod/recipes/plagued_trapdoor.json
 cf538d5cf001ab7779d04711177efcb515ad73f9 data/crystechmod/recipes/popped_chorus_fruit_from_powered_smelting_2001820111.json
-a18089ca5d37086a9ceab0aa65cb8c2ebfc0ed6f data/crystechmod/recipes/powered_kiln.json
+6c5a97114713d0f44bbd8b4294246b6b8a4c8826 data/crystechmod/recipes/powered_kiln.json
 acc112ae54d54dbe6ed0664c260a3c6ff6226ad4 data/crystechmod/recipes/purple_tibercrete.json
 86d2beff51997a61b5e1e6dbc08d4aebf88a17ef data/crystechmod/recipes/purple_tibercrete_bricks.json
 5952c486ffa78ad3dfb106354174f543e775d5ed data/crystechmod/recipes/purple_tibercrete_brick_slab.json

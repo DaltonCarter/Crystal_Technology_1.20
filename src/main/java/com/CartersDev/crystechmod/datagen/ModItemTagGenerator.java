@@ -59,6 +59,42 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
 
+
+        this.tag(Tags.Items.DUSTS)
+                .add(
+                        ModItems.GUNDANIUM_DUST.get(),
+                        ModItems.ALYTHUM_DUST.get(),
+                        ModItems.HARMONIUM_DUST.get(),
+                        ModItems.IRON_DUST.get(),
+                        ModItems.GOLD_DUST.get(),
+                        ModItems.COPPER_DUST.get(),
+                        ModItems.ILLYRIM_BLEND.get(),
+                        ModItems.LG_CORE_BLEND.get(),
+                        ModItems.MG_CORE_BLEND.get(),
+                        ModItems.HG_CORE_BLEND.get()
+                );
+
+
+        this.tag(Tags.Items.INGOTS)
+                .add(
+                        ModItems.GUNDANIUM_INGOT.get(),
+                        ModItems.ALYTHUM_INGOT.get(),
+                        ModItems.HARMONIUM_INGOT.get(),
+                        ModItems.ILLYRIM_INGOT.get(),
+                        ModItems.LG_CORE_INGOT.get(),
+                        ModItems.MG_CORE_INGOT.get(),
+                        ModItems.HG_CORE_INGOT.get()
+                );
+
+        this.tag(Tags.Items.RAW_MATERIALS)
+                .add(
+                        ModItems.RAW_GUNDANIUM.get(),
+                        ModItems.RAW_ALYTHUM.get(),
+                        ModItems.RAW_HARMONIUM.get()
+
+                );
+
+
         this.tag(ModTags.Items.SMELTING)
                 .add(
                         Items.BEEF,
@@ -90,7 +126,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.MG_CORE_BLEND.get(),
                         ModItems.HG_CORE_BLEND.get()
                 )
-                .addTags(ModTags.Items.SMELTABLE);
+                .addTags(ModTags.Items.SMELTABLE,
+                Tags.Items.ORES,
+                        Tags.Items.DUSTS,
+                        Tags.Items.RAW_MATERIALS);
 
 
         this.tag(ModTags.Items.SMELTING_RESULT_2)
@@ -124,7 +163,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.MG_CORE_INGOT.get(),
                         ModItems.HG_CORE_INGOT.get()
                 )
-                .addTags(ModTags.Items.SMELTING_RESULT);
+                .addTags(ModTags.Items.SMELTING_RESULT,
+                        Tags.Items.INGOTS);
 
 
 
@@ -146,6 +186,12 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         Items.COPPER_INGOT,
                         Items.IRON_INGOT,
                         Items.GOLD_INGOT,
+                        Items.COAL,
+                        Items.DIAMOND,
+                        Items.EMERALD,
+                        Items.CHARCOAL,
+                        Items.LAPIS_LAZULI,
+                        Items.NETHERITE_INGOT,
                         ModItems.GUNDANIUM_INGOT.get(),
                         ModItems.ALYTHUM_INGOT.get(),
                         ModItems.ILLYRIM_INGOT.get(),
@@ -159,7 +205,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModTags.Items.MACERATABLE,
                         ModTags.Items.GUNDANIUM_ORES,
                         ModTags.Items.HARMONIUM_ORES,
-                        ModTags.Items.GRINDABLE_FLOWERS);
+                        ModTags.Items.GRINDABLE_FLOWERS,
+                        Tags.Items.RAW_MATERIALS,
+                        Tags.Items.ORES,
+                        Tags.Items.INGOTS);
 
         this.tag(ModTags.Items.GRINDING_RESULT)
                 .add(
@@ -182,18 +231,13 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.HARMONIUM_DUST.get()
                 )
                 .addTags(
-                        ModTags.Items.MACERATING_RESULT
+                        ModTags.Items.MACERATING_RESULT,
+                        Tags.Items.DUSTS
                 );
 
         this.tag(ItemTags.PLANKS)
                 .addTag(ModTags.Items.MOD_PLANKS);
 
-        this.tag(Tags.Items.DUSTS)
-                .add(ModItems.IRON_DUST.get(),
-                    ModItems.GOLD_DUST.get(),
-                    ModItems.ALYTHUM_DUST.get(),
-                    ModItems.GUNDANIUM_DUST.get(),
-                        ModItems.COPPER_DUST.get());
 
 
         this.tag(ItemTags.TRIMMABLE_ARMOR)

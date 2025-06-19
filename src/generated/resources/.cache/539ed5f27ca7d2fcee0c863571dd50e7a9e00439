@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-17T23:01:21.899723	Tags for minecraft:block mod id crystechmod
+// 1.20.1	2025-06-19T15:53:22.0268477	Tags for minecraft:block mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/blocks/aeries_ores.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/blocks/alythum_ores.json
 6b38af71a7ebba97f729de43e6ee84033f8e45cc data/crystechmod/tags/blocks/concretes.json
@@ -34,7 +34,7 @@ b19f776c390198bea3b60ab82ac48ddc549aeefd data/crystechmod/tags/blocks/vitric_exp
 a285676a30bd782543b8ac891420002170b9cee9 data/crystechmod/tags/blocks/vitric_expanse_yz_carver.json
 2409e82b8e5cc72778616dd6a9efc300494af5ea data/crystechmod/tags/blocks/vulnerable_leaves.json
 ddfcad38a7999881b28206520a3ccb5ad0d0f46d data/forge/tags/blocks/needs_netherite_tool.json
-e2d60a30c639fae5d82d5448ed75c1c2f18fee78 data/forge/tags/blocks/ores.json
+663b4405fee2bbd585777b4e84cf20a69ab0275b data/forge/tags/blocks/ores.json
 293b0928861f3e8f109904e7953c31f175e3c4f5 data/minecraft/tags/blocks/dirt.json
 c6aab69a244678a9783a3baff90174fb529ed517 data/minecraft/tags/blocks/fences.json
 669ec66f0d6f7ecfcfb062efab82e9ea3128fcbd data/minecraft/tags/blocks/fence_gates.json

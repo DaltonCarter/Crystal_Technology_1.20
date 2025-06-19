@@ -13,6 +13,12 @@
     "minecraft:copper_ingot",
     "minecraft:iron_ingot",
     "minecraft:gold_ingot",
+    "minecraft:coal",
+    "minecraft:diamond",
+    "minecraft:emerald",
+    "minecraft:charcoal",
+    "minecraft:lapis_lazuli",
+    "minecraft:netherite_ingot",
     "crystechmod:gundanium_ingot",
     "crystechmod:alythum_ingot",
     "crystechmod:illyrim_ingot",
@@ -25,6 +31,9 @@
     "#crystechmod:maceratable",
     "#crystechmod:gundanium_ores",
     "#crystechmod:enigma_ores",
-    "#crystechmod:grindable_flowers"
+    "#crystechmod:grindable_flowers",
+    "#forge:raw_materials",
+    "#forge:ores",
+    "#forge:ingots"
   ]
 }
