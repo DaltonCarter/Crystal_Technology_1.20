@@ -81,7 +81,7 @@ public class TiberiumMaceratorRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return null;
+        return TiberiumMaceratorRecipe.Serializer.INSTANCE;
     }
 
     @Override

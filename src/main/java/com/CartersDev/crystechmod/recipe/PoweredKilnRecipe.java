@@ -75,7 +75,7 @@ public class PoweredKilnRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return null;
+        return PoweredKilnRecipe.Serializer.INSTANCE;
     }
 
     @Override
