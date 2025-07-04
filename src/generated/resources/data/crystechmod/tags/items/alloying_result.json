@@ -1,0 +1,9 @@
+{
+  "values": [
+    "crystechmod:illyrim_ingot",
+    "crystechmod:lg_core_ingot",
+    "crystechmod:mg_core_ingot",
+    "crystechmod:hg_core_ingot",
+    "#forge:ingots"
+  ]
+}

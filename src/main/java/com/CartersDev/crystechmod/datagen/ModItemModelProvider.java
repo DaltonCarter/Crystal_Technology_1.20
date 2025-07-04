@@ -114,6 +114,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.COPPER_DUST);
         simpleItem(ModItems.GOLD_DUST);
         simpleItem(ModItems.GUNDANIUM_INGOT);
+        simpleItem(ModItems.PROTO_STEEL);
         simpleItem(ModItems.HARMONIUM_INGOT);
         simpleItem(ModItems.ALYTHUM_DUST);
         simpleItem(ModItems.ALYTHUM_INGOT);

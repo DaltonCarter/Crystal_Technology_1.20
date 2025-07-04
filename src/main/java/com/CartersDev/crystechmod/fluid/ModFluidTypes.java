@@ -43,6 +43,9 @@ public class ModFluidTypes {
     public static final RegistryObject<FluidType> MOLTEN_PURPLE_TIBERIUM_FLUID_TYPE = registerPurple("molten_purple_tiberium_fluid",
             FluidType.Properties.create().lightLevel(10).density(15).viscosity(15));
 
+    public static final RegistryObject<FluidType> LIQUID_PROTOCULTURE_FLUID_TYPE = registerLiquidProtoculture("liquid_protoculture_fluid",
+            FluidType.Properties.create().lightLevel(10).density(15).viscosity(15));
+
 
     private static RegistryObject<FluidType> register(String name, FluidType.Properties properties) {
         return FLUID_TYPES.register(name, () -> new BaseFluidType(WATER_STILL_RL, WATER_FLOWING_RL, WATER_OVERLAY_RL,
@@ -67,6 +70,12 @@ public class ModFluidTypes {
     private static RegistryObject<FluidType> registerPurple(String name, FluidType.Properties properties) {
         return FLUID_TYPES.register(name, () -> new BaseFluidType(LT_STILL_RL, LT_FLOWING_RL, WATER_OVERLAY_RL,
                 0xA1740E90, new Vector3f(116f / 255f, 14f / 255f, 144f / 255f), properties));
+
+    }
+
+        private static RegistryObject<FluidType> registerLiquidProtoculture(String name, FluidType.Properties properties) {
+            return FLUID_TYPES.register(name, () -> new BaseFluidType(WATER_STILL_RL, WATER_FLOWING_RL, WATER_OVERLAY_RL,
+                    0xA1C9B114, new Vector3f(207f / 255f, 177f / 255f, 20f / 255f), properties));
     }
 
     public static void register(IEventBus eventBus) {

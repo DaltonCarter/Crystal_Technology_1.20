@@ -33,6 +33,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //Basic Block States:
         blockWithItem(ModBlocks.GUNDANIUM_BLOCK);
+        blockWithItem(ModBlocks.PROTO_STEEL_BLOCK);
         blockWithItem(ModBlocks.GUNDANIUM_MACHINE_CORE);
         blockWithItem(ModBlocks.ALYTHUM_MACHINE_CORE);
         blockWithItem(ModBlocks.VITRIC_MACHINE_CORE);

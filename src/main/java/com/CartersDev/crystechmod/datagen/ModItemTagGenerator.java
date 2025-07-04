@@ -59,6 +59,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
 
+        this.tag(Tags.Items.RODS)
+                .add(
+                        ModItems.PLAGUED_STICK.get()
+                );
 
         this.tag(Tags.Items.DUSTS)
                 .add(
@@ -92,6 +96,39 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.RAW_ALYTHUM.get(),
                         ModItems.RAW_HARMONIUM.get()
 
+                );
+
+        this.tag(ModTags.Items.ALLOYING_INPUT)
+                .add(
+                        ModItems.ALYTHUM_INGOT.get(),
+                        ModItems.ILLYRIM_INGOT.get(),
+                        ModItems.LG_CORE_INGOT.get(),
+                        ModItems.MG_CORE_INGOT.get(),
+                        ModItems.PROTO_STEEL.get(),
+                        ModItems.TIBERIUM_COMPOSITE_INGOT.get(),
+                        ModItems.ICHOR_COMPOSITE_INGOT.get(),
+                        ModItems.AERIES_CRYSTAL.get(),
+                        ModItems.QUALRIM_COMPOUND.get(),
+                        ModItems.ENIGMA_CRYSTAL.get(),
+                        Items.IRON_INGOT,
+                        Items.COPPER_INGOT,
+                        Items.GOLD_INGOT,
+                        Items.NETHERITE_INGOT
+
+                )
+                .addTag(Tags.Items.INGOTS);
+
+        this.tag(ModTags.Items.ALLOYING_RESULT)
+                .add(
+
+                        ModItems.ILLYRIM_INGOT.get(),
+                        ModItems.LG_CORE_INGOT.get(),
+                        ModItems.MG_CORE_INGOT.get(),
+                        ModItems.HG_CORE_INGOT.get()
+
+                )
+                .addTag(
+                        Tags.Items.INGOTS
                 );
 
 
@@ -232,7 +269,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 )
                 .addTags(
                         ModTags.Items.MACERATING_RESULT,
-                        Tags.Items.DUSTS
+                        Tags.Items.DUSTS,
+                        Tags.Items.GEMS
                 );
 
         this.tag(ItemTags.PLANKS)

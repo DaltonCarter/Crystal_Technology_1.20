@@ -159,6 +159,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .explosionResistance(100.0f)));
 
+    public static final RegistryObject<Block> PROTO_STEEL_BLOCK = registerBlock("proto_steel_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .explosionResistance(100.0f)));
+
     public static final RegistryObject<Block> HARMONIUM_BLOCK = registerBlock("harmonium_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .explosionResistance(100.0f)));
@@ -2789,6 +2793,10 @@ public class ModBlocks {
             () -> new MoltenPurpleTiberiumBlock(ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)
                     .randomTicks().noLootTable(), 5, 0.5f));
 
+    public static final RegistryObject<LiquidBlock> LIQUID_PROTOCULTURE_BLOCK = BLOCKS.register("liquid_protoculture_block",
+            () -> new LiquidProtocultureBlock(ModFluids.SOURCE_LIQUID_PROTOCULTURE, BlockBehaviour.Properties.copy(Blocks.LAVA)
+                    .randomTicks().noLootTable(), 5, 0.5f));
+
     //End of Tiberium
 
     //Component Blocks:
@@ -2863,6 +2871,23 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRYSTAL_CORE_KILN = registerBlock("crystal_core_kiln",
             () -> new PoweredKilnBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
                     .lightLevel(state -> state.getValue(PoweredKilnBlock.WORKING) ? 15 : 0)));
+
+
+    public static final RegistryObject<Block> ALLOY_KILN = registerBlock("alloy_kiln",
+            () -> new AlloyKilnBlock(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(AlloyKilnBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> ALYTHUM_ALLOY_KILN = registerBlock("alythum_alloy_kiln",
+            () -> new AlloyKilnBlock(2, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(AlloyKilnBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> VITRIC_ALLOY_KILN = registerBlock("vitric_alloy_kiln",
+            () -> new AlloyKilnBlock(3, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(AlloyKilnBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> CRYSTAL_CORE_ALLOY_KILN = registerBlock("crystal_core_alloy_kiln",
+            () -> new AlloyKilnBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(AlloyKilnBlock.WORKING) ? 15 : 0)));
 
         //Signs:
 

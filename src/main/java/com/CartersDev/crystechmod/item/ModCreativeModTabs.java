@@ -38,10 +38,15 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
 
                     output.accept(ModItems.YOKARAN_BLOOM_POWDER.get());
                     output.accept(ModItems.DEVILS_BLOOD_POWDER.get());
+
                     output.accept(ModItems.TIBERIUM_WATER_BUCKET.get());
 
                     output.accept(ModItems.TIBERIUM_LEATHER.get());
                     output.accept(ModItems.ICHOR_LEATHER.get());
+
+                    output.accept(ModItems.LIQUID_PROTOCULTURE_BUCKET.get());
+                    output.accept(ModItems.PROTO_STEEL.get());
+                    output.accept(ModBlocks.PROTO_STEEL_BLOCK.get());
 
                     output.accept(ModItems.FIRESTONE.get());
                     output.accept(ModBlocks.FIRESTONE_BLOCK.get());
@@ -232,6 +237,11 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.ALYTHUM_KILN.get());
                         output.accept(ModBlocks.VITRIC_KILN.get());
                         output.accept(ModBlocks.CRYSTAL_CORE_KILN.get());
+
+                        output.accept(ModBlocks.ALLOY_KILN.get());
+                        output.accept(ModBlocks.ALYTHUM_ALLOY_KILN.get());
+                        output.accept(ModBlocks.VITRIC_ALLOY_KILN.get());
+                        output.accept(ModBlocks.CRYSTAL_CORE_ALLOY_KILN.get());
 
                     })
                     .build());

@@ -3,6 +3,10 @@ package com.CartersDev.crystechmod.block.entity;
 import com.CartersDev.crystechmod.CrystalTech;
 
 import com.CartersDev.crystechmod.block.ModBlocks;
+import com.CartersDev.crystechmod.block.entity.alloykiln.AlloyKilnBlockEntity;
+import com.CartersDev.crystechmod.block.entity.alloykiln.AlythumAlloyKilnBlockEntity;
+import com.CartersDev.crystechmod.block.entity.alloykiln.CrystalCoreAlloyKilnBlockEntity;
+import com.CartersDev.crystechmod.block.entity.alloykiln.VitricAlloyKilnBlockEntity;
 import com.CartersDev.crystechmod.block.entity.grinder.TiberiumGrinderBlockEntity;
 import com.CartersDev.crystechmod.block.entity.infuser.AlythumTiberiumInfuserBlockEntity;
 import com.CartersDev.crystechmod.block.entity.infuser.CrystalCoreTiberiumInfuserBlockEntity;
@@ -83,6 +87,24 @@ public static final RegistryObject<BlockEntityType<TiberiumGrinderBlockEntity>> 
     public static final RegistryObject<BlockEntityType<CrystalCoreKilnBlockEntity>> CRYSTAL_CORE_KILN_BE =
             BLOCK_ENTITIES.register("crystal_core_kiln_be", () -> BlockEntityType.Builder.of(
                     CrystalCoreKilnBlockEntity::new, ModBlocks.CRYSTAL_CORE_KILN.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<AlloyKilnBlockEntity>> ALLOY_KILN_BE =
+            BLOCK_ENTITIES.register("alloy_kiln_be", () -> BlockEntityType.Builder.of(
+                    AlloyKilnBlockEntity::new, ModBlocks.ALLOY_KILN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<AlythumAlloyKilnBlockEntity>> ALYTHUM_ALLOY_KILN_BE =
+            BLOCK_ENTITIES.register("alythum_alloy_kiln_be", () -> BlockEntityType.Builder.of(
+                    AlythumAlloyKilnBlockEntity::new, ModBlocks.ALYTHUM_ALLOY_KILN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<VitricAlloyKilnBlockEntity>> VITRIC_ALLOY_KILN_BE =
+            BLOCK_ENTITIES.register("vitric_alloy_kiln_be", () -> BlockEntityType.Builder.of(
+                    VitricAlloyKilnBlockEntity::new, ModBlocks.VITRIC_ALLOY_KILN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<CrystalCoreAlloyKilnBlockEntity>> CRYSTAL_CORE_ALLOY_KILN_BE =
+            BLOCK_ENTITIES.register("crystal_core_alloy_kiln_be", () -> BlockEntityType.Builder.of(
+                    CrystalCoreAlloyKilnBlockEntity::new, ModBlocks.CRYSTAL_CORE_ALLOY_KILN.get()).build(null));
 
 
 

@@ -99,6 +99,8 @@ public class ModTags {
         public static final TagKey<Item> SMELTING_RESULT_2 = tag("smelting_result_2");
         public static final TagKey<Item> SMELTABLE = tag("smeltable");
         public static final TagKey<Item> SMELTING_RESULT = tag("smelting_result");
+        public static final TagKey<Item> ALLOYING_INPUT = tag("alloying_input");
+        public static final TagKey<Item> ALLOYING_RESULT = tag("alloying_result");
 
 
 
@@ -115,6 +117,7 @@ public class ModTags {
         public static final TagKey<Fluid> MOLTEN_BLUE_TIBERIUM = tag("molten_blue_tiberium");
         public static final TagKey<Fluid> MOLTEN_RED_TIBERIUM = tag("molten_red_tiberium");
         public static final TagKey<Fluid> MOLTEN_PURPLE_TIBERIUM = tag("molten_purple_tiberium");
+        public static final TagKey<Fluid> LIQUID_PROTOCULTURE = tag("liquid_protoculture");
         public static final TagKey<Fluid> INFUSER_FLUIDS = tag("infuser_fluids");
         public static final TagKey<Fluid> TIBERIUM_WATER = tag("tiberium_water");
 

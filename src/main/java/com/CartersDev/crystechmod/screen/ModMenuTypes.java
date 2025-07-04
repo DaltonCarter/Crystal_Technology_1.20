@@ -1,6 +1,10 @@
 package com.CartersDev.crystechmod.screen;
 
 import com.CartersDev.crystechmod.CrystalTech;
+import com.CartersDev.crystechmod.screen.alloyKilnMenu.AlloyKilnMenu;
+import com.CartersDev.crystechmod.screen.alloyKilnMenu.AlythumAlloyKilnMenu;
+import com.CartersDev.crystechmod.screen.alloyKilnMenu.CrystalCoreAlloyKilnMenu;
+import com.CartersDev.crystechmod.screen.alloyKilnMenu.VitricAlloyKilnMenu;
 import com.CartersDev.crystechmod.screen.grinderMenu.TiberiumGrinderMenu;
 import com.CartersDev.crystechmod.screen.infuserMenu.AlythumTiberiumInfuserMenu;
 import com.CartersDev.crystechmod.screen.infuserMenu.CrystalCoreTiberiumInfuserMenu;
@@ -68,6 +72,20 @@ public class ModMenuTypes {
 
     public static final RegistryObject<MenuType<CrystalCoreKilnMenu>> CRYSTAL_CORE_KILN_MENU =
             registerMenuType("crystal_core_kiln_menu", CrystalCoreKilnMenu::new);
+
+
+
+    public static final RegistryObject<MenuType<AlloyKilnMenu>> ALLOY_KILN_MENU =
+            registerMenuType("alloy_kiln_menu", AlloyKilnMenu::new);
+
+    public static final RegistryObject<MenuType<AlythumAlloyKilnMenu>> ALYTHUM_ALLOY_KILN_MENU =
+            registerMenuType("alythum_alloy_kiln_menu", AlythumAlloyKilnMenu::new);
+
+    public static final RegistryObject<MenuType<VitricAlloyKilnMenu>> VITRIC_ALLOY_KILN_MENU =
+            registerMenuType("vitric_alloy_kiln_menu", VitricAlloyKilnMenu::new);
+
+    public static final RegistryObject<MenuType<CrystalCoreAlloyKilnMenu>> CRYSTAL_CORE_ALLOY_KILN_MENU =
+            registerMenuType("crystal_core_alloy_kiln_menu", CrystalCoreAlloyKilnMenu::new);
 
 
 

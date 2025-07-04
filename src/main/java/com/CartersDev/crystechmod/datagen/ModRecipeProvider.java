@@ -3,10 +3,7 @@ package com.CartersDev.crystechmod.datagen;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
-import com.CartersDev.crystechmod.datagen.custom.PoweredKilnRecipeBuilder;
-import com.CartersDev.crystechmod.datagen.custom.TiberiumGrinderRecipeBuilder;
-import com.CartersDev.crystechmod.datagen.custom.TiberiumInfuserRecipeBuilder;
-import com.CartersDev.crystechmod.datagen.custom.TiberiumMaceratorRecipeBuilder;
+import com.CartersDev.crystechmod.datagen.custom.*;
 import com.CartersDev.crystechmod.fluid.ModFluidTypes;
 import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModItems;
@@ -242,6 +239,14 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("GGG")
                 .define('G', ModItems.GUNDANIUM_INGOT.get())
                 .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PROTO_STEEL_BLOCK.get())
+                .pattern("GGG")
+                .pattern("GGG")
+                .pattern("GGG")
+                .define('G', ModItems.PROTO_STEEL.get())
+                .unlockedBy(getHasName(ModItems.PROTO_STEEL.get()), has(ModItems.PROTO_STEEL.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.HARMONIUM_BLOCK.get())
@@ -2236,7 +2241,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" P ")
                 .pattern(" S ")
                 .define('P', ModBlocks.PLAGUED_PLANKS.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
                 .save(consumer);
 
@@ -2245,7 +2250,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" S ")
                 .pattern(" S ")
                 .define('P', ModBlocks.PLAGUED_PLANKS.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
                 .save(consumer);
 
@@ -2254,7 +2259,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" SP")
                 .pattern(" S ")
                 .define('P', ModBlocks.PLAGUED_PLANKS.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
                 .save(consumer);
 
@@ -2263,7 +2268,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" S ")
                 .pattern(" S ")
                 .define('P', ModBlocks.PLAGUED_PLANKS.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
                 .save(consumer);
 
@@ -2272,7 +2277,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" S ")
                 .pattern(" S ")
                 .define('P', ModBlocks.PLAGUED_PLANKS.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
                 .save(consumer);
 
@@ -2322,7 +2327,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" G ")
                 .pattern(" S ")
                 .define('G', ModItems.GUNDANIUM_INGOT.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
                 .save(consumer);
 
@@ -2331,7 +2336,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" S ")
                 .pattern(" S ")
                 .define('G', ModItems.GUNDANIUM_INGOT.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
                 .save(consumer);
 
@@ -2340,7 +2345,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" SG")
                 .pattern(" S ")
                 .define('G', ModItems.GUNDANIUM_INGOT.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
                 .save(consumer);
 
@@ -2349,7 +2354,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" S ")
                 .pattern(" S ")
                 .define('G', ModItems.GUNDANIUM_INGOT.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
                 .save(consumer);
 
@@ -2358,7 +2363,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" S ")
                 .pattern(" S ")
                 .define('G', ModItems.GUNDANIUM_INGOT.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
                 .save(consumer);
 
@@ -2368,7 +2373,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("S  ")
                 .define('I', ModItems.GUNDANIUM_INGOT.get())
                 .define('G', ModItems.GUNDANIUM_SHOVEL.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.GUNDANIUM_SHOVEL.get()), has(ModItems.GUNDANIUM_SHOVEL.get()))
                 .save(consumer);
 
@@ -2442,7 +2447,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" A ")
                 .pattern(" S ")
                 .define('A', ModItems.ALYTHUM_INGOT.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
                 .save(consumer);
 
@@ -2451,7 +2456,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" S ")
                 .pattern(" S ")
                 .define('A', ModItems.ALYTHUM_INGOT.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
                 .save(consumer);
 
@@ -2460,7 +2465,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" SA")
                 .pattern(" S ")
                 .define('A', ModItems.ALYTHUM_INGOT.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
                 .save(consumer);
 
@@ -2469,7 +2474,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" S ")
                 .pattern(" S ")
                 .define('A', ModItems.ALYTHUM_INGOT.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
                 .save(consumer);
 
@@ -2478,7 +2483,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" S ")
                 .pattern(" S ")
                 .define('A', ModItems.ALYTHUM_INGOT.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
                 .save(consumer);
 
@@ -2488,7 +2493,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" S ")
                 .define('A', ModItems.ALYTHUM_INGOT.get())
                 .define('B', ModBlocks.ALYTHUM_BLOCK.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
                 .save(consumer);
 
@@ -2498,7 +2503,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("S  ")
                 .define('I', ModItems.ALYTHUM_INGOT.get())
                 .define('G', ModItems.ALYTHUM_SHOVEL.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ALYTHUM_SHOVEL.get()), has(ModItems.ALYTHUM_SHOVEL.get()))
                 .save(consumer);
 
@@ -2508,7 +2513,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("S  ")
                 .define('I', ModItems.ILLYRIM_INGOT.get())
                 .define('G', ModItems.ILLYRIM_SHOVEL.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ILLYRIM_SHOVEL.get()), has(ModItems.ILLYRIM_SHOVEL.get()))
                 .save(consumer);
 
@@ -2518,7 +2523,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" S ")
                 .define('A', ModItems.GUNDANIUM_INGOT.get())
                 .define('B', ModBlocks.GUNDANIUM_BLOCK.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
                 .save(consumer);
 
@@ -2531,7 +2536,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('A', ModItems.ALYTHUM_AXE.get())
                 .define('S', ModItems.ALYTHUM_SHOVEL.get())
                 .define('C', ModItems.LG_CORE_INGOT.get())
-                .define('H', ModTags.Items.STICKS)
+                .define('H', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
                 .save(consumer);
 
@@ -2543,7 +2548,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('A', ModItems.GUNDANIUM_AXE.get())
                 .define('S', ModItems.GUNDANIUM_SHOVEL.get())
                 .define('G', ModBlocks.GUNDANIUM_BLOCK.get())
-                .define('H', ModTags.Items.STICKS)
+                .define('H', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
                 .save(consumer);
 
@@ -2552,7 +2557,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" I ")
                 .pattern(" S ")
                 .define('I', ModItems.ILLYRIM_INGOT.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
                 .save(consumer);
 
@@ -2561,7 +2566,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" S ")
                 .pattern(" S ")
                 .define('I', ModItems.ILLYRIM_INGOT.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
                 .save(consumer);
 
@@ -2570,7 +2575,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" SI")
                 .pattern(" S ")
                 .define('I', ModItems.ILLYRIM_INGOT.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
                 .save(consumer);
 
@@ -2579,7 +2584,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" S ")
                 .pattern(" S ")
                 .define('I', ModItems.ILLYRIM_INGOT.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
                 .save(consumer);
 
@@ -2588,7 +2593,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" S ")
                 .pattern(" S ")
                 .define('I', ModItems.ILLYRIM_INGOT.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
                 .save(consumer);
 
@@ -2598,7 +2603,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" S ")
                 .define('I', ModItems.ILLYRIM_INGOT.get())
                 .define('B', ModBlocks.ILLYRIM_BLOCK.get())
-                .define('S', ModTags.Items.STICKS)
+                .define('S', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
                 .save(consumer);
 
@@ -2610,7 +2615,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('I', ModItems.ILLYRIM_AXE.get())
                 .define('S', ModItems.ILLYRIM_SHOVEL.get())
                 .define('C', ModItems.MG_CORE_INGOT.get())
-                .define('H', ModTags.Items.STICKS)
+                .define('H', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
                 .save(consumer);
 
@@ -2727,7 +2732,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("SSS")
                 .pattern(" P ")
                 .define('S', ModBlocks.DEAD_PLANKS.get())
-                .define('P', ModTags.Items.STICKS)
+                .define('P', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModBlocks.DEAD_LOG.get()), has(ModBlocks.DEAD_LOG.get()))
                 .save(consumer);
 
@@ -2736,7 +2741,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("SSS")
                 .pattern(" P ")
                 .define('S', ModBlocks.PLAGUED_PLANKS.get())
-                .define('P', ModTags.Items.STICKS)
+                .define('P', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModBlocks.PLAGUED_LOG.get()), has(ModBlocks.PLAGUED_LOG.get()))
                 .save(consumer);
 
@@ -2745,7 +2750,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("SSS")
                 .pattern(" P ")
                 .define('S', ModBlocks.EMBER_OAK_PLANKS.get())
-                .define('P', ModTags.Items.STICKS)
+                .define('P', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModBlocks.EMBER_OAK_LOG.get()), has(ModBlocks.EMBER_OAK_LOG.get()))
                 .save(consumer);
 
@@ -2754,7 +2759,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("SSS")
                 .pattern(" P ")
                 .define('S', ModBlocks.MARIKA_OAK_PLANKS.get())
-                .define('P', ModTags.Items.STICKS)
+                .define('P', Tags.Items.RODS)
                 .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_LOG.get()), has(ModBlocks.MARIKA_OAK_LOG.get()))
                 .save(consumer);
 
@@ -2845,6 +2850,48 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('A', ModItems.ILLYRIM_INGOT.get())
                 .define('V', ModItems.VITRIC_CIRCUIT.get())
                 .define('I', ModBlocks.ALYTHUM_KILN.get())
+                .define('T', ModBlocks.TIBERIUM_BLOCK.get())
+                .define('B', ModBlocks.TIBERIUM_BLUE_BLOCK.get())
+                .define('R', ModBlocks.TIBERIUM_RED_BLOCK.get())
+                .define('P', ModBlocks.TIBERIUM_PURPLE_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALLOY_KILN.get())
+                .pattern("HIH")
+                .pattern("KMK")
+                .pattern("FRB")
+                .define('R', ModItems.HARMONIC_RELAY.get())
+                .define('F', ModBlocks.POWERED_KILN.get())
+                .define('B', ModBlocks.PROTO_STEEL_BLOCK.get())
+                .define('M', ModBlocks.GUNDANIUM_MACHINE_CORE.get())
+                .define('H', ModItems.HARMONIUM_INGOT.get())
+                .define('I', ModItems.ILLUMINA_CRYSTAL.get())
+                .define('K', ModItems.KRYON_CRYSTAL.get())
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALYTHUM_ALLOY_KILN.get())
+                .pattern("AIA")
+                .pattern("KMK")
+                .pattern("CRC")
+                .define('R', ModItems.HARMONIC_RELAY.get())
+                .define('C', ModItems.KRYONIC_CAPACITOR.get())
+                .define('M', ModBlocks.ALYTHUM_MACHINE_CORE.get())
+                .define('A', ModItems.ALYTHUM_INGOT.get())
+                .define('I', ModBlocks.ALLOY_KILN.get())
+                .define('K', ModItems.ILLUMINATE_COMPONENT.get())
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VITRIC_ALLOY_KILN.get())
+                .pattern("AIA")
+                .pattern("TMB")
+                .pattern("RVP")
+                .define('M', ModBlocks.VITRIC_MACHINE_CORE.get())
+                .define('A', ModItems.ILLYRIM_INGOT.get())
+                .define('V', ModItems.VITRIC_CIRCUIT.get())
+                .define('I', ModBlocks.ALYTHUM_ALLOY_KILN.get())
                 .define('T', ModBlocks.TIBERIUM_BLOCK.get())
                 .define('B', ModBlocks.TIBERIUM_BLUE_BLOCK.get())
                 .define('R', ModBlocks.TIBERIUM_RED_BLOCK.get())
@@ -3762,6 +3809,11 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModBlocks.GUNDANIUM_BLOCK.get()), has(ModBlocks.GUNDANIUM_BLOCK.get()))
                 .save(consumer);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PROTO_STEEL.get(), 9)
+                .requires(ModBlocks.PROTO_STEEL_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.PROTO_STEEL_BLOCK.get()), has(ModBlocks.PROTO_STEEL_BLOCK.get()))
+                .save(consumer);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HARMONIUM_INGOT.get(), 9)
                 .requires(ModBlocks.HARMONIUM_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.HARMONIUM_BLOCK.get()), has(ModBlocks.HARMONIUM_BLOCK.get()))
@@ -4118,6 +4170,15 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.ILLYRIM_BLEND.get()), has(ModItems.ILLYRIM_BLEND.get()))
                 .save(consumer);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MG_CORE_BLEND.get(), 1)
+                .requires(ModItems.LG_CORE_BLEND.get())
+                .requires(ModItems.RED_TIBERIUM_DUST.get())
+                .requires(ModItems.PURPLE_TIBERIUM_DUST.get())
+                .requires(ModItems.HARMONIUM_DUST.get())
+                .requires(ModBlocks.FLOWER_OF_LIFE.get())
+                .unlockedBy(getHasName(ModItems.ILLYRIM_BLEND.get()), has(ModItems.ILLYRIM_BLEND.get()))
+                .save(consumer);
+
 
 
 //Passive Tiberium Grinder:
@@ -4300,6 +4361,10 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 new FluidStack(ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM.get(), 1000))
                 .unlockedBy("has_purple_tiberium_bucket", has(ModItems.MOLTEN_PURPLE_TIBERIUM_BUCKET.get())).save(consumer);
 
+        new TiberiumInfuserRecipeBuilder(ModItems.ALYTHUM_INGOT.get(), ModItems.PROTO_STEEL.get(), 1, 750, 20,
+                new FluidStack(ModFluids.SOURCE_LIQUID_PROTOCULTURE.get(), 1000))
+                .unlockedBy("has_liquid_protoculture_bucket", has(ModItems.LIQUID_PROTOCULTURE_BUCKET.get())).save(consumer);
+
         new TiberiumInfuserRecipeBuilder(Blocks.SAND, ModBlocks.YELLOW_ZONE_SAND.get(), 1, 100, 1,
                 new FluidStack(ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 100))
                 .unlockedBy("has_tiberium_bucket", has(ModItems.MOLTEN_TIBERIUM_BUCKET.get())).save(consumer);
@@ -4420,6 +4485,16 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         new PoweredKilnRecipeBuilder(ModItems.RAW_INFECTED_MEAT.get(), ModItems.COOKED_INFECTED_MEAT.get(), 1, 150, 10)
                 .unlockedBy("has_raw_infected_meat", has(ModItems.RAW_INFECTED_MEAT.get())).save(consumer);
 
+
+
+        new AlloyKilnRecipeBuilder(ModItems.ALYTHUM_INGOT.get(), Items.NETHERITE_INGOT, ModItems.QUALRIM_COMPOUND.get(), ModItems.ILLYRIM_INGOT.get() ,2, 250, 20)
+                .unlockedBy("has_qualrim_compound", has(ModItems.QUALRIM_COMPOUND.get())).save(consumer);
+
+        new AlloyKilnRecipeBuilder(ModItems.ILLYRIM_INGOT.get(), ModItems.TIBERIUM_COMPOSITE_INGOT.get(), ModItems.PROTO_STEEL.get(), ModItems.LG_CORE_INGOT.get() ,3, 250, 20)
+                .unlockedBy("has_illyrim_ingot", has(ModItems.ILLYRIM_INGOT.get())).save(consumer);
+
+        new AlloyKilnRecipeBuilder(ModItems.LG_CORE_INGOT.get(), ModItems.ICHOR_COMPOSITE_INGOT.get(), ModItems.HARMONIUM_INGOT.get(), ModItems.MG_CORE_INGOT.get() ,3, 250, 20)
+                .unlockedBy("has_lg_core_ingot", has(ModItems.LG_CORE_INGOT.get())).save(consumer);
 
     }
 

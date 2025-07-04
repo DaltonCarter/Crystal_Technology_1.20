@@ -1,5 +1,7 @@
-// 1.20.1	2025-06-19T16:14:50.5268519	Tags for minecraft:item mod id crystechmod
+// 1.20.1	2025-07-03T04:38:42.2847511	Tags for minecraft:item mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/items/aeries_ores.json
+77ea3b8940ebc0df73fba72bbe9b9ade8e235374 data/crystechmod/tags/items/alloying_input.json
+fa76f1684399485901512c1963d14384561d1b3d data/crystechmod/tags/items/alloying_result.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/items/alythum_ores.json
 6b38af71a7ebba97f729de43e6ee84033f8e45cc data/crystechmod/tags/items/concretes.json
 1b1bb8b2e7aecfb7d82d771a540fcafffe25b6ed data/crystechmod/tags/items/dead_logs.json
@@ -8,7 +10,7 @@
 385384748b1de16a26be84aa4324801acb1e776d data/crystechmod/tags/items/glass.json
 c17e48a17dcde33173252d12f36486463c318197 data/crystechmod/tags/items/grindable.json
 f9541d478a6479b3fadbd51f6a062c8d4fb28ca3 data/crystechmod/tags/items/grindable_flowers.json
-0191e17d354c3bcf612dfad59eb3c19157bcedc0 data/crystechmod/tags/items/grinding_result.json
+8129e0d99fa1905e1c878dd4c3c242d52676526f data/crystechmod/tags/items/grinding_result.json
 4cadb914e0eab48bbce75c6e6b2093818996d44e data/crystechmod/tags/items/gundanium_ores.json
 3c0db247b35cadbc078a1b88ac98777330717935 data/crystechmod/tags/items/hazmat_glass_panes.json
 816d980d5ac7ce159aff209b52ee0952d2d1eed8 data/crystechmod/tags/items/illumina_ores.json
@@ -29,6 +31,7 @@ ecf2a3889f87177c168a6ffc2c5f25e077381f19 data/crystechmod/tags/items/sticks.json
 002e5c40a5184c92f01d66de3343c441df892703 data/forge/tags/items/ingots.json
 663b4405fee2bbd585777b4e84cf20a69ab0275b data/forge/tags/items/ores.json
 b759f5fd340e754f6a7a35b3b46d2ba136c2fcc1 data/forge/tags/items/raw_materials.json
+1f682baa5bdc283d63c6bd780f9bc6d87b5d8b8b data/forge/tags/items/rods.json
 30d6b9e14647b96ad4fe3ced67c6c5869760118b data/minecraft/tags/items/creeper_drop_music_discs.json
 e0721fc7760819c2882cc2896aeb4f60de8a8dad data/minecraft/tags/items/logs_that_burn.json
 30d6b9e14647b96ad4fe3ced67c6c5869760118b data/minecraft/tags/items/music_discs.json

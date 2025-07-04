@@ -1,10 +1,10 @@
 package com.CartersDev.crystechmod.block.entity.alloykiln;
 
 
-import com.CartersDev.crystechmod.block.custom.PoweredKilnBlock;
+import com.CartersDev.crystechmod.block.custom.AlloyKilnBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
-import com.CartersDev.crystechmod.recipe.PoweredKilnRecipe;
-import com.CartersDev.crystechmod.screen.poweredKilnMenu.PoweredKilnMenu;
+import com.CartersDev.crystechmod.recipe.AlloyKilnRecipe;
+import com.CartersDev.crystechmod.screen.alloyKilnMenu.AlloyKilnMenu;
 import com.CartersDev.crystechmod.util.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -39,7 +39,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Map;
 import java.util.Optional;
 
-import static com.CartersDev.crystechmod.block.custom.PoweredKilnBlock.WORKING;
+import static com.CartersDev.crystechmod.block.custom.AlloyKilnBlock.WORKING;
 
 
 
@@ -70,7 +70,7 @@ you'd call this once for each ingredient! In theory that should be it
 
 public class AlloyKilnBlockEntity extends BlockEntity implements MenuProvider {
 
-    ItemStackHandler itemHandler = new ItemStackHandler(3) {
+    ItemStackHandler itemHandler = new ItemStackHandler(5) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -82,17 +82,19 @@ public class AlloyKilnBlockEntity extends BlockEntity implements MenuProvider {
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
-              case 0 -> stack.is(ModTags.Items.SMELTING);
-              case 1 -> stack.getItem() == Items.REDSTONE;
-              case 2 -> stack.is(ModTags.Items.SMELTING_RESULT_2);
+              case 0,1,2 -> stack.is(ModTags.Items.ALLOYING_INPUT);
+              case 3 -> stack.getItem() == Items.REDSTONE;
+              case 4 -> stack.is(ModTags.Items.ALLOYING_RESULT);
                 default -> super.isItemValid(slot, stack);
             };
         }
     };
 
     private static final int INPUT_SLOT = 0;
-    private static final int ENERGY_ITEM_SLOT = 1;
-    private static final int OUTPUT_SLOT = 2;
+    private static final int INPUT_SLOT_2 = 1;
+    private static final int INPUT_SLOT_3 = 2;
+    private static final int ENERGY_ITEM_SLOT = 3;
+    private static final int OUTPUT_SLOT = 4;
 
 
 private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
@@ -101,10 +103,10 @@ private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
             new InventoryDirectionWrapper(itemHandler,
                     new InventoryDirectionEntry(Direction.DOWN, OUTPUT_SLOT, false),
                     new InventoryDirectionEntry(Direction.UP, INPUT_SLOT, true),
-                    new InventoryDirectionEntry(Direction.NORTH, INPUT_SLOT, true),
+                    new InventoryDirectionEntry(Direction.NORTH, INPUT_SLOT_2, true),
                     new InventoryDirectionEntry(Direction.SOUTH, OUTPUT_SLOT, false),
                     new InventoryDirectionEntry(Direction.EAST, OUTPUT_SLOT, false),
-                    new InventoryDirectionEntry(Direction.WEST, INPUT_SLOT, true)).directionsMap;
+                    new InventoryDirectionEntry(Direction.WEST, INPUT_SLOT_3, true)).directionsMap;
 
     private LazyOptional<IEnergyStorage> lazyEnergyHandler = LazyOptional.empty();
 
@@ -139,7 +141,7 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
     }
 
     public AlloyKilnBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.POWERED_KILN_BE.get(), pPos, pBlockState);
+        super(ModBlockEntities.ALLOY_KILN_BE.get(), pPos, pBlockState);
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
@@ -184,7 +186,7 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
     @Override
     public @Nullable AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
-        return new PoweredKilnMenu(pContainerId, pPlayerInventory, this, this.data);
+        return new AlloyKilnMenu(pContainerId, pPlayerInventory, this, this.data);
     }
 
     @Override
@@ -200,7 +202,7 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
             }
 
             if (directioWrappedHandlerMap.containsKey(side)) {
-                Direction localDirection = this.getBlockState().getValue(PoweredKilnBlock.FACING);
+                Direction localDirection = this.getBlockState().getValue(AlloyKilnBlock.FACING);
 
                 if (side == Direction.DOWN || side == Direction.UP) {
                     return directioWrappedHandlerMap.get(side).cast();
@@ -236,9 +238,9 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
     @Override
     protected void saveAdditional(CompoundTag pTag) {
         pTag.put("inventory", itemHandler.serializeNBT());
-        pTag.putInt("powered_kiln.progress", progress);
-        pTag.putInt("powered_kiln.max_progress", max_progress);
-        pTag.putInt("powered_kiln.energyAmount", energyAmount);
+        pTag.putInt("alloy_kiln.progress", progress);
+        pTag.putInt("alloy_kiln.max_progress", max_progress);
+        pTag.putInt("alloy_kiln.energyAmount", energyAmount);
         pTag.putInt("energy", ENERGY_STORAGE.getEnergyStored());
         super.saveAdditional(pTag);
     }
@@ -247,9 +249,9 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
     public void load(CompoundTag pTag) {
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
-        progress = pTag.getInt("powered_kiln.progress");
-        max_progress = pTag.getInt("powered_kiln.max_progress");
-        energyAmount = pTag.getInt("powered_kiln.energyAmount");
+        progress = pTag.getInt("alloy_kiln.progress");
+        max_progress = pTag.getInt("alloy_kiln.max_progress");
+        energyAmount = pTag.getInt("alloy_kiln.energyAmount");
         ENERGY_STORAGE.setEnergy(pTag.getInt("energy"));
     }
 
@@ -302,11 +304,13 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
     }
 
     private void craftItem() {
-        Optional<PoweredKilnRecipe> recipe = getCurrentRecipe();
+        Optional<AlloyKilnRecipe> recipe = getCurrentRecipe();
 
         ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
 
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
+        this.itemHandler.extractItem(INPUT_SLOT_2, 1, false);
+        this.itemHandler.extractItem(INPUT_SLOT_3, 1, false);
 
         this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
                 this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount()));
@@ -330,7 +334,7 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
     private boolean hasRecipe() {
 
-        Optional<PoweredKilnRecipe> recipe = getCurrentRecipe();
+        Optional<AlloyKilnRecipe> recipe = getCurrentRecipe();
 
 
         if (recipe.isEmpty()) {
@@ -352,12 +356,12 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
     }
 
-    private Optional<PoweredKilnRecipe> getCurrentRecipe() {
+    private Optional<AlloyKilnRecipe> getCurrentRecipe() {
         SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
         for(int i = 0; i < this.itemHandler.getSlots(); i++) {
             inventory.setItem(i, this.itemHandler.getStackInSlot(i));
         }
-        return this.level.getRecipeManager().getRecipeFor(PoweredKilnRecipe.Type.INSTANCE, inventory, level);
+        return this.level.getRecipeManager().getRecipeFor(AlloyKilnRecipe.Type.INSTANCE, inventory, level);
     }
 
 

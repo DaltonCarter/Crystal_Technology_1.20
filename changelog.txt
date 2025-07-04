@@ -539,6 +539,12 @@ Posted By: Dalton Carter
 -Implemented inert Vitric/Ichor soil for selective Tiberium growth
 -IMPLEMENTED COMPATABILITY RECIPES FOR MEKANISM WHEN IT IS PRESENT
 -Rearranged recipes, added ALOT MORE
+-Adjusted Drop rates for Tiberium Crops and Raw Ores
+-Implemented Alloy Kiln
+-Added Liquid Protoculture
+-Added Proto Steel Ingot and Blocks
+-Mk.1 & 2 Core Steel now craftable
+-Added handful of Recipes
 
 
 

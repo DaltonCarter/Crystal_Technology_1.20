@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:proto_steel_block"
+    },
+    "F": {
+      "item": "crystechmod:powered_kiln"
+    },
+    "H": {
+      "item": "crystechmod:harmonium_ingot"
+    },
+    "I": {
+      "item": "crystechmod:illumina_crystal"
+    },
+    "K": {
+      "item": "crystechmod:kryon_crystal"
+    },
+    "M": {
+      "item": "crystechmod:gundanium_machine_core"
+    },
+    "R": {
+      "item": "crystechmod:harmonic_relay"
+    }
+  },
+  "pattern": [
+    "HIH",
+    "KMK",
+    "FRB"
+  ],
+  "result": {
+    "item": "crystechmod:alloy_kiln"
+  },
+  "show_notification": true
+}

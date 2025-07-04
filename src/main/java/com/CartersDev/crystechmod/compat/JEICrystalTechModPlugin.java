@@ -2,10 +2,8 @@ package com.CartersDev.crystechmod.compat;
 
 
 import com.CartersDev.crystechmod.CrystalTech;
-import com.CartersDev.crystechmod.recipe.PoweredKilnRecipe;
-import com.CartersDev.crystechmod.recipe.TiberiumGrinderRecipe;
-import com.CartersDev.crystechmod.recipe.TiberiumInfuserRecipe;
-import com.CartersDev.crystechmod.recipe.TiberiumMaceratorRecipe;
+import com.CartersDev.crystechmod.recipe.*;
+import com.CartersDev.crystechmod.screen.alloyKilnScreen.AlloyKilnScreen;
 import com.CartersDev.crystechmod.screen.grinderScreen.TiberiumGrinderScreen;
 import com.CartersDev.crystechmod.screen.infuserScreen.TiberiumInfuserScreen;
 import com.CartersDev.crystechmod.screen.maceratorScreen.TiberiumMaceratorScreen;
@@ -34,6 +32,7 @@ public class JEICrystalTechModPlugin implements IModPlugin {
         registration.addRecipeCategories(new TiberiumMaceratingCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new TiberiumInfuserCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new PoweredKilnCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new AlloyKilnCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -54,6 +53,10 @@ public class JEICrystalTechModPlugin implements IModPlugin {
         RecipeManager poweredKilnRecipeManager = Minecraft.getInstance().level.getRecipeManager();
         List<PoweredKilnRecipe> poweredKilnRecipes = poweredKilnRecipeManager.getAllRecipesFor(PoweredKilnRecipe.Type.INSTANCE);
         registration.addRecipes(PoweredKilnCategory.POWERED_KILN_TYPE, poweredKilnRecipes);
+
+        RecipeManager alloyKilnRecipeManager = Minecraft.getInstance().level.getRecipeManager();
+        List<AlloyKilnRecipe> alloyKilnRecipes = alloyKilnRecipeManager.getAllRecipesFor(AlloyKilnRecipe.Type.INSTANCE);
+        registration.addRecipes(AlloyKilnCategory.ALLOY_KILN_TYPE, alloyKilnRecipes);
     }
 
     @Override
@@ -69,5 +72,8 @@ public class JEICrystalTechModPlugin implements IModPlugin {
 
         registration.addRecipeClickArea(PoweredKilnScreen.class, 80, 35, 20, 30,
                 PoweredKilnCategory.POWERED_KILN_TYPE);
+
+        registration.addRecipeClickArea(AlloyKilnScreen.class, 80, 35, 20, 30,
+                AlloyKilnCategory.ALLOY_KILN_TYPE);
     }
 }

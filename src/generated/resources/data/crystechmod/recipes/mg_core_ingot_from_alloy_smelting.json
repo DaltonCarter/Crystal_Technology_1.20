@@ -1,0 +1,20 @@
+{
+  "type": "crystechmod:alloy_smelting",
+  "craftTime": 250,
+  "energyAmount": 20,
+  "ingredients": [
+    {
+      "item": "crystechmod:lg_core_ingot"
+    },
+    {
+      "item": "crystechmod:ichor_composite_ingot"
+    },
+    {
+      "item": "crystechmod:harmonium_ingot"
+    }
+  ],
+  "output": {
+    "count": 3,
+    "item": "crystechmod:mg_core_ingot"
+  }
+}

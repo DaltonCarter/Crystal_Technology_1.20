@@ -16,6 +16,10 @@ import com.CartersDev.crystechmod.particle.ModParticles;
 import com.CartersDev.crystechmod.potion.ModPotions;
 import com.CartersDev.crystechmod.recipe.ModRecipes;
 import com.CartersDev.crystechmod.screen.*;
+import com.CartersDev.crystechmod.screen.alloyKilnScreen.AlloyKilnScreen;
+import com.CartersDev.crystechmod.screen.alloyKilnScreen.AlythumAlloyKilnScreen;
+import com.CartersDev.crystechmod.screen.alloyKilnScreen.CrystalCoreAlloyKilnScreen;
+import com.CartersDev.crystechmod.screen.alloyKilnScreen.VitricAlloyKilnScreen;
 import com.CartersDev.crystechmod.screen.grinderScreen.TiberiumGrinderScreen;
 import com.CartersDev.crystechmod.screen.infuserScreen.AlythumTiberiumInfuserScreen;
 import com.CartersDev.crystechmod.screen.infuserScreen.CrystalCoreTiberiumInfuserScreen;
@@ -201,6 +205,12 @@ public class CrystalTech {
             MenuScreens.register(ModMenuTypes.ALYTHUM_KILN_MENU.get(), AlythumKilnScreen::new);
             MenuScreens.register(ModMenuTypes.VITRIC_KILN_MENU.get(), VitricKilnScreen::new);
             MenuScreens.register(ModMenuTypes.CRYSTAL_CORE_KILN_MENU.get(), CrystalCoreKilnScreen::new);
+
+
+            MenuScreens.register(ModMenuTypes.ALLOY_KILN_MENU.get(), AlloyKilnScreen::new);
+            MenuScreens.register(ModMenuTypes.ALYTHUM_ALLOY_KILN_MENU.get(), AlythumAlloyKilnScreen::new);
+            MenuScreens.register(ModMenuTypes.VITRIC_ALLOY_KILN_MENU.get(), VitricAlloyKilnScreen::new);
+            MenuScreens.register(ModMenuTypes.CRYSTAL_CORE_ALLOY_KILN_MENU.get(), CrystalCoreAlloyKilnScreen::new);
 
             //Tiberium
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_TIBERIUM_CROP.get(), RenderType.cutout());

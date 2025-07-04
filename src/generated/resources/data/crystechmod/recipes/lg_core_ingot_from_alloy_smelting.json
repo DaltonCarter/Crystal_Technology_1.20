@@ -1,0 +1,20 @@
+{
+  "type": "crystechmod:alloy_smelting",
+  "craftTime": 250,
+  "energyAmount": 20,
+  "ingredients": [
+    {
+      "item": "crystechmod:illyrim_ingot"
+    },
+    {
+      "item": "crystechmod:tiberium_composite_ingot"
+    },
+    {
+      "item": "crystechmod:proto_steel"
+    }
+  ],
+  "output": {
+    "count": 3,
+    "item": "crystechmod:lg_core_ingot"
+  }
+}

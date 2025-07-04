@@ -77,6 +77,16 @@ public static final RegistryObject<FlowingFluid> SOURCE_MOLTEN_TIBERIUM = FLUIDS
             .levelDecreasePerBlock(2).block(ModBlocks.MOLTEN_PURPLE_TIBERIUM_BLOCK).bucket(ModItems.MOLTEN_PURPLE_TIBERIUM_BUCKET);
 //End of Molten Tiberium
 
+    public static final RegistryObject<FlowingFluid> SOURCE_LIQUID_PROTOCULTURE = FLUIDS.register("liquid_protoculture_source",
+            () -> new ForgeFlowingFluid.Source(ModFluids.LIQUID_PROTOCULTURE_FLUID_PROPERTIES));
+
+    public static final RegistryObject<FlowingFluid> FLOWING_LIQUID_PROTOCULTURE = FLUIDS.register("molten_flowing_protoculture",
+            () -> new ForgeFlowingFluid.Flowing(ModFluids.LIQUID_PROTOCULTURE_FLUID_PROPERTIES));
+
+    public static final ForgeFlowingFluid.Properties LIQUID_PROTOCULTURE_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
+            ModFluidTypes.LIQUID_PROTOCULTURE_FLUID_TYPE, SOURCE_LIQUID_PROTOCULTURE, FLOWING_LIQUID_PROTOCULTURE).slopeFindDistance(2)
+            .levelDecreasePerBlock(2).block(ModBlocks.LIQUID_PROTOCULTURE_BLOCK).bucket(ModItems.LIQUID_PROTOCULTURE_BUCKET);
+
 
 public static void register(IEventBus eventBus) {
         FLUIDS.register(eventBus);

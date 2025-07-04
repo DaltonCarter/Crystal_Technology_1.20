@@ -2,6 +2,11 @@ package com.CartersDev.crystechmod.event;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
+import com.CartersDev.crystechmod.block.entity.alloykiln.AlloyKilnBlockEntity;
+import com.CartersDev.crystechmod.block.entity.renderer.alloykiln.AlloyKilnBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.alloykiln.AlythumAlloyKilnBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.alloykiln.CrystalCoreAlloyKilnBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.alloykiln.VitricAlloyKilnBlockEntityRenderer;
 import com.CartersDev.crystechmod.block.entity.renderer.grinder.TiberiumGrinderBlockEntityRenderer;
 import com.CartersDev.crystechmod.block.entity.renderer.infuser.AlythumTiberiumInfuserBlockEntityRenderer;
 import com.CartersDev.crystechmod.block.entity.renderer.infuser.CrystalCoreTiberiumInfuserBlockEntityRenderer;
@@ -54,6 +59,11 @@ public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.ALYTHUM_KILN_BE.get(), AlythumKilnBlockEntityRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.VITRIC_KILN_BE.get(), VitricKilnBlockEntityRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.CRYSTAL_CORE_KILN_BE.get(), CrystalCoreKilnBlockEntityRenderer::new);
+
+        event.registerBlockEntityRenderer(ModBlockEntities.ALLOY_KILN_BE.get(), AlloyKilnBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.ALYTHUM_ALLOY_KILN_BE.get(), AlythumAlloyKilnBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.VITRIC_ALLOY_KILN_BE.get(), VitricAlloyKilnBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.CRYSTAL_CORE_ALLOY_KILN_BE.get(), CrystalCoreAlloyKilnBlockEntityRenderer::new);
 
         event.registerBlockEntityRenderer(ModBlockEntities.MOD_SIGN.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.MOD_HANGING_SIGN.get(), HangingSignRenderer::new);

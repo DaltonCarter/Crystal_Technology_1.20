@@ -9,6 +9,7 @@
   "item.crystechmod.raw_alythum": "Raw Alythum",
   "item.crystechmod.qualrim_compound": "Qualrim Compound",
   "item.crystechmod.gundanium_dust": "Gundanium Dust",
+  "item.crystechmod.proto_steel": "Proto-Steel Ingot",
   "item.crystechmod.harmonium_dust": "Harmonium Dust",
   "item.crystechmod.gundanium_ingot": "Gundanium Ingot",
   "item.crystechmod.harmonium_ingot": "Harmonium Ingot",
@@ -31,6 +32,7 @@
   "item.crystechmod.molten_blue_tiberium_bucket": "Liquid Vinifera Tiberium Bucket",
   "item.crystechmod.molten_red_tiberium_bucket": "Liquid Cruentus Tiberium Bucket",
   "item.crystechmod.molten_purple_tiberium_bucket": "Liquid Aboreus Tiberium Bucket",
+  "item.crystechmod.liquid_protoculture_bucket": "Protoculture Bucket",
   "item.crystechmod.tiberium_water_bucket": "Infected Water Bucket",
   "item.crystechmod.tiberium_fruit": "Tiberium Fruit",
   "item.crystechmod.heim_berry": "Heim Berry",
@@ -251,6 +253,7 @@
   "block.crystechmod.enigma_block": "Enigma Block",
   "block.crystechmod.kryon_block": "Kryon Block",
   "block.crystechmod.gundanium_block": "Gundanium Block",
+  "block.crystechmod.proto_steel_block": "Proto-Steel Block",
   "block.crystechmod.alythum_block": "Alythum Block",
   "block.crystechmod.illyrim_block": "Illyrim Block",
   "block.crystechmod.lg_core_block": "MK.1 Core Steel Block",
@@ -1071,6 +1074,11 @@
   "block.crystechmod.vitric_kiln": "Advanced Kiln",
   "block.crystechmod.crystal_core_kiln": "Ultimate Kiln",
 
+  "block.crystechmod.alloy_kiln": "Basic Alloy Kiln",
+  "block.crystechmod.alythum_alloy_kiln": "Improved Alloy Kiln",
+  "block.crystechmod.vitric_alloy_kiln": "Advanced Alloy Kiln",
+  "block.crystechmod.crystal_core_alloy_kiln": "Ultimate Alloy Kiln",
+
 
   "enchantment.crystechmod.lightning_striker": "Lightning Striker",
 
@@ -1148,6 +1156,7 @@
   "fluid_type.crystechmod.molten_blue_tiberium_fluid": "Molten Vinifera Tiberium",
   "fluid_type.crystechmod.molten_red_tiberium_fluid": "Molten Cruentus Tiberium",
   "fluid_type.crystechmod.molten_purple_tiberium_fluid": "Molten Aboreus Tiberium",
+  "fluid_type.crystechmod.liquid_protoculture_fluid": "Liquid Protoculture",
 
 
 
