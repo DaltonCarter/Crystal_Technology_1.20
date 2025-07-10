@@ -26,6 +26,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
 //                    output.accept(ModBlocks.DOOR_CON.get());
 
 
+                    output.accept(ModBlocks.FOOLS_VITRICIUM.get());
                     output.accept(ModBlocks.BLOSSOM_SPOUT.get());
                     output.accept(ModBlocks.BLOSSOM_CENTER.get());
                     output.accept(ModBlocks.BLOSSOM_BASE.get());
@@ -46,7 +47,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
 
                     output.accept(ModItems.LIQUID_PROTOCULTURE_BUCKET.get());
                     output.accept(ModItems.PROTO_STEEL.get());
-                    output.accept(ModBlocks.PROTO_STEEL_BLOCK.get());
+
 
                     output.accept(ModItems.FIRESTONE.get());
                     output.accept(ModBlocks.FIRESTONE_BLOCK.get());
@@ -242,6 +243,11 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.ALYTHUM_ALLOY_KILN.get());
                         output.accept(ModBlocks.VITRIC_ALLOY_KILN.get());
                         output.accept(ModBlocks.CRYSTAL_CORE_ALLOY_KILN.get());
+
+                        output.accept(ModBlocks.VITRICIUM_REFINERY.get());
+                        output.accept(ModBlocks.ALYTHUM_VITRICIUM_REFINERY.get());
+                        output.accept(ModBlocks.VITRIC_VITRICIUM_REFINERY.get());
+                        output.accept(ModBlocks.CRYSTAL_CORE_VITRICIUM_REFINERY.get());
 
                     })
                     .build());
@@ -578,6 +584,11 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.INFESTED_STONE_BRICKS.get()))
                     .title(Component.translatable("creativetab.crystal_technology_building_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+
+                        output.accept(ModBlocks.PROTO_STEEL_BLOCK.get());
+                        output.accept(ModBlocks.PROTO_STEEL_STAIRS.get());
+                        output.accept(ModBlocks.PROTO_STEEL_SLAB.get());
+                        output.accept(ModBlocks.PROTO_STEEL_WALL.get());
 
                         output.accept(ModBlocks.CRYSTAL_CORE_LAMP_G.get());
                         output.accept(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get());

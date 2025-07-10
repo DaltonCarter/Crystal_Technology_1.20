@@ -1,0 +1,28 @@
+
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "mekanism"
+        }
+      ],
+      "type": "crystechmod:tiberium_infusing",
+      "craftTime": 750,
+      "energyAmount": 20,
+      "fluidAmount": 1000,
+      "fluidType": "crystechmod:molten_purple_tiberium_source",
+      "ingredients": [
+        {
+          "item": "mekanism:ingot_steel"
+        }
+      ],
+      "output": {
+        "item": "crystechmod:proto_steel"
+        }
+      }
+
+  ]
+}

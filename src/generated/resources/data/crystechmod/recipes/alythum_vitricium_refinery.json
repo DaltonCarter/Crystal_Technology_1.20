@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:proto_steel"
+    },
+    "C": {
+      "item": "crystechmod:kryonic_capacitor"
+    },
+    "H": {
+      "item": "crystechmod:harmonic_relay"
+    },
+    "I": {
+      "item": "crystechmod:vitricium_refinery"
+    },
+    "K": {
+      "item": "crystechmod:illuminate_component"
+    },
+    "M": {
+      "item": "crystechmod:alythum_machine_core"
+    },
+    "R": {
+      "item": "crystechmod:kryonic_reservoir"
+    }
+  },
+  "pattern": [
+    "AIA",
+    "KMK",
+    "CHR"
+  ],
+  "result": {
+    "item": "crystechmod:alythum_vitricium_refinery"
+  },
+  "show_notification": true
+}

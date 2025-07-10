@@ -4,6 +4,7 @@ package com.CartersDev.crystechmod.datagen;
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.fluid.ModFluids;
+import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -67,6 +68,23 @@ public class ModFluidTagGenerator extends FluidTagsProvider {
                 ModTags.Fluids.MOLTEN_PURPLE_TIBERIUM,
                 ModTags.Fluids.LIQUID_PROTOCULTURE
                 );
+
+        this.tag(ModTags.Fluids.REFINERY_INPUT)
+                .addTags(FluidTags.LAVA,
+                        ModTags.Fluids.LIQUID_PROTOCULTURE
+                );
+
+
+        this.tag(ModTags.Fluids.REFINERY_OUTPUT)
+                .addTags(ModTags.Fluids.MOLTEN_GREEN_TIBERIUM,
+                        ModTags.Fluids.MOLTEN_BLUE_TIBERIUM,
+                        ModTags.Fluids.MOLTEN_RED_TIBERIUM,
+                        ModTags.Fluids.MOLTEN_PURPLE_TIBERIUM,
+                        ModTags.Fluids.LIQUID_PROTOCULTURE
+                );
+
+
+
 
 
 

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/proto_steel_slab"
+    },
+    "type=double": {
+      "model": "crystechmod:block/proto_steel_block"
+    },
+    "type=top": {
+      "model": "crystechmod:block/proto_steel_slab_top"
+    }
+  }
+}

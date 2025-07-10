@@ -28,6 +28,14 @@
     "crystechmod:alythum_kiln",
     "crystechmod:vitric_kiln",
     "crystechmod:crystal_core_kiln",
+    "crystechmod:alloy_kiln",
+    "crystechmod:alythum_alloy_kiln",
+    "crystechmod:vitric_alloy_kiln",
+    "crystechmod:crystal_core_alloy_kiln",
+    "crystechmod:vitricium_refinery",
+    "crystechmod:alythum_vitricium_refinery",
+    "crystechmod:vitric_vitricium_refinery",
+    "crystechmod:crystal_core_vitricium_refinery",
     "crystechmod:tiberium_blue_block",
     "crystechmod:tiberium_red_block",
     "crystechmod:tiberium_purple_block",
@@ -581,6 +589,10 @@
     "crystechmod:ct_tile_b_vert_3",
     "crystechmod:ct_tile_r_vert_3",
     "crystechmod:ct_tile_p_vert_3",
-    "crystechmod:ct_tile_wall_p_3"
+    "crystechmod:ct_tile_wall_p_3",
+    "crystechmod:proto_steel_block",
+    "crystechmod:proto_steel_wall",
+    "crystechmod:proto_steel_slab",
+    "crystechmod:proto_steel_stairs"
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "crystechmod:block/proto_steel_block",
+    "side": "crystechmod:block/proto_steel_block",
+    "top": "crystechmod:block/proto_steel_block"
+  }
+}

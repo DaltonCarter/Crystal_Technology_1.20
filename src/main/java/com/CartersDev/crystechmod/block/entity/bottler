@@ -1,0 +1,17 @@
+  private void outputToBucket(){
+        FluidStack fluidStack = OUTPUT_FLUID_TANK.getFluid();
+        ItemStack bucket = this.itemHandler.getStackInSlot(0);
+
+        if(!OUTPUT_FLUID_TANK.isEmpty()){
+            if(OUTPUT_FLUID_TANK.getFluid().getFluid() == ModFluids.SOURCE_LIQUID_PROTOCULTURE.get()
+            && bucket.getItem() == Items.BUCKET){
+                this.itemHandler.extractItem(INPUT_SLOT, 1, false);
+                OUTPUT_FLUID_TANK.drain(1000, IFluidHandler.FluidAction.EXECUTE);
+                this.itemHandler.insertItem(OUTPUT_SLOT, new ItemStack(ModItems.LIQUID_PROTOCULTURE_BUCKET.get(),1), false);
+
+            }
+        }
+
+
+
+    }

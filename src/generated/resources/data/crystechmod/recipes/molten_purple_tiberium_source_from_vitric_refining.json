@@ -1,0 +1,15 @@
+{
+  "type": "crystechmod:vitric_refining",
+  "craftTime": 200,
+  "energyAmount": 50,
+  "fluidAmount": 100,
+  "fluidType": "minecraft:lava",
+  "ingredients": [
+    {
+      "item": "crystechmod:tiberium_purple"
+    }
+  ],
+  "output": {},
+  "outputFluidAmount": 100,
+  "outputFluidType": "crystechmod:molten_purple_tiberium_source"
+}

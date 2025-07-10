@@ -30,6 +30,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
 
         blockWithItem(ModBlocks.TEST_BLOCK);
+        blockWithItem(ModBlocks.FOOLS_VITRICIUM);
 
         //Basic Block States:
         blockWithItem(ModBlocks.GUNDANIUM_BLOCK);
@@ -579,6 +580,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) ModBlocks.WHITE_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.WHITE_TIBERCRETE_BRICKS.get()));
         stairsBlock((StairBlock) ModBlocks.YELLOW_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.YELLOW_TIBERCRETE_BRICKS.get()));
 
+        stairsBlock((StairBlock) ModBlocks.PROTO_STEEL_STAIRS.get(), blockTexture(ModBlocks.PROTO_STEEL_BLOCK.get()));
+
         stairsBlock((StairBlock) ModBlocks.PLAGUED_ANDESITE_STAIRS.get(), blockTexture(ModBlocks.INFESTED_ANDESITE.get()));
         stairsBlock((StairBlock) ModBlocks.PLAGUED_STONE_STAIRS.get(), blockTexture(ModBlocks.INFESTED_STONE.get()));
         stairsBlock((StairBlock) ModBlocks.PLAGUED_GRANITE_STAIRS.get(), blockTexture(ModBlocks.INFESTED_GRANITE.get()));
@@ -771,6 +774,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_R_3.get(), blockTexture(ModBlocks.CT_TILE_R_3.get()), blockTexture(ModBlocks.CT_TILE_R_3.get()));
         slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_P_3.get(), blockTexture(ModBlocks.CT_TILE_P_3.get()), blockTexture(ModBlocks.CT_TILE_P_3.get()));
 
+        slabBlock((SlabBlock) ModBlocks.PROTO_STEEL_SLAB.get(), blockTexture(ModBlocks.PROTO_STEEL_BLOCK.get()), blockTexture(ModBlocks.PROTO_STEEL_BLOCK.get()));
+
         //Buttons and Pressure Plates:
         buttonBlock((ButtonBlock) ModBlocks.PLAGUED_BUTTON.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
         pressurePlateBlock((PressurePlateBlock) ModBlocks.PLAGUED_PRESSURE_PLATE.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
@@ -912,6 +917,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_B_3.get())), blockTexture(( ModBlocks.CT_TILE_B_3.get())));
         wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_R_3.get())), blockTexture(( ModBlocks.CT_TILE_R_3.get())));
         wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_P_3.get())), blockTexture(( ModBlocks.CT_TILE_P_3.get())));
+
+        wallBlock((((WallBlock) ModBlocks.PROTO_STEEL_WALL.get())), blockTexture(( ModBlocks.PROTO_STEEL_BLOCK.get())));
 
 
         //Crops and Plants:

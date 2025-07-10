@@ -26,6 +26,9 @@ public static final RegistryObject<RecipeSerializer<TiberiumGrinderRecipe>> TIBE
     public static final RegistryObject<RecipeSerializer<AlloyKilnRecipe>> ALLOY_KILN_SERIALIZER =
             SERIALIZERS.register("alloy_smelting", () -> AlloyKilnRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<VitriciumRefineryRecipe>> VITRICIUM_REFINERY_SERIALIZER =
+            SERIALIZERS.register("vitric_refining", () -> VitriciumRefineryRecipe.Serializer.INSTANCE);
+
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

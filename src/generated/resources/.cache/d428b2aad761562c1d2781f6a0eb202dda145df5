@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-03T04:32:52.1631602	Item Models: crystechmod
+// 1.20.1	2025-07-06T16:33:39.6344789	Item Models: crystechmod
 7d9fe5e88433390f9cd29dab7e515bddd3fbdf4b assets/crystechmod/models/item/aboreus_crystal_slab.json
 0e376de85f99a387d23f7130ff296ce0b5fe876e assets/crystechmod/models/item/aboreus_crystal_stairs.json
 2ced509a911b88c37b68b1a1278f10fc986798c4 assets/crystechmod/models/item/aboreus_crystal_wall.json
@@ -617,6 +617,9 @@ d4a63befb3c126175e63372d0353fb1b8a68fe75 assets/crystechmod/models/item/plagued_
 c75952fbf158d90168c4f029c9621cbfec7894ab assets/crystechmod/models/item/plagued_trapdoor.json
 31d4e83cb670ebc2fb2e7daef6a8886a4d80dfe9 assets/crystechmod/models/item/prodigal_son_music_disc.json
 e1a434a094278f4f2e4dcf1bb4769e2be1be83dc assets/crystechmod/models/item/proto_steel.json
+c93fec7feae9c2c9a240beba16a354c1dbe3036c assets/crystechmod/models/item/proto_steel_slab.json
+fb83db9bec6b4fe0e9078df1c0bc253d88e63bab assets/crystechmod/models/item/proto_steel_stairs.json
+4cef2a079315c38af1757efec6ca64e6612b1a7a assets/crystechmod/models/item/proto_steel_wall.json
 db0a5ff7ddebe86197c1f8bff2ad833f9c16436d assets/crystechmod/models/item/purple_tibercrete_brick_slab.json
 4b3f5f8a1ce684d9fcc1bb082fe197af62643d37 assets/crystechmod/models/item/purple_tibercrete_brick_stairs.json
 2424276c7dc11182a964257e6ed82c0c37404723 assets/crystechmod/models/item/purple_tibercrete_brick_wall.json

@@ -48,6 +48,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
             () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.SOUND_BLOCK_SOUNDS)));
 
+    public static final RegistryObject<Block> FOOLS_VITRICIUM = registerBlock("fools_vitricium",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).sound(SoundType.AMETHYST)
+                    .noLootTable()));
+
     //Terrain Blocks:
         //Natural Terrain Blocks:
     public static final RegistryObject<Block> TIBERIUM_SOIL = registerBlock("tiberium_soil",
@@ -488,6 +492,10 @@ public class ModBlocks {
             () -> new StairBlock(() -> ModBlocks.YELLOW_TIBERCRETE.get().defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.YELLOW_CONCRETE)));
 
+    public static final RegistryObject<Block> PROTO_STEEL_STAIRS = registerBlock("proto_steel_stairs",
+            () -> new StairBlock(() -> ModBlocks.PROTO_STEEL_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
     public static final RegistryObject<Block> BLACK_TIBERCRETE_SLAB = registerBlock("black_tibercrete_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
 
@@ -535,6 +543,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> YELLOW_TIBERCRETE_SLAB = registerBlock("yellow_tibercrete_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> PROTO_STEEL_SLAB = registerBlock("proto_steel_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     public static final RegistryObject<Block> BLACK_TIBERCRETE_BRICKS = registerBlock("black_tibercrete_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BLACK_CONCRETE)));
@@ -631,6 +642,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> YELLOW_TIBERCRETE_WALL = registerBlock("yellow_tibercrete_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(ModBlocks.YELLOW_TIBERCRETE.get())));
+
+    public static final RegistryObject<Block> PROTO_STEEL_WALL = registerBlock("proto_steel_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     public static final RegistryObject<Block> BLACK_TIBERCRETE_BRICK_STAIRS = registerBlock("black_tibercrete_brick_stairs",
             () -> new StairBlock(() -> ModBlocks.BLACK_TIBERCRETE_BRICKS.get().defaultBlockState(),
@@ -2888,6 +2902,23 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRYSTAL_CORE_ALLOY_KILN = registerBlock("crystal_core_alloy_kiln",
             () -> new AlloyKilnBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
                     .lightLevel(state -> state.getValue(AlloyKilnBlock.WORKING) ? 15 : 0)));
+
+
+    public static final RegistryObject<Block> VITRICIUM_REFINERY = registerBlock("vitricium_refinery",
+            () -> new VitriciumRefineryBlock(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(VitriciumRefineryBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> ALYTHUM_VITRICIUM_REFINERY = registerBlock("alythum_vitricium_refinery",
+            () -> new VitriciumRefineryBlock(2, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(VitriciumRefineryBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> VITRIC_VITRICIUM_REFINERY = registerBlock("vitric_vitricium_refinery",
+            () -> new VitriciumRefineryBlock(3, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(VitriciumRefineryBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> CRYSTAL_CORE_VITRICIUM_REFINERY = registerBlock("crystal_core_vitricium_refinery",
+            () -> new VitriciumRefineryBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(VitriciumRefineryBlock.WORKING) ? 15 : 0)));
 
         //Signs:
 

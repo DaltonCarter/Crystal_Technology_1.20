@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-19T15:53:22.0268477	Tags for minecraft:block mod id crystechmod
+// 1.20.1	2025-07-09T19:35:36.4440586	Tags for minecraft:block mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/blocks/aeries_ores.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/blocks/alythum_ores.json
 6b38af71a7ebba97f729de43e6ee84033f8e45cc data/crystechmod/tags/blocks/concretes.json
@@ -17,7 +17,7 @@ c7bbac2058df90e9377b5e00ecc05db2c0213cad data/crystechmod/tags/blocks/kryon_ores
 76338cc754cb5d1030cd4159192e0089f6c09fae data/crystechmod/tags/blocks/marika_oak_logs.json
 82362cfbd1836db13c7e9d36c8712821e795ac55 data/crystechmod/tags/blocks/mineable/paxel.json
 b97904e909222fd61767ad7160b0c32323c6852d data/crystechmod/tags/blocks/mod_planks.json
-8ddfe619501f12402db76d64c44e6d5c306a0c4c data/crystechmod/tags/blocks/needs_gundanium_tool.json
+d26f547403e4ca9e5146c2102cfca3f1039392e6 data/crystechmod/tags/blocks/needs_gundanium_tool.json
 d77f4c0b4a5c5eb15aa8cf1d058cb63a549f3b8f data/crystechmod/tags/blocks/needs_plagued_tool.json
 7ff009a6ce8d964af59c35e91e257d0fca7cfd07 data/crystechmod/tags/blocks/plagued_logs.json
 ee5b7fa627624f169c1f928bb2933cee6d008256 data/crystechmod/tags/blocks/smeltable.json
@@ -43,7 +43,7 @@ c6aab69a244678a9783a3baff90174fb529ed517 data/minecraft/tags/blocks/fences.json
 7469d34aacc37cbec82468d3eb2d3892f56a9277 data/minecraft/tags/blocks/logs.json
 e0721fc7760819c2882cc2896aeb4f60de8a8dad data/minecraft/tags/blocks/logs_that_burn.json
 5921bae2cd5332c6c228feaad9db64bf1b77c963 data/minecraft/tags/blocks/mineable/axe.json
-24c6163fcb45387dd8caca124c97ef1fb05deef9 data/minecraft/tags/blocks/mineable/pickaxe.json
+9a02fc4d3ef9899746ab099cccd48f428c9fd420 data/minecraft/tags/blocks/mineable/pickaxe.json
 dd6b58c2c6ce4b232b32c4cb3660f8c13d258cb8 data/minecraft/tags/blocks/mineable/shovel.json
 8bca9fd80ca24370a1e5ed4a77e2160b3f127569 data/minecraft/tags/blocks/needs_diamond_tool.json
 e0076fdd1852f50e82ebc29cb4a0f6f9a3d1a4be data/minecraft/tags/blocks/needs_iron_tool.json
@@ -52,7 +52,7 @@ e0076fdd1852f50e82ebc29cb4a0f6f9a3d1a4be data/minecraft/tags/blocks/needs_iron_t
 e7dcc8f2a8ffe501146a5957de7762895a8a1855 data/minecraft/tags/blocks/saplings.json
 fc8b211f9c98208a97ee0d599c4628b114f1a663 data/minecraft/tags/blocks/stone_ore_replaceables.json
 185cd3b1c31e7a43c7ffcf1eb821f74493aa25b9 data/minecraft/tags/blocks/tall_flowers.json
-d13ed31c8083af4819335542255f8ba0756af974 data/minecraft/tags/blocks/walls.json
+5569c3bbc6464c31586d42550adecac2a7967f6d data/minecraft/tags/blocks/walls.json
 fdd7c1de1b6e4b3263f7f1560d38f58280bdfd7b data/minecraft/tags/blocks/wooden_buttons.json
 8a6f243e96e19bc9c56beaab6aa77e1f7521d13b data/minecraft/tags/blocks/wooden_doors.json
 b4b5a7320c3e24622dd3f302b4468d56acdbe28f data/minecraft/tags/blocks/wooden_pressure_plates.json

@@ -1,0 +1,10 @@
+{
+  "values": [
+    "crystechmod:molten_tiberium_bucket",
+    "crystechmod:molten_blue_tiberium_bucket",
+    "crystechmod:molten_red_tiberium_bucket",
+    "crystechmod:molten_purple_tiberium_bucket",
+    "crystechmod:liquid_protoculture_bucket",
+    "#forge:ingots"
+  ]
+}

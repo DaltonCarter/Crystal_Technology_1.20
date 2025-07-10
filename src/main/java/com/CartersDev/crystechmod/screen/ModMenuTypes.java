@@ -18,6 +18,10 @@ import com.CartersDev.crystechmod.screen.poweredKilnMenu.AlythumKilnMenu;
 import com.CartersDev.crystechmod.screen.poweredKilnMenu.CrystalCoreKilnMenu;
 import com.CartersDev.crystechmod.screen.poweredKilnMenu.PoweredKilnMenu;
 import com.CartersDev.crystechmod.screen.poweredKilnMenu.VitricKilnMenu;
+import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.AlythumVitriciumRefineryMenu;
+import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.CrystalCoreVitriciumRefineryMenu;
+import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.VitricVitriciumRefineryMenu;
+import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.VitriciumRefineryMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -86,6 +90,20 @@ public class ModMenuTypes {
 
     public static final RegistryObject<MenuType<CrystalCoreAlloyKilnMenu>> CRYSTAL_CORE_ALLOY_KILN_MENU =
             registerMenuType("crystal_core_alloy_kiln_menu", CrystalCoreAlloyKilnMenu::new);
+
+
+
+    public static final RegistryObject<MenuType<VitriciumRefineryMenu>> VITRICIUM_REFINERY_MENU =
+            registerMenuType("vitricium_refinery_menu", VitriciumRefineryMenu::new);
+
+    public static final RegistryObject<MenuType<AlythumVitriciumRefineryMenu>> ALYTHUM_VITRICIUM_REFINERY_MENU =
+            registerMenuType("alythum_vitricium_refinery_menu", AlythumVitriciumRefineryMenu::new);
+
+    public static final RegistryObject<MenuType<VitricVitriciumRefineryMenu>> VITRIC_VITRICIUM_REFINERY_MENU =
+            registerMenuType("vitric_vitricium_refinery_menu", VitricVitriciumRefineryMenu::new);
+
+    public static final RegistryObject<MenuType<CrystalCoreVitriciumRefineryMenu>> CRYSTAL_CORE_VITRICIUM_REFINERY_MENU =
+            registerMenuType("crystal_core_vitricium_refinery_menu", CrystalCoreVitriciumRefineryMenu::new);
 
 
 

@@ -1,8 +1,9 @@
-// 1.20.1	2025-07-03T04:38:42.2847511	Tags for minecraft:item mod id crystechmod
+// 1.20.1	2025-07-09T02:50:28.1757022	Tags for minecraft:item mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/items/aeries_ores.json
 77ea3b8940ebc0df73fba72bbe9b9ade8e235374 data/crystechmod/tags/items/alloying_input.json
 fa76f1684399485901512c1963d14384561d1b3d data/crystechmod/tags/items/alloying_result.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/items/alythum_ores.json
+5159be849ca1f753e204748b15df43bb5f807324 data/crystechmod/tags/items/bucket_output.json
 6b38af71a7ebba97f729de43e6ee84033f8e45cc data/crystechmod/tags/items/concretes.json
 1b1bb8b2e7aecfb7d82d771a540fcafffe25b6ed data/crystechmod/tags/items/dead_logs.json
 9e69fb63880d9644913e3c1febc7b5019ed06a98 data/crystechmod/tags/items/ember_oak_logs.json

@@ -254,6 +254,9 @@
   "block.crystechmod.kryon_block": "Kryon Block",
   "block.crystechmod.gundanium_block": "Gundanium Block",
   "block.crystechmod.proto_steel_block": "Proto-Steel Block",
+  "block.crystechmod.proto_steel_stairs": "Proto-Steel Stairs",
+  "block.crystechmod.proto_steel_slab": "Proto-Steel Slab",
+  "block.crystechmod.proto_steel_wall": "Proto-Steel Wall",
   "block.crystechmod.alythum_block": "Alythum Block",
   "block.crystechmod.illyrim_block": "Illyrim Block",
   "block.crystechmod.lg_core_block": "MK.1 Core Steel Block",
@@ -1047,6 +1050,8 @@
   "block.crystechmod.white_vert_crystal_core_light": "White Crystal Core Light Alt",
   "block.crystechmod.inverted_white_vert_crystal_core_light": "Inverted White Crystal Core Light Alt",
 
+  "block.crystechmod.fools_vitricium": "Fools Vitricium",
+
   "block.crystechmod.harmonium_ore": "Harmonium Ore",
   "block.crystechmod.deepslate_harmonium_ore": "Deepslate Harmonium Ore",
   "block.crystechmod.nether_harmonium_ore": "Nether Harmonium Ore",
@@ -1078,6 +1083,11 @@
   "block.crystechmod.alythum_alloy_kiln": "Improved Alloy Kiln",
   "block.crystechmod.vitric_alloy_kiln": "Advanced Alloy Kiln",
   "block.crystechmod.crystal_core_alloy_kiln": "Ultimate Alloy Kiln",
+
+  "block.crystechmod.vitricium_refinery": "Basic Vitricium Refinery",
+  "block.crystechmod.alythum_vitricium_refinery": "Improved Vitricium Refinery",
+  "block.crystechmod.vitric_vitricium_refinery": "Advanced Vitricium Refinery",
+  "block.crystechmod.crystal_core_vitricium_refinery": "Ultimate Vitricium Refinery",
 
 
   "enchantment.crystechmod.lightning_striker": "Lightning Striker",

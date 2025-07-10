@@ -20,6 +20,10 @@ import com.CartersDev.crystechmod.block.entity.poweredkiln.AlythumKilnBlockEntit
 import com.CartersDev.crystechmod.block.entity.poweredkiln.CrystalCoreKilnBlockEntity;
 import com.CartersDev.crystechmod.block.entity.poweredkiln.PoweredKilnBlockEntity;
 import com.CartersDev.crystechmod.block.entity.poweredkiln.VitricKilnBlockEntity;
+import com.CartersDev.crystechmod.block.entity.refinery.AlythumVitriciumRefineryBlockEntity;
+import com.CartersDev.crystechmod.block.entity.refinery.CrystalCoreVitriciumRefineryBlockEntity;
+import com.CartersDev.crystechmod.block.entity.refinery.VitricVitriciumRefineryBlockEntity;
+import com.CartersDev.crystechmod.block.entity.refinery.VitriciumRefineryBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -105,6 +109,24 @@ public static final RegistryObject<BlockEntityType<TiberiumGrinderBlockEntity>> 
     public static final RegistryObject<BlockEntityType<CrystalCoreAlloyKilnBlockEntity>> CRYSTAL_CORE_ALLOY_KILN_BE =
             BLOCK_ENTITIES.register("crystal_core_alloy_kiln_be", () -> BlockEntityType.Builder.of(
                     CrystalCoreAlloyKilnBlockEntity::new, ModBlocks.CRYSTAL_CORE_ALLOY_KILN.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<VitriciumRefineryBlockEntity>> VITRICIUM_REFINERY_BE =
+            BLOCK_ENTITIES.register("vitricium_refinery_be", () -> BlockEntityType.Builder.of(
+                    VitriciumRefineryBlockEntity::new, ModBlocks.VITRICIUM_REFINERY.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<AlythumVitriciumRefineryBlockEntity>> ALYTHUM_VITRICIUM_REFINERY_BE =
+            BLOCK_ENTITIES.register("alythum_vitricium_refinery_be", () -> BlockEntityType.Builder.of(
+                    AlythumVitriciumRefineryBlockEntity::new, ModBlocks.ALYTHUM_VITRICIUM_REFINERY.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<VitricVitriciumRefineryBlockEntity>> VITRIC_VITRICIUM_REFINERY_BE =
+            BLOCK_ENTITIES.register("vitric_vitricium_refinery_be", () -> BlockEntityType.Builder.of(
+                    VitricVitriciumRefineryBlockEntity::new, ModBlocks.VITRIC_VITRICIUM_REFINERY.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<CrystalCoreVitriciumRefineryBlockEntity>> CRYSTAL_CORE_VITRICIUM_REFINERY_BE =
+            BLOCK_ENTITIES.register("crystal_core_vitricium_refinery_be", () -> BlockEntityType.Builder.of(
+                    CrystalCoreVitriciumRefineryBlockEntity::new, ModBlocks.CRYSTAL_CORE_VITRICIUM_REFINERY.get()).build(null));
 
 
 

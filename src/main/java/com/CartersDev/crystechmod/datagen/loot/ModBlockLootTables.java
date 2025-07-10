@@ -39,6 +39,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ALYTHUM_KILN.get());
         this.dropSelf(ModBlocks.VITRIC_KILN.get());
         this.dropSelf(ModBlocks.CRYSTAL_CORE_KILN.get());
+        this.dropSelf(ModBlocks.VITRICIUM_REFINERY.get());
+        this.dropSelf(ModBlocks.ALYTHUM_VITRICIUM_REFINERY.get());
+        this.dropSelf(ModBlocks.VITRIC_VITRICIUM_REFINERY.get());
+        this.dropSelf(ModBlocks.CRYSTAL_CORE_VITRICIUM_REFINERY.get());
 
         this.dropSelf(ModBlocks.ALLOY_KILN.get());
         this.dropSelf(ModBlocks.ALYTHUM_ALLOY_KILN.get());
@@ -425,6 +429,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.dropSelf(ModBlocks.FIRESTONE_WALL.get());
 
+        this.dropSelf(ModBlocks.PROTO_STEEL_BLOCK.get());
+        this.dropSelf(ModBlocks.PROTO_STEEL_WALL.get());
+        this.dropSelf(ModBlocks.PROTO_STEEL_STAIRS.get());
+
         this.dropSelf(ModBlocks.EMBER_OAK_LOG.get());
         this.dropSelf(ModBlocks.EMBER_OAK_WOOD.get());
         this.dropSelf(ModBlocks.STRIPPED_EMBER_OAK_LOG.get());
@@ -761,6 +769,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         //Slabs:
         this.add(ModBlocks.PLAGUED_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.PLAGUED_SLAB.get()));
+
+        this.add(ModBlocks.PROTO_STEEL_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PROTO_STEEL_SLAB.get()));
 
         this.add(ModBlocks.VITRIC_DEEPSLATE_BRICK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.VITRIC_DEEPSLATE_BRICK_SLAB.get()));

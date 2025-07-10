@@ -162,6 +162,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.VITRIC_KILN.get(),
                         ModBlocks.CRYSTAL_CORE_KILN.get(),
 
+                        ModBlocks.ALLOY_KILN.get(),
+                        ModBlocks.ALYTHUM_ALLOY_KILN.get(),
+                        ModBlocks.VITRIC_ALLOY_KILN.get(),
+                        ModBlocks.CRYSTAL_CORE_ALLOY_KILN.get(),
+
+                        ModBlocks.VITRICIUM_REFINERY.get(),
+                        ModBlocks.ALYTHUM_VITRICIUM_REFINERY.get(),
+                        ModBlocks.VITRIC_VITRICIUM_REFINERY.get(),
+                        ModBlocks.CRYSTAL_CORE_VITRICIUM_REFINERY.get(),
+
                         ModBlocks.TIBERIUM_BLUE_BLOCK.get(),
                         ModBlocks.TIBERIUM_RED_BLOCK.get(),
                         ModBlocks.TIBERIUM_PURPLE_BLOCK.get(),
@@ -720,7 +730,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.CT_TILE_B_VERT_3.get(),
                         ModBlocks.CT_TILE_R_VERT_3.get(),
                         ModBlocks.CT_TILE_P_VERT_3.get(),
-                        ModBlocks.CT_TILE_WALL_P_3.get()
+                        ModBlocks.CT_TILE_WALL_P_3.get(),
+                        ModBlocks.PROTO_STEEL_BLOCK.get(),
+                        ModBlocks.PROTO_STEEL_WALL.get(),
+                        ModBlocks.PROTO_STEEL_SLAB.get(),
+                        ModBlocks.PROTO_STEEL_STAIRS.get()
 
                 );
 
@@ -1449,10 +1463,18 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.ALYTHUM_TIBERIUM_INFUSER.get(),
                         ModBlocks.VITRIC_TIBERIUM_INFUSER.get(),
                         ModBlocks.CRYSTAL_CORE_TIBERIUM_INFUSER.get(),
+                        ModBlocks.VITRICIUM_REFINERY.get(),
+                        ModBlocks.ALYTHUM_VITRICIUM_REFINERY.get(),
+                        ModBlocks.VITRIC_VITRICIUM_REFINERY.get(),
+                        ModBlocks.CRYSTAL_CORE_VITRICIUM_REFINERY.get(),
                         ModBlocks.POWERED_KILN.get(),
                         ModBlocks.ALYTHUM_KILN.get(),
                         ModBlocks.VITRIC_KILN.get(),
                         ModBlocks.CRYSTAL_CORE_KILN.get(),
+                        ModBlocks.ALLOY_KILN.get(),
+                        ModBlocks.ALYTHUM_ALLOY_KILN.get(),
+                        ModBlocks.VITRIC_ALLOY_KILN.get(),
+                        ModBlocks.CRYSTAL_CORE_ALLOY_KILN.get(),
                         ModBlocks.HARMONIUM_ORE.get(),
                         ModBlocks.DEEPSLATE_HARMONIUM_ORE.get(),
                         ModBlocks.NETHER_HARMONIUM_ORE.get(),
@@ -1690,7 +1712,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.CT_TILE_B_VERT_3.get(),
                         ModBlocks.CT_TILE_R_VERT_3.get(),
                         ModBlocks.CT_TILE_P_VERT_3.get(),
-                        ModBlocks.CT_TILE_WALL_P_3.get()
+                        ModBlocks.CT_TILE_WALL_P_3.get(),
+                        ModBlocks.PROTO_STEEL_BLOCK.get(),
+                        ModBlocks.PROTO_STEEL_WALL.get(),
+                        ModBlocks.PROTO_STEEL_SLAB.get(),
+                        ModBlocks.PROTO_STEEL_STAIRS.get()
 
                         
                         
@@ -1840,6 +1866,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.FIRESTONE_WALL.get(),
                         ModBlocks.INFESTED_STONE_BRICK_WALL.get(),
+                        ModBlocks.PROTO_STEEL_WALL.get(),
                         ModBlocks.VITRIC_DEEPSLATE_TILE_WALL.get(),
                         ModBlocks.VITRIC_DEEPSLATE_BRICK_WALL.get(),
                         ModBlocks.INFESTED_COBBLE_WALL.get(),

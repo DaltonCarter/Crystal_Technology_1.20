@@ -8,6 +8,7 @@ import com.CartersDev.crystechmod.recipe.PoweredKilnRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
@@ -28,9 +29,11 @@ new RecipeType<>(UID, AlloyKilnRecipe.class);
 private final IDrawable background;
 private final IDrawable icon;
 
+
     public AlloyKilnCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 85);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.ALLOY_KILN.get()));
+
     }
 
 

@@ -131,6 +131,21 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         Tags.Items.INGOTS
                 );
 
+        this.tag(ModTags.Items.BUCKET_OUTPUT)
+                .add(
+
+                        ModItems.MOLTEN_TIBERIUM_BUCKET.get(),
+                        ModItems.MOLTEN_BLUE_TIBERIUM_BUCKET.get(),
+                        ModItems.MOLTEN_RED_TIBERIUM_BUCKET.get(),
+                        ModItems.MOLTEN_PURPLE_TIBERIUM_BUCKET.get(),
+                        ModItems.LIQUID_PROTOCULTURE_BUCKET.get()
+
+
+                )
+                .addTag(
+                        Tags.Items.INGOTS
+                );
+
 
         this.tag(ModTags.Items.SMELTING)
                 .add(

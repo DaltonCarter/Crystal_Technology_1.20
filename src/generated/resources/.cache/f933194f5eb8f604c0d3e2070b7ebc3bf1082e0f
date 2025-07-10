@@ -1,10 +1,12 @@
-// 1.20.1	2025-07-03T03:52:13.5987928	Tags for minecraft:fluid mod id crystechmod
+// 1.20.1	2025-07-08T17:27:10.3446069	Tags for minecraft:fluid mod id crystechmod
 bd0a0fdb378b665dbba3f08ad0f889cf8a559585 data/crystechmod/tags/fluids/infuser_fluids.json
 196e5b89f4413b3773c3c848a7068f791ac12810 data/crystechmod/tags/fluids/liquid_protoculture.json
 56e45667855c857201d21b269209a42d5e3cfbb5 data/crystechmod/tags/fluids/molten_blue_tiberium.json
 e1c19ef3c27f98d8738764db3602ecca3a7ced0a data/crystechmod/tags/fluids/molten_green_tiberium.json
 a7647e57122392109ed457af00e4ba51ccf464c6 data/crystechmod/tags/fluids/molten_purple_tiberium.json
 eb99436abc5156dc80d397b07b0e527a3bbc26c7 data/crystechmod/tags/fluids/molten_red_tiberium.json
+f7a90ffa12de399882b4a54ef0a905125bbf7cb4 data/crystechmod/tags/fluids/refinery_input.json
+bd0a0fdb378b665dbba3f08ad0f889cf8a559585 data/crystechmod/tags/fluids/refinery_output.json
 1a35b23d72e2036baaf6e92759a11554d711c0c1 data/crystechmod/tags/fluids/tiberium_water.json
 ace3247e355b2f7ce4c3aa78f0bc56f0e96f2303 data/minecraft/tags/fluids/lava.json
 d5fcd7532bf80c5db60e3f9600b86d35af04b582 data/minecraft/tags/fluids/water.json

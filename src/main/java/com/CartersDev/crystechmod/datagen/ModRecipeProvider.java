@@ -17,6 +17,7 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.StonecutterRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.fluids.FluidStack;
@@ -319,6 +320,30 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("SSS")
                 .define('S', ModBlocks.INFESTED_STONE_BRICKS.get())
                 .unlockedBy(getHasName(ModBlocks.INFESTED_STONE_BRICKS.get()), has(ModBlocks.INFESTED_STONE_BRICKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PROTO_STEEL_STAIRS.get(), 4)
+                .pattern("S  ")
+                .pattern("SS ")
+                .pattern("SSS")
+                .define('S', ModBlocks.PROTO_STEEL_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.PROTO_STEEL_BLOCK.get()), has(ModBlocks.PROTO_STEEL_BLOCK.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PROTO_STEEL_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("SSS")
+                .define('S', ModBlocks.PROTO_STEEL_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.PROTO_STEEL_BLOCK.get()), has(ModBlocks.PROTO_STEEL_BLOCK.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PROTO_STEEL_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModBlocks.PROTO_STEEL_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.PROTO_STEEL_BLOCK.get()), has(ModBlocks.PROTO_STEEL_BLOCK.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.INFESTED_COBBLE_STAIRS.get(), 4)
@@ -2815,6 +2840,49 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VITRICIUM_REFINERY.get())
+                .pattern("HIH")
+                .pattern("KMK")
+                .pattern("FRB")
+                .define('R', ModItems.HARMONIC_RELAY.get())
+                .define('F', ModBlocks.POWERED_KILN.get())
+                .define('B', ModBlocks.ALLOY_KILN.get())
+                .define('M', ModBlocks.GUNDANIUM_MACHINE_CORE.get())
+                .define('H', ModItems.HARMONIUM_INGOT.get())
+                .define('I', Items.LAVA_BUCKET)
+                .define('K', ModItems.KRYONIC_RESERVOIR.get())
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALYTHUM_VITRICIUM_REFINERY.get())
+                .pattern("AIA")
+                .pattern("KMK")
+                .pattern("CHR")
+                .define('H', ModItems.HARMONIC_RELAY.get())
+                .define('C', ModItems.KRYONIC_CAPACITOR.get())
+                .define('R', ModItems.KRYONIC_RESERVOIR.get())
+                .define('M', ModBlocks.ALYTHUM_MACHINE_CORE.get())
+                .define('A', ModItems.PROTO_STEEL.get())
+                .define('I', ModBlocks.VITRICIUM_REFINERY.get())
+                .define('K', ModItems.ILLUMINATE_COMPONENT.get())
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VITRIC_VITRICIUM_REFINERY.get())
+                .pattern("AIA")
+                .pattern("TMB")
+                .pattern("RVP")
+                .define('M', ModBlocks.VITRIC_MACHINE_CORE.get())
+                .define('A', ModItems.ILLYRIM_INGOT.get())
+                .define('V', ModItems.VITRIC_CIRCUIT.get())
+                .define('I', ModBlocks.ALYTHUM_VITRICIUM_REFINERY.get())
+                .define('T', ModBlocks.TIBERIUM_BLOCK.get())
+                .define('B', ModBlocks.TIBERIUM_BLUE_BLOCK.get())
+                .define('R', ModBlocks.TIBERIUM_RED_BLOCK.get())
+                .define('P', ModBlocks.TIBERIUM_PURPLE_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.POWERED_KILN.get())
                 .pattern("HIH")
                 .pattern("KMK")
@@ -4409,6 +4477,25 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 new FluidStack(ModFluids.SOURCE_MOLTEN_RED_TIBERIUM.get(), 1000))
                 .unlockedBy("has_red_tiberium_bucket", has(ModItems.MOLTEN_RED_TIBERIUM_BUCKET.get())).save(consumer);
 
+//        new TiberiumInfuserRecipeBuilder(Items.BUCKET, ModItems.MOLTEN_TIBERIUM_BUCKET.get(), 1, 200, 20,
+//                new FluidStack(ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 1000))
+//                .unlockedBy("has_tiberium", has(ModItems.TIBERIUM.get())).save(consumer);
+//
+//        new TiberiumInfuserRecipeBuilder(Items.BUCKET, ModItems.MOLTEN_BLUE_TIBERIUM_BUCKET.get(), 1, 200, 20,
+//                new FluidStack(ModFluids.SOURCE_MOLTEN_BLUE_TIBERIUM.get(), 1000))
+//                .unlockedBy("has_tiberium_blue", has(ModItems.TIBERIUM_BLUE.get())).save(consumer);
+//
+//        new TiberiumInfuserRecipeBuilder(Items.BUCKET, ModItems.MOLTEN_RED_TIBERIUM_BUCKET.get(), 1, 200, 20,
+//                new FluidStack(ModFluids.SOURCE_MOLTEN_RED_TIBERIUM.get(), 1000))
+//                .unlockedBy("has_tiberium_red", has(ModItems.TIBERIUM_RED.get())).save(consumer);
+//
+//        new TiberiumInfuserRecipeBuilder(Items.BUCKET, ModItems.MOLTEN_PURPLE_TIBERIUM_BUCKET.get(), 1, 200, 20,
+//                new FluidStack(ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM.get(), 1000))
+//                .unlockedBy("has_tiberium_purple", has(ModItems.TIBERIUM_PURPLE.get())).save(consumer);
+
+
+
+
 
 
         //Powered Smelting: Due to unforseen issues most of the Powered kiln recipes are in the Resourses/Data/Crystechmod/Recipes directory.
@@ -4486,7 +4573,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_raw_infected_meat", has(ModItems.RAW_INFECTED_MEAT.get())).save(consumer);
 
 
-
+    //Alloy Kiln:
         new AlloyKilnRecipeBuilder(ModItems.ALYTHUM_INGOT.get(), Items.NETHERITE_INGOT, ModItems.QUALRIM_COMPOUND.get(), ModItems.ILLYRIM_INGOT.get() ,2, 250, 20)
                 .unlockedBy("has_qualrim_compound", has(ModItems.QUALRIM_COMPOUND.get())).save(consumer);
 
@@ -4495,6 +4582,28 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
         new AlloyKilnRecipeBuilder(ModItems.LG_CORE_INGOT.get(), ModItems.ICHOR_COMPOSITE_INGOT.get(), ModItems.HARMONIUM_INGOT.get(), ModItems.MG_CORE_INGOT.get() ,3, 250, 20)
                 .unlockedBy("has_lg_core_ingot", has(ModItems.LG_CORE_INGOT.get())).save(consumer);
+
+
+        //Refinery:
+        new VitriciumRefineryRecipeBuilder(ModItems.TIBERIUM.get(), new FluidStack(ModFluids.SOURCE_MOLTEN_TIBERIUM.get(),
+                100), 200, 50, new FluidStack(Fluids.LAVA, 100))
+                .unlockedBy("has_refinery", has(ModBlocks.VITRICIUM_REFINERY.get())).save(consumer);
+
+        new VitriciumRefineryRecipeBuilder(ModItems.TIBERIUM_BLUE.get(), new FluidStack(ModFluids.SOURCE_MOLTEN_BLUE_TIBERIUM.get(),
+                100), 200, 50, new FluidStack(Fluids.LAVA, 100))
+                .unlockedBy("has_refinery", has(ModBlocks.VITRICIUM_REFINERY.get())).save(consumer);
+
+        new VitriciumRefineryRecipeBuilder(ModItems.TIBERIUM_RED.get(), new FluidStack(ModFluids.SOURCE_MOLTEN_RED_TIBERIUM.get(),
+                100), 200, 50, new FluidStack(Fluids.LAVA, 100))
+                .unlockedBy("has_refinery", has(ModBlocks.VITRICIUM_REFINERY.get())).save(consumer);
+
+        new VitriciumRefineryRecipeBuilder(ModItems.TIBERIUM_PURPLE.get(), new FluidStack(ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM.get(),
+                100), 200, 50, new FluidStack(Fluids.LAVA, 100))
+                .unlockedBy("has_refinery", has(ModBlocks.VITRICIUM_REFINERY.get())).save(consumer);
+
+        new VitriciumRefineryRecipeBuilder(ModBlocks.FLOWER_OF_LIFE.get(), new FluidStack(ModFluids.SOURCE_LIQUID_PROTOCULTURE.get(),
+                250), 200, 50, new FluidStack(Fluids.LAVA, 250))
+                .unlockedBy("has_refinery", has(ModBlocks.VITRICIUM_REFINERY.get())).save(consumer);
 
     }
 

@@ -2,6 +2,7 @@ package com.CartersDev.crystechmod.event;
 
 
 import com.CartersDev.crystechmod.CrystalTech;
+import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.enchantment.ModEnchantments;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.item.custom.ExcavatorItem;
@@ -126,28 +127,57 @@ public class ModEvents {
         }
 
 
-        if(event.getType() == ModVillagers.TIBERIUM_GATHERER.get()) {
+        if(event.getType() == ModVillagers.VITRIC_GATHERER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack vitricHarvester = EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.VITRIC_HARVESTER.get(), 1));
 
             //Level 1
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(Items.EMERALD,2),
                     new ItemStack(ModItems.TIBERIUM_FRUIT.get(), 4), 10, 10, 0.015f));
 
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(Items.EMERALD,2),
+                    new ItemStack(ModItems.RAW_INFECTED_MEAT.get(), 4), 10, 10, 0.015f));
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(Items.EMERALD,3),
+                    new ItemStack(ModBlocks.PLAGUED_SAPLING.get(), 1), 10, 10, 0.015f));
+
+
             //Level 2
             trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(Items.EMERALD,10),
                     new ItemStack(ModItems.TIBERIUM.get(), 1), 10, 10, 0.025f));
+
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(Items.EMERALD,20),
+                    new ItemStack(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), 1), 10, 10, 0.025f));
+
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(ModItems.TIBERIUM.get(),5),
+                    new ItemStack(ModBlocks.DEVILS_BLOOD.get(), 1), 10, 10, 0.015f));
+
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(ModItems.TIBERIUM.get(),5),
+                    new ItemStack(ModBlocks.YOKARAN_BLOOM.get(), 1), 10, 10, 0.015f));
 
             //Level 3
             trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(ModItems.TIBERIUM.get(),4),
                     new ItemStack(ModItems.TIBERIUM_BLUE.get(), 1), 10, 12, 0.03f));
 
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(ModItems.TIBERIUM.get(),10),
+                    new ItemStack(ModBlocks.FLOWER_OF_LIFE.get(), 1), 10, 12, 0.03f));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(ModItems.TIBERIUM_BLUE.get(),20),
+                    new ItemStack(ModBlocks.RED_ZONE_DIRT.get(), 1), 10, 12, 0.03f));
+
             //Level 4
             trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(ModItems.TIBERIUM_BLUE.get(),4),
                     new ItemStack(ModItems.TIBERIUM_RED.get(), 1), 10, 14, 0.035f));
 
+            trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(ModItems.TIBERIUM_BLUE.get(),64),
+                    new ItemStack(ModBlocks.ICHOR_SOIL.get(), 1), 10, 14, 0.035f));
+
             //Level 5
             trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(ModItems.TIBERIUM_RED.get(),4),
                     new ItemStack(ModItems.TIBERIUM_PURPLE.get(), 1), 10, 16, 0.04f));
+
+            trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(ModItems.TIBERIUM_RED.get(),20),
+                    vitricHarvester, 6, 8, 0.02f));
         }
 
 
