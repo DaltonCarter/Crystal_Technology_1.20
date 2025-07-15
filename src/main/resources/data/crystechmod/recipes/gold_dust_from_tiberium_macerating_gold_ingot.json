@@ -7,6 +7,7 @@
       "item": "minecraft:gold_ingot"
     }
   ],
+  "multiply": false,
   "output": {
     "count": 1,
     "item": "crystechmod:gold_dust"

@@ -7,6 +7,7 @@
       "item": "minecraft:raw_copper"
     }
   ],
+  "multiply": true,
   "output": {
     "count": 2,
     "item": "crystechmod:copper_dust"

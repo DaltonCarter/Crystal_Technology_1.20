@@ -28,15 +28,17 @@ public class TiberiumMaceratorRecipeBuilder implements RecipeBuilder {
     private final int count;
     private final int craftTime;
     private final int energyAmount;
+    private final boolean multiply;
 
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
 
-    public TiberiumMaceratorRecipeBuilder(ItemLike ingredient, ItemLike result, int count, int craftTime, int energyAmount) {
+    public TiberiumMaceratorRecipeBuilder(ItemLike ingredient, ItemLike result, int count, int craftTime, int energyAmount, boolean multiply) {
         this.ingredient = Ingredient.of(ingredient);
         this.result = result.asItem();
         this.count = count;
         this.craftTime = craftTime;
         this.energyAmount = energyAmount;
+        this.multiply = multiply;
     }
 
     @Override
@@ -62,7 +64,7 @@ public class TiberiumMaceratorRecipeBuilder implements RecipeBuilder {
                 .rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
 
         pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.count, this.ingredient, this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/"
-                + pRecipeId.getPath()), craftTime, energyAmount));
+                + pRecipeId.getPath()), craftTime, energyAmount, multiply));
 
     }
 
@@ -77,13 +79,14 @@ public class TiberiumMaceratorRecipeBuilder implements RecipeBuilder {
 
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
+        private final boolean multiply;
 
         public Result(ResourceLocation pId, Item pResult, int pCount, Ingredient ingredient, Advancement.Builder pAdvancement,
-                      ResourceLocation pAdvancementId, int craftTime, int energyAmount) {
+                      ResourceLocation pAdvancementId, int craftTime, int energyAmount, boolean multiply) {
             this.id = pId;
             this.result = pResult;
             this.count = pCount;
-
+            this.multiply = multiply;
             this.ingredient = ingredient;
             this.craftTime = craftTime;
             this.energyAmount = energyAmount;
@@ -107,6 +110,7 @@ public class TiberiumMaceratorRecipeBuilder implements RecipeBuilder {
 
             pJson.addProperty("craftTime", this.craftTime);
             pJson.addProperty("energyAmount", this.energyAmount);
+            pJson.addProperty("multiply", this.multiply);
             pJson.add("output", jsonobject);
         }
 

@@ -1,7 +1,7 @@
-// 1.20.1	2025-04-15T23:32:43.6638718	Tags for minecraft:block mod id crystechmod
+// 1.20.1	2025-07-14T23:51:11.7007644	Tags for minecraft:block mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/blocks/aeries_ores.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/blocks/alythum_ores.json
-46de90b7b6a6a287548f896235af80124a350b93 data/crystechmod/tags/blocks/concretes.json
+6b38af71a7ebba97f729de43e6ee84033f8e45cc data/crystechmod/tags/blocks/concretes.json
 1b1bb8b2e7aecfb7d82d771a540fcafffe25b6ed data/crystechmod/tags/blocks/dead_logs.json
 9e69fb63880d9644913e3c1febc7b5019ed06a98 data/crystechmod/tags/blocks/ember_oak_logs.json
 569b96ed4a3700478598d59a0249f011c9e779f0 data/crystechmod/tags/blocks/enigma_ores.json
@@ -12,12 +12,16 @@ f9541d478a6479b3fadbd51f6a062c8d4fb28ca3 data/crystechmod/tags/blocks/grindable_
 fde81393ef244e7ec272ed755f993f402ff61d5d data/crystechmod/tags/blocks/hazmat_glass_panes2.json
 816d980d5ac7ce159aff209b52ee0952d2d1eed8 data/crystechmod/tags/blocks/illumina_ores.json
 c7bbac2058df90e9377b5e00ecc05db2c0213cad data/crystechmod/tags/blocks/kryon_ores.json
+8e9f4d45f1dba2b0a87813068b8c4b5fb62d114a data/crystechmod/tags/blocks/maceratable.json
+8e347e3a3530b7dc9a484f7ac66e615bf5f07537 data/crystechmod/tags/blocks/macerating_result.json
 76338cc754cb5d1030cd4159192e0089f6c09fae data/crystechmod/tags/blocks/marika_oak_logs.json
 82362cfbd1836db13c7e9d36c8712821e795ac55 data/crystechmod/tags/blocks/mineable/paxel.json
 b97904e909222fd61767ad7160b0c32323c6852d data/crystechmod/tags/blocks/mod_planks.json
-d5006268e42dfed354c1b14deed7071a8484759d data/crystechmod/tags/blocks/needs_gundanium_tool.json
+d26f547403e4ca9e5146c2102cfca3f1039392e6 data/crystechmod/tags/blocks/needs_gundanium_tool.json
 d77f4c0b4a5c5eb15aa8cf1d058cb63a549f3b8f data/crystechmod/tags/blocks/needs_plagued_tool.json
 7ff009a6ce8d964af59c35e91e257d0fca7cfd07 data/crystechmod/tags/blocks/plagued_logs.json
+ee5b7fa627624f169c1f928bb2933cee6d008256 data/crystechmod/tags/blocks/smeltable.json
+ee6c95b24ed7fb71ba4fb4b4ee72ce886ce3b2ba data/crystechmod/tags/blocks/smelting_result.json
 39acdcf33383e05a367faca9c1c896cc6cdba9c0 data/crystechmod/tags/blocks/tibercrete_sands.json
 c97feb22c8a99095b8a5883f79d9ce36df98e112 data/crystechmod/tags/blocks/tiberium_flowers.json
 40f94ad99830e757072a50a78d7faa3861352918 data/crystechmod/tags/blocks/tiberium_seed_block.json
@@ -30,7 +34,7 @@ b19f776c390198bea3b60ab82ac48ddc549aeefd data/crystechmod/tags/blocks/vitric_exp
 a285676a30bd782543b8ac891420002170b9cee9 data/crystechmod/tags/blocks/vitric_expanse_yz_carver.json
 2409e82b8e5cc72778616dd6a9efc300494af5ea data/crystechmod/tags/blocks/vulnerable_leaves.json
 ddfcad38a7999881b28206520a3ccb5ad0d0f46d data/forge/tags/blocks/needs_netherite_tool.json
-e2d60a30c639fae5d82d5448ed75c1c2f18fee78 data/forge/tags/blocks/ores.json
+663b4405fee2bbd585777b4e84cf20a69ab0275b data/forge/tags/blocks/ores.json
 293b0928861f3e8f109904e7953c31f175e3c4f5 data/minecraft/tags/blocks/dirt.json
 c6aab69a244678a9783a3baff90174fb529ed517 data/minecraft/tags/blocks/fences.json
 669ec66f0d6f7ecfcfb062efab82e9ea3128fcbd data/minecraft/tags/blocks/fence_gates.json
@@ -39,17 +43,17 @@ c6aab69a244678a9783a3baff90174fb529ed517 data/minecraft/tags/blocks/fences.json
 7469d34aacc37cbec82468d3eb2d3892f56a9277 data/minecraft/tags/blocks/logs.json
 e0721fc7760819c2882cc2896aeb4f60de8a8dad data/minecraft/tags/blocks/logs_that_burn.json
 5921bae2cd5332c6c228feaad9db64bf1b77c963 data/minecraft/tags/blocks/mineable/axe.json
-d1b43f4724fb42c4f47f35009f06eb43971b8ad7 data/minecraft/tags/blocks/mineable/pickaxe.json
-f7b7b0cbf5fe1937fbbe024c9f0807f12d845845 data/minecraft/tags/blocks/mineable/shovel.json
+c4106fbe633b0e01e9768aa553d82181896f619c data/minecraft/tags/blocks/mineable/pickaxe.json
+dd6b58c2c6ce4b232b32c4cb3660f8c13d258cb8 data/minecraft/tags/blocks/mineable/shovel.json
 8bca9fd80ca24370a1e5ed4a77e2160b3f127569 data/minecraft/tags/blocks/needs_diamond_tool.json
-4ee39044bd1e19939d5df82e17bc6ea953d4b4f0 data/minecraft/tags/blocks/needs_iron_tool.json
+d3f747a63576f5c7814889d2e2db8b095ffcafaa data/minecraft/tags/blocks/needs_iron_tool.json
 7b6f4336a362cad1d539a2b35777c4895d62f921 data/minecraft/tags/blocks/needs_stone_tool.json
 47c9fc79d86b8bb397efe5201247b61b2a11932b data/minecraft/tags/blocks/planks.json
 e7dcc8f2a8ffe501146a5957de7762895a8a1855 data/minecraft/tags/blocks/saplings.json
 fc8b211f9c98208a97ee0d599c4628b114f1a663 data/minecraft/tags/blocks/stone_ore_replaceables.json
 185cd3b1c31e7a43c7ffcf1eb821f74493aa25b9 data/minecraft/tags/blocks/tall_flowers.json
-d13ed31c8083af4819335542255f8ba0756af974 data/minecraft/tags/blocks/walls.json
+1a0d66de19529bd55ed0336ba2d302dcf6a5609e data/minecraft/tags/blocks/walls.json
 fdd7c1de1b6e4b3263f7f1560d38f58280bdfd7b data/minecraft/tags/blocks/wooden_buttons.json
-8a6f243e96e19bc9c56beaab6aa77e1f7521d13b data/minecraft/tags/blocks/wooden_doors.json
+86a7ebf134a27afd5ccaa4126ba6d3d47cba2548 data/minecraft/tags/blocks/wooden_doors.json
 b4b5a7320c3e24622dd3f302b4468d56acdbe28f data/minecraft/tags/blocks/wooden_pressure_plates.json
-1418bbdae7ef8df20f328441ac972151b4459d4d data/minecraft/tags/blocks/wooden_trapdoors.json
+9987971507f3fe30dde3809205e7b53079637620 data/minecraft/tags/blocks/wooden_trapdoors.json

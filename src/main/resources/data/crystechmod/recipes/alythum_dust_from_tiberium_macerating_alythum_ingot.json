@@ -7,6 +7,7 @@
       "item": "crystechmod:alythum_ingot"
     }
   ],
+  "multiply": false,
   "output": {
     "count": 1,
     "item": "crystechmod:alythum_dust"

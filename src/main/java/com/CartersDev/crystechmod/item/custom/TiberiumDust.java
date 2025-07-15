@@ -35,7 +35,7 @@ public class TiberiumDust extends ItemNameBlockItem {
         if(!pLevel.isClientSide() && pHand == InteractionHand.MAIN_HAND) {
             if(itemstack.is(ModItems.GREEN_TIBERIUM_DUST.get())) {
                 int SoilChance = rand.nextInt(10);
-                if(pLevel.getBlockState(pPos).getBlock() == ModBlocks.TIBERIUM_SOIL.get() ||pLevel.getBlockState(pPos).getBlock() == ModBlocks.ICHOR_SOIL.get()){
+                if(pLevel.getBlockState(pPos).getBlock() == ModBlocks.TIBERIUM_SOIL.get() ||pLevel.getBlockState(pPos).getBlock() == ModBlocks.ICHOR_SOIL.get() || pLevel.getBlockState(pPos).getBlock() == ModBlocks.INERT_VITRIC_SOIL.get() || pLevel.getBlockState(pPos).getBlock() == ModBlocks.INERT_ICHOR_SOIL.get()){
                     pLevel.playSound(null, pPos, SoundEvents.AMETHYST_BLOCK_RESONATE, SoundSource.BLOCKS, 1f, 1f);
                     pLevel.setBlockAndUpdate(pPos.above(), ModBlocks.GREEN_TIBERIUM_CROP.get().defaultBlockState());
                     itemstack.shrink(1);

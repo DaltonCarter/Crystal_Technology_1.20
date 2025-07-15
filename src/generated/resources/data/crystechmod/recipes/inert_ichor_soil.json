@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "crystechmod:hg_core_ingot"
+    },
+    "S": {
+      "item": "crystechmod:ichor_soil"
+    }
+  },
+  "pattern": [
+    "ISI",
+    "SSS",
+    "ISI"
+  ],
+  "result": {
+    "count": 5,
+    "item": "crystechmod:inert_ichor_soil"
+  },
+  "show_notification": true
+}

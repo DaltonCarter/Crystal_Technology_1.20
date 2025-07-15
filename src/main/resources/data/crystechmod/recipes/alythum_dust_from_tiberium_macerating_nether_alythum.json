@@ -7,6 +7,7 @@
       "item": "crystechmod:nether_alythum_ore"
     }
   ],
+  "multiply": true,
   "output": {
     "count": 2,
     "item": "crystechmod:alythum_dust"

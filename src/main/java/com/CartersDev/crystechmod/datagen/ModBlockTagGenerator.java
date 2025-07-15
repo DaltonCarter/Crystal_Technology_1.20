@@ -82,6 +82,19 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.DEVILS_BLOOD.get()
                 );
 
+        this.tag(Tags.Blocks.ORES)
+                .add(ModBlocks.GUNDANIUM_ORE.get(),
+                        ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get(),
+                        ModBlocks.DEEPSLATE_ALYTHUM_ORE.get(),
+                        ModBlocks.ALYTHUM_ORE.get(),
+                        ModBlocks.NETHER_ALYTHUM_ORE.get(),
+                        ModBlocks.HARMONIUM_ORE.get(),
+                        ModBlocks.DEEPSLATE_HARMONIUM_ORE.get(),
+                        ModBlocks.NETHER_HARMONIUM_ORE.get(),
+                        ModBlocks.END_HARMONIUM_ORE.get()
+
+                );
+
 
 
         this.tag(ModTags.Blocks.HAZMAT_GLASS_PANES)
@@ -118,6 +131,25 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.TIBERIUM_BLOCK.get(),
                         ModBlocks.SOUND_BLOCK.get(),
+                        ModBlocks.IRON_PLATING_DOOR.get(),
+                        ModBlocks.IRON_PLATING_TRAPDOOR.get(),
+                        ModBlocks.FOOLS_VITRICIUM.get(),
+                        ModBlocks.IRON_PLATING_WALL.get(),
+                        ModBlocks.IRON_PLATING_SLAB.get(),
+                        ModBlocks.IRON_PLATING_STAIRS.get(),
+                        ModBlocks.RUSTY_IRON_PLATING_WALL.get(),
+                        ModBlocks.RUSTY_IRON_PLATING_SLAB.get(),
+                        ModBlocks.RUSTY_IRON_PLATING_STAIRS.get(),
+                        ModBlocks.VITRIC_IRON_PLATING_WALL.get(),
+                        ModBlocks.VITRIC_IRON_PLATING_SLAB.get(),
+                        ModBlocks.VITRIC_IRON_PLATING_STAIRS.get(),
+                        ModBlocks.POLISHED_IRON_WALL.get(),
+                        ModBlocks.POLISHED_IRON_SLAB.get(),
+                        ModBlocks.POLISHED_IRON_STAIRS.get(),
+                        ModBlocks.POLISHED_IRON_BLOCK.get(),
+                        ModBlocks.IRON_PLATING.get(),
+                        ModBlocks.RUSTY_IRON_PLATING.get(),
+                        ModBlocks.VITRIC_IRON_PLATING.get(),
                         ModBlocks.GUNDANIUM_MACHINE_CORE.get(),
                         ModBlocks.ALYTHUM_MACHINE_CORE.get(),
                         ModBlocks.VITRIC_MACHINE_CORE.get(),
@@ -143,6 +175,21 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.ALYTHUM_TIBERIUM_INFUSER.get(),
                         ModBlocks.VITRIC_TIBERIUM_INFUSER.get(),
                         ModBlocks.CRYSTAL_CORE_TIBERIUM_INFUSER.get(),
+
+                        ModBlocks.POWERED_KILN.get(),
+                        ModBlocks.ALYTHUM_KILN.get(),
+                        ModBlocks.VITRIC_KILN.get(),
+                        ModBlocks.CRYSTAL_CORE_KILN.get(),
+
+                        ModBlocks.ALLOY_KILN.get(),
+                        ModBlocks.ALYTHUM_ALLOY_KILN.get(),
+                        ModBlocks.VITRIC_ALLOY_KILN.get(),
+                        ModBlocks.CRYSTAL_CORE_ALLOY_KILN.get(),
+
+                        ModBlocks.VITRICIUM_REFINERY.get(),
+                        ModBlocks.ALYTHUM_VITRICIUM_REFINERY.get(),
+                        ModBlocks.VITRIC_VITRICIUM_REFINERY.get(),
+                        ModBlocks.CRYSTAL_CORE_VITRICIUM_REFINERY.get(),
 
                         ModBlocks.TIBERIUM_BLUE_BLOCK.get(),
                         ModBlocks.TIBERIUM_RED_BLOCK.get(),
@@ -702,7 +749,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.CT_TILE_B_VERT_3.get(),
                         ModBlocks.CT_TILE_R_VERT_3.get(),
                         ModBlocks.CT_TILE_P_VERT_3.get(),
-                        ModBlocks.CT_TILE_WALL_P_3.get()
+                        ModBlocks.CT_TILE_WALL_P_3.get(),
+                        ModBlocks.PROTO_STEEL_BLOCK.get(),
+                        ModBlocks.PROTO_STEEL_WALL.get(),
+                        ModBlocks.PROTO_STEEL_SLAB.get(),
+                        ModBlocks.PROTO_STEEL_STAIRS.get()
 
                 );
 
@@ -716,6 +767,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.SEEDED_DIRT.get(),
                         ModBlocks.TIBERIUM_SOIL.get(),
                         ModBlocks.ICHOR_SOIL.get(),
+                        ModBlocks.INERT_VITRIC_SOIL.get(),
+                        ModBlocks.INERT_ICHOR_SOIL.get(),
                         ModBlocks.BLACK_TIBERCRETE_POWDER.get(),
                         ModBlocks.BLUE_TIBERCRETE_POWDER.get(),
                         ModBlocks.BROWN_TIBERCRETE_POWDER.get(),
@@ -1059,6 +1112,24 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.GUNDANIUM_ORE.get(),
+                        ModBlocks.IRON_PLATING_DOOR.get(),
+                        ModBlocks.IRON_PLATING_TRAPDOOR.get(),
+                        ModBlocks.POLISHED_IRON_BLOCK.get(),
+                        ModBlocks.IRON_PLATING.get(),
+                        ModBlocks.RUSTY_IRON_PLATING.get(),
+                        ModBlocks.VITRIC_IRON_PLATING.get(),
+                        ModBlocks.IRON_PLATING_WALL.get(),
+                        ModBlocks.IRON_PLATING_SLAB.get(),
+                        ModBlocks.IRON_PLATING_STAIRS.get(),
+                        ModBlocks.RUSTY_IRON_PLATING_WALL.get(),
+                        ModBlocks.RUSTY_IRON_PLATING_SLAB.get(),
+                        ModBlocks.RUSTY_IRON_PLATING_STAIRS.get(),
+                        ModBlocks.VITRIC_IRON_PLATING_WALL.get(),
+                        ModBlocks.VITRIC_IRON_PLATING_SLAB.get(),
+                        ModBlocks.VITRIC_IRON_PLATING_STAIRS.get(),
+                        ModBlocks.POLISHED_IRON_WALL.get(),
+                        ModBlocks.POLISHED_IRON_SLAB.get(),
+                        ModBlocks.POLISHED_IRON_STAIRS.get(),
                 ModBlocks.TIBERIUM_BLOCK.get(),
                 ModBlocks.TIBERIUM_BLUE_BLOCK.get(),
                 ModBlocks.RIPARIUS_STONE.get(),
@@ -1080,6 +1151,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.ILLYRIM_BLOCK.get(),
                 ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get(),
                 ModBlocks.TIBERIUM_SOIL.get(),
+                        ModBlocks.INERT_VITRIC_SOIL.get(),
+                        ModBlocks.INERT_ICHOR_SOIL.get(),
                 ModBlocks.GREEN_TIBERIUM_CROP.get(),
                 ModBlocks.BLUE_TIBERIUM_CROP.get(),
                         ModBlocks.RIPARIUS_STONE_WALL.get(),
@@ -1268,6 +1341,153 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                 );
 
+        this.tag(ModTags.Blocks.CONCRETES)
+                .add(ModBlocks.BLACK_TIBERCRETE.get(),
+                        ModBlocks.RED_TIBERCRETE.get(),
+                        ModBlocks.BLUE_TIBERCRETE.get(),
+                        ModBlocks.BROWN_TIBERCRETE.get(),
+                        ModBlocks.CYAN_TIBERCRETE.get(),
+                        ModBlocks.GRAY_TIBERCRETE.get(),
+                        ModBlocks.GREEN_TIBERCRETE.get(),
+                        ModBlocks.LIGHT_BLUE_TIBERCRETE.get(),
+                        ModBlocks.LIGHT_GRAY_TIBERCRETE.get(),
+                        ModBlocks.LIME_TIBERCRETE.get(),
+                        ModBlocks.MAGENTA_TIBERCRETE.get(),
+                        ModBlocks.ORANGE_TIBERCRETE.get(),
+                        ModBlocks.PINK_TIBERCRETE.get(),
+                        ModBlocks.PURPLE_TIBERCRETE.get(),
+                        ModBlocks.YELLOW_TIBERCRETE.get(),
+                        ModBlocks.WHITE_TIBERCRETE.get(),
+                        Blocks.BLACK_CONCRETE,
+                        Blocks.BLUE_CONCRETE,
+                        Blocks.BROWN_CONCRETE,
+                        Blocks.CYAN_CONCRETE,
+                        Blocks.GRAY_CONCRETE,
+                        Blocks.GREEN_CONCRETE,
+                        Blocks.LIGHT_BLUE_CONCRETE,
+                        Blocks.LIGHT_GRAY_CONCRETE,
+                        Blocks.LIME_CONCRETE,
+                        Blocks.MAGENTA_CONCRETE,
+                        Blocks.ORANGE_CONCRETE,
+                        Blocks.PINK_CONCRETE,
+                        Blocks.PURPLE_CONCRETE,
+                        Blocks.RED_CONCRETE,
+                        Blocks.WHITE_CONCRETE,
+                        Blocks.YELLOW_CONCRETE
+
+                );
+
+
+        this.tag(ModTags.Blocks.MACERATABLE)
+                .add(ModBlocks.INFESTED_STONE.get(),
+                        Blocks.STONE,
+                        Blocks.COBBLESTONE,
+                        Blocks.GRAVEL
+
+                );
+
+        this.tag(ModTags.Blocks.SMELTABLE)
+                .add(ModBlocks.INFESTED_COBBLE.get(),
+                        ModBlocks.YELLOW_ZONE_SAND.get(),
+                        ModBlocks.RED_ZONE_SAND.get(),
+                        ModBlocks.YZ_SANDSTONE.get(),
+                        ModBlocks.RZ_SANDSTONE.get(),
+                        Blocks.COBBLED_DEEPSLATE,
+                        Blocks.COBBLESTONE,
+                        Blocks.STONE,
+                        Blocks.IRON_ORE,
+                        Blocks.GOLD_ORE,
+                        Blocks.COPPER_ORE,
+                        Blocks.DEEPSLATE_IRON_ORE,
+                        Blocks.DEEPSLATE_COPPER_ORE,
+                        Blocks.DEEPSLATE_GOLD_ORE,
+                        Blocks.LIGHT_GRAY_TERRACOTTA,
+                        Blocks.GRAY_TERRACOTTA,
+                        Blocks.GREEN_TERRACOTTA,
+                        Blocks.BLUE_TERRACOTTA,
+                        Blocks.LIGHT_BLUE_TERRACOTTA,
+                        Blocks.LIME_TERRACOTTA,
+                        Blocks.BLACK_TERRACOTTA,
+                        Blocks.BROWN_TERRACOTTA,
+                        Blocks.WHITE_TERRACOTTA,
+                        Blocks.YELLOW_TERRACOTTA,
+                        Blocks.RED_TERRACOTTA,
+                        Blocks.PINK_TERRACOTTA,
+                        Blocks.PURPLE_TERRACOTTA,
+                        Blocks.ORANGE_TERRACOTTA,
+                        Blocks.MAGENTA_TERRACOTTA,
+                        Blocks.CYAN_TERRACOTTA,
+                        Blocks.NETHER_GOLD_ORE,
+                        Blocks.QUARTZ_BLOCK,
+                        Blocks.SANDSTONE,
+                        Blocks.RED_SANDSTONE,
+                        Blocks.DEEPSLATE_BRICKS,
+                        Blocks.DEEPSLATE_TILES,
+                        Blocks.WET_SPONGE,
+                        Blocks.STONE_BRICKS,
+                        Blocks.BASALT,
+                        Blocks.CLAY,
+                        Blocks.NETHER_BRICKS,
+                        Blocks.NETHERRACK,
+                        Blocks.ANCIENT_DEBRIS,
+                        Blocks.CACTUS,
+                        Blocks.POLISHED_BLACKSTONE_BRICKS,
+                        Blocks.SEA_PICKLE
+                )
+                .addTags(BlockTags.LOGS_THAT_BURN,
+                        BlockTags.SAND,
+                        ModTags.Blocks.ALYTHUM_ORES,
+                        ModTags.Blocks.GUNDANIUM_ORES,
+                        ModTags.Blocks.HARMONIUM_ORES);
+
+        this.tag(ModTags.Blocks.SMELTING_RESULT)
+                .add(
+                        Blocks.SMOOTH_STONE,
+                        Blocks.STONE,
+                        Blocks.DEEPSLATE,
+                        Blocks.GLASS,
+                        Blocks.SMOOTH_QUARTZ,
+                        Blocks.SMOOTH_SANDSTONE,
+                        Blocks.SMOOTH_RED_SANDSTONE,
+                        Blocks.SMOOTH_BASALT,
+                        Blocks.TERRACOTTA,
+                        Blocks.CRACKED_DEEPSLATE_BRICKS,
+                        Blocks.CRACKED_STONE_BRICKS,
+                        Blocks.CRACKED_DEEPSLATE_TILES,
+                        Blocks.CRACKED_NETHER_BRICKS,
+                        Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS,
+                        Blocks.SPONGE,
+                        Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA,
+                        Blocks.GRAY_GLAZED_TERRACOTTA,
+                        Blocks.GREEN_GLAZED_TERRACOTTA,
+                        Blocks.BLUE_GLAZED_TERRACOTTA,
+                        Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA,
+                        Blocks.LIME_GLAZED_TERRACOTTA,
+                        Blocks.BLACK_GLAZED_TERRACOTTA,
+                        Blocks.BROWN_GLAZED_TERRACOTTA,
+                        Blocks.WHITE_GLAZED_TERRACOTTA,
+                        Blocks.YELLOW_GLAZED_TERRACOTTA,
+                        Blocks.RED_GLAZED_TERRACOTTA,
+                        Blocks.PINK_GLAZED_TERRACOTTA,
+                        Blocks.PURPLE_GLAZED_TERRACOTTA,
+                        Blocks.ORANGE_GLAZED_TERRACOTTA,
+                        Blocks.MAGENTA_GLAZED_TERRACOTTA,
+                        Blocks.CYAN_GLAZED_TERRACOTTA,
+                        ModBlocks.CLEAR_TIBERGLASS.get(),
+                        ModBlocks.INFESTED_STONE.get(),
+                        ModBlocks.SMOOTH_RZ_SANDSTONE.get(),
+                        ModBlocks.SMOOTH_YZ_SANDSTONE.get()
+                );
+
+
+        this.tag(ModTags.Blocks.MACERATING_RESULT)
+                .add(ModBlocks.INFESTED_COBBLE.get(),
+                        Blocks.SAND,
+                        Blocks.COBBLESTONE,
+                        Blocks.GRAVEL
+
+                );
+
 
         this.tag(ModTags.Blocks.NEEDS_GUNDANIUM_TOOL)
                 .add(ModBlocks.CS_SCAFFOLD.get(),
@@ -1280,6 +1500,18 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.ALYTHUM_TIBERIUM_INFUSER.get(),
                         ModBlocks.VITRIC_TIBERIUM_INFUSER.get(),
                         ModBlocks.CRYSTAL_CORE_TIBERIUM_INFUSER.get(),
+                        ModBlocks.VITRICIUM_REFINERY.get(),
+                        ModBlocks.ALYTHUM_VITRICIUM_REFINERY.get(),
+                        ModBlocks.VITRIC_VITRICIUM_REFINERY.get(),
+                        ModBlocks.CRYSTAL_CORE_VITRICIUM_REFINERY.get(),
+                        ModBlocks.POWERED_KILN.get(),
+                        ModBlocks.ALYTHUM_KILN.get(),
+                        ModBlocks.VITRIC_KILN.get(),
+                        ModBlocks.CRYSTAL_CORE_KILN.get(),
+                        ModBlocks.ALLOY_KILN.get(),
+                        ModBlocks.ALYTHUM_ALLOY_KILN.get(),
+                        ModBlocks.VITRIC_ALLOY_KILN.get(),
+                        ModBlocks.CRYSTAL_CORE_ALLOY_KILN.get(),
                         ModBlocks.HARMONIUM_ORE.get(),
                         ModBlocks.DEEPSLATE_HARMONIUM_ORE.get(),
                         ModBlocks.NETHER_HARMONIUM_ORE.get(),
@@ -1517,7 +1749,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.CT_TILE_B_VERT_3.get(),
                         ModBlocks.CT_TILE_R_VERT_3.get(),
                         ModBlocks.CT_TILE_P_VERT_3.get(),
-                        ModBlocks.CT_TILE_WALL_P_3.get()
+                        ModBlocks.CT_TILE_WALL_P_3.get(),
+                        ModBlocks.PROTO_STEEL_BLOCK.get(),
+                        ModBlocks.PROTO_STEEL_WALL.get(),
+                        ModBlocks.PROTO_STEEL_SLAB.get(),
+                        ModBlocks.PROTO_STEEL_STAIRS.get()
+
+
 
                         
                         
@@ -1667,6 +1905,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.FIRESTONE_WALL.get(),
                         ModBlocks.INFESTED_STONE_BRICK_WALL.get(),
+                        ModBlocks.PROTO_STEEL_WALL.get(),
+                        ModBlocks.IRON_PLATING_WALL.get(),
+                        ModBlocks.RUSTY_IRON_PLATING_WALL.get(),
+                        ModBlocks.VITRIC_IRON_PLATING_WALL.get(),
+                        ModBlocks.POLISHED_IRON_WALL.get(),
                         ModBlocks.VITRIC_DEEPSLATE_TILE_WALL.get(),
                         ModBlocks.VITRIC_DEEPSLATE_BRICK_WALL.get(),
                         ModBlocks.INFESTED_COBBLE_WALL.get(),
@@ -1767,6 +2010,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.PLAGUED_DOOR.get(),
                         ModBlocks.EMBER_OAK_DOOR.get(),
                         ModBlocks.DEAD_DOOR.get(),
+                        ModBlocks.IRON_PLATING_DOOR.get(),
                         ModBlocks.MARIKA_OAK_DOOR.get()
                 );
 
@@ -1774,6 +2018,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.PLAGUED_TRAPDOOR.get(),
                         ModBlocks.EMBER_OAK_TRAPDOOR.get(),
                         ModBlocks.DEAD_TRAPDOOR.get(),
+                        ModBlocks.IRON_PLATING_TRAPDOOR.get(),
                         ModBlocks.MARIKA_OAK_TRAPDOOR.get()
                 );
 

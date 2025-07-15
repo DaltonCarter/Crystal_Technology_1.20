@@ -1,0 +1,28 @@
+{
+    "type": "forge:conditional",
+    "recipes": [
+        {
+            "conditions": [
+                {
+                    "type": "forge:mod_loaded",
+                    "modid": "mekanism"
+                }
+            ],
+            "recipe": {
+                "type": "crystechmod:tiberium_macerating",
+                "craftTime": 200,
+                "energyAmount": 20,
+                "ingredients": [
+                    {
+                        "item": "minecraft:charcoal"
+                    }
+                ],
+                "multiply": false,
+                "output": {
+                    "count": 1,
+                    "item": "mekanism:dust_charcoal"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:illyrim_ingot"
+    },
+    "B": {
+      "item": "crystechmod:tiberium_blue_block"
+    },
+    "I": {
+      "item": "crystechmod:alythum_kiln"
+    },
+    "M": {
+      "item": "crystechmod:vitric_machine_core"
+    },
+    "P": {
+      "item": "crystechmod:tiberium_purple_block"
+    },
+    "R": {
+      "item": "crystechmod:tiberium_red_block"
+    },
+    "T": {
+      "item": "crystechmod:tiberium_block"
+    },
+    "V": {
+      "item": "crystechmod:vitric_circuit"
+    }
+  },
+  "pattern": [
+    "AIA",
+    "TMB",
+    "RVP"
+  ],
+  "result": {
+    "item": "crystechmod:vitric_kiln"
+  },
+  "show_notification": true
+}

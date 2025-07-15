@@ -27,7 +27,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "crystechmod:purple_tiberium_dust"
+              "name": "crystechmod:tiberium_purple"
             }
           ]
         }
@@ -59,7 +59,7 @@
               }
             }
           ],
-          "name": "crystechmod:purple_tiberium_dust"
+          "name": "crystechmod:tiberium_purple"
         }
       ],
       "rolls": 1.0

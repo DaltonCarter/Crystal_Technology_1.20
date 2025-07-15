@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:inert_vitric_soil"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tiberium_soil": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:tiberium_soil"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_tiberium_soil",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:inert_vitric_soil"
+    ]
+  },
+  "sends_telemetry_event": false
+}

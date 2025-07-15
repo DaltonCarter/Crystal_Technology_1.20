@@ -281,8 +281,13 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
 
-        this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
-                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount() + 3));
+        if (recipe.get().isMultiply()) {
+            this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
+                    this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount() + 3));
+        }else {
+            this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
+                    this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount()));
+        }
 
     }
 

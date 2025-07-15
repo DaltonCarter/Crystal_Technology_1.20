@@ -51,7 +51,176 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.copy(ModTags.Blocks.ENIGMA_ORES, ModTags.Items.ENIGMA_ORES);
         this.copy(ModTags.Blocks.GLASS, ModTags.Items.GLASS);
         this.copy(ModTags.Blocks.GRINDABLE_FLOWERS, ModTags.Items.GRINDABLE_FLOWERS);
+        this.copy(ModTags.Blocks.MACERATABLE, ModTags.Items.MACERATABLE);
+        this.copy(ModTags.Blocks.MACERATING_RESULT, ModTags.Items.MACERATING_RESULT);
+
+        this.copy(ModTags.Blocks.SMELTABLE, ModTags.Items.SMELTABLE);
+        this.copy(ModTags.Blocks.SMELTING_RESULT, ModTags.Items.SMELTING_RESULT);
+
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
+
+        this.tag(Tags.Items.RODS)
+                .add(
+                        ModItems.PLAGUED_STICK.get()
+                );
+
+        this.tag(Tags.Items.DUSTS)
+                .add(
+                        ModItems.GUNDANIUM_DUST.get(),
+                        ModItems.ALYTHUM_DUST.get(),
+                        ModItems.HARMONIUM_DUST.get(),
+                        ModItems.IRON_DUST.get(),
+                        ModItems.GOLD_DUST.get(),
+                        ModItems.COPPER_DUST.get(),
+                        ModItems.ILLYRIM_BLEND.get(),
+                        ModItems.LG_CORE_BLEND.get(),
+                        ModItems.MG_CORE_BLEND.get(),
+                        ModItems.HG_CORE_BLEND.get()
+                );
+
+
+        this.tag(Tags.Items.INGOTS)
+                .add(
+                        ModItems.GUNDANIUM_INGOT.get(),
+                        ModItems.ALYTHUM_INGOT.get(),
+                        ModItems.HARMONIUM_INGOT.get(),
+                        ModItems.ILLYRIM_INGOT.get(),
+                        ModItems.LG_CORE_INGOT.get(),
+                        ModItems.MG_CORE_INGOT.get(),
+                        ModItems.HG_CORE_INGOT.get()
+                );
+
+        this.tag(Tags.Items.RAW_MATERIALS)
+                .add(
+                        ModItems.RAW_GUNDANIUM.get(),
+                        ModItems.RAW_ALYTHUM.get(),
+                        ModItems.RAW_HARMONIUM.get()
+
+                );
+
+        this.tag(ModTags.Items.ALLOYING_INPUT)
+                .add(
+                        ModItems.ALYTHUM_INGOT.get(),
+                        ModItems.ILLYRIM_INGOT.get(),
+                        ModItems.LG_CORE_INGOT.get(),
+                        ModItems.MG_CORE_INGOT.get(),
+                        ModItems.PROTO_STEEL.get(),
+                        ModItems.TIBERIUM_COMPOSITE_INGOT.get(),
+                        ModItems.ICHOR_COMPOSITE_INGOT.get(),
+                        ModItems.AERIES_CRYSTAL.get(),
+                        ModItems.QUALRIM_COMPOUND.get(),
+                        ModItems.ENIGMA_CRYSTAL.get(),
+                        Items.IRON_INGOT,
+                        Items.COPPER_INGOT,
+                        Items.GOLD_INGOT,
+                        Items.NETHERITE_INGOT
+
+                )
+                .addTag(Tags.Items.INGOTS);
+
+        this.tag(ModTags.Items.ALLOYING_RESULT)
+                .add(
+
+                        ModItems.ILLYRIM_INGOT.get(),
+                        ModItems.LG_CORE_INGOT.get(),
+                        ModItems.MG_CORE_INGOT.get(),
+                        ModItems.HG_CORE_INGOT.get()
+
+                )
+                .addTag(
+                        Tags.Items.INGOTS
+                );
+
+        this.tag(ModTags.Items.BUCKET_OUTPUT)
+                .add(
+
+                        ModItems.MOLTEN_TIBERIUM_BUCKET.get(),
+                        ModItems.MOLTEN_BLUE_TIBERIUM_BUCKET.get(),
+                        ModItems.MOLTEN_RED_TIBERIUM_BUCKET.get(),
+                        ModItems.MOLTEN_PURPLE_TIBERIUM_BUCKET.get(),
+                        ModItems.LIQUID_PROTOCULTURE_BUCKET.get()
+
+
+                )
+                .addTag(
+                        Tags.Items.INGOTS
+                );
+
+
+        this.tag(ModTags.Items.SMELTING)
+                .add(
+                        Items.BEEF,
+                        Items.CHICKEN,
+                        Items.PORKCHOP,
+                        Items.RABBIT,
+                        Items.MUTTON,
+                        Items.COD,
+                        Items.SALMON,
+                        Items.POTATO,
+                        Items.RAW_IRON,
+                        Items.RAW_COPPER,
+                        Items.RAW_GOLD,
+                        Items.KELP,
+                        Items.CLAY_BALL,
+                        Items.CHORUS_FRUIT,
+                        ModItems.RAW_ALYTHUM.get(),
+                        ModItems.RAW_GUNDANIUM.get(),
+                        ModItems.RAW_HARMONIUM.get(),
+                        ModItems.RAW_INFECTED_MEAT.get(),
+                        ModItems.IRON_DUST.get(),
+                        ModItems.GOLD_DUST.get(),
+                        ModItems.COPPER_DUST.get(),
+                        ModItems.GUNDANIUM_DUST.get(),
+                        ModItems.ALYTHUM_DUST.get(),
+                        ModItems.HARMONIUM_DUST.get(),
+                        ModItems.ILLYRIM_BLEND.get(),
+                        ModItems.LG_CORE_BLEND.get(),
+                        ModItems.MG_CORE_BLEND.get(),
+                        ModItems.HG_CORE_BLEND.get()
+                )
+                .addTags(ModTags.Items.SMELTABLE,
+                Tags.Items.ORES,
+                        Tags.Items.DUSTS,
+                        Tags.Items.RAW_MATERIALS);
+
+
+        this.tag(ModTags.Items.SMELTING_RESULT_2)
+                .add(
+                        Items.COOKED_BEEF,
+                        Items.COOKED_CHICKEN,
+                        Items.COOKED_PORKCHOP,
+                        Items.COOKED_RABBIT,
+                        Items.COOKED_MUTTON,
+                        Items.COOKED_COD,
+                        Items.COOKED_SALMON,
+                        Items.BAKED_POTATO,
+                        Items.IRON_NUGGET,
+                        Items.IRON_INGOT,
+                        Items.COPPER_INGOT,
+                        Items.GOLD_INGOT,
+                        Items.DRIED_KELP,
+                        Items.BRICK,
+                        Items.POPPED_CHORUS_FRUIT,
+                        Items.CHARCOAL,
+                        Items.GREEN_DYE,
+                        Items.LIME_DYE,
+                        Items.NETHER_BRICK,
+                        Items.NETHERITE_SCRAP,
+                        ModItems.ALYTHUM_INGOT.get(),
+                        ModItems.GUNDANIUM_INGOT.get(),
+                        ModItems.HARMONIUM_INGOT.get(),
+                        ModItems.COOKED_INFECTED_MEAT.get(),
+                        ModItems.ILLYRIM_INGOT.get(),
+                        ModItems.LG_CORE_INGOT.get(),
+                        ModItems.MG_CORE_INGOT.get(),
+                        ModItems.HG_CORE_INGOT.get()
+                )
+                .addTags(ModTags.Items.SMELTING_RESULT,
+                        Tags.Items.INGOTS);
+
+
+
+
 
 
         this.tag(ModTags.Items.GRINDABLE)
@@ -69,6 +238,12 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         Items.COPPER_INGOT,
                         Items.IRON_INGOT,
                         Items.GOLD_INGOT,
+                        Items.COAL,
+                        Items.DIAMOND,
+                        Items.EMERALD,
+                        Items.CHARCOAL,
+                        Items.LAPIS_LAZULI,
+                        Items.NETHERITE_INGOT,
                         ModItems.GUNDANIUM_INGOT.get(),
                         ModItems.ALYTHUM_INGOT.get(),
                         ModItems.ILLYRIM_INGOT.get(),
@@ -79,9 +254,13 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.HG_CORE_INGOT.get()
                 )
                 .addTags(ModTags.Items.ALYTHUM_ORES,
+                ModTags.Items.MACERATABLE,
                         ModTags.Items.GUNDANIUM_ORES,
                         ModTags.Items.HARMONIUM_ORES,
-                        ModTags.Items.GRINDABLE_FLOWERS);
+                        ModTags.Items.GRINDABLE_FLOWERS,
+                        Tags.Items.RAW_MATERIALS,
+                        Tags.Items.ORES,
+                        Tags.Items.INGOTS);
 
         this.tag(ModTags.Items.GRINDING_RESULT)
                 .add(
@@ -102,17 +281,16 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.YOKARAN_BLOOM_POWDER.get(),
                         ModItems.DEVILS_BLOOD_POWDER.get(),
                         ModItems.HARMONIUM_DUST.get()
+                )
+                .addTags(
+                        ModTags.Items.MACERATING_RESULT,
+                        Tags.Items.DUSTS,
+                        Tags.Items.GEMS
                 );
 
         this.tag(ItemTags.PLANKS)
                 .addTag(ModTags.Items.MOD_PLANKS);
 
-        this.tag(Tags.Items.DUSTS)
-                .add(ModItems.IRON_DUST.get(),
-                    ModItems.GOLD_DUST.get(),
-                    ModItems.ALYTHUM_DUST.get(),
-                    ModItems.GUNDANIUM_DUST.get(),
-                        ModItems.COPPER_DUST.get());
 
 
         this.tag(ItemTags.TRIMMABLE_ARMOR)

@@ -38,10 +38,10 @@ public class TiberiumSoilBlock extends Block {
 
                 if(number > 7){
 
-                    System.out.println("A patch of Vinifera Tiberium has sprouted!.");
+//                    System.out.println("A patch of Vinifera Tiberium has sprouted!.");
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.BLUE_TIBERIUM_CROP.get().defaultBlockState());
                 }else {
-                    System.out.println("A patch of Riparius Tiberium has sprouted!.");
+//                    System.out.println("A patch of Riparius Tiberium has sprouted!.");
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.GREEN_TIBERIUM_CROP.get().defaultBlockState());
                 }
 
@@ -51,7 +51,7 @@ public class TiberiumSoilBlock extends Block {
 
                 if (number > 7) {
 
-                    System.out.println("A sapling has contracted Tiberium Plague!.");
+//                    System.out.println("A sapling has contracted Tiberium Plague!.");
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.PLAGUED_SAPLING.get().defaultBlockState());
                 }
 
@@ -61,11 +61,11 @@ public class TiberiumSoilBlock extends Block {
 
                 if (number <= 7) {
 
-                    System.out.println("A flower has contracted Tiberium Plague!.");
+//                    System.out.println("A flower has contracted Tiberium Plague!.");
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.VITRIC_BLOOM.get().defaultBlockState());
                 }else {
 
-                    System.out.println("A flower has contracted Tiberium Plague!.");
+//                    System.out.println("A flower has contracted Tiberium Plague!.");
                     worldIn.setBlockAndUpdate(abovePos, ModBlocks.VITRIC_ROSE.get().defaultBlockState());
                 }
 

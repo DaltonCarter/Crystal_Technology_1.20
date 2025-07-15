@@ -514,7 +514,7 @@ Posted By: Dalton Carter
 -Added Vitric Flowers
 -Added Vitric Expanse Music Sound Event (Playlist) For mod Biomes
 -Logs touching the ground when targeted by the Blossom tree now have a small chance to turn into ANOTHER
-Blossom Tree instead of a Plagued Log.
+ Blossom Tree instead of a Plagued Log.
 -Added Several Features to flesh out Biomes and add flexibility
 -Currently 30/50 Vitric Expanse Biomes are Ready.
 -Began work on Surface Rules
@@ -535,6 +535,19 @@ Blossom Tree instead of a Plagued Log.
 -Added Recipes
 -Implemented Tiered Machinery
 -Updated Textures, and Tweaked Models
+-Implemented Powered Kiln
+-Implemented inert Vitric/Ichor soil for selective Tiberium growth
+-IMPLEMENTED COMPATABILITY RECIPES FOR MEKANISM WHEN IT IS PRESENT
+-Rearranged recipes, added ALOT MORE
+-Adjusted Drop rates for Tiberium Crops and Raw Ores
+-Implemented Alloy Kiln
+-Added Liquid Protoculture
+-Added Proto Steel Ingot and Blocks
+-Mk.1 & 2 Core Steel now craftable
+-Added handful of Recipes
+-Added Refinery and Recipes
+-Updated Villager Profession with new look, and trades
+-Added New Iron Deco Blocks
 
 
 

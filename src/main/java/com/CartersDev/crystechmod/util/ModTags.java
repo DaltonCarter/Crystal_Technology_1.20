@@ -38,6 +38,11 @@ public class ModTags {
         public static final TagKey<Block> TIBERIUM_FLOWERS= tag("tiberium_flowers");
         public static final TagKey<Block> GLASS = tag("glass");
         public static final TagKey<Block> GRINDABLE_FLOWERS = tag("grindable_flowers");
+        public static final TagKey<Block> MACERATABLE = tag("maceratable");
+        public static final TagKey<Block> MACERATING_RESULT = tag("macerating_result");
+        public static final TagKey<Block> SMELTABLE = tag("smeltable");
+        public static final TagKey<Block> SMELTING_RESULT = tag("smelting_result");
+
 
 
         //Worldgen & Carvers
@@ -88,6 +93,15 @@ public class ModTags {
         public static final TagKey<Item> GRINDABLE= tag("grindable");
         public static final TagKey<Item> GRINDABLE_FLOWERS= tag("grindable_flowers");
         public static final TagKey<Item> GRINDING_RESULT= tag("grinding_result");
+        public static final TagKey<Item> MACERATABLE = tag("maceratable");
+        public static final TagKey<Item> MACERATING_RESULT = tag("macerating_result");
+        public static final TagKey<Item> SMELTING = tag("smelting");
+        public static final TagKey<Item> SMELTING_RESULT_2 = tag("smelting_result_2");
+        public static final TagKey<Item> SMELTABLE = tag("smeltable");
+        public static final TagKey<Item> SMELTING_RESULT = tag("smelting_result");
+        public static final TagKey<Item> ALLOYING_INPUT = tag("alloying_input");
+        public static final TagKey<Item> ALLOYING_RESULT = tag("alloying_result");
+        public static final TagKey<Item> BUCKET_OUTPUT = tag("bucket_output");
 
 
 
@@ -104,8 +118,12 @@ public class ModTags {
         public static final TagKey<Fluid> MOLTEN_BLUE_TIBERIUM = tag("molten_blue_tiberium");
         public static final TagKey<Fluid> MOLTEN_RED_TIBERIUM = tag("molten_red_tiberium");
         public static final TagKey<Fluid> MOLTEN_PURPLE_TIBERIUM = tag("molten_purple_tiberium");
+        public static final TagKey<Fluid> LIQUID_PROTOCULTURE = tag("liquid_protoculture");
         public static final TagKey<Fluid> INFUSER_FLUIDS = tag("infuser_fluids");
         public static final TagKey<Fluid> TIBERIUM_WATER = tag("tiberium_water");
+        public static final TagKey<Fluid> REFINERY_INPUT = tag("refinery_input");
+        public static final TagKey<Fluid> REFINERY_OUTPUT = tag("refinery_output");
+
 
 
 

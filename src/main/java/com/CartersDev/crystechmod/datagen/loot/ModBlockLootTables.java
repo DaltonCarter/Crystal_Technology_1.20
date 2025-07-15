@@ -32,6 +32,35 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         //Self Drops:
         this.dropSelf(ModBlocks.TEST_BLOCK.get());
+        this.dropSelf(ModBlocks.FOOLS_VITRICIUM.get());
+        this.dropSelf(ModBlocks.VITRIC_IRON_PLATING.get());
+        this.dropSelf(ModBlocks.VITRIC_IRON_PLATING_WALL.get());
+        this.dropSelf(ModBlocks.VITRIC_IRON_PLATING_STAIRS.get());
+        this.dropSelf(ModBlocks.IRON_PLATING.get());
+        this.dropSelf(ModBlocks.IRON_PLATING_WALL.get());
+        this.dropSelf(ModBlocks.IRON_PLATING_STAIRS.get());
+        this.dropSelf(ModBlocks.RUSTY_IRON_PLATING.get());
+        this.dropSelf(ModBlocks.RUSTY_IRON_PLATING_WALL.get());
+        this.dropSelf(ModBlocks.RUSTY_IRON_PLATING_STAIRS.get());
+        this.dropSelf(ModBlocks.POLISHED_IRON_BLOCK.get());
+        this.dropSelf(ModBlocks.POLISHED_IRON_STAIRS.get());
+        this.dropSelf(ModBlocks.POLISHED_IRON_WALL.get());
+
+        this.dropSelf(ModBlocks.INERT_VITRIC_SOIL.get());
+        this.dropSelf(ModBlocks.INERT_ICHOR_SOIL.get());
+        this.dropSelf(ModBlocks.POWERED_KILN.get());
+        this.dropSelf(ModBlocks.ALYTHUM_KILN.get());
+        this.dropSelf(ModBlocks.VITRIC_KILN.get());
+        this.dropSelf(ModBlocks.CRYSTAL_CORE_KILN.get());
+        this.dropSelf(ModBlocks.VITRICIUM_REFINERY.get());
+        this.dropSelf(ModBlocks.ALYTHUM_VITRICIUM_REFINERY.get());
+        this.dropSelf(ModBlocks.VITRIC_VITRICIUM_REFINERY.get());
+        this.dropSelf(ModBlocks.CRYSTAL_CORE_VITRICIUM_REFINERY.get());
+
+        this.dropSelf(ModBlocks.ALLOY_KILN.get());
+        this.dropSelf(ModBlocks.ALYTHUM_ALLOY_KILN.get());
+        this.dropSelf(ModBlocks.VITRIC_ALLOY_KILN.get());
+        this.dropSelf(ModBlocks.CRYSTAL_CORE_ALLOY_KILN.get());
 
         this.dropSelf(ModBlocks.GUNDANIUM_MACHINE_CORE.get());
         this.dropSelf(ModBlocks.ALYTHUM_MACHINE_CORE.get());
@@ -161,6 +190,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.VITRIC_DEEPSLATE_TILE_STAIRS.get());
 
         this.dropSelf(ModBlocks.GUNDANIUM_BLOCK.get());
+        this.dropSelf(ModBlocks.PROTO_STEEL_BLOCK.get());
         this.dropSelf(ModBlocks.ALYTHUM_BLOCK.get());
         this.dropSelf(ModBlocks.ILLYRIM_BLOCK.get());
         this.dropSelf(ModBlocks.LG_CORE_BLOCK.get());
@@ -408,9 +438,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PLAGUED_BUTTON.get());
         this.dropSelf(ModBlocks.PLAGUED_PRESSURE_PLATE.get());
         this.dropSelf(ModBlocks.PLAGUED_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.IRON_PLATING_TRAPDOOR.get());
         this.dropSelf(ModBlocks.PLAGUED_FENCE_GATE.get());
 
         this.dropSelf(ModBlocks.FIRESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.PROTO_STEEL_BLOCK.get());
+        this.dropSelf(ModBlocks.PROTO_STEEL_WALL.get());
+        this.dropSelf(ModBlocks.PROTO_STEEL_STAIRS.get());
 
         this.dropSelf(ModBlocks.EMBER_OAK_LOG.get());
         this.dropSelf(ModBlocks.EMBER_OAK_WOOD.get());
@@ -749,6 +784,21 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.PLAGUED_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.PLAGUED_SLAB.get()));
 
+        this.add(ModBlocks.PROTO_STEEL_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PROTO_STEEL_SLAB.get()));
+
+        this.add(ModBlocks.IRON_PLATING_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.IRON_PLATING_SLAB.get()));
+
+        this.add(ModBlocks.RUSTY_IRON_PLATING_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.RUSTY_IRON_PLATING_SLAB.get()));
+
+        this.add(ModBlocks.VITRIC_IRON_PLATING_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.VITRIC_IRON_PLATING_SLAB.get()));
+
+        this.add(ModBlocks.POLISHED_IRON_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.POLISHED_IRON_SLAB.get()));
+
         this.add(ModBlocks.VITRIC_DEEPSLATE_BRICK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.VITRIC_DEEPSLATE_BRICK_SLAB.get()));
 
@@ -1033,6 +1083,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.MARIKA_OAK_DOOR.get(),
                 block -> createDoorTable(ModBlocks.MARIKA_OAK_DOOR.get()));
 
+        this.add(ModBlocks.IRON_PLATING_DOOR.get(),
+                block -> createDoorTable(ModBlocks.IRON_PLATING_DOOR.get()));
+
 
         //Signs:
         this.add(ModBlocks.PLAGUED_SIGN.get(), block -> createSingleItemTable(ModItems.PLAGUED_SIGN.get()));
@@ -1187,7 +1240,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(GreenTiberiumCrystalBlock.AGE, 7));
 
         this.add(ModBlocks.GREEN_TIBERIUM_CROP.get(), createCropDrops(ModBlocks.GREEN_TIBERIUM_CROP.get(), ModItems.TIBERIUM.get(),
-                ModItems.GREEN_TIBERIUM_DUST.get(), lootitemcondition$builder3));
+                ModItems.TIBERIUM.get(), lootitemcondition$builder3));
 
 
         LootItemCondition.Builder lootitemcondition$builder4 = LootItemBlockStatePropertyCondition
@@ -1195,14 +1248,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlueTiberiumCrystalBlock.AGE, 7));
 
         this.add(ModBlocks.BLUE_TIBERIUM_CROP.get(), createCropDrops(ModBlocks.BLUE_TIBERIUM_CROP.get(), ModItems.TIBERIUM_BLUE.get(),
-                ModItems.BLUE_TIBERIUM_DUST.get(), lootitemcondition$builder4));
+                ModItems.TIBERIUM_BLUE.get(), lootitemcondition$builder4));
 
         LootItemCondition.Builder lootitemcondition$builder5 = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.RED_TIBERIUM_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RedTiberiumCrystalBlock.AGE, 7));
 
         this.add(ModBlocks.RED_TIBERIUM_CROP.get(), createCropDrops(ModBlocks.RED_TIBERIUM_CROP.get(), ModItems.TIBERIUM_RED.get(),
-                ModItems.RED_TIBERIUM_DUST.get(), lootitemcondition$builder5));
+                ModItems.TIBERIUM_RED.get(), lootitemcondition$builder5));
 
 
         LootItemCondition.Builder lootitemcondition$builder6 = LootItemBlockStatePropertyCondition
@@ -1210,7 +1263,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PurpleTiberiumCrystalBlock.AGE, 7));
 
         this.add(ModBlocks.PURPLE_TIBERIUM_CROP.get(), createCropDrops(ModBlocks.PURPLE_TIBERIUM_CROP.get(), ModItems.TIBERIUM_PURPLE.get(),
-                ModItems.PURPLE_TIBERIUM_DUST.get(), lootitemcondition$builder6));
+                ModItems.TIBERIUM_PURPLE.get(), lootitemcondition$builder6));
 
     }
 
@@ -1227,7 +1280,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         return createSilkTouchDispatchTable(pBlock,
                 this.applyExplosionDecay(pBlock,
                         LootItem.lootTableItem(item)
-                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F)))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
     }
 
@@ -1235,7 +1288,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         return createSilkTouchDispatchTable(pBlock,
                 this.applyExplosionDecay(pBlock,
                         LootItem.lootTableItem(item)
-                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 5.0F)))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
     }
 

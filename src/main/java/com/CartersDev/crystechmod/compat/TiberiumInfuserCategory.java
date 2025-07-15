@@ -40,7 +40,7 @@ private final IDrawable icon;
 
     @Override
     public Component getTitle() {
-        return Component.translatable("block.crystechmod.tiberium_infuser");
+        return Component.literal("Tiberium Infuser");
     }
 
     @Override

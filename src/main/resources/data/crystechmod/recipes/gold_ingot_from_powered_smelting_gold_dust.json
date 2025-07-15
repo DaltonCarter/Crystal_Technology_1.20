@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:powered_smelting",
+  "craftTime": 150,
+  "energyAmount": 10,
+  "ingredients": [
+    {
+      "item": "crystechmod:gold_dust"
+    }
+  ],
+  "output": {
+    "item": "minecraft:gold_ingot"
+  }
+}

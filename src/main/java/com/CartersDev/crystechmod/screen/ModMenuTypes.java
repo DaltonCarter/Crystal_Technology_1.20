@@ -1,6 +1,10 @@
 package com.CartersDev.crystechmod.screen;
 
 import com.CartersDev.crystechmod.CrystalTech;
+import com.CartersDev.crystechmod.screen.alloyKilnMenu.AlloyKilnMenu;
+import com.CartersDev.crystechmod.screen.alloyKilnMenu.AlythumAlloyKilnMenu;
+import com.CartersDev.crystechmod.screen.alloyKilnMenu.CrystalCoreAlloyKilnMenu;
+import com.CartersDev.crystechmod.screen.alloyKilnMenu.VitricAlloyKilnMenu;
 import com.CartersDev.crystechmod.screen.grinderMenu.TiberiumGrinderMenu;
 import com.CartersDev.crystechmod.screen.infuserMenu.AlythumTiberiumInfuserMenu;
 import com.CartersDev.crystechmod.screen.infuserMenu.CrystalCoreTiberiumInfuserMenu;
@@ -10,6 +14,14 @@ import com.CartersDev.crystechmod.screen.maceratorMenu.AlythumTiberiumMaceratorM
 import com.CartersDev.crystechmod.screen.maceratorMenu.CrystalCoreTiberiumMaceratorMenu;
 import com.CartersDev.crystechmod.screen.maceratorMenu.TiberiumMaceratorMenu;
 import com.CartersDev.crystechmod.screen.maceratorMenu.VitricTiberiumMaceratorMenu;
+import com.CartersDev.crystechmod.screen.poweredKilnMenu.AlythumKilnMenu;
+import com.CartersDev.crystechmod.screen.poweredKilnMenu.CrystalCoreKilnMenu;
+import com.CartersDev.crystechmod.screen.poweredKilnMenu.PoweredKilnMenu;
+import com.CartersDev.crystechmod.screen.poweredKilnMenu.VitricKilnMenu;
+import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.AlythumVitriciumRefineryMenu;
+import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.CrystalCoreVitriciumRefineryMenu;
+import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.VitricVitriciumRefineryMenu;
+import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.VitriciumRefineryMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -52,6 +64,46 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<CrystalCoreTiberiumInfuserMenu>> CRYSTAL_CORE_TIBERIUM_INFUSER_MENU =
             registerMenuType("crystal_core_tiberium_infuser_menu", CrystalCoreTiberiumInfuserMenu::new);
 
+
+    public static final RegistryObject<MenuType<PoweredKilnMenu>> POWERED_KILN_MENU =
+            registerMenuType("powered_kiln_menu", PoweredKilnMenu::new);
+
+    public static final RegistryObject<MenuType<AlythumKilnMenu>> ALYTHUM_KILN_MENU =
+            registerMenuType("alythum_kiln_menu", AlythumKilnMenu::new);
+
+    public static final RegistryObject<MenuType<VitricKilnMenu>> VITRIC_KILN_MENU =
+            registerMenuType("vitric_kiln_menu", VitricKilnMenu::new);
+
+    public static final RegistryObject<MenuType<CrystalCoreKilnMenu>> CRYSTAL_CORE_KILN_MENU =
+            registerMenuType("crystal_core_kiln_menu", CrystalCoreKilnMenu::new);
+
+
+
+    public static final RegistryObject<MenuType<AlloyKilnMenu>> ALLOY_KILN_MENU =
+            registerMenuType("alloy_kiln_menu", AlloyKilnMenu::new);
+
+    public static final RegistryObject<MenuType<AlythumAlloyKilnMenu>> ALYTHUM_ALLOY_KILN_MENU =
+            registerMenuType("alythum_alloy_kiln_menu", AlythumAlloyKilnMenu::new);
+
+    public static final RegistryObject<MenuType<VitricAlloyKilnMenu>> VITRIC_ALLOY_KILN_MENU =
+            registerMenuType("vitric_alloy_kiln_menu", VitricAlloyKilnMenu::new);
+
+    public static final RegistryObject<MenuType<CrystalCoreAlloyKilnMenu>> CRYSTAL_CORE_ALLOY_KILN_MENU =
+            registerMenuType("crystal_core_alloy_kiln_menu", CrystalCoreAlloyKilnMenu::new);
+
+
+
+    public static final RegistryObject<MenuType<VitriciumRefineryMenu>> VITRICIUM_REFINERY_MENU =
+            registerMenuType("vitricium_refinery_menu", VitriciumRefineryMenu::new);
+
+    public static final RegistryObject<MenuType<AlythumVitriciumRefineryMenu>> ALYTHUM_VITRICIUM_REFINERY_MENU =
+            registerMenuType("alythum_vitricium_refinery_menu", AlythumVitriciumRefineryMenu::new);
+
+    public static final RegistryObject<MenuType<VitricVitriciumRefineryMenu>> VITRIC_VITRICIUM_REFINERY_MENU =
+            registerMenuType("vitric_vitricium_refinery_menu", VitricVitriciumRefineryMenu::new);
+
+    public static final RegistryObject<MenuType<CrystalCoreVitriciumRefineryMenu>> CRYSTAL_CORE_VITRICIUM_REFINERY_MENU =
+            registerMenuType("crystal_core_vitricium_refinery_menu", CrystalCoreVitriciumRefineryMenu::new);
 
 
 

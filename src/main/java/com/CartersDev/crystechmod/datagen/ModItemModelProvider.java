@@ -114,6 +114,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.COPPER_DUST);
         simpleItem(ModItems.GOLD_DUST);
         simpleItem(ModItems.GUNDANIUM_INGOT);
+        simpleItem(ModItems.PROTO_STEEL);
         simpleItem(ModItems.HARMONIUM_INGOT);
         simpleItem(ModItems.ALYTHUM_DUST);
         simpleItem(ModItems.ALYTHUM_INGOT);
@@ -197,6 +198,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.EMBER_OAK_DOOR);
         simpleBlockItem(ModBlocks.DEAD_DOOR);
         simpleBlockItem(ModBlocks.MARIKA_OAK_DOOR);
+        simpleBlockItem(ModBlocks.IRON_PLATING_DOOR);
 
         evenSimplerBlockItem(ModBlocks.PLAGUED_STAIRS);
         evenSimplerBlockItem(ModBlocks.EMBER_OAK_STAIRS);
@@ -221,11 +223,24 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.WHITE_TIBERCRETE_STAIRS);
         evenSimplerBlockItem(ModBlocks.YELLOW_TIBERCRETE_STAIRS);
 
+        evenSimplerBlockItem(ModBlocks.PROTO_STEEL_STAIRS);
+        evenSimplerBlockItem(ModBlocks.IRON_PLATING_STAIRS);
+        evenSimplerBlockItem(ModBlocks.RUSTY_IRON_PLATING_STAIRS);
+        evenSimplerBlockItem(ModBlocks.VITRIC_IRON_PLATING_STAIRS);
+        evenSimplerBlockItem(ModBlocks.POLISHED_IRON_STAIRS);
+
         evenSimplerBlockItem(ModBlocks.VITRIC_DEEPSLATE_TILE_STAIRS);
         evenSimplerBlockItem(ModBlocks.VITRIC_DEEPSLATE_BRICK_STAIRS);
 
         evenSimplerBlockItem(ModBlocks.CS_SCAFFOLD_STAIRS);
         evenSimplerBlockItem(ModBlocks.CS_SCAFFOLD_SLAB);
+        evenSimplerBlockItem(ModBlocks.PROTO_STEEL_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.IRON_PLATING_SLAB);
+        evenSimplerBlockItem(ModBlocks.RUSTY_IRON_PLATING_SLAB);
+        evenSimplerBlockItem(ModBlocks.VITRIC_IRON_PLATING_SLAB);
+        evenSimplerBlockItem(ModBlocks.POLISHED_IRON_SLAB);
+
         evenSimplerBlockItem(ModBlocks.VITRIC_DEEPSLATE_BRICK_SLAB);
         evenSimplerBlockItem(ModBlocks.VITRIC_DEEPSLATE_TILE_SLAB);
         evenSimplerBlockItem(ModBlocks.CS_CATWALK_W_STAIRS);
@@ -434,9 +449,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         trapdoorItem((ModBlocks.EMBER_OAK_TRAPDOOR));
         trapdoorItem((ModBlocks.DEAD_TRAPDOOR));
         trapdoorItem((ModBlocks.MARIKA_OAK_TRAPDOOR));
+        trapdoorItem((ModBlocks.IRON_PLATING_TRAPDOOR));
 
         //Walls:
         wallItem((ModBlocks.FIRESTONE_WALL), ModBlocks.FIRESTONE_BLOCK);
+        wallItem((ModBlocks.PROTO_STEEL_WALL), ModBlocks.PROTO_STEEL_BLOCK);
+
+        wallItem((ModBlocks.IRON_PLATING_WALL), ModBlocks.IRON_PLATING);
+        wallItem((ModBlocks.RUSTY_IRON_PLATING_WALL), ModBlocks.RUSTY_IRON_PLATING);
+        wallItem((ModBlocks.VITRIC_IRON_PLATING_WALL), ModBlocks.VITRIC_IRON_PLATING);
+        wallItem((ModBlocks.POLISHED_IRON_WALL), ModBlocks.POLISHED_IRON_BLOCK);
+
         wallItem((ModBlocks.CS_TILE_WALL), ModBlocks.CS_TILE);
         wallItem((ModBlocks.CS_TILE_BR_WALL), ModBlocks.CS_TILE_BR);
         wallItem((ModBlocks.CS_TILE_YB_WALL), ModBlocks.CS_TILE_YB);

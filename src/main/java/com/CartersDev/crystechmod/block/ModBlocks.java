@@ -48,14 +48,25 @@ public class ModBlocks {
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
             () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.SOUND_BLOCK_SOUNDS)));
 
+    public static final RegistryObject<Block> FOOLS_VITRICIUM = registerBlock("fools_vitricium",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).sound(SoundType.AMETHYST)));
+
     //Terrain Blocks:
         //Natural Terrain Blocks:
     public static final RegistryObject<Block> TIBERIUM_SOIL = registerBlock("tiberium_soil",
-            () -> new TiberiumSoilBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+            () -> new TiberiumSoilBlock(BlockBehaviour.Properties.copy(Blocks.DIRT)
                     .strength(3f, 1200f).randomTicks()));
 
     public static final RegistryObject<Block> ICHOR_SOIL = registerBlock("ichor_soil",
             () -> new IchorSoilBlock(BlockBehaviour.Properties.copy(Blocks.DIRT)
+                    .strength(3f, 1200f).randomTicks()));
+
+    public static final RegistryObject<Block> INERT_VITRIC_SOIL = registerBlock("inert_vitric_soil",
+            () -> new InertVitricSoilBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(3f, 1200f).randomTicks()));
+
+    public static final RegistryObject<Block> INERT_ICHOR_SOIL = registerBlock("inert_ichor_soil",
+            () -> new InertIchorSoilBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(3f, 1200f).randomTicks()));
 
     public static final RegistryObject<Block> INFESTED_STONE = registerBlock("infested_stone",
@@ -150,6 +161,28 @@ public class ModBlocks {
     public static final RegistryObject<Block> GUNDANIUM_BLOCK = registerBlock("gundanium_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .explosionResistance(100.0f)));
+
+    public static final RegistryObject<Block> PROTO_STEEL_BLOCK = registerBlock("proto_steel_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .explosionResistance(100.0f)));
+
+    public static final RegistryObject<Block> IRON_PLATING = registerBlock("iron_plating",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    ));
+
+    public static final RegistryObject<Block> RUSTY_IRON_PLATING = registerBlock("rusty_iron_plating",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+            ));
+
+    public static final RegistryObject<Block> VITRIC_IRON_PLATING = registerBlock("vitric_iron_plating",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+            ));
+
+    public static final RegistryObject<Block> POLISHED_IRON_BLOCK = registerBlock("polished_iron_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+            ));
+
+
 
     public static final RegistryObject<Block> HARMONIUM_BLOCK = registerBlock("harmonium_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
@@ -476,6 +509,26 @@ public class ModBlocks {
             () -> new StairBlock(() -> ModBlocks.YELLOW_TIBERCRETE.get().defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.YELLOW_CONCRETE)));
 
+    public static final RegistryObject<Block> PROTO_STEEL_STAIRS = registerBlock("proto_steel_stairs",
+            () -> new StairBlock(() -> ModBlocks.PROTO_STEEL_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> IRON_PLATING_STAIRS = registerBlock("iron_plating_stairs",
+            () -> new StairBlock(() -> ModBlocks.IRON_PLATING.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> RUSTY_IRON_PLATING_STAIRS = registerBlock("rusty_iron_plating_stairs",
+            () -> new StairBlock(() -> ModBlocks.RUSTY_IRON_PLATING.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> VITRIC_IRON_PLATING_STAIRS = registerBlock("vitric_iron_plating_stairs",
+            () -> new StairBlock(() -> ModBlocks.VITRIC_IRON_PLATING.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> POLISHED_IRON_STAIRS = registerBlock("polished_iron_stairs",
+            () -> new StairBlock(() -> ModBlocks.POLISHED_IRON_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
     public static final RegistryObject<Block> BLACK_TIBERCRETE_SLAB = registerBlock("black_tibercrete_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
 
@@ -523,6 +576,21 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> YELLOW_TIBERCRETE_SLAB = registerBlock("yellow_tibercrete_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+
+    public static final RegistryObject<Block> PROTO_STEEL_SLAB = registerBlock("proto_steel_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> IRON_PLATING_SLAB = registerBlock("iron_plating_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> RUSTY_IRON_PLATING_SLAB = registerBlock("rusty_iron_plating_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> VITRIC_IRON_PLATING_SLAB = registerBlock("vitric_iron_plating_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> POLISHED_IRON_SLAB = registerBlock("polished_iron_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     public static final RegistryObject<Block> BLACK_TIBERCRETE_BRICKS = registerBlock("black_tibercrete_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BLACK_CONCRETE)));
@@ -619,6 +687,21 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> YELLOW_TIBERCRETE_WALL = registerBlock("yellow_tibercrete_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(ModBlocks.YELLOW_TIBERCRETE.get())));
+
+    public static final RegistryObject<Block> PROTO_STEEL_WALL = registerBlock("proto_steel_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> IRON_PLATING_WALL = registerBlock("iron_plating_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> RUSTY_IRON_PLATING_WALL = registerBlock("rusty_iron_plating_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> VITRIC_IRON_PLATING_WALL = registerBlock("vitric_iron_plating_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> POLISHED_IRON_WALL = registerBlock("polished_iron_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     public static final RegistryObject<Block> BLACK_TIBERCRETE_BRICK_STAIRS = registerBlock("black_tibercrete_brick_stairs",
             () -> new StairBlock(() -> ModBlocks.BLACK_TIBERCRETE_BRICKS.get().defaultBlockState(),
@@ -1942,67 +2025,83 @@ public class ModBlocks {
     //Lamps, Lights, and Torch-likes:
     public static final RegistryObject<Block> CRYSTAL_CORE_LAMP_G = registerBlock("crystal_core_lamp_g",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_CRYSTAL_CORE_LAMP_G = registerBlock("inverted_crystal_core_lamp_g",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> CRYSTAL_CORE_LAMP_B = registerBlock("crystal_core_lamp_b",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_CRYSTAL_CORE_LAMP_B = registerBlock("inverted_crystal_core_lamp_b",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> CRYSTAL_CORE_LAMP_R = registerBlock("crystal_core_lamp_r",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_CRYSTAL_CORE_LAMP_R = registerBlock("inverted_crystal_core_lamp_r",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> CRYSTAL_CORE_LAMP_P = registerBlock("crystal_core_lamp_p",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_CRYSTAL_CORE_LAMP_P = registerBlock("inverted_crystal_core_lamp_p",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> CRYSTAL_CORE_LIGHT = registerBlock("crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_CRYSTAL_CORE_LIGHT = registerBlock("inverted_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> VERT_CRYSTAL_CORE_LIGHT = registerBlock("vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> BLACK_CRYSTAL_CORE_LIGHT = registerBlock("black_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_BLACK_CRYSTAL_CORE_LIGHT = registerBlock("inverted_black_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> BLACK_VERT_CRYSTAL_CORE_LIGHT = registerBlock("black_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_BLACK_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_black_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)
+                    .strength(3f)));
 
 
 
@@ -2011,247 +2110,260 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> BLUE_CRYSTAL_CORE_LIGHT = registerBlock("blue_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_BLUE_CRYSTAL_CORE_LIGHT = registerBlock("inverted_blue_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> BLUE_VERT_CRYSTAL_CORE_LIGHT = registerBlock("blue_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_BLUE_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_blue_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)
+                    .strength(3f)));
 
 
     public static final RegistryObject<Block> BROWN_CRYSTAL_CORE_LIGHT = registerBlock("brown_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_BROWN_CRYSTAL_CORE_LIGHT = registerBlock("inverted_brown_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> BROWN_VERT_CRYSTAL_CORE_LIGHT = registerBlock("brown_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_BROWN_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_brown_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)
+                    .strength(3f)));
 
 
     public static final RegistryObject<Block> CYAN_CRYSTAL_CORE_LIGHT = registerBlock("cyan_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_CYAN_CRYSTAL_CORE_LIGHT = registerBlock("inverted_cyan_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> CYAN_VERT_CRYSTAL_CORE_LIGHT = registerBlock("cyan_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_CYAN_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_cyan_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)
+                    .strength(3f)));
 
 
     public static final RegistryObject<Block> GREEN_CRYSTAL_CORE_LIGHT = registerBlock("green_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)
+                    .strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_GREEN_CRYSTAL_CORE_LIGHT = registerBlock("inverted_green_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> GREEN_VERT_CRYSTAL_CORE_LIGHT = registerBlock("green_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_GREEN_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_green_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> GREY_CRYSTAL_CORE_LIGHT = registerBlock("grey_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_GREY_CRYSTAL_CORE_LIGHT = registerBlock("inverted_grey_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> GREY_VERT_CRYSTAL_CORE_LIGHT = registerBlock("grey_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_GREY_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_grey_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> LIGHT_BLUE_CRYSTAL_CORE_LIGHT = registerBlock("light_blue_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_LIGHT_BLUE_CRYSTAL_CORE_LIGHT = registerBlock("inverted_light_blue_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> LIGHT_BLUE_VERT_CRYSTAL_CORE_LIGHT = registerBlock("light_blue_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_LIGHT_BLUE_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_light_blue_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> LIGHT_GREY_CRYSTAL_CORE_LIGHT = registerBlock("light_grey_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_LIGHT_GREY_CRYSTAL_CORE_LIGHT = registerBlock("inverted_light_grey_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> LIGHT_GREY_VERT_CRYSTAL_CORE_LIGHT = registerBlock("light_grey_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_LIGHT_GREY_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_light_grey_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> LIME_CRYSTAL_CORE_LIGHT = registerBlock("lime_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_LIME_CRYSTAL_CORE_LIGHT = registerBlock("inverted_lime_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> LIME_VERT_CRYSTAL_CORE_LIGHT = registerBlock("lime_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_LIME_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_lime_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
 
     public static final RegistryObject<Block> MAGENTA_CRYSTAL_CORE_LIGHT = registerBlock("magenta_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_MAGENTA_CRYSTAL_CORE_LIGHT = registerBlock("inverted_magenta_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> MAGENTA_VERT_CRYSTAL_CORE_LIGHT = registerBlock("magenta_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_MAGENTA_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_magenta_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> ORANGE_CRYSTAL_CORE_LIGHT = registerBlock("orange_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_ORANGE_CRYSTAL_CORE_LIGHT = registerBlock("inverted_orange_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> ORANGE_VERT_CRYSTAL_CORE_LIGHT = registerBlock("orange_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_ORANGE_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_orange_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> PINK_CRYSTAL_CORE_LIGHT = registerBlock("pink_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_PINK_CRYSTAL_CORE_LIGHT = registerBlock("inverted_pink_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> PINK_VERT_CRYSTAL_CORE_LIGHT = registerBlock("pink_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_PINK_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_pink_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> PURPLE_CRYSTAL_CORE_LIGHT = registerBlock("purple_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_PURPLE_CRYSTAL_CORE_LIGHT = registerBlock("inverted_purple_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> PURPLE_VERT_CRYSTAL_CORE_LIGHT = registerBlock("purple_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_PURPLE_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_purple_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> FLAME_CRYSTAL_CORE_LIGHT = registerBlock("flame_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_FLAME_CRYSTAL_CORE_LIGHT = registerBlock("inverted_flame_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> FLAME_VERT_CRYSTAL_CORE_LIGHT = registerBlock("flame_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_FLAME_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_flame_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> RED_CRYSTAL_CORE_LIGHT = registerBlock("red_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_RED_CRYSTAL_CORE_LIGHT = registerBlock("inverted_red_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> RED_VERT_CRYSTAL_CORE_LIGHT = registerBlock("red_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_RED_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_red_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> WHITE_CRYSTAL_CORE_LIGHT = registerBlock("white_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_WHITE_CRYSTAL_CORE_LIGHT = registerBlock("inverted_white_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
     public static final RegistryObject<Block> WHITE_VERT_CRYSTAL_CORE_LIGHT = registerBlock("white_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0).strength(3f)));
 
     public static final RegistryObject<Block> INVERTED_WHITE_VERT_CRYSTAL_CORE_LIGHT = registerBlock("inverted_white_vert_crystal_core_light",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
-                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15)));
+                    .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 0 : 15).strength(3f)));
 
 
     //End of Lamps, Lights, and Torch-likes:
@@ -2304,6 +2416,14 @@ public class ModBlocks {
                     BlockSetType.OAK));
 
     public static final RegistryObject<Block> PLAGUED_TRAPDOOR = registerBlock("plagued_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR).noOcclusion(),
+                    BlockSetType.OAK));
+
+    public static final RegistryObject<Block> IRON_PLATING_DOOR = registerBlock("iron_plating_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).noOcclusion(),
+                    BlockSetType.OAK));
+
+    public static final RegistryObject<Block> IRON_PLATING_TRAPDOOR = registerBlock("iron_plating_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR).noOcclusion(),
                     BlockSetType.OAK));
 
@@ -2752,6 +2872,10 @@ public class ModBlocks {
             () -> new MoltenPurpleTiberiumBlock(ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)
                     .randomTicks().noLootTable(), 5, 0.5f));
 
+    public static final RegistryObject<LiquidBlock> LIQUID_PROTOCULTURE_BLOCK = BLOCKS.register("liquid_protoculture_block",
+            () -> new LiquidProtocultureBlock(ModFluids.SOURCE_LIQUID_PROTOCULTURE, BlockBehaviour.Properties.copy(Blocks.LAVA)
+                    .randomTicks().noLootTable(), 5, 0.5f));
+
     //End of Tiberium
 
     //Component Blocks:
@@ -2776,30 +2900,90 @@ public class ModBlocks {
             () -> new TiberiumGrinderBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     public static final RegistryObject<Block> TIBERIUM_MACERATOR = registerBlock("tiberium_macerator",
-            () -> new TiberiumMaceratorBlock(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new TiberiumMaceratorBlock(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(PoweredKilnBlock.WORKING) ? 15 : 0)));
 
     public static final RegistryObject<Block> ALYTHUM_TIBERIUM_MACERATOR = registerBlock("alythum_tiberium_macerator",
-            () -> new TiberiumMaceratorBlock(2, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new TiberiumMaceratorBlock(2, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(PoweredKilnBlock.WORKING) ? 15 : 0)));
 
     public static final RegistryObject<Block> VITRIC_TIBERIUM_MACERATOR = registerBlock("vitric_tiberium_macerator",
-            () -> new TiberiumMaceratorBlock(3, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new TiberiumMaceratorBlock(3, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(PoweredKilnBlock.WORKING) ? 15 : 0)));
 
     public static final RegistryObject<Block> CRYSTAL_CORE_TIBERIUM_MACERATOR = registerBlock("crystal_core_tiberium_macerator",
-            () -> new TiberiumMaceratorBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new TiberiumMaceratorBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(PoweredKilnBlock.WORKING) ? 15 : 0)));
 
 
 
     public static final RegistryObject<Block> TIBERIUM_INFUSER = registerBlock("tiberium_infuser",
-            () -> new TiberiumInfuserBlock(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new TiberiumInfuserBlock(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(PoweredKilnBlock.WORKING) ? 15 : 0)));
 
     public static final RegistryObject<Block> ALYTHUM_TIBERIUM_INFUSER = registerBlock("alythum_tiberium_infuser",
-            () -> new TiberiumInfuserBlock(2, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new TiberiumInfuserBlock(2, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(PoweredKilnBlock.WORKING) ? 15 : 0)));
 
     public static final RegistryObject<Block> VITRIC_TIBERIUM_INFUSER = registerBlock("vitric_tiberium_infuser",
-            () -> new TiberiumInfuserBlock(3, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new TiberiumInfuserBlock(3, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(PoweredKilnBlock.WORKING) ? 15 : 0)));
 
     public static final RegistryObject<Block> CRYSTAL_CORE_TIBERIUM_INFUSER = registerBlock("crystal_core_tiberium_infuser",
-            () -> new TiberiumInfuserBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new TiberiumInfuserBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(PoweredKilnBlock.WORKING) ? 15 : 0)));
+
+
+
+    public static final RegistryObject<Block> POWERED_KILN = registerBlock("powered_kiln",
+            () -> new PoweredKilnBlock(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(PoweredKilnBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> ALYTHUM_KILN = registerBlock("alythum_kiln",
+            () -> new PoweredKilnBlock(2, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(PoweredKilnBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> VITRIC_KILN = registerBlock("vitric_kiln",
+            () -> new PoweredKilnBlock(3, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(PoweredKilnBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> CRYSTAL_CORE_KILN = registerBlock("crystal_core_kiln",
+            () -> new PoweredKilnBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(PoweredKilnBlock.WORKING) ? 15 : 0)));
+
+
+    public static final RegistryObject<Block> ALLOY_KILN = registerBlock("alloy_kiln",
+            () -> new AlloyKilnBlock(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(AlloyKilnBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> ALYTHUM_ALLOY_KILN = registerBlock("alythum_alloy_kiln",
+            () -> new AlloyKilnBlock(2, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(AlloyKilnBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> VITRIC_ALLOY_KILN = registerBlock("vitric_alloy_kiln",
+            () -> new AlloyKilnBlock(3, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(AlloyKilnBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> CRYSTAL_CORE_ALLOY_KILN = registerBlock("crystal_core_alloy_kiln",
+            () -> new AlloyKilnBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(AlloyKilnBlock.WORKING) ? 15 : 0)));
+
+
+    public static final RegistryObject<Block> VITRICIUM_REFINERY = registerBlock("vitricium_refinery",
+            () -> new VitriciumRefineryBlock(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(VitriciumRefineryBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> ALYTHUM_VITRICIUM_REFINERY = registerBlock("alythum_vitricium_refinery",
+            () -> new VitriciumRefineryBlock(2, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(VitriciumRefineryBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> VITRIC_VITRICIUM_REFINERY = registerBlock("vitric_vitricium_refinery",
+            () -> new VitriciumRefineryBlock(3, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(VitriciumRefineryBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> CRYSTAL_CORE_VITRICIUM_REFINERY = registerBlock("crystal_core_vitricium_refinery",
+            () -> new VitriciumRefineryBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(VitriciumRefineryBlock.WORKING) ? 15 : 0)));
 
         //Signs:
 

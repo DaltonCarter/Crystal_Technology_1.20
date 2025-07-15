@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:powered_smelting",
+  "craftTime": 150,
+  "energyAmount": 10,
+  "ingredients": [
+    {
+      "item": "minecraft:nether_bricks"
+    }
+  ],
+  "output": {
+    "item": "minecraft:cracked_nether_bricks"
+  }
+}

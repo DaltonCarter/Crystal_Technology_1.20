@@ -171,6 +171,9 @@ public static final RegistryObject<Item> GREEN_TIBERIUM_DUST = ITEMS.register("g
 public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gundanium_ingot",
         () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> PROTO_STEEL = ITEMS.register("proto_steel",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> HARMONIUM_INGOT = ITEMS.register("harmonium_ingot",
             () -> new Item(new Item.Properties()));
 
@@ -667,6 +670,11 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
     public static final RegistryObject<Item> MOLTEN_PURPLE_TIBERIUM_BUCKET = ITEMS.register("molten_purple_tiberium_bucket",
             () -> new BucketItem(ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM, new Item.Properties().craftRemainder(Items.BUCKET)
                     .stacksTo(1)));
+
+    public static final RegistryObject<Item> LIQUID_PROTOCULTURE_BUCKET = ITEMS.register("liquid_protoculture_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_LIQUID_PROTOCULTURE, new Item.Properties().craftRemainder(Items.BUCKET)
+                    .stacksTo(1)));
+
 
     public static final RegistryObject<Item> PLAGUED_SIGN = ITEMS.register("plagued_sign",
             () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.PLAGUED_SIGN.get(), ModBlocks.PLAGUED_WALL_SIGN.get()));

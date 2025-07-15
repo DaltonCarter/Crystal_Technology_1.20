@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crystechmod:block/iron_plating_slab"
+    },
+    "type=double": {
+      "model": "crystechmod:block/iron_plating"
+    },
+    "type=top": {
+      "model": "crystechmod:block/iron_plating_slab_top"
+    }
+  }
+}

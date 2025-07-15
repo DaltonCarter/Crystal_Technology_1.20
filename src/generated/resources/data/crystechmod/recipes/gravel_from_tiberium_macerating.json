@@ -7,6 +7,7 @@
       "item": "minecraft:cobblestone"
     }
   ],
+  "multiply": false,
   "output": {
     "item": "minecraft:gravel"
   }

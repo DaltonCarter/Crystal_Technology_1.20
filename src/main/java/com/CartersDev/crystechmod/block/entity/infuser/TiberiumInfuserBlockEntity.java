@@ -44,31 +44,6 @@ import java.util.Optional;
 import static com.CartersDev.crystechmod.block.custom.TiberiumInfuserBlock.WORKING;
 
 
-/* For Multiple inputs:
-You need to make a List<Ingredient> instead of just an Ingredient. The modification should be similar to the thing
-we did in the ModArmorItem class. You change it to a NonNullList<Ingredient> and modify the serializeRecipeData method
-as such:
-
-            for (int i = 0; i < ingredients.size(); i++) {
-                jsonarray.add(ingredients.get(i).toJson());
-            }
-
-Don't forget to change the type from Ingredient to NonNullList<Ingredient> in all the relevant places such as
-constructors and whatnot and there you go. Should be everything :)
-
-
-Well, you will need to change quite a few things in the class. Instead of it only saving one Ingredient, you probably
-want to save all three, so just make three Ingredient fields (make sure they all have unique names of course!).
-This needs to be done in the RecipeBuilder as well as the static Result class. You then want to add two more
-ItemLike to both constructors to assign those new ingredient fields.
-Then you want to simply output all the ingredients in the serializeRecipeData method. Basically just adding all
-three of them to the jsonarray, so instead of just having
-jsonarray.add(ingredient.toJson());
-
-you'd call this once for each ingredient! In theory that should be it
-
-*/
-
 
 public class TiberiumInfuserBlockEntity extends BlockEntity implements MenuProvider {
 

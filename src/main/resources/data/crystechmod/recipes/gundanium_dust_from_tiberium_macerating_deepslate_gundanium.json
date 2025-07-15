@@ -8,6 +8,7 @@
       "item": "crystechmod:deepslate_gundanium_ore"
     }
   ],
+  "multiply": true,
   "output": {
     "count": 2,
     "item": "crystechmod:gundanium_dust"

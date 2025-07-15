@@ -21,13 +21,15 @@ public class TiberiumMaceratorRecipe implements Recipe<SimpleContainer> {
     private final ResourceLocation id;
     private final int craftTime;
     private final int energyAmount;
+    private final boolean multiply;
 
-    public TiberiumMaceratorRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> inputItems, int craftTime, int energyAmount) {
+    public TiberiumMaceratorRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> inputItems, int craftTime, int energyAmount, boolean multiply) {
         this.inputItems = inputItems;
         this.output = output;
         this.id = id;
         this.craftTime = craftTime;
         this.energyAmount = energyAmount;
+        this.multiply = multiply;
     }
 
 
@@ -68,6 +70,10 @@ public class TiberiumMaceratorRecipe implements Recipe<SimpleContainer> {
         return energyAmount;
     }
 
+    public boolean isMultiply() {
+        return multiply;
+    }
+
     @Override
     public ResourceLocation getId() {
         return id;
@@ -75,7 +81,7 @@ public class TiberiumMaceratorRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return null;
+        return TiberiumMaceratorRecipe.Serializer.INSTANCE;
     }
 
     @Override
@@ -111,9 +117,10 @@ public class TiberiumMaceratorRecipe implements Recipe<SimpleContainer> {
 
             int craftTime = pSerializedRecipe.get("craftTime").getAsInt();
             int energyAmount = pSerializedRecipe.get("energyAmount").getAsInt();
+            boolean multiply = pSerializedRecipe.get("multiply").getAsBoolean();
 
 
-            return new TiberiumMaceratorRecipe(pRecipeId, output, inputs, craftTime, energyAmount);
+            return new TiberiumMaceratorRecipe(pRecipeId, output, inputs, craftTime, energyAmount, multiply);
         }
 
 
@@ -128,8 +135,9 @@ public class TiberiumMaceratorRecipe implements Recipe<SimpleContainer> {
 
             int craftTime = pBuffer.readInt();
             int energyAmount = pBuffer.readInt();
+            boolean multiply = pBuffer.readBoolean();
             ItemStack output = pBuffer.readItem();
-            return new TiberiumMaceratorRecipe(pRecipeId, output, inputs, craftTime, energyAmount);
+            return new TiberiumMaceratorRecipe(pRecipeId, output, inputs, craftTime, energyAmount, multiply);
         }
 
         @Override
@@ -143,6 +151,7 @@ public class TiberiumMaceratorRecipe implements Recipe<SimpleContainer> {
 
             pBuffer.writeInt(pRecipe.craftTime);
             pBuffer.writeInt(pRecipe.energyAmount);
+            pBuffer.writeBoolean(pRecipe.multiply);
             pBuffer.writeItemStack(pRecipe.getResultItem(null), false);
 
         }

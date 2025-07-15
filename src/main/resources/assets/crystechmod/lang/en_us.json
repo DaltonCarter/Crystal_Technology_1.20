@@ -9,6 +9,7 @@
   "item.crystechmod.raw_alythum": "Raw Alythum",
   "item.crystechmod.qualrim_compound": "Qualrim Compound",
   "item.crystechmod.gundanium_dust": "Gundanium Dust",
+  "item.crystechmod.proto_steel": "Proto-Steel Ingot",
   "item.crystechmod.harmonium_dust": "Harmonium Dust",
   "item.crystechmod.gundanium_ingot": "Gundanium Ingot",
   "item.crystechmod.harmonium_ingot": "Harmonium Ingot",
@@ -31,6 +32,7 @@
   "item.crystechmod.molten_blue_tiberium_bucket": "Liquid Vinifera Tiberium Bucket",
   "item.crystechmod.molten_red_tiberium_bucket": "Liquid Cruentus Tiberium Bucket",
   "item.crystechmod.molten_purple_tiberium_bucket": "Liquid Aboreus Tiberium Bucket",
+  "item.crystechmod.liquid_protoculture_bucket": "Protoculture Bucket",
   "item.crystechmod.tiberium_water_bucket": "Infected Water Bucket",
   "item.crystechmod.tiberium_fruit": "Tiberium Fruit",
   "item.crystechmod.heim_berry": "Heim Berry",
@@ -251,6 +253,33 @@
   "block.crystechmod.enigma_block": "Enigma Block",
   "block.crystechmod.kryon_block": "Kryon Block",
   "block.crystechmod.gundanium_block": "Gundanium Block",
+
+  "block.crystechmod.proto_steel_block": "Proto-Steel Block",
+  "block.crystechmod.proto_steel_stairs": "Proto-Steel Stairs",
+  "block.crystechmod.proto_steel_slab": "Proto-Steel Slab",
+  "block.crystechmod.proto_steel_wall": "Proto-Steel Wall",
+
+  "block.crystechmod.iron_plating": "Iron Plating",
+  "block.crystechmod.iron_plating_stairs": "Iron Plating Stairs",
+  "block.crystechmod.iron_plating_slab": "Iron Plating Slab",
+  "block.crystechmod.iron_plating_wall": "Iron Plating Wall",
+
+  "block.crystechmod.rusty_iron_plating": "Rusty Iron Plating",
+  "block.crystechmod.rusty_iron_plating_stairs": "Rusty Iron Plating Stairs",
+  "block.crystechmod.rusty_iron_plating_slab": "Rusty Iron Plating Slab",
+  "block.crystechmod.rusty_iron_plating_wall": "Rusty Iron Plating Wall",
+
+  "block.crystechmod.vitric_iron_plating": "Vitric Iron Plating",
+  "block.crystechmod.vitric_iron_plating_stairs": "Vitric Iron Plating Stairs",
+  "block.crystechmod.vitric_iron_plating_slab": "Vitric Iron Plating Slab",
+  "block.crystechmod.vitric_iron_plating_wall": "Vitric Iron Plating Wall",
+
+  "block.crystechmod.polished_iron_block": "Polished Iron Block",
+  "block.crystechmod.polished_iron_stairs": "Polished Iron Stairs",
+  "block.crystechmod.polished_iron_slab": "Polished Iron Slab",
+  "block.crystechmod.polished_iron_wall": "Polished Iron Wall",
+
+  
   "block.crystechmod.alythum_block": "Alythum Block",
   "block.crystechmod.illyrim_block": "Illyrim Block",
   "block.crystechmod.lg_core_block": "MK.1 Core Steel Block",
@@ -270,6 +299,8 @@
   "block.crystechmod.yokaran_bloom": "Yokaran Bloom",
   "block.crystechmod.tiberium_soil": "Tiberium Soil",
   "block.crystechmod.ichor_soil": "Ichor Soil",
+  "block.crystechmod.inert_vitric_soil": "Inert Vitric Soil",
+  "block.crystechmod.inert_ichor_soil": "Inert Ichor Soil",
   "block.crystechmod.plagued_log": "Plagued Log",
   "block.crystechmod.plagued_wood": "Plagued Wood",
   "block.crystechmod.stripped_plagued_log": "Stripped Plagued Log",
@@ -283,6 +314,10 @@
   "block.crystechmod.plagued_pressure_plate": "Plagued Pressure Plate",
   "block.crystechmod.plagued_door": "Plagued Door",
   "block.crystechmod.plagued_trapdoor": "Plagued Trapdoor",
+
+  "block.crystechmod.iron_plating_door": "Iron Plated Door",
+  "block.crystechmod.iron_plating_trapdoor": "Iron Plated Trapdoor",
+
   "block.crystechmod.ember_oak_planks": "Ember Oak Planks",
   "block.crystechmod.ember_oak_fence": "Ember Oak Fence",
   "block.crystechmod.ember_oak_fence_gate": "Ember Oak Fence Gate",
@@ -1042,6 +1077,8 @@
   "block.crystechmod.white_vert_crystal_core_light": "White Crystal Core Light Alt",
   "block.crystechmod.inverted_white_vert_crystal_core_light": "Inverted White Crystal Core Light Alt",
 
+  "block.crystechmod.fools_vitricium": "Fools Vitricium",
+
   "block.crystechmod.harmonium_ore": "Harmonium Ore",
   "block.crystechmod.deepslate_harmonium_ore": "Deepslate Harmonium Ore",
   "block.crystechmod.nether_harmonium_ore": "Nether Harmonium Ore",
@@ -1064,6 +1101,20 @@
   "block.crystechmod.vitric_tiberium_infuser": "Advanced Infuser",
   "block.crystechmod.crystal_core_tiberium_infuser": "Ultimate Tiberium Infuser",
 
+  "block.crystechmod.powered_kiln": "Basic Kiln",
+  "block.crystechmod.alythum_kiln": "Improved Kiln",
+  "block.crystechmod.vitric_kiln": "Advanced Kiln",
+  "block.crystechmod.crystal_core_kiln": "Ultimate Kiln",
+
+  "block.crystechmod.alloy_kiln": "Basic Alloy Kiln",
+  "block.crystechmod.alythum_alloy_kiln": "Improved Alloy Kiln",
+  "block.crystechmod.vitric_alloy_kiln": "Advanced Alloy Kiln",
+  "block.crystechmod.crystal_core_alloy_kiln": "Ultimate Alloy Kiln",
+
+  "block.crystechmod.vitricium_refinery": "Basic Vitricium Refinery",
+  "block.crystechmod.alythum_vitricium_refinery": "Improved Vitricium Refinery",
+  "block.crystechmod.vitric_vitricium_refinery": "Advanced Vitricium Refinery",
+  "block.crystechmod.crystal_core_vitricium_refinery": "Ultimate Vitricium Refinery",
 
 
   "enchantment.crystechmod.lightning_striker": "Lightning Striker",
@@ -1142,6 +1193,7 @@
   "fluid_type.crystechmod.molten_blue_tiberium_fluid": "Molten Vinifera Tiberium",
   "fluid_type.crystechmod.molten_red_tiberium_fluid": "Molten Cruentus Tiberium",
   "fluid_type.crystechmod.molten_purple_tiberium_fluid": "Molten Aboreus Tiberium",
+  "fluid_type.crystechmod.liquid_protoculture_fluid": "Liquid Protoculture",
 
 
 

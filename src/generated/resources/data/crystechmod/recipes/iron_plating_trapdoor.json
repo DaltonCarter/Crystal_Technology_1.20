@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "crystechmod:iron_plating"
+    }
+  },
+  "pattern": [
+    "   ",
+    "PPP",
+    "PPP"
+  ],
+  "result": {
+    "count": 2,
+    "item": "crystechmod:iron_plating_trapdoor"
+  },
+  "show_notification": true
+}

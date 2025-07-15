@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "crystechmod:block/vitric_iron_plating",
+    "side": "crystechmod:block/vitric_iron_plating",
+    "top": "crystechmod:block/vitric_iron_plating"
+  }
+}

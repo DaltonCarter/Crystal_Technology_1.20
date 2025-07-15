@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:cauldron"
+    },
+    "F": {
+      "item": "crystechmod:powered_kiln"
+    },
+    "H": {
+      "item": "crystechmod:harmonium_ingot"
+    },
+    "I": {
+      "item": "minecraft:lava_bucket"
+    },
+    "K": {
+      "item": "crystechmod:kryonic_reservoir"
+    },
+    "M": {
+      "item": "crystechmod:gundanium_machine_core"
+    },
+    "R": {
+      "item": "crystechmod:harmonic_relay"
+    }
+  },
+  "pattern": [
+    "HIH",
+    "KMK",
+    "FRB"
+  ],
+  "result": {
+    "item": "crystechmod:vitricium_refinery"
+  },
+  "show_notification": true
+}

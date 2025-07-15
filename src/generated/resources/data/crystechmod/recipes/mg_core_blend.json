@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:lg_core_blend"
+    },
+    {
+      "item": "crystechmod:red_tiberium_dust"
+    },
+    {
+      "item": "crystechmod:purple_tiberium_dust"
+    },
+    {
+      "item": "crystechmod:harmonium_dust"
+    },
+    {
+      "item": "crystechmod:flower_of_life"
+    }
+  ],
+  "result": {
+    "item": "crystechmod:mg_core_blend"
+  }
+}

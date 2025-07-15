@@ -7,6 +7,7 @@
       "item": "crystechmod:illyrim_ingot"
     }
   ],
+  "multiply": false,
   "output": {
     "item": "crystechmod:illyrim_blend"
   }

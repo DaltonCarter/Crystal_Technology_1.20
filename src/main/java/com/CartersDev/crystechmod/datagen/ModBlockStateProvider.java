@@ -30,13 +30,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
 
         blockWithItem(ModBlocks.TEST_BLOCK);
+        blockWithItem(ModBlocks.FOOLS_VITRICIUM);
 
         //Basic Block States:
         blockWithItem(ModBlocks.GUNDANIUM_BLOCK);
+        blockWithItem(ModBlocks.PROTO_STEEL_BLOCK);
         blockWithItem(ModBlocks.GUNDANIUM_MACHINE_CORE);
         blockWithItem(ModBlocks.ALYTHUM_MACHINE_CORE);
         blockWithItem(ModBlocks.VITRIC_MACHINE_CORE);
         blockWithItem(ModBlocks.CRYSTAL_CORE_MACHINE_CORE);
+
+        blockWithItem(ModBlocks.INERT_VITRIC_SOIL);
+        blockWithItem(ModBlocks.INERT_ICHOR_SOIL);
+
+        blockWithItem(ModBlocks.POLISHED_IRON_BLOCK);
+        blockWithItem(ModBlocks.IRON_PLATING);
+        blockWithItem(ModBlocks.RUSTY_IRON_PLATING);
+        blockWithItem(ModBlocks.VITRIC_IRON_PLATING);
 
         blockWithItem(ModBlocks.ALYTHUM_BLOCK);
         blockWithItem(ModBlocks.ILLYRIM_BLOCK);
@@ -535,6 +545,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
        paneBlockWithRenderType((StainedGlassPaneBlock) ModBlocks.YELLOW_TIBERGLASS_PANE.get(), modLoc("block/yellow_tiberglass"), modLoc("block/yellow_tiberglass_pane_top"),"translucent");
 
        //Stairs:
+       stairsBlock((StairBlock) ModBlocks.IRON_PLATING_STAIRS.get(), blockTexture(ModBlocks.IRON_PLATING.get()));
+       stairsBlock((StairBlock) ModBlocks.RUSTY_IRON_PLATING_STAIRS.get(), blockTexture(ModBlocks.RUSTY_IRON_PLATING.get()));
+       stairsBlock((StairBlock) ModBlocks.VITRIC_IRON_PLATING_STAIRS.get(), blockTexture(ModBlocks.VITRIC_IRON_PLATING.get()));
+       stairsBlock((StairBlock) ModBlocks.POLISHED_IRON_STAIRS.get(), blockTexture(ModBlocks.POLISHED_IRON_BLOCK.get()));
+
        stairsBlock((StairBlock) ModBlocks.PLAGUED_STAIRS.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
        stairsBlock((StairBlock) ModBlocks.EMBER_OAK_STAIRS.get(), blockTexture(ModBlocks.EMBER_OAK_PLANKS.get()));
        stairsBlock((StairBlock) ModBlocks.DEAD_STAIRS.get(), blockTexture(ModBlocks.DEAD_PLANKS.get()));
@@ -574,6 +589,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) ModBlocks.RED_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.RED_TIBERCRETE_BRICKS.get()));
         stairsBlock((StairBlock) ModBlocks.WHITE_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.WHITE_TIBERCRETE_BRICKS.get()));
         stairsBlock((StairBlock) ModBlocks.YELLOW_TIBERCRETE_BRICK_STAIRS.get(), blockTexture(ModBlocks.YELLOW_TIBERCRETE_BRICKS.get()));
+
+        stairsBlock((StairBlock) ModBlocks.PROTO_STEEL_STAIRS.get(), blockTexture(ModBlocks.PROTO_STEEL_BLOCK.get()));
 
         stairsBlock((StairBlock) ModBlocks.PLAGUED_ANDESITE_STAIRS.get(), blockTexture(ModBlocks.INFESTED_ANDESITE.get()));
         stairsBlock((StairBlock) ModBlocks.PLAGUED_STONE_STAIRS.get(), blockTexture(ModBlocks.INFESTED_STONE.get()));
@@ -651,6 +668,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) ModBlocks.CT_TILE_STAIRS_P_3.get(), blockTexture(ModBlocks.CT_TILE_P_3.get()));
 
         //Slabs:
+       slabBlock((SlabBlock) ModBlocks.IRON_PLATING_SLAB.get(), blockTexture(ModBlocks.IRON_PLATING.get()), blockTexture(ModBlocks.IRON_PLATING.get()));
+       slabBlock((SlabBlock) ModBlocks.RUSTY_IRON_PLATING_SLAB.get(), blockTexture(ModBlocks.RUSTY_IRON_PLATING.get()), blockTexture(ModBlocks.RUSTY_IRON_PLATING.get()));
+       slabBlock((SlabBlock) ModBlocks.VITRIC_IRON_PLATING_SLAB.get(), blockTexture(ModBlocks.VITRIC_IRON_PLATING.get()), blockTexture(ModBlocks.VITRIC_IRON_PLATING.get()));
+       slabBlock((SlabBlock) ModBlocks.POLISHED_IRON_SLAB.get(), blockTexture(ModBlocks.POLISHED_IRON_BLOCK.get()), blockTexture(ModBlocks.POLISHED_IRON_BLOCK.get()));
+
        slabBlock((SlabBlock) ModBlocks.PLAGUED_SLAB.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
        slabBlock((SlabBlock) ModBlocks.EMBER_OAK_SLAB.get(), blockTexture(ModBlocks.EMBER_OAK_PLANKS.get()), blockTexture(ModBlocks.EMBER_OAK_PLANKS.get()));
        slabBlock((SlabBlock) ModBlocks.DEAD_SLAB.get(), blockTexture(ModBlocks.DEAD_PLANKS.get()), blockTexture(ModBlocks.DEAD_PLANKS.get()));
@@ -767,6 +789,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_R_3.get(), blockTexture(ModBlocks.CT_TILE_R_3.get()), blockTexture(ModBlocks.CT_TILE_R_3.get()));
         slabBlock((SlabBlock) ModBlocks.CT_TILE_SLAB_P_3.get(), blockTexture(ModBlocks.CT_TILE_P_3.get()), blockTexture(ModBlocks.CT_TILE_P_3.get()));
 
+        slabBlock((SlabBlock) ModBlocks.PROTO_STEEL_SLAB.get(), blockTexture(ModBlocks.PROTO_STEEL_BLOCK.get()), blockTexture(ModBlocks.PROTO_STEEL_BLOCK.get()));
+
         //Buttons and Pressure Plates:
         buttonBlock((ButtonBlock) ModBlocks.PLAGUED_BUTTON.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
         pressurePlateBlock((PressurePlateBlock) ModBlocks.PLAGUED_PRESSURE_PLATE.get(), blockTexture(ModBlocks.PLAGUED_PLANKS.get()));
@@ -803,7 +827,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType((((DoorBlock) ModBlocks.MARIKA_OAK_DOOR.get())), modLoc("block/marika_oak_door_bottom"), modLoc("block/marika_oak_door_top"), "cutout");
         trapdoorBlockWithRenderType((((TrapDoorBlock) ModBlocks.MARIKA_OAK_TRAPDOOR.get())), modLoc("block/marika_oak_trapdoor"), true, "cutout");
 
+        doorBlockWithRenderType((((DoorBlock) ModBlocks.IRON_PLATING_DOOR.get())), modLoc("block/iron_plating_door_bottom"), modLoc("block/iron_plating_door_top"), "cutout");
+        trapdoorBlockWithRenderType((((TrapDoorBlock) ModBlocks.IRON_PLATING_TRAPDOOR.get())), modLoc("block/iron_plating_trapdoor"), true, "cutout");
+
         //Walls:
+        wallBlock((((WallBlock) ModBlocks.IRON_PLATING_WALL.get())), blockTexture(( ModBlocks.IRON_PLATING.get())));
+        wallBlock((((WallBlock) ModBlocks.RUSTY_IRON_PLATING_WALL.get())), blockTexture(( ModBlocks.RUSTY_IRON_PLATING.get())));
+        wallBlock((((WallBlock) ModBlocks.VITRIC_IRON_PLATING_WALL.get())), blockTexture(( ModBlocks.VITRIC_IRON_PLATING.get())));
+        wallBlock((((WallBlock) ModBlocks.POLISHED_IRON_WALL.get())), blockTexture(( ModBlocks.POLISHED_IRON_BLOCK.get())));
+
         wallBlock((((WallBlock) ModBlocks.FIRESTONE_WALL.get())), blockTexture(( ModBlocks.FIRESTONE_BLOCK.get())));
         wallBlock((((WallBlock) ModBlocks.INFESTED_COBBLE_WALL.get())), blockTexture(( ModBlocks.INFESTED_COBBLE.get())));
         wallBlock((((WallBlock) ModBlocks.INFESTED_STONE_BRICK_WALL.get())), blockTexture(( ModBlocks.INFESTED_STONE_BRICKS.get())));
@@ -908,6 +940,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_B_3.get())), blockTexture(( ModBlocks.CT_TILE_B_3.get())));
         wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_R_3.get())), blockTexture(( ModBlocks.CT_TILE_R_3.get())));
         wallBlock((((WallBlock) ModBlocks.CT_TILE_WALL_P_3.get())), blockTexture(( ModBlocks.CT_TILE_P_3.get())));
+
+        wallBlock((((WallBlock) ModBlocks.PROTO_STEEL_WALL.get())), blockTexture(( ModBlocks.PROTO_STEEL_BLOCK.get())));
 
 
         //Crops and Plants:

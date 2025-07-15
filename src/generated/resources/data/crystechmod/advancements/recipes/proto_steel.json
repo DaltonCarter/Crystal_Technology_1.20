@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_liquid_protoculture_bucket": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:liquid_protoculture_bucket"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:proto_steel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_liquid_protoculture_bucket",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:proto_steel"
+    ]
+  },
+  "sends_telemetry_event": true
+}

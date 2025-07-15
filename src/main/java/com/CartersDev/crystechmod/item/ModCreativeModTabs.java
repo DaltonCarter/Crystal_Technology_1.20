@@ -26,6 +26,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
 //                    output.accept(ModBlocks.DOOR_CON.get());
 
 
+                    output.accept(ModBlocks.FOOLS_VITRICIUM.get());
                     output.accept(ModBlocks.BLOSSOM_SPOUT.get());
                     output.accept(ModBlocks.BLOSSOM_CENTER.get());
                     output.accept(ModBlocks.BLOSSOM_BASE.get());
@@ -38,10 +39,15 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
 
                     output.accept(ModItems.YOKARAN_BLOOM_POWDER.get());
                     output.accept(ModItems.DEVILS_BLOOD_POWDER.get());
+
                     output.accept(ModItems.TIBERIUM_WATER_BUCKET.get());
 
                     output.accept(ModItems.TIBERIUM_LEATHER.get());
                     output.accept(ModItems.ICHOR_LEATHER.get());
+
+                    output.accept(ModItems.LIQUID_PROTOCULTURE_BUCKET.get());
+                    output.accept(ModItems.PROTO_STEEL.get());
+
 
                     output.accept(ModItems.FIRESTONE.get());
                     output.accept(ModBlocks.FIRESTONE_BLOCK.get());
@@ -228,6 +234,21 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.VITRIC_TIBERIUM_INFUSER.get());
                         output.accept(ModBlocks.CRYSTAL_CORE_TIBERIUM_INFUSER.get());
 
+                        output.accept(ModBlocks.POWERED_KILN.get());
+                        output.accept(ModBlocks.ALYTHUM_KILN.get());
+                        output.accept(ModBlocks.VITRIC_KILN.get());
+                        output.accept(ModBlocks.CRYSTAL_CORE_KILN.get());
+
+                        output.accept(ModBlocks.ALLOY_KILN.get());
+                        output.accept(ModBlocks.ALYTHUM_ALLOY_KILN.get());
+                        output.accept(ModBlocks.VITRIC_ALLOY_KILN.get());
+                        output.accept(ModBlocks.CRYSTAL_CORE_ALLOY_KILN.get());
+
+                        output.accept(ModBlocks.VITRICIUM_REFINERY.get());
+                        output.accept(ModBlocks.ALYTHUM_VITRICIUM_REFINERY.get());
+                        output.accept(ModBlocks.VITRIC_VITRICIUM_REFINERY.get());
+                        output.accept(ModBlocks.CRYSTAL_CORE_VITRICIUM_REFINERY.get());
+
                     })
                     .build());
 
@@ -360,6 +381,8 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
 
                         output.accept(ModBlocks.TIBERIUM_SOIL.get());
                         output.accept(ModBlocks.ICHOR_SOIL.get());
+                        output.accept(ModBlocks.INERT_VITRIC_SOIL.get());
+                        output.accept(ModBlocks.INERT_ICHOR_SOIL.get());
                         output.accept(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get());
                         output.accept(ModBlocks.RED_ZONE_DIRT.get());
                         output.accept(ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get());
@@ -561,6 +584,33 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.INFESTED_STONE_BRICKS.get()))
                     .title(Component.translatable("creativetab.crystal_technology_building_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+
+                        output.accept(ModBlocks.IRON_PLATING.get());
+                        output.accept(ModBlocks.IRON_PLATING_STAIRS.get());
+                        output.accept(ModBlocks.IRON_PLATING_SLAB.get());
+                        output.accept(ModBlocks.IRON_PLATING_WALL.get());
+                        output.accept(ModBlocks.IRON_PLATING_DOOR.get());
+                        output.accept(ModBlocks.IRON_PLATING_TRAPDOOR.get());
+
+                        output.accept(ModBlocks.RUSTY_IRON_PLATING.get());
+                        output.accept(ModBlocks.RUSTY_IRON_PLATING_STAIRS.get());
+                        output.accept(ModBlocks.RUSTY_IRON_PLATING_SLAB.get());
+                        output.accept(ModBlocks.RUSTY_IRON_PLATING_WALL.get());
+
+                        output.accept(ModBlocks.VITRIC_IRON_PLATING.get());
+                        output.accept(ModBlocks.VITRIC_IRON_PLATING_STAIRS.get());
+                        output.accept(ModBlocks.VITRIC_IRON_PLATING_SLAB.get());
+                        output.accept(ModBlocks.VITRIC_IRON_PLATING_WALL.get());
+
+                        output.accept(ModBlocks.POLISHED_IRON_BLOCK.get());
+                        output.accept(ModBlocks.POLISHED_IRON_STAIRS.get());
+                        output.accept(ModBlocks.POLISHED_IRON_SLAB.get());
+                        output.accept(ModBlocks.POLISHED_IRON_WALL.get());
+
+                        output.accept(ModBlocks.PROTO_STEEL_BLOCK.get());
+                        output.accept(ModBlocks.PROTO_STEEL_STAIRS.get());
+                        output.accept(ModBlocks.PROTO_STEEL_SLAB.get());
+                        output.accept(ModBlocks.PROTO_STEEL_WALL.get());
 
                         output.accept(ModBlocks.CRYSTAL_CORE_LAMP_G.get());
                         output.accept(ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get());

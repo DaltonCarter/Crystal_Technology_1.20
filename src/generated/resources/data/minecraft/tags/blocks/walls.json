@@ -2,6 +2,11 @@
   "values": [
     "crystechmod:firestone_wall",
     "crystechmod:infested_stone_brick_wall",
+    "crystechmod:proto_steel_wall",
+    "crystechmod:iron_plating_wall",
+    "crystechmod:rusty_iron_plating_wall",
+    "crystechmod:vitric_iron_plating_wall",
+    "crystechmod:polished_iron_wall",
     "crystechmod:vitric_deepslate_tile_wall",
     "crystechmod:vitric_deepslate_brick_wall",
     "crystechmod:infested_cobble_wall",

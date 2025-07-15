@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,machine_core_lvl=2,working=false": {
+      "model": "crystechmod:block/alythum_vitricium_refinery",
+      "y": 90
+    },
+    "facing=east,machine_core_lvl=2,working=true": {
+      "model": "crystechmod:block/alythum_vitricium_refinery_on",
+      "y": 90
+    },
+    "facing=north,machine_core_lvl=2,working=false": {
+      "model": "crystechmod:block/alythum_vitricium_refinery"
+    },
+    "facing=north,machine_core_lvl=2,working=true": {
+      "model": "crystechmod:block/alythum_vitricium_refinery_on"
+    },
+    "facing=south,machine_core_lvl=2,working=false": {
+      "model": "crystechmod:block/alythum_vitricium_refinery",
+      "y": 180
+    },
+    "facing=south,machine_core_lvl=2,working=true": {
+      "model": "crystechmod:block/alythum_vitricium_refinery_on",
+      "y": 180
+    },
+    "facing=west,machine_core_lvl=2,working=false": {
+      "model": "crystechmod:block/alythum_vitricium_refinery",
+      "y": 270
+    },
+    "facing=west,machine_core_lvl=2,working=true": {
+      "model": "crystechmod:block/alythum_vitricium_refinery_on",
+      "y": 270
+    }
+  }
+}

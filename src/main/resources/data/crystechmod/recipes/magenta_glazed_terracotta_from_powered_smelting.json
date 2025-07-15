@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:powered_smelting",
+  "craftTime": 150,
+  "energyAmount": 10,
+  "ingredients": [
+    {
+      "item": "minecraft:magenta_terracotta"
+    }
+  ],
+  "output": {
+    "item": "minecraft:magenta_glazed_terracotta"
+  }
+}

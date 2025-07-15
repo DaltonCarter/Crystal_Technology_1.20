@@ -1,0 +1,19 @@
+{
+  "values": [
+    "crystechmod:alythum_ingot",
+    "crystechmod:illyrim_ingot",
+    "crystechmod:lg_core_ingot",
+    "crystechmod:mg_core_ingot",
+    "crystechmod:proto_steel",
+    "crystechmod:tiberium_composite_ingot",
+    "crystechmod:ichor_composite_ingot",
+    "crystechmod:aeries_crystal",
+    "crystechmod:qualrim_compound",
+    "crystechmod:enigma_crystal",
+    "minecraft:iron_ingot",
+    "minecraft:copper_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:netherite_ingot",
+    "#forge:ingots"
+  ]
+}

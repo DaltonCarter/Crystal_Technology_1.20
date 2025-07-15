@@ -1,5 +1,14 @@
 {
   "values": [
+    "crystechmod:gundanium_ore",
+    "crystechmod:deepslate_gundanium_ore",
+    "crystechmod:deepslate_alythum_ore",
+    "crystechmod:alythum_ore",
+    "crystechmod:nether_alythum_ore",
+    "crystechmod:harmonium_ore",
+    "crystechmod:deepslate_harmonium_ore",
+    "crystechmod:nether_harmonium_ore",
+    "crystechmod:end_harmonium_ore",
     "#crystechmod:gundanium_ores",
     "#crystechmod:alythum_ores",
     "#crystechmod:enigma_ores",

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:alythum_ingot"
+    },
+    "C": {
+      "item": "crystechmod:kryonic_capacitor"
+    },
+    "I": {
+      "item": "crystechmod:powered_kiln"
+    },
+    "K": {
+      "item": "crystechmod:illuminate_component"
+    },
+    "M": {
+      "item": "crystechmod:alythum_machine_core"
+    },
+    "R": {
+      "item": "crystechmod:harmonic_relay"
+    }
+  },
+  "pattern": [
+    "AIA",
+    "KMK",
+    "CRC"
+  ],
+  "result": {
+    "item": "crystechmod:alythum_kiln"
+  },
+  "show_notification": true
+}

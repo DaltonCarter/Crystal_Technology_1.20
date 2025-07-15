@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "crystechmod:mg_core_ingot"
+    },
+    "S": {
+      "item": "crystechmod:tiberium_soil"
+    }
+  },
+  "pattern": [
+    "ISI",
+    "SSS",
+    "ISI"
+  ],
+  "result": {
+    "count": 5,
+    "item": "crystechmod:inert_vitric_soil"
+  },
+  "show_notification": true
+}

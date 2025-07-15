@@ -1,0 +1,15 @@
+{
+  "type": "crystechmod:vitric_refining",
+  "craftTime": 200,
+  "energyAmount": 50,
+  "fluidAmount": 250,
+  "fluidType": "minecraft:lava",
+  "ingredients": [
+    {
+      "item": "crystechmod:flower_of_life"
+    }
+  ],
+  "output": {},
+  "outputFluidAmount": 250,
+  "outputFluidType": "crystechmod:liquid_protoculture_source"
+}
