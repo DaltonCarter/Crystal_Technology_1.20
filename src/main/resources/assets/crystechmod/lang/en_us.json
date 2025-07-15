@@ -314,6 +314,10 @@
   "block.crystechmod.plagued_pressure_plate": "Plagued Pressure Plate",
   "block.crystechmod.plagued_door": "Plagued Door",
   "block.crystechmod.plagued_trapdoor": "Plagued Trapdoor",
+
+  "block.crystechmod.iron_plating_door": "Iron Plated Door",
+  "block.crystechmod.iron_plating_trapdoor": "Iron Plated Trapdoor",
+
   "block.crystechmod.ember_oak_planks": "Ember Oak Planks",
   "block.crystechmod.ember_oak_fence": "Ember Oak Fence",
   "block.crystechmod.ember_oak_fence_gate": "Ember Oak Fence Gate",

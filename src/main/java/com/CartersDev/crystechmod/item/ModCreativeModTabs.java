@@ -589,6 +589,8 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.IRON_PLATING_STAIRS.get());
                         output.accept(ModBlocks.IRON_PLATING_SLAB.get());
                         output.accept(ModBlocks.IRON_PLATING_WALL.get());
+                        output.accept(ModBlocks.IRON_PLATING_DOOR.get());
+                        output.accept(ModBlocks.IRON_PLATING_TRAPDOOR.get());
 
                         output.accept(ModBlocks.RUSTY_IRON_PLATING.get());
                         output.accept(ModBlocks.RUSTY_IRON_PLATING_STAIRS.get());

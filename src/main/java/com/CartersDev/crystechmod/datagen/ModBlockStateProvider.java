@@ -827,6 +827,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType((((DoorBlock) ModBlocks.MARIKA_OAK_DOOR.get())), modLoc("block/marika_oak_door_bottom"), modLoc("block/marika_oak_door_top"), "cutout");
         trapdoorBlockWithRenderType((((TrapDoorBlock) ModBlocks.MARIKA_OAK_TRAPDOOR.get())), modLoc("block/marika_oak_trapdoor"), true, "cutout");
 
+        doorBlockWithRenderType((((DoorBlock) ModBlocks.IRON_PLATING_DOOR.get())), modLoc("block/iron_plating_door_bottom"), modLoc("block/iron_plating_door_top"), "cutout");
+        trapdoorBlockWithRenderType((((TrapDoorBlock) ModBlocks.IRON_PLATING_TRAPDOOR.get())), modLoc("block/iron_plating_trapdoor"), true, "cutout");
+
         //Walls:
         wallBlock((((WallBlock) ModBlocks.IRON_PLATING_WALL.get())), blockTexture(( ModBlocks.IRON_PLATING.get())));
         wallBlock((((WallBlock) ModBlocks.RUSTY_IRON_PLATING_WALL.get())), blockTexture(( ModBlocks.RUSTY_IRON_PLATING.get())));

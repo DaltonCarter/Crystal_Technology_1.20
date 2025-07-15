@@ -131,6 +131,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.TIBERIUM_BLOCK.get(),
                         ModBlocks.SOUND_BLOCK.get(),
+                        ModBlocks.IRON_PLATING_DOOR.get(),
+                        ModBlocks.IRON_PLATING_TRAPDOOR.get(),
                         ModBlocks.FOOLS_VITRICIUM.get(),
                         ModBlocks.IRON_PLATING_WALL.get(),
                         ModBlocks.IRON_PLATING_SLAB.get(),
@@ -1110,6 +1112,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.GUNDANIUM_ORE.get(),
+                        ModBlocks.IRON_PLATING_DOOR.get(),
+                        ModBlocks.IRON_PLATING_TRAPDOOR.get(),
                         ModBlocks.POLISHED_IRON_BLOCK.get(),
                         ModBlocks.IRON_PLATING.get(),
                         ModBlocks.RUSTY_IRON_PLATING.get(),
@@ -2006,6 +2010,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.PLAGUED_DOOR.get(),
                         ModBlocks.EMBER_OAK_DOOR.get(),
                         ModBlocks.DEAD_DOOR.get(),
+                        ModBlocks.IRON_PLATING_DOOR.get(),
                         ModBlocks.MARIKA_OAK_DOOR.get()
                 );
 
@@ -2013,6 +2018,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.PLAGUED_TRAPDOOR.get(),
                         ModBlocks.EMBER_OAK_TRAPDOOR.get(),
                         ModBlocks.DEAD_TRAPDOOR.get(),
+                        ModBlocks.IRON_PLATING_TRAPDOOR.get(),
                         ModBlocks.MARIKA_OAK_TRAPDOOR.get()
                 );
 

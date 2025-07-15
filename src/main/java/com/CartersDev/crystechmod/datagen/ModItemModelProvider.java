@@ -198,6 +198,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.EMBER_OAK_DOOR);
         simpleBlockItem(ModBlocks.DEAD_DOOR);
         simpleBlockItem(ModBlocks.MARIKA_OAK_DOOR);
+        simpleBlockItem(ModBlocks.IRON_PLATING_DOOR);
 
         evenSimplerBlockItem(ModBlocks.PLAGUED_STAIRS);
         evenSimplerBlockItem(ModBlocks.EMBER_OAK_STAIRS);
@@ -448,6 +449,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         trapdoorItem((ModBlocks.EMBER_OAK_TRAPDOOR));
         trapdoorItem((ModBlocks.DEAD_TRAPDOOR));
         trapdoorItem((ModBlocks.MARIKA_OAK_TRAPDOOR));
+        trapdoorItem((ModBlocks.IRON_PLATING_TRAPDOOR));
 
         //Walls:
         wallItem((ModBlocks.FIRESTONE_WALL), ModBlocks.FIRESTONE_BLOCK);

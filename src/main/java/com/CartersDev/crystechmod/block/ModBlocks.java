@@ -2419,6 +2419,14 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR).noOcclusion(),
                     BlockSetType.OAK));
 
+    public static final RegistryObject<Block> IRON_PLATING_DOOR = registerBlock("iron_plating_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).noOcclusion(),
+                    BlockSetType.OAK));
+
+    public static final RegistryObject<Block> IRON_PLATING_TRAPDOOR = registerBlock("iron_plating_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR).noOcclusion(),
+                    BlockSetType.OAK));
+
     public static final RegistryObject<Block> EMBER_OAK_LOG = registerBlock("ember_oak_log",
             () -> new EmberLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
 

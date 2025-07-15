@@ -2,6 +2,8 @@
   "values": [
     "crystechmod:tiberium_block",
     "crystechmod:sound_block",
+    "crystechmod:iron_plating_door",
+    "crystechmod:iron_plating_trapdoor",
     "crystechmod:fools_vitricium",
     "crystechmod:iron_plating_wall",
     "crystechmod:iron_plating_slab",

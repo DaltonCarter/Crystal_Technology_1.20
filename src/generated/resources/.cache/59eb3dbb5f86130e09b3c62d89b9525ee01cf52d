@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-14T22:37:59.3209734	Loot Tables
+// 1.20.1	2025-07-14T23:51:11.6864272	Loot Tables
 03c6f95925fa38635ca3601903e1d452029caabd data/crystechmod/loot_tables/blocks/aboreus_crystal.json
 d0beb68b81b414280026c89df98ac8685d552502 data/crystechmod/loot_tables/blocks/aboreus_crystal_slab.json
 119389378ebef86e266227fdae475e18f84de5e1 data/crystechmod/loot_tables/blocks/aboreus_crystal_stairs.json
@@ -521,8 +521,10 @@ a3e7b1a01bd2d69e563ca62fe90a215f4c7063e1 data/crystechmod/loot_tables/blocks/inv
 bc1b7a5fd5883137db2737f6250862cd8132bc2f data/crystechmod/loot_tables/blocks/inverted_white_crystal_core_light.json
 736f781a1b08015936a7692065b348398809afad data/crystechmod/loot_tables/blocks/inverted_white_vert_crystal_core_light.json
 e340fd01dc41c47be8455ad47dae5d7275c18fd1 data/crystechmod/loot_tables/blocks/iron_plating.json
+d182346952ef954900db2aa9bb4cd2aaaec5e9f1 data/crystechmod/loot_tables/blocks/iron_plating_door.json
 905ea5d4864700a67ae88cf25cb7205b0f522a9e data/crystechmod/loot_tables/blocks/iron_plating_slab.json
 48a6c2f18ccba2e6df997128a50f621c2e5127a3 data/crystechmod/loot_tables/blocks/iron_plating_stairs.json
+96b083f65f4a1d8e6c9d5db1bca42b110e9455d4 data/crystechmod/loot_tables/blocks/iron_plating_trapdoor.json
 40975ae0384f422a56fa7107362b240911805492 data/crystechmod/loot_tables/blocks/iron_plating_wall.json
 a6fd9f111cfb89e66a70fef45533f93b2ff7d297 data/crystechmod/loot_tables/blocks/kryon_block.json
 665dad6f29f9bffd21f3c14aecc8960d5670bec9 data/crystechmod/loot_tables/blocks/kryon_ore.json

@@ -771,6 +771,23 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModBlocks.PLAGUED_PLANKS.get()), has(ModBlocks.PLAGUED_PLANKS.get()))
                 .save(consumer);
 
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.IRON_PLATING_TRAPDOOR.get(), 2)
+                .pattern("   ")
+                .pattern("PPP")
+                .pattern("PPP")
+                .define('P', ModBlocks.IRON_PLATING.get())
+                .unlockedBy(getHasName(ModBlocks.IRON_PLATING.get()), has(ModBlocks.IRON_PLATING.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.IRON_PLATING_DOOR.get(), 3)
+                .pattern(" PP")
+                .pattern(" PP")
+                .pattern(" PP")
+                .define('P', ModBlocks.IRON_PLATING.get())
+                .unlockedBy(getHasName(ModBlocks.IRON_PLATING.get()), has(ModBlocks.IRON_PLATING.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PLAGUED_FENCE.get(), 3)
                 .pattern("   ")
                 .pattern("PSP")

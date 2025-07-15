@@ -438,6 +438,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PLAGUED_BUTTON.get());
         this.dropSelf(ModBlocks.PLAGUED_PRESSURE_PLATE.get());
         this.dropSelf(ModBlocks.PLAGUED_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.IRON_PLATING_TRAPDOOR.get());
         this.dropSelf(ModBlocks.PLAGUED_FENCE_GATE.get());
 
         this.dropSelf(ModBlocks.FIRESTONE_WALL.get());
@@ -1081,6 +1082,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.MARIKA_OAK_DOOR.get(),
                 block -> createDoorTable(ModBlocks.MARIKA_OAK_DOOR.get()));
+
+        this.add(ModBlocks.IRON_PLATING_DOOR.get(),
+                block -> createDoorTable(ModBlocks.IRON_PLATING_DOOR.get()));
 
 
         //Signs:

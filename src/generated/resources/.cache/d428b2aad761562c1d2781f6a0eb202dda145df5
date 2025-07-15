@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-14T22:37:59.337908	Item Models: crystechmod
+// 1.20.1	2025-07-14T23:51:11.7017778	Item Models: crystechmod
 7d9fe5e88433390f9cd29dab7e515bddd3fbdf4b assets/crystechmod/models/item/aboreus_crystal_slab.json
 0e376de85f99a387d23f7130ff296ce0b5fe876e assets/crystechmod/models/item/aboreus_crystal_stairs.json
 2ced509a911b88c37b68b1a1278f10fc986798c4 assets/crystechmod/models/item/aboreus_crystal_wall.json
@@ -516,8 +516,10 @@ c5a9047f2099bae1fc73a4273057cbcf7868bf1d assets/crystechmod/models/item/infested
 5b83726ac7d04ffb04477c3b2900639d84a603f1 assets/crystechmod/models/item/infested_stone_brick_stairs.json
 1cdc60078b27ffe0598ea07c528d144585da59c6 assets/crystechmod/models/item/infested_stone_brick_wall.json
 a5085d74ed29b673acd3ae4869c9b0f352666bf1 assets/crystechmod/models/item/iron_dust.json
+35c08852e9918f8510c8d8133aaabfa3cd24dca1 assets/crystechmod/models/item/iron_plating_door.json
 63eb1c5d09df259b08697452dc898a339e669f40 assets/crystechmod/models/item/iron_plating_slab.json
 e1a006ab754dbef34e44dd309cec0a5abb826101 assets/crystechmod/models/item/iron_plating_stairs.json
+b696b712a3ccc7cdaaa08adcf742ad4803ed5c66 assets/crystechmod/models/item/iron_plating_trapdoor.json
 4a4dd58596bf7eaee33859e0d45066be238ff85c assets/crystechmod/models/item/iron_plating_wall.json
 6638f2580f169b7e368ddad4ed9a60a437cf2125 assets/crystechmod/models/item/kryonic_capacitor.json
 1c1b67450a65b8aada4ce68f2b3ed2f9ef0170e7 assets/crystechmod/models/item/kryonic_reservoir.json
