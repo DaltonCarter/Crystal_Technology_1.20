@@ -253,10 +253,33 @@
   "block.crystechmod.enigma_block": "Enigma Block",
   "block.crystechmod.kryon_block": "Kryon Block",
   "block.crystechmod.gundanium_block": "Gundanium Block",
+
   "block.crystechmod.proto_steel_block": "Proto-Steel Block",
   "block.crystechmod.proto_steel_stairs": "Proto-Steel Stairs",
   "block.crystechmod.proto_steel_slab": "Proto-Steel Slab",
   "block.crystechmod.proto_steel_wall": "Proto-Steel Wall",
+
+  "block.crystechmod.iron_plating": "Iron Plating",
+  "block.crystechmod.iron_plating_stairs": "Iron Plating Stairs",
+  "block.crystechmod.iron_plating_slab": "Iron Plating Slab",
+  "block.crystechmod.iron_plating_wall": "Iron Plating Wall",
+
+  "block.crystechmod.rusty_iron_plating": "Rusty Iron Plating",
+  "block.crystechmod.rusty_iron_plating_stairs": "Rusty Iron Plating Stairs",
+  "block.crystechmod.rusty_iron_plating_slab": "Rusty Iron Plating Slab",
+  "block.crystechmod.rusty_iron_plating_wall": "Rusty Iron Plating Wall",
+
+  "block.crystechmod.vitric_iron_plating": "Vitric Iron Plating",
+  "block.crystechmod.vitric_iron_plating_stairs": "Vitric Iron Plating Stairs",
+  "block.crystechmod.vitric_iron_plating_slab": "Vitric Iron Plating Slab",
+  "block.crystechmod.vitric_iron_plating_wall": "Vitric Iron Plating Wall",
+
+  "block.crystechmod.polished_iron_block": "Polished Iron Block",
+  "block.crystechmod.polished_iron_stairs": "Polished Iron Stairs",
+  "block.crystechmod.polished_iron_slab": "Polished Iron Slab",
+  "block.crystechmod.polished_iron_wall": "Polished Iron Wall",
+
+  
   "block.crystechmod.alythum_block": "Alythum Block",
   "block.crystechmod.illyrim_block": "Illyrim Block",
   "block.crystechmod.lg_core_block": "MK.1 Core Steel Block",

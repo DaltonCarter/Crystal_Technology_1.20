@@ -585,6 +585,26 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     .title(Component.translatable("creativetab.crystal_technology_building_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
+                        output.accept(ModBlocks.IRON_PLATING.get());
+                        output.accept(ModBlocks.IRON_PLATING_STAIRS.get());
+                        output.accept(ModBlocks.IRON_PLATING_SLAB.get());
+                        output.accept(ModBlocks.IRON_PLATING_WALL.get());
+
+                        output.accept(ModBlocks.RUSTY_IRON_PLATING.get());
+                        output.accept(ModBlocks.RUSTY_IRON_PLATING_STAIRS.get());
+                        output.accept(ModBlocks.RUSTY_IRON_PLATING_SLAB.get());
+                        output.accept(ModBlocks.RUSTY_IRON_PLATING_WALL.get());
+
+                        output.accept(ModBlocks.VITRIC_IRON_PLATING.get());
+                        output.accept(ModBlocks.VITRIC_IRON_PLATING_STAIRS.get());
+                        output.accept(ModBlocks.VITRIC_IRON_PLATING_SLAB.get());
+                        output.accept(ModBlocks.VITRIC_IRON_PLATING_WALL.get());
+
+                        output.accept(ModBlocks.POLISHED_IRON_BLOCK.get());
+                        output.accept(ModBlocks.POLISHED_IRON_STAIRS.get());
+                        output.accept(ModBlocks.POLISHED_IRON_SLAB.get());
+                        output.accept(ModBlocks.POLISHED_IRON_WALL.get());
+
                         output.accept(ModBlocks.PROTO_STEEL_BLOCK.get());
                         output.accept(ModBlocks.PROTO_STEEL_STAIRS.get());
                         output.accept(ModBlocks.PROTO_STEEL_SLAB.get());

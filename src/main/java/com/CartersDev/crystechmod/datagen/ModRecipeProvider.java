@@ -2846,7 +2846,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("FRB")
                 .define('R', ModItems.HARMONIC_RELAY.get())
                 .define('F', ModBlocks.POWERED_KILN.get())
-                .define('B', ModBlocks.ALLOY_KILN.get())
+                .define('B', Blocks.CAULDRON)
                 .define('M', ModBlocks.GUNDANIUM_MACHINE_CORE.get())
                 .define('H', ModItems.HARMONIUM_INGOT.get())
                 .define('I', Items.LAVA_BUCKET)
@@ -3831,6 +3831,105 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .save(consumer);
 
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.IRON_PLATING_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.IRON_PLATING.get())
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.IRON_PLATING_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.IRON_PLATING.get())
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.IRON_PLATING_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.IRON_PLATING.get())
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUSTY_IRON_PLATING_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.RUSTY_IRON_PLATING.get())
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUSTY_IRON_PLATING_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.RUSTY_IRON_PLATING.get())
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUSTY_IRON_PLATING_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.RUSTY_IRON_PLATING.get())
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VITRIC_IRON_PLATING_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.VITRIC_IRON_PLATING.get())
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VITRIC_IRON_PLATING_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.VITRIC_IRON_PLATING.get())
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VITRIC_IRON_PLATING_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.VITRIC_IRON_PLATING.get())
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.POLISHED_IRON_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("CCC")
+                .define('C', ModBlocks.POLISHED_IRON_BLOCK.get())
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.POLISHED_IRON_STAIRS.get(), 4)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.POLISHED_IRON_BLOCK.get())
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.POLISHED_IRON_WALL.get(), 6)
+                .pattern("   ")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModBlocks.POLISHED_IRON_BLOCK.get())
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
         //Shapeless Crafting:
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIBERIUM.get(), 9)
                 .requires(ModBlocks.TIBERIUM_BLOCK.get())
@@ -4246,6 +4345,8 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .requires(ModBlocks.FLOWER_OF_LIFE.get())
                 .unlockedBy(getHasName(ModItems.ILLYRIM_BLEND.get()), has(ModItems.ILLYRIM_BLEND.get()))
                 .save(consumer);
+
+
 
 
 

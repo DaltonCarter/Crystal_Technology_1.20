@@ -32,6 +32,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         //Self Drops:
         this.dropSelf(ModBlocks.TEST_BLOCK.get());
+        this.dropSelf(ModBlocks.FOOLS_VITRICIUM.get());
+        this.dropSelf(ModBlocks.VITRIC_IRON_PLATING.get());
+        this.dropSelf(ModBlocks.VITRIC_IRON_PLATING_WALL.get());
+        this.dropSelf(ModBlocks.VITRIC_IRON_PLATING_STAIRS.get());
+        this.dropSelf(ModBlocks.IRON_PLATING.get());
+        this.dropSelf(ModBlocks.IRON_PLATING_WALL.get());
+        this.dropSelf(ModBlocks.IRON_PLATING_STAIRS.get());
+        this.dropSelf(ModBlocks.RUSTY_IRON_PLATING.get());
+        this.dropSelf(ModBlocks.RUSTY_IRON_PLATING_WALL.get());
+        this.dropSelf(ModBlocks.RUSTY_IRON_PLATING_STAIRS.get());
+        this.dropSelf(ModBlocks.POLISHED_IRON_BLOCK.get());
+        this.dropSelf(ModBlocks.POLISHED_IRON_STAIRS.get());
+        this.dropSelf(ModBlocks.POLISHED_IRON_WALL.get());
 
         this.dropSelf(ModBlocks.INERT_VITRIC_SOIL.get());
         this.dropSelf(ModBlocks.INERT_ICHOR_SOIL.get());
@@ -772,6 +785,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.PROTO_STEEL_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.PROTO_STEEL_SLAB.get()));
+
+        this.add(ModBlocks.IRON_PLATING_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.IRON_PLATING_SLAB.get()));
+
+        this.add(ModBlocks.RUSTY_IRON_PLATING_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.RUSTY_IRON_PLATING_SLAB.get()));
+
+        this.add(ModBlocks.VITRIC_IRON_PLATING_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.VITRIC_IRON_PLATING_SLAB.get()));
+
+        this.add(ModBlocks.POLISHED_IRON_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.POLISHED_IRON_SLAB.get()));
 
         this.add(ModBlocks.VITRIC_DEEPSLATE_BRICK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.VITRIC_DEEPSLATE_BRICK_SLAB.get()));

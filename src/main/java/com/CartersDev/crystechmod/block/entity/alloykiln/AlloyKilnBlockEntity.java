@@ -24,6 +24,7 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -35,7 +36,10 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Optional;
 
@@ -70,6 +74,7 @@ you'd call this once for each ingredient! In theory that should be it
 
 public class AlloyKilnBlockEntity extends BlockEntity implements MenuProvider {
 
+    private static final Logger log = LoggerFactory.getLogger(AlloyKilnBlockEntity.class);
     ItemStackHandler itemHandler = new ItemStackHandler(5) {
         @Override
         protected void onContentsChanged(int slot) {
@@ -307,6 +312,8 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
         Optional<AlloyKilnRecipe> recipe = getCurrentRecipe();
 
         ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
+
+        ;
 
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
         this.itemHandler.extractItem(INPUT_SLOT_2, 1, false);

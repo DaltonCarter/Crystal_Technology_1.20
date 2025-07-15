@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "crystechmod:iron_plating"
+    }
+  },
+  "pattern": [
+    "   ",
+    "   ",
+    "CCC"
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:iron_plating_slab"
+  },
+  "show_notification": true
+}

@@ -19,6 +19,6 @@ public class ModPoiTypeTagsProvider extends PoiTypeTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         tag(PoiTypeTags.ACQUIRABLE_JOB_SITE)
-                .addOptional(new ResourceLocation(CrystalTech.MOD_ID, "tiberium_poi"));
+                .addOptional(new ResourceLocation(CrystalTech.MOD_ID, "vitric_poi"));
     }
 }

@@ -80,6 +80,10 @@ public class AlloyKilnRecipe implements Recipe<SimpleContainer> {
         return AlloyKilnRecipe.Serializer.INSTANCE;
     }
 
+    public NonNullList<Ingredient> getInputItems() {
+        return inputItems;
+    }
+
     @Override
     public RecipeType<?> getType() {
         return Type.INSTANCE;

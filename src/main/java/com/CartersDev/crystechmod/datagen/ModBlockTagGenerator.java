@@ -131,6 +131,23 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.TIBERIUM_BLOCK.get(),
                         ModBlocks.SOUND_BLOCK.get(),
+                        ModBlocks.FOOLS_VITRICIUM.get(),
+                        ModBlocks.IRON_PLATING_WALL.get(),
+                        ModBlocks.IRON_PLATING_SLAB.get(),
+                        ModBlocks.IRON_PLATING_STAIRS.get(),
+                        ModBlocks.RUSTY_IRON_PLATING_WALL.get(),
+                        ModBlocks.RUSTY_IRON_PLATING_SLAB.get(),
+                        ModBlocks.RUSTY_IRON_PLATING_STAIRS.get(),
+                        ModBlocks.VITRIC_IRON_PLATING_WALL.get(),
+                        ModBlocks.VITRIC_IRON_PLATING_SLAB.get(),
+                        ModBlocks.VITRIC_IRON_PLATING_STAIRS.get(),
+                        ModBlocks.POLISHED_IRON_WALL.get(),
+                        ModBlocks.POLISHED_IRON_SLAB.get(),
+                        ModBlocks.POLISHED_IRON_STAIRS.get(),
+                        ModBlocks.POLISHED_IRON_BLOCK.get(),
+                        ModBlocks.IRON_PLATING.get(),
+                        ModBlocks.RUSTY_IRON_PLATING.get(),
+                        ModBlocks.VITRIC_IRON_PLATING.get(),
                         ModBlocks.GUNDANIUM_MACHINE_CORE.get(),
                         ModBlocks.ALYTHUM_MACHINE_CORE.get(),
                         ModBlocks.VITRIC_MACHINE_CORE.get(),
@@ -1093,6 +1110,22 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.GUNDANIUM_ORE.get(),
+                        ModBlocks.POLISHED_IRON_BLOCK.get(),
+                        ModBlocks.IRON_PLATING.get(),
+                        ModBlocks.RUSTY_IRON_PLATING.get(),
+                        ModBlocks.VITRIC_IRON_PLATING.get(),
+                        ModBlocks.IRON_PLATING_WALL.get(),
+                        ModBlocks.IRON_PLATING_SLAB.get(),
+                        ModBlocks.IRON_PLATING_STAIRS.get(),
+                        ModBlocks.RUSTY_IRON_PLATING_WALL.get(),
+                        ModBlocks.RUSTY_IRON_PLATING_SLAB.get(),
+                        ModBlocks.RUSTY_IRON_PLATING_STAIRS.get(),
+                        ModBlocks.VITRIC_IRON_PLATING_WALL.get(),
+                        ModBlocks.VITRIC_IRON_PLATING_SLAB.get(),
+                        ModBlocks.VITRIC_IRON_PLATING_STAIRS.get(),
+                        ModBlocks.POLISHED_IRON_WALL.get(),
+                        ModBlocks.POLISHED_IRON_SLAB.get(),
+                        ModBlocks.POLISHED_IRON_STAIRS.get(),
                 ModBlocks.TIBERIUM_BLOCK.get(),
                 ModBlocks.TIBERIUM_BLUE_BLOCK.get(),
                 ModBlocks.RIPARIUS_STONE.get(),
@@ -1718,6 +1751,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.PROTO_STEEL_SLAB.get(),
                         ModBlocks.PROTO_STEEL_STAIRS.get()
 
+
+
                         
                         
                 );
@@ -1867,6 +1902,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.FIRESTONE_WALL.get(),
                         ModBlocks.INFESTED_STONE_BRICK_WALL.get(),
                         ModBlocks.PROTO_STEEL_WALL.get(),
+                        ModBlocks.IRON_PLATING_WALL.get(),
+                        ModBlocks.RUSTY_IRON_PLATING_WALL.get(),
+                        ModBlocks.VITRIC_IRON_PLATING_WALL.get(),
+                        ModBlocks.POLISHED_IRON_WALL.get(),
                         ModBlocks.VITRIC_DEEPSLATE_TILE_WALL.get(),
                         ModBlocks.VITRIC_DEEPSLATE_BRICK_WALL.get(),
                         ModBlocks.INFESTED_COBBLE_WALL.get(),

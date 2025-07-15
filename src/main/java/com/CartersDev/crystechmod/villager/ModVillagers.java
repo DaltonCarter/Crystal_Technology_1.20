@@ -19,7 +19,7 @@ public class ModVillagers {
 
     public static final RegistryObject<PoiType> VITRIC_POI = POI_TYPES.register("vitric_poi",
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.FOOLS_VITRICIUM.get().getStateDefinition().getPossibleStates()),
-                    1, 5));
+                    1, 1));
 
 
 
@@ -27,7 +27,7 @@ public class ModVillagers {
             DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, CrystalTech.MOD_ID);
 
     public static final RegistryObject<VillagerProfession> VITRIC_GATHERER = VILLAGER_PROFESSIONS.register(
-            "vitricgatherer", () -> new VillagerProfession("vitricgatherer",
+            "vitric_gatherer", () -> new VillagerProfession("vitric_gatherer",
                     holder -> holder.get() == VITRIC_POI.get(), holder -> holder.get() == VITRIC_POI.get(),
                     ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_WEAPONSMITH));
 

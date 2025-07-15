@@ -546,6 +546,8 @@ Posted By: Dalton Carter
 -Mk.1 & 2 Core Steel now craftable
 -Added handful of Recipes
 -Added Refinery and Recipes
+-Updated Villager Profession with new look, and trades
+-Added New Iron Deco Blocks
 
 
 

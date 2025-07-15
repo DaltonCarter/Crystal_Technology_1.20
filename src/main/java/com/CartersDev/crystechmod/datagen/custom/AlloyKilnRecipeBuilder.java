@@ -24,8 +24,11 @@ import java.util.function.Consumer;
 public class AlloyKilnRecipeBuilder implements RecipeBuilder {
     private final Item result;
     private final Ingredient ingredient;
+//    private final int inputCount1;
     private final Ingredient ingredient2;
+//    private final int inputCount2;
     private final Ingredient ingredient3;
+//    private final int inputCount3;
     private final int count;
     private final int craftTime;
     private final int energyAmount;
@@ -34,9 +37,11 @@ public class AlloyKilnRecipeBuilder implements RecipeBuilder {
 
     public AlloyKilnRecipeBuilder(ItemLike ingredient, ItemLike ingredient2, ItemLike ingredient3, ItemLike result, int count, int craftTime, int energyAmount) {
         this.ingredient = Ingredient.of(ingredient);
+//        this.inputCount1 = inputCount1;
         this.ingredient2 = Ingredient.of(ingredient2);
+//        this.inputCount2 = inputCount2;
         this.ingredient3 = Ingredient.of(ingredient3);
-
+//        this.inputCount3 = inputCount3;
         this.result = result.asItem();
         this.count = count;
         this.craftTime = craftTime;
@@ -65,7 +70,8 @@ public class AlloyKilnRecipeBuilder implements RecipeBuilder {
                 .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(pRecipeId))
                 .rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
 
-        pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.count, this.ingredient, this.ingredient2, this.ingredient3, this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/"
+        pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.count, this.ingredient, this.ingredient2,
+                this.ingredient3 , this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/"
                 + pRecipeId.getPath()), craftTime, energyAmount));
 
     }
@@ -74,9 +80,11 @@ public class AlloyKilnRecipeBuilder implements RecipeBuilder {
         private final ResourceLocation id;
         private final Item result;
         private final Ingredient ingredient;
+//        private final int inputCount1;
         private final Ingredient ingredient2;
+//        private final int inputCount2;
         private final Ingredient ingredient3;
-
+//        private final int inputCount3;
 
         private final int count;
         private final int craftTime;
@@ -92,8 +100,11 @@ public class AlloyKilnRecipeBuilder implements RecipeBuilder {
             this.count = pCount;
 
             this.ingredient = ingredient;
+//            this.inputCount1 = inputCount1;
             this.ingredient2 = ingredient2;
+//            this.inputCount2 = inputCount2;
             this.ingredient3 = ingredient3;
+//            this.inputCount3 = inputCount3;
             this.craftTime = craftTime;
             this.energyAmount = energyAmount;
             this.advancement = pAdvancement;
@@ -110,6 +121,19 @@ public class AlloyKilnRecipeBuilder implements RecipeBuilder {
             pJson.add("ingredients", jsonarray);
             JsonObject jsonobject = new JsonObject();
             jsonobject.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
+
+//
+//            if (this.inputCount1 > 1) {
+//                jsonobject.addProperty("inputCount1", this.inputCount1);
+//            }
+//
+//            if (this.inputCount2 > 1) {
+//                jsonobject.addProperty("inputCount2", this.inputCount2);
+//            }
+//
+//            if (this.inputCount3 > 1) {
+//                jsonobject.addProperty("inputCount3", this.inputCount3);
+//            }
 
 
             if (this.count > 1) {

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "crystechmod:block/iron_plating",
+    "side": "crystechmod:block/iron_plating",
+    "top": "crystechmod:block/iron_plating"
+  }
+}

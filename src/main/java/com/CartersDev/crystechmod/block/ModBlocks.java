@@ -49,8 +49,7 @@ public class ModBlocks {
             () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.SOUND_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> FOOLS_VITRICIUM = registerBlock("fools_vitricium",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).sound(SoundType.AMETHYST)
-                    .noLootTable()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).sound(SoundType.AMETHYST)));
 
     //Terrain Blocks:
         //Natural Terrain Blocks:
@@ -166,6 +165,24 @@ public class ModBlocks {
     public static final RegistryObject<Block> PROTO_STEEL_BLOCK = registerBlock("proto_steel_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .explosionResistance(100.0f)));
+
+    public static final RegistryObject<Block> IRON_PLATING = registerBlock("iron_plating",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    ));
+
+    public static final RegistryObject<Block> RUSTY_IRON_PLATING = registerBlock("rusty_iron_plating",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+            ));
+
+    public static final RegistryObject<Block> VITRIC_IRON_PLATING = registerBlock("vitric_iron_plating",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+            ));
+
+    public static final RegistryObject<Block> POLISHED_IRON_BLOCK = registerBlock("polished_iron_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+            ));
+
+
 
     public static final RegistryObject<Block> HARMONIUM_BLOCK = registerBlock("harmonium_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
@@ -496,6 +513,22 @@ public class ModBlocks {
             () -> new StairBlock(() -> ModBlocks.PROTO_STEEL_BLOCK.get().defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
+    public static final RegistryObject<Block> IRON_PLATING_STAIRS = registerBlock("iron_plating_stairs",
+            () -> new StairBlock(() -> ModBlocks.IRON_PLATING.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> RUSTY_IRON_PLATING_STAIRS = registerBlock("rusty_iron_plating_stairs",
+            () -> new StairBlock(() -> ModBlocks.RUSTY_IRON_PLATING.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> VITRIC_IRON_PLATING_STAIRS = registerBlock("vitric_iron_plating_stairs",
+            () -> new StairBlock(() -> ModBlocks.VITRIC_IRON_PLATING.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> POLISHED_IRON_STAIRS = registerBlock("polished_iron_stairs",
+            () -> new StairBlock(() -> ModBlocks.POLISHED_IRON_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
     public static final RegistryObject<Block> BLACK_TIBERCRETE_SLAB = registerBlock("black_tibercrete_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
 
@@ -545,6 +578,18 @@ public class ModBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
 
     public static final RegistryObject<Block> PROTO_STEEL_SLAB = registerBlock("proto_steel_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> IRON_PLATING_SLAB = registerBlock("iron_plating_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> RUSTY_IRON_PLATING_SLAB = registerBlock("rusty_iron_plating_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> VITRIC_IRON_PLATING_SLAB = registerBlock("vitric_iron_plating_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> POLISHED_IRON_SLAB = registerBlock("polished_iron_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     public static final RegistryObject<Block> BLACK_TIBERCRETE_BRICKS = registerBlock("black_tibercrete_bricks",
@@ -644,6 +689,18 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.copy(ModBlocks.YELLOW_TIBERCRETE.get())));
 
     public static final RegistryObject<Block> PROTO_STEEL_WALL = registerBlock("proto_steel_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> IRON_PLATING_WALL = registerBlock("iron_plating_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> RUSTY_IRON_PLATING_WALL = registerBlock("rusty_iron_plating_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> VITRIC_IRON_PLATING_WALL = registerBlock("vitric_iron_plating_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> POLISHED_IRON_WALL = registerBlock("polished_iron_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     public static final RegistryObject<Block> BLACK_TIBERCRETE_BRICK_STAIRS = registerBlock("black_tibercrete_brick_stairs",
