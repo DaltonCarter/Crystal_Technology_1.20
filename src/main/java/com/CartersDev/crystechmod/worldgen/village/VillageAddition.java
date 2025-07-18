@@ -15,13 +15,11 @@ import net.minecraftforge.event.server.ServerAboutToStartEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
 @Mod.EventBusSubscriber(modid = CrystalTech.MOD_ID)
 public class VillageAddition {
-
     private static final ResourceKey<StructureProcessorList> EMPTY_PROCESSOR_LIST_KEY =
             ResourceKey.create(Registries.PROCESSOR_LIST, new ResourceLocation("minecraft", "empty"));
 
@@ -77,86 +75,25 @@ public class VillageAddition {
 
         // Adds our piece to all village houses pool
         // Note, the resourcelocation is getting the pool files from the data folder. Not assets folder.
+
         addBuildingToPool(templatePoolRegistry, processorListRegistry,
                 new ResourceLocation("minecraft:village/plains/houses"),
-                "crystechmod:gather_hut", 5);
+                "crystechmod:gather_hut", 25);
 
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/plains/houses"),
-//                "treemod:plains_house_2", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/plains/houses"),
-//                "treemod:plains_house_3", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/plains/houses"),
-//                "treemod:plains_house_4", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/snowy/houses"),
-//                "treemod:plains_house", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/snowy/houses"),
-//                "treemod:plains_house_2", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/snowy/houses"),
-//                "treemod:plains_house_3", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/snowy/houses"),
-//                "treemod:plains_house_4", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/savanna/houses"),
-//                "treemod:plains_house", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/savanna/houses"),
-//                "treemod:plains_house_2", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/savanna/houses"),
-//                "treemod:plains_house_3", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/savanna/houses"),
-//                "treemod:plains_house_4", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/taiga/houses"),
-//                "treemod:plains_house", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/taiga/houses"),
-//                "treemod:plains_house_2", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/taiga/houses"),
-//                "treemod:plains_house_3", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/taiga/houses"),
-//                "treemod:plains_house_4", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/desert/houses"),
-//                "treemod:plains_house", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/desert/houses"),
-//                "treemod:plains_house_2", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/desert/houses"),
-//                "treemod:plains_house_3", 4);
-//
-//        addBuildingToPool(templatePoolRegistry, processorListRegistry,
-//                new ResourceLocation("minecraft:village/desert/houses"),
-//                "treemod:plains_house_4", 4);
-//
+        addBuildingToPool(templatePoolRegistry, processorListRegistry,
+                new ResourceLocation("minecraft:village/snowy/houses"),
+                "crystechmod:gather_hut", 25);
 
+        addBuildingToPool(templatePoolRegistry, processorListRegistry,
+                new ResourceLocation("minecraft:village/savanna/houses"),
+                "crystechmod:gather_hut", 25);
+
+        addBuildingToPool(templatePoolRegistry, processorListRegistry,
+                new ResourceLocation("minecraft:village/taiga/houses"),
+                "crystechmod:gather_hut", 25);
+
+        addBuildingToPool(templatePoolRegistry, processorListRegistry,
+                new ResourceLocation("minecraft:village/desert/houses"),
+                "crystechmod:gather_hut", 25);
     }
 }
