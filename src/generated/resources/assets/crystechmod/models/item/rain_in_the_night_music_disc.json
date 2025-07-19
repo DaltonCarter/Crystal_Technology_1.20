@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "crystechmod:item/rain_in_the_night_music_disc"
-  }
-}

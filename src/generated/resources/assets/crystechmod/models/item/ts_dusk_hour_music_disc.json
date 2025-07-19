@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "crystechmod:item/ts_dusk_hour_music_disc"
-  }
-}

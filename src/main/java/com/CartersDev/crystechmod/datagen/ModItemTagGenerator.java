@@ -110,10 +110,13 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.AERIES_CRYSTAL.get(),
                         ModItems.QUALRIM_COMPOUND.get(),
                         ModItems.ENIGMA_CRYSTAL.get(),
+                        ModItems.GUNDANIUM_DUST.get(),
+                        ModItems.IRON_DUST.get(),
                         Items.IRON_INGOT,
                         Items.COPPER_INGOT,
                         Items.GOLD_INGOT,
-                        Items.NETHERITE_INGOT
+                        Items.NETHERITE_INGOT,
+                        Items.MAGMA_BLOCK
 
                 )
                 .addTag(Tags.Items.INGOTS);
@@ -124,7 +127,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.ILLYRIM_INGOT.get(),
                         ModItems.LG_CORE_INGOT.get(),
                         ModItems.MG_CORE_INGOT.get(),
-                        ModItems.HG_CORE_INGOT.get()
+                        ModItems.HG_CORE_INGOT.get(),
+                        ModItems.FIRESTONE.get()
 
                 )
                 .addTag(
@@ -319,90 +323,22 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
 
         this.tag(ItemTags.MUSIC_DISCS)
-                .add(ModItems.STILL_ALONE_MUSIC_DISC.get(),
-                        ModItems.HYOUHAKU_WANDERING_MUSIC_DISC.get(),
-                        ModItems.CORRODED_VALVES_MUSIC_DISC.get(),
-                        ModItems.DARK_MACHINATIONS_MUSIC_DISC.get(),
-                        ModItems.DARK_VALLEY_MUSIC_DISC.get(),
-                        ModItems.EAGLES_DAWN_MUSIC_DISC.get(),
-                        ModItems.MANUFACTORY_MUSIC_DISC.get(),
-                        ModItems.NECROFUNK_MUSIC_DISC.get(),
-                        ModItems.SCOUTING_MUSIC_DISC.get(),
-                        ModItems.PRODIGAL_SON_MUSIC_DISC.get(),
-                        ModItems.PYROTEK_MUSIC_DISC.get(),
-                        ModItems.REPENTANCE_MUSIC_DISC.get(),
-                        ModItems.SPACE_ECHO_MUSIC_DISC.get(),
-                        ModItems.TOMBS_MUSIC_DISC.get(),
-                        ModItems.UNYIELDING_MUSIC_DISC.get(),
-                        ModItems.WIRES_MUSIC_DISC.get(),
-                        ModItems.XENOPHILE_MUSIC_DISC.get(),
-                        ModItems.APPROACH_MUSIC_DISC.get(),
+                .add(ModItems.KODIAK_STRANDED_MUSIC_DISC.get(),
                         ModItems.DUSK_HOUR_MUSIC_DISC.get(),
-                        ModItems.TS_DUSK_HOUR_MUSIC_DISC.get(),
                         ModItems.HEROISM_MUSIC_DISC.get(),
                         ModItems.LONE_TROOPER_MUSIC_DISC.get(),
-                        ModItems.PHAROTEK_MUSIC_DISC.get(),
                         ModItems.VALVES_MUSIC_DISC.get(),
-                        ModItems.WHAT_LURKS_MUSIC_DISC.get(),
-                        ModItems.AIRSTRIKE_MUSIC_DISC.get(),
-                        ModItems.HEROISM_2_MUSIC_DISC.get(),
-                        ModItems.CREEPING_UPON_MUSIC_DISC.get(),
-                        ModItems.DEPTH_CHARGE_MUSIC_DISC.get(),
-                        ModItems.DRONE_MUSIC_DISC.get(),
-                        ModItems.ON_THE_PROWL_MUSIC_DISC.get(),
-                        ModItems.RAIN_IN_THE_NIGHT_MUSIC_DISC.get(),
-                        ModItems.RECON_MUSIC_DISC.get(),
-                        ModItems.AWAITING_MUSIC_DISC.get(),
-                        ModItems.DENSE_MUSIC_DISC.get(),
-                        ModItems.DERELICT_MUSIC_DISC.get(),
-                        ModItems.RUN_MUSIC_DISC.get(),
-                        ModItems.THE_SEARCH_MUSIC_DISC.get(),
-                        ModItems.TRENCHES_MUSIC_DISC.get(),
-                        ModItems.VECTOR_MUSIC_DISC.get(),
-                        ModItems.VOICE_RHYTHM_2_MUSIC_DISC.get());
+                        ModItems.DERELICT_MUSIC_DISC.get());
+
 
         this.tag(ItemTags.CREEPER_DROP_MUSIC_DISCS)
-                .add(ModItems.STILL_ALONE_MUSIC_DISC.get(),
-                        ModItems.HYOUHAKU_WANDERING_MUSIC_DISC.get(),
-                        ModItems.CORRODED_VALVES_MUSIC_DISC.get(),
-                        ModItems.DARK_MACHINATIONS_MUSIC_DISC.get(),
-                        ModItems.DARK_VALLEY_MUSIC_DISC.get(),
-                        ModItems.EAGLES_DAWN_MUSIC_DISC.get(),
-                        ModItems.MANUFACTORY_MUSIC_DISC.get(),
-                        ModItems.NECROFUNK_MUSIC_DISC.get(),
-                        ModItems.SCOUTING_MUSIC_DISC.get(),
-                        ModItems.PRODIGAL_SON_MUSIC_DISC.get(),
-                        ModItems.PYROTEK_MUSIC_DISC.get(),
-                        ModItems.REPENTANCE_MUSIC_DISC.get(),
-                        ModItems.SPACE_ECHO_MUSIC_DISC.get(),
-                        ModItems.TOMBS_MUSIC_DISC.get(),
-                        ModItems.UNYIELDING_MUSIC_DISC.get(),
-                        ModItems.WIRES_MUSIC_DISC.get(),
-                        ModItems.XENOPHILE_MUSIC_DISC.get(),
-                        ModItems.APPROACH_MUSIC_DISC.get(),
+                .add(ModItems.KODIAK_STRANDED_MUSIC_DISC.get(),
                         ModItems.DUSK_HOUR_MUSIC_DISC.get(),
-                        ModItems.TS_DUSK_HOUR_MUSIC_DISC.get(),
                         ModItems.HEROISM_MUSIC_DISC.get(),
                         ModItems.LONE_TROOPER_MUSIC_DISC.get(),
-                        ModItems.PHAROTEK_MUSIC_DISC.get(),
                         ModItems.VALVES_MUSIC_DISC.get(),
-                        ModItems.WHAT_LURKS_MUSIC_DISC.get(),
-                        ModItems.AIRSTRIKE_MUSIC_DISC.get(),
-                        ModItems.HEROISM_2_MUSIC_DISC.get(),
-                        ModItems.CREEPING_UPON_MUSIC_DISC.get(),
-                        ModItems.DEPTH_CHARGE_MUSIC_DISC.get(),
-                        ModItems.DRONE_MUSIC_DISC.get(),
-                        ModItems.ON_THE_PROWL_MUSIC_DISC.get(),
-                        ModItems.RAIN_IN_THE_NIGHT_MUSIC_DISC.get(),
-                        ModItems.RECON_MUSIC_DISC.get(),
-                        ModItems.AWAITING_MUSIC_DISC.get(),
-                        ModItems.DENSE_MUSIC_DISC.get(),
-                        ModItems.DERELICT_MUSIC_DISC.get(),
-                        ModItems.RUN_MUSIC_DISC.get(),
-                        ModItems.THE_SEARCH_MUSIC_DISC.get(),
-                        ModItems.TRENCHES_MUSIC_DISC.get(),
-                        ModItems.VECTOR_MUSIC_DISC.get(),
-                        ModItems.VOICE_RHYTHM_2_MUSIC_DISC.get());
+                        ModItems.DERELICT_MUSIC_DISC.get());
+
 
 
 

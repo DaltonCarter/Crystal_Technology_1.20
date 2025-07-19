@@ -134,6 +134,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.IRON_PLATING_DOOR.get(),
                         ModBlocks.IRON_PLATING_TRAPDOOR.get(),
                         ModBlocks.FOOLS_VITRICIUM.get(),
+                        ModBlocks.FOOLS_CRYSTAL_CORE.get(),
                         ModBlocks.IRON_PLATING_WALL.get(),
                         ModBlocks.IRON_PLATING_SLAB.get(),
                         ModBlocks.IRON_PLATING_STAIRS.get(),

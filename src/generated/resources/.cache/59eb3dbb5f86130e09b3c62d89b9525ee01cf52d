@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-14T23:51:11.6864272	Loot Tables
+// 1.20.1	2025-07-18T01:56:57.9925162	Loot Tables
 03c6f95925fa38635ca3601903e1d452029caabd data/crystechmod/loot_tables/blocks/aboreus_crystal.json
 d0beb68b81b414280026c89df98ac8685d552502 data/crystechmod/loot_tables/blocks/aboreus_crystal_slab.json
 119389378ebef86e266227fdae475e18f84de5e1 data/crystechmod/loot_tables/blocks/aboreus_crystal_stairs.json
@@ -424,6 +424,7 @@ d42ef6e641937507087972e61825b4e6a85bcc07 data/crystechmod/loot_tables/blocks/eni
 9c1785fcc78af5a1f2956f94e428016ebca5c5b9 data/crystechmod/loot_tables/blocks/flame_crystal_core_light.json
 030493d8dfa97e84385258ccd98f97994d785f83 data/crystechmod/loot_tables/blocks/flame_vert_crystal_core_light.json
 16dcb2c385fbc891cea3546c8c012dcf35bd0c9c data/crystechmod/loot_tables/blocks/flower_of_life.json
+f94baca8b46567c87c6c4b5da2dc42e7bf9630c3 data/crystechmod/loot_tables/blocks/fools_crystal_core.json
 6ad0f39dbf18df2bbdc760a86c89dfd8faf9ff78 data/crystechmod/loot_tables/blocks/fools_vitricium.json
 392a753b963f64c90c91a5ed57948f35c3df7924 data/crystechmod/loot_tables/blocks/fulgurbloom.json
 b2e5f30673329d90b0e9dc4134829e3cabba4730 data/crystechmod/loot_tables/blocks/gdi_tiberglass.json

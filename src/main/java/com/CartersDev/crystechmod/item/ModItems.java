@@ -63,8 +63,6 @@ public static final RegistryObject<Item> TIBERIUM_FRUIT = ITEMS.register("tiberi
     public static final RegistryObject<Item> SABER_BREAD = ITEMS.register("saber_bread",
             () -> new Item(new Item.Properties().food(ModFoods.SABER_BREAD)));
 
-
-
 //End of Foods
 
 
@@ -163,7 +161,6 @@ public static final RegistryObject<Item> GREEN_TIBERIUM_DUST = ITEMS.register("g
 
     public static final RegistryObject<Item> RAW_HARMONIUM = ITEMS.register("raw_harmonium",
             () -> new Item(new Item.Properties()));
-
 
     public static final RegistryObject<Item> RAW_ALYTHUM = ITEMS.register("raw_alythum",
             () -> new Item(new Item.Properties()));
@@ -422,169 +419,31 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
 
     //Music Discs
-    public static final RegistryObject<Item> STILL_ALONE_MUSIC_DISC = ITEMS.register("still_alone_music_disc",
-            () -> new RecordItem(6, ModSounds.STILL_ALONE,
-                    new Item.Properties().stacksTo(1), 5140));
-
-    public static final RegistryObject<Item> HYOUHAKU_WANDERING_MUSIC_DISC = ITEMS.register("hyouhaku_wandering_music_disc",
-            () -> new RecordItem(6, ModSounds.HYOUHAKU_WANDERING,
-                    new Item.Properties().stacksTo(1), 2780));
-
-    public static final RegistryObject<Item> CORRODED_VALVES_MUSIC_DISC = ITEMS.register("corroded_valves_music_disc",
-            () -> new RecordItem(6, ModSounds.CORRODED_VALVES,
-                    new Item.Properties().stacksTo(1), 5720));
-
-    public static final RegistryObject<Item> DARK_MACHINATIONS_MUSIC_DISC = ITEMS.register("dark_machinations_music_disc",
-            () -> new RecordItem(6, ModSounds.DARK_MACHINATIONS,
-                    new Item.Properties().stacksTo(1), 7060));
-
-    public static final RegistryObject<Item> DARK_VALLEY_MUSIC_DISC = ITEMS.register("dark_valley_music_disc",
-            () -> new RecordItem(6, ModSounds.DARK_VALLEY,
-                    new Item.Properties().stacksTo(1), 6940));
-
-    public static final RegistryObject<Item> EAGLES_DAWN_MUSIC_DISC = ITEMS.register("eagles_dawn_music_disc",
-            () -> new RecordItem(6, ModSounds.EAGLES_DAWN,
-                    new Item.Properties().stacksTo(1), 6080));
-
-    public static final RegistryObject<Item> MANUFACTORY_MUSIC_DISC = ITEMS.register("manufactory_music_disc",
-            () -> new RecordItem(6, ModSounds.MANUFACTORY,
-                    new Item.Properties().stacksTo(1), 6600));
-
-    public static final RegistryObject<Item> NECROFUNK_MUSIC_DISC = ITEMS.register("necrofunk_music_disc",
-            () -> new RecordItem(6, ModSounds.NECROFUNK,
-                    new Item.Properties().stacksTo(1), 4460));
-
-    public static final RegistryObject<Item> SCOUTING_MUSIC_DISC = ITEMS.register("scouting_music_disc",
-            () -> new RecordItem(6, ModSounds.SCOUTING,
-                    new Item.Properties().stacksTo(1), 5180));
-
-    public static final RegistryObject<Item> PRODIGAL_SON_MUSIC_DISC = ITEMS.register("prodigal_son_music_disc",
-            () -> new RecordItem(6, ModSounds.PRODIGAL_SON,
-                    new Item.Properties().stacksTo(1), 5700));
-
-    public static final RegistryObject<Item> PYROTEK_MUSIC_DISC = ITEMS.register("pyrotek_music_disc",
-            () -> new RecordItem(6, ModSounds.PYROTEK,
-                    new Item.Properties().stacksTo(1), 6280));
-
-    public static final RegistryObject<Item> REPENTANCE_MUSIC_DISC = ITEMS.register("repentance_music_disc",
-            () -> new RecordItem(6, ModSounds.REPENTANCE,
-                    new Item.Properties().stacksTo(1), 5460));
-
-    public static final RegistryObject<Item> SPACE_ECHO_MUSIC_DISC = ITEMS.register("space_echo_music_disc",
-            () -> new RecordItem(6, ModSounds.SPACE_ECHO,
-                    new Item.Properties().stacksTo(1), 4260));
-
-    public static final RegistryObject<Item> TOMBS_MUSIC_DISC = ITEMS.register("tombs_music_disc",
-            () -> new RecordItem(6, ModSounds.TOMBS,
-                    new Item.Properties().stacksTo(1), 5600));
-
-    public static final RegistryObject<Item> UNYIELDING_MUSIC_DISC = ITEMS.register("unyielding_music_disc",
-            () -> new RecordItem(6, ModSounds.UNYIELDING,
-                    new Item.Properties().stacksTo(1), 10660));
-
-    public static final RegistryObject<Item> WIRES_MUSIC_DISC = ITEMS.register("wires_music_disc",
-            () -> new RecordItem(6, ModSounds.WIRES,
-                    new Item.Properties().stacksTo(1), 6840));
-
-    public static final RegistryObject<Item> XENOPHILE_MUSIC_DISC = ITEMS.register("xenophile_music_disc",
-            () -> new RecordItem(6, ModSounds.XENOPHILE,
-                    new Item.Properties().stacksTo(1), 6820));
-
-    public static final RegistryObject<Item> APPROACH_MUSIC_DISC = ITEMS.register("approach_music_disc",
-            () -> new RecordItem(6, ModSounds.APPROACH,
-                    new Item.Properties().stacksTo(1), 5660));
 
     public static final RegistryObject<Item> DUSK_HOUR_MUSIC_DISC = ITEMS.register("dusk_hour_music_disc",
             () -> new RecordItem(6, ModSounds.DUSK_HOUR,
-                    new Item.Properties().stacksTo(1), 4740));
-
-    public static final RegistryObject<Item> TS_DUSK_HOUR_MUSIC_DISC = ITEMS.register("ts_dusk_hour_music_disc",
-            () -> new RecordItem(6, ModSounds.TS_DUSK_HOUR,
-                    new Item.Properties().stacksTo(1), 4680));
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 4740));
 
     public static final RegistryObject<Item> HEROISM_MUSIC_DISC = ITEMS.register("heroism_music_disc",
             () -> new RecordItem(6, ModSounds.HEROISM,
-                    new Item.Properties().stacksTo(1), 4860));
+                    new Item.Properties().stacksTo(1).rarity(Rarity.EPIC), 4920));
 
     public static final RegistryObject<Item> LONE_TROOPER_MUSIC_DISC = ITEMS.register("lone_trooper_music_disc",
             () -> new RecordItem(6, ModSounds.LONE_TROOPER,
-                    new Item.Properties().stacksTo(1), 6720));
+                    new Item.Properties().stacksTo(1).rarity(Rarity.EPIC), 6720));
 
-    public static final RegistryObject<Item> PHAROTEK_MUSIC_DISC = ITEMS.register("pharotek_music_disc",
-            () -> new RecordItem(6, ModSounds.PHAROTEK,
-                    new Item.Properties().stacksTo(1), 5960));
 
     public static final RegistryObject<Item> VALVES_MUSIC_DISC = ITEMS.register("valves_music_disc",
             () -> new RecordItem(6, ModSounds.VALVES,
-                    new Item.Properties().stacksTo(1), 6200));
-
-    public static final RegistryObject<Item> WHAT_LURKS_MUSIC_DISC = ITEMS.register("what_lurks_music_disc",
-            () -> new RecordItem(6, ModSounds.WHAT_LURKS,
-                    new Item.Properties().stacksTo(1), 5680));
-
-    public static final RegistryObject<Item> AIRSTRIKE_MUSIC_DISC = ITEMS.register("airstrike_music_disc",
-            () -> new RecordItem(6, ModSounds.AIRSTRIKE,
-                    new Item.Properties().stacksTo(1), 3940));
-
-    public static final RegistryObject<Item> HEROISM_2_MUSIC_DISC = ITEMS.register("heroism_2_music_disc",
-            () -> new RecordItem(6, ModSounds.HEROISM_2,
-                    new Item.Properties().stacksTo(1), 4920));
-
-    public static final RegistryObject<Item> CREEPING_UPON_MUSIC_DISC = ITEMS.register("creeping_upon_music_disc",
-            () -> new RecordItem(6, ModSounds.CREEPING_UPON,
-                    new Item.Properties().stacksTo(1), 4340));
-
-    public static final RegistryObject<Item> DEPTH_CHARGE_MUSIC_DISC = ITEMS.register("depth_charge_music_disc",
-            () -> new RecordItem(6, ModSounds.DEPTH_CHARGE,
-                    new Item.Properties().stacksTo(1), 5100));
-
-    public static final RegistryObject<Item> DRONE_MUSIC_DISC = ITEMS.register("drone_music_disc",
-            () -> new RecordItem(6, ModSounds.DRONE,
-                    new Item.Properties().stacksTo(1), 5440));
-
-    public static final RegistryObject<Item> ON_THE_PROWL_MUSIC_DISC = ITEMS.register("on_the_prowl_music_disc",
-            () -> new RecordItem(6, ModSounds.ON_THE_PROWL,
-                    new Item.Properties().stacksTo(1), 3640));
-
-    public static final RegistryObject<Item> RAIN_IN_THE_NIGHT_MUSIC_DISC = ITEMS.register("rain_in_the_night_music_disc",
-            () -> new RecordItem(6, ModSounds.RAIN_IN_THE_NIGHT,
-                    new Item.Properties().stacksTo(1), 3080));
-
-    public static final RegistryObject<Item> RECON_MUSIC_DISC = ITEMS.register("recon_music_disc",
-            () -> new RecordItem(6, ModSounds.RECON,
-                    new Item.Properties().stacksTo(1), 5240));
-
-    public static final RegistryObject<Item> AWAITING_MUSIC_DISC = ITEMS.register("awaiting_music_disc",
-            () -> new RecordItem(6, ModSounds.AWAITING,
-                    new Item.Properties().stacksTo(1), 5300));
-
-    public static final RegistryObject<Item> DENSE_MUSIC_DISC = ITEMS.register("dense_music_disc",
-            () -> new RecordItem(6, ModSounds.DENSE,
-                    new Item.Properties().stacksTo(1), 6040));
+                    new Item.Properties().stacksTo(1).rarity(Rarity.COMMON), 6200));
 
     public static final RegistryObject<Item> DERELICT_MUSIC_DISC = ITEMS.register("derelict_music_disc",
             () -> new RecordItem(6, ModSounds.DERELICT,
-                    new Item.Properties().stacksTo(1), 7200));
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 7200));
 
-    public static final RegistryObject<Item> RUN_MUSIC_DISC = ITEMS.register("run_music_disc",
-            () -> new RecordItem(6, ModSounds.RUN,
-                    new Item.Properties().stacksTo(1), 6260));
-
-    public static final RegistryObject<Item> THE_SEARCH_MUSIC_DISC = ITEMS.register("the_search_music_disc",
-            () -> new RecordItem(6, ModSounds.THE_SEARCH,
-                    new Item.Properties().stacksTo(1), 5620));
-
-    public static final RegistryObject<Item> TRENCHES_MUSIC_DISC = ITEMS.register("trenches_music_disc",
-            () -> new RecordItem(6, ModSounds.TRENCHES,
-                    new Item.Properties().stacksTo(1), 6400));
-
-    public static final RegistryObject<Item> VECTOR_MUSIC_DISC = ITEMS.register("vector_music_disc",
-            () -> new RecordItem(6, ModSounds.VECTOR,
-                    new Item.Properties().stacksTo(1), 5160));
-
-    public static final RegistryObject<Item> VOICE_RHYTHM_2_MUSIC_DISC = ITEMS.register("voice_rhythm_2_music_disc",
-            () -> new RecordItem(6, ModSounds.VOICE_RHYTHM_2,
-                    new Item.Properties().stacksTo(1), 5180));
+    public static final RegistryObject<Item> KODIAK_STRANDED_MUSIC_DISC = ITEMS.register("kodiak_stranded_music_disc",
+            () -> new RecordItem(6, ModSounds.KODIAK_STRANDED,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON), 4520));
 
     //End of Music Discs
 
@@ -596,9 +455,6 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> PLAGUED_STICK = ITEMS.register("plagued_stick",
         () -> new Item(new Item.Properties()));
-
-
-
 
     public static final RegistryObject<Item> HARMONIC_RELAY = ITEMS.register("harmonic_relay",
             () -> new Item(new Item.Properties()));
@@ -620,9 +476,6 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> VITRIC_CIRCUIT = ITEMS.register("vitric_circuit",
             () -> new Item(new Item.Properties()));
-
-
-
 
     public static final RegistryObject<Item> GRINDER_GEAR = ITEMS.register("grinder_gear",
             () -> new Item(new Item.Properties()));

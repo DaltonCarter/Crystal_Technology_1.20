@@ -4638,6 +4638,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
 
 
+
         new PoweredKilnRecipeBuilder(Items.OAK_LOG, Items.CHARCOAL, 1, 150, 10)
                 .unlockedBy("has_wood", has(Items.OAK_LOG)).save(consumer);
 
@@ -4700,6 +4701,9 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
         new AlloyKilnRecipeBuilder(ModItems.LG_CORE_INGOT.get(), ModItems.ICHOR_COMPOSITE_INGOT.get(), ModItems.HARMONIUM_INGOT.get(), ModItems.MG_CORE_INGOT.get() ,3, 250, 20)
                 .unlockedBy("has_lg_core_ingot", has(ModItems.LG_CORE_INGOT.get())).save(consumer);
+
+        new AlloyKilnRecipeBuilder(ModItems.GUNDANIUM_DUST.get(), ModItems.IRON_DUST.get(), Items.MAGMA_BLOCK, ModItems.FIRESTONE.get(),3, 300, 20)
+                .unlockedBy("has_gundanium_ingot", has(ModItems.GUNDANIUM_INGOT.get())).save(consumer);
 
 
         //Refinery:

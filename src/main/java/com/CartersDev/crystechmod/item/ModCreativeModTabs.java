@@ -27,6 +27,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
 
 
                     output.accept(ModBlocks.FOOLS_VITRICIUM.get());
+                    output.accept(ModBlocks.FOOLS_CRYSTAL_CORE.get());
                     output.accept(ModBlocks.BLOSSOM_SPOUT.get());
                     output.accept(ModBlocks.BLOSSOM_CENTER.get());
                     output.accept(ModBlocks.BLOSSOM_BASE.get());
@@ -323,51 +324,17 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     .build());
 
     public static final RegistryObject<CreativeModeTab> MUSIC_TAB = CREATIVE_MODE_TABS.register("crystal_technology_music_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.HYOUHAKU_WANDERING_MUSIC_DISC.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.LONE_TROOPER_MUSIC_DISC.get()))
                     .title(Component.translatable("creativetab.crystal_technology_music_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.SOUND_BLOCK.get());
-                        output.accept(ModItems.HYOUHAKU_WANDERING_MUSIC_DISC.get());
-                        output.accept(ModItems.STILL_ALONE_MUSIC_DISC.get());
-                        output.accept(ModItems.CORRODED_VALVES_MUSIC_DISC.get());
-                        output.accept(ModItems.DARK_MACHINATIONS_MUSIC_DISC.get());
-                        output.accept(ModItems.DARK_VALLEY_MUSIC_DISC.get());
-                        output.accept(ModItems.EAGLES_DAWN_MUSIC_DISC.get());
-                        output.accept(ModItems.MANUFACTORY_MUSIC_DISC.get());
-                        output.accept(ModItems.NECROFUNK_MUSIC_DISC.get());
-                        output.accept(ModItems.SCOUTING_MUSIC_DISC.get());
-                        output.accept(ModItems.PRODIGAL_SON_MUSIC_DISC.get());
-                        output.accept(ModItems.PYROTEK_MUSIC_DISC.get());
-                        output.accept(ModItems.REPENTANCE_MUSIC_DISC.get());
-                        output.accept(ModItems.SPACE_ECHO_MUSIC_DISC.get());
-                        output.accept(ModItems.TOMBS_MUSIC_DISC.get());
-                        output.accept(ModItems.UNYIELDING_MUSIC_DISC.get());
-                        output.accept(ModItems.WIRES_MUSIC_DISC.get());
-                        output.accept(ModItems.XENOPHILE_MUSIC_DISC.get());
-                        output.accept(ModItems.APPROACH_MUSIC_DISC.get());
+                        output.accept(ModItems.KODIAK_STRANDED_MUSIC_DISC.get());
                         output.accept(ModItems.DUSK_HOUR_MUSIC_DISC.get());
-                        output.accept(ModItems.TS_DUSK_HOUR_MUSIC_DISC.get());
                         output.accept(ModItems.HEROISM_MUSIC_DISC.get());
                         output.accept(ModItems.LONE_TROOPER_MUSIC_DISC.get());
-                        output.accept(ModItems.PHAROTEK_MUSIC_DISC.get());
                         output.accept(ModItems.VALVES_MUSIC_DISC.get());
-                        output.accept(ModItems.WHAT_LURKS_MUSIC_DISC.get());
-                        output.accept(ModItems.AIRSTRIKE_MUSIC_DISC.get());
-                        output.accept(ModItems.HEROISM_2_MUSIC_DISC.get());
-                        output.accept(ModItems.CREEPING_UPON_MUSIC_DISC.get());
-                        output.accept(ModItems.DEPTH_CHARGE_MUSIC_DISC.get());
-                        output.accept(ModItems.DRONE_MUSIC_DISC.get());
-                        output.accept(ModItems.ON_THE_PROWL_MUSIC_DISC.get());
-                        output.accept(ModItems.RAIN_IN_THE_NIGHT_MUSIC_DISC.get());
-                        output.accept(ModItems.RECON_MUSIC_DISC.get());
-                        output.accept(ModItems.AWAITING_MUSIC_DISC.get());
-                        output.accept(ModItems.DENSE_MUSIC_DISC.get());
                         output.accept(ModItems.DERELICT_MUSIC_DISC.get());
-                        output.accept(ModItems.RUN_MUSIC_DISC.get());
-                        output.accept(ModItems.THE_SEARCH_MUSIC_DISC.get());
-                        output.accept(ModItems.TRENCHES_MUSIC_DISC.get());
-                        output.accept(ModItems.VECTOR_MUSIC_DISC.get());
-                        output.accept(ModItems.VOICE_RHYTHM_2_MUSIC_DISC.get());
+
 
                     })
                     .build());

@@ -48,51 +48,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         //Simple Item Models:
         simpleItem(ModItems.TIBERIUM_LEATHER);
         simpleItem(ModItems.ICHOR_LEATHER);
-
         simpleItem(ModItems.YOKARAN_BLOOM_POWDER);
         simpleItem(ModItems.DEVILS_BLOOD_POWDER);
-
-        simpleItem(ModItems.STILL_ALONE_MUSIC_DISC);
-        simpleItem(ModItems.HYOUHAKU_WANDERING_MUSIC_DISC);
-        simpleItem(ModItems.CORRODED_VALVES_MUSIC_DISC);
-        simpleItem(ModItems.DARK_MACHINATIONS_MUSIC_DISC);
-        simpleItem(ModItems.DARK_VALLEY_MUSIC_DISC);
-        simpleItem(ModItems.EAGLES_DAWN_MUSIC_DISC);
-        simpleItem(ModItems.MANUFACTORY_MUSIC_DISC);
-        simpleItem(ModItems.NECROFUNK_MUSIC_DISC);
-        simpleItem(ModItems.SCOUTING_MUSIC_DISC);
-        simpleItem(ModItems.PRODIGAL_SON_MUSIC_DISC);
-        simpleItem(ModItems.PYROTEK_MUSIC_DISC);
-        simpleItem(ModItems.REPENTANCE_MUSIC_DISC);
-        simpleItem(ModItems.SPACE_ECHO_MUSIC_DISC);
-        simpleItem(ModItems.TOMBS_MUSIC_DISC);
-        simpleItem(ModItems.UNYIELDING_MUSIC_DISC);
-        simpleItem(ModItems.WIRES_MUSIC_DISC);
-        simpleItem(ModItems.XENOPHILE_MUSIC_DISC);
-        simpleItem(ModItems.APPROACH_MUSIC_DISC);
+        simpleItem(ModItems.KODIAK_STRANDED_MUSIC_DISC);
         simpleItem(ModItems.DUSK_HOUR_MUSIC_DISC);
-        simpleItem(ModItems.TS_DUSK_HOUR_MUSIC_DISC);
         simpleItem(ModItems.HEROISM_MUSIC_DISC);
         simpleItem(ModItems.LONE_TROOPER_MUSIC_DISC);
-        simpleItem(ModItems.PHAROTEK_MUSIC_DISC);
         simpleItem(ModItems.VALVES_MUSIC_DISC);
-        simpleItem(ModItems.WHAT_LURKS_MUSIC_DISC);
-        simpleItem(ModItems.AIRSTRIKE_MUSIC_DISC);
-        simpleItem(ModItems.HEROISM_2_MUSIC_DISC);
-        simpleItem(ModItems.CREEPING_UPON_MUSIC_DISC);
-        simpleItem(ModItems.DEPTH_CHARGE_MUSIC_DISC);
-        simpleItem(ModItems.DRONE_MUSIC_DISC);
-        simpleItem(ModItems.ON_THE_PROWL_MUSIC_DISC);
-        simpleItem(ModItems.RAIN_IN_THE_NIGHT_MUSIC_DISC);
-        simpleItem(ModItems.RECON_MUSIC_DISC);
-        simpleItem(ModItems.AWAITING_MUSIC_DISC);
-        simpleItem(ModItems.DENSE_MUSIC_DISC);
         simpleItem(ModItems.DERELICT_MUSIC_DISC);
-        simpleItem(ModItems.RUN_MUSIC_DISC);
-        simpleItem(ModItems.THE_SEARCH_MUSIC_DISC);
-        simpleItem(ModItems.TRENCHES_MUSIC_DISC);
-        simpleItem(ModItems.VECTOR_MUSIC_DISC);
-        simpleItem(ModItems.VOICE_RHYTHM_2_MUSIC_DISC);
+
 
         simpleItem(ModItems.TIBERIUM);
         simpleItem(ModItems.TIBERIUM_BLUE);

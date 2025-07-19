@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "crystechmod:item/kodiak_stranded_music_disc"
+  }
+}

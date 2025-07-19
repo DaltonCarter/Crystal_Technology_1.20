@@ -10,10 +10,13 @@
     "crystechmod:aeries_crystal",
     "crystechmod:qualrim_compound",
     "crystechmod:enigma_crystal",
+    "crystechmod:gundanium_dust",
+    "crystechmod:iron_dust",
     "minecraft:iron_ingot",
     "minecraft:copper_ingot",
     "minecraft:gold_ingot",
     "minecraft:netherite_ingot",
+    "minecraft:magma_block",
     "#forge:ingots"
   ]
 }

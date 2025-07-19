@@ -246,6 +246,8 @@ public class CrystalTech {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRUENTUS_CRYSTAL.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ABOREUS_CRYSTAL.get(), RenderType.translucent());
 
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.FOOLS_CRYSTAL_CORE.get(), RenderType.translucent());
+
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.RIPARIUS_CRYSTAL_STAIRS.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.VINIFERA_CRYSTAL_STAIRS.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRUENTUS_CRYSTAL_STAIRS.get(), RenderType.translucent());

@@ -41,150 +41,7 @@
       "crystechmod:sound_block_fall"
     ]
   },
-  "still_alone": {
-    "sounds": [
-      {
-        "name": "crystechmod:still_alone",
-        "stream": true
-      }
-    ]
-  },
-  "hyouhaku_wandering": {
-    "sounds": [
-      {
-        "name": "crystechmod:hyouhaku_wandering",
-        "stream": true
-      }
-    ]
-  },
-  "corroded_valves": {
-    "sounds": [
-      {
-        "name": "crystechmod:corroded_valves",
-        "stream": true
-      }
-    ]
-  },
-  "dark_machinations": {
-    "sounds": [
-      {
-        "name": "crystechmod:dark_machinations",
-        "stream": true
-      }
-    ]
-  },
-  "dark_valley": {
-    "sounds": [
-      {
-        "name": "crystechmod:dark_valley",
-        "stream": true
-      }
-    ]
-  },
-  "eagles_dawn": {
-    "sounds": [
-      {
-        "name": "crystechmod:eagles_dawn",
-        "stream": true
-      }
-    ]
-  },
-  "manufactory": {
-    "sounds": [
-      {
-        "name": "crystechmod:manufactory",
-        "stream": true
-      }
-    ]
-  },
-  "necrofunk": {
-    "sounds": [
-      {
-        "name": "crystechmod:necrofunk",
-        "stream": true
-      }
-    ]
-  },
-  "scouting": {
-    "sounds": [
-      {
-        "name": "crystechmod:scouting",
-        "stream": true
-      }
-    ]
-  },
-  "prodigal_son": {
-    "sounds": [
-      {
-        "name": "crystechmod:prodigal_son",
-        "stream": true
-      }
-    ]
-  },
-  "pyrotek": {
-    "sounds": [
-      {
-        "name": "crystechmod:pyrotek",
-        "stream": true
-      }
-    ]
-  },
-  "repentance": {
-    "sounds": [
-      {
-        "name": "crystechmod:repentance",
-        "stream": true
-      }
-    ]
-  },
-  "space_echo": {
-    "sounds": [
-      {
-        "name": "crystechmod:space_echo",
-        "stream": true
-      }
-    ]
-  },
-  "tombs": {
-    "sounds": [
-      {
-        "name": "crystechmod:tombs",
-        "stream": true
-      }
-    ]
-  },
-  "unyielding": {
-    "sounds": [
-      {
-        "name": "crystechmod:unyielding",
-        "stream": true
-      }
-    ]
-  },
-  "wires": {
-    "sounds": [
-      {
-        "name": "crystechmod:wires",
-        "stream": true
-      }
-    ]
-  },
-  "xenophile": {
-    "sounds": [
-      {
-        "name": "crystechmod:xenophile",
-        "stream": true
-      }
-    ]
-  },
-  "approach": {
-    "sounds": [
-      {
-        "name": "crystechmod:approach",
-        "stream": true
-      }
-    ]
-  },
+
   "dusk_hour": {
     "sounds": [
       {
@@ -193,14 +50,7 @@
       }
     ]
   },
-  "ts_dusk_hour": {
-    "sounds": [
-      {
-        "name": "crystechmod:ts_dusk_hour",
-        "stream": true
-      }
-    ]
-  },
+
   "heroism": {
     "sounds": [
       {
@@ -217,106 +67,10 @@
       }
     ]
   },
-  "pharotek": {
-    "sounds": [
-      {
-        "name": "crystechmod:pharotek",
-        "stream": true
-      }
-    ]
-  },
   "valves": {
     "sounds": [
       {
         "name": "crystechmod:valves",
-        "stream": true
-      }
-    ]
-  },
-  "what_lurks": {
-    "sounds": [
-      {
-        "name": "crystechmod:what_lurks",
-        "stream": true
-      }
-    ]
-  },
-  "airstrike": {
-    "sounds": [
-      {
-        "name": "crystechmod:airstrike",
-        "stream": true
-      }
-    ]
-  },
-  "heroism_2": {
-    "sounds": [
-      {
-        "name": "crystechmod:heroism_2",
-        "stream": true
-      }
-    ]
-  },
-  "creeping_upon": {
-    "sounds": [
-      {
-        "name": "crystechmod:creeping_upon",
-        "stream": true
-      }
-    ]
-  },
-  "depth_charge": {
-    "sounds": [
-      {
-        "name": "crystechmod:depth_charge",
-        "stream": true
-      }
-    ]
-  },
-  "drone": {
-    "sounds": [
-      {
-        "name": "crystechmod:drone",
-        "stream": true
-      }
-    ]
-  },
-  "on_the_prowl": {
-    "sounds": [
-      {
-        "name": "crystechmod:on_the_prowl",
-        "stream": true
-      }
-    ]
-  },
-  "rain_in_the_night": {
-    "sounds": [
-      {
-        "name": "crystechmod:rain_in_the_night",
-        "stream": true
-      }
-    ]
-  },
-  "recon": {
-    "sounds": [
-      {
-        "name": "crystechmod:recon",
-        "stream": true
-      }
-    ]
-  },
-  "awaiting": {
-    "sounds": [
-      {
-        "name": "crystechmod:awaiting",
-        "stream": true
-      }
-    ]
-  },
-  "dense": {
-    "sounds": [
-      {
-        "name": "crystechmod:dense",
         "stream": true
       }
     ]
@@ -329,42 +83,11 @@
       }
     ]
   },
-  "run": {
+
+  "kodiak_stranded": {
     "sounds": [
       {
-        "name": "crystechmod:run",
-        "stream": true
-      }
-    ]
-  },
-  "the_search": {
-    "sounds": [
-      {
-        "name": "crystechmod:the_search",
-        "stream": true
-      }
-    ]
-  },
-  "trenches": {
-    "sounds": [
-      {
-        "name": "crystechmod:trenches",
-        "stream": true
-      }
-    ]
-  },
-  "vector": {
-    "sounds": [
-      {
-        "name": "crystechmod:vector",
-        "stream": true
-      }
-    ]
-  },
-  "voice_rhythm_2": {
-    "sounds": [
-      {
-        "name": "crystechmod:voice_rhythm_2",
+        "name": "crystechmod:kodiak_stranded",
         "stream": true
       }
     ]
@@ -372,96 +95,7 @@
   "vitric_expanse_music": {
     "sounds": [
       {
-        "name": "crystechmod:voice_rhythm_2",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:still_alone",
-        "stream": true
-      },
-
-      {
-        "name": "crystechmod:hyouhaku_wandering",
-        "stream": true
-      },
-
-      {
-        "name": "crystechmod:corroded_valves",
-        "stream": true
-      },
-
-      {
-        "name": "crystechmod:dark_machinations",
-        "stream": true
-      },
-
-      {
-        "name": "crystechmod:dark_valley",
-        "stream": true
-      },
-
-      {
-        "name": "crystechmod:eagles_dawn",
-        "stream": true
-      },
-
-      {
-        "name": "crystechmod:manufactory",
-        "stream": true
-      },
-
-      {
-        "name": "crystechmod:necrofunk",
-        "stream": true
-      },
-
-      {
-        "name": "crystechmod:scouting",
-        "stream": true
-      },
-
-      {
-        "name": "crystechmod:prodigal_son",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:pyrotek",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:repentance",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:space_echo",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:tombs",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:unyielding",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:wires",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:xenophile",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:approach",
-        "stream": true
-      },
-      {
         "name": "crystechmod:dusk_hour",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:ts_dusk_hour",
         "stream": true
       },
       {
@@ -473,75 +107,15 @@
         "stream": true
       },
       {
-        "name": "crystechmod:pharotek",
-        "stream": true
-      },
-      {
         "name": "crystechmod:valves",
         "stream": true
       },
       {
-        "name": "crystechmod:what_lurks",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:airstrike",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:heroism_2",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:creeping_upon",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:depth_charge",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:drone",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:on_the_prowl",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:rain_in_the_night",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:recon",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:awaiting",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:dense",
+        "name": "crystechmod:kodiak_stranded",
         "stream": true
       },
       {
         "name": "crystechmod:derelict",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:run",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:the_search",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:trenches",
-        "stream": true
-      },
-      {
-        "name": "crystechmod:vector",
         "stream": true
       }
     ]

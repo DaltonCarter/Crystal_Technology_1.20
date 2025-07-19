@@ -31,6 +31,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.TEST_BLOCK);
         blockWithItem(ModBlocks.FOOLS_VITRICIUM);
+        blockWithItem(ModBlocks.FOOLS_CRYSTAL_CORE);
 
         //Basic Block States:
         blockWithItem(ModBlocks.GUNDANIUM_BLOCK);

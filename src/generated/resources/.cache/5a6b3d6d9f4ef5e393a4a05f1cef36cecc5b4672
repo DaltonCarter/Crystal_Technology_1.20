@@ -1,7 +1,7 @@
-// 1.20.1	2025-07-09T02:50:28.1757022	Tags for minecraft:item mod id crystechmod
+// 1.20.1	2025-07-18T02:09:03.958903	Tags for minecraft:item mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/items/aeries_ores.json
-77ea3b8940ebc0df73fba72bbe9b9ade8e235374 data/crystechmod/tags/items/alloying_input.json
-fa76f1684399485901512c1963d14384561d1b3d data/crystechmod/tags/items/alloying_result.json
+d9cbaedec56f83f65def981e9dac46ba077fd955 data/crystechmod/tags/items/alloying_input.json
+655216b4c1a7b6525500eec6babbe3f7e78ade3d data/crystechmod/tags/items/alloying_result.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/items/alythum_ores.json
 5159be849ca1f753e204748b15df43bb5f807324 data/crystechmod/tags/items/bucket_output.json
 6b38af71a7ebba97f729de43e6ee84033f8e45cc data/crystechmod/tags/items/concretes.json
@@ -33,8 +33,8 @@ ecf2a3889f87177c168a6ffc2c5f25e077381f19 data/crystechmod/tags/items/sticks.json
 663b4405fee2bbd585777b4e84cf20a69ab0275b data/forge/tags/items/ores.json
 b759f5fd340e754f6a7a35b3b46d2ba136c2fcc1 data/forge/tags/items/raw_materials.json
 1f682baa5bdc283d63c6bd780f9bc6d87b5d8b8b data/forge/tags/items/rods.json
-30d6b9e14647b96ad4fe3ced67c6c5869760118b data/minecraft/tags/items/creeper_drop_music_discs.json
+44865f8b448996e9e30460a29e6ee31ba2683205 data/minecraft/tags/items/creeper_drop_music_discs.json
 e0721fc7760819c2882cc2896aeb4f60de8a8dad data/minecraft/tags/items/logs_that_burn.json
-30d6b9e14647b96ad4fe3ced67c6c5869760118b data/minecraft/tags/items/music_discs.json
+44865f8b448996e9e30460a29e6ee31ba2683205 data/minecraft/tags/items/music_discs.json
 d9c70a57faa76abf1f524057aecf79f0d34ab8db data/minecraft/tags/items/planks.json
 0b440178f75b44dc634bf2ea65fda6296b465209 data/minecraft/tags/items/trimmable_armor.json

@@ -1,0 +1,20 @@
+{
+  "type": "crystechmod:alloy_smelting",
+  "craftTime": 300,
+  "energyAmount": 20,
+  "ingredients": [
+    {
+      "item": "crystechmod:gundanium_dust"
+    },
+    {
+      "item": "crystechmod:iron_dust"
+    },
+    {
+      "item": "minecraft:magma_block"
+    }
+  ],
+  "output": {
+    "count": 3,
+    "item": "crystechmod:firestone"
+  }
+}

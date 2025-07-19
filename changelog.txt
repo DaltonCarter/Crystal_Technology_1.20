@@ -548,6 +548,8 @@ Posted By: Dalton Carter
 -Added Refinery and Recipes
 -Updated Villager Profession with new look, and trades
 -Added New Iron Deco Blocks
+-Profession Structure added to Vanilla Villages
+-Updated Crystal Core Tile/pillar textures
 
 
 

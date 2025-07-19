@@ -51,6 +51,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> FOOLS_VITRICIUM = registerBlock("fools_vitricium",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).sound(SoundType.AMETHYST)));
 
+    public static final RegistryObject<Block> FOOLS_CRYSTAL_CORE = registerBlock("fools_crystal_core",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).noOcclusion().sound(SoundType.AMETHYST).lightLevel(tiberiumglow)));
+
     //Terrain Blocks:
         //Natural Terrain Blocks:
     public static final RegistryObject<Block> TIBERIUM_SOIL = registerBlock("tiberium_soil",
