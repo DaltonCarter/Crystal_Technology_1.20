@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lg_core_blend": {
+    "has_illyrim_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "crystechmod:lg_core_blend"
+              "crystechmod:illyrim_ingot"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_lg_core_blend",
+      "has_illyrim_ingot",
       "has_the_recipe"
     ]
   ],

@@ -1,0 +1,16 @@
+{
+  "name": "crystechmod:house/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "location": "crystechmod:village/houses/gather_hut",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 5
+
+    }
+  ]
+}

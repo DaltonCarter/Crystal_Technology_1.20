@@ -1,0 +1,16 @@
+{
+  "name": "crystechmod:house/center",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "crystechmod:village/center/center",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    }
+  ]
+}

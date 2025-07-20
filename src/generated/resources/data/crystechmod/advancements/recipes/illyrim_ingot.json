@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_illyrim_blend": {
+    "has_qualrim_compound": {
       "conditions": {
         "items": [
           {
             "items": [
-              "crystechmod:illyrim_blend"
+              "crystechmod:qualrim_compound"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_illyrim_blend",
+      "has_qualrim_compound",
       "has_the_recipe"
     ]
   ],

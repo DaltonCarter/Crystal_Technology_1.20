@@ -1065,7 +1065,7 @@
   "effect.crystechmod.freeze": "Freeze",
   "effect.crystechmod.slimey_effect": "Slimey",
 
-  "entity.minecraft.villager.crystechmod.tiberiumgatherer": "Tiberium Gatherer",
+  "entity.minecraft.villager.crystechmod.vitric_gatherer": "Vitric Gatherer",
 
   "crystechmod.tooltip.liquid.amount.with.capacity": "%s / %s mB",
   "crystechmod.tooltip.liquid.amount": "%s mB",
