@@ -46,6 +46,7 @@ import com.CartersDev.crystechmod.util.ModWoodTypes;
 import com.CartersDev.crystechmod.villager.ModVillagers;
 import com.CartersDev.crystechmod.worldgen.ModFeatureTypes.ModFeatures;
 import com.CartersDev.crystechmod.worldgen.biome.ModTerraBlenderAPI;
+import com.CartersDev.crystechmod.worldgen.biome.surface.ModSurfaceRules;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -70,6 +71,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -156,7 +158,7 @@ public class CrystalTech {
             ComposterBlock.COMPOSTABLES.put(ModBlocks.PLAGUED_SAPLING.get(),0.35f);
 
 
-//            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.vitricExpanse());
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.vitricExpanse());
 
 
 
