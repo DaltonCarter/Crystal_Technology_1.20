@@ -6,6 +6,7 @@ import com.CartersDev.crystechmod.worldgen.ModConfiguredFeatures;
 import com.CartersDev.crystechmod.worldgen.ModPlacedFeatures;
 import com.CartersDev.crystechmod.worldgen.biome.ModBiomes;
 import com.CartersDev.crystechmod.worldgen.carvers.ModCarvers;
+import com.CartersDev.crystechmod.worldgen.dimension.ModDimensions;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
@@ -23,6 +24,8 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
             .add(Registries.BIOME, ModBiomes::bootstrap)
+            .add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem)
+            .add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType)
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
 
 

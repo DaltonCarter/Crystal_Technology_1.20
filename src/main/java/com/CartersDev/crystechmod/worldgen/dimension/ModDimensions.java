@@ -68,6 +68,7 @@ public class ModDimensions {
         HolderGetter<DimensionType> dimTypes = context.lookup(Registries.DIMENSION_TYPE);
         HolderGetter<NoiseGeneratorSettings> noiseGenSettings = context.lookup(Registries.NOISE_SETTINGS);
 
+
     //Flat World Generation:
         HolderGetter<StructureSet> structures = context.lookup(Registries.STRUCTURE_SET);
         HolderGetter<PlacedFeature> placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -97,7 +98,7 @@ public class ModDimensions {
 
         NoiseBasedChunkGenerator wrappedChunkGenerator = new NoiseBasedChunkGenerator(
                 new FixedBiomeSource(biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_DESERT)),
-                noiseGenSettings.getOrThrow(VITRIC_EXPANSE_SETTINGS));
+                noiseGenSettings.getOrThrow(NoiseGeneratorSettings.OVERWORLD));
 
         NoiseBasedChunkGenerator noiseBasedChunkGenerator = new NoiseBasedChunkGenerator(
                 MultiNoiseBiomeSource.createFromList(
@@ -108,7 +109,7 @@ public class ModDimensions {
                                 Pair.of(Climate.parameters(0.4F, 0.3F, 0.2F, 0.1F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.BURNING_HILLS))
 
                         ))),
-                noiseGenSettings.getOrThrow(VITRIC_EXPANSE_SETTINGS));
+                noiseGenSettings.getOrThrow(NoiseGeneratorSettings.AMPLIFIED));
 
         LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.VITRIC_EXPANSE_TYPE), wrappedChunkGenerator);
 

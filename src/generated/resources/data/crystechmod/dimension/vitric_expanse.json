@@ -1,0 +1,11 @@
+{
+  "type": "crystechmod:vitric_expanse_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "crystechmod:tiberian_desert"
+    },
+    "settings": "minecraft:overworld"
+  }
+}

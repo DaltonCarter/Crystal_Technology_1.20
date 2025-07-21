@@ -2,11 +2,9 @@ package com.CartersDev.crystechmod.util;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.FluidTags;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
+import net.minecraft.tags.*;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.common.Tags;
@@ -132,6 +130,7 @@ public class ModTags {
             return FluidTags.create(new ResourceLocation(CrystalTech.MOD_ID, name));
         }
     }
+
 
 
 }

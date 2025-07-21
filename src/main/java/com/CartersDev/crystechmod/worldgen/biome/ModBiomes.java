@@ -5,6 +5,7 @@ import com.CartersDev.crystechmod.entity.ModEntities;
 import com.CartersDev.crystechmod.sound.ModSounds;
 import com.CartersDev.crystechmod.worldgen.ModPlacedFeatures;
 import com.CartersDev.crystechmod.worldgen.carvers.ModCarvers;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
@@ -14,11 +15,14 @@ import net.minecraft.data.worldgen.placement.*;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.Musics;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 
 public class ModBiomes {
@@ -1053,7 +1057,6 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
     public static Biome tiberianDesert (BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
-
         BiomeDefaultFeatures.desertSpawns(spawnBuilder);
 
         BiomeGenerationSettings.Builder biomeBuilder =
@@ -1062,19 +1065,30 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
         vitricExpanseYZGeneration(biomeBuilder);
 
+
+
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
 
         BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
         BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
+
         BiomeDefaultFeatures.addDesertVegetation(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDesertExtraVegetation(biomeBuilder);
         BiomeDefaultFeatures.addDesertExtraDecoration(biomeBuilder);
 
+
+
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_DIRT_PLACED_KEY);
+
+
+
+
+
+
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(false)
@@ -1093,6 +1107,22 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                         .backgroundMusic(Musics.createGameMusic(ModSounds.VITRIC_EXPANSE_MUSIC.getHolder().get())).build())
                 .build();
     }
+
+//    public static Biome desert(HolderGetter<PlacedFeature> pPlacedFeatures, HolderGetter<ConfiguredWorldCarver<?>> pWorldCarvers) {
+//        MobSpawnSettings.Builder mobspawnsettings$builder = new MobSpawnSettings.Builder();
+//        BiomeDefaultFeatures.desertSpawns(mobspawnsettings$builder);
+//        BiomeGenerationSettings.Builder biomegenerationsettings$builder = new BiomeGenerationSettings.Builder(pPlacedFeatures, pWorldCarvers);
+//        BiomeDefaultFeatures.addFossilDecoration(biomegenerationsettings$builder);
+//        globalOverworldGeneration(biomegenerationsettings$builder);
+//        BiomeDefaultFeatures.addDefaultOres(biomegenerationsettings$builder);
+//        BiomeDefaultFeatures.addDefaultSoftDisks(biomegenerationsettings$builder);
+//        BiomeDefaultFeatures.addDefaultFlowers(biomegenerationsettings$builder);
+//        BiomeDefaultFeatures.addDefaultGrass(biomegenerationsettings$builder);
+//        BiomeDefaultFeatures.addDesertVegetation(biomegenerationsettings$builder);
+//        BiomeDefaultFeatures.addDefaultMushrooms(biomegenerationsettings$builder);
+//        BiomeDefaultFeatures.addDesertExtraVegetation(biomegenerationsettings$builder);
+//        BiomeDefaultFeatures.addDesertExtraDecoration(biomegenerationsettings$builder);
+//        return biome(false, 2.0F, 0.0F, mobspawnsettings$builder, biomegenerationsettings$builder, Musics.createGameMusic(SoundEvents.MUSIC_BIOME_DESERT));
 
     public static Biome tiberianDesertHills (BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();

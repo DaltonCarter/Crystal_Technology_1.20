@@ -52,7 +52,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).sound(SoundType.AMETHYST)));
 
     public static final RegistryObject<Block> FOOLS_CRYSTAL_CORE = registerBlock("fools_crystal_core",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).noOcclusion().sound(SoundType.AMETHYST).lightLevel(tiberiumglow)));
+            () -> new TempPortalBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).noOcclusion().sound(SoundType.AMETHYST).lightLevel(tiberiumglow)));
 
     //Terrain Blocks:
         //Natural Terrain Blocks:

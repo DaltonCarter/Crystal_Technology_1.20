@@ -12,8 +12,8 @@ public class ModBiomeDefaultFeatures {
 
     public static void addVitricOreVariety(BiomeGenerationSettings.Builder pBuilder) {
         pBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYSTECH_DEBRIS_PLACED_KEY);
-        pBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYSTECH_HARMONIUM_PLACED_KEY);
         pBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYSTECH_GUNDANIUM_PLACED_KEY);
+        pBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYSTECH_HARMONIUM_PLACED_KEY);
         pBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYSTECH_ALYTHUM_PLACED_KEY);
         pBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYSTECH_ILLUMINA_PLACED_KEY);
         pBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYSTECH_KRYON_PLACED_KEY);
