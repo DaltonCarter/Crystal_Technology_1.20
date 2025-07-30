@@ -22,8 +22,8 @@
       "sound": "crystechmod:vitric_expanse_music"
     },
     "sky_color": 7842047,
-    "water_color": 4159204,
-    "water_fog_color": 329011
+    "water_color": 7842047,
+    "water_fog_color": 7842047
   },
   "features": [
     [],
@@ -80,7 +80,8 @@
       "crystechmod:crystech_qualrite_ores_placed",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "minecraft:disk_gravel"
+      "minecraft:disk_gravel",
+      "minecraft:ore_emerald"
     ],
     [],
     [

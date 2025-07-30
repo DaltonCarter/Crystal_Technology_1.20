@@ -31,8 +31,15 @@ public class TiberiumSoilBlock extends Block {
             BlockState aboveState = worldIn.getBlockState(abovePos);
             Block aboveBlock = aboveState.getBlock();
 
+            if(aboveBlock == Blocks.POWDER_SNOW || aboveBlock == Blocks.SNOW|| aboveBlock == Blocks.SNOW_BLOCK){
+                worldIn.setBlockAndUpdate(abovePos, Blocks.AIR.defaultBlockState());
+            }
 
-            if (aboveBlock == Blocks.AIR || aboveBlock == Blocks.TALL_GRASS || aboveBlock == Blocks.GRASS) {
+            if(aboveBlock == Blocks.WATER){
+                worldIn.setBlockAndUpdate(abovePos, ModBlocks.TIBERIUM_WATER_BLOCK.get().defaultBlockState());
+            }
+
+            if (aboveBlock == Blocks.AIR || aboveBlock == Blocks.TALL_GRASS || aboveBlock == Blocks.GRASS || aboveBlock == Blocks.DEAD_BUSH) {
                 Random random = new Random();
                 int number = random.nextInt(10);
 

@@ -2,6 +2,7 @@ package com.CartersDev.crystechmod.block;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.custom.*;
+import com.CartersDev.crystechmod.block.custom.terrainBlocks.VitricSandBlock;
 import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.sound.ModSounds;
@@ -103,10 +104,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
     public static final RegistryObject<Block> YELLOW_ZONE_SAND = registerBlock("yellow_zone_sand",
-            () -> new SandBlock(24815329, BlockBehaviour.Properties.copy(Blocks.SAND)));
+            () -> new VitricSandBlock(24815329, BlockBehaviour.Properties.copy(Blocks.SAND)));
 
     public static final RegistryObject<Block> RED_ZONE_SAND = registerBlock("red_zone_sand",
-            () -> new SandBlock(414141, BlockBehaviour.Properties.copy(Blocks.SAND)));
+            () -> new VitricSandBlock(414141, BlockBehaviour.Properties.copy(Blocks.SAND)));
 
     public static final RegistryObject<Block> SEEDED_DIRT = registerBlock("seeded_dirt",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
@@ -2857,7 +2858,7 @@ public class ModBlocks {
                     .noOcclusion().noCollission()));
 
     public static final RegistryObject<LiquidBlock> TIBERIUM_WATER_BLOCK = BLOCKS.register("tiberium_water_block",
-            () -> new LiquidBlock(ModFluids.SOURCE_TIBERIUM_WATER, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
+            () -> new LiquidBlock(ModFluids.SOURCE_TIBERIUM_WATER, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable().liquid()));
 
     public static final RegistryObject<LiquidBlock> MOLTEN_TIBERIUM_BLOCK = BLOCKS.register("molten_tiberium_block",
             () -> new MoltenTiberiumBlock(ModFluids.SOURCE_MOLTEN_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)

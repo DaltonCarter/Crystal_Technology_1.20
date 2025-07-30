@@ -24,7 +24,13 @@
         "minecraft:dirt",
         "minecraft:grass_block",
         "crystechmod:yellow_zone_cracked_dirt",
-        "crystechmod:red_zone_dirt"
+        "crystechmod:red_zone_dirt",
+        "minecraft:terracotta",
+        "minecraft:yellow_terracotta",
+        "minecraft:white_terracotta",
+        "minecraft:brown_terracotta",
+        "minecraft:orange_terracotta",
+        "minecraft:red_terracotta"
       ]
     }
   }

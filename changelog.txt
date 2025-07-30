@@ -550,6 +550,7 @@ Posted By: Dalton Carter
 -Added New Iron Deco Blocks
 -Profession Structure added to Vanilla Villages
 -Updated Crystal Core Tile/pillar textures
+-Vitric Expanse Dimension now implemented with 24 out of 52 Biomes
 
 
 

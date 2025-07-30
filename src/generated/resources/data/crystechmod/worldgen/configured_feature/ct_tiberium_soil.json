@@ -22,7 +22,19 @@
       "type": "minecraft:matching_blocks",
       "blocks": [
         "minecraft:dirt",
-        "minecraft:grass_block"
+        "minecraft:grass_block",
+        "crystechmod:yellow_zone_sand",
+        "crystechmod:yz_sandstone",
+        "crystechmod:yellow_zone_cracked_dirt",
+        "crystechmod:seeded_yellow_zone_cracked_dirt",
+        "minecraft:terracotta",
+        "minecraft:yellow_terracotta",
+        "minecraft:white_terracotta",
+        "minecraft:brown_terracotta",
+        "minecraft:orange_terracotta",
+        "minecraft:red_terracotta",
+        "crystechmod:infested_cobble",
+        "crystechmod:infested_stone"
       ]
     }
   }

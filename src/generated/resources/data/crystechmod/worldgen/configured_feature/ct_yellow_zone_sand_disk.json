@@ -5,15 +5,15 @@
     "radius": {
       "type": "minecraft:uniform",
       "value": {
-        "max_inclusive": 5,
-        "min_inclusive": 1
+        "max_inclusive": 8,
+        "min_inclusive": 4
       }
     },
     "state_provider": {
       "fallback": {
         "type": "minecraft:simple_state_provider",
         "state": {
-          "Name": "crystechmod:seeded_yellow_zone_cracked_dirt"
+          "Name": "crystechmod:yellow_zone_sand"
         }
       },
       "rules": []
@@ -21,17 +21,15 @@
     "target": {
       "type": "minecraft:matching_blocks",
       "blocks": [
-        "minecraft:dirt",
-        "minecraft:grass_block",
         "crystechmod:yellow_zone_cracked_dirt",
-        "crystechmod:red_zone_dirt",
+        "crystechmod:seeded_yellow_zone_cracked_dirt",
+        "crystechmod:yz_sandstone",
         "minecraft:terracotta",
         "minecraft:yellow_terracotta",
         "minecraft:white_terracotta",
         "minecraft:brown_terracotta",
         "minecraft:orange_terracotta",
-        "minecraft:red_terracotta",
-        "minecraft:gravel"
+        "minecraft:red_terracotta"
       ]
     }
   }

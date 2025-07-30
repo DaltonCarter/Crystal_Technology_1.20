@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.joml.Vector3f;
+import org.joml.Vector4f;
 
 public class ModFluidTypes {
     public static final ResourceLocation WATER_STILL_RL = new ResourceLocation("block/water_still");
@@ -27,7 +28,7 @@ public class ModFluidTypes {
 
 
     public static final RegistryObject<FluidType> TIBERIUM_WATER_FLUID_TYPE = register("tiberium_water_fluid",
-            FluidType.Properties.create().lightLevel(2).density(15).viscosity(5).sound(SoundAction.get("drink"),
+            FluidType.Properties.create().lightLevel(2).sound(SoundAction.get("drink"),
                     SoundEvents.HONEY_DRINK).canConvertToSource(true).canHydrate(true).canDrown(true).canPushEntity(true)
                     .canSwim(true).supportsBoating(true));
 

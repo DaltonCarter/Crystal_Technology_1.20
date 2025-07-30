@@ -33,6 +33,12 @@ public class ModBiomes {
         return Mth.hsvToRgb(0.62222224F - $$1 * 0.05F, 0.5F + $$1 * 0.1F, 1.0F);
     }
 
+    protected static int calculateWaterColor(float pTemperature) {
+        float $$1 = pTemperature / 3.0F;
+        $$1 = Mth.clamp($$1, -1.0F, 1.0F);
+        return Mth.hsvToRgb(0.62222224F - $$1 * 0.05F, 0.5F + $$1 * 0.1F, 1.0F);
+    }
+
 //Overworld:
     //Ember themed:
     public static final ResourceKey<Biome> EMBER_GLOW_FOREST = register("ember_glow_forest");
@@ -232,8 +238,8 @@ public static void bootstrap(BootstapContext<Biome> context){
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(0.7F))
+                        .waterFogColor(calculateWaterColor(0.7F))
                         .skyColor(0xFF8585)
                         .grassColorOverride(0xFF0A0A)
                         .foliageColorOverride(0xA30000)
@@ -290,8 +296,8 @@ public static void bootstrap(BootstapContext<Biome> context){
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(0.7F))
+                        .waterFogColor(calculateWaterColor(0.7F))
                         .skyColor(0xFFD60A)
                         .grassColorOverride(0xFFD60A)
                         .foliageColorOverride(0xF5CC00)
@@ -351,8 +357,8 @@ public static void bootstrap(BootstapContext<Biome> context){
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(0.7F))
+                        .waterFogColor(calculateWaterColor(0.7F))
                         .skyColor(0xFF8585)
                         .grassColorOverride(0xFF0A0A)
                         .foliageColorOverride(0xA30000)
@@ -409,8 +415,8 @@ public static void bootstrap(BootstapContext<Biome> context){
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(0.7F))
+                        .waterFogColor(calculateWaterColor(0.7F))
                         .skyColor(calculateSkyColor(0.7F))
                         .grassColorOverride(0xFFD60A)
                         .foliageColorOverride(0xF5CC00)
@@ -490,8 +496,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
             .temperature(0.8F)
             .downfall(0.9F)
             .specialEffects((new BiomeSpecialEffects.Builder())
-                    .waterColor(3832426)
-                    .waterFogColor(5077600)
+                    .waterColor(calculateWaterColor(0.8F))
+                    .waterFogColor(calculateWaterColor(0.8F))
                     .fogColor(12638463)
                     .skyColor(calculateSkyColor(0.8F))
                     .foliageColorOverride(9285927)
@@ -539,8 +545,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .temperature(0.8F)
                 .downfall(0.9F)
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(4159204)
-                        .waterFogColor(329011)
+                        .waterColor(calculateWaterColor(0.8F))
+                        .waterFogColor(calculateWaterColor(0.8F))
                         .fogColor(12638463)
                         .skyColor(calculateSkyColor(0.8F))
                         .ambientMoodSound(new AmbientMoodSettings(ModSounds.VITRIC_AMBIENT.getHolder().get(), 6000, 8, 2.0D))
@@ -555,7 +561,6 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
         BiomeDefaultFeatures.farmAnimals(spawnBuilder);
 
-
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.LLAMA, 5, 2, 5));
 
         BiomeGenerationSettings.Builder biomeBuilder =
@@ -566,10 +571,17 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
         BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
+        BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
+        BiomeDefaultFeatures.addInfestedStone(biomeBuilder);
         BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
         BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_DIRT_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, MiscOverworldPlacements.FOREST_ROCK);
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, MiscOverworldPlacements.DISK_GRAVEL);
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, MiscOverworldPlacements.DISK_GRASS);
 
 
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.TIBERIUM_GEODE_PLACED_KEY);
@@ -579,8 +591,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .temperature(0.2F)
                 .downfall(0.3F)
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(4159204)
-                        .waterFogColor(329011)
+                        .waterColor(calculateWaterColor(0.2F))
+                        .waterFogColor(calculateWaterColor(0.2F))
                         .fogColor(12638463)
                         .skyColor(calculateSkyColor(0.2F))
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
@@ -607,6 +619,7 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
         BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
+        BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
         BiomeDefaultFeatures.addJungleMelons(biomeBuilder);
         BiomeDefaultFeatures.addJungleGrass(biomeBuilder);
         BiomeDefaultFeatures.addJungleTrees(biomeBuilder);
@@ -623,8 +636,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .temperature(0.95F)
                 .downfall(0.9F)
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(4159204)
-                        .waterFogColor(329011)
+                        .waterColor(calculateWaterColor(0.95F))
+                        .waterFogColor(calculateWaterColor(0.95F))
                         .fogColor(12638463)
                         .skyColor(calculateSkyColor(0.95F))
                         .ambientMoodSound(new AmbientMoodSettings(ModSounds.VITRIC_AMBIENT.getHolder().get(), 6000, 8, 2.0D))
@@ -646,22 +659,21 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
         vitricExpanseYZGeneration(biomeBuilder);
 
-
-
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
         ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
 
-
+        BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
         BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
 
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.VITRIC_BLOOM_PLACED_KEY);
 
-
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_YELLOW_ZONE_DIRT_PLACED_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_SEEDED_YELLOW_ZONE_DIRT_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_SEEDED_DIRT_PLACED_KEY);
 
 
 
@@ -673,8 +685,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(0.5F))
+                        .waterFogColor(calculateWaterColor(0.5F))
                         .skyColor(calculateSkyColor(0.3F))
                         .grassColorOverride(0x6C6E3C)
                         .foliageColorOverride(0x6C6E3C)
@@ -705,17 +717,17 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
             BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
             ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
             BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
-
-            BiomeDefaultFeatures.addWarmFlowers(biomeBuilder);
+            BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
             BiomeDefaultFeatures.addFerns(biomeBuilder);
             BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
             BiomeDefaultFeatures.addForestGrass(biomeBuilder);
             BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
             BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
+            BiomeDefaultFeatures.addWarmFlowers(biomeBuilder);
 
-
-            biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SPITFIRE_PLACED_KEY);
             biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SM_EMBER_PLACED_KEY);
+            biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SPITFIRE_PLACED_KEY);
+
             biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.TIBERIUM_GEODE_PLACED_KEY);
 
 
@@ -726,8 +738,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                     .generationSettings(biomeBuilder.build())
                     .mobSpawnSettings(spawnBuilder.build())
                     .specialEffects((new BiomeSpecialEffects.Builder())
-                            .waterColor(0x0000FF)
-                            .waterFogColor(0x0000FF)
+                            .waterColor(calculateWaterColor(1.5F))
+                            .waterFogColor(calculateWaterColor(1.5F))
                             .skyColor(0xFF8585)
                             .grassColorOverride(0xFF0A0A)
                             .foliageColorOverride(0xA30000)
@@ -752,25 +764,28 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
         globalOverworldGeneration(biomeBuilder);
-        BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
         BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
+        BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
 
-        BiomeDefaultFeatures.addWarmFlowers(biomeBuilder);
         BiomeDefaultFeatures.addFerns(biomeBuilder);
         BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         BiomeDefaultFeatures.addForestGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
         BiomeDefaultFeatures.addMossyStoneBlock(biomeBuilder);
+        BiomeDefaultFeatures.addWarmFlowers(biomeBuilder);
 
+
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.EMBER_PLACED_KEY);
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SPITFIRE_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.FULGURBLOOM_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.YOKARAN_BLOOM_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.DEVILS_BLOOD_PLACED_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.FULGURBLOOM_PLACED_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.EMBER_PLACED_KEY);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.TIBERIUM_GEODE_PLACED_KEY);
 
 
@@ -781,8 +796,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(1.5F))
+                        .waterFogColor(calculateWaterColor(1.5F))
                         .skyColor(0xFF8585)
                         .grassColorOverride(0xFF0A0A)
                         .foliageColorOverride(0xA30000)
@@ -809,21 +824,23 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 ;
 
         globalOverworldGeneration(biomeBuilder);
-        BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
         BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
 
-        BiomeDefaultFeatures.addWarmFlowers(biomeBuilder);
+
         BiomeDefaultFeatures.addFerns(biomeBuilder);
         BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         BiomeDefaultFeatures.addForestGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
+        BiomeDefaultFeatures.addWarmFlowers(biomeBuilder);
 
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SM_EMBER_PLACED_KEY);
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SPITFIRE_PLACED_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SM_EMBER_PLACED_KEY);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.TIBERIUM_GEODE_PLACED_KEY);
 
 
@@ -834,8 +851,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(1.5F))
+                        .waterFogColor(calculateWaterColor(1.5F))
                         .skyColor(0xFF8585)
                         .grassColorOverride(0xFF0A0A)
                         .foliageColorOverride(0xA30000)
@@ -868,6 +885,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
             BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
             ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
             BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
+            BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
+            BiomeDefaultFeatures.addExtraGold(biomeBuilder);
 
             BiomeDefaultFeatures.addForestFlowers(biomeBuilder);
             BiomeDefaultFeatures.addFerns(biomeBuilder);
@@ -877,8 +896,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
             BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
 
 
-            biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.FULGURBLOOM_PLACED_KEY);
             biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SM_MARIKA_PLACED_KEY);
+
+            biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.FULGURBLOOM_PLACED_KEY);
 
             biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.TIBERIUM_GEODE_PLACED_KEY);
 
@@ -889,8 +909,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                     .generationSettings(biomeBuilder.build())
                     .mobSpawnSettings(spawnBuilder.build())
                     .specialEffects((new BiomeSpecialEffects.Builder())
-                            .waterColor(0x0000FF)
-                            .waterFogColor(0x0000FF)
+                            .waterColor(calculateWaterColor(0.7F))
+                            .waterFogColor(calculateWaterColor(0.7F))
                             .skyColor(calculateSkyColor(0.7F))
                             .grassColorOverride(0xFFD60A)
                             .foliageColorOverride(0xF5CC00)
@@ -921,15 +941,15 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
         BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
-
+        BiomeDefaultFeatures.addExtraGold(biomeBuilder);
 
         BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         BiomeDefaultFeatures.addForestGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SM_MARIKA_PLACED_KEY);
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.FULGURBLOOM_PLACED_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SM_MARIKA_PLACED_KEY);
 
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.TIBERIUM_GEODE_PLACED_KEY);
 
@@ -940,8 +960,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(0.7F))
+                        .waterFogColor(calculateWaterColor(0.7F))
                         .skyColor(calculateSkyColor(0.7F))
                         .grassColorOverride(0xFFD60A)
                         .foliageColorOverride(0xF5CC00)
@@ -966,24 +986,23 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                         .addCarver(GenerationStep.Carving.AIR, Carvers.CANYON)
                         .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CT_GLOWSTONE_PLACED_KEY);
 
-        BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
+
         globalOverworldGeneration(biomeBuilder);
 
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-        BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
+        BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
+        BiomeDefaultFeatures.addExtraGold(biomeBuilder);
 
         BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         BiomeDefaultFeatures.addForestGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
 
 
-
-
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.FULGURBLOOM_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SM_MARIKA_PLACED_KEY);
 
-
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.FULGURBLOOM_PLACED_KEY);
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)
@@ -992,8 +1011,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(0.7F))
+                        .waterFogColor(calculateWaterColor(0.7F))
                         .skyColor(calculateSkyColor(0.7F))
                         .grassColorOverride(0xFFD60A)
                         .foliageColorOverride(0xF5CC00)
@@ -1007,13 +1026,11 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
     public static Biome deadForest (BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
-
         BiomeDefaultFeatures.farmAnimals(spawnBuilder);
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
-
 
         vitricExpanseYZGeneration(biomeBuilder);
 
@@ -1021,20 +1038,23 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
         ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
 
-
+        BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
         BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         BiomeDefaultFeatures.addForestGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
 
-
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.DEAD_HEAVY_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.DEAD_PLACED_KEY);
 
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.VITRIC_ROSE_PLACED_KEY);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_SEEDED_DIRT_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_DIRT_PLACED_KEY);
-
-
-
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_SEEDED_YELLOW_ZONE_DIRT_PLACED_KEY);
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)
@@ -1043,8 +1063,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(0.7F))
+                        .waterFogColor(calculateWaterColor(0.7F))
                         .skyColor(calculateSkyColor(0.7F))
                         .grassColorOverride(0x7A4301)
                         .foliageColorOverride(0x7A4301)
@@ -1065,29 +1085,18 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
         vitricExpanseYZGeneration(biomeBuilder);
 
-
-
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
         ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
-
-        BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
-        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
 
         BiomeDefaultFeatures.addDesertVegetation(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDesertExtraVegetation(biomeBuilder);
         BiomeDefaultFeatures.addDesertExtraDecoration(biomeBuilder);
 
-
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
 
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_DIRT_PLACED_KEY);
-
-
-
-
-
 
 
         return new Biome.BiomeBuilder()
@@ -1097,8 +1106,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(2.0F))
+                        .waterFogColor(calculateWaterColor(2.0F))
                         .skyColor(calculateSkyColor(2.0F))
                         .grassColorOverride(0x6C6E3C)
                         .foliageColorOverride(0x6C6E3C)
@@ -1137,18 +1146,19 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         vitricExpanseYZGeneration(biomeBuilder);
 
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
+        BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
 
-
-        BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
-        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         BiomeDefaultFeatures.addDesertVegetation(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDesertExtraVegetation(biomeBuilder);
         BiomeDefaultFeatures.addDesertExtraDecoration(biomeBuilder);
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_YELLOW_ZONE_SAND_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_RIPARIUS_STONE_CLUMP_PLACED_KEY);
 
         return new Biome.BiomeBuilder()
@@ -1158,8 +1168,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(2.0F))
+                        .waterFogColor(calculateWaterColor(2.0F))
                         .skyColor(calculateSkyColor(2.0F))
                         .grassColorOverride(0x6C6E3C)
                         .foliageColorOverride(0x6C6E3C)
@@ -1172,7 +1182,6 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
     public static Biome tiberianBadlands (BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
-
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
 
         BiomeGenerationSettings.Builder biomeBuilder =
@@ -1183,17 +1192,21 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
-
+        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
+        BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
 
         BiomeDefaultFeatures.addBadlandGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addBadlandExtraVegetation(biomeBuilder);
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.PATCH_CACTUS_DESERT);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_DIRT_PLACED_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.DEAD_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_SEEDED_YELLOW_ZONE_DIRT_PLACED_KEY);
+
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)
@@ -1202,9 +1215,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
-                        .skyColor(calculateSkyColor(0.5F))
+                        .waterColor(calculateWaterColor(2.0F))
+                        .waterFogColor(calculateWaterColor(2.0F))
+                        .skyColor(calculateSkyColor(2.0F))
                         .grassColorOverride(0x6C6E3C)
                         .foliageColorOverride(0x6C6E3C)
                         .fogColor(0xFFE770)
@@ -1227,28 +1240,31 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
-
+        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
+        BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
 
         BiomeDefaultFeatures.addBadlandGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addBadlandExtraVegetation(biomeBuilder);
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_DIRT_PLACED_KEY);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VINIFERA_STONE_CLUMP_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VINIFERA_STONE_PLACED_KEY);
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)
-                .downfall(0.3f)
-                .temperature(2.0f)
+                .downfall(0.7f)
+                .temperature(-0.3f)
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
-                        .skyColor(calculateSkyColor(0.3F))
+                        .waterColor(calculateWaterColor(-0.3F))
+                        .waterFogColor(calculateWaterColor(-0.3F))
+                        .skyColor(calculateSkyColor(-0.3F))
                         .grassColorOverride(0x6C6E3C)
                         .foliageColorOverride(0x6C6E3C)
                         .fogColor(0xFFE770)
@@ -1266,33 +1282,37 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
-        BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
         vitricExpanseYZGeneration(biomeBuilder);
 
 
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
+
 
 
         BiomeDefaultFeatures.addBadlandGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addBadlandExtraVegetation(biomeBuilder);
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_RIPARIUS_STONE_CLUMP_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_RIPARIUS_STONE_PLACED_KEY);
 
 
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)
-                .downfall(0.3f)
-                .temperature(2.0f)
+                .downfall(0.8f)
+                .temperature(0.3f)
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(0.3F))
+                        .waterFogColor(calculateWaterColor(0.3F))
                         .skyColor(calculateSkyColor(0.3F))
                         .grassColorOverride(0x6C6E3C)
                         .foliageColorOverride(0x6C6E3C)
@@ -1311,18 +1331,23 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
-        BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
+
         vitricExpanseYZGeneration(biomeBuilder);
 
 
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
+        BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
 
 
         BiomeDefaultFeatures.addBadlandGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
-        BiomeDefaultFeatures.addBadlandExtraVegetation(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.PLAGUED_PLACED_KEY);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
 
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_CRUENTUS_STONE_CLUMP_PLACED_KEY);
@@ -1331,14 +1356,14 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)
-                .downfall(0.3f)
-                .temperature(2.0f)
+                .downfall(0.4f)
+                .temperature(0.1f)
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
-                        .skyColor(calculateSkyColor(0.3F))
+                        .waterColor(calculateWaterColor(0.1F))
+                        .waterFogColor(calculateWaterColor(0.1F))
+                        .skyColor(calculateSkyColor(0.1F))
                         .grassColorOverride(0x6C6E3C)
                         .foliageColorOverride(0x6C6E3C)
                         .fogColor(0xFFE770)
@@ -1356,23 +1381,22 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
-        BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
+
         vitricExpanseYZGeneration(biomeBuilder);
 
 
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
 
-
-        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
-
-
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)
@@ -1381,8 +1405,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(0.8F))
+                        .waterFogColor(calculateWaterColor(0.8F))
                         .skyColor(calculateSkyColor(0.8F))
                         .grassColorOverride(0x6C6E3C)
                         .foliageColorOverride(0x6C6E3C)
@@ -1401,21 +1425,24 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
-        BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
         vitricExpanseYZGeneration(biomeBuilder);
 
 
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
 
 
-        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
+
         BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_RIPARIUS_STONE_CLUMP_PLACED_KEY);
 
 
@@ -1427,8 +1454,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(0.8F))
+                        .waterFogColor(calculateWaterColor(0.8F))
                         .skyColor(calculateSkyColor(0.8F))
                         .grassColorOverride(0x6C6E3C)
                         .foliageColorOverride(0x6C6E3C)
@@ -1450,21 +1477,24 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
-        BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
+
         vitricExpanseYZGeneration(biomeBuilder);
 
 
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
 
 
-        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_RIVER);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.DEAD_HEAVY_PLACED_KEY);
 
 
@@ -1478,8 +1508,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(0.5F))
+                        .waterFogColor(calculateWaterColor(0.5F))
                         .skyColor(calculateSkyColor(0.5F))
                         .grassColorOverride(0x6C6E3C)
                         .foliageColorOverride(0x6C6E3C)
@@ -1505,15 +1535,13 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
 
-
+        BiomeDefaultFeatures.addWaterTrees(biomeBuilder);
         BiomeDefaultFeatures.addDefaultSeagrass(biomeBuilder);
-        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
-        BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
-        BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
-        BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_NORMAL);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_DEEP);
@@ -1527,8 +1555,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(0.5F))
+                        .waterFogColor(calculateWaterColor(0.5F))
                         .skyColor(calculateSkyColor(0.5F))
                         .grassColorOverride(0x6C6E3C)
                         .foliageColorOverride(0x6C6E3C)
@@ -1550,8 +1578,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         vitricExpanseYZGeneration(biomeBuilder);
 
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
 
 
 
@@ -1559,8 +1587,10 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addBadlandExtraVegetation(biomeBuilder);
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_DIRT_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_SEEDED_YELLOW_ZONE_DIRT_PLACED_KEY);
 
 
 
@@ -1571,8 +1601,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(1.5F))
+                        .waterFogColor(calculateWaterColor(1.5F))
                         .skyColor(calculateSkyColor(1.5F))
                         .grassColorOverride(0x6C6E3C)
                         .foliageColorOverride(0x6C6E3C)
@@ -1592,21 +1622,23 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER))
                         .addCarver(GenerationStep.Carving.AIR, ModCarvers.VITRIC_YZ_CANYON);
 
-        BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
+
         vitricExpanseYZGeneration(biomeBuilder);
 
 
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
         ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        ModBiomeDefaultFeatures.addYZSoftDisks(biomeBuilder);
 
 
         BiomeDefaultFeatures.addBadlandGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addBadlandExtraVegetation(biomeBuilder);
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
+
         biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_DIRT_PLACED_KEY);
+
 
 
 
@@ -1617,8 +1649,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x0000FF)
-                        .waterFogColor(0x0000FF)
+                        .waterColor(calculateWaterColor(1.5F))
+                        .waterFogColor(calculateWaterColor(1.5F))
                         .skyColor(calculateSkyColor(1.5F))
                         .grassColorOverride(0x6C6E3C)
                         .foliageColorOverride(0x6C6E3C)

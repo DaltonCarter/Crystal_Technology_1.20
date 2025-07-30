@@ -30,8 +30,8 @@
       "probability": 8.925E-4
     },
     "sky_color": 16745861,
-    "water_color": 255,
-    "water_fog_color": 255
+    "water_color": 7515647,
+    "water_fog_color": 7515647
   },
   "features": [
     [],
@@ -45,9 +45,7 @@
     ],
     [
       "minecraft:monster_room",
-      "minecraft:monster_room_deep",
-      "minecraft:fossil_upper",
-      "minecraft:fossil_lower"
+      "minecraft:monster_room_deep"
     ],
     [],
     [],
@@ -98,7 +96,6 @@
     ],
     [
       "minecraft:glow_lichen",
-      "minecraft:flower_warm",
       "minecraft:patch_large_fern",
       "minecraft:patch_grass_badlands",
       "minecraft:patch_grass_forest",
@@ -106,8 +103,9 @@
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin",
-      "crystechmod:spitfire_placed",
-      "crystechmod:sm_ember_placed"
+      "minecraft:flower_warm",
+      "crystechmod:sm_ember_placed",
+      "crystechmod:spitfire_placed"
     ],
     [
       "minecraft:freeze_top_layer"

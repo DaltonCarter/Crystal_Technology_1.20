@@ -1,31 +1,29 @@
 {
   "type": "minecraft:disk",
   "config": {
-    "half_height": 2,
+    "half_height": 4,
     "radius": {
       "type": "minecraft:uniform",
       "value": {
-        "max_inclusive": 6,
-        "min_inclusive": 2
+        "max_inclusive": 8,
+        "min_inclusive": 8
       }
     },
     "state_provider": {
       "fallback": {
         "type": "minecraft:simple_state_provider",
         "state": {
-          "Name": "crystechmod:yellow_zone_sand"
+          "Name": "crystechmod:tiberium_water_block",
+          "Properties": {
+            "level": "0"
+          }
         }
       },
       "rules": []
     },
     "target": {
       "type": "minecraft:matching_blocks",
-      "blocks": [
-        "crystechmod:yellow_zone_cracked_dirt",
-        "crystechmod:seeded_yellow_zone_cracked_dirt",
-        "crystechmod:yz_sandstone",
-        "minecraft:gravel"
-      ]
+      "blocks": "minecraft:water"
     }
   }
 }

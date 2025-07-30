@@ -28,7 +28,16 @@
         "crystechmod:red_zone_dirt",
         "crystechmod:seeded_yellow_zone_cracked_dirt",
         "crystechmod:seeded_red_zone_dirt",
-        "crystechmod:seeded_dirt"
+        "crystechmod:seeded_dirt",
+        "minecraft:stone",
+        "minecraft:andesite",
+        "minecraft:granite",
+        "minecraft:terracotta",
+        "minecraft:yellow_terracotta",
+        "minecraft:white_terracotta",
+        "minecraft:brown_terracotta",
+        "minecraft:orange_terracotta",
+        "minecraft:red_terracotta"
       ]
     }
   }

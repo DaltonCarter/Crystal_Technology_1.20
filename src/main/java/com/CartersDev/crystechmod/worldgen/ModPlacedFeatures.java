@@ -91,12 +91,17 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> FLOWER_OF_LIFE_PLACED_KEY = registerKey("flower_of_life_placed");
     public static final ResourceKey<PlacedFeature> YOKARAN_BLOOM_PLACED_KEY = registerKey("yokaran_bloom_placed");
     public static final ResourceKey<PlacedFeature> DEVILS_BLOOD_PLACED_KEY = registerKey("devils_blood_placed");
+    public static final ResourceKey<PlacedFeature> VITRIC_BLOOM_PLACED_KEY = registerKey("vitric_bloom_placed");
+    public static final ResourceKey<PlacedFeature> VITRIC_ROSE_PLACED_KEY = registerKey("vitric_rose_placed");
 
     //Disk:
     public static final ResourceKey<PlacedFeature> CT_MAGMA_PLACED_KEY = registerKey("ct_magma_placed");
     public static final ResourceKey<PlacedFeature> CT_GLOWSTONE_PLACED_KEY = registerKey("ct_glowstone_placed");
+    public static final ResourceKey<PlacedFeature> CT_CLAY_PLACED_KEY = registerKey("ct_clay_placed");
+    public static final ResourceKey<PlacedFeature> CT_VIT_WATER_PLACED_KEY = registerKey("ct_vit_water_placed");
 
     public static final ResourceKey<PlacedFeature> CT_YELLOW_ZONE_SAND_KEY = registerKey("ct_yellow_zone_sand_placed");
+    public static final ResourceKey<PlacedFeature> CT_YELLOW_ZONE_SAND_PLACED_KEY = registerKey("ct_yellow_zone_sand_placed2");
     public static final ResourceKey<PlacedFeature> CT_RED_ZONE_SAND_PLACED_KEY = registerKey("ct_red_zone_sand_placed");
 
     public static final ResourceKey<PlacedFeature> CT_TIBERIUM_SOIL_PLACED_KEY = registerKey("ct_tiberium_soil_placed");
@@ -184,7 +189,7 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
                     ModBlocks.DYING_SAPLING.get()));
 
     register(context, DEAD_HEAVY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEAD_KEY),
-            VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.5f, 3),
+            VegetationPlacements.treePlacement(PlacementUtils.countExtra(2, 0.5f, 4),
                     ModBlocks.DYING_SAPLING.get()));
 
     register(context, SM_MARIKA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SM_MARIKA_KEY),
@@ -232,19 +237,19 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
                     HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(30))));
 
     register(context, CRYSTECH_AERIES_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_AERIES_ORE_KEY),
-            ModOrePlacement.commonOrePlacement(4,
+            ModOrePlacement.commonOrePlacement(5,
                     HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(30))));
 
     register(context, CRYSTECH_ENIGMA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_ENIGMA_ORE_KEY),
-            ModOrePlacement.rareOrePlacement(5,
+            ModOrePlacement.commonOrePlacement(4,
                     HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(30))));
 
     register(context, CRYSTECH_QUALRITE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_QUALRITE_ORE_KEY),
-            ModOrePlacement.commonOrePlacement(3,
+            ModOrePlacement.commonOrePlacement(4,
                     HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(30))));
 
     register(context, CRYSTECH_DEBRIS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTECH_ANCIENT_DEBRIS_KEY),
-            ModOrePlacement.rareOrePlacement(5,
+            ModOrePlacement.commonOrePlacement(5,
                     HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(30))));
 
 
@@ -390,6 +395,12 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
     register(context, DEVILS_BLOOD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEVILS_BLOOD_KEY),
             List.of(RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
+    register(context, VITRIC_BLOOM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.VITRIC_BLOOM_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+    register(context, VITRIC_ROSE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.VITRIC_ROSE_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
 
     //Disk:
     register(context, CT_MAGMA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MAGMA_KEY),
@@ -398,20 +409,30 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
     register(context, CT_GLOWSTONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_GLOWSTONE_KEY),
             List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
+    register(context, CT_CLAY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_CLAY_KEY),
+            List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BlockPredicateFilter.forPredicate(BlockPredicate.matchesFluids(Fluids.WATER, ModFluids.SOURCE_TIBERIUM_WATER.get())), BiomeFilter.biome()));
+
+    register(context, CT_VIT_WATER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_VIT_WATER_KEY),
+            List.of(CountPlacement.of(255), InSquarePlacement.spread(),HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.absolute(192)),
+                    BlockPredicateFilter.forPredicate(BlockPredicate.matchesFluids(Fluids.WATER, ModFluids.SOURCE_TIBERIUM_WATER.get())), BiomeFilter.biome()));
+
     register(context, CT_YELLOW_ZONE_SAND_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_YELLOW_ZONE_SAND_KEY),
             List.of(CountPlacement.of(3), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BlockPredicateFilter.forPredicate(BlockPredicate.matchesFluids(Fluids.WATER, ModFluids.SOURCE_TIBERIUM_WATER.get())), BiomeFilter.biome()));
+
+    register(context, CT_YELLOW_ZONE_SAND_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_YELLOW_ZONE_SAND_DISK_KEY),
+            List.of(CountPlacement.of(50), InSquarePlacement.spread(),HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
 
     register(context, CT_RED_ZONE_SAND_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_RED_ZONE_SAND_KEY),
             List.of(CountPlacement.of(3), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BlockPredicateFilter.forPredicate(BlockPredicate.matchesFluids(Fluids.WATER, ModFluids.SOURCE_TIBERIUM_WATER.get())), BiomeFilter.biome()));
 
     register(context, CT_TIBERIUM_SOIL_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_TIBERIUM_SOIL_KEY),
-            List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+            List.of(CountPlacement.of(10), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
 
     register(context, CT_ICHOR_SOIL_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_ICHOR_SOIL_KEY),
             List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
     register(context, CT_DIRT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_DIRT_KEY),
-            List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+            List.of(CountPlacement.of(5), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
     register(context, CT_SEEDED_DIRT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_SEEDED_DIRT_KEY),
             List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
@@ -456,7 +477,7 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
     
     //Springs:
     register(context, CT_INFECTED_WATER_SPRING_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_INFECTED_WATER_SPRING_KEY),
-            List.of(CountPlacement.of(25), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
+            List.of(CountPlacement.of(10), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
 
     register(context, CT_MOLTEN_RIPARIUS_SPRING_LOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_RIPARIUS_SPRING_KEY),
             List.of(CountPlacement.of(25), InSquarePlacement.spread(), HeightRangePlacement.of(VeryBiasedToBottomHeight.of(VerticalAnchor.bottom(), VerticalAnchor.belowTop(8), 8)), BiomeFilter.biome()));
@@ -472,21 +493,21 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
 
 
     register(context, CT_MOLTEN_RIPARIUS_SPRING_UPPER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_RIPARIUS_SPRING_KEY),
-            List.of(CountPlacement.of(15), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
+            List.of(CountPlacement.of(1), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
 
     register(context, CT_MOLTEN_VINIFERA_SPRING_UPPER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_VINIFERA_SPRING_KEY),
-            List.of(CountPlacement.of(15), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
+            List.of(CountPlacement.of(1), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
 
     register(context, CT_MOLTEN_CRUENTUS_SPRING_UPPER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_CRUENTUS_SPRING_KEY),
-            List.of(CountPlacement.of(15), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
+            List.of(CountPlacement.of(1), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
 
     register(context, CT_MOLTEN_ABOREUS_SPRING_UPPER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_ABOREUS_SPRING_KEY),
-            List.of(CountPlacement.of(15), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
+            List.of(CountPlacement.of(1), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(192)), BiomeFilter.biome()));
 
 
     //Lakes:
     register(context, CT_INFECTED_WATER_SURFACE_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_INFECTED_WATER_LAKE_KEY),
-    List.of(RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+    List.of(RarityFilter.onAverageOnceEvery(15), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
 
     register(context, CT_INFECTED_WATER_UNDERGROUND_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_INFECTED_WATER_LAKE_KEY),
@@ -497,7 +518,7 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
 
 
     register(context, CT_MOLTEN_RIPARIUS_SURFACE_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_RIPARIUS_LAKE_KEY),
-            List.of(RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+            List.of(RarityFilter.onAverageOnceEvery(30), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
 
     register(context, CT_MOLTEN_RIPARIUS_UNDERGROUND_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_RIPARIUS_LAKE_KEY),
@@ -508,7 +529,7 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
 
 
     register(context, CT_MOLTEN_VINIFERA_SURFACE_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_VINIFERA_LAKE_KEY),
-            List.of(RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+            List.of(RarityFilter.onAverageOnceEvery(30), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
 
     register(context, CT_MOLTEN_VINIFERA_UNDERGROUND_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_VINIFERA_LAKE_KEY),
@@ -519,7 +540,7 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
 
 
     register(context, CT_MOLTEN_CRUENTUS_SURFACE_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_CRUENTUS_LAKE_KEY),
-            List.of(RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+            List.of(RarityFilter.onAverageOnceEvery(30), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
 
     register(context, CT_MOLTEN_CRUENTUS_UNDERGROUND_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_CRUENTUS_LAKE_KEY),
@@ -530,7 +551,7 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
 
 
     register(context, CT_MOLTEN_ABOREUS_SURFACE_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_ABOREUS_LAKE_KEY),
-            List.of(RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+            List.of(RarityFilter.onAverageOnceEvery(30), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
 
     register(context, CT_MOLTEN_ABOREUS_UNDERGROUND_LAKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_ABOREUS_LAKE_KEY),

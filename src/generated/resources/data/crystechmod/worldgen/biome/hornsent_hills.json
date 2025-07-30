@@ -24,8 +24,8 @@
       "sound": "crystechmod:vitric_expanse_music"
     },
     "sky_color": 7972607,
-    "water_color": 255,
-    "water_fog_color": 255
+    "water_color": 7972607,
+    "water_fog_color": 7972607
   },
   "features": [
     [],

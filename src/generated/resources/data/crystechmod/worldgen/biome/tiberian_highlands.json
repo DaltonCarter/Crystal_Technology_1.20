@@ -6,7 +6,7 @@
       "crystechmod:vitric_yz_canyon"
     ]
   },
-  "downfall": 0.3,
+  "downfall": 0.7,
   "effects": {
     "fog_color": 16770928,
     "foliage_color": 7106108,
@@ -23,9 +23,9 @@
       "replace_current_music": false,
       "sound": "crystechmod:vitric_expanse_music"
     },
-    "sky_color": 8168447,
-    "water_color": 255,
-    "water_fog_color": 255
+    "sky_color": 8560639,
+    "water_color": 8560639,
+    "water_fog_color": 8560639
   },
   "features": [
     [],
@@ -43,9 +43,10 @@
       "crystechmod:vitric_tiberium_geode_placed",
       "crystechmod:vitric_ichor_geode_placed",
       "crystechmod:vitric_amethyst_geode_placed",
+      "crystechmod:ct_vit_water_placed",
       "crystechmod:ct_tiberium_soil_placed",
-      "crystechmod:ct_dirt_placed",
-      "crystechmod:ct_vinifera_stone_clump_placed"
+      "crystechmod:ct_vinifera_stone_clump_placed",
+      "crystechmod:ct_vinifera_stone_placed"
     ],
     [
       "minecraft:fossil_upper",
@@ -84,9 +85,6 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "crystechmod:ct_yellow_zone_sand_placed",
-      "minecraft:disk_clay",
-      "minecraft:disk_gravel",
       "crystechmod:crystech_ancient_debris_placed",
       "crystechmod:crystech_gundanium_ores_placed",
       "crystechmod:crystech_harmonium_placed",
@@ -95,7 +93,12 @@
       "crystechmod:crystech_kryon_ores_placed",
       "crystechmod:crystech_aeries_ores_placed",
       "crystechmod:crystech_enigma_ores_placed",
-      "crystechmod:crystech_qualrite_ores_placed"
+      "crystechmod:crystech_qualrite_ores_placed",
+      "crystechmod:ct_yellow_zone_sand_placed",
+      "crystechmod:ct_clay_placed",
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel",
+      "minecraft:ore_emerald"
     ],
     [],
     [],
@@ -188,5 +191,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 2.0
+  "temperature": -0.3
 }

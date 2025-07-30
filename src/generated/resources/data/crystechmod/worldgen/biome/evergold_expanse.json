@@ -24,8 +24,8 @@
       "sound": "crystechmod:vitric_expanse_music"
     },
     "sky_color": 7972607,
-    "water_color": 255,
-    "water_fog_color": 255
+    "water_color": 7972607,
+    "water_fog_color": 7972607
   },
   "features": [
     [],
@@ -83,7 +83,8 @@
       "crystechmod:crystech_qualrite_ores_placed",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "minecraft:disk_gravel"
+      "minecraft:disk_gravel",
+      "minecraft:ore_gold_extra"
     ],
     [],
     [
@@ -96,8 +97,8 @@
       "minecraft:patch_grass_forest",
       "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin",
-      "crystechmod:fulgurbloom_placed",
-      "crystechmod:sm_marika_placed"
+      "crystechmod:sm_marika_placed",
+      "crystechmod:fulgurbloom_placed"
     ],
     [
       "minecraft:freeze_top_layer"

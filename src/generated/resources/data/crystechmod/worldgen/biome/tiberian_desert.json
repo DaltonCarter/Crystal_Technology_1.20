@@ -24,8 +24,8 @@
       "sound": "crystechmod:vitric_expanse_music"
     },
     "sky_color": 7254527,
-    "water_color": 255,
-    "water_fog_color": 255
+    "water_color": 7254527,
+    "water_fog_color": 7254527
   },
   "features": [
     [],
@@ -43,8 +43,8 @@
       "crystechmod:vitric_tiberium_geode_placed",
       "crystechmod:vitric_ichor_geode_placed",
       "crystechmod:vitric_amethyst_geode_placed",
-      "crystechmod:ct_tiberium_soil_placed",
-      "crystechmod:ct_dirt_placed"
+      "crystechmod:ct_vit_water_placed",
+      "crystechmod:ct_tiberium_soil_placed"
     ],
     [
       "minecraft:fossil_upper",
@@ -95,6 +95,7 @@
       "crystechmod:crystech_enigma_ores_placed",
       "crystechmod:crystech_qualrite_ores_placed",
       "crystechmod:ct_yellow_zone_sand_placed",
+      "crystechmod:ct_clay_placed",
       "minecraft:disk_clay",
       "minecraft:disk_gravel"
     ],
@@ -102,8 +103,6 @@
     [],
     [
       "minecraft:glow_lichen",
-      "minecraft:flower_default",
-      "minecraft:patch_grass_badlands",
       "minecraft:patch_dead_bush_2",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",

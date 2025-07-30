@@ -4,6 +4,8 @@ import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.worldgen.biome.ModBiomes;
 import com.google.common.collect.ImmutableSet;
 import com.mojang.datafixers.util.Pair;
+import com.mojang.serialization.Codec;
+import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -29,6 +31,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.OptionalLong;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ModDimensions {
 
@@ -46,21 +49,21 @@ public class ModDimensions {
 
     public static void bootstrapType(BootstapContext<DimensionType> context) {
         context.register(VITRIC_EXPANSE_TYPE, new DimensionType(
-                OptionalLong.of(12000), // fixedTime
+                OptionalLong.empty(), // fixedTime
                 true, // hasSkylight
                 false, // hasCeiling
                 false, // ultraWarm
-                false, // natural
+                true, // natural
                 1.0, // coordinateScale
                 true, // bedWorks
-                true, // respawnAnchorWorks
-                0, // minY
+                false, // respawnAnchorWorks
+                -64, // minY
                 384, // height
                 384, // logicalHeight
                 BlockTags.INFINIBURN_OVERWORLD, // infiniburn
                 BuiltinDimensionTypes.OVERWORLD_EFFECTS, // effectsLocation
                 0.0f, // ambientLight
-                new DimensionType.MonsterSettings(false, false, ConstantInt.of(0), 0)));
+                new DimensionType.MonsterSettings(true, false, ConstantInt.of(0), 0)));
     }
 
     public static void bootstrapStem(BootstapContext<LevelStem> context) {
@@ -96,22 +99,100 @@ public class ModDimensions {
 
         //End of Flat World Generation
 
+
+
+
         NoiseBasedChunkGenerator wrappedChunkGenerator = new NoiseBasedChunkGenerator(
                 new FixedBiomeSource(biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_DESERT)),
                 noiseGenSettings.getOrThrow(NoiseGeneratorSettings.OVERWORLD));
 
         NoiseBasedChunkGenerator noiseBasedChunkGenerator = new NoiseBasedChunkGenerator(
                 MultiNoiseBiomeSource.createFromList(
-                        new Climate.ParameterList<>(List.of(Pair.of(
-                                        Climate.parameters(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_DESERT)),
-                                Pair.of(Climate.parameters(0.1F, 0.2F, 0.0F, 0.2F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DEAD_FOREST)),
-                                Pair.of(Climate.parameters(0.3F, 0.6F, 0.1F, 0.1F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
-                                Pair.of(Climate.parameters(0.4F, 0.3F, 0.2F, 0.1F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.BURNING_HILLS))
+                        new Climate.ParameterList<>(List.of(
+//                                  Start of Blue Zone Biomes:
+                                    Pair.of(Climate.parameters(-0.45F, -1.0F, 0.11F, 0.55F, 0.0F, -0.4F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.CALIDIAN_MARSH)),
+                                    Pair.of(Climate.parameters(0.2F, 1.0F, 1.0F, 1.0F, 0.0F, -0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.CALIDIAN_MARSH)),
+                                    Pair.of(Climate.parameters(-1.0F, -0.1F, 1.5F, -1.0F, 0.0F, -0.4F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.GROVE_OF_LIFE)),
+                                    Pair.of(Climate.parameters(-1.0F, 0.1F, 1.0F, -0.7799F, 0.0F, -0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.GROVE_OF_LIFE)),
+                                    Pair.of(Climate.parameters(0.2F, -0.35F, 0.9F, -1.0F, 0.0F, -0.4F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.FOOTHILLS)),
+                                    Pair.of(Climate.parameters(0.55F, -0.1F, 1.0F, -0.7799F, 0.0F, -0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.FOOTHILLS)),
+                                    Pair.of(Climate.parameters(0.2F, -0.3F, 0.11F, -1.0F, 0.0F, -0.4F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.PRIMAL_JUNGLE)),
+                                    Pair.of(Climate.parameters(0.55F, 1.0F, 0.03F, -0.7799F, 0.0F, -0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.PRIMAL_JUNGLE)),
+                                    Pair.of(Climate.parameters(-0.45F, -1.0F, 0.25F, -0.375F, 0.0F, -0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.BLUE_AND_YELLOW_ZONE_BORDER)),
+                                    Pair.of(Climate.parameters(-0.15F, -0.35F, 0.75F, 0.05F, 0.0F, -0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.BLUE_AND_YELLOW_ZONE_BORDER)),
+                                    Pair.of(Climate.parameters(0.75F, -0.35F, 0.75F, -1.0F, 0.0F, -0.4F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.BURNING_HILLS)),
+                                    Pair.of(Climate.parameters(1.5F, -0.1F, 1.0F, -0.7799F, 0.0F, -0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.BURNING_HILLS)),
+                                    Pair.of(Climate.parameters(1.25F, 0.5F, 0.3F, -0.375F, 0.0F, -0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.EMBER_GROVE)),
+                                    Pair.of(Climate.parameters(2.0F, 0.1F, 1.0F, -0.2225F, 0.0F, -0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.EMBER_GROVE)),
+                                    Pair.of(Climate.parameters(1.25F, 0.5F, 0.9F, -1.0F, 0.0F, 1.9F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFERNO_PEAK)),
+                                    Pair.of(Climate.parameters(2.0F, 0.1F, 1.0F, -0.8559F, 0.0F, 1.5F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFERNO_PEAK)),
+                                    Pair.of(Climate.parameters(0.2F, -0.35F, 0.75F, -1.0F, 0.0F, -0.4F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.UNTARNISHED_HILLS)),
+                                    Pair.of(Climate.parameters(-0.2F, -0.1F, 1.0F, -0.7799F, 0.0F, -0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.UNTARNISHED_HILLS)),
+                                    Pair.of(Climate.parameters(0.45F, -1.0F, 0.03F, 0.7799F, 0.0F, 0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.EVERGOLD_EXPANSE)),
+                                    Pair.of(Climate.parameters(0.15F, -0.35F, 0.3F, 0.9999F, 0.0F, 0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.EVERGOLD_EXPANSE)),
+                                    Pair.of(Climate.parameters(0.45F, -1.0F, 0.03F, -0.7799F, 0.0F, -0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.VALLEY_OF_GOLD)),
+                                    Pair.of(Climate.parameters(0.15F, -0.35F, 0.3F, -0.9999F, 0.0F, -0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.VALLEY_OF_GOLD)),
+
+
+//                                  Start of Yellow Zone Biomes:
+                                Pair.of(Climate.parameters(-0.45F, -0.1F, 0.19F, -0.7799F, 0.0F, 0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DEAD_FOREST)),
+                                Pair.of(Climate.parameters(-0.15F, 0.1F, 0.03F, -0.375F, 0.0F, 0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DEAD_FOREST)),
+                                Pair.of(Climate.parameters(1.0F, -1.0F, 0.11F, -0.375F, 0.0F, -1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_DESERT)),
+                                Pair.of(Climate.parameters(0.55F, -0.35F, 0.03F, -0.2225F, 0.0F, -0.9333F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_DESERT)),
+                                Pair.of(Climate.parameters(1.0F, -1.0F, 0.8F, 0.45F, 0.0F, -0.9333F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_DESERT_HILLS)),
+                                Pair.of(Climate.parameters(0.55F, -0.35F, 1.0F, 0.55F, 0.0F, -0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_DESERT_HILLS)),
+                                Pair.of(Climate.parameters(0.55F, -0.1F, 0.19F, -0.7799F, 0.0F, 0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_BADLANDS)),
+                                Pair.of(Climate.parameters(1.0F, 0.1F, 0.15F, -0.375F, 0.0F, 0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_BADLANDS)),
+                                Pair.of(Climate.parameters(-0.55F, -0.1F, 0.19F, -0.7799F, 0.0F, 0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_HIGHLANDS)),
+                                Pair.of(Climate.parameters(-1.0F, 0.1F, 0.15F, -0.375F, 0.0F, 0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_HIGHLANDS)),
+                                Pair.of(Climate.parameters(0.45F, -0.1F, 0.19F, -0.7799F, 0.0F, 0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.OLD_BATTLEFIELD)),
+                                Pair.of(Climate.parameters(0.15F, 0.1F, 0.03F, -0.375F, 0.0F, 0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.OLD_BATTLEFIELD)),
+                                Pair.of(Climate.parameters(0.2F, -0.35F, 1.0F, -1.0F, 0.0F, -0.4F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.LOST_STEPPES)),
+                                Pair.of(Climate.parameters(0.55F, -0.1F, 1.3F, -0.7799F, 0.0F, -0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.LOST_STEPPES)),
+                                Pair.of(Climate.parameters(1.2F, 0.8F, 0.800F, 1.0F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DRY_HILLS)),
+                                Pair.of(Climate.parameters(1.5F, 1.0F, 0.600F, 0.375F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DRY_HILLS)),
+                                Pair.of(Climate.parameters(1.2F, 0.8F, 0.700F, -1.0F, 0.0F, -0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DRY_VALLEY)),
+                                Pair.of(Climate.parameters(1.5F, 1.0F, 0.500F, -0.375F, 0.0F, -0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DRY_VALLEY)),
+
+//                                  Shores/Beaches:
+                                Pair.of(Climate.parameters(-0.45F, -1.0F, -0.4F, 0.45F, 0.0F, -1.0F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.YELLOW_ZONE_SHORE)),
+                                Pair.of(Climate.parameters(-0.15F, -0.35F, -0.25F, 0.55F, 0.0F, -0.9333F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.YELLOW_ZONE_SHORE)),
+                                Pair.of(Climate.parameters(-1.0F, -1.0F, -0.39F, 0.55F, 0.0F, -0.4F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.YELLOW_ZONE_STONY_SHORE)),
+                                Pair.of(Climate.parameters(-0.45F, -0.35F, -0.21F, 1.0F, 0.0F, -0.2666F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.YELLOW_ZONE_STONY_SHORE)),
+                                Pair.of(Climate.parameters(-0.45F, -1.0F, -0.19F, 1.0F, 0.0F, -0.05F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_RIVER)),
+                                Pair.of(Climate.parameters(1.0F, 1.0F, -0.11F, -0.375F, 0.0F, 0.05F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_RIVER)),
+
+//                                  Ocean
+                                Pair.of(Climate.parameters(-0.15F, -1.0F, -0.455F, -1.0F, 0.0F, -1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(0.2F, 1.0F, -0.19F, 1.0F, 0.0F, 1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(-0.15F, -1.0F, -1.05F, -1.0F, 0.0F, -1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(0.2F, 1.0F, -0.455F, 1.0F, 0.0F, 1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(-0.45F, -1.0F, -0.455F, -1.0F, 0.0F, -1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(-0.15F, 1.0F, -0.19F, 1.0F, 0.0F, 1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(-0.45F, -1.0F, -1.05F, -1.0F, 0.0F, -1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(-0.15F, 1.0F, -0.455F, 1.0F, 0.0F, 1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(0.2F, -1.0F, -0.455F, -1.0F, 0.0F, -1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(0.55F, 1.0F, -0.19F, 1.0F, 0.0F, 1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(0.2F, -1.0F, -1.05F, -1.0F, 0.0F, -1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(0.55F, 1.0F, -0.455F, 1.0F, 0.0F, 1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(0.55F, -1.0F, -0.455F, -1.0F, 0.0F, -1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(1.0F, 1.0F, -0.19F, 1.0F, 0.0F, 1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(0.55F, -1.0F, -1.05F, -1.0F, 0.0F, -1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(1.0F, 1.0F, -0.455F, 1.0F, 0.0F, 1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(-1.05F, -1.0F, -0.455F, -1.0F, 0.0F, -1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(-0.455F, 1.0F, -0.19F, 1.0F, 0.0F, 1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(-1.05F, -1.0F, -1.05F, -1.0F, 0.0F, -1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+                                Pair.of(Climate.parameters(-0.455F, 1.0F, -0.455F, 1.0F, 0.0F, 1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN))
+
+
+
+//                                  Start of Red Zone Biomes:
+
 
                         ))),
-                noiseGenSettings.getOrThrow(NoiseGeneratorSettings.AMPLIFIED));
+                noiseGenSettings.getOrThrow(NoiseGeneratorSettings.OVERWORLD));
 
-        LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.VITRIC_EXPANSE_TYPE), wrappedChunkGenerator);
+        LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.VITRIC_EXPANSE_TYPE), noiseBasedChunkGenerator);
 
         context.register(VITRIC_EXPANSE_KEY, stem);
 

@@ -23,9 +23,9 @@
       "replace_current_music": false,
       "sound": "crystechmod:vitric_expanse_music"
     },
-    "sky_color": 8103167,
-    "water_color": 255,
-    "water_fog_color": 255
+    "sky_color": 7254527,
+    "water_color": 7254527,
+    "water_fog_color": 7254527
   },
   "features": [
     [],
@@ -43,8 +43,9 @@
       "crystechmod:vitric_tiberium_geode_placed",
       "crystechmod:vitric_ichor_geode_placed",
       "crystechmod:vitric_amethyst_geode_placed",
+      "crystechmod:ct_vit_water_placed",
       "crystechmod:ct_tiberium_soil_placed",
-      "crystechmod:ct_dirt_placed"
+      "crystechmod:ct_seeded_yellow_zone_dirt_placed"
     ],
     [
       "minecraft:fossil_upper",
@@ -83,9 +84,6 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "crystechmod:ct_yellow_zone_sand_placed",
-      "minecraft:disk_clay",
-      "minecraft:disk_gravel",
       "crystechmod:crystech_ancient_debris_placed",
       "crystechmod:crystech_gundanium_ores_placed",
       "crystechmod:crystech_harmonium_placed",
@@ -94,7 +92,12 @@
       "crystechmod:crystech_kryon_ores_placed",
       "crystechmod:crystech_aeries_ores_placed",
       "crystechmod:crystech_enigma_ores_placed",
-      "crystechmod:crystech_qualrite_ores_placed"
+      "crystechmod:crystech_qualrite_ores_placed",
+      "crystechmod:ct_yellow_zone_sand_placed",
+      "crystechmod:ct_clay_placed",
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel",
+      "minecraft:ore_emerald"
     ],
     [],
     [],
@@ -107,7 +110,7 @@
       "minecraft:patch_sugar_cane_badlands",
       "minecraft:patch_pumpkin",
       "minecraft:patch_cactus_decorated",
-      "crystechmod:dead_placed"
+      "minecraft:patch_cactus_desert"
     ],
     [
       "minecraft:freeze_top_layer"

@@ -33,6 +33,7 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.*;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
+import net.minecraftforge.fml.common.Mod;
 
 import java.util.List;
 import java.util.OptionalInt;
@@ -101,12 +102,17 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?,?>> FLOWER_OF_LIFE_KEY = registerKey("flower_of_life");
     public static final ResourceKey<ConfiguredFeature<?,?>> YOKARAN_BLOOM_KEY = registerKey("yokaran_bloom");
     public static final ResourceKey<ConfiguredFeature<?,?>> DEVILS_BLOOD_KEY = registerKey("devils_blood");
+    public static final ResourceKey<ConfiguredFeature<?,?>> VITRIC_BLOOM_KEY = registerKey("vitric_bloom");
+    public static final ResourceKey<ConfiguredFeature<?,?>> VITRIC_ROSE_KEY = registerKey("vitric_rose");
 
     //Overworld Features:
         //Disks:
     public static final ResourceKey<ConfiguredFeature<?,?>> CT_MAGMA_KEY = registerKey("ct_magma");
     public static final ResourceKey<ConfiguredFeature<?,?>> CT_GLOWSTONE_KEY = registerKey("ct_glowstone");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_CLAY_KEY = registerKey("ct_clay");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_VIT_WATER_KEY = registerKey("ct_vit_water");
     public static final ResourceKey<ConfiguredFeature<?,?>> CT_YELLOW_ZONE_SAND_KEY = registerKey("ct_yellow_zone_sand");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CT_YELLOW_ZONE_SAND_DISK_KEY = registerKey("ct_yellow_zone_sand_disk");
     public static final ResourceKey<ConfiguredFeature<?,?>> CT_RED_ZONE_SAND_KEY = registerKey("ct_red_zone_sand");
     public static final ResourceKey<ConfiguredFeature<?,?>> CT_TIBERIUM_SOIL_KEY = registerKey("ct_tiberium_soil");
     public static final ResourceKey<ConfiguredFeature<?,?>> CT_ICHOR_SOIL_KEY = registerKey("ct_ichor_soil");
@@ -397,6 +403,14 @@ public class ModConfiguredFeatures {
                 new RandomPatchConfiguration(64, 12, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.DEVILS_BLOOD.get())))));
 
+        register(context, VITRIC_BLOOM_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(64, 12, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.VITRIC_BLOOM.get())))));
+
+        register(context, VITRIC_ROSE_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(64, 12, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.VITRIC_ROSE.get())))));
+
 
 //Misc Overworld:
         //Blobs:
@@ -413,19 +427,23 @@ public class ModConfiguredFeatures {
         //Discs:
         register(context, CT_MAGMA_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.MAGMA_BLOCK), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK)), UniformInt.of(1, 3), 1));
         register(context, CT_GLOWSTONE_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.GLOWSTONE), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK)), UniformInt.of(1, 2), 1));
+        register(context, CT_CLAY_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.CLAY), BlockPredicate.matchesBlocks(List.of(ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get(), ModBlocks.RZ_SANDSTONE.get(), ModBlocks.RED_ZONE_SAND.get(), ModBlocks.YELLOW_ZONE_SAND.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.YZ_SANDSTONE.get(), Blocks.GRAVEL)), UniformInt.of(2, 6), 2));
+        register(context, CT_VIT_WATER_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.TIBERIUM_WATER_BLOCK.get()), BlockPredicate.matchesBlocks(List.of(Blocks.WATER)), UniformInt.of(8, 8), 4));
 
-        register(context, CT_YELLOW_ZONE_SAND_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.YELLOW_ZONE_SAND.get()), BlockPredicate.matchesBlocks(List.of(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.YZ_SANDSTONE.get())), UniformInt.of(2, 6), 2));
+        register(context, CT_YELLOW_ZONE_SAND_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.YELLOW_ZONE_SAND.get()), BlockPredicate.matchesBlocks(List.of(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.YZ_SANDSTONE.get(), Blocks.GRAVEL)), UniformInt.of(2, 6), 2));
+        register(context, CT_YELLOW_ZONE_SAND_DISK_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.YELLOW_ZONE_SAND.get()), BlockPredicate.matchesBlocks(List.of(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.YZ_SANDSTONE.get(), Blocks.TERRACOTTA, Blocks.YELLOW_TERRACOTTA, Blocks.WHITE_TERRACOTTA, Blocks.BROWN_TERRACOTTA, Blocks.ORANGE_TERRACOTTA, Blocks.RED_TERRACOTTA)), UniformInt.of(4, 8), 2));
         register(context, CT_RED_ZONE_SAND_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.RED_ZONE_SAND.get()), BlockPredicate.matchesBlocks(List.of(ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get(), ModBlocks.RZ_SANDSTONE.get())), UniformInt.of(2, 6), 2));
 
 
-        register(context, CT_TIBERIUM_SOIL_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.TIBERIUM_SOIL.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK)), UniformInt.of(1, 5), 2));
+
+        register(context, CT_TIBERIUM_SOIL_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.TIBERIUM_SOIL.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.YELLOW_ZONE_SAND.get(), ModBlocks.YZ_SANDSTONE.get(), ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), Blocks.TERRACOTTA, Blocks.YELLOW_TERRACOTTA, Blocks.WHITE_TERRACOTTA, Blocks.BROWN_TERRACOTTA, Blocks.ORANGE_TERRACOTTA, Blocks.RED_TERRACOTTA, ModBlocks.INFESTED_COBBLE.get(), ModBlocks.INFESTED_STONE.get())), UniformInt.of(1, 5), 2));
         register(context, CT_ICHOR_SOIL_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.ICHOR_SOIL.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK)), UniformInt.of(1, 3), 1));
 
-        register(context, CT_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.GRASS_BLOCK), BlockPredicate.matchesBlocks(List.of(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get(), ModBlocks.SEEDED_DIRT.get())), UniformInt.of(1, 5), 2));
-        register(context, CT_SEEDED_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.SEEDED_DIRT.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get())), UniformInt.of(1, 5), 2));
+        register(context, CT_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.GRASS_BLOCK), BlockPredicate.matchesBlocks(List.of(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get(), ModBlocks.SEEDED_DIRT.get(), Blocks.STONE, Blocks.ANDESITE, Blocks.GRANITE, Blocks.TERRACOTTA, Blocks.YELLOW_TERRACOTTA, Blocks.WHITE_TERRACOTTA, Blocks.BROWN_TERRACOTTA, Blocks.ORANGE_TERRACOTTA, Blocks.RED_TERRACOTTA)), UniformInt.of(1, 5), 2));
+        register(context, CT_SEEDED_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.SEEDED_DIRT.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get(), Blocks.TERRACOTTA, Blocks.YELLOW_TERRACOTTA, Blocks.WHITE_TERRACOTTA, Blocks.BROWN_TERRACOTTA, Blocks.ORANGE_TERRACOTTA, Blocks.RED_TERRACOTTA)), UniformInt.of(1, 5), 2));
 
-        register(context, CT_YELLOW_ZONE_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.SEEDED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get())), UniformInt.of(1, 5), 2));
-        register(context, CT_SEEDED_YELLOW_ZONE_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get())), UniformInt.of(1, 5), 2));
+        register(context, CT_YELLOW_ZONE_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.SEEDED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get(), ModBlocks.YELLOW_ZONE_SAND.get(), Blocks.TERRACOTTA, Blocks.YELLOW_TERRACOTTA, Blocks.WHITE_TERRACOTTA, Blocks.BROWN_TERRACOTTA, Blocks.ORANGE_TERRACOTTA, Blocks.RED_TERRACOTTA, Blocks.GRAVEL)), UniformInt.of(1, 5), 2));
+        register(context, CT_SEEDED_YELLOW_ZONE_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get(), Blocks.TERRACOTTA, Blocks.YELLOW_TERRACOTTA, Blocks.WHITE_TERRACOTTA, Blocks.BROWN_TERRACOTTA, Blocks.ORANGE_TERRACOTTA, Blocks.RED_TERRACOTTA, Blocks.GRAVEL)), UniformInt.of(1, 5), 2));
 
         register(context, CT_RED_ZONE_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.RED_ZONE_DIRT.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.SEEDED_DIRT.get(), ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get())), UniformInt.of(1, 5), 2));
         register(context, CT_SEEDED_RED_ZONE_DIRT_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.SEEDED_RED_ZONE_DIRT.get()), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get())), UniformInt.of(1, 5), 2));
