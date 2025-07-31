@@ -49,6 +49,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RUSTY_IRON_PLATING);
         blockWithItem(ModBlocks.VITRIC_IRON_PLATING);
 
+        blockWithItem(ModBlocks.PURPLE_CORE_BLOCK);
+        blockWithItem(ModBlocks.RED_CORE_BLOCK);
+        blockWithItem(ModBlocks.BLUE_CORE_BLOCK);
+        blockWithItem(ModBlocks.GREEN_CORE_BLOCK);
+        blockWithItem(ModBlocks.YELLOW_CORE_BLOCK);
+        blockWithItem(ModBlocks.ORANGE_CORE_BLOCK);
+
         blockWithItem(ModBlocks.ALYTHUM_BLOCK);
         blockWithItem(ModBlocks.ILLYRIM_BLOCK);
         blockWithItem(ModBlocks.LG_CORE_BLOCK);

@@ -130,6 +130,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.TIBERIUM_BLOCK.get(),
+                ModBlocks.PURPLE_CORE_BLOCK.get(),
+                ModBlocks.ORANGE_CORE_BLOCK.get(),
+                ModBlocks.RED_CORE_BLOCK.get(),
+                ModBlocks.GREEN_CORE_BLOCK.get(),
+                ModBlocks.BLUE_CORE_BLOCK.get(),
+                ModBlocks.YELLOW_CORE_BLOCK.get(),
                         ModBlocks.SOUND_BLOCK.get(),
                         ModBlocks.IRON_PLATING_DOOR.get(),
                         ModBlocks.IRON_PLATING_TRAPDOOR.get(),
@@ -1492,6 +1498,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(ModTags.Blocks.NEEDS_GUNDANIUM_TOOL)
                 .add(ModBlocks.CS_SCAFFOLD.get(),
+                        ModBlocks.PURPLE_CORE_BLOCK.get(),
+                        ModBlocks.ORANGE_CORE_BLOCK.get(),
+                        ModBlocks.RED_CORE_BLOCK.get(),
+                        ModBlocks.GREEN_CORE_BLOCK.get(),
+                        ModBlocks.BLUE_CORE_BLOCK.get(),
+                        ModBlocks.YELLOW_CORE_BLOCK.get(),
                         ModBlocks.CS_SCAFFOLD_VERT.get(),
                         ModBlocks.GUNDANIUM_MACHINE_CORE.get(),
                         ModBlocks.ALYTHUM_MACHINE_CORE.get(),

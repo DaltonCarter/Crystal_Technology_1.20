@@ -26,6 +26,19 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
 //                    output.accept(ModBlocks.DOOR_CON.get());
 
 
+                    output.accept(ModItems.PURPLE_CORE_CRYSTAL.get());
+                    output.accept(ModBlocks.PURPLE_CORE_BLOCK.get());
+                    output.accept(ModItems.RED_CORE_CRYSTAL.get());
+                    output.accept(ModBlocks.RED_CORE_BLOCK.get());
+                    output.accept(ModItems.BLUE_CORE_CRYSTAL.get());
+                    output.accept(ModBlocks.BLUE_CORE_BLOCK.get());
+                    output.accept(ModItems.GREEN_CORE_CRYSTAL.get());
+                    output.accept(ModBlocks.GREEN_CORE_BLOCK.get());
+                    output.accept(ModItems.YELLOW_CORE_CRYSTAL.get());
+                    output.accept(ModBlocks.YELLOW_CORE_BLOCK.get());
+                    output.accept(ModItems.ORANGE_CORE_CRYSTAL.get());
+                    output.accept(ModBlocks.ORANGE_CORE_BLOCK.get());
+
                     output.accept(ModBlocks.FOOLS_VITRICIUM.get());
                     output.accept(ModBlocks.FOOLS_CRYSTAL_CORE.get());
                     output.accept(ModBlocks.BLOSSOM_SPOUT.get());

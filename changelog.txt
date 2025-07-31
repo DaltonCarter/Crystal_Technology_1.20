@@ -551,6 +551,7 @@ Posted By: Dalton Carter
 -Profession Structure added to Vanilla Villages
 -Updated Crystal Core Tile/pillar textures
 -Vitric Expanse Dimension now implemented with 24 out of 52 Biomes
+-Added Core Crystals, and Core Crystal Blocks
 
 
 

@@ -1,6 +1,12 @@
 {
   "values": [
     "crystechmod:tiberium_block",
+    "crystechmod:purple_core_block",
+    "crystechmod:orange_core_block",
+    "crystechmod:red_core_block",
+    "crystechmod:green_core_block",
+    "crystechmod:blue_core_block",
+    "crystechmod:yellow_core_block",
     "crystechmod:sound_block",
     "crystechmod:iron_plating_door",
     "crystechmod:iron_plating_trapdoor",

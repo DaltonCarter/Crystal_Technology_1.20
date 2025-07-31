@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "crystechmod:blue_core_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "crystechmod:blocks/blue_core_block"
+}

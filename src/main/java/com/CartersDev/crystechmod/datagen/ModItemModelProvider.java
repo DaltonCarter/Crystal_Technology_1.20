@@ -58,6 +58,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.DERELICT_MUSIC_DISC);
 
 
+        simpleItem(ModItems.PURPLE_CORE_CRYSTAL);
+        simpleItem(ModItems.RED_CORE_CRYSTAL);
+        simpleItem(ModItems.BLUE_CORE_CRYSTAL);
+        simpleItem(ModItems.GREEN_CORE_CRYSTAL);
+        simpleItem(ModItems.YELLOW_CORE_CRYSTAL);
+        simpleItem(ModItems.ORANGE_CORE_CRYSTAL);
+
         simpleItem(ModItems.TIBERIUM);
         simpleItem(ModItems.TIBERIUM_BLUE);
         simpleItem(ModItems.TIBERIUM_RED);

@@ -66,7 +66,7 @@ public static final RegistryObject<Item> TIBERIUM_FRUIT = ITEMS.register("tiberi
 //End of Foods
 
 
-//Minerals:
+//Crystals:
 
 public static final RegistryObject<Item> TIBERIUM = ITEMS.register("tiberium",
         () -> new Item(new Item.Properties()));
@@ -90,6 +90,26 @@ public static final RegistryObject<Item> TIBERIUM = ITEMS.register("tiberium",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ENIGMA_CRYSTAL = ITEMS.register("enigma_crystal",
+            () -> new Item(new Item.Properties()));
+
+
+
+    public static final RegistryObject<Item> PURPLE_CORE_CRYSTAL = ITEMS.register("purple_core_crystal",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RED_CORE_CRYSTAL = ITEMS.register("red_core_crystal",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> BLUE_CORE_CRYSTAL = ITEMS.register("blue_core_crystal",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> GREEN_CORE_CRYSTAL = ITEMS.register("green_core_crystal",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> YELLOW_CORE_CRYSTAL = ITEMS.register("yellow_core_crystal",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ORANGE_CORE_CRYSTAL = ITEMS.register("orange_core_crystal",
             () -> new Item(new Item.Properties()));
 
 

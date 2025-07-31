@@ -1,6 +1,12 @@
 {
   "values": [
     "crystechmod:cs_scaffold",
+    "crystechmod:purple_core_block",
+    "crystechmod:orange_core_block",
+    "crystechmod:red_core_block",
+    "crystechmod:green_core_block",
+    "crystechmod:blue_core_block",
+    "crystechmod:yellow_core_block",
     "crystechmod:cs_scaffold_vert",
     "crystechmod:gundanium_machine_core",
     "crystechmod:alythum_machine_core",

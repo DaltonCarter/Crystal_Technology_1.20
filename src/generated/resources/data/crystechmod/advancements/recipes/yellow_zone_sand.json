@@ -1,28 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "crystechmod:yellow_zone_sand"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_tiberium_bucket": {
+    "has_infested_stone": {
       "conditions": {
         "items": [
           {
             "items": [
-              "crystechmod:molten_tiberium_bucket"
+              "crystechmod:infested_cobble"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:yellow_zone_sand"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_tiberium_bucket",
+      "has_infested_stone",
       "has_the_recipe"
     ]
   ],

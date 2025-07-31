@@ -60,6 +60,13 @@
   "item.crystechmod.alythum_hammer": "Alythum Hammer",
   "item.crystechmod.vitric_circuit": "Vitric Circuit",
 
+  "item.crystechmod.purple_core_crystal": "Purple Core Crystal",
+  "item.crystechmod.red_core_crystal": "Red Core Crystal",
+  "item.crystechmod.blue_core_crystal": "Blue Core Crystal",
+  "item.crystechmod.green_core_crystal": "Green Core Crystal",
+  "item.crystechmod.yellow_core_crystal": "Yellow Core Crystal",
+  "item.crystechmod.orange_core_crystal": "Orange Core Crystal",
+
   "item.crystechmod.gundanium_helmet": "Gundanium Helmet",
   "item.crystechmod.gundanium_chestplate": "Gundanium Chestplate",
   "item.crystechmod.gundanium_leggings": "Gundanium Leggings",
@@ -1052,6 +1059,13 @@
   "block.crystechmod.alythum_vitricium_refinery": "Improved Vitricium Refinery",
   "block.crystechmod.vitric_vitricium_refinery": "Advanced Vitricium Refinery",
   "block.crystechmod.crystal_core_vitricium_refinery": "Ultimate Vitricium Refinery",
+
+  "block.crystechmod.purple_core_block": "Purple Core Crystal Case",
+  "block.crystechmod.red_core_block": "Red Core Crystal Case",
+  "block.crystechmod.blue_core_block": "Blue Core Crystal Case",
+  "block.crystechmod.green_core_block": "Green Core Crystal Case",
+  "block.crystechmod.yellow_core_block": "Yellow Core Crystal Case",
+  "block.crystechmod.orange_core_block": "Orange Core Crystal Case",
 
 
   "enchantment.crystechmod.lightning_striker": "Lightning Striker",
