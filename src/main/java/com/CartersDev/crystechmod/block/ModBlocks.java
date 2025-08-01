@@ -1682,11 +1682,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CS_PILLAR_G_2 = registerBlock("cs_pillar_g_2",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
-    public static final RegistryObject<Block> CS_PILLAR_G_3 = registerBlock("cs_pillar_g_3",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
-    public static final RegistryObject<Block> CS_PILLAR_G_4 = registerBlock("cs_pillar_g_4",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
 
     public static final RegistryObject<Block> CS_PILLAR_B = registerBlock("cs_pillar_b",
@@ -1695,11 +1691,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CS_PILLAR_B_2 = registerBlock("cs_pillar_b_2",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
-    public static final RegistryObject<Block> CS_PILLAR_B_3 = registerBlock("cs_pillar_b_3",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
-    public static final RegistryObject<Block> CS_PILLAR_B_4 = registerBlock("cs_pillar_b_4",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
 
     public static final RegistryObject<Block> CS_PILLAR_R = registerBlock("cs_pillar_r",
@@ -1708,11 +1700,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CS_PILLAR_R_2 = registerBlock("cs_pillar_r_2",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
-    public static final RegistryObject<Block> CS_PILLAR_R_3 = registerBlock("cs_pillar_r_3",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
-    public static final RegistryObject<Block> CS_PILLAR_R_4 = registerBlock("cs_pillar_r_4",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
 
     public static final RegistryObject<Block> CS_PILLAR_P = registerBlock("cs_pillar_p",
@@ -1721,11 +1709,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CS_PILLAR_P_2 = registerBlock("cs_pillar_p_2",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
-    public static final RegistryObject<Block> CS_PILLAR_P_3 = registerBlock("cs_pillar_p_3",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
-    public static final RegistryObject<Block> CS_PILLAR_P_4 = registerBlock("cs_pillar_p_4",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
 
     public static final RegistryObject<Block> CS_PILLAR_LG = registerBlock("cs_pillar_lg",
@@ -1734,11 +1718,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CS_PILLAR_LG_2 = registerBlock("cs_pillar_lg_2",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
-    public static final RegistryObject<Block> CS_PILLAR_LG_3 = registerBlock("cs_pillar_lg_3",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
-    public static final RegistryObject<Block> CS_PILLAR_LG_4 = registerBlock("cs_pillar_lg_4",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
 
     public static final RegistryObject<Block> CS_PILLAR_MG = registerBlock("cs_pillar_mg",
@@ -1747,11 +1727,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CS_PILLAR_MG_2 = registerBlock("cs_pillar_mg_2",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
-    public static final RegistryObject<Block> CS_PILLAR_MG_3 = registerBlock("cs_pillar_mg_3",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
-    public static final RegistryObject<Block> CS_PILLAR_MG_4 = registerBlock("cs_pillar_mg_4",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
 
     public static final RegistryObject<Block> CS_PILLAR_HG = registerBlock("cs_pillar_hg",
@@ -1760,11 +1736,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CS_PILLAR_HG_2 = registerBlock("cs_pillar_hg_2",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
-    public static final RegistryObject<Block> CS_PILLAR_HG_3 = registerBlock("cs_pillar_hg_3",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
-    public static final RegistryObject<Block> CS_PILLAR_HG_4 = registerBlock("cs_pillar_hg_4",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
 
         //Crystal Core Based:
             //Vertical Slab:

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "crystechmod:cs_tile_p"
-  },
-  "result": "crystechmod:cs_pillar_p_3"
-}

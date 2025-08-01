@@ -939,8 +939,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.CS_TILE_G_VERT.get());
                         output.accept(ModBlocks.CS_PILLAR_G.get());
                         output.accept(ModBlocks.CS_PILLAR_G_2.get());
-                        output.accept(ModBlocks.CS_PILLAR_G_3.get());
-                        output.accept(ModBlocks.CS_PILLAR_G_4.get());
+
 
                         output.accept(ModBlocks.CS_TILE_G_BAND.get());
                         output.accept(ModBlocks.CS_TILE_G_BAND_STAIRS.get());
@@ -962,8 +961,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
 
                         output.accept(ModBlocks.CS_PILLAR_B.get());
                         output.accept(ModBlocks.CS_PILLAR_B_2.get());
-                        output.accept(ModBlocks.CS_PILLAR_B_3.get());
-                        output.accept(ModBlocks.CS_PILLAR_B_4.get());
+
 
                         output.accept(ModBlocks.CS_TILE_B_BAND.get());
                         output.accept(ModBlocks.CS_TILE_B_BAND_STAIRS.get());
@@ -983,8 +981,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.CS_TILE_R_VERT.get());
                         output.accept(ModBlocks.CS_PILLAR_R.get());
                         output.accept(ModBlocks.CS_PILLAR_R_2.get());
-                        output.accept(ModBlocks.CS_PILLAR_R_3.get());
-                        output.accept(ModBlocks.CS_PILLAR_R_4.get());
+
                         output.accept(ModBlocks.CS_TILE_R_BAND.get());
                         output.accept(ModBlocks.CS_TILE_R_BAND_STAIRS.get());
                         output.accept(ModBlocks.CS_TILE_R_BAND_SLAB.get());
@@ -1002,8 +999,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.CS_TILE_P_VERT.get());
                         output.accept(ModBlocks.CS_PILLAR_P.get());
                         output.accept(ModBlocks.CS_PILLAR_P_2.get());
-                        output.accept(ModBlocks.CS_PILLAR_P_3.get());
-                        output.accept(ModBlocks.CS_PILLAR_P_4.get());
+
                         output.accept(ModBlocks.CS_TILE_P_BAND.get());
                         output.accept(ModBlocks.CS_TILE_P_BAND_STAIRS.get());
                         output.accept(ModBlocks.CS_TILE_P_BAND_SLAB.get());
@@ -1021,8 +1017,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.CS_TILE_LG_VERT.get());
                         output.accept(ModBlocks.CS_PILLAR_LG.get());
                         output.accept(ModBlocks.CS_PILLAR_LG_2.get());
-                        output.accept(ModBlocks.CS_PILLAR_LG_3.get());
-                        output.accept(ModBlocks.CS_PILLAR_LG_4.get());
+
                         output.accept(ModBlocks.CS_TILE_LG_BAND.get());
                         output.accept(ModBlocks.CS_TILE_LG_BAND_STAIRS.get());
                         output.accept(ModBlocks.CS_TILE_LG_BAND_SLAB.get());
@@ -1040,8 +1035,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.CS_TILE_MG_VERT.get());
                         output.accept(ModBlocks.CS_PILLAR_MG.get());
                         output.accept(ModBlocks.CS_PILLAR_MG_2.get());
-                        output.accept(ModBlocks.CS_PILLAR_MG_3.get());
-                        output.accept(ModBlocks.CS_PILLAR_MG_4.get());
+
                         output.accept(ModBlocks.CS_TILE_MG_BAND.get());
                         output.accept(ModBlocks.CS_TILE_MG_BAND_STAIRS.get());
                         output.accept(ModBlocks.CS_TILE_MG_BAND_SLAB.get());
@@ -1059,8 +1053,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.CS_TILE_HG_VERT.get());
                         output.accept(ModBlocks.CS_PILLAR_HG.get());
                         output.accept(ModBlocks.CS_PILLAR_HG_2.get());
-                        output.accept(ModBlocks.CS_PILLAR_HG_3.get());
-                        output.accept(ModBlocks.CS_PILLAR_HG_4.get());
+
                         output.accept(ModBlocks.CS_TILE_HG_BAND.get());
                         output.accept(ModBlocks.CS_TILE_HG_BAND_STAIRS.get());
                         output.accept(ModBlocks.CS_TILE_HG_BAND_SLAB.get());

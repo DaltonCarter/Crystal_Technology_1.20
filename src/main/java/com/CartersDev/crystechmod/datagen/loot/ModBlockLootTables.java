@@ -668,32 +668,25 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.CS_PILLAR.get());
         this.dropSelf(ModBlocks.CS_PILLAR_G.get());
         this.dropSelf(ModBlocks.CS_PILLAR_G_2.get());
-        this.dropSelf(ModBlocks.CS_PILLAR_G_3.get());
-        this.dropSelf(ModBlocks.CS_PILLAR_G_4.get());
+
         this.dropSelf(ModBlocks.CS_PILLAR_B.get());
         this.dropSelf(ModBlocks.CS_PILLAR_B_2.get());
-        this.dropSelf(ModBlocks.CS_PILLAR_B_3.get());
-        this.dropSelf(ModBlocks.CS_PILLAR_B_4.get());
+
         this.dropSelf(ModBlocks.CS_PILLAR_R.get());
         this.dropSelf(ModBlocks.CS_PILLAR_R_2.get());
-        this.dropSelf(ModBlocks.CS_PILLAR_R_3.get());
-        this.dropSelf(ModBlocks.CS_PILLAR_R_4.get());
+
         this.dropSelf(ModBlocks.CS_PILLAR_P.get());
         this.dropSelf(ModBlocks.CS_PILLAR_P_2.get());
-        this.dropSelf(ModBlocks.CS_PILLAR_P_3.get());
-        this.dropSelf(ModBlocks.CS_PILLAR_P_4.get());
+
         this.dropSelf(ModBlocks.CS_PILLAR_LG.get());
         this.dropSelf(ModBlocks.CS_PILLAR_LG_2.get());
-        this.dropSelf(ModBlocks.CS_PILLAR_LG_3.get());
-        this.dropSelf(ModBlocks.CS_PILLAR_LG_4.get());
+
         this.dropSelf(ModBlocks.CS_PILLAR_MG.get());
         this.dropSelf(ModBlocks.CS_PILLAR_MG_2.get());
-        this.dropSelf(ModBlocks.CS_PILLAR_MG_3.get());
-        this.dropSelf(ModBlocks.CS_PILLAR_MG_4.get());
+
         this.dropSelf(ModBlocks.CS_PILLAR_HG.get());
         this.dropSelf(ModBlocks.CS_PILLAR_HG_2.get());
-        this.dropSelf(ModBlocks.CS_PILLAR_HG_3.get());
-        this.dropSelf(ModBlocks.CS_PILLAR_HG_4.get());
+
 
         this.dropSelf(ModBlocks.CT_PILLAR.get());
         this.dropSelf(ModBlocks.CT_PILLAR_2.get());

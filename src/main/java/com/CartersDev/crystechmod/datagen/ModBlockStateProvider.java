@@ -356,13 +356,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_g"));
         blockItem(ModBlocks.CS_PILLAR_G_2);
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_G_3.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_g_3"),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_g"));
-        blockItem(ModBlocks.CS_PILLAR_G_3);
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_G_4.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_g_4"),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_g"));
-        blockItem(ModBlocks.CS_PILLAR_G_4);
 
         axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_B.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_b"),
                 new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_b"));
@@ -372,13 +366,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_b"));
         blockItem(ModBlocks.CS_PILLAR_B_2);
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_B_3.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_b_3"),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_b"));
-        blockItem(ModBlocks.CS_PILLAR_B_3);
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_B_4.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_b_4"),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_b"));
-        blockItem(ModBlocks.CS_PILLAR_B_4);
 
         axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_R.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_r"),
                 new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_r"));
@@ -388,13 +376,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_r"));
         blockItem(ModBlocks.CS_PILLAR_R_2);
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_R_3.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_r_3"),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_r"));
-        blockItem(ModBlocks.CS_PILLAR_R_3);
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_R_4.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_r_4"),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_r"));
-        blockItem(ModBlocks.CS_PILLAR_R_4);
 
         axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_P.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_p"),
                 new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_p"));
@@ -404,13 +386,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_p"));
         blockItem(ModBlocks.CS_PILLAR_P_2);
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_P_3.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_p_3"),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_p"));
-        blockItem(ModBlocks.CS_PILLAR_P_3);
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_P_4.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_p_4"),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_p"));
-        blockItem(ModBlocks.CS_PILLAR_P_4);
 
         axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_LG.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_lg"),
                 new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_lg"));
@@ -420,13 +396,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_lg"));
         blockItem(ModBlocks.CS_PILLAR_LG_2);
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_LG_3.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_lg_3"),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_lg"));
-        blockItem(ModBlocks.CS_PILLAR_LG_3);
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_LG_4.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_lg_4"),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_lg"));
-        blockItem(ModBlocks.CS_PILLAR_LG_4);
 
         axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_MG.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_mg"),
                 new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_mg"));
@@ -436,13 +406,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_mg"));
         blockItem(ModBlocks.CS_PILLAR_MG_2);
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_MG_3.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_mg_3"),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_mg"));
-        blockItem(ModBlocks.CS_PILLAR_MG_3);
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_MG_4.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_mg_4"),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_mg"));
-        blockItem(ModBlocks.CS_PILLAR_MG_4);
 
         axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_HG.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_hg"),
                 new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_hg"));
@@ -452,13 +416,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_hg"));
         blockItem(ModBlocks.CS_PILLAR_HG_2);
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_HG_3.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_hg_3"),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_hg"));
-        blockItem(ModBlocks.CS_PILLAR_HG_3);
 
-        axisBlock(((RotatedPillarBlock) ModBlocks.CS_PILLAR_HG_4.get()), new ResourceLocation(CrystalTech.MOD_ID, "block/cs_pillar_hg_4"),
-                new ResourceLocation(CrystalTech.MOD_ID, "block/cs_tile_hg"));
-        blockItem(ModBlocks.CS_PILLAR_HG_4);
 
 
 
