@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-31T18:08:17.8522628	Tags for minecraft:block mod id crystechmod
+// 1.20.1	2025-08-01T16:28:52.7143334	Tags for minecraft:block mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/blocks/aeries_ores.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/blocks/alythum_ores.json
 6b38af71a7ebba97f729de43e6ee84033f8e45cc data/crystechmod/tags/blocks/concretes.json
@@ -55,5 +55,6 @@ fc8b211f9c98208a97ee0d599c4628b114f1a663 data/minecraft/tags/blocks/stone_ore_re
 1a0d66de19529bd55ed0336ba2d302dcf6a5609e data/minecraft/tags/blocks/walls.json
 fdd7c1de1b6e4b3263f7f1560d38f58280bdfd7b data/minecraft/tags/blocks/wooden_buttons.json
 86a7ebf134a27afd5ccaa4126ba6d3d47cba2548 data/minecraft/tags/blocks/wooden_doors.json
+c6aab69a244678a9783a3baff90174fb529ed517 data/minecraft/tags/blocks/wooden_fences.json
 b4b5a7320c3e24622dd3f302b4468d56acdbe28f data/minecraft/tags/blocks/wooden_pressure_plates.json
 9987971507f3fe30dde3809205e7b53079637620 data/minecraft/tags/blocks/wooden_trapdoors.json

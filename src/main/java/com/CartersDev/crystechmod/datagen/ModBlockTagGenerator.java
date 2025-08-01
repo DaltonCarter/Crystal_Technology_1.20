@@ -1912,6 +1912,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.MARIKA_OAK_FENCE.get()
                 );
 
+        this.tag(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.PLAGUED_FENCE.get(),
+                        ModBlocks.EMBER_OAK_FENCE.get(),
+                        ModBlocks.DEAD_FENCE.get(),
+                        ModBlocks.MARIKA_OAK_FENCE.get()
+                );
+
         this.tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.PLAGUED_FENCE_GATE.get(),
                         ModBlocks.EMBER_OAK_FENCE_GATE.get(),

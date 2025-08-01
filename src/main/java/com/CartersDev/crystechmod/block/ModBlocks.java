@@ -175,18 +175,13 @@ public class ModBlocks {
                     ));
 
     public static final RegistryObject<Block> RUSTY_IRON_PLATING = registerBlock("rusty_iron_plating",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
-            ));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     public static final RegistryObject<Block> VITRIC_IRON_PLATING = registerBlock("vitric_iron_plating",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
-            ));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     public static final RegistryObject<Block> POLISHED_IRON_BLOCK = registerBlock("polished_iron_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
-            ));
-
-
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     public static final RegistryObject<Block> HARMONIUM_BLOCK = registerBlock("harmonium_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
