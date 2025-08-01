@@ -1,10 +1,10 @@
 {
-  "name": "crystechmod:house/start_pool",
+  "name": "crystechmod:village1/start_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "element": {
-        "location": "crystechmod:village/houses/gather_hut",
+        "location": "crystechmod:village/village1/houses/gather_hut",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -14,7 +14,7 @@
     },
     {
       "element": {
-        "location": "crystechmod:village/houses/house_1",
+        "location": "crystechmod:village/village1/houses/house_1",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -24,7 +24,7 @@
     },
     {
       "element": {
-        "location": "crystechmod:village/houses/house_2",
+        "location": "crystechmod:village/village1/houses/house_2",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -34,7 +34,7 @@
     },
     {
       "element": {
-        "location": "crystechmod:village/houses/house_3",
+        "location": "crystechmod:village/village1/houses/house_3",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -44,7 +44,7 @@
     },
     {
       "element": {
-        "location": "crystechmod:village/houses/farm_1",
+        "location": "crystechmod:village/village1/houses/farm_1",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -54,7 +54,7 @@
     },
     {
       "element": {
-        "location": "crystechmod:village/houses/farm_2",
+        "location": "crystechmod:village/village1/houses/farm_2",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -64,7 +64,7 @@
     },
     {
       "element": {
-        "location": "crystechmod:village/houses/farm_3",
+        "location": "crystechmod:village/village1/houses/farm_3",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -74,7 +74,7 @@
     },
     {
       "element": {
-        "location": "crystechmod:village/houses/fletcher_house",
+        "location": "crystechmod:village/village1/houses/fletcher_house",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

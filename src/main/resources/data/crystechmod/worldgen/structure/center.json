@@ -1,7 +1,7 @@
 {
 
   "type": "minecraft:jigsaw",
-  "start_pool": "crystechmod:house/center",
+  "start_pool": "crystechmod:village1/center",
   "size": 7,
   "max_distance_from_center": 40,
   "biomes": "#minecraft:has_structure/house",
