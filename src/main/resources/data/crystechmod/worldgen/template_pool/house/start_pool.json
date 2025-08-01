@@ -41,6 +41,46 @@
       },
       "weight": 5
 
+    },
+    {
+      "element": {
+        "location": "crystechmod:village/houses/farm_1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 5
+
+    },
+    {
+      "element": {
+        "location": "crystechmod:village/houses/farm_2",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 5
+
+    },
+    {
+      "element": {
+        "location": "crystechmod:village/houses/farm_3",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 5
+
+    },
+    {
+      "element": {
+        "location": "crystechmod:village/houses/fletcher_house",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 5
+
     }
   ]
 }
