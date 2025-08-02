@@ -3,8 +3,8 @@
   "type": "minecraft:jigsaw",
   "start_pool": "crystechmod:village2/center",
   "size": 7,
-  "max_distance_from_center": 40,
-  "biomes": "#minecraft:has_structure/house",
+  "max_distance_from_center": 128,
+  "biomes": "#minecraft:has_structure/house2",
   "step": "surface_structures",
   "start_height": {
     "absolute": 0
