@@ -20,6 +20,16 @@
       },
       "weight": 5
 
+    },
+    {
+      "element": {
+        "location": "crystechmod:village/village1/streets/street_3",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 5
+
     }
   ]
 }
