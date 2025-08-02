@@ -5,18 +5,21 @@
       "crystechmod:chime"
     ]
   },
-  "sound_block_break": {
-    "subtitle": "sounds.crystechmod.sound_block_break",
-    "sounds": [
-      "crystechmod:sound_block_break"
-    ]
-  },
+
   "vitric_ambient": {
     "subtitle": "sounds.crystechmod.vitric_ambient",
     "sounds": [
       "crystechmod:vitric_ambient"
     ]
   },
+
+  "sound_block_break": {
+    "subtitle": "sounds.crystechmod.sound_block_break",
+    "sounds": [
+      "crystechmod:sound_block_break"
+    ]
+  },
+
   "sound_block_step": {
     "subtitle": "sounds.crystechmod.sound_block_step",
     "sounds": [
@@ -39,6 +42,38 @@
     "subtitle": "sounds.crystechmod.sound_block_fall",
     "sounds": [
       "crystechmod:sound_block_fall"
+    ]
+  },
+
+  "metal_block_break": {
+    "subtitle": "sounds.crystechmod.metal_block_break",
+    "sounds": [
+      "crystechmod:metal_block_break"
+    ]
+  },
+
+  "metal_block_step": {
+    "subtitle": "sounds.crystechmod.metal_block_step",
+    "sounds": [
+      "crystechmod:metal_block_step"
+    ]
+  },
+  "metal_block_place": {
+    "subtitle": "sounds.crystechmod.metal_block_place",
+    "sounds": [
+      "crystechmod:metal_block_place"
+    ]
+  },
+  "metal_block_hit": {
+    "subtitle": "sounds.crystechmod.metal_block_hit",
+    "sounds": [
+      "crystechmod:metal_block_hit"
+    ]
+  },
+  "metal_block_fall": {
+    "subtitle": "sounds.crystechmod.metal_block_fall",
+    "sounds": [
+      "crystechmod:metal_block_fall"
     ]
   },
 

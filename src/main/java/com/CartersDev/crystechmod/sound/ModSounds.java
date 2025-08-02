@@ -20,6 +20,13 @@ DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CrystalTech.MOD_ID);
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_FALL = RegisterSoundEvents("sound_block_fall");
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_PLACE = RegisterSoundEvents("sound_block_place");
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_HIT = RegisterSoundEvents("sound_block_hit");
+    
+    public static final RegistryObject<SoundEvent> METAL_BLOCK_BREAK = RegisterSoundEvents("metal_block_break");
+    public static final RegistryObject<SoundEvent> METAL_BLOCK_STEP = RegisterSoundEvents("metal_block_step");
+    public static final RegistryObject<SoundEvent> METAL_BLOCK_FALL = RegisterSoundEvents("metal_block_fall");
+    public static final RegistryObject<SoundEvent> METAL_BLOCK_PLACE = RegisterSoundEvents("metal_block_place");
+    public static final RegistryObject<SoundEvent> METAL_BLOCK_HIT = RegisterSoundEvents("metal_block_hit"); 
+    
     public static final RegistryObject<SoundEvent> VITRIC_AMBIENT = RegisterSoundEvents("vitric_ambient");
 
 
@@ -47,6 +54,9 @@ DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CrystalTech.MOD_ID);
             ModSounds.SOUND_BLOCK_BREAK, ModSounds.SOUND_BLOCK_STEP, ModSounds.SOUND_BLOCK_PLACE,
             ModSounds.SOUND_BLOCK_HIT, ModSounds.SOUND_BLOCK_FALL);
 
+    public static final ForgeSoundType METAL_BLOCK_SOUNDS = new ForgeSoundType(1f, 1f,
+            ModSounds.METAL_BLOCK_BREAK, ModSounds.METAL_BLOCK_STEP, ModSounds.METAL_BLOCK_PLACE,
+            ModSounds.METAL_BLOCK_HIT, ModSounds.METAL_BLOCK_FALL);
 
 
 

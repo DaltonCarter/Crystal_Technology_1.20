@@ -21,8 +21,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -148,7 +146,7 @@ public class ModBlocks {
     //Metal and Mineral Blocks:
 
     public static final RegistryObject<Block> FIRESTONE_BLOCK = registerBlock("firestone_block",
-            () -> new FirestoneBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new FirestoneBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> AERIES_BLOCK = registerBlock("aeries_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
@@ -164,48 +162,47 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> GUNDANIUM_BLOCK = registerBlock("gundanium_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
-                    .explosionResistance(100.0f)));
+                    .explosionResistance(100.0f).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> PROTO_STEEL_BLOCK = registerBlock("proto_steel_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
-                    .explosionResistance(100.0f)));
+                    .explosionResistance(100.0f).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> IRON_PLATING = registerBlock("iron_plating",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
-                    ));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> RUSTY_IRON_PLATING = registerBlock("rusty_iron_plating",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> VITRIC_IRON_PLATING = registerBlock("vitric_iron_plating",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> POLISHED_IRON_BLOCK = registerBlock("polished_iron_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> HARMONIUM_BLOCK = registerBlock("harmonium_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
-                    .explosionResistance(100.0f)));
+                    .explosionResistance(100.0f).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> ALYTHUM_BLOCK = registerBlock("alythum_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
-                    .explosionResistance(300.0f)));
+                    .explosionResistance(300.0f).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> ILLYRIM_BLOCK = registerBlock("illyrim_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
-                    .explosionResistance(700.0f)));
+                    .explosionResistance(700.0f).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> LG_CORE_BLOCK = registerBlock("lg_core_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
-                    .explosionResistance(200.0f)));
+                    .explosionResistance(200.0f).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> MG_CORE_BLOCK = registerBlock("mg_core_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
-                    .explosionResistance(500.0f)));
+                    .explosionResistance(500.0f).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> HG_CORE_BLOCK = registerBlock("hg_core_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
-                    .explosionResistance(1200.0f)));
+                    .explosionResistance(1200.0f).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> TIBERIUM_BLOCK = registerBlock("tiberium_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
@@ -351,7 +348,7 @@ public class ModBlocks {
             () -> new NodLogoLargeBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
     public static final RegistryObject<Block> FIRESTONE_WALL = registerBlock("firestone_wall",
-            () -> new FirestoneWallBlock(BlockBehaviour.Properties.copy(ModBlocks.FIRESTONE_BLOCK.get())));
+            () -> new FirestoneWallBlock(BlockBehaviour.Properties.copy(ModBlocks.FIRESTONE_BLOCK.get()).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
         //Tibercrete:
     public static final RegistryObject<Block> BLACK_TIBERCRETE = registerBlock("black_tibercrete",
@@ -532,23 +529,23 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PROTO_STEEL_STAIRS = registerBlock("proto_steel_stairs",
             () -> new StairBlock(() -> ModBlocks.PROTO_STEEL_BLOCK.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> IRON_PLATING_STAIRS = registerBlock("iron_plating_stairs",
             () -> new StairBlock(() -> ModBlocks.IRON_PLATING.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> RUSTY_IRON_PLATING_STAIRS = registerBlock("rusty_iron_plating_stairs",
             () -> new StairBlock(() -> ModBlocks.RUSTY_IRON_PLATING.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> VITRIC_IRON_PLATING_STAIRS = registerBlock("vitric_iron_plating_stairs",
             () -> new StairBlock(() -> ModBlocks.VITRIC_IRON_PLATING.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> POLISHED_IRON_STAIRS = registerBlock("polished_iron_stairs",
             () -> new StairBlock(() -> ModBlocks.POLISHED_IRON_BLOCK.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> BLACK_TIBERCRETE_SLAB = registerBlock("black_tibercrete_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
@@ -599,19 +596,19 @@ public class ModBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
 
     public static final RegistryObject<Block> PROTO_STEEL_SLAB = registerBlock("proto_steel_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> IRON_PLATING_SLAB = registerBlock("iron_plating_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> RUSTY_IRON_PLATING_SLAB = registerBlock("rusty_iron_plating_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> VITRIC_IRON_PLATING_SLAB = registerBlock("vitric_iron_plating_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> POLISHED_IRON_SLAB = registerBlock("polished_iron_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> BLACK_TIBERCRETE_BRICKS = registerBlock("black_tibercrete_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BLACK_CONCRETE)));
@@ -710,19 +707,19 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.copy(ModBlocks.YELLOW_TIBERCRETE.get())));
 
     public static final RegistryObject<Block> PROTO_STEEL_WALL = registerBlock("proto_steel_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> IRON_PLATING_WALL = registerBlock("iron_plating_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> RUSTY_IRON_PLATING_WALL = registerBlock("rusty_iron_plating_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> VITRIC_IRON_PLATING_WALL = registerBlock("vitric_iron_plating_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> POLISHED_IRON_WALL = registerBlock("polished_iron_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> BLACK_TIBERCRETE_BRICK_STAIRS = registerBlock("black_tibercrete_brick_stairs",
             () -> new StairBlock(() -> ModBlocks.BLACK_TIBERCRETE_BRICKS.get().defaultBlockState(),
@@ -1192,544 +1189,526 @@ public class ModBlocks {
                 () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.CHAIN)));
 
     public static final RegistryObject<Block> CS_SCAFFOLD_VERT = registerBlock("cs_scaffold_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_W_VERT = registerBlock("cs_catwalk_w_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_BL_VERT = registerBlock("cs_catwalk_bl_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_G_VERT = registerBlock("cs_catwalk_g_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_B_VERT = registerBlock("cs_catwalk_b_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_R_VERT = registerBlock("cs_catwalk_r_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_P_VERT = registerBlock("cs_catwalk_p_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_VERT = registerBlock("cs_tile_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_BR_VERT = registerBlock("cs_tile_br_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_YB_VERT = registerBlock("cs_tile_yb_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_G_VERT = registerBlock("cs_tile_g_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_G_BAND_VERT = registerBlock("cs_tile_g_band_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_G_FRAME_VERT = registerBlock("cs_tile_g_frame_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_B_VERT = registerBlock("cs_tile_b_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_B_BAND_VERT = registerBlock("cs_tile_b_band_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_B_FRAME_VERT = registerBlock("cs_tile_b_frame_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_R_VERT = registerBlock("cs_tile_r_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_R_BAND_VERT = registerBlock("cs_tile_r_band_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_R_FRAME_VERT = registerBlock("cs_tile_r_frame_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_P_VERT = registerBlock("cs_tile_p_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_P_BAND_VERT = registerBlock("cs_tile_p_band_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_P_FRAME_VERT = registerBlock("cs_tile_p_frame_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_LG_VERT = registerBlock("cs_tile_lg_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_LG_BAND_VERT = registerBlock("cs_tile_lg_band_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_LG_FRAME_VERT = registerBlock("cs_tile_lg_frame_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_MG_VERT = registerBlock("cs_tile_mg_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_MG_BAND_VERT = registerBlock("cs_tile_mg_band_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_MG_FRAME_VERT = registerBlock("cs_tile_mg_frame_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_HG_VERT = registerBlock("cs_tile_hg_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_HG_BAND_VERT = registerBlock("cs_tile_hg_band_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_HG_FRAME_VERT = registerBlock("cs_tile_hg_frame_vert",
-            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new ModVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
         //Regular:
 
     public static final RegistryObject<Block> CS_SCAFFOLD = registerBlock("cs_scaffold",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_SCAFFOLD_STAIRS = registerBlock("cs_scaffold_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_SCAFFOLD.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).noOcclusion()));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_SCAFFOLD_SLAB = registerBlock("cs_scaffold_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).noOcclusion()));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_W = registerBlock("cs_catwalk_w",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_W_STAIRS = registerBlock("cs_catwalk_w_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_CATWALK_W.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).noOcclusion()));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_W_SLAB = registerBlock("cs_catwalk_w_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).noOcclusion()));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_BL = registerBlock("cs_catwalk_bl",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_BL_STAIRS = registerBlock("cs_catwalk_bl_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_CATWALK_BL.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).noOcclusion()));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_BL_SLAB = registerBlock("cs_catwalk_bl_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).noOcclusion()));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_G = registerBlock("cs_catwalk_g",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_G_STAIRS = registerBlock("cs_catwalk_g_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_CATWALK_G.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).noOcclusion()));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_G_SLAB = registerBlock("cs_catwalk_g_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).noOcclusion()));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_B = registerBlock("cs_catwalk_b",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_B_STAIRS = registerBlock("cs_catwalk_b_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_CATWALK_B.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).noOcclusion()));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_B_SLAB = registerBlock("cs_catwalk_b_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).noOcclusion()));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_R = registerBlock("cs_catwalk_r",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_R_STAIRS = registerBlock("cs_catwalk_r_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_CATWALK_R.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).noOcclusion()));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_R_SLAB = registerBlock("cs_catwalk_r_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).noOcclusion()));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_P = registerBlock("cs_catwalk_p",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_P_STAIRS = registerBlock("cs_catwalk_p_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_CATWALK_P.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).noOcclusion()));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_CATWALK_P_SLAB = registerBlock("cs_catwalk_p_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).noOcclusion()));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).noOcclusion().sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE = registerBlock("cs_tile",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_STAIRS = registerBlock("cs_tile_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_SLAB = registerBlock("cs_tile_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_WALL = registerBlock("cs_tile_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_BR = registerBlock("cs_tile_br",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_BR_STAIRS = registerBlock("cs_tile_br_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_BR.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_BR_SLAB = registerBlock("cs_tile_br_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_BR_WALL = registerBlock("cs_tile_br_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_YB = registerBlock("cs_tile_yb",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_YB_STAIRS = registerBlock("cs_tile_yb_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_YB.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_YB_SLAB = registerBlock("cs_tile_yb_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_YB_WALL = registerBlock("cs_tile_yb_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_G = registerBlock("cs_tile_g",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_G_STAIRS = registerBlock("cs_tile_g_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_G.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_G_SLAB = registerBlock("cs_tile_g_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_G_WALL = registerBlock("cs_tile_g_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_B = registerBlock("cs_tile_b",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_B_STAIRS = registerBlock("cs_tile_b_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_B.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_B_SLAB = registerBlock("cs_tile_b_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_B_WALL = registerBlock("cs_tile_b_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_R = registerBlock("cs_tile_r",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_R_STAIRS = registerBlock("cs_tile_r_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_R.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_R_SLAB = registerBlock("cs_tile_r_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_R_WALL = registerBlock("cs_tile_r_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_P = registerBlock("cs_tile_p",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_P_STAIRS = registerBlock("cs_tile_p_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_P.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_P_SLAB = registerBlock("cs_tile_p_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_P_WALL = registerBlock("cs_tile_p_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_LG = registerBlock("cs_tile_lg",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_LG_STAIRS = registerBlock("cs_tile_lg_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_LG.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_LG_SLAB = registerBlock("cs_tile_lg_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_LG_WALL = registerBlock("cs_tile_lg_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_MG = registerBlock("cs_tile_mg",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_MG_STAIRS = registerBlock("cs_tile_mg_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_MG.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_MG_SLAB = registerBlock("cs_tile_mg_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_MG_WALL = registerBlock("cs_tile_mg_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_HG = registerBlock("cs_tile_hg",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_HG_STAIRS = registerBlock("cs_tile_hg_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_HG.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_HG_SLAB = registerBlock("cs_tile_hg_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_HG_WALL = registerBlock("cs_tile_hg_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_G_BAND = registerBlock("cs_tile_g_band",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_G_BAND_STAIRS = registerBlock("cs_tile_g_band_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_G_BAND.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_G_BAND_SLAB = registerBlock("cs_tile_g_band_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_G_BAND_WALL = registerBlock("cs_tile_g_band_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_G_FRAME = registerBlock("cs_tile_g_frame",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_G_FRAME_STAIRS = registerBlock("cs_tile_g_frame_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_G_FRAME.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_G_FRAME_SLAB = registerBlock("cs_tile_g_frame_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_G_FRAME_WALL = registerBlock("cs_tile_g_frame_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_B_BAND = registerBlock("cs_tile_b_band",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_B_BAND_STAIRS = registerBlock("cs_tile_b_band_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_B_BAND.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_B_BAND_SLAB = registerBlock("cs_tile_b_band_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_B_BAND_WALL = registerBlock("cs_tile_b_band_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_B_FRAME = registerBlock("cs_tile_b_frame",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_B_FRAME_STAIRS = registerBlock("cs_tile_b_frame_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_B_FRAME.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_B_FRAME_SLAB = registerBlock("cs_tile_b_frame_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_B_FRAME_WALL = registerBlock("cs_tile_b_frame_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_R_BAND = registerBlock("cs_tile_r_band",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_R_BAND_STAIRS = registerBlock("cs_tile_r_band_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_R_BAND.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_R_BAND_SLAB = registerBlock("cs_tile_r_band_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_R_BAND_WALL = registerBlock("cs_tile_r_band_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_R_FRAME = registerBlock("cs_tile_r_frame",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_R_FRAME_STAIRS = registerBlock("cs_tile_r_frame_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_R_FRAME.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_R_FRAME_SLAB = registerBlock("cs_tile_r_frame_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_R_FRAME_WALL = registerBlock("cs_tile_r_frame_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_P_BAND = registerBlock("cs_tile_p_band",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_P_BAND_STAIRS = registerBlock("cs_tile_p_band_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_P_BAND.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_P_BAND_SLAB = registerBlock("cs_tile_p_band_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_P_BAND_WALL = registerBlock("cs_tile_p_band_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_P_FRAME = registerBlock("cs_tile_p_frame",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_P_FRAME_STAIRS = registerBlock("cs_tile_p_frame_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_P_FRAME.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_P_FRAME_SLAB = registerBlock("cs_tile_p_frame_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_P_FRAME_WALL = registerBlock("cs_tile_p_frame_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_LG_BAND = registerBlock("cs_tile_lg_band",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_LG_BAND_STAIRS = registerBlock("cs_tile_lg_band_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_LG_BAND.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_LG_BAND_SLAB = registerBlock("cs_tile_lg_band_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_LG_BAND_WALL = registerBlock("cs_tile_lg_band_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_LG_FRAME = registerBlock("cs_tile_lg_frame",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_LG_FRAME_STAIRS = registerBlock("cs_tile_lg_frame_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_LG_FRAME.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_LG_FRAME_SLAB = registerBlock("cs_tile_lg_frame_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_LG_FRAME_WALL = registerBlock("cs_tile_lg_frame_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_MG_BAND = registerBlock("cs_tile_mg_band",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_MG_BAND_STAIRS = registerBlock("cs_tile_mg_band_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_MG_BAND.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_MG_BAND_SLAB = registerBlock("cs_tile_mg_band_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_MG_BAND_WALL = registerBlock("cs_tile_mg_band_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_MG_FRAME = registerBlock("cs_tile_mg_frame",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_MG_FRAME_STAIRS = registerBlock("cs_tile_mg_frame_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_MG_FRAME.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_MG_FRAME_SLAB = registerBlock("cs_tile_mg_frame_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_MG_FRAME_WALL = registerBlock("cs_tile_mg_frame_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_HG_BAND = registerBlock("cs_tile_hg_band",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_HG_BAND_STAIRS = registerBlock("cs_tile_hg_band_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_HG_BAND.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_HG_BAND_SLAB = registerBlock("cs_tile_hg_band_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_HG_BAND_WALL = registerBlock("cs_tile_hg_band_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_HG_FRAME = registerBlock("cs_tile_hg_frame",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_HG_FRAME_STAIRS = registerBlock("cs_tile_hg_frame_stairs",
             () -> new StairBlock(() -> ModBlocks.CS_TILE_HG_FRAME.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_HG_FRAME_SLAB = registerBlock("cs_tile_hg_frame_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_TILE_HG_FRAME_WALL = registerBlock("cs_tile_hg_frame_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_PILLAR = registerBlock("cs_pillar",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_PILLAR_G = registerBlock("cs_pillar_g",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_PILLAR_G_2 = registerBlock("cs_pillar_g_2",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
-
-
-
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_PILLAR_B = registerBlock("cs_pillar_b",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_PILLAR_B_2 = registerBlock("cs_pillar_b_2",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
-
-
-
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_PILLAR_R = registerBlock("cs_pillar_r",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_PILLAR_R_2 = registerBlock("cs_pillar_r_2",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
-
-
-
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_PILLAR_P = registerBlock("cs_pillar_p",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_PILLAR_P_2 = registerBlock("cs_pillar_p_2",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
-
-
-
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_PILLAR_LG = registerBlock("cs_pillar_lg",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_PILLAR_LG_2 = registerBlock("cs_pillar_lg_2",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
-
-
-
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_PILLAR_MG = registerBlock("cs_pillar_mg",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_PILLAR_MG_2 = registerBlock("cs_pillar_mg_2",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
-
-
-
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_PILLAR_HG = registerBlock("cs_pillar_hg",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> CS_PILLAR_HG_2 = registerBlock("cs_pillar_hg_2",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).sound(ModSounds.METAL_BLOCK_SOUNDS)));
 
 
 
