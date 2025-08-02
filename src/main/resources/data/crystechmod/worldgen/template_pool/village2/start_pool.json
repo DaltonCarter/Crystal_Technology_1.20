@@ -1,0 +1,86 @@
+{
+  "name": "crystechmod:village2/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "location": "crystechmod:village/village2/houses/big_house_1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 5
+
+    },
+    {
+      "element": {
+        "location": "crystechmod:village/village2/houses/butcher",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 5
+
+    },
+    {
+      "element": {
+        "location": "crystechmod:village/village2/houses/farm_1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 5
+
+    },
+    {
+      "element": {
+        "location": "crystechmod:village/village2/houses/farm_2",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 5
+
+    },
+    {
+      "element": {
+        "location": "crystechmod:village/village2/houses/farm_3",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 5
+
+    },
+    {
+      "element": {
+        "location": "crystechmod:village/village2/houses/lab",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 5
+
+    },
+    {
+      "element": {
+        "location": "crystechmod:village/village2/houses/lib1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 5
+
+    },
+    {
+      "element": {
+        "location": "crystechmod:village/village2/houses/tool_smith",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      },
+      "weight": 5
+
+    }
+  ]
+}

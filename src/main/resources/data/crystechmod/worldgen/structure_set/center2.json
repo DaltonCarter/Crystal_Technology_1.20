@@ -1,0 +1,15 @@
+{
+
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 40,
+    "separation": 6,
+    "salt": 1642136422
+  },
+  "structures": [
+    {
+      "structure": "crystechmod:center",
+      "weight": 1
+    }
+  ]
+}
