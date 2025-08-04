@@ -15,6 +15,8 @@ public class ModSounds {
 DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CrystalTech.MOD_ID);
 
     public static final RegistryObject<SoundEvent> CHIME = RegisterSoundEvents("chime");
+    public static final RegistryObject<SoundEvent> PORTAL = RegisterSoundEvents("portal");
+
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_BREAK = RegisterSoundEvents("sound_block_break");
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_STEP = RegisterSoundEvents("sound_block_step");
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_FALL = RegisterSoundEvents("sound_block_fall");
@@ -28,6 +30,7 @@ DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CrystalTech.MOD_ID);
     public static final RegistryObject<SoundEvent> METAL_BLOCK_HIT = RegisterSoundEvents("metal_block_hit"); 
     
     public static final RegistryObject<SoundEvent> VITRIC_AMBIENT = RegisterSoundEvents("vitric_ambient");
+    public static final RegistryObject<SoundEvent> RED_ZONE_AMBIENT = RegisterSoundEvents("red_zone_ambient");
 
 
     //Music

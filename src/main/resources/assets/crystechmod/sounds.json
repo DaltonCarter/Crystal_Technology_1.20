@@ -6,10 +6,23 @@
     ]
   },
 
+  "portal": {
+    "subtitles": "sounds.crystechmod.portal",
+    "sounds": [
+      "crystechmod:portal"
+    ]
+  },
   "vitric_ambient": {
     "subtitle": "sounds.crystechmod.vitric_ambient",
     "sounds": [
       "crystechmod:vitric_ambient"
+    ]
+  },
+
+  "red_zone_ambient": {
+    "subtitle": "sounds.crystechmod.red_zone_ambient",
+    "sounds": [
+      "crystechmod:red_zone_ambient"
     ]
   },
 

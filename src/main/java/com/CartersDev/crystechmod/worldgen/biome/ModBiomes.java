@@ -1761,7 +1761,7 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                         .grassColorOverride(0x353A47)
                         .foliageColorOverride(0x353A47)
                         .fogColor(0x353A47)
-                        .ambientMoodSound(new AmbientMoodSettings(ModSounds.VITRIC_AMBIENT.getHolder().get(), 6000, 8, 2.0D))
+                        .ambientMoodSound(new AmbientMoodSettings(ModSounds.RED_ZONE_AMBIENT.getHolder().get(), 6000, 8, 2.0D))
                         .backgroundMusic(Musics.createGameMusic(ModSounds.VITRIC_EXPANSE_MUSIC.getHolder().get())).build())
                 .build();
     }
@@ -1808,7 +1808,7 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
                         .grassColorOverride(0x353A47)
                         .foliageColorOverride(0x353A47)
                         .fogColor(0x353A47)
-                        .ambientMoodSound(new AmbientMoodSettings(ModSounds.VITRIC_AMBIENT.getHolder().get(), 6000, 8, 2.0D))
+                        .ambientMoodSound(new AmbientMoodSettings(ModSounds.RED_ZONE_AMBIENT.getHolder().get(), 6000, 8, 2.0D))
                         .backgroundMusic(Musics.createGameMusic(ModSounds.VITRIC_EXPANSE_MUSIC.getHolder().get())).build())
                 .build();
     }

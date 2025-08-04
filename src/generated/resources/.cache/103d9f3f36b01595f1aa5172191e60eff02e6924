@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-03T18:30:13.5232228	Registries
+// 1.20.1	2025-08-04T02:29:23.4657415	Registries
 f6e7293a077e3d41e453cbb1329c48f7dd7f2ab6 data/crystechmod/dimension/vitric_expanse.json
 0bc3bdb43303324a95c9d378b956523d4955ae4f data/crystechmod/dimension_type/vitric_expanse_type.json
 7189beba5f9c0adce03a87325449330ad98dea75 data/crystechmod/forge/biome_modifier/add_crystech_end_enigma_ores.json
@@ -40,8 +40,8 @@ d0b89daf7d9d7306ad57b7531e2afd52de12bb36 data/crystechmod/worldgen/biome/inferno
 98e1605209cd06bc2c5e5307a54e9bba828621ec data/crystechmod/worldgen/biome/lost_steppes.json
 8f15127dec388dfa42dcab8bff52e2c14cb1ff45 data/crystechmod/worldgen/biome/old_battlefield.json
 052a181dd6dbb8b36ae08c7fc8410cd91263cd5d data/crystechmod/worldgen/biome/primal_jungle.json
-7d0c89ebca01c52062d3f5bd3f2e62794263fab3 data/crystechmod/worldgen/biome/red_and_yellow_zone_border.json
-fa0886270acbcc0a34cc701c4109d3f7dc68f59c data/crystechmod/worldgen/biome/ruined_city.json
+08629cb5ea9fa800e44e4446f87c006e60a76f73 data/crystechmod/worldgen/biome/red_and_yellow_zone_border.json
+624dfa3372ec8a74d20882cbbd8f9df32f8dc8c7 data/crystechmod/worldgen/biome/ruined_city.json
 a5258f0f7a10ae48793d8b5e09e040c07a699575 data/crystechmod/worldgen/biome/tiberian_badlands.json
 0d5a9c05c073ad09cbec888996c33bc9b84584ed data/crystechmod/worldgen/biome/tiberian_desert.json
 736b06f463b44b74448e6ba089a87442192a0f3d data/crystechmod/worldgen/biome/tiberian_desert_hills.json
