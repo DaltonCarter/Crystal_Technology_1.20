@@ -119,6 +119,7 @@ public class ModSurfaceRules {
         SurfaceRules.ConditionSource isHole = SurfaceRules.hole();
         SurfaceRules.ConditionSource isSteep = SurfaceRules.steep();
 
+
         SurfaceRules.ConditionSource isInfectedOcean = SurfaceRules.isBiome(ModBiomes.INFECTED_OCEAN);
         SurfaceRules.ConditionSource isInfectedRiver  = SurfaceRules.isBiome(ModBiomes.INFECTED_RIVER);
         SurfaceRules.ConditionSource isYZShore = SurfaceRules.isBiome(ModBiomes.YELLOW_ZONE_SHORE);
@@ -129,17 +130,22 @@ public class ModSurfaceRules {
         SurfaceRules.ConditionSource isMarsh = SurfaceRules.isBiome(ModBiomes.CALIDIAN_MARSH);
         SurfaceRules.ConditionSource isFoothills = SurfaceRules.isBiome(ModBiomes.FOOTHILLS);
         SurfaceRules.ConditionSource isYZBorder = SurfaceRules.isBiome(ModBiomes.BLUE_AND_YELLOW_ZONE_BORDER);
+        SurfaceRules.ConditionSource isRZBorder = SurfaceRules.isBiome(ModBiomes.RED_AND_YELLOW_ZONE_BORDER);
         SurfaceRules.ConditionSource isDeadForest = SurfaceRules.isBiome(ModBiomes.DEAD_FOREST);
         SurfaceRules.ConditionSource isTiberianBadlands = SurfaceRules.isBiome(ModBiomes.TIBERIAN_BADLANDS);
         SurfaceRules.ConditionSource isTiberianHighlands = SurfaceRules.isBiome(ModBiomes.TIBERIAN_HIGHLANDS);
+        SurfaceRules.ConditionSource isForgottenHighlands = SurfaceRules.isBiome(ModBiomes.FORGOTTEN_HIGHLANDS);
         SurfaceRules.ConditionSource isOldBattlefield = SurfaceRules.isBiome(ModBiomes.OLD_BATTLEFIELD);
         SurfaceRules.ConditionSource isLostSteppes = SurfaceRules.isBiome(ModBiomes.LOST_STEPPES);
+        SurfaceRules.ConditionSource isRuinedCity = SurfaceRules.isBiome(ModBiomes.RUINED_CITY);
         SurfaceRules.ConditionSource isDryHillsOrValley = SurfaceRules.isBiome(ModBiomes.DRY_HILLS, ModBiomes.DRY_VALLEY);
+        SurfaceRules.ConditionSource isTiberianStoneField = SurfaceRules.isBiome(ModBiomes.TIBERIAN_STONE_FIELDS);
 
 
         SurfaceRules.ConditionSource surfaceNoise = SurfaceRules.noiseCondition(Noises.SURFACE, -0.909D, -0.5454D);
         SurfaceRules.ConditionSource surfaceNoiseLarge = SurfaceRules.noiseCondition(Noises.SURFACE, 0.5454D, 0.909D);
         SurfaceRules.ConditionSource surfaceNoiseXL = SurfaceRules.noiseCondition(Noises.SURFACE, -0.1818D, 0.1818D);
+
 
         SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, GRASS_BLOCK), DIRT);
         SurfaceRules.RuleSource stoneAndGravel = SurfaceRules.sequence(new SurfaceRules.RuleSource[]{SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, INFESTED_STONE), GRAVEL});
@@ -169,11 +175,11 @@ public class ModSurfaceRules {
                 SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, SurfaceRules.ifTrue(isAbove50, INFESTED_STONE)));
 
         SurfaceRules.RuleSource infectedOceanSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.ifTrue(isHole, TIBERIUM_WATER)),SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, YELLOW_ZONE_SANDSTONE), SurfaceRules.ifTrue(isAbove50, YELLOW_ZONE_SAND), SurfaceRules.ifTrue(SurfaceRules.DEEP_UNDER_FLOOR, YELLOW_ZONE_SANDSTONE));
-
+        SurfaceRules.RuleSource redBorderSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), YELLOW_ZONE_CRACKED_DIRT), SurfaceRules.ifTrue(isAbove55, SurfaceRules.ifTrue(SurfaceRules.not(isAbove62), SurfaceRules.ifTrue(surfaceNoiseAbove(1.0D), SEEDED_YELLOW_ZONE_CRACKED_DIRT))), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
+        SurfaceRules.RuleSource ruinedCitySurface = SurfaceRules.ifTrue(UNDER_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove50, SurfaceRules.ifTrue(UNDER_FLOOR, YELLOW_ZONE_CRACKED_DIRT)), SurfaceRules.ifTrue(surfaceNoiseXL, INFESTED_STONE)));
+        SurfaceRules.RuleSource tiberianStoneFieldSurface = SurfaceRules.ifTrue(UNDER_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove50, SurfaceRules.ifTrue(UNDER_FLOOR, INFESTED_STONE)), SurfaceRules.ifTrue(surfaceNoise, INFESTED_DIORITE), SurfaceRules.ifTrue(surfaceNoise, INFESTED_GRANITE), SurfaceRules.ifTrue(surfaceNoise, INFESTED_ANDESITE)));
 
         return SurfaceRules.sequence(
-
-
 
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isDesert, desertSurface)),
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isDesertHills, desertHillSurface)),
@@ -190,13 +196,10 @@ public class ModSurfaceRules {
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isInfectedRiver, infectedRiverSurface)),
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isInfectedOcean, infectedOceanSurface)),
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isDryHillsOrValley, dryHillsOrValleySurface)),
-
-
-
-
-
-
-
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isForgottenHighlands, tiberianHighlandSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isRZBorder, redBorderSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isRuinedCity, ruinedCitySurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isTiberianStoneField, tiberianStoneFieldSurface)),
 
 
 

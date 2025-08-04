@@ -6,270 +6,6 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "crystechmod:calidian_marsh",
-          "parameters": {
-            "continentalness": 0.11,
-            "depth": 0.0,
-            "erosion": 0.55,
-            "humidity": -1.0,
-            "offset": 0.0,
-            "temperature": -0.45,
-            "weirdness": -0.4
-          }
-        },
-        {
-          "biome": "crystechmod:calidian_marsh",
-          "parameters": {
-            "continentalness": 1.0,
-            "depth": 0.0,
-            "erosion": 1.0,
-            "humidity": 1.0,
-            "offset": 0.0,
-            "temperature": 0.2,
-            "weirdness": -0.2666
-          }
-        },
-        {
-          "biome": "crystechmod:grove_of_life",
-          "parameters": {
-            "continentalness": 1.5,
-            "depth": 0.0,
-            "erosion": -1.0,
-            "humidity": -0.1,
-            "offset": 0.0,
-            "temperature": -1.0,
-            "weirdness": -0.4
-          }
-        },
-        {
-          "biome": "crystechmod:grove_of_life",
-          "parameters": {
-            "continentalness": 1.0,
-            "depth": 0.0,
-            "erosion": -0.7799,
-            "humidity": 0.1,
-            "offset": 0.0,
-            "temperature": -1.0,
-            "weirdness": -0.2666
-          }
-        },
-        {
-          "biome": "crystechmod:foothills",
-          "parameters": {
-            "continentalness": 0.9,
-            "depth": 0.0,
-            "erosion": -1.0,
-            "humidity": -0.35,
-            "offset": 0.0,
-            "temperature": 0.2,
-            "weirdness": -0.4
-          }
-        },
-        {
-          "biome": "crystechmod:foothills",
-          "parameters": {
-            "continentalness": 1.0,
-            "depth": 0.0,
-            "erosion": -0.7799,
-            "humidity": -0.1,
-            "offset": 0.0,
-            "temperature": 0.55,
-            "weirdness": -0.5666
-          }
-        },
-        {
-          "biome": "crystechmod:primal_jungle",
-          "parameters": {
-            "continentalness": 0.11,
-            "depth": 0.0,
-            "erosion": -1.0,
-            "humidity": -0.3,
-            "offset": 0.0,
-            "temperature": 0.2,
-            "weirdness": -0.4
-          }
-        },
-        {
-          "biome": "crystechmod:primal_jungle",
-          "parameters": {
-            "continentalness": 0.03,
-            "depth": 0.0,
-            "erosion": -0.7799,
-            "humidity": 1.0,
-            "offset": 0.0,
-            "temperature": 0.55,
-            "weirdness": -0.5666
-          }
-        },
-        {
-          "biome": "crystechmod:blue_and_yellow_zone_border",
-          "parameters": {
-            "continentalness": 0.25,
-            "depth": 0.0,
-            "erosion": -0.375,
-            "humidity": -1.0,
-            "offset": 0.0,
-            "temperature": -0.45,
-            "weirdness": -0.5666
-          }
-        },
-        {
-          "biome": "crystechmod:blue_and_yellow_zone_border",
-          "parameters": {
-            "continentalness": 0.75,
-            "depth": 0.0,
-            "erosion": 0.05,
-            "humidity": -0.35,
-            "offset": 0.0,
-            "temperature": -0.15,
-            "weirdness": -0.7666
-          }
-        },
-        {
-          "biome": "crystechmod:burning_hills",
-          "parameters": {
-            "continentalness": 0.75,
-            "depth": 0.0,
-            "erosion": -1.0,
-            "humidity": -0.35,
-            "offset": 0.0,
-            "temperature": 0.75,
-            "weirdness": -0.4
-          }
-        },
-        {
-          "biome": "crystechmod:burning_hills",
-          "parameters": {
-            "continentalness": 1.0,
-            "depth": 0.0,
-            "erosion": -0.7799,
-            "humidity": -0.1,
-            "offset": 0.0,
-            "temperature": 1.5,
-            "weirdness": -0.5666
-          }
-        },
-        {
-          "biome": "crystechmod:ember_grove",
-          "parameters": {
-            "continentalness": 0.3,
-            "depth": 0.0,
-            "erosion": -0.375,
-            "humidity": 0.5,
-            "offset": 0.0,
-            "temperature": 1.25,
-            "weirdness": -0.5666
-          }
-        },
-        {
-          "biome": "crystechmod:ember_grove",
-          "parameters": {
-            "continentalness": 1.0,
-            "depth": 0.0,
-            "erosion": -0.2225,
-            "humidity": 0.1,
-            "offset": 0.0,
-            "temperature": 2.0,
-            "weirdness": -0.7666
-          }
-        },
-        {
-          "biome": "crystechmod:inferno_peak",
-          "parameters": {
-            "continentalness": 0.9,
-            "depth": 0.0,
-            "erosion": -1.0,
-            "humidity": 0.5,
-            "offset": 0.0,
-            "temperature": 1.25,
-            "weirdness": 1.9
-          }
-        },
-        {
-          "biome": "crystechmod:inferno_peak",
-          "parameters": {
-            "continentalness": 1.0,
-            "depth": 0.0,
-            "erosion": -0.8559,
-            "humidity": 0.1,
-            "offset": 0.0,
-            "temperature": 2.0,
-            "weirdness": 1.5
-          }
-        },
-        {
-          "biome": "crystechmod:untarnished_hills",
-          "parameters": {
-            "continentalness": 0.75,
-            "depth": 0.0,
-            "erosion": -1.0,
-            "humidity": -0.35,
-            "offset": 0.0,
-            "temperature": 0.2,
-            "weirdness": -0.4
-          }
-        },
-        {
-          "biome": "crystechmod:untarnished_hills",
-          "parameters": {
-            "continentalness": 1.0,
-            "depth": 0.0,
-            "erosion": -0.7799,
-            "humidity": -0.1,
-            "offset": 0.0,
-            "temperature": -0.2,
-            "weirdness": -0.5666
-          }
-        },
-        {
-          "biome": "crystechmod:evergold_expanse",
-          "parameters": {
-            "continentalness": 0.03,
-            "depth": 0.0,
-            "erosion": 0.7799,
-            "humidity": -1.0,
-            "offset": 0.0,
-            "temperature": 0.45,
-            "weirdness": 0.5666
-          }
-        },
-        {
-          "biome": "crystechmod:evergold_expanse",
-          "parameters": {
-            "continentalness": 0.3,
-            "depth": 0.0,
-            "erosion": 0.9999,
-            "humidity": -0.35,
-            "offset": 0.0,
-            "temperature": 0.15,
-            "weirdness": 0.7666
-          }
-        },
-        {
-          "biome": "crystechmod:valley_of_gold",
-          "parameters": {
-            "continentalness": 0.03,
-            "depth": 0.0,
-            "erosion": -0.7799,
-            "humidity": -1.0,
-            "offset": 0.0,
-            "temperature": 0.45,
-            "weirdness": -0.5666
-          }
-        },
-        {
-          "biome": "crystechmod:valley_of_gold",
-          "parameters": {
-            "continentalness": 0.3,
-            "depth": 0.0,
-            "erosion": -0.9999,
-            "humidity": -0.35,
-            "offset": 0.0,
-            "temperature": 0.15,
-            "weirdness": -0.7666
-          }
-        },
-        {
           "biome": "crystechmod:dead_forest",
           "parameters": {
             "continentalness": 0.19,
@@ -483,6 +219,102 @@
             "offset": 0.0,
             "temperature": 1.5,
             "weirdness": -0.05
+          }
+        },
+        {
+          "biome": "crystechmod:forgotten_highlands",
+          "parameters": {
+            "continentalness": 0.4,
+            "depth": 0.0,
+            "erosion": -0.7799,
+            "humidity": -0.1,
+            "offset": 0.0,
+            "temperature": 0.3,
+            "weirdness": 0.5666
+          }
+        },
+        {
+          "biome": "crystechmod:forgotten_highlands",
+          "parameters": {
+            "continentalness": 0.6,
+            "depth": 0.0,
+            "erosion": -0.375,
+            "humidity": 0.1,
+            "offset": 0.0,
+            "temperature": 0.4,
+            "weirdness": 0.7666
+          }
+        },
+        {
+          "biome": "crystechmod:red_and_yellow_zone_border",
+          "parameters": {
+            "continentalness": 0.24,
+            "depth": 0.0,
+            "erosion": -0.375,
+            "humidity": -1.0,
+            "offset": 0.0,
+            "temperature": -0.45,
+            "weirdness": -0.5666
+          }
+        },
+        {
+          "biome": "crystechmod:red_and_yellow_zone_border",
+          "parameters": {
+            "continentalness": 0.54,
+            "depth": 0.0,
+            "erosion": 0.05,
+            "humidity": -0.35,
+            "offset": 0.0,
+            "temperature": -0.15,
+            "weirdness": -0.7666
+          }
+        },
+        {
+          "biome": "crystechmod:ruined_city",
+          "parameters": {
+            "continentalness": 0.1,
+            "depth": 0.0,
+            "erosion": -0.7799,
+            "humidity": -0.1,
+            "offset": 0.0,
+            "temperature": 0.5,
+            "weirdness": 0.5666
+          }
+        },
+        {
+          "biome": "crystechmod:ruined_city",
+          "parameters": {
+            "continentalness": 0.06,
+            "depth": 0.0,
+            "erosion": -0.375,
+            "humidity": 0.1,
+            "offset": 0.0,
+            "temperature": 0.1,
+            "weirdness": 0.7666
+          }
+        },
+        {
+          "biome": "crystechmod:tiberian_stone_fields",
+          "parameters": {
+            "continentalness": 0.03,
+            "depth": 0.0,
+            "erosion": -0.2225,
+            "humidity": -0.1,
+            "offset": 0.0,
+            "temperature": -1.0,
+            "weirdness": -1.0
+          }
+        },
+        {
+          "biome": "crystechmod:tiberian_stone_fields",
+          "parameters": {
+            "continentalness": 1.0,
+            "depth": 0.0,
+            "erosion": 0.05,
+            "humidity": -0.35,
+            "offset": 0.0,
+            "temperature": -0.45,
+            "weirdness": -0.9333
           }
         },
         {

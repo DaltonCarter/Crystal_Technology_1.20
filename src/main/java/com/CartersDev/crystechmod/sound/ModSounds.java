@@ -32,17 +32,11 @@ DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CrystalTech.MOD_ID);
 
     //Music
     public static final RegistryObject<SoundEvent> KODIAK_STRANDED = RegisterSoundEvents("kodiak_stranded");
-
     public static final RegistryObject<SoundEvent> DUSK_HOUR = RegisterSoundEvents("dusk_hour");
-
     public static final RegistryObject<SoundEvent> HEROISM = RegisterSoundEvents("heroism");
     public static final RegistryObject<SoundEvent> LONE_TROOPER = RegisterSoundEvents("lone_trooper");
-
     public static final RegistryObject<SoundEvent> VALVES = RegisterSoundEvents("valves");
-
     public static final RegistryObject<SoundEvent> DERELICT = RegisterSoundEvents("derelict");
-
-
 
     public static final RegistryObject<SoundEvent> VITRIC_EXPANSE_MUSIC = RegisterSoundEvents("vitric_expanse_music");
 
