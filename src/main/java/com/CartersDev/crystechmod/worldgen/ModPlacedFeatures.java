@@ -29,6 +29,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> DEAD_PLACED_KEY = registerKey("dead_placed");
     public static final ResourceKey<PlacedFeature> DEAD_HEAVY_PLACED_KEY = registerKey("dead_heavy_placed");
     public static final ResourceKey<PlacedFeature> PLAGUED_PLACED_KEY = registerKey("plagued_placed");
+    public static final ResourceKey<PlacedFeature> HEAVY_PLAGUED_PLACED_KEY = registerKey("heavy_plagued_placed");
     public static final ResourceKey<PlacedFeature> EMBER_PLACED_KEY = registerKey("ember_placed");
     public static final ResourceKey<PlacedFeature> SM_EMBER_PLACED_KEY = registerKey("sm_ember_placed");
     public static final ResourceKey<PlacedFeature> MARIKA_PLACED_KEY = registerKey("marika_placed");
@@ -211,7 +212,11 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
                     ModBlocks.EMBER_OAK_SAPLING.get()));
 
     register(context, PLAGUED_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PLAGUED_KEY),
-            VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.5f, 2),
+            VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.5f, 3),
+                    ModBlocks.PLAGUED_SAPLING.get()));
+
+    register(context, HEAVY_PLAGUED_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PLAGUED_KEY),
+            VegetationPlacements.treePlacement(PlacementUtils.countExtra(4, 1.0f, 8),
                     ModBlocks.PLAGUED_SAPLING.get()));
 
     //Ores:

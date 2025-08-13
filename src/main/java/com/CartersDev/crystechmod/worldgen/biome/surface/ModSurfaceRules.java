@@ -47,10 +47,8 @@ public class ModSurfaceRules {
     private static final SurfaceRules.RuleSource TUFF = makeStateRule(Blocks.TUFF);
     private static final SurfaceRules.RuleSource SMOOTH_BASALT = makeStateRule(Blocks.SMOOTH_BASALT);
     private static final SurfaceRules.RuleSource MUD = makeStateRule(Blocks.MUD);
-    private static final SurfaceRules.RuleSource DEEPSLATE = makeStateRule(Blocks.DEEPSLATE
-
-
-    );
+    private static final SurfaceRules.RuleSource DEEPSLATE = makeStateRule(Blocks.DEEPSLATE);
+    private static final SurfaceRules.RuleSource PODZOL = makeStateRule(Blocks.PODZOL);
 
     //Base Nether:
     private static final SurfaceRules.RuleSource NETHERRACK = makeStateRule(Blocks.NETHERRACK);
@@ -128,10 +126,11 @@ public class ModSurfaceRules {
         SurfaceRules.ConditionSource isDesert = SurfaceRules.isBiome(ModBiomes.TIBERIAN_DESERT);
         SurfaceRules.ConditionSource isDesertHills = SurfaceRules.isBiome(ModBiomes.TIBERIAN_DESERT_HILLS);
         SurfaceRules.ConditionSource isMarsh = SurfaceRules.isBiome(ModBiomes.CALIDIAN_MARSH);
+        SurfaceRules.ConditionSource isTiberianSwamp = SurfaceRules.isBiome(ModBiomes.TIBERIAN_SWAMP);
         SurfaceRules.ConditionSource isFoothills = SurfaceRules.isBiome(ModBiomes.FOOTHILLS);
         SurfaceRules.ConditionSource isYZBorder = SurfaceRules.isBiome(ModBiomes.BLUE_AND_YELLOW_ZONE_BORDER);
         SurfaceRules.ConditionSource isRZBorder = SurfaceRules.isBiome(ModBiomes.RED_AND_YELLOW_ZONE_BORDER);
-        SurfaceRules.ConditionSource isDeadForest = SurfaceRules.isBiome(ModBiomes.DEAD_FOREST);
+        SurfaceRules.ConditionSource isDeadForest = SurfaceRules.isBiome(ModBiomes.DEAD_FOREST, ModBiomes.TIBERIAN_WOODS);
         SurfaceRules.ConditionSource isTiberianBadlands = SurfaceRules.isBiome(ModBiomes.TIBERIAN_BADLANDS);
         SurfaceRules.ConditionSource isTiberianHighlands = SurfaceRules.isBiome(ModBiomes.TIBERIAN_HIGHLANDS);
         SurfaceRules.ConditionSource isForgottenHighlands = SurfaceRules.isBiome(ModBiomes.FORGOTTEN_HIGHLANDS);
@@ -139,7 +138,8 @@ public class ModSurfaceRules {
         SurfaceRules.ConditionSource isLostSteppes = SurfaceRules.isBiome(ModBiomes.LOST_STEPPES);
         SurfaceRules.ConditionSource isRuinedCity = SurfaceRules.isBiome(ModBiomes.RUINED_CITY);
         SurfaceRules.ConditionSource isDryHillsOrValley = SurfaceRules.isBiome(ModBiomes.DRY_HILLS, ModBiomes.DRY_VALLEY);
-        SurfaceRules.ConditionSource isTiberianStoneField = SurfaceRules.isBiome(ModBiomes.TIBERIAN_STONE_FIELDS);
+        SurfaceRules.ConditionSource isTiberianStoneField = SurfaceRules.isBiome(ModBiomes.TIBERIAN_STONE_FIELDS, ModBiomes.CRYSTAL_FIELDS);
+        SurfaceRules.ConditionSource isTiberianTaiga = SurfaceRules.isBiome(ModBiomes.TIBERIAN_TAIGA);
 
 
         SurfaceRules.ConditionSource surfaceNoise = SurfaceRules.noiseCondition(Noises.SURFACE, -0.909D, -0.5454D);
@@ -178,6 +178,11 @@ public class ModSurfaceRules {
         SurfaceRules.RuleSource redBorderSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), YELLOW_ZONE_CRACKED_DIRT), SurfaceRules.ifTrue(isAbove55, SurfaceRules.ifTrue(SurfaceRules.not(isAbove62), SurfaceRules.ifTrue(surfaceNoiseAbove(1.0D), SEEDED_YELLOW_ZONE_CRACKED_DIRT))), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
         SurfaceRules.RuleSource ruinedCitySurface = SurfaceRules.ifTrue(UNDER_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove50, SurfaceRules.ifTrue(UNDER_FLOOR, YELLOW_ZONE_CRACKED_DIRT)), SurfaceRules.ifTrue(surfaceNoiseXL, INFESTED_STONE)));
         SurfaceRules.RuleSource tiberianStoneFieldSurface = SurfaceRules.ifTrue(UNDER_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove50, SurfaceRules.ifTrue(UNDER_FLOOR, INFESTED_STONE)), SurfaceRules.ifTrue(surfaceNoise, INFESTED_DIORITE), SurfaceRules.ifTrue(surfaceNoise, INFESTED_GRANITE), SurfaceRules.ifTrue(surfaceNoise, INFESTED_ANDESITE)));
+        SurfaceRules.RuleSource tiberianTaigaSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(surfaceNoiseAbove(1.75D), SEEDED_YELLOW_ZONE_CRACKED_DIRT), SurfaceRules.ifTrue(surfaceNoiseAbove(-0.95D), PODZOL), SurfaceRules.ifTrue(isAbove60, SurfaceRules.ifTrue(UNDER_FLOOR, YELLOW_ZONE_CRACKED_DIRT)));
+
+        SurfaceRules.RuleSource tiberianSwampSurface = SurfaceRules.ifTrue(ON_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove62, SurfaceRules.ifTrue(SurfaceRules.not(isAbove63), SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.SWAMP, 0.0D), TIBERIUM_WATER))), SurfaceRules.ifTrue(isAbove62, SurfaceRules.ifTrue(surfaceNoiseAbove(0.5D), MUD)), SurfaceRules.ifTrue(isAbove55, SurfaceRules.ifTrue(UNDER_FLOOR, YELLOW_ZONE_CRACKED_DIRT))));
+
+
 
         return SurfaceRules.sequence(
 
@@ -200,6 +205,8 @@ public class ModSurfaceRules {
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isRZBorder, redBorderSurface)),
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isRuinedCity, ruinedCitySurface)),
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isTiberianStoneField, tiberianStoneFieldSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isTiberianTaiga, tiberianTaigaSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isTiberianSwamp, tiberianSwampSurface)),
 
 
 

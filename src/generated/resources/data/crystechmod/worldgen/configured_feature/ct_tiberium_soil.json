@@ -35,6 +35,11 @@
         "minecraft:red_terracotta",
         "crystechmod:infested_cobble",
         "crystechmod:infested_stone",
+        "crystechmod:infested_granite",
+        "crystechmod:infested_diorite",
+        "crystechmod:infested_andesite",
+        "minecraft:podzol",
+        "minecraft:mud",
         "crystechmod:red_zone_dirt",
         "crystechmod:seeded_red_zone_dirt",
         "crystechmod:red_zone_sand"
