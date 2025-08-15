@@ -115,9 +115,12 @@ public class ModDimensions {
                                 Pair.of(Climate.parameters(-0.15F, -0.35F, -0.25F, 0.55F, 0.0F, -0.9333F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.YELLOW_ZONE_SHORE)),
                                 Pair.of(Climate.parameters(-1.0F, -1.0F, -0.39F, 0.55F, 0.0F, -0.4F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.YELLOW_ZONE_STONY_SHORE)),
                                 Pair.of(Climate.parameters(-0.45F, -0.35F, -0.21F, 1.0F, 0.0F, -0.2666F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.YELLOW_ZONE_STONY_SHORE)),
+                                Pair.of(Climate.parameters(-0.45F, -0.35F, -0.19F, -0.2225F, 0.0F, 0.05F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.RED_ZONE_SHORE)),
+                                Pair.of(Climate.parameters(-0.15F, -0.1F, -0.11F, 0.45F, 0.0F, 0.2666F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.RED_ZONE_SHORE)),
                                 Pair.of(Climate.parameters(-0.45F, -1.0F, -0.19F, 1.0F, 0.0F, -0.05F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_RIVER)),
                                 Pair.of(Climate.parameters(1.0F, 1.0F, -0.11F, -0.375F, 0.0F, 0.05F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_RIVER)),
-
+                                Pair.of(Climate.parameters(-1.0F, -1.0F, -0.19F, -0.375F, 0.0F, -0.05F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.RED_ZONE_RIVER)),
+                                Pair.of(Climate.parameters(1.0F, 1.0F, 1.0F, 0.55F, 0.0F, 0.05F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.RED_ZONE_RIVER)),
 
 ////                                  Ocean:
                                 Pair.of(Climate.parameters(-0.15F, -1.0F, -0.455F, -1.0F, 0.0F, -1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
@@ -201,13 +204,16 @@ public class ModDimensions {
                                 Pair.of(Climate.parameters(-0.45F, -1.0F, -0.11F, 0.55F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_SWAMP)),
                                 Pair.of(Climate.parameters(0.2F, 1.0F, 1.0F, 1.0F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_SWAMP)),
                                 Pair.of(Climate.parameters(-0.15F, 0.3F, -0.19F, -1.0F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_WOODS)),
-                                Pair.of(Climate.parameters(0.2F, 1.0F, 0.03F, -0.375F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_WOODS))
+                                Pair.of(Climate.parameters(0.2F, 1.0F, 0.03F, -0.375F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_WOODS)),
+//
+////                                  Start of Red Zone Biomes:
+                                Pair.of(Climate.parameters(0.2F, -1.0F, -0.11F, -1.0F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.ASHLANDS)),
+                                Pair.of(Climate.parameters(0.55F, -0.35F, 0.03F, -0.375F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.ASHLANDS)),
+                                Pair.of(Climate.parameters(0.55F, -1.0F, 0.19F, -0.2225F, 0.0F, -0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.SCORCHED_DESERT)),
+                                Pair.of(Climate.parameters(1.0F, -0.35F, 0.11F, 0.45F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.SCORCHED_DESERT)),
 
-
-
-
-//                                  Start of Red Zone Biomes:
-
+                                Pair.of(Climate.parameters(0.55F, -1.0F, 0.19F, 0.45F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.SCORCHED_HILLS)),
+                                Pair.of(Climate.parameters(1.0F, -0.35F, 0.11F, 0.55F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.SCORCHED_HILLS))
 
                         ))),
                 noiseGenSettings.getOrThrow(NoiseGeneratorSettings.OVERWORLD));

@@ -42,7 +42,8 @@
         "minecraft:mud",
         "crystechmod:red_zone_dirt",
         "crystechmod:seeded_red_zone_dirt",
-        "crystechmod:red_zone_sand"
+        "crystechmod:red_zone_sand",
+        "crystechmod:rz_sandstone"
       ]
     }
   }

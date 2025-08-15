@@ -93,26 +93,26 @@ public class ModBiomes {
 
 
 //    //Red Zone:
-//    public static final ResourceKey<Biome> ASHLANDS = register("ashlands");
-//    public static final ResourceKey<Biome> BROODING_LANDS = register("brooding_lands");
-//    public static final ResourceKey<Biome> WASTELAND = register("wasteland");
-//    public static final ResourceKey<Biome> WASTELAND_HILLS = register("wasteland_hills");
-//    public static final ResourceKey<Biome> SCORCHED_HILLS = register("scorched_hills");
-//    public static final ResourceKey<Biome> SCORCHED_DESERT = register("scorched_desert");
-//    public static final ResourceKey<Biome> RED_AND_BLUE_ZONE_BORDER = register("yellow_zone_border");
-//    public static final ResourceKey<Biome> ICHOR_MARSH = register("ichor_marsh");
-//    public static final ResourceKey<Biome> ABYSSAL_MARSH = register("abyssal_marsh");
-//    public static final ResourceKey<Biome> DEAD_PLAINS = register("dead_plains");
-//    public static final ResourceKey<Biome> RED_ZONE_RIVER = register("red_zone_river");
-//    public static final ResourceKey<Biome> RED_ZONE_SHORE = register("red_zone_shore");
-//    public static final ResourceKey<Biome> FIRESTORM_PLAINS = register("firestorm_plains");
-//    public static final ResourceKey<Biome> CRYSTALLINE_CANYON = register("crystalline_canyon");
-//    public static final ResourceKey<Biome> CRYSTALLINE_HILLS = register("crystalline_hills");
-//    public static final ResourceKey<Biome> DEAD_ZONE = register("dead_zone");
-//    public static final ResourceKey<Biome> TIBERIAN_WASTES = register("tiberian_wastes");
-//    public static final ResourceKey<Biome> PLAGUED_WOODS = register("plagued_woods");
-//    public static final ResourceKey<Biome> ICHOR_BOG = register("ichor_bog");
-//    public static final ResourceKey<Biome> OLD_WAR_ZONE = register("old_war_zone");
+    public static final ResourceKey<Biome> ASHLANDS = register("ashlands");
+    public static final ResourceKey<Biome> BROODING_LANDS = register("brooding_lands");
+    public static final ResourceKey<Biome> WASTELAND = register("wasteland");
+    public static final ResourceKey<Biome> WASTELAND_HILLS = register("wasteland_hills");
+    public static final ResourceKey<Biome> SCORCHED_HILLS = register("scorched_hills");
+    public static final ResourceKey<Biome> SCORCHED_DESERT = register("scorched_desert");
+    public static final ResourceKey<Biome> RED_AND_BLUE_ZONE_BORDER = register("yellow_zone_border");
+    public static final ResourceKey<Biome> ICHOR_MARSH = register("ichor_marsh");
+    public static final ResourceKey<Biome> ABYSSAL_MARSH = register("abyssal_marsh");
+    public static final ResourceKey<Biome> DEAD_PLAINS = register("dead_plains");
+    public static final ResourceKey<Biome> RED_ZONE_RIVER = register("red_zone_river");
+    public static final ResourceKey<Biome> RED_ZONE_SHORE = register("red_zone_shore");
+    public static final ResourceKey<Biome> FIRESTORM_PLAINS = register("firestorm_plains");
+    public static final ResourceKey<Biome> CRYSTALLINE_CANYON = register("crystalline_canyon");
+    public static final ResourceKey<Biome> CRYSTALLINE_HILLS = register("crystalline_hills");
+    public static final ResourceKey<Biome> DEAD_ZONE = register("dead_zone");
+    public static final ResourceKey<Biome> TIBERIAN_WASTES = register("tiberian_wastes");
+    public static final ResourceKey<Biome> PLAGUED_WOODS = register("plagued_woods");
+    public static final ResourceKey<Biome> ICHOR_BOG = register("ichor_bog");
+    public static final ResourceKey<Biome> OLD_WAR_ZONE = register("old_war_zone");
 
 
 
@@ -156,6 +156,13 @@ public static void bootstrap(BootstapContext<Biome> context){
     context.register(TIBERIAN_WOODS, tiberianWoods(context));
     context.register(CRYSTAL_FIELDS, crystalFields(context));
     context.register(TIBERIAN_STONE_FIELDS, tiberianStoneFields(context));
+    //Red Zone:
+    context.register(ASHLANDS, ashlands(context));
+    context.register(SCORCHED_DESERT, scorchedDesert(context));
+    context.register(SCORCHED_HILLS, scorchedHills(context));
+    context.register(RED_ZONE_SHORE, redZoneShore(context));
+    context.register(RED_ZONE_RIVER, redZoneRiver(context));
+
 
 
 
@@ -1502,9 +1509,6 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.DEAD_HEAVY_PLACED_KEY);
 
 
-
-
-
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)
                 .downfall(0.5f)
@@ -2066,7 +2070,247 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
     //Red Zone:
 
+    public static Biome ashlands (BootstapContext<Biome> context) {
+        MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
+
+        BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+
+        BiomeGenerationSettings.Builder biomeBuilder =
+                new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
+
+        BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
+        vitricExpanseRZGeneration(biomeBuilder);
+
+
+        BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
+        ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        ModBiomeDefaultFeatures.addRZSoftDisks(biomeBuilder);
+
+
+        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.VITRIC_BLOOM_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.VITRIC_ROSE_PLACED_KEY);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_ICHOR_SOIL_PLACED_KEY);
+
+
+
+
+        return new Biome.BiomeBuilder()
+                .hasPrecipitation(true)
+                .downfall(0.1f)
+                .temperature(1.5f)
+                .generationSettings(biomeBuilder.build())
+                .mobSpawnSettings(spawnBuilder.build())
+                .specialEffects((new BiomeSpecialEffects.Builder())
+                        .waterColor(0x353A47)
+                        .waterFogColor(0x353A47)
+                        .skyColor(0x353A47)
+                        .grassColorOverride(0x353A47)
+                        .foliageColorOverride(0x353A47)
+                        .fogColor(0x353A47)
+                        .ambientMoodSound(new AmbientMoodSettings(ModSounds.RED_ZONE_AMBIENT.getHolder().get(), 6000, 8, 2.0D))
+                        .backgroundMusic(Musics.createGameMusic(ModSounds.VITRIC_EXPANSE_MUSIC.getHolder().get())).build())
+                .build();
+    }
+
+    public static Biome redZoneShore (BootstapContext<Biome> context) {
+        MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+
+
+        BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+
+        BiomeGenerationSettings.Builder biomeBuilder =
+                new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
+
+
+        vitricExpanseRZGeneration(biomeBuilder);
+
+
+        BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
+        ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        ModBiomeDefaultFeatures.addRZSoftDisks(biomeBuilder);
+
+        BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_ICHOR_SOIL_PLACED_KEY);
+
+        return new Biome.BiomeBuilder()
+                .hasPrecipitation(true)
+                .downfall(0.4f)
+                .temperature(0.8f)
+                .generationSettings(biomeBuilder.build())
+                .mobSpawnSettings(spawnBuilder.build())
+                .specialEffects((new BiomeSpecialEffects.Builder())
+                        .waterColor(0x353A47)
+                        .waterFogColor(0x353A47)
+                        .skyColor(0x353A47)
+                        .grassColorOverride(0x353A47)
+                        .foliageColorOverride(0x353A47)
+                        .fogColor(0x353A47)
+                        .ambientMoodSound(new AmbientMoodSettings(ModSounds.RED_ZONE_AMBIENT.getHolder().get(), 6000, 8, 2.0D))
+                        .backgroundMusic(Musics.createGameMusic(ModSounds.VITRIC_EXPANSE_MUSIC.getHolder().get())).build())
+                .build();
+    }
+
+    public static Biome redZoneRiver (BootstapContext<Biome> context) {
+        MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+
+        spawnBuilder.addSpawn(MobCategory.WATER_CREATURE, new MobSpawnSettings.SpawnerData(EntityType.SQUID, 2, 1, 4));
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, new MobSpawnSettings.SpawnerData(EntityType.SALMON, 5, 1, 5));
+        spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.DROWNED, 1, 1, 1));
+
+        BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+
+        BiomeGenerationSettings.Builder biomeBuilder =
+                new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
+
+
+        vitricExpanseRZGeneration(biomeBuilder);
+
+
+        BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
+        ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        ModBiomeDefaultFeatures.addRZSoftDisks(biomeBuilder);
+
+
+        BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
+
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_RIVER);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.PLAGUED_PLACED_KEY);
+
+
+        return new Biome.BiomeBuilder()
+                .hasPrecipitation(true)
+                .downfall(0.5f)
+                .temperature(0.5f)
+                .generationSettings(biomeBuilder.build())
+                .mobSpawnSettings(spawnBuilder.build())
+                .specialEffects((new BiomeSpecialEffects.Builder())
+                        .waterColor(0x353A47)
+                        .waterFogColor(0x353A47)
+                        .skyColor(0x353A47)
+                        .grassColorOverride(0x353A47)
+                        .foliageColorOverride(0x353A47)
+                        .fogColor(0x353A47)
+                        .ambientMoodSound(new AmbientMoodSettings(ModSounds.RED_ZONE_AMBIENT.getHolder().get(), 6000, 8, 2.0D))
+                        .backgroundMusic(Musics.createGameMusic(ModSounds.VITRIC_EXPANSE_MUSIC.getHolder().get())).build())
+                .build();
+    }
+
+    public static Biome scorchedDesert (BootstapContext<Biome> context) {
+        MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+
+        BiomeDefaultFeatures.desertSpawns(spawnBuilder);
+
+        BiomeGenerationSettings.Builder biomeBuilder =
+                new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
+
+
+        vitricExpanseRZGeneration(biomeBuilder);
+
+        BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
+        ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        ModBiomeDefaultFeatures.addRZSoftDisks(biomeBuilder);
+        BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
+
+        BiomeDefaultFeatures.addDesertVegetation(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
+        BiomeDefaultFeatures.addDesertExtraVegetation(biomeBuilder);
+        BiomeDefaultFeatures.addDesertExtraDecoration(biomeBuilder);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_ICHOR_SOIL_PLACED_KEY);
+
+
+        return new Biome.BiomeBuilder()
+                .hasPrecipitation(false)
+                .downfall(0.0f)
+                .temperature(2.0f)
+                .generationSettings(biomeBuilder.build())
+                .mobSpawnSettings(spawnBuilder.build())
+                .specialEffects((new BiomeSpecialEffects.Builder())
+                        .waterColor(0x353A47)
+                        .waterFogColor(0x353A47)
+                        .skyColor(0x353A47)
+                        .grassColorOverride(0x353A47)
+                        .foliageColorOverride(0x353A47)
+                        .fogColor(0x353A47)
+                        .ambientMoodSound(new AmbientMoodSettings(ModSounds.RED_ZONE_AMBIENT.getHolder().get(), 6000, 8, 2.0D))
+                        .backgroundMusic(Musics.createGameMusic(ModSounds.VITRIC_EXPANSE_MUSIC.getHolder().get())).build())
+                .build();
+    }
+
+
+
+    public static Biome scorchedHills (BootstapContext<Biome> context) {
+        MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+
+
+        BiomeDefaultFeatures.desertSpawns(spawnBuilder);
+
+        BiomeGenerationSettings.Builder biomeBuilder =
+                new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
+
+        BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
+        vitricExpanseRZGeneration(biomeBuilder);
+
+        BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
+        ModBiomeDefaultFeatures.addVitricOreVariety(biomeBuilder);
+        ModBiomeDefaultFeatures.addRZSoftDisks(biomeBuilder);
+        BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
+
+        BiomeDefaultFeatures.addDesertVegetation(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
+        BiomeDefaultFeatures.addDesertExtraVegetation(biomeBuilder);
+        BiomeDefaultFeatures.addDesertExtraDecoration(biomeBuilder);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_VIT_WATER_PLACED_KEY);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_TIBERIUM_SOIL_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_ICHOR_SOIL_PLACED_KEY);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, ModPlacedFeatures.CT_CRUENTUS_STONE_CLUMP_PLACED_KEY);
+
+        return new Biome.BiomeBuilder()
+                .hasPrecipitation(false)
+                .downfall(0.0f)
+                .temperature(2.0f)
+                .generationSettings(biomeBuilder.build())
+                .mobSpawnSettings(spawnBuilder.build())
+                .specialEffects((new BiomeSpecialEffects.Builder())
+                        .waterColor(0x353A47)
+                        .waterFogColor(0x353A47)
+                        .skyColor(0x353A47)
+                        .grassColorOverride(0x353A47)
+                        .foliageColorOverride(0x353A47)
+                        .fogColor(0x353A47)
+                        .ambientMoodSound(new AmbientMoodSettings(ModSounds.RED_ZONE_AMBIENT.getHolder().get(), 6000, 8, 2.0D))
+                        .backgroundMusic(Musics.createGameMusic(ModSounds.VITRIC_EXPANSE_MUSIC.getHolder().get())).build())
+                .build();
+    }
 
 
     public static ResourceKey<Biome> register(String name) {

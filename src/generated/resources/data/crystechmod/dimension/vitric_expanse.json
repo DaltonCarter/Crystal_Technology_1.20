@@ -54,6 +54,30 @@
           }
         },
         {
+          "biome": "crystechmod:red_zone_shore",
+          "parameters": {
+            "continentalness": -0.19,
+            "depth": 0.0,
+            "erosion": -0.2225,
+            "humidity": -0.35,
+            "offset": 0.4,
+            "temperature": -0.45,
+            "weirdness": 0.05
+          }
+        },
+        {
+          "biome": "crystechmod:red_zone_shore",
+          "parameters": {
+            "continentalness": -0.11,
+            "depth": 0.0,
+            "erosion": 0.45,
+            "humidity": -0.1,
+            "offset": 0.4,
+            "temperature": -0.15,
+            "weirdness": 0.2666
+          }
+        },
+        {
           "biome": "crystechmod:infected_river",
           "parameters": {
             "continentalness": -0.19,
@@ -71,6 +95,30 @@
             "continentalness": -0.11,
             "depth": 0.0,
             "erosion": -0.375,
+            "humidity": 1.0,
+            "offset": 0.4,
+            "temperature": 1.0,
+            "weirdness": 0.05
+          }
+        },
+        {
+          "biome": "crystechmod:red_zone_river",
+          "parameters": {
+            "continentalness": -0.19,
+            "depth": 0.0,
+            "erosion": -0.375,
+            "humidity": -1.0,
+            "offset": 0.4,
+            "temperature": -1.0,
+            "weirdness": -0.05
+          }
+        },
+        {
+          "biome": "crystechmod:red_zone_river",
+          "parameters": {
+            "continentalness": 1.0,
+            "depth": 0.0,
+            "erosion": 0.55,
             "humidity": 1.0,
             "offset": 0.4,
             "temperature": 1.0,
@@ -986,6 +1034,78 @@
             "humidity": 1.0,
             "offset": 0.0,
             "temperature": 0.2,
+            "weirdness": 0.2666
+          }
+        },
+        {
+          "biome": "crystechmod:ashlands",
+          "parameters": {
+            "continentalness": -0.11,
+            "depth": 0.0,
+            "erosion": -1.0,
+            "humidity": -1.0,
+            "offset": 0.0,
+            "temperature": 0.2,
+            "weirdness": 0.05
+          }
+        },
+        {
+          "biome": "crystechmod:ashlands",
+          "parameters": {
+            "continentalness": 0.03,
+            "depth": 0.0,
+            "erosion": -0.375,
+            "humidity": -0.35,
+            "offset": 0.0,
+            "temperature": 0.55,
+            "weirdness": 0.2666
+          }
+        },
+        {
+          "biome": "crystechmod:scorched_desert",
+          "parameters": {
+            "continentalness": 0.19,
+            "depth": 0.0,
+            "erosion": -0.2225,
+            "humidity": -1.0,
+            "offset": 0.0,
+            "temperature": 0.55,
+            "weirdness": -0.05
+          }
+        },
+        {
+          "biome": "crystechmod:scorched_desert",
+          "parameters": {
+            "continentalness": 0.11,
+            "depth": 0.0,
+            "erosion": 0.45,
+            "humidity": -0.35,
+            "offset": 0.0,
+            "temperature": 1.0,
+            "weirdness": 0.2666
+          }
+        },
+        {
+          "biome": "crystechmod:scorched_hills",
+          "parameters": {
+            "continentalness": 0.19,
+            "depth": 0.0,
+            "erosion": 0.45,
+            "humidity": -1.0,
+            "offset": 0.0,
+            "temperature": 0.55,
+            "weirdness": 0.05
+          }
+        },
+        {
+          "biome": "crystechmod:scorched_hills",
+          "parameters": {
+            "continentalness": 0.11,
+            "depth": 0.0,
+            "erosion": 0.55,
+            "humidity": -0.35,
+            "offset": 0.0,
+            "temperature": 1.0,
             "weirdness": 0.2666
           }
         }
