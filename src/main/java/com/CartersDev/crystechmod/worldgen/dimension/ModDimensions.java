@@ -211,9 +211,27 @@ public class ModDimensions {
                                 Pair.of(Climate.parameters(0.55F, -0.35F, 0.03F, -0.375F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.ASHLANDS)),
                                 Pair.of(Climate.parameters(0.55F, -1.0F, 0.19F, -0.2225F, 0.0F, -0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.SCORCHED_DESERT)),
                                 Pair.of(Climate.parameters(1.0F, -0.35F, 0.11F, 0.45F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.SCORCHED_DESERT)),
-
                                 Pair.of(Climate.parameters(0.55F, -1.0F, 0.19F, 0.45F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.SCORCHED_HILLS)),
-                                Pair.of(Climate.parameters(1.0F, -0.35F, 0.11F, 0.55F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.SCORCHED_HILLS))
+                                Pair.of(Climate.parameters(1.0F, -0.35F, 0.11F, 0.55F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.SCORCHED_HILLS)),
+                                Pair.of(Climate.parameters(0.55F, -0.35F, 0.11F, -1.0F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.WASTELAND)),
+                                Pair.of(Climate.parameters(1.0F, -0.1F, 0.03F, -0.375F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.WASTELAND)),
+                                Pair.of(Climate.parameters(0.55F, -1.0F, 0.25F, 0.45F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.WASTELAND_HILLS)),
+                                Pair.of(Climate.parameters(1.0F, -0.35F, 0.19F, 0.55F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.WASTELAND_HILLS)),
+                                Pair.of(Climate.parameters(0.45F, -1.0F, 0.14F, -0.375F, 0.0F, -0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.RED_AND_BLUE_ZONE_BORDER)),
+                                Pair.of(Climate.parameters(-0.15F, -0.35F, 0.34F, 0.05F, 0.0F, -0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.RED_AND_BLUE_ZONE_BORDER)),
+                                Pair.of(Climate.parameters(-0.45F, -0.1F, 0.6F, -0.7799F, 0.0F, 0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.OLD_WAR_ZONE)),
+                                Pair.of(Climate.parameters(0.15F, 0.1F, 0.06F, -0.375F, 0.0F, 0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.OLD_WAR_ZONE)),
+
+                                Pair.of(Climate.parameters(-0.15F, 0.1F, -0.11F, -0.7799F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.PLAGUED_WOODS)),
+                                Pair.of(Climate.parameters(0.2F, 0.3F, 0.03F, -0.375F, 0.0F, 0.4F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.PLAGUED_WOODS))
+
+
+
+
+
+
+
+
 
                         ))),
                 noiseGenSettings.getOrThrow(NoiseGeneratorSettings.OVERWORLD));

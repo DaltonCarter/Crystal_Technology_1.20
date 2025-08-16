@@ -1,20 +1,20 @@
 {
   "carvers": {
     "air": [
-      "crystechmod:vitric_yz_cave",
-      "crystechmod:vitric_yz_cave_extra_underground",
-      "crystechmod:vitric_yz_canyon"
+      "crystechmod:vitric_rz_cave",
+      "crystechmod:vitric_rz_cave_extra_underground",
+      "crystechmod:vitric_rz_canyon"
     ]
   },
-  "downfall": 0.2,
+  "downfall": 0.5,
   "effects": {
     "fog_color": 3488327,
-    "foliage_color": 7106108,
-    "grass_color": 7106108,
+    "foliage_color": 3488327,
+    "grass_color": 3488327,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
-      "sound": "crystechmod:vitric_ambient",
+      "sound": "crystechmod:red_zone_ambient",
       "tick_delay": 6000
     },
     "music": {
@@ -23,9 +23,9 @@
       "replace_current_music": false,
       "sound": "crystechmod:vitric_expanse_music"
     },
-    "sky_color": 8168703,
-    "water_color": 8168703,
-    "water_fog_color": 8168703
+    "sky_color": 3488327,
+    "water_color": 3488327,
+    "water_fog_color": 3488327
   },
   "features": [
     [],
@@ -37,7 +37,11 @@
       "crystechmod:ct_molten_riparius_underground_lake_placed",
       "crystechmod:ct_molten_riparius_surface_lake_placed",
       "crystechmod:ct_molten_vinifera_underground_lake_placed",
-      "crystechmod:ct_molten_vinifera_surface_lake_placed"
+      "crystechmod:ct_molten_vinifera_surface_lake_placed",
+      "crystechmod:ct_molten_cruentus_underground_lake_placed",
+      "crystechmod:ct_molten_cruentus_surface_lake_placed",
+      "crystechmod:ct_molten_aboreus_underground_lake_placed",
+      "crystechmod:ct_molten_aboreus_surface_lake_placed"
     ],
     [
       "crystechmod:vitric_tiberium_geode_placed",
@@ -45,17 +49,22 @@
       "crystechmod:vitric_amethyst_geode_placed",
       "crystechmod:ct_vit_water_placed",
       "crystechmod:ct_tiberium_soil_placed",
-      "crystechmod:ct_vinifera_stone_placed"
+      "crystechmod:ct_ichor_soil_placed",
+      "crystechmod:ct_seeded_red_zone_dirt_placed",
+      "crystechmod:ct_cruentus_stone_placed",
+      "crystechmod:ct_cruentus_stone_clump_placed"
     ],
     [
+      "minecraft:fossil_upper",
+      "minecraft:fossil_lower",
       "minecraft:monster_room",
       "minecraft:monster_room_deep"
     ],
     [],
     [],
     [
-      "crystechmod:crystech_yellow_zone_dirt_placed",
-      "crystechmod:crystech_seeded_yellow_zone_dirt_placed",
+      "crystechmod:crystech_red_zone_dirt_placed",
+      "crystechmod:crystech_seeded_red_zone_dirt_placed",
       "crystechmod:crystech_infested_granite_upper_placed",
       "crystechmod:crystech_infested_granite_lower_placed",
       "crystechmod:crystech_infested_diorite_upper_placed",
@@ -64,6 +73,8 @@
       "crystechmod:crystech_infested_andesite_lower_placed",
       "crystechmod:ct_riparius_stone_clump_placed",
       "crystechmod:ct_vinifera_stone_clump_placed",
+      "crystechmod:ct_cruentus_stone_clump_placed",
+      "crystechmod:ct_aboreus_stone_clump_placed",
       "crystechmod:crystech_vitric_deepslate_placed",
       "minecraft:ore_tuff",
       "minecraft:ore_coal_upper",
@@ -91,24 +102,26 @@
       "crystechmod:crystech_aeries_ores_placed",
       "crystechmod:crystech_enigma_ores_placed",
       "crystechmod:crystech_qualrite_ores_placed",
-      "crystechmod:ct_yellow_zone_sand_placed",
+      "crystechmod:ct_red_zone_sand_placed",
       "crystechmod:ct_clay_placed",
       "minecraft:disk_clay",
-      "minecraft:disk_gravel"
+      "minecraft:disk_gravel",
+      "minecraft:ore_emerald"
     ],
     [],
     [],
     [
       "minecraft:glow_lichen",
-      "minecraft:flower_default",
-      "minecraft:patch_grass_taiga_2",
-      "minecraft:brown_mushroom_taiga",
-      "minecraft:red_mushroom_taiga",
+      "minecraft:patch_grass_badlands",
+      "minecraft:patch_dead_bush_badlands",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
-      "minecraft:patch_sugar_cane",
+      "minecraft:patch_sugar_cane_badlands",
       "minecraft:patch_pumpkin",
-      "crystechmod:heavy_plagued_placed"
+      "minecraft:patch_cactus_decorated",
+      "minecraft:patch_cactus_desert",
+      "crystechmod:vitric_bloom_placed",
+      "crystechmod:vitric_rose_placed"
     ],
     [
       "minecraft:freeze_top_layer"
@@ -126,26 +139,7 @@
       }
     ],
     "axolotls": [],
-    "creature": [
-      {
-        "type": "minecraft:wolf",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 8
-      },
-      {
-        "type": "minecraft:rabbit",
-        "maxCount": 3,
-        "minCount": 2,
-        "weight": 4
-      },
-      {
-        "type": "minecraft:fox",
-        "maxCount": 4,
-        "minCount": 2,
-        "weight": 8
-      }
-    ],
+    "creature": [],
     "misc": [],
     "monster": [
       {
@@ -208,5 +202,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": -0.4
+  "temperature": 0.2
 }

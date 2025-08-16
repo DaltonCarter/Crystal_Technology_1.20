@@ -123,7 +123,6 @@ public class ModSurfaceRules {
         SurfaceRules.ConditionSource isInfectedRiver  = SurfaceRules.isBiome(ModBiomes.INFECTED_RIVER);
         SurfaceRules.ConditionSource isYZShore = SurfaceRules.isBiome(ModBiomes.YELLOW_ZONE_SHORE);
         SurfaceRules.ConditionSource isYZStonyShore = SurfaceRules.isBiome(ModBiomes.YELLOW_ZONE_STONY_SHORE);
-//        SurfaceRules.ConditionSource isRZShore = SurfaceRules.isBiome(ModBiomes.RED_ZONE_SHORE);
         SurfaceRules.ConditionSource isDesert = SurfaceRules.isBiome(ModBiomes.TIBERIAN_DESERT);
         SurfaceRules.ConditionSource isDesertHills = SurfaceRules.isBiome(ModBiomes.TIBERIAN_DESERT_HILLS);
         SurfaceRules.ConditionSource isMarsh = SurfaceRules.isBiome(ModBiomes.CALIDIAN_MARSH);
@@ -131,6 +130,7 @@ public class ModSurfaceRules {
         SurfaceRules.ConditionSource isFoothills = SurfaceRules.isBiome(ModBiomes.FOOTHILLS);
         SurfaceRules.ConditionSource isYZBorder = SurfaceRules.isBiome(ModBiomes.BLUE_AND_YELLOW_ZONE_BORDER);
         SurfaceRules.ConditionSource isRZBorder = SurfaceRules.isBiome(ModBiomes.RED_AND_YELLOW_ZONE_BORDER);
+        SurfaceRules.ConditionSource isBZBorder = SurfaceRules.isBiome(ModBiomes.RED_AND_BLUE_ZONE_BORDER);
         SurfaceRules.ConditionSource isDeadForest = SurfaceRules.isBiome(ModBiomes.DEAD_FOREST, ModBiomes.TIBERIAN_WOODS);
         SurfaceRules.ConditionSource isTiberianBadlands = SurfaceRules.isBiome(ModBiomes.TIBERIAN_BADLANDS);
         SurfaceRules.ConditionSource isTiberianHighlands = SurfaceRules.isBiome(ModBiomes.TIBERIAN_HIGHLANDS);
@@ -147,6 +147,11 @@ public class ModSurfaceRules {
         SurfaceRules.ConditionSource isRedZoneRiver = SurfaceRules.isBiome(ModBiomes.RED_ZONE_RIVER);
         SurfaceRules.ConditionSource isScorchedDesert = SurfaceRules.isBiome(ModBiomes.SCORCHED_DESERT);
         SurfaceRules.ConditionSource isScorchedHills = SurfaceRules.isBiome(ModBiomes.SCORCHED_HILLS);
+
+        SurfaceRules.ConditionSource isWasteland = SurfaceRules.isBiome(ModBiomes.WASTELAND);
+        SurfaceRules.ConditionSource isWastelandHills = SurfaceRules.isBiome(ModBiomes.WASTELAND_HILLS);
+        SurfaceRules.ConditionSource isOldWarZone = SurfaceRules.isBiome(ModBiomes.OLD_WAR_ZONE);
+        SurfaceRules.ConditionSource isPlaguedWoods = SurfaceRules.isBiome(ModBiomes.PLAGUED_WOODS);
 
 
         SurfaceRules.ConditionSource surfaceNoise = SurfaceRules.noiseCondition(Noises.SURFACE, -0.909D, -0.5454D);
@@ -203,6 +208,16 @@ public class ModSurfaceRules {
         SurfaceRules.RuleSource scorchedSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), RED_ZONE_SAND),
                 SurfaceRules.ifTrue(isAbove55, SurfaceRules.ifTrue(SurfaceRules.not(isAbove62), SurfaceRules.ifTrue(surfaceNoiseAbove(1.0D),RED_ZONE_SANDSTONE))), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
 
+        SurfaceRules.RuleSource wastelandHillsSurface =  SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(altitudeCheck4, SurfaceRules.sequence(SurfaceRules.ifTrue(surfaceNoise, RED_ZONE_DIRT), SurfaceRules.ifTrue(surfaceNoiseXL, SEEDED_RED_ZONE_DIRT), SurfaceRules.ifTrue(surfaceNoiseLarge, RED_ZONE_SANDSTONE))), SurfaceRules.ifTrue(isAbove55, SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, INFESTED_STONE), SEEDED_RED_ZONE_DIRT)), SurfaceRules.ifTrue(isAbove55, RED_ZONE_DIRT))), SurfaceRules.ifTrue(altitudeCheck3, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove63, SurfaceRules.ifTrue(SurfaceRules.not(altitudeCheck4), INFESTED_DIORITE)))), SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, SurfaceRules.ifTrue(isAbove50, RED_ZONE_DIRT)), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
+        SurfaceRules.RuleSource wastelandSurface =  SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(altitudeCheck4, SurfaceRules.sequence(SurfaceRules.ifTrue(surfaceNoise, RED_ZONE_SANDSTONE), SurfaceRules.ifTrue(surfaceNoiseXL, SEEDED_RED_ZONE_DIRT), SurfaceRules.ifTrue(surfaceNoiseLarge, RED_ZONE_SAND))), SurfaceRules.ifTrue(isAbove55, SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, RED_ZONE_SANDSTONE), RED_ZONE_DIRT)), SurfaceRules.ifTrue(isAbove55, SEEDED_RED_ZONE_DIRT))), SurfaceRules.ifTrue(altitudeCheck3, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove63, SurfaceRules.ifTrue(SurfaceRules.not(altitudeCheck4), RED_ZONE_DIRT)))), SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, SurfaceRules.ifTrue(isAbove50, SEEDED_RED_ZONE_DIRT)), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
+
+        SurfaceRules.RuleSource oldWarZoneSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(altitudeCheck4, SurfaceRules.sequence(SurfaceRules.ifTrue(surfaceNoise, INFESTED_STONE), SurfaceRules.ifTrue(surfaceNoiseXL, INFESTED_COBBLESTONE), SurfaceRules.ifTrue(surfaceNoiseLarge, RED_ZONE_SANDSTONE))), SurfaceRules.ifTrue(isAbove55, SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, INFESTED_STONE), RED_ZONE_DIRT)), SurfaceRules.ifTrue(isAbove55, INFESTED_ANDESITE))), SurfaceRules.ifTrue(altitudeCheck3, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove63, SurfaceRules.ifTrue(SurfaceRules.not(altitudeCheck4), INFESTED_GRANITE)))), SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, SurfaceRules.ifTrue(isAbove50, SEEDED_RED_ZONE_DIRT)), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
+        SurfaceRules.RuleSource blueBorderSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), RED_ZONE_DIRT), SurfaceRules.ifTrue(isAbove55, SurfaceRules.ifTrue(SurfaceRules.not(isAbove62), SurfaceRules.ifTrue(surfaceNoiseAbove(1.0D), SEEDED_RED_ZONE_DIRT))), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
+
+        SurfaceRules.RuleSource plaguedWoodsSurface = SurfaceRules.ifTrue(UNDER_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove50, SurfaceRules.ifTrue(UNDER_FLOOR, RED_ZONE_DIRT)), SurfaceRules.ifTrue(surfaceNoiseXL, INFESTED_STONE)));
+
+
+
         return SurfaceRules.sequence(
 
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isDesert, desertSurface)),
@@ -232,6 +247,11 @@ public class ModSurfaceRules {
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isRedZoneRiver, redZoneRiverSurface)),
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isScorchedDesert, scorchedSurface)),
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isScorchedHills, scorchedHillSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isWasteland, wastelandSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isWastelandHills, wastelandHillsSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isBZBorder, blueBorderSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isOldWarZone, oldWarZoneSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isPlaguedWoods, plaguedWoodsSurface)),
 
 
 

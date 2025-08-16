@@ -1115,6 +1115,19 @@
   "biome.crystechmod.crystal_fields": "Crystal Fields",
   "biome.crystechmod.tiberian_stone_fields": "Tiberian Stone Fields",
 
+  "biome.crystechmod.wasteland": "Wasteland",
+  "biome.crystechmod.wasteland_hills": "Wasteland Hills",
+  "biome.crystechmod.scorched_hills": "Scorched Hills",
+
+  "biome.crystechmod.red_and_blue_zone_border": "Red/Blue Zone Border",
+  "biome.crystechmod.scorched_desert": "Scorched Desert",
+  "biome.crystechmod.ashlands": "Ashlands",
+  "biome.crystechmod.red_zone_shore": "Red Zone Shore",
+
+  "biome.crystechmod.red_zone_river": "Red Zone River",
+  "biome.crystechmod.old_war_zone": "Old War Zone",
+  "biome.crystechmod.plagued_woods": "Plagued Woods",
+
 
   "enchantment.crystechmod.vitric_harvester": "Vitric Harvester",
 
