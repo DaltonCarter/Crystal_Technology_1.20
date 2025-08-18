@@ -29,7 +29,9 @@ public class ModSurfaceRules {
     private static final SurfaceRules.RuleSource AIR = makeStateRule(Blocks.AIR);
     private static final SurfaceRules.RuleSource BEDROCK = makeStateRule(Blocks.BEDROCK);
     private static final SurfaceRules.RuleSource ORANGE_TERRACOTTA = makeStateRule(Blocks.ORANGE_TERRACOTTA);
-    private static final SurfaceRules.RuleSource YELLOW_TERRACOTTA = makeStateRule(Blocks.YELLOW_TERRACOTTA);
+    private static final SurfaceRules.RuleSource RED_TERRACOTTA = makeStateRule(Blocks.RED_TERRACOTTA);
+    private static final SurfaceRules.RuleSource GREY_TERRACOTTA = makeStateRule(Blocks.GRAY_TERRACOTTA);
+    private static final SurfaceRules.RuleSource LIGHT_GREY_TERRACOTTA = makeStateRule(Blocks.LIGHT_GRAY_TERRACOTTA);
     private static final SurfaceRules.RuleSource BLACK_TERRACOTTA = makeStateRule(Blocks.BLACK_TERRACOTTA);
     private static final SurfaceRules.RuleSource TERRACOTTA = makeStateRule(Blocks.TERRACOTTA);
     private static final SurfaceRules.RuleSource STONE = makeStateRule(Blocks.STONE);
@@ -153,6 +155,12 @@ public class ModSurfaceRules {
         SurfaceRules.ConditionSource isOldWarZone = SurfaceRules.isBiome(ModBiomes.OLD_WAR_ZONE);
         SurfaceRules.ConditionSource isPlaguedWoods = SurfaceRules.isBiome(ModBiomes.PLAGUED_WOODS);
 
+        SurfaceRules.ConditionSource isIchorMarsh = SurfaceRules.isBiome(ModBiomes.ICHOR_MARSH);
+        SurfaceRules.ConditionSource isAbyssalMarsh = SurfaceRules.isBiome(ModBiomes.ABYSSAL_MARSH);
+        SurfaceRules.ConditionSource isIchorBog = SurfaceRules.isBiome(ModBiomes.ICHOR_BOG);
+        SurfaceRules.ConditionSource isTiberianWastes = SurfaceRules.isBiome(ModBiomes.TIBERIAN_WASTES);
+        SurfaceRules.ConditionSource isDeadZone = SurfaceRules.isBiome(ModBiomes.DEAD_ZONE);
+
 
         SurfaceRules.ConditionSource surfaceNoise = SurfaceRules.noiseCondition(Noises.SURFACE, -0.909D, -0.5454D);
         SurfaceRules.ConditionSource surfaceNoiseLarge = SurfaceRules.noiseCondition(Noises.SURFACE, 0.5454D, 0.909D);
@@ -216,6 +224,15 @@ public class ModSurfaceRules {
 
         SurfaceRules.RuleSource plaguedWoodsSurface = SurfaceRules.ifTrue(UNDER_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove50, SurfaceRules.ifTrue(UNDER_FLOOR, RED_ZONE_DIRT)), SurfaceRules.ifTrue(surfaceNoiseXL, INFESTED_STONE)));
 
+        SurfaceRules.RuleSource ichorMarshSurface = SurfaceRules.ifTrue(ON_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove62, SurfaceRules.ifTrue(SurfaceRules.not(isAbove63), SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.SWAMP, 0.0D), MOLTEN_PURPLE_TIBERIUM))), SurfaceRules.ifTrue(isAbove62, SurfaceRules.ifTrue(surfaceNoiseAbove(0.5D), MUD)), SurfaceRules.ifTrue(isAbove55, SurfaceRules.ifTrue(UNDER_FLOOR, SEEDED_RED_ZONE_DIRT)), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE)));
+        SurfaceRules.RuleSource abyssalMarshSurface = SurfaceRules.ifTrue(ON_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove62, SurfaceRules.ifTrue(SurfaceRules.not(isAbove63), SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.SWAMP, 0.0D), MOLTEN_RED_TIBERIUM))), SurfaceRules.ifTrue(isAbove62, SurfaceRules.ifTrue(surfaceNoiseAbove(0.5D), MUD)), SurfaceRules.ifTrue(isAbove55, SurfaceRules.ifTrue(UNDER_FLOOR, SEEDED_RED_ZONE_DIRT)), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE)));
+        SurfaceRules.RuleSource ichorBogSurface = SurfaceRules.ifTrue(ON_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove62, SurfaceRules.ifTrue(SurfaceRules.not(isAbove63), SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.SWAMP, 0.0D), MOLTEN_BLUE_TIBERIUM))), SurfaceRules.ifTrue(isAbove62, SurfaceRules.ifTrue(surfaceNoiseAbove(0.5D), MUD)), SurfaceRules.ifTrue(isAbove55, SurfaceRules.ifTrue(UNDER_FLOOR, SEEDED_RED_ZONE_DIRT)), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE)));
+
+        SurfaceRules.RuleSource tiberianWastesSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove256, GREY_TERRACOTTA), SurfaceRules.ifTrue(altitudeCheck4, SurfaceRules.sequence(SurfaceRules.ifTrue(surfaceNoise, LIGHT_GREY_TERRACOTTA), SurfaceRules.ifTrue(surfaceNoiseXL, SEEDED_RED_ZONE_DIRT), SurfaceRules.ifTrue(surfaceNoiseLarge, BLACKSTONE), SurfaceRules.bandlands())), SurfaceRules.ifTrue(isAbove55, SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, BLACKSTONE), RED_ZONE_SAND)), SurfaceRules.ifTrue(isAbove55, BLACK_TERRACOTTA))), SurfaceRules.ifTrue(altitudeCheck3, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove63, SurfaceRules.ifTrue(SurfaceRules.not(altitudeCheck4), RED_TERRACOTTA)), SurfaceRules.bandlands())), SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, SurfaceRules.ifTrue(isAbove50, BLACK_TERRACOTTA)), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
+
+        SurfaceRules.RuleSource deadZoneSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(altitudeCheck4, SurfaceRules.sequence(SurfaceRules.ifTrue(surfaceNoise, SEEDED_RED_ZONE_DIRT), SurfaceRules.ifTrue(surfaceNoiseXL, RED_ZONE_DIRT), SurfaceRules.ifTrue(surfaceNoiseLarge, RED_ZONE_SAND))), SurfaceRules.ifTrue(isAbove55, SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, INFESTED_STONE), SEEDED_RED_ZONE_DIRT)), SurfaceRules.ifTrue(isAbove55, INFESTED_ANDESITE))), SurfaceRules.ifTrue(altitudeCheck3, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove63, SurfaceRules.ifTrue(SurfaceRules.not(altitudeCheck4), INFESTED_GRANITE)))), SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, SurfaceRules.ifTrue(isAbove50, RED_ZONE_SANDSTONE)), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
+
+
 
 
         return SurfaceRules.sequence(
@@ -252,6 +269,11 @@ public class ModSurfaceRules {
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isBZBorder, blueBorderSurface)),
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isOldWarZone, oldWarZoneSurface)),
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isPlaguedWoods, plaguedWoodsSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isIchorMarsh, ichorMarshSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isAbyssalMarsh, abyssalMarshSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isIchorBog, ichorBogSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isTiberianWastes, tiberianWastesSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isDeadZone, deadZoneSurface)),
 
 
 

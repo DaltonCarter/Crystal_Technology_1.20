@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:disk",
+  "config": {
+    "half_height": 4,
+    "radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "max_inclusive": 4,
+        "min_inclusive": 4
+      }
+    },
+    "state_provider": {
+      "fallback": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "crystechmod:molten_red_tiberium_block",
+          "Properties": {
+            "level": "0"
+          }
+        }
+      },
+      "rules": []
+    },
+    "target": {
+      "type": "minecraft:matching_blocks",
+      "blocks": [
+        "minecraft:water",
+        "crystechmod:tiberium_water_block",
+        "minecraft:mud",
+        "crystechmod:seeded_red_zone_dirt"
+      ]
+    }
+  }
+}

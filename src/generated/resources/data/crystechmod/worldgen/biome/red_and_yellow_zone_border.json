@@ -48,7 +48,8 @@
       "crystechmod:ct_red_zone_dirt_placed",
       "crystechmod:ct_seeded_red_zone_dirt_placed",
       "crystechmod:ct_vinifera_stone_clump_placed",
-      "crystechmod:ct_cruentus_stone_clump_placed"
+      "crystechmod:ct_cruentus_stone_clump_placed",
+      "crystechmod:ct_aboreus_stone_large_column_placed"
     ],
     [
       "minecraft:fossil_upper",

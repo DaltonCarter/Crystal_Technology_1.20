@@ -373,7 +373,7 @@
             "erosion": 0.55,
             "humidity": -1.0,
             "offset": 0.0,
-            "temperature": 0.2,
+            "temperature": -0.45,
             "weirdness": 0.05
           }
         },
@@ -385,7 +385,7 @@
             "erosion": 1.0,
             "humidity": 1.0,
             "offset": 0.0,
-            "temperature": 1.0,
+            "temperature": -1.0,
             "weirdness": 0.2666
           }
         },
@@ -1009,7 +1009,7 @@
             "erosion": 1.0,
             "humidity": 1.0,
             "offset": 0.0,
-            "temperature": 0.2,
+            "temperature": -0.15,
             "weirdness": 0.2666
           }
         },
@@ -1227,6 +1227,126 @@
             "offset": 0.0,
             "temperature": 0.2,
             "weirdness": 0.4
+          }
+        },
+        {
+          "biome": "crystechmod:ichor_marsh",
+          "parameters": {
+            "continentalness": -0.08,
+            "depth": 0.0,
+            "erosion": 0.55,
+            "humidity": -1.0,
+            "offset": 0.0,
+            "temperature": -0.15,
+            "weirdness": 0.05
+          }
+        },
+        {
+          "biome": "crystechmod:ichor_marsh",
+          "parameters": {
+            "continentalness": 1.0,
+            "depth": 0.0,
+            "erosion": 1.0,
+            "humidity": 1.0,
+            "offset": 0.0,
+            "temperature": 0.2,
+            "weirdness": 0.2666
+          }
+        },
+        {
+          "biome": "crystechmod:abyssal_marsh",
+          "parameters": {
+            "continentalness": 0.25,
+            "depth": 0.0,
+            "erosion": 0.55,
+            "humidity": -1.0,
+            "offset": 0.0,
+            "temperature": 0.2,
+            "weirdness": 0.05
+          }
+        },
+        {
+          "biome": "crystechmod:abyssal_marsh",
+          "parameters": {
+            "continentalness": 1.0,
+            "depth": 0.0,
+            "erosion": 1.0,
+            "humidity": 1.0,
+            "offset": 0.0,
+            "temperature": 0.55,
+            "weirdness": 0.2666
+          }
+        },
+        {
+          "biome": "crystechmod:ichor_bog",
+          "parameters": {
+            "continentalness": -0.09,
+            "depth": 0.0,
+            "erosion": -0.19,
+            "humidity": -1.0,
+            "offset": 0.0,
+            "temperature": 0.55,
+            "weirdness": 0.05
+          }
+        },
+        {
+          "biome": "crystechmod:ichor_bog",
+          "parameters": {
+            "continentalness": 1.0,
+            "depth": 0.0,
+            "erosion": 0.3,
+            "humidity": 1.0,
+            "offset": 0.0,
+            "temperature": 1.0,
+            "weirdness": 0.2666
+          }
+        },
+        {
+          "biome": "crystechmod:tiberian_wastes",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": 0.0,
+            "erosion": -0.0256,
+            "humidity": -1.0,
+            "offset": 0.0,
+            "temperature": -1.0,
+            "weirdness": -0.4655
+          }
+        },
+        {
+          "biome": "crystechmod:tiberian_wastes",
+          "parameters": {
+            "continentalness": 0.4,
+            "depth": 0.0,
+            "erosion": 0.3899,
+            "humidity": 1.0,
+            "offset": 0.0,
+            "temperature": 1.0,
+            "weirdness": 0.2975
+          }
+        },
+        {
+          "biome": "crystechmod:dead_zone",
+          "parameters": {
+            "continentalness": 0.06,
+            "depth": 0.0,
+            "erosion": 0.0256,
+            "humidity": -0.5,
+            "offset": 0.0,
+            "temperature": 0.6,
+            "weirdness": 0.4655
+          }
+        },
+        {
+          "biome": "crystechmod:dead_zone",
+          "parameters": {
+            "continentalness": 0.67,
+            "depth": 0.0,
+            "erosion": -0.3899,
+            "humidity": 0.9,
+            "offset": 0.0,
+            "temperature": 0.8,
+            "weirdness": -0.2975
           }
         }
       ]

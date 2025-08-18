@@ -27,7 +27,10 @@
       "crystechmod:infested_stone",
       "crystechmod:infested_diorite",
       "crystechmod:infested_granite",
-      "crystechmod:infested_andesite"
+      "crystechmod:infested_andesite",
+      "minecraft:mud",
+      "minecraft:water",
+      "crystechmod:tiberium_water_block"
     ]
   }
 }

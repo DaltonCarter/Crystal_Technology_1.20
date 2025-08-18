@@ -45,7 +45,8 @@
       "crystechmod:vitric_amethyst_geode_placed",
       "crystechmod:ct_vit_water_placed",
       "crystechmod:ct_tiberium_soil_placed",
-      "crystechmod:ct_seeded_yellow_zone_dirt_placed"
+      "crystechmod:ct_seeded_yellow_zone_dirt_placed",
+      "crystechmod:ct_vinifera_stone_large_column_placed"
     ],
     [
       "minecraft:fossil_upper",

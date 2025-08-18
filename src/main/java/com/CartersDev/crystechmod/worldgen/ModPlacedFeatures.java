@@ -13,6 +13,7 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
@@ -100,6 +101,10 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> CT_GLOWSTONE_PLACED_KEY = registerKey("ct_glowstone_placed");
     public static final ResourceKey<PlacedFeature> CT_CLAY_PLACED_KEY = registerKey("ct_clay_placed");
     public static final ResourceKey<PlacedFeature> CT_VIT_WATER_PLACED_KEY = registerKey("ct_vit_water_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_ABOREUS_PLACED_KEY = registerKey("ct_molten_aboreus_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_RIPARIUS_PLACED_KEY = registerKey("ct_molten_riparius_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_VINIFERA_PLACED_KEY = registerKey("ct_molten_vinifera_placed");
+    public static final ResourceKey<PlacedFeature> CT_MOLTEN_CRUENTUS_PLACED_KEY = registerKey("ct_molten_cruentus_placed");
 
     public static final ResourceKey<PlacedFeature> CT_YELLOW_ZONE_SAND_KEY = registerKey("ct_yellow_zone_sand_placed");
     public static final ResourceKey<PlacedFeature> CT_YELLOW_ZONE_SAND_PLACED_KEY = registerKey("ct_yellow_zone_sand_placed2");
@@ -420,6 +425,22 @@ public static void bootstrap(BootstapContext<PlacedFeature> context) {
     register(context, CT_VIT_WATER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_VIT_WATER_KEY),
             List.of(CountPlacement.of(255), InSquarePlacement.spread(),HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.absolute(192)),
                     BlockPredicateFilter.forPredicate(BlockPredicate.matchesFluids(Fluids.WATER, ModFluids.SOURCE_TIBERIUM_WATER.get())), BiomeFilter.biome()));
+
+    register(context, CT_MOLTEN_ABOREUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_ABOREUS_KEY),
+            List.of(CountPlacement.of(2), InSquarePlacement.spread(),HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.absolute(192)),
+                    PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+    register(context, CT_MOLTEN_RIPARIUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_RIPARIUS_KEY),
+            List.of(CountPlacement.of(2), InSquarePlacement.spread(),HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.absolute(192)),
+                    PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+    register(context, CT_MOLTEN_VINIFERA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_VINIFERA_KEY),
+            List.of(CountPlacement.of(2), InSquarePlacement.spread(),HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.absolute(192)),
+                    PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+    register(context, CT_MOLTEN_CRUENTUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_MOLTEN_CRUENTUS_KEY),
+            List.of(CountPlacement.of(2), InSquarePlacement.spread(),HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.absolute(192)),
+                    PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
     register(context, CT_YELLOW_ZONE_SAND_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CT_YELLOW_ZONE_SAND_KEY),
             List.of(CountPlacement.of(3), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BlockPredicateFilter.forPredicate(BlockPredicate.matchesFluids(Fluids.WATER, ModFluids.SOURCE_TIBERIUM_WATER.get())), BiomeFilter.biome()));

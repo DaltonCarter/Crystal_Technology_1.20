@@ -35,6 +35,25 @@ import java.util.stream.Stream;
 
 public class ModDimensions {
 
+
+    private static final Climate.Parameter FULL_RANGE = Climate.Parameter.span(-1.0F, 1.0F);
+    private static final Climate.Parameter[] temperatures = new Climate.Parameter[]{Climate.Parameter.span(-1.0F, -0.45F), Climate.Parameter.span(-0.45F, -0.15F), Climate.Parameter.span(-0.15F, 0.2F), Climate.Parameter.span(0.2F, 0.55F), Climate.Parameter.span(0.55F, 1.0F)};
+    private static final Climate.Parameter[] humidities = new Climate.Parameter[]{Climate.Parameter.span(-1.0F, -0.35F), Climate.Parameter.span(-0.35F, -0.1F), Climate.Parameter.span(-0.1F, 0.1F), Climate.Parameter.span(0.1F, 0.3F), Climate.Parameter.span(0.3F, 1.0F)};
+    private static final Climate.Parameter[] erosions = new Climate.Parameter[]{Climate.Parameter.span(-1.0F, -0.78F), Climate.Parameter.span(-0.78F, -0.375F), Climate.Parameter.span(-0.375F, -0.2225F), Climate.Parameter.span(-0.2225F, 0.05F), Climate.Parameter.span(0.05F, 0.45F), Climate.Parameter.span(0.45F, 0.55F), Climate.Parameter.span(0.55F, 1.0F)};
+    private static final Climate.Parameter FROZEN_RANGE = temperatures[0];
+    private static final Climate.Parameter UNFROZEN_RANGE = Climate.Parameter.span(temperatures[1], temperatures[4]);
+    private static final Climate.Parameter mushroomFieldsContinentalness = Climate.Parameter.span(-1.2F, -1.05F);
+    private static final Climate.Parameter deepOceanContinentalness = Climate.Parameter.span(-1.05F, -0.455F);
+    private static final Climate.Parameter oceanContinentalness = Climate.Parameter.span(-0.455F, -0.19F);
+    private static final Climate.Parameter coastContinentalness = Climate.Parameter.span(-0.19F, -0.11F);
+    private static final Climate.Parameter inlandContinentalness = Climate.Parameter.span(-0.11F, 0.55F);
+    private static final Climate.Parameter nearInlandContinentalness = Climate.Parameter.span(-0.11F, 0.03F);
+    private static final Climate.Parameter midInlandContinentalness = Climate.Parameter.span(0.03F, 0.3F);
+    public static final Climate.Parameter farInlandContinentalness = Climate.Parameter.span(0.3F, 1.0F);
+
+
+
+
     public static final ResourceKey<LevelStem> VITRIC_EXPANSE_KEY = ResourceKey.create(Registries.LEVEL_STEM,
             new ResourceLocation(CrystalTech.MOD_ID, "vitric_expanse"));
 
@@ -106,7 +125,11 @@ public class ModDimensions {
                 new FixedBiomeSource(biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_DESERT)),
                 noiseGenSettings.getOrThrow(NoiseGeneratorSettings.OVERWORLD));
 
+
+
         NoiseBasedChunkGenerator noiseBasedChunkGenerator = new NoiseBasedChunkGenerator(
+
+
                 MultiNoiseBiomeSource.createFromList(
                         new Climate.ParameterList<>(List.of(
 
@@ -146,8 +169,8 @@ public class ModDimensions {
 
 
 ////                                  Start of Blue Zone Biomes:
-                                    Pair.of(Climate.parameters(0.2F, -1.0F, -0.11F, 0.55F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.CALIDIAN_MARSH)),
-                                    Pair.of(Climate.parameters(1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.CALIDIAN_MARSH)),
+                                    Pair.of(Climate.parameters(-0.45F, -1.0F, -0.11F, 0.55F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.CALIDIAN_MARSH)),
+                                    Pair.of(Climate.parameters(-1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.CALIDIAN_MARSH)),
                                     Pair.of(Climate.parameters(-1.0F, -0.1F, 1.5F, -1.0F, 0.0F, -0.4F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.GROVE_OF_LIFE)),
                                     Pair.of(Climate.parameters(-1.0F, 0.1F, 1.0F, -0.7799F, 0.0F, -0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.GROVE_OF_LIFE)),
                                     Pair.of(Climate.parameters(0.2F, -0.35F, 0.9F, -1.0F, 0.0F, -0.4F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.FOOTHILLS)),
@@ -202,7 +225,7 @@ public class ModDimensions {
                                 Pair.of(Climate.parameters(-1.0F, 0.1F, 0.03F, -1.0F, 0.0F, -0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_TAIGA)),
                                 Pair.of(Climate.parameters(-0.45F, 0.3F, 1.0F, -0.375F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_TAIGA)),
                                 Pair.of(Climate.parameters(-0.45F, -1.0F, -0.11F, 0.55F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_SWAMP)),
-                                Pair.of(Climate.parameters(0.2F, 1.0F, 1.0F, 1.0F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_SWAMP)),
+                                Pair.of(Climate.parameters(-0.15F, 1.0F, 1.0F, 1.0F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_SWAMP)),
                                 Pair.of(Climate.parameters(-0.15F, 0.3F, -0.19F, -1.0F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_WOODS)),
                                 Pair.of(Climate.parameters(0.2F, 1.0F, 0.03F, -0.375F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_WOODS)),
 //
@@ -221,9 +244,18 @@ public class ModDimensions {
                                 Pair.of(Climate.parameters(-0.15F, -0.35F, 0.34F, 0.05F, 0.0F, -0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.RED_AND_BLUE_ZONE_BORDER)),
                                 Pair.of(Climate.parameters(-0.45F, -0.1F, 0.6F, -0.7799F, 0.0F, 0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.OLD_WAR_ZONE)),
                                 Pair.of(Climate.parameters(0.15F, 0.1F, 0.06F, -0.375F, 0.0F, 0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.OLD_WAR_ZONE)),
-
                                 Pair.of(Climate.parameters(-0.15F, 0.1F, -0.11F, -0.7799F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.PLAGUED_WOODS)),
-                                Pair.of(Climate.parameters(0.2F, 0.3F, 0.03F, -0.375F, 0.0F, 0.4F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.PLAGUED_WOODS))
+                                Pair.of(Climate.parameters(0.2F, 0.3F, 0.03F, -0.375F, 0.0F, 0.4F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.PLAGUED_WOODS)),
+                                Pair.of(Climate.parameters(-0.15F, -1.0F, -0.08F, 0.55F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.ICHOR_MARSH)),
+                                Pair.of(Climate.parameters(0.2F, 1.0F, 1.0F, 1.0F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.ICHOR_MARSH)),
+                                Pair.of(Climate.parameters(0.2F, -1.0F, 0.25F, 0.55F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.ABYSSAL_MARSH)),
+                                Pair.of(Climate.parameters(0.55F, 1.0F, 1.0F, 1.0F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.ABYSSAL_MARSH)),
+                                Pair.of(Climate.parameters(0.55F, -1.0F, -0.09F, -0.19F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.ICHOR_BOG)),
+                                Pair.of(Climate.parameters(1.0F, 1.0F, 1.0F, 0.3F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.ICHOR_BOG)),
+                                Pair.of(Climate.parameters(-1.0F, -1.0F, 0.0F, -0.0256F, 0.0F, -0.4655F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_WASTES)),
+                                Pair.of(Climate.parameters(1.0F, 1.0F, 0.40F, 0.3900F, 0.0F, 0.2975F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_WASTES)),
+                                Pair.of(Climate.parameters(0.6F, -0.5F, 0.06F, 0.0256F, 0.0F, 0.4655F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DEAD_ZONE)),
+                                Pair.of(Climate.parameters(0.8F, 0.9F, 0.670F, -0.3900F, 0.0F, -0.2975F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DEAD_ZONE))
 
 
 
