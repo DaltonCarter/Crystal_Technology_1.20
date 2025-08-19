@@ -25,7 +25,7 @@ even managed this much.
 
 public class ModSurfaceRules {
     //Base Overworld Blocks:
-    private static final SurfaceRules.RuleSource GRASS_BLOCK = makeStateRule(Blocks.GRASS_BLOCK);
+
     private static final SurfaceRules.RuleSource AIR = makeStateRule(Blocks.AIR);
     private static final SurfaceRules.RuleSource BEDROCK = makeStateRule(Blocks.BEDROCK);
     private static final SurfaceRules.RuleSource ORANGE_TERRACOTTA = makeStateRule(Blocks.ORANGE_TERRACOTTA);
@@ -35,26 +35,15 @@ public class ModSurfaceRules {
     private static final SurfaceRules.RuleSource BLACK_TERRACOTTA = makeStateRule(Blocks.BLACK_TERRACOTTA);
     private static final SurfaceRules.RuleSource TERRACOTTA = makeStateRule(Blocks.TERRACOTTA);
     private static final SurfaceRules.RuleSource STONE = makeStateRule(Blocks.STONE);
-    private static final SurfaceRules.RuleSource DIRT = makeStateRule(Blocks.DIRT);
     private static final SurfaceRules.RuleSource COARSE_DIRT = makeStateRule(Blocks.COARSE_DIRT);
-    private static final SurfaceRules.RuleSource GRAVEL = makeStateRule(Blocks.GRAVEL);
-    private static final SurfaceRules.RuleSource SAND = makeStateRule(Blocks.SAND);
-    private static final SurfaceRules.RuleSource SANDSTONE = makeStateRule(Blocks.SANDSTONE);
-    private static final SurfaceRules.RuleSource SNOW_BLOCK = makeStateRule(Blocks.SNOW_BLOCK);
-    private static final SurfaceRules.RuleSource POWDER_SNOW = makeStateRule(Blocks.POWDER_SNOW);
     private static final SurfaceRules.RuleSource WATER = makeStateRule(Blocks.WATER);
     private static final SurfaceRules.RuleSource LAVA = makeStateRule(Blocks.LAVA);
-    private static final SurfaceRules.RuleSource MAGMA = makeStateRule(Blocks.MAGMA_BLOCK);
-
-    private static final SurfaceRules.RuleSource OBSIDIAN = makeStateRule(Blocks.OBSIDIAN);
-    private static final SurfaceRules.RuleSource TUFF = makeStateRule(Blocks.TUFF);
-    private static final SurfaceRules.RuleSource SMOOTH_BASALT = makeStateRule(Blocks.SMOOTH_BASALT);
     private static final SurfaceRules.RuleSource MUD = makeStateRule(Blocks.MUD);
     private static final SurfaceRules.RuleSource DEEPSLATE = makeStateRule(Blocks.DEEPSLATE);
     private static final SurfaceRules.RuleSource PODZOL = makeStateRule(Blocks.PODZOL);
 
     //Base Nether:
-    private static final SurfaceRules.RuleSource NETHERRACK = makeStateRule(Blocks.NETHERRACK);
+
     private static final SurfaceRules.RuleSource BASALT = makeStateRule(Blocks.BASALT);
     private static final SurfaceRules.RuleSource BLACKSTONE = makeStateRule(Blocks.BLACKSTONE);
 
@@ -68,22 +57,15 @@ public class ModSurfaceRules {
     private static final SurfaceRules.RuleSource RED_ZONE_SANDSTONE = makeStateRule(ModBlocks.RZ_SANDSTONE.get());
     private static final SurfaceRules.RuleSource YELLOW_ZONE_SANDSTONE = makeStateRule(ModBlocks.YZ_SANDSTONE.get());
     private static final SurfaceRules.RuleSource SEEDED_DIRT = makeStateRule(ModBlocks.SEEDED_DIRT.get());
-    private static final SurfaceRules.RuleSource TIBERIUM_SOIL = makeStateRule(ModBlocks.TIBERIUM_SOIL.get());
-    private static final SurfaceRules.RuleSource ICHOR_SOIL = makeStateRule(ModBlocks.ICHOR_SOIL.get());
     private static final SurfaceRules.RuleSource INFESTED_GRANITE = makeStateRule(ModBlocks.INFESTED_GRANITE.get());
     private static final SurfaceRules.RuleSource INFESTED_DIORITE = makeStateRule(ModBlocks.INFESTED_DIORITE.get());
     private static final SurfaceRules.RuleSource INFESTED_ANDESITE = makeStateRule(ModBlocks.INFESTED_ANDESITE.get());
     private static final SurfaceRules.RuleSource INFESTED_STONE = makeStateRule(ModBlocks.INFESTED_STONE.get());
     private static final SurfaceRules.RuleSource INFESTED_COBBLESTONE = makeStateRule(ModBlocks.INFESTED_COBBLE.get());
     private static final SurfaceRules.RuleSource TIBERIUM_WATER = makeStateRule(ModBlocks.TIBERIUM_WATER_BLOCK.get());
-    private static final SurfaceRules.RuleSource MOLTEN_TIBERIUM_BLOCK = makeStateRule(ModBlocks.MOLTEN_TIBERIUM_BLOCK.get());
     private static final SurfaceRules.RuleSource MOLTEN_BLUE_TIBERIUM = makeStateRule(ModBlocks.MOLTEN_BLUE_TIBERIUM_BLOCK.get());
     private static final SurfaceRules.RuleSource MOLTEN_RED_TIBERIUM = makeStateRule(ModBlocks.MOLTEN_RED_TIBERIUM_BLOCK.get());
     private static final SurfaceRules.RuleSource MOLTEN_PURPLE_TIBERIUM = makeStateRule(ModBlocks.MOLTEN_PURPLE_TIBERIUM_BLOCK.get());
-    private static final SurfaceRules.RuleSource RIPARIUS_STONE = makeStateRule(ModBlocks.RIPARIUS_STONE.get());
-    private static final SurfaceRules.RuleSource VINIFERA_STONE = makeStateRule(ModBlocks.VINIFERA_STONE.get());
-    private static final SurfaceRules.RuleSource CRUENTUS_STONE = makeStateRule(ModBlocks.CRUENTUS_STONE.get());
-    private static final SurfaceRules.RuleSource ABOREUS_STONE = makeStateRule(ModBlocks.ABOREUS_STONE.get());
     private static final SurfaceRules.RuleSource RIPARIUS_CRYSTAL = makeStateRule(ModBlocks.RIPARIUS_CRYSTAL.get());
     private static final SurfaceRules.RuleSource VINIFERA_CRYSTAL = makeStateRule(ModBlocks.VINIFERA_CRYSTAL.get());
     private static final SurfaceRules.RuleSource CRUENTUS_CRYSTAL = makeStateRule(ModBlocks.CRUENTUS_CRYSTAL.get());
@@ -161,14 +143,19 @@ public class ModSurfaceRules {
         SurfaceRules.ConditionSource isTiberianWastes = SurfaceRules.isBiome(ModBiomes.TIBERIAN_WASTES);
         SurfaceRules.ConditionSource isDeadZone = SurfaceRules.isBiome(ModBiomes.DEAD_ZONE);
 
+        SurfaceRules.ConditionSource isDeadPlains = SurfaceRules.isBiome(ModBiomes.DEAD_PLAINS);
+        SurfaceRules.ConditionSource isFirestormPlains = SurfaceRules.isBiome(ModBiomes.FIRESTORM_PLAINS);
+        SurfaceRules.ConditionSource isBroodingLands = SurfaceRules.isBiome(ModBiomes.BROODING_LANDS);
+        SurfaceRules.ConditionSource isCrystallineHills = SurfaceRules.isBiome(ModBiomes.CRYSTALLINE_HILLS);
+        SurfaceRules.ConditionSource isCrystallinePlateau = SurfaceRules.isBiome(ModBiomes.CRYSTALLINE_PLATEAU);
+
 
         SurfaceRules.ConditionSource surfaceNoise = SurfaceRules.noiseCondition(Noises.SURFACE, -0.909D, -0.5454D);
         SurfaceRules.ConditionSource surfaceNoiseLarge = SurfaceRules.noiseCondition(Noises.SURFACE, 0.5454D, 0.909D);
         SurfaceRules.ConditionSource surfaceNoiseXL = SurfaceRules.noiseCondition(Noises.SURFACE, -0.1818D, 0.1818D);
 
 
-        SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, GRASS_BLOCK), DIRT);
-        SurfaceRules.RuleSource stoneAndGravel = SurfaceRules.sequence(new SurfaceRules.RuleSource[]{SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, INFESTED_STONE), GRAVEL});
+
         SurfaceRules.RuleSource borderSubSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.not(isAbove55), SurfaceRules.ifTrue(surfaceNoise, INFESTED_STONE)));
         SurfaceRules.RuleSource desertHillSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), YELLOW_ZONE_SANDSTONE), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
         SurfaceRules.RuleSource desertSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), YELLOW_ZONE_SAND), SurfaceRules.ifTrue(isAbove55, SurfaceRules.ifTrue(SurfaceRules.not(isAbove62), SurfaceRules.ifTrue(surfaceNoiseAbove(1.0D),YELLOW_ZONE_SANDSTONE))), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
@@ -232,8 +219,15 @@ public class ModSurfaceRules {
 
         SurfaceRules.RuleSource deadZoneSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(altitudeCheck4, SurfaceRules.sequence(SurfaceRules.ifTrue(surfaceNoise, SEEDED_RED_ZONE_DIRT), SurfaceRules.ifTrue(surfaceNoiseXL, RED_ZONE_DIRT), SurfaceRules.ifTrue(surfaceNoiseLarge, RED_ZONE_SAND))), SurfaceRules.ifTrue(isAbove55, SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, INFESTED_STONE), SEEDED_RED_ZONE_DIRT)), SurfaceRules.ifTrue(isAbove55, INFESTED_ANDESITE))), SurfaceRules.ifTrue(altitudeCheck3, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove63, SurfaceRules.ifTrue(SurfaceRules.not(altitudeCheck4), INFESTED_GRANITE)))), SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, SurfaceRules.ifTrue(isAbove50, RED_ZONE_SANDSTONE)), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
 
+        SurfaceRules.RuleSource deadPlainsSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(surfaceNoiseAbove(1.75D), RED_ZONE_DIRT), SurfaceRules.ifTrue(surfaceNoiseAbove(-0.95D), SEEDED_RED_ZONE_DIRT), SurfaceRules.ifTrue(isAbove60, SurfaceRules.ifTrue(UNDER_FLOOR, SEEDED_RED_ZONE_DIRT)), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
 
+        SurfaceRules.RuleSource firestormPlainsSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(surfaceNoiseAbove(1.75D), RED_ZONE_SAND), SurfaceRules.ifTrue(surfaceNoiseAbove(-0.95D), LAVA), SurfaceRules.ifTrue(isAbove60, SurfaceRules.ifTrue(UNDER_FLOOR, RED_ZONE_DIRT)), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
 
+        SurfaceRules.RuleSource crystallinePlateauSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(surfaceNoiseAbove(1.75D), RED_ZONE_DIRT), SurfaceRules.ifTrue(surfaceNoiseAbove(-0.95D), BLACKSTONE), SurfaceRules.ifTrue(isAbove60, SurfaceRules.ifTrue(UNDER_FLOOR, SEEDED_RED_ZONE_DIRT)), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
+
+        SurfaceRules.RuleSource broodingLandsSurface = SurfaceRules.ifTrue(ON_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove62, SurfaceRules.ifTrue(SurfaceRules.not(isAbove63), SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.SWAMP, 0.0D), LAVA))), SurfaceRules.ifTrue(isAbove62, SurfaceRules.ifTrue(surfaceNoiseAbove(0.5D), RED_ZONE_SAND)), SurfaceRules.ifTrue(isAbove55, SurfaceRules.ifTrue(UNDER_FLOOR, SEEDED_RED_ZONE_DIRT)), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE)));
+
+        SurfaceRules.RuleSource crystallineHillsSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.sequence(SurfaceRules.ifTrue(altitudeCheck4, SurfaceRules.sequence(SurfaceRules.ifTrue(surfaceNoise, RED_ZONE_DIRT), SurfaceRules.ifTrue(surfaceNoiseXL, RIPARIUS_CRYSTAL), SurfaceRules.ifTrue(surfaceNoiseLarge, VINIFERA_CRYSTAL))), SurfaceRules.ifTrue(isAbove55, SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, INFESTED_STONE), SEEDED_RED_ZONE_DIRT)), SurfaceRules.ifTrue(isAbove55, CRUENTUS_CRYSTAL))), SurfaceRules.ifTrue(altitudeCheck3, SurfaceRules.sequence(SurfaceRules.ifTrue(isAbove63, SurfaceRules.ifTrue(SurfaceRules.not(altitudeCheck4), ABOREUS_CRYSTAL)))), SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, SurfaceRules.ifTrue(isAbove50, RED_ZONE_DIRT)), SurfaceRules.ifTrue(surfaceNoiseLarge, INFESTED_STONE));
 
         return SurfaceRules.sequence(
 
@@ -274,6 +268,11 @@ public class ModSurfaceRules {
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isIchorBog, ichorBogSurface)),
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isTiberianWastes, tiberianWastesSurface)),
                 SurfaceRules.sequence(SurfaceRules.ifTrue(isDeadZone, deadZoneSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isDeadPlains, deadPlainsSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isFirestormPlains, firestormPlainsSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isBroodingLands, broodingLandsSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isCrystallineHills, crystallineHillsSurface)),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(isCrystallinePlateau, crystallinePlateauSurface)),
 
 
 

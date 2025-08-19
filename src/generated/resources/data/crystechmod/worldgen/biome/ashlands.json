@@ -23,6 +23,12 @@
       "replace_current_music": false,
       "sound": "crystechmod:vitric_expanse_music"
     },
+    "particle": {
+      "options": {
+        "type": "minecraft:ash"
+      },
+      "probability": 8.925E-4
+    },
     "sky_color": 3488327,
     "water_color": 3488327,
     "water_fog_color": 3488327

@@ -145,6 +145,8 @@ public class ModDimensions {
                                 Pair.of(Climate.parameters(-1.0F, -1.0F, -0.19F, -0.375F, 0.0F, -0.05F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.RED_ZONE_RIVER)),
                                 Pair.of(Climate.parameters(1.0F, 1.0F, 1.0F, 0.55F, 0.0F, 0.05F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.RED_ZONE_RIVER)),
 
+
+
 ////                                  Ocean:
                                 Pair.of(Climate.parameters(-0.15F, -1.0F, -0.455F, -1.0F, 0.0F, -1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
                                 Pair.of(Climate.parameters(0.2F, 1.0F, -0.19F, 1.0F, 0.0F, 1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
@@ -166,6 +168,7 @@ public class ModDimensions {
                                 Pair.of(Climate.parameters(-0.455F, 1.0F, -0.19F, 1.0F, 0.0F, 1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
                                 Pair.of(Climate.parameters(-1.05F, -1.0F, -1.05F, -1.0F, 0.0F, -1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
                                 Pair.of(Climate.parameters(-0.455F, 1.0F, -0.455F, 1.0F, 0.0F, 1.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_OCEAN)),
+
 
 
 ////                                  Start of Blue Zone Biomes:
@@ -191,8 +194,9 @@ public class ModDimensions {
                                     Pair.of(Climate.parameters(0.15F, -0.35F, 0.3F, 0.9999F, 0.0F, 0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.EVERGOLD_EXPANSE)),
                                     Pair.of(Climate.parameters(0.45F, -1.0F, 0.03F, -0.7799F, 0.0F, -0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.VALLEY_OF_GOLD)),
                                     Pair.of(Climate.parameters(0.15F, -0.35F, 0.3F, -0.9999F, 0.0F, -0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.VALLEY_OF_GOLD)),
-//
-//
+
+
+
 ////                                  Start of Yellow Zone Biomes:
                                 Pair.of(Climate.parameters(-0.45F, -0.1F, 0.19F, -0.7799F, 0.0F, 0.5666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DEAD_FOREST)),
                                 Pair.of(Climate.parameters(-0.15F, 0.1F, 0.03F, -0.375F, 0.0F, 0.7666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DEAD_FOREST)),
@@ -228,7 +232,9 @@ public class ModDimensions {
                                 Pair.of(Climate.parameters(-0.15F, 1.0F, 1.0F, 1.0F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_SWAMP)),
                                 Pair.of(Climate.parameters(-0.15F, 0.3F, -0.19F, -1.0F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_WOODS)),
                                 Pair.of(Climate.parameters(0.2F, 1.0F, 0.03F, -0.375F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_WOODS)),
-//
+
+
+
 ////                                  Start of Red Zone Biomes:
                                 Pair.of(Climate.parameters(0.2F, -1.0F, -0.11F, -1.0F, 0.0F, 0.05F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.ASHLANDS)),
                                 Pair.of(Climate.parameters(0.55F, -0.35F, 0.03F, -0.375F, 0.0F, 0.2666F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.ASHLANDS)),
@@ -255,7 +261,19 @@ public class ModDimensions {
                                 Pair.of(Climate.parameters(-1.0F, -1.0F, 0.0F, -0.0256F, 0.0F, -0.4655F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_WASTES)),
                                 Pair.of(Climate.parameters(1.0F, 1.0F, 0.40F, 0.3900F, 0.0F, 0.2975F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_WASTES)),
                                 Pair.of(Climate.parameters(0.6F, -0.5F, 0.06F, 0.0256F, 0.0F, 0.4655F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DEAD_ZONE)),
-                                Pair.of(Climate.parameters(0.8F, 0.9F, 0.670F, -0.3900F, 0.0F, -0.2975F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DEAD_ZONE))
+                                Pair.of(Climate.parameters(0.8F, 0.9F, 0.670F, -0.3900F, 0.0F, -0.2975F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DEAD_ZONE)),
+                                Pair.of(Climate.parameters(0.15F, -0.6F, 0.075F, 0.0256F, 0.0F, 0.4655F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DEAD_PLAINS)),
+                                Pair.of(Climate.parameters(0.25F, 0.1F, 0.370F, 0.0F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.DEAD_PLAINS)),
+                                Pair.of(Climate.parameters(1.0F, -0.6F, 0.175F, 0.0256F, 0.0F, 0.4655F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.FIRESTORM_PLAINS)),
+                                Pair.of(Climate.parameters(0.8F, 0.1F, 0.270F, 0.0F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.FIRESTORM_PLAINS)),
+                                Pair.of(Climate.parameters(1.0F, -0.6F, 0.175F, -0.0256F, 0.0F, 0.4655F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.BROODING_LANDS)),
+                                Pair.of(Climate.parameters(0.8F, 0.1F, 0.270F, 0.0F, 0.0F, 0.8776F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.BROODING_LANDS)),
+                                Pair.of(Climate.parameters(1.0F, -0.6F, 0.200F, -0.0256F, 0.0F, 0.4655F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.CRYSTALLINE_PLATEAU)),
+                                Pair.of(Climate.parameters(0.8F, 0.1F, 0.470F, 0.0F, 0.0F, 0.8776F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.CRYSTALLINE_PLATEAU)),
+
+                                Pair.of(Climate.parameters(1.0F, -0.6F, 0.280F, -0.6777F, 0.0F, 0.4655F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.CRYSTALLINE_HILLS)),
+                                Pair.of(Climate.parameters(0.8F, 0.1F, 0.570F, -0.4555F, 0.0F, 0.8776F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.CRYSTALLINE_HILLS
+                                ))
 
 
 

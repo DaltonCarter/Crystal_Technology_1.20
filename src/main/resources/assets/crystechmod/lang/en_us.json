@@ -59,14 +59,12 @@
   "item.crystechmod.gundanium_hammer": "Gundanium Hammer",
   "item.crystechmod.alythum_hammer": "Alythum Hammer",
   "item.crystechmod.vitric_circuit": "Vitric Circuit",
-
   "item.crystechmod.purple_core_crystal": "Purple Core Crystal",
   "item.crystechmod.red_core_crystal": "Red Core Crystal",
   "item.crystechmod.blue_core_crystal": "Blue Core Crystal",
   "item.crystechmod.green_core_crystal": "Green Core Crystal",
   "item.crystechmod.yellow_core_crystal": "Yellow Core Crystal",
   "item.crystechmod.orange_core_crystal": "Orange Core Crystal",
-
   "item.crystechmod.gundanium_helmet": "Gundanium Helmet",
   "item.crystechmod.gundanium_chestplate": "Gundanium Chestplate",
   "item.crystechmod.gundanium_leggings": "Gundanium Leggings",
@@ -101,7 +99,6 @@
   "item.crystechmod.alythum_shovel": "Alythum Shovel",
   "item.crystechmod.gundanium_excavator": "Gundanium Excavator",
   "item.crystechmod.alythum_excavator": "Alythum Excavator",
-
   "item.crystechmod.illyrim_sword": "Illyrim Sword",
   "item.crystechmod.illyrim_pickaxe": "Illyrim Pickaxe",
   "item.crystechmod.illyrim_axe": "Illyrim Axe",
@@ -110,52 +107,35 @@
   "item.crystechmod.illyrim_excavator": "Illyrim Excavator",
   "item.crystechmod.illyrim_paxel": "Illyrim Paxel",
   "item.crystechmod.illyrim_hammer": "Illyrim Hammer",
-
   "item.crystechmod.illyrim_helmet": "Illyrim Helmet",
   "item.crystechmod.illyrim_chestplate": "Illyrim Chestplate",
   "item.crystechmod.illyrim_leggings": "Illyrim Leggings",
   "item.crystechmod.illyrim_boots": "Illyrim Boots",
-
   "item.crystechmod.rhino_spawn_egg": "Rhino Spawn Egg",
-
-
   "item.crystechmod.green_tiberium_dust": "Riparius Tiberium Dust",
   "item.crystechmod.blue_tiberium_dust": "Vinifera Tiberium Dust",
   "item.crystechmod.red_tiberium_dust": "Cruentus Tiberium Dust",
   "item.crystechmod.purple_tiberium_dust": "Aboreus Tiberium Dust",
-
-
   "item.minecraft.potion.effect.freeze_potion": "Freeze Potion",
   "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
   "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
-
   "item.minecraft.potion.effect.climbing_potion": "Climbing Potion",
   "item.minecraft.splash_potion.effect.climbing_potion": "Splash Potion of Climbing",
   "item.minecraft.lingering_potion.effect.climbing_potion": "Lingering Potion of Climbing",
-
-
   "item.crystechmod.dusk_hour_music_disc": "Firestorm Dusk Hour Music Disc",
   "item.crystechmod.dusk_hour_music_disc.desc": "Dusk Hour - by Tommy Van Leth, OG: Frank Klepacki.",
-
   "item.crystechmod.lone_trooper_music_disc": "Firestorm Lone Trooper Music Disc",
   "item.crystechmod.lone_trooper_music_disc.desc": "Firestorm Lone Trooper - by Tommy Van Leth, OG: Frank Klepacki.",
-
   "item.crystechmod.valves_music_disc": "Firestorm Valves Music Disc",
   "item.crystechmod.valves_music_disc.desc": "Firestorm Valves - by Tommy Van Leth, OG: Frank Klepacki.",
-
   "item.crystechmod.heroism_music_disc": "Firestorm Heroism Music Disc",
   "item.crystechmod.heroism_music_disc.desc": "Firestorm Heroism - by Tommy Van Leth, OG: Frank Klepacki.",
-
   "item.crystechmod.derelict_music_disc": "Derelict Music Disc",
   "item.crystechmod.derelict_music_disc.desc": "Derelict - by Tommy Van Leth.",
-
   "item.crystechmod.kodiak_stranded_music_disc": "Kodiak Stranded Music Disc",
   "item.crystechmod.kodiak_stranded_music_disc.desc": "Kodiak Stranded - by Cameron Symons.",
-
-
   "item.crystechmod.devils_blood_powder": "Devil's Blood Powder",
   "item.crystechmod.yokaran_bloom_powder": "Yokaran Bloom Powder",
-
   "item.crystechmod.iron_dust": "Iron Dust",
   "item.crystechmod.gold_dust": "Gold Dust",
   "item.crystechmod.copper_dust": "Copper Dust",
@@ -169,6 +149,7 @@
   "item.crystechmod.illuminate_component": "Illuminate Component",
   "item.crystechmod.kryonic_capacitor": "Kryonic Component",
   "item.crystechmod.kryonic_reservoir": "Kryonic Reservoir",
+
 
 
   "block.crystechmod.aeries_ore": "Aeries Ore",
@@ -196,33 +177,26 @@
   "block.crystechmod.enigma_block": "Enigma Block",
   "block.crystechmod.kryon_block": "Kryon Block",
   "block.crystechmod.gundanium_block": "Gundanium Block",
-
   "block.crystechmod.proto_steel_block": "Proto-Steel Block",
   "block.crystechmod.proto_steel_stairs": "Proto-Steel Stairs",
   "block.crystechmod.proto_steel_slab": "Proto-Steel Slab",
   "block.crystechmod.proto_steel_wall": "Proto-Steel Wall",
-
   "block.crystechmod.iron_plating": "Iron Plating",
   "block.crystechmod.iron_plating_stairs": "Iron Plating Stairs",
   "block.crystechmod.iron_plating_slab": "Iron Plating Slab",
   "block.crystechmod.iron_plating_wall": "Iron Plating Wall",
-
   "block.crystechmod.rusty_iron_plating": "Rusty Iron Plating",
   "block.crystechmod.rusty_iron_plating_stairs": "Rusty Iron Plating Stairs",
   "block.crystechmod.rusty_iron_plating_slab": "Rusty Iron Plating Slab",
   "block.crystechmod.rusty_iron_plating_wall": "Rusty Iron Plating Wall",
-
   "block.crystechmod.vitric_iron_plating": "Vitric Iron Plating",
   "block.crystechmod.vitric_iron_plating_stairs": "Vitric Iron Plating Stairs",
   "block.crystechmod.vitric_iron_plating_slab": "Vitric Iron Plating Slab",
   "block.crystechmod.vitric_iron_plating_wall": "Vitric Iron Plating Wall",
-
   "block.crystechmod.polished_iron_block": "Polished Iron Block",
   "block.crystechmod.polished_iron_stairs": "Polished Iron Stairs",
   "block.crystechmod.polished_iron_slab": "Polished Iron Slab",
   "block.crystechmod.polished_iron_wall": "Polished Iron Wall",
-
-  
   "block.crystechmod.alythum_block": "Alythum Block",
   "block.crystechmod.illyrim_block": "Illyrim Block",
   "block.crystechmod.lg_core_block": "MK.1 Core Steel Block",
@@ -257,10 +231,8 @@
   "block.crystechmod.plagued_pressure_plate": "Plagued Pressure Plate",
   "block.crystechmod.plagued_door": "Plagued Door",
   "block.crystechmod.plagued_trapdoor": "Plagued Trapdoor",
-
   "block.crystechmod.iron_plating_door": "Iron Plated Door",
   "block.crystechmod.iron_plating_trapdoor": "Iron Plated Trapdoor",
-
   "block.crystechmod.ember_oak_planks": "Ember Oak Planks",
   "block.crystechmod.ember_oak_fence": "Ember Oak Fence",
   "block.crystechmod.ember_oak_fence_gate": "Ember Oak Fence Gate",
@@ -359,10 +331,8 @@
   "block.crystechmod.seeded_red_zone_dirt": "Seeded Red Zone Dirt",
   "block.crystechmod.red_zone_sand": "Red Zone Sand",
   "block.crystechmod.lai_melon": "Lai Melon",
-
   "block.crystechmod.vitric_bloom": "Vitric Bloom",
   "block.crystechmod.vitric_rose": "Vitric Rose",
-
   "block.crystechmod.vitric_deepslate": "Vitric Deepslate",
   "block.crystechmod.vitric_deepslate_bricks": "Vitric Deepslate Bricks",
   "block.crystechmod.vitric_deepslate_brick_stairs": "Vitric Deepslate Brick Stairs",
@@ -372,39 +342,32 @@
   "block.crystechmod.vitric_deepslate_tile_stairs": "Vitric Deepslate Tile Stairs",
   "block.crystechmod.vitric_deepslate_tile_slab": "Vitric Deepslate Tile Slab",
   "block.crystechmod.vitric_deepslate_tile_wall": "Vitric Deepslate Tile Wall",
-
   "block.crystechmod.riparius_stone": "Riparius Stone",
   "block.crystechmod.riparius_stone_bricks": "Riparius Stone Bricks",
   "block.crystechmod.riparius_stone_brick_slab": "Riparius Stone Brick Slab",
   "block.crystechmod.riparius_stone_brick_stairs": "Riparius Stone Brick Stairs",
   "block.crystechmod.riparius_stone_brick_wall": "Riparius Stone Brick Wall",
-
   "block.crystechmod.vinifera_stone": "Vinifera Stone",
   "block.crystechmod.vinifera_stone_bricks": "Vinifera Stone Bricks",
   "block.crystechmod.vinifera_stone_brick_slab": "Vinifera Stone Brick Slab",
   "block.crystechmod.vinifera_stone_brick_stairs": "Vinifera Stone Brick Stairs",
   "block.crystechmod.vinifera_stone_brick_wall": "Vinifera Stone Brick Wall",
-
   "block.crystechmod.cruentus_stone": "Cruentus Stone",
   "block.crystechmod.cruentus_stone_bricks": "Cruentus Stone Bricks",
   "block.crystechmod.cruentus_stone_brick_slab": "Cruentus Stone Brick Slab",
   "block.crystechmod.cruentus_stone_brick_stairs": "Cruentus Stone Brick Stairs",
   "block.crystechmod.cruentus_stone_brick_wall": "Cruentus Stone Brick Wall",
-
   "block.crystechmod.aboreus_stone": "Aboreus Stone",
   "block.crystechmod.aboreus_stone_bricks": "Aboreus Stone Bricks",
   "block.crystechmod.aboreus_stone_brick_slab": "Aboreus Stone Brick Slab",
   "block.crystechmod.aboreus_stone_brick_stairs": "Aboreus Stone Brick Stairs",
   "block.crystechmod.aboreus_stone_brick_wall": "Aboreus Stone Brick Wall",
-
   "block.crystechmod.riparius_crystal": "Riparius Crystal",
   "block.crystechmod.vinifera_crystal": "Vinifera Crystal",
   "block.crystechmod.cruentus_crystal": "Cruentus Crystal",
   "block.crystechmod.aboreus_crystal": "Aboreus Crystal",
-
   "block.crystechmod.infested_stone_brick_slab": "Plagued Stone Brick Slab",
   "block.crystechmod.infested_stone_brick_stairs": "Plagued Stone Brick Stairs",
-
   "block.crystechmod.clear_tiberglass": "Tiberglass",
   "block.crystechmod.black_tiberglass": "Black Tiberglass",
   "block.crystechmod.blue_tiberglass": "Blue Tiberglass",
@@ -426,7 +389,6 @@
   "block.crystechmod.nod_tiberglass": "Nod Tiberglass",
   "block.crystechmod.mosaic_tiberglass": "Mosaic Tiberglass",
   "block.crystechmod.wolf_tiberglass": "Wolf Tiberglass",
-
   "block.crystechmod.clear_tiberglass_pane": "Tiberglass Pane",
   "block.crystechmod.black_tiberglass_pane": "Black Tiberglass Pane",
   "block.crystechmod.blue_tiberglass_pane": "Blue Tiberglass Pane",
@@ -448,16 +410,12 @@
   "block.crystechmod.nod_tiberglass_pane": "Nod Tiberglass Pane",
   "block.crystechmod.mosaic_tiberglass_pane": "Mosaic Tiberglass Pane",
   "block.crystechmod.wolf_tiberglass_pane": "Wolf Tiberglass Pane",
-
   "block.crystechmod.blossom_base": "Tiberium Blossom Tree Base",
   "block.crystechmod.blossom_center": "Tiberium Blossom Tree Trunk",
   "block.crystechmod.blossom_spout": "Tiberium Blossom Tree Spout",
   "block.crystechmod.blossom_arm": "Tiberium Blossom Tree Arm",
-
   "block.crystechmod.seeded_dirt": "Tiberium Seeded Dirt",
-
   "block.crystechmod.nod_crest_large": "Large Nod Crest",
-
   "block.crystechmod.black_tibercrete_bricks": "Black Tibercrete Bricks",
   "block.crystechmod.blue_tibercrete_bricks": "Blue Tibercrete Bricks",
   "block.crystechmod.brown_tibercrete_bricks": "Brown Tibercrete Bricks",
@@ -474,7 +432,6 @@
   "block.crystechmod.gray_tibercrete_bricks": "Gray Tibercrete Bricks",
   "block.crystechmod.white_tibercrete_bricks": "White Tibercrete Bricks",
   "block.crystechmod.yellow_tibercrete_bricks": "Yellow Tibercrete Bricks",
-
   "block.crystechmod.black_tibercrete_wall": "Black Tibercrete Wall",
   "block.crystechmod.blue_tibercrete_wall": "Blue Tibercrete Wall",
   "block.crystechmod.brown_tibercrete_wall": "Brown Tibercrete Wall",
@@ -491,7 +448,6 @@
   "block.crystechmod.gray_tibercrete_wall": "Gray Tibercrete Wall",
   "block.crystechmod.white_tibercrete_wall": "White Tibercrete Wall",
   "block.crystechmod.yellow_tibercrete_wall": "Yellow Tibercrete Wall",
-
   "block.crystechmod.black_tibercrete_brick_wall": "Black Tibercrete Brick Wall",
   "block.crystechmod.blue_tibercrete_brick_wall": "Blue Tibercrete Brick Wall",
   "block.crystechmod.brown_tibercrete_brick_wall": "Brown Tibercrete Brick Wall",
@@ -508,7 +464,6 @@
   "block.crystechmod.gray_tibercrete_brick_wall": "Gray Tibercrete Brick Wall",
   "block.crystechmod.white_tibercrete_brick_wall": "White Tibercrete Brick Wall",
   "block.crystechmod.yellow_tibercrete_brick_wall": "Yellow Tibercrete Brick Wall",
-
   "block.crystechmod.black_tibercrete_brick_slab": "Black Tibercrete Brick Slab",
   "block.crystechmod.blue_tibercrete_brick_slab": "Blue Tibercrete Brick Slab",
   "block.crystechmod.brown_tibercrete_brick_slab": "Brown Tibercrete Brick Slab",
@@ -525,7 +480,6 @@
   "block.crystechmod.gray_tibercrete_brick_slab": "Gray Tibercrete Brick Slab",
   "block.crystechmod.white_tibercrete_brick_slab": "White Tibercrete Brick Slab",
   "block.crystechmod.yellow_tibercrete_brick_slab": "Yellow Tibercrete Brick Slab",
-
   "block.crystechmod.black_tibercrete_brick_stairs": "Black Tibercrete Brick Stairs",
   "block.crystechmod.blue_tibercrete_brick_stairs": "Blue Tibercrete Brick Stairs",
   "block.crystechmod.brown_tibercrete_brick_stairs": "Brown Tibercrete Brick Stairs",
@@ -542,7 +496,6 @@
   "block.crystechmod.gray_tibercrete_brick_stairs": "Gray Tibercrete Brick Stairs",
   "block.crystechmod.white_tibercrete_brick_stairs": "White Tibercrete Brick Stairs",
   "block.crystechmod.yellow_tibercrete_brick_stairs": "Yellow Tibercrete Brick Stairs",
-
   "block.crystechmod.plagued_andesite_stairs": "Plagued Andesite Stairs",
   "block.crystechmod.plagued_andesite_slab": "Plagued Andesite Slab",
   "block.crystechmod.plagued_andesite_wall": "Plagued Andesite Wall",
@@ -580,13 +533,11 @@
   "block.crystechmod.aboreus_crystal_slab": "Aboreus Crystal Slab",
   "block.crystechmod.aboreus_crystal_wall": "Aboreus Crystal Wall",
   "block.crystechmod.infested_stone_brick_wall": "Plagued Stone Brick Wall",
-
   "block.crystechmod.ember_oak_log": "Ember Oak Log",
   "block.crystechmod.ember_oak_leaves": "Ember Oak Leaves",
   "block.crystechmod.ember_oak_wood": "Ember Oak Wood",
   "block.crystechmod.stripped_ember_oak_log": "Stripped Ember Oak Log",
   "block.crystechmod.stripped_ember_oak_wood": "Stripped Ember Oak Wood",
-
   "block.crystechmod.dead_log": "Dead Log",
   "block.crystechmod.dead_leaves": "Dead Leaves",
   "block.crystechmod.dead_wood": "Dead Wood",
@@ -601,7 +552,6 @@
   "block.crystechmod.dead_door": "Dead Door",
   "block.crystechmod.dead_trapdoor": "Dead Trapdoor",
   "block.crystechmod.dead_stairs": "Dead Stairs",
-
   "block.crystechmod.marika_oak_log": "Marika Oak Log",
   "block.crystechmod.marika_oak_leaves": "Marika Oak Leaves",
   "block.crystechmod.marika_oak_wood": "Marika Oak Wood",
@@ -620,7 +570,6 @@
   "block.crystechmod.ember_oak_sapling": "Ember Oak Sapling",
   "block.crystechmod.plagued_sapling": "Plagued Sapling",
   "block.crystechmod.dying_sapling": "Dying Sapling",
-
   "block.crystechmod.yz_sandstone": "Yellow Zone Sandstone",
   "block.crystechmod.yz_sandstone_stairs": "Yellow Zone Sandstone Stairs",
   "block.crystechmod.yz_sandstone_slab": "Yellow Zone Sandstone Slab",
@@ -631,7 +580,6 @@
   "block.crystechmod.cut_yz_sandstone": "Cut Yellow Zone Sandstone",
   "block.crystechmod.cut_yz_sandstone_slab": "Cut Yellow Zone Sandstone Slab",
   "block.crystechmod.chiseled_yz_sandstone": "Chiseled Yellow Zone Sandstone",
-
   "block.crystechmod.rz_sandstone": "Red Zone Sandstone",
   "block.crystechmod.rz_sandstone_stairs": "Red Zone Sandstone Stairs",
   "block.crystechmod.rz_sandstone_slab": "Red Zone Sandstone Slab",
@@ -642,7 +590,6 @@
   "block.crystechmod.cut_rz_sandstone": "Cut Red Zone Sandstone",
   "block.crystechmod.cut_rz_sandstone_slab": "Cut Red Zone Sandstone Slab",
   "block.crystechmod.chiseled_rz_sandstone": "Chiseled Red Zone Sandstone",
-
   "block.crystechmod.cs_chainlink": "Core Steel Chainlink",
   "block.crystechmod.cs_scaffold": "Core Steel Scaffold",
   "block.crystechmod.cs_scaffold_slab": "Core Steel Scaffold Slab",
@@ -672,7 +619,6 @@
   "block.crystechmod.cs_catwalk_p_slab": "Purple Core Steel Catwalk Slab",
   "block.crystechmod.cs_catwalk_p_stairs": "Purple Core Steel Catwalk Stairs",
   "block.crystechmod.cs_catwalk_p_vert": "Purple Core Steel Catwalk Panel",
-
   "block.crystechmod.cs_tile": "Core Steel Tile",
   "block.crystechmod.cs_tile_stairs": "Core Steel Stairs",
   "block.crystechmod.cs_tile_slab": "Core Steel Slab",
@@ -793,7 +739,6 @@
   "block.crystechmod.cs_tile_hg_frame_slab": "Framed MK.3 Core Steel Slab",
   "block.crystechmod.cs_tile_hg_frame_wall": "Framed MK.3 Core Steel Wall",
   "block.crystechmod.cs_tile_hg_frame_vert": "Framed MK.3 Core Steel Panel",
-
   "block.crystechmod.cs_pillar": "Core Steel Pillar",
   "block.crystechmod.cs_pillar_g": "Green Core Steel Pillar",
   "block.crystechmod.cs_pillar_g_2": "Green Core Steel Pillar",
@@ -809,7 +754,6 @@
   "block.crystechmod.cs_pillar_mg_2": "Mk.2 Core Steel Pillar",
   "block.crystechmod.cs_pillar_hg": "Mk.3 Core Steel Pillar",
   "block.crystechmod.cs_pillar_hg_2": "Mk.3 Core Steel Pillar",
-
   "block.crystechmod.ct_pillar": "Crystal Core Pillar",
   "block.crystechmod.ct_pillar_2": "Crystal Core Pillar",
   "block.crystechmod.ct_pillar_3": "Crystal Core Pillar",
@@ -821,97 +765,81 @@
   "block.crystechmod.ct_pillar_r_2": "Red Crystal Core Pillar",
   "block.crystechmod.ct_pillar_p": "Purple Crystal Core Pillar",
   "block.crystechmod.ct_pillar_p_2": "Purple Crystal Core Pillar",
-
   "block.crystechmod.ct_pillar_top": "Crystal Core Tile",
   "block.crystechmod.ct_pillar_top_vert": "Crystal Core Tile Panel",
   "block.crystechmod.ct_tile_stairs": "Crystal Core Stairs",
   "block.crystechmod.ct_tile_slab": "Crystal Core Slab",
   "block.crystechmod.ct_tile_wall": "Crystal Core Wall",
-
   "block.crystechmod.ct_pillar_top_g": "Green Crystal Core Tile",
   "block.crystechmod.ct_pillar_top_g_vert": "Green Crystal Core Tile Panel",
   "block.crystechmod.ct_tile_stairs_g": "Green Crystal Core Stairs",
   "block.crystechmod.ct_tile_slab_g": "Green Crystal Core Slab",
   "block.crystechmod.ct_tile_wall_g": "Green Crystal Core Wall",
-
   "block.crystechmod.ct_pillar_top_b": "Blue Crystal Core Tile",
   "block.crystechmod.ct_pillar_top_b_vert": "Blue Crystal Core Tile Panel",
   "block.crystechmod.ct_tile_stairs_b": "Blue Crystal Core Stairs",
   "block.crystechmod.ct_tile_slab_b": "Blue Crystal Core Slab",
   "block.crystechmod.ct_tile_wall_b": "Blue Crystal Core Wall",
-
   "block.crystechmod.ct_pillar_top_r": "Red Crystal Core Tile",
   "block.crystechmod.ct_pillar_top_r_vert": "Red Crystal Core Tile Panel",
   "block.crystechmod.ct_tile_stairs_r": "Red Crystal Core Stairs",
   "block.crystechmod.ct_tile_slab_r": "Red Crystal Core Slab",
   "block.crystechmod.ct_tile_wall_r": "Red Crystal Core Wall",
-
   "block.crystechmod.ct_pillar_top_p": "Purple Crystal Core Tile",
   "block.crystechmod.ct_pillar_top_p_vert": "Purple Crystal Core Tile Panel",
   "block.crystechmod.ct_tile_stairs_p": "Purple Crystal Core Stairs",
   "block.crystechmod.ct_tile_slab_p": "Purple Crystal Core Slab",
   "block.crystechmod.ct_tile_wall_p": "Purple Crystal Core Wall",
-
   "block.crystechmod.ct_tile_2": "Crystal Core Tile",
   "block.crystechmod.ct_tile_vert_2": "Crystal Core Tile Panel",
   "block.crystechmod.ct_tile_stairs_2": "Crystal Core Stairs",
   "block.crystechmod.ct_tile_slab_2": "Crystal Core Slab",
   "block.crystechmod.ct_tile_wall_2": "Crystal Core Wall",
-
   "block.crystechmod.ct_tile_g_2": "Green Crystal Core Tile",
   "block.crystechmod.ct_tile_g_vert_2": "Green Crystal Core Tile Panel",
   "block.crystechmod.ct_tile_stairs_g_2": "Green Crystal Core Stairs",
   "block.crystechmod.ct_tile_slab_g_2": "Green Crystal Core Slab",
   "block.crystechmod.ct_tile_wall_g_2": "Green Crystal Core Wall",
-
   "block.crystechmod.ct_tile_b_2": "Blue Crystal Core Tile",
   "block.crystechmod.ct_tile_b_vert_2": "Blue Crystal Core Tile Panel",
   "block.crystechmod.ct_tile_stairs_b_2": "Blue Crystal Core Stairs",
   "block.crystechmod.ct_tile_slab_b_2": "Blue Crystal Core Slab",
   "block.crystechmod.ct_tile_wall_b_2": "Blue Crystal Core Wall",
-
   "block.crystechmod.ct_tile_r_2": "Red Crystal Core Tile",
   "block.crystechmod.ct_tile_r_vert_2": "Red Crystal Core Tile Panel",
   "block.crystechmod.ct_tile_stairs_r_2": "Red Crystal Core Stairs",
   "block.crystechmod.ct_tile_slab_r_2": "Red Crystal Core Slab",
   "block.crystechmod.ct_tile_wall_r_2": "Red Crystal Core Wall",
-
   "block.crystechmod.ct_tile_p_2": "Purple Crystal Core Tile",
   "block.crystechmod.ct_tile_p_vert_2": "Purple Crystal Core Tile Panel",
   "block.crystechmod.ct_tile_stairs_p_2": "Purple Crystal Core Stairs",
   "block.crystechmod.ct_tile_slab_p_2": "Purple Crystal Core Slab",
   "block.crystechmod.ct_tile_wall_p_2": "Purple Crystal Core Wall",
-
   "block.crystechmod.ct_tile_3": "Crystal Core Tile",
   "block.crystechmod.ct_tile_vert_3": "Crystal Core Tile Panel",
   "block.crystechmod.ct_tile_stairs_3": "Crystal Core Stairs",
   "block.crystechmod.ct_tile_slab_3": "Crystal Core Slab",
   "block.crystechmod.ct_tile_wall_3": "Crystal Core Wall",
-
   "block.crystechmod.ct_tile_g_3": "Green Crystal Core Tile",
   "block.crystechmod.ct_tile_g_vert_3": "Green Crystal Core Tile Panel",
   "block.crystechmod.ct_tile_stairs_g_3": "Green Crystal Core Stairs",
   "block.crystechmod.ct_tile_slab_g_3": "Green Crystal Core Slab",
   "block.crystechmod.ct_tile_wall_g_3": "Green Crystal Core Wall",
-
   "block.crystechmod.ct_tile_b_3": "Blue Crystal Core Tile",
   "block.crystechmod.ct_tile_b_vert_3": "Blue Crystal Core Tile Panel",
   "block.crystechmod.ct_tile_stairs_b_3": "Blue Crystal Core Stairs",
   "block.crystechmod.ct_tile_slab_b_3": "Blue Crystal Core Slab",
   "block.crystechmod.ct_tile_wall_b_3": "Blue Crystal Core Wall",
-
   "block.crystechmod.ct_tile_r_3": "Red Crystal Core Tile",
   "block.crystechmod.ct_tile_r_vert_3": "Red Crystal Core Tile Panel",
   "block.crystechmod.ct_tile_stairs_r_3": "Red Crystal Core Stairs",
   "block.crystechmod.ct_tile_slab_r_3": "Red Crystal Core Slab",
   "block.crystechmod.ct_tile_wall_r_3": "Red Crystal Core Wall",
-
   "block.crystechmod.ct_tile_p_3": "Purple Crystal Core Tile",
   "block.crystechmod.ct_tile_p_vert_3": "Purple Crystal Core Tile Panel",
   "block.crystechmod.ct_tile_stairs_p_3": "Purple Crystal Core Stairs",
   "block.crystechmod.ct_tile_slab_p_3": "Purple Crystal Core Slab",
   "block.crystechmod.ct_tile_wall_p_3": "Purple Crystal Core Wall",
-
   "block.crystechmod.crystal_core_lamp_g": "Green Crystal Core Lamp",
   "block.crystechmod.inverted_crystal_core_lamp_g": "Inverted Green Crystal Core Lamp",
   "block.crystechmod.crystal_core_lamp_b": "Blue Crystal Core Lamp",
@@ -920,132 +848,106 @@
   "block.crystechmod.inverted_crystal_core_lamp_r": "Inverted Red Crystal Core Lamp",
   "block.crystechmod.crystal_core_lamp_p": "Purple Crystal Core Lamp",
   "block.crystechmod.inverted_crystal_core_lamp_p": "Inverted Purple Crystal Core Lamp",
-
   "block.crystechmod.crystal_core_light": "Crystal Core Light",
   "block.crystechmod.inverted_crystal_core_light": "Inverted Crystal Core Light",
   "block.crystechmod.vert_crystal_core_light": "Crystal Core Light Alt",
   "block.crystechmod.inverted_vert_crystal_core_light": "Inverted Crystal Core Light Alt",
-
   "block.crystechmod.black_crystal_core_light": "Black Crystal Core Light",
   "block.crystechmod.inverted_black_crystal_core_light": "Inverted Black Crystal Core Light",
   "block.crystechmod.black_vert_crystal_core_light": "Black Crystal Core Light Alt",
   "block.crystechmod.inverted_black_vert_crystal_core_light": "Inverted Black Crystal Core Light Alt",
-
   "block.crystechmod.blue_crystal_core_light": "Blue Crystal Core Light",
   "block.crystechmod.inverted_blue_crystal_core_light": "Inverted Blue Crystal Core Light",
   "block.crystechmod.blue_vert_crystal_core_light": "Blue Crystal Core Light Alt",
   "block.crystechmod.inverted_blue_vert_crystal_core_light": "Inverted Blue Crystal Core Light Alt",
-
   "block.crystechmod.brown_crystal_core_light": "Brown Crystal Core Light",
   "block.crystechmod.inverted_brown_crystal_core_light": "Inverted Brown Crystal Core Light",
   "block.crystechmod.brown_vert_crystal_core_light": "Brown Crystal Core Light Alt",
   "block.crystechmod.inverted_brown_vert_crystal_core_light": "Inverted Brown Crystal Core Light Alt",
-
   "block.crystechmod.cyan_crystal_core_light": "Cyan Crystal Core Light",
   "block.crystechmod.inverted_cyan_crystal_core_light": "Inverted Cyan Crystal Core Light",
   "block.crystechmod.cyan_vert_crystal_core_light": "Cyan Crystal Core Light Alt",
   "block.crystechmod.inverted_cyan_vert_crystal_core_light": "Inverted Cyan Crystal Core Light Alt",
-
   "block.crystechmod.flame_crystal_core_light": "Flame Crystal Core Light",
   "block.crystechmod.inverted_flame_crystal_core_light": "Inverted Flame Crystal Core Light",
   "block.crystechmod.flame_vert_crystal_core_light": "Flame Crystal Core Light Alt",
   "block.crystechmod.inverted_flame_vert_crystal_core_light": "Inverted Flame Crystal Core Light Alt",
-
   "block.crystechmod.green_crystal_core_light": "Green Crystal Core Light",
   "block.crystechmod.inverted_green_crystal_core_light": "Inverted Green Crystal Core Light",
   "block.crystechmod.green_vert_crystal_core_light": "Green Crystal Core Light Alt",
   "block.crystechmod.inverted_green_vert_crystal_core_light": "Inverted Green Crystal Core Light Alt",
-
   "block.crystechmod.grey_crystal_core_light": "Grey Crystal Core Light",
   "block.crystechmod.inverted_grey_crystal_core_light": "Inverted Grey Crystal Core Light",
   "block.crystechmod.grey_vert_crystal_core_light": "Grey Crystal Core Light Alt",
   "block.crystechmod.inverted_grey_vert_crystal_core_light": "Inverted Grey Crystal Core Light Alt",
-
   "block.crystechmod.light_blue_crystal_core_light": "Light Blue Crystal Core Light",
   "block.crystechmod.inverted_light_blue_crystal_core_light": "Inverted Light Blue Crystal Core Light",
   "block.crystechmod.light_blue_vert_crystal_core_light": "Light Blue Crystal Core Light Alt",
   "block.crystechmod.inverted_light_blue_vert_crystal_core_light": "Inverted Light Blue Crystal Core Light Alt",
-
   "block.crystechmod.light_grey_crystal_core_light": "Light Grey Crystal Core Light",
   "block.crystechmod.inverted_light_grey_crystal_core_light": "Inverted Light Grey Crystal Core Light",
   "block.crystechmod.light_grey_vert_crystal_core_light": "Light Grey Crystal Core Light Alt",
   "block.crystechmod.inverted_light_grey_vert_crystal_core_light": "Inverted Light Grey Crystal Core Light Alt",
-
   "block.crystechmod.lime_crystal_core_light": "Lime Crystal Core Light",
   "block.crystechmod.inverted_lime_crystal_core_light": "Inverted Lime Crystal Core Light",
   "block.crystechmod.lime_vert_crystal_core_light": "Lime Crystal Core Light Alt",
   "block.crystechmod.inverted_lime_vert_crystal_core_light": "Inverted Lime Crystal Core Light Alt",
-
   "block.crystechmod.magenta_crystal_core_light": "Magenta Crystal Core Light",
   "block.crystechmod.inverted_magenta_crystal_core_light": "Inverted Magenta Crystal Core Light",
   "block.crystechmod.magenta_vert_crystal_core_light": "Magenta Crystal Core Light Alt",
   "block.crystechmod.inverted_magenta_vert_crystal_core_light": "Inverted Magenta Crystal Core Light Alt",
-
   "block.crystechmod.orange_crystal_core_light": "Orange Crystal Core Light",
   "block.crystechmod.inverted_orange_crystal_core_light": "Inverted Orange Crystal Core Light",
   "block.crystechmod.orange_vert_crystal_core_light": "Orange Crystal Core Light Alt",
   "block.crystechmod.inverted_orange_vert_crystal_core_light": "Inverted Orange Crystal Core Light Alt",
-
   "block.crystechmod.pink_crystal_core_light": "Pink Crystal Core Light",
   "block.crystechmod.inverted_pink_crystal_core_light": "Inverted Pink Crystal Core Light",
   "block.crystechmod.pink_vert_crystal_core_light": "Pink Crystal Core Light Alt",
   "block.crystechmod.inverted_pink_vert_crystal_core_light": "Inverted Pink Crystal Core Light Alt",
-
   "block.crystechmod.purple_crystal_core_light": "Purple Crystal Core Light",
   "block.crystechmod.inverted_purple_crystal_core_light": "Inverted Purple Crystal Core Light",
   "block.crystechmod.purple_vert_crystal_core_light": "Purple Crystal Core Light Alt",
   "block.crystechmod.inverted_purple_vert_crystal_core_light": "Inverted Purple Crystal Core Light Alt",
-
   "block.crystechmod.red_crystal_core_light": "Red Crystal Core Light",
   "block.crystechmod.inverted_red_crystal_core_light": "Inverted Red Crystal Core Light",
   "block.crystechmod.red_vert_crystal_core_light": "Red Crystal Core Light Alt",
   "block.crystechmod.inverted_red_vert_crystal_core_light": "Inverted Red Crystal Core Light Alt",
-
   "block.crystechmod.white_crystal_core_light": "White Crystal Core Light",
   "block.crystechmod.inverted_white_crystal_core_light": "Inverted White Crystal Core Light",
   "block.crystechmod.white_vert_crystal_core_light": "White Crystal Core Light Alt",
   "block.crystechmod.inverted_white_vert_crystal_core_light": "Inverted White Crystal Core Light Alt",
-
   "block.crystechmod.fools_vitricium": "Fools Vitricium",
   "block.crystechmod.fools_crystal_core": "Faux Crystal Core",
-
   "block.crystechmod.harmonium_ore": "Harmonium Ore",
   "block.crystechmod.deepslate_harmonium_ore": "Deepslate Harmonium Ore",
   "block.crystechmod.nether_harmonium_ore": "Nether Harmonium Ore",
   "block.crystechmod.end_harmonium_ore": "End Harmonium Ore",
   "block.crystechmod.harmonium_block": "Harmonium Block",
-
   "block.crystechmod.gundanium_machine_core": "Gundanium Machine Core",
   "block.crystechmod.alythum_machine_core": "Alythum Machine Core",
   "block.crystechmod.vitric_machine_core": "Vitric Machine Core",
   "block.crystechmod.crystal_core_machine_core": "Crystal Core Machine Core",
-
   "block.crystechmod.tiberium_grinder": "Passive Tiberium Grinder",
   "block.crystechmod.tiberium_macerator": "Basic Tiberium Macerator",
   "block.crystechmod.alythum_tiberium_macerator": "Improved Tiberium Macerator",
   "block.crystechmod.vitric_tiberium_macerator": "Advanced Tiberium Macerator",
   "block.crystechmod.crystal_core_tiberium_macerator": "Ultimate Tiberium Macerator",
-
   "block.crystechmod.tiberium_infuser": "Basic Tiberium Infuser",
   "block.crystechmod.alythum_tiberium_infuser": "Improved Tiberium Infuser",
   "block.crystechmod.vitric_tiberium_infuser": "Advanced Infuser",
   "block.crystechmod.crystal_core_tiberium_infuser": "Ultimate Tiberium Infuser",
-
   "block.crystechmod.powered_kiln": "Basic Kiln",
   "block.crystechmod.alythum_kiln": "Improved Kiln",
   "block.crystechmod.vitric_kiln": "Advanced Kiln",
   "block.crystechmod.crystal_core_kiln": "Ultimate Kiln",
-
   "block.crystechmod.alloy_kiln": "Basic Alloy Kiln",
   "block.crystechmod.alythum_alloy_kiln": "Improved Alloy Kiln",
   "block.crystechmod.vitric_alloy_kiln": "Advanced Alloy Kiln",
   "block.crystechmod.crystal_core_alloy_kiln": "Ultimate Alloy Kiln",
-
   "block.crystechmod.vitricium_refinery": "Basic Vitricium Refinery",
   "block.crystechmod.alythum_vitricium_refinery": "Improved Vitricium Refinery",
   "block.crystechmod.vitric_vitricium_refinery": "Advanced Vitricium Refinery",
   "block.crystechmod.crystal_core_vitricium_refinery": "Ultimate Vitricium Refinery",
-
   "block.crystechmod.purple_core_block": "Purple Core Crystal Case",
   "block.crystechmod.red_core_block": "Red Core Crystal Case",
   "block.crystechmod.blue_core_block": "Blue Core Crystal Case",
@@ -1054,63 +956,62 @@
   "block.crystechmod.orange_core_block": "Orange Core Crystal Case",
 
 
+
   "enchantment.crystechmod.lightning_striker": "Lightning Striker",
-
-
-
-  "tootip.crystechmod.firestone_wall.tooltip": "For those times when things REALLY need to stay off your lawn.",
+  "enchantment.crystechmod.vitric_harvester": "Vitric Harvester",
 
 
 
   "effect.crystechmod.freeze": "Freeze",
   "effect.crystechmod.slimey_effect": "Slimey",
 
-  "entity.minecraft.villager.crystechmod.vitric_gatherer": "Vitric Gatherer",
+
+
+  "tootip.crystechmod.firestone_wall.tooltip": "For those times when things REALLY need to stay off your lawn.",
 
   "crystechmod.tooltip.liquid.amount.with.capacity": "%s / %s mB",
   "crystechmod.tooltip.liquid.amount": "%s mB",
+
+
+
+  "entity.minecraft.villager.crystechmod.vitric_gatherer": "Vitric Gatherer",
+
+
 
   "biome.crystechmod.ember_glow_forest": "Ember Glow Forest",
   "biome.crystechmod.amber_grove": "Amber Grove",
   "biome.crystechmod.embran_valley": "Embran Valley",
   "biome.crystechmod.hornsent_hills": "Hornsent Hills",
-
   "biome.crystechmod.calidian_marsh": "Calidian Marsh",
   "biome.crystechmod.grove_of_life": "Grove of Life",
   "biome.crystechmod.foothills": "Foothills",
   "biome.crystechmod.primal_jungle": "Primal Jungle",
-
   "biome.crystechmod.blue_and_yellow_zone_border": "Blue/Yellow Zone Border",
   "biome.crystechmod.burning_hills": "Burning Hills",
   "biome.crystechmod.ember_grove": "Ember Grove",
   "biome.crystechmod.inferno_peak": "Inferno Peak",
-
   "biome.crystechmod.untarnished_hills": "Untarnished Hills",
   "biome.crystechmod.evergold_expanse": "Evergold Expanse",
   "biome.crystechmod.valley_of_gold": "Valley of Gold",
-  "biome.crystechmod.dead_forest": "Dead Forest",
 
+  "biome.crystechmod.dead_forest": "Dead Forest",
   "biome.crystechmod.tiberian_desert": "Tiberian Desert",
   "biome.crystechmod.tiberian_desert_hills": "Tiberian Desert Hills",
   "biome.crystechmod.tiberian_highlands": "Tiberian Highlands",
   "biome.crystechmod.tiberian_badlands": "Tiberian Badlands",
-
   "biome.crystechmod.old_battlefield": "Old Battlefield",
   "biome.crystechmod.lost_steppes": "Lost Steppes",
   "biome.crystechmod.yellow_zone_shore": "Yellow Zone Shore",
   "biome.crystechmod.yellow_zone_stony_shore": "Yellow Zone Stony Shore",
   "biome.crystechmod.infected_river": "Infected River",
-
   "biome.crystechmod.infected_ocean": "Infected Ocean",
   "biome.crystechmod.dry_hills": "Dry Hills",
   "biome.crystechmod.dry_valley": "Dry Valley",
   "biome.crystechmod.forgotten_highlands": "Forgotten Highlands",
-
   "biome.crystechmod.red_and_yellow_zone_border": "Red/Yellow Zone Border",
   "biome.crystechmod.ruined_city": "Ruined City",
   "biome.crystechmod.tiberian_taiga": "Tiberian Taiga",
   "biome.crystechmod.tiberian_swamp": "Tiberian Swamp",
-
   "biome.crystechmod.tiberian_woods": "Tiberian Woods",
   "biome.crystechmod.crystal_fields": "Crystal Fields",
   "biome.crystechmod.tiberian_stone_fields": "Tiberian Stone Fields",
@@ -1118,26 +1019,25 @@
   "biome.crystechmod.wasteland": "Wasteland",
   "biome.crystechmod.wasteland_hills": "Wasteland Hills",
   "biome.crystechmod.scorched_hills": "Scorched Hills",
-
   "biome.crystechmod.red_and_blue_zone_border": "Red/Blue Zone Border",
   "biome.crystechmod.scorched_desert": "Scorched Desert",
   "biome.crystechmod.ashlands": "Ashlands",
   "biome.crystechmod.red_zone_shore": "Red Zone Shore",
-
   "biome.crystechmod.red_zone_river": "Red Zone River",
   "biome.crystechmod.old_war_zone": "Old War Zone",
   "biome.crystechmod.plagued_woods": "Plagued Woods",
-
   "biome.crystechmod.tiberian_wastes": "Tiberian Wastes",
   "biome.crystechmod.ichor_marsh": "Ichor Marsh",
-
   "biome.crystechmod.abyssal_marsh": "Abyssal Marsh",
   "biome.crystechmod.ichor_bog": "Ichor Bog",
   "biome.crystechmod.dead_zone": "Dead Zone",
+  "biome.crystechmod.dead_plains": "Dead Plains",
+  "biome.crystechmod.firestorm_plains": "Firestorm Plains",
+  "biome.crystechmod.brooding_lands": "Brooding Lands",
+  "biome.crystechmod.crystalline_hills": "Crystalline Hills",
+  "biome.crystechmod.crystalline_plateau": "Crystalline Plateau",
 
 
-
-  "enchantment.crystechmod.vitric_harvester": "Vitric Harvester",
 
   "sounds.crystechmod.chime": "Alert Chime",
   "sounds.crystechmod.sound_block_break": "Sound Block Broken",
@@ -1145,6 +1045,8 @@
   "sounds.crystechmod.sound_block_hit": "Sound Block Hit",
   "sounds.crystechmod.sound_block_place": "Sound Block Placed",
   "sounds.crystechmod.sound_block_step": "Sound Block Stepped On",
+
+
 
   "fluid_type.crystechmod.tiberium_water_fluid": "Tiberium Plagued Water",
   "fluid_type.crystechmod.molten_tiberium_fluid": "Molten Riparius Tiberium",

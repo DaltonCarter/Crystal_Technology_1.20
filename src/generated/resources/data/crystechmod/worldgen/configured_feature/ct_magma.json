@@ -22,7 +22,9 @@
       "type": "minecraft:matching_blocks",
       "blocks": [
         "minecraft:dirt",
-        "minecraft:grass_block"
+        "minecraft:grass_block",
+        "crystechmod:seeded_red_zone_dirt",
+        "crystechmod:red_zone_dirt"
       ]
     }
   }

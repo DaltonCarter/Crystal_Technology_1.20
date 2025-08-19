@@ -429,7 +429,7 @@ public class ModConfiguredFeatures {
         register(context, CT_ABOREUS_CRYSTAL_KEY, Feature.FOREST_ROCK, new BlockStateConfiguration(ModBlocks.ABOREUS_CRYSTAL.get().defaultBlockState()));
         
         //Discs:
-        register(context, CT_MAGMA_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.MAGMA_BLOCK), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK)), UniformInt.of(1, 3), 1));
+        register(context, CT_MAGMA_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.MAGMA_BLOCK), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.SEEDED_RED_ZONE_DIRT.get(), ModBlocks.RED_ZONE_DIRT.get())), UniformInt.of(1, 3), 1));
         register(context, CT_GLOWSTONE_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.GLOWSTONE), BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK)), UniformInt.of(1, 2), 1));
         register(context, CT_CLAY_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.CLAY), BlockPredicate.matchesBlocks(List.of(ModBlocks.RED_ZONE_DIRT.get(), ModBlocks.SEEDED_RED_ZONE_DIRT.get(), ModBlocks.RZ_SANDSTONE.get(), ModBlocks.RED_ZONE_SAND.get(), ModBlocks.YELLOW_ZONE_SAND.get(), ModBlocks.SEEDED_YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.YELLOW_ZONE_CRACKED_DIRT.get(), ModBlocks.YZ_SANDSTONE.get(), Blocks.GRAVEL)), UniformInt.of(2, 6), 2));
         register(context, CT_VIT_WATER_KEY, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.TIBERIUM_WATER_BLOCK.get()), BlockPredicate.matchesBlocks(List.of(Blocks.WATER)), UniformInt.of(8, 8), 4));

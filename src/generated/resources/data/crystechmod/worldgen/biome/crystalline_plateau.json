@@ -1,20 +1,20 @@
 {
   "carvers": {
     "air": [
-      "crystechmod:vitric_yz_cave",
-      "crystechmod:vitric_yz_cave_extra_underground",
-      "crystechmod:vitric_yz_canyon"
+      "crystechmod:vitric_rz_cave",
+      "crystechmod:vitric_rz_cave_extra_underground",
+      "crystechmod:vitric_rz_canyon"
     ]
   },
-  "downfall": 0.0,
+  "downfall": 0.3,
   "effects": {
-    "fog_color": 16770928,
-    "foliage_color": 7106108,
-    "grass_color": 7106108,
+    "fog_color": 3488327,
+    "foliage_color": 3488327,
+    "grass_color": 3488327,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
-      "sound": "crystechmod:vitric_ambient",
+      "sound": "crystechmod:red_zone_ambient",
       "tick_delay": 6000
     },
     "music": {
@@ -23,9 +23,9 @@
       "replace_current_music": false,
       "sound": "crystechmod:vitric_expanse_music"
     },
-    "sky_color": 7254527,
-    "water_color": 7254527,
-    "water_fog_color": 7254527
+    "sky_color": 3488327,
+    "water_color": 3488327,
+    "water_fog_color": 3488327
   },
   "features": [
     [],
@@ -37,28 +37,31 @@
       "crystechmod:ct_molten_riparius_underground_lake_placed",
       "crystechmod:ct_molten_riparius_surface_lake_placed",
       "crystechmod:ct_molten_vinifera_underground_lake_placed",
-      "crystechmod:ct_molten_vinifera_surface_lake_placed"
+      "crystechmod:ct_molten_vinifera_surface_lake_placed",
+      "crystechmod:ct_molten_cruentus_underground_lake_placed",
+      "crystechmod:ct_molten_cruentus_surface_lake_placed",
+      "crystechmod:ct_molten_aboreus_underground_lake_placed",
+      "crystechmod:ct_molten_aboreus_surface_lake_placed"
     ],
     [
       "crystechmod:vitric_tiberium_geode_placed",
       "crystechmod:vitric_ichor_geode_placed",
       "crystechmod:vitric_amethyst_geode_placed",
       "crystechmod:ct_vit_water_placed",
-      "crystechmod:ct_tiberium_soil_placed"
+      "crystechmod:ct_tiberium_soil_placed",
+      "crystechmod:ct_ichor_soil_placed",
+      "crystechmod:ct_riparius_crystal_large_column_placed",
+      "crystechmod:ct_vinifera_crystal_large_column_placed"
     ],
     [
-      "minecraft:fossil_upper",
-      "minecraft:fossil_lower",
       "minecraft:monster_room",
       "minecraft:monster_room_deep"
     ],
-    [
-      "minecraft:desert_well"
-    ],
+    [],
     [],
     [
-      "crystechmod:crystech_yellow_zone_dirt_placed",
-      "crystechmod:crystech_seeded_yellow_zone_dirt_placed",
+      "crystechmod:crystech_red_zone_dirt_placed",
+      "crystechmod:crystech_seeded_red_zone_dirt_placed",
       "crystechmod:crystech_infested_granite_upper_placed",
       "crystechmod:crystech_infested_granite_lower_placed",
       "crystechmod:crystech_infested_diorite_upper_placed",
@@ -67,6 +70,8 @@
       "crystechmod:crystech_infested_andesite_lower_placed",
       "crystechmod:ct_riparius_stone_clump_placed",
       "crystechmod:ct_vinifera_stone_clump_placed",
+      "crystechmod:ct_cruentus_stone_clump_placed",
+      "crystechmod:ct_aboreus_stone_clump_placed",
       "crystechmod:crystech_vitric_deepslate_placed",
       "minecraft:ore_tuff",
       "minecraft:ore_coal_upper",
@@ -94,7 +99,7 @@
       "crystechmod:crystech_aeries_ores_placed",
       "crystechmod:crystech_enigma_ores_placed",
       "crystechmod:crystech_qualrite_ores_placed",
-      "crystechmod:ct_yellow_zone_sand_placed",
+      "crystechmod:ct_red_zone_sand_placed",
       "crystechmod:ct_clay_placed",
       "minecraft:disk_clay",
       "minecraft:disk_gravel"
@@ -103,18 +108,18 @@
     [],
     [
       "minecraft:glow_lichen",
-      "minecraft:patch_dead_bush_2",
-      "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal",
-      "minecraft:patch_sugar_cane_desert",
-      "minecraft:patch_pumpkin",
-      "minecraft:patch_cactus_desert"
+      "minecraft:patch_tall_grass_2",
+      "minecraft:trees_plains",
+      "minecraft:flower_plains",
+      "minecraft:patch_grass_plain",
+      "crystechmod:vitric_bloom_placed",
+      "crystechmod:vitric_rose_placed"
     ],
     [
       "minecraft:freeze_top_layer"
     ]
   ],
-  "has_precipitation": false,
+  "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {
     "ambient": [
@@ -123,79 +128,12 @@
         "maxCount": 8,
         "minCount": 8,
         "weight": 10
-      },
-      {
-        "type": "minecraft:bat",
-        "maxCount": 8,
-        "minCount": 8,
-        "weight": 10
       }
     ],
     "axolotls": [],
-    "creature": [
-      {
-        "type": "minecraft:rabbit",
-        "maxCount": 3,
-        "minCount": 2,
-        "weight": 4
-      }
-    ],
+    "creature": [],
     "misc": [],
     "monster": [
-      {
-        "type": "minecraft:spider",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:zombie",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 19
-      },
-      {
-        "type": "minecraft:zombie_villager",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 1
-      },
-      {
-        "type": "minecraft:skeleton",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:creeper",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:slime",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:enderman",
-        "maxCount": 4,
-        "minCount": 1,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:witch",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
-      },
-      {
-        "type": "minecraft:husk",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 80
-      },
       {
         "type": "minecraft:spider",
         "maxCount": 4,
@@ -251,16 +189,10 @@
         "maxCount": 6,
         "minCount": 4,
         "weight": 10
-      },
-      {
-        "type": "minecraft:glow_squid",
-        "maxCount": 6,
-        "minCount": 4,
-        "weight": 10
       }
     ],
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 2.0
+  "temperature": 0.1
 }
