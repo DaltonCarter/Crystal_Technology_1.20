@@ -4,8 +4,13 @@
   "_comment": " This biome tag can specify the biome directly. Or specify another biome tag by starting with # ",
   "values": [
 
-    "crystechmod:amber_grove"
-
+    "crystechmod:grove_of_life",
+    "crystechmod:foothills",
+    "crystechmod:burning_hills",
+    "crystechmod:ember_grove",
+    "crystechmod:untarnished_hills",
+    "crystechmod:evergold_expanse",
+    "crystechmod:valley_of_gold"
 
   ]
 }
