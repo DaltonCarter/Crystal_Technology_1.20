@@ -5,7 +5,7 @@ import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.effect.ModEffects;
 import com.CartersDev.crystechmod.enchantment.ModEnchantments;
 import com.CartersDev.crystechmod.entity.ModEntities;
-import com.CartersDev.crystechmod.entity.client.RhinoRenderer;
+import com.CartersDev.crystechmod.entity.client.*;
 import com.CartersDev.crystechmod.fluid.ModFluidTypes;
 import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModCreativeModTabs;
@@ -52,6 +52,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
@@ -72,6 +73,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import org.slf4j.Logger;
 import terrablender.api.SurfaceRuleManager;
+
+import java.util.function.BooleanSupplier;
 
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -189,8 +192,12 @@ public class CrystalTech {
             Sheets.addWoodType(ModWoodTypes.DEAD);
             Sheets.addWoodType(ModWoodTypes.MARIKA_OAK);
 
+///         Entities:
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
+            EntityRenderers.register(ModEntities.VITRIC_SHEEP.get(), m -> new VitricSheepRenderer(m, new VitricSheepModel<>(m.bakeLayer(ModModelLayers.VITRIC_SHEEP_LAYER)), new VitricSheepFurModel(m.bakeLayer(ModModelLayers.VITRIC_SHEEP_FUR_LAYER)), 0.7F));
 
+
+///         Menu Screens:
             MenuScreens.register(ModMenuTypes.TIBERIUM_GRINDER_MENU.get(), TiberiumGrinderScreen::new);
 
             MenuScreens.register(ModMenuTypes.TIBERIUM_MACERATOR_MENU.get(), TiberiumMaceratorScreen::new);
@@ -224,7 +231,7 @@ public class CrystalTech {
             MenuScreens.register(ModMenuTypes.VITRIC_VITRICIUM_REFINERY_MENU.get(), VitricVitriciumRefineryScreen::new);
             MenuScreens.register(ModMenuTypes.CRYSTAL_CORE_VITRICIUM_REFINERY_MENU.get(), CrystalCoreVitriciumRefineryScreen::new);
 
-            //Tiberium
+///         Tiberium
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_TIBERIUM_CROP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_TIBERIUM_CROP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.RED_TIBERIUM_CROP.get(), RenderType.cutout());

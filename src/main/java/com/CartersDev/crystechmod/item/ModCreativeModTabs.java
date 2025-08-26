@@ -213,6 +213,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     .displayItems((itemDisplayParameters, output) -> {
 
                         output.accept(ModItems.RHINO_SPAWN_EGG.get());
+                        output.accept(ModItems.VITRIC_SHEEP_SPAWN_EGG.get());
 
                     })
                     .build());

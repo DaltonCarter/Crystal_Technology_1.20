@@ -35,23 +35,24 @@ import java.util.stream.Stream;
 
 public class ModDimensions {
 
+///   The below was taken from vanilla and was left here in case I ever need to tweak, or find a better way of populating the Biomes.
 
-    private static final Climate.Parameter FULL_RANGE = Climate.Parameter.span(-1.0F, 1.0F);
-    private static final Climate.Parameter[] temperatures = new Climate.Parameter[]{Climate.Parameter.span(-1.0F, -0.45F), Climate.Parameter.span(-0.45F, -0.15F), Climate.Parameter.span(-0.15F, 0.2F), Climate.Parameter.span(0.2F, 0.55F), Climate.Parameter.span(0.55F, 1.0F)};
-    private static final Climate.Parameter[] humidities = new Climate.Parameter[]{Climate.Parameter.span(-1.0F, -0.35F), Climate.Parameter.span(-0.35F, -0.1F), Climate.Parameter.span(-0.1F, 0.1F), Climate.Parameter.span(0.1F, 0.3F), Climate.Parameter.span(0.3F, 1.0F)};
-    private static final Climate.Parameter[] erosions = new Climate.Parameter[]{Climate.Parameter.span(-1.0F, -0.78F), Climate.Parameter.span(-0.78F, -0.375F), Climate.Parameter.span(-0.375F, -0.2225F), Climate.Parameter.span(-0.2225F, 0.05F), Climate.Parameter.span(0.05F, 0.45F), Climate.Parameter.span(0.45F, 0.55F), Climate.Parameter.span(0.55F, 1.0F)};
-    private static final Climate.Parameter FROZEN_RANGE = temperatures[0];
-    private static final Climate.Parameter UNFROZEN_RANGE = Climate.Parameter.span(temperatures[1], temperatures[4]);
-    private static final Climate.Parameter mushroomFieldsContinentalness = Climate.Parameter.span(-1.2F, -1.05F);
-    private static final Climate.Parameter deepOceanContinentalness = Climate.Parameter.span(-1.05F, -0.455F);
-    private static final Climate.Parameter oceanContinentalness = Climate.Parameter.span(-0.455F, -0.19F);
-    private static final Climate.Parameter coastContinentalness = Climate.Parameter.span(-0.19F, -0.11F);
-    private static final Climate.Parameter inlandContinentalness = Climate.Parameter.span(-0.11F, 0.55F);
-    private static final Climate.Parameter nearInlandContinentalness = Climate.Parameter.span(-0.11F, 0.03F);
-    private static final Climate.Parameter midInlandContinentalness = Climate.Parameter.span(0.03F, 0.3F);
-    public static final Climate.Parameter farInlandContinentalness = Climate.Parameter.span(0.3F, 1.0F);
+//    private static final Climate.Parameter FULL_RANGE = Climate.Parameter.span(-1.0F, 1.0F);
+//    private static final Climate.Parameter[] temperatures = new Climate.Parameter[]{Climate.Parameter.span(-1.0F, -0.45F), Climate.Parameter.span(-0.45F, -0.15F), Climate.Parameter.span(-0.15F, 0.2F), Climate.Parameter.span(0.2F, 0.55F), Climate.Parameter.span(0.55F, 1.0F)};
+//    private static final Climate.Parameter[] humidities = new Climate.Parameter[]{Climate.Parameter.span(-1.0F, -0.35F), Climate.Parameter.span(-0.35F, -0.1F), Climate.Parameter.span(-0.1F, 0.1F), Climate.Parameter.span(0.1F, 0.3F), Climate.Parameter.span(0.3F, 1.0F)};
+//    private static final Climate.Parameter[] erosions = new Climate.Parameter[]{Climate.Parameter.span(-1.0F, -0.78F), Climate.Parameter.span(-0.78F, -0.375F), Climate.Parameter.span(-0.375F, -0.2225F), Climate.Parameter.span(-0.2225F, 0.05F), Climate.Parameter.span(0.05F, 0.45F), Climate.Parameter.span(0.45F, 0.55F), Climate.Parameter.span(0.55F, 1.0F)};
+//    private static final Climate.Parameter FROZEN_RANGE = temperatures[0];
+//    private static final Climate.Parameter UNFROZEN_RANGE = Climate.Parameter.span(temperatures[1], temperatures[4]);
+//    private static final Climate.Parameter mushroomFieldsContinentalness = Climate.Parameter.span(-1.2F, -1.05F);
+//    private static final Climate.Parameter deepOceanContinentalness = Climate.Parameter.span(-1.05F, -0.455F);
+//    private static final Climate.Parameter oceanContinentalness = Climate.Parameter.span(-0.455F, -0.19F);
+//    private static final Climate.Parameter coastContinentalness = Climate.Parameter.span(-0.19F, -0.11F);
+//    private static final Climate.Parameter inlandContinentalness = Climate.Parameter.span(-0.11F, 0.55F);
+//    private static final Climate.Parameter nearInlandContinentalness = Climate.Parameter.span(-0.11F, 0.03F);
+//    private static final Climate.Parameter midInlandContinentalness = Climate.Parameter.span(0.03F, 0.3F);
+//    public static final Climate.Parameter farInlandContinentalness = Climate.Parameter.span(0.3F, 1.0F);
 
-
+////-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
     public static final ResourceKey<LevelStem> VITRIC_EXPANSE_KEY = ResourceKey.create(Registries.LEVEL_STEM,
@@ -82,7 +83,7 @@ public class ModDimensions {
                 BlockTags.INFINIBURN_OVERWORLD, // infiniburn
                 BuiltinDimensionTypes.OVERWORLD_EFFECTS, // effectsLocation
                 0.0f, // ambientLight
-                new DimensionType.MonsterSettings(true, false, ConstantInt.of(0), 0)));
+                new DimensionType.MonsterSettings(true, false, ConstantInt.of(8), 0)));
     }
 
     public static void bootstrapStem(BootstapContext<LevelStem> context) {
@@ -91,7 +92,7 @@ public class ModDimensions {
         HolderGetter<NoiseGeneratorSettings> noiseGenSettings = context.lookup(Registries.NOISE_SETTINGS);
 
 
-    //Flat World Generation:
+    ///  Flat World Generation:
         HolderGetter<StructureSet> structures = context.lookup(Registries.STRUCTURE_SET);
         HolderGetter<PlacedFeature> placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         HolderSet.Direct<StructureSet> direct = HolderSet.direct(ImmutableSet.of(BuiltinStructureSets.VILLAGES).stream()
@@ -116,16 +117,22 @@ public class ModDimensions {
 //        );
 
 
-        //End of Flat World Generation
+///     End of Flat World Generation
 
 
 
+///     Single Chunk Gen
 
         NoiseBasedChunkGenerator wrappedChunkGenerator = new NoiseBasedChunkGenerator(
                 new FixedBiomeSource(biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_DESERT)),
                 noiseGenSettings.getOrThrow(NoiseGeneratorSettings.OVERWORLD));
 
+///    End Single Chunk Gen
 
+
+
+
+///       Overworld Like Generation
 
         NoiseBasedChunkGenerator noiseBasedChunkGenerator = new NoiseBasedChunkGenerator(
 
@@ -274,14 +281,6 @@ public class ModDimensions {
                                 Pair.of(Climate.parameters(1.0F, -0.6F, 0.280F, -0.6777F, 0.0F, 0.4655F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.CRYSTALLINE_HILLS)),
                                 Pair.of(Climate.parameters(0.8F, 0.1F, 0.570F, -0.4555F, 0.0F, 0.8776F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.CRYSTALLINE_HILLS
                                 ))
-
-
-
-
-
-
-
-
 
                         ))),
                 noiseGenSettings.getOrThrow(NoiseGeneratorSettings.OVERWORLD));

@@ -434,6 +434,10 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
             () -> new ForgeSpawnEggItem(ModEntities.RHINO, 0x7e9680, 0xc5d1c5,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> VITRIC_SHEEP_SPAWN_EGG = ITEMS.register("vitric_sheep_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.VITRIC_SHEEP, 0x31772C, 0xFDFFFC ,
+                    new Item.Properties()));
+
 
     //End of Spawn Eggs
 

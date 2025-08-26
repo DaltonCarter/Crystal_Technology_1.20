@@ -21,6 +21,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -2826,7 +2827,8 @@ public class ModBlocks {
                     .noOcclusion().noCollission()));
 
     public static final RegistryObject<LiquidBlock> TIBERIUM_WATER_BLOCK = BLOCKS.register("tiberium_water_block",
-            () -> new LiquidBlock(ModFluids.SOURCE_TIBERIUM_WATER, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable().liquid()));
+            () -> new LiquidBlock(ModFluids.SOURCE_TIBERIUM_WATER, BlockBehaviour.Properties.copy(Blocks.WATER).replaceable()
+                    .noCollission().strength(100.0F).pushReaction(PushReaction.DESTROY).noLootTable().liquid().sound(SoundType.EMPTY)));
 
     public static final RegistryObject<LiquidBlock> MOLTEN_TIBERIUM_BLOCK = BLOCKS.register("molten_tiberium_block",
             () -> new MoltenTiberiumBlock(ModFluids.SOURCE_MOLTEN_TIBERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)

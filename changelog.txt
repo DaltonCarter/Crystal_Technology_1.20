@@ -552,6 +552,8 @@ Posted By: Dalton Carter
 -Updated Crystal Core Tile/pillar textures
 -Vitric Expanse Dimension now has all biomes!
 -Added Core Crystals, and Core Crystal Blocks
+-Added Vitric Sheep Passive Mob
+-Tweaked Dimension settings so vanilla hostile mobs could spawn correctly dispite the Tiberium Glow
 
 
 

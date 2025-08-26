@@ -455,7 +455,7 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
     spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.FROG, 10, 2, 5));
     spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, new MobSpawnSettings.SpawnerData(EntityType.TROPICAL_FISH, 25, 8, 8));
 
-
+    BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
     BiomeGenerationSettings.Builder biomeBuilder =
             new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
@@ -496,6 +496,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 10, 2, 5));
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.RABBIT, 10, 2, 5));
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
+
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
@@ -540,6 +542,7 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
         BiomeDefaultFeatures.farmAnimals(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.LLAMA, 5, 2, 5));
 
@@ -587,11 +590,10 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
         BiomeDefaultFeatures.baseJungleSpawns(spawnBuilder);
 
-
-
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.OCELOT, 2, 2, 5));
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.PANDA, 1, 2, 5));
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.PARROT, 20, 2, 5));
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
@@ -632,8 +634,8 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
     public static Biome blueAndYellowZoneBorder(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
-
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
@@ -1010,6 +1012,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
         BiomeDefaultFeatures.farmAnimals(spawnBuilder);
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
+
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
@@ -1061,7 +1066,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
         BiomeDefaultFeatures.desertSpawns(spawnBuilder);
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1107,7 +1114,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
         BiomeDefaultFeatures.desertSpawns(spawnBuilder);
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1153,7 +1162,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1201,7 +1212,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1250,7 +1263,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1301,7 +1316,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1351,7 +1368,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1395,7 +1414,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1447,7 +1468,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.DROWNED, 1, 1, 1));
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1542,7 +1565,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1588,7 +1613,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER))
                         .addCarver(GenerationStep.Carving.AIR, ModCarvers.VITRIC_YZ_CANYON);
@@ -1636,7 +1663,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1686,7 +1715,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1739,7 +1770,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1785,7 +1818,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1830,7 +1865,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1883,7 +1920,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -1935,7 +1974,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.FROG, 10, 2, 5));
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, new MobSpawnSettings.SpawnerData(EntityType.TROPICAL_FISH, 25, 8, 8));
 
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
@@ -1985,7 +2026,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
     public static Biome tiberianWoods(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -2037,7 +2080,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -2086,7 +2131,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -2134,7 +2181,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.DROWNED, 1, 1, 1));
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -2183,7 +2232,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
         BiomeDefaultFeatures.desertSpawns(spawnBuilder);
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -2232,7 +2283,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
         BiomeDefaultFeatures.desertSpawns(spawnBuilder);
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -2278,7 +2331,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -2333,7 +2388,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -2389,7 +2446,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
 
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -2442,7 +2501,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -2493,7 +2554,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
     public static Biome plaguedWoods(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -2550,7 +2613,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
         spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SLIME, 1, 1, 1));
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
 
 
         BiomeGenerationSettings.Builder biomeBuilder =
@@ -2607,7 +2672,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
         spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SLIME, 1, 1, 1));
 
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
@@ -2664,7 +2731,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
         spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SLIME, 1, 1, 1));
 
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
@@ -2720,7 +2789,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
         spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SLIME, 1, 1, 1));
 
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
@@ -2772,7 +2843,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
         spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SLIME, 1, 1, 1));
 
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
@@ -2823,7 +2896,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         BiomeDefaultFeatures.plainsSpawns(spawnBuilder);
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
 
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
@@ -2872,6 +2947,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.plainsSpawns(spawnBuilder);
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
+
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -2920,7 +2998,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
     public static Biome broodingLands(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -2967,7 +3047,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
     public static Biome crystallineHills(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -3015,7 +3097,9 @@ public static Biome calidianMarsh(BootstapContext<Biome> context) {
     public static Biome crystallinePlateau(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.monsters(spawnBuilder, 100, 25, 100, false);
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.VITRIC_SHEEP.get(), 20, 4, 4));
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 

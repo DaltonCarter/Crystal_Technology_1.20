@@ -22,6 +22,8 @@ import com.CartersDev.crystechmod.block.entity.renderer.poweredkiln.VitricKilnBl
 import com.CartersDev.crystechmod.block.entity.renderer.poweredkiln.CrystalCoreKilnBlockEntityRenderer;
 import com.CartersDev.crystechmod.entity.client.ModModelLayers;
 import com.CartersDev.crystechmod.entity.client.RhinoModel;
+import com.CartersDev.crystechmod.entity.client.VitricSheepFurModel;
+import com.CartersDev.crystechmod.entity.client.VitricSheepModel;
 import com.CartersDev.crystechmod.particle.ModParticles;
 import com.CartersDev.crystechmod.particle.custom.EmberParticles;
 import com.CartersDev.crystechmod.particle.custom.MarikaParticles;
@@ -41,7 +43,11 @@ public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayers.RHINO_LAYER, RhinoModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.VITRIC_SHEEP_LAYER, VitricSheepModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.VITRIC_SHEEP_FUR_LAYER, VitricSheepFurModel::createFurLayer);
     }
+
+
 
     @SubscribeEvent
 public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {

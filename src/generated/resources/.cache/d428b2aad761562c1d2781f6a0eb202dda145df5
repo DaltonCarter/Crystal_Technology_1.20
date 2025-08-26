@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-30T19:09:22.0256955	Item Models: crystechmod
+// 1.20.1	2025-08-25T17:31:06.5230414	Item Models: crystechmod
 7d9fe5e88433390f9cd29dab7e515bddd3fbdf4b assets/crystechmod/models/item/aboreus_crystal_slab.json
 0e376de85f99a387d23f7130ff296ce0b5fe876e assets/crystechmod/models/item/aboreus_crystal_stairs.json
 2ced509a911b88c37b68b1a1278f10fc986798c4 assets/crystechmod/models/item/aboreus_crystal_wall.json
@@ -679,6 +679,7 @@ a039969901458750d6a96395083f53367de701b6 assets/crystechmod/models/item/vinifera
 b1192ad013959aff3b0968c0a301e6a059467281 assets/crystechmod/models/item/vitric_iron_plating_slab.json
 a2c7f827c49500450e22d6ec59c81e56d1a285e7 assets/crystechmod/models/item/vitric_iron_plating_stairs.json
 cd89da5c34f162a4610b40c18d7028bff7f3dbe8 assets/crystechmod/models/item/vitric_iron_plating_wall.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/crystechmod/models/item/vitric_sheep_spawn_egg.json
 cdd31d934f5180f44c93bab70e0a761929573895 assets/crystechmod/models/item/white_tibercrete_brick_slab.json
 7aed62aaf77a82d780b7ec1f278ad1a9c676bf01 assets/crystechmod/models/item/white_tibercrete_brick_stairs.json
 001d4fcf795b98ad45e6e5dccf56120cb30dd36a assets/crystechmod/models/item/white_tibercrete_brick_wall.json
