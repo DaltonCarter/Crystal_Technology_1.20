@@ -603,6 +603,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         //Spawn Eggs:
         withExistingParent(ModItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.VITRIC_SHEEP_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+//        withExistingParent(ModItems.VITRIC_COW_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         //Signs:
         simpleItem(ModItems.PLAGUED_SIGN);

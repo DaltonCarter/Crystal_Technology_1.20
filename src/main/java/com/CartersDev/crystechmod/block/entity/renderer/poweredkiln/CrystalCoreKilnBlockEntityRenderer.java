@@ -1,8 +1,7 @@
 package com.CartersDev.crystechmod.block.entity.renderer.poweredkiln;
 
-import com.CartersDev.crystechmod.block.custom.PoweredKilnBlock;
+import com.CartersDev.crystechmod.block.custom.machines.PoweredKilnBlock;
 import com.CartersDev.crystechmod.block.entity.poweredkiln.CrystalCoreKilnBlockEntity;
-import com.CartersDev.crystechmod.block.entity.poweredkiln.VitricKilnBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import net.minecraft.client.Minecraft;

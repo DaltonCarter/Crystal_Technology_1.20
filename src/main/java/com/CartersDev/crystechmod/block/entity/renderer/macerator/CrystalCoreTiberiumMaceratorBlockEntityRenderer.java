@@ -1,8 +1,7 @@
 package com.CartersDev.crystechmod.block.entity.renderer.macerator;
 
-import com.CartersDev.crystechmod.block.custom.TiberiumMaceratorBlock;
+import com.CartersDev.crystechmod.block.custom.machines.TiberiumMaceratorBlock;
 import com.CartersDev.crystechmod.block.entity.macerator.CrystalCoreTiberiumMaceratorBlockEntity;
-import com.CartersDev.crystechmod.block.entity.macerator.TiberiumMaceratorBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import net.minecraft.client.Minecraft;

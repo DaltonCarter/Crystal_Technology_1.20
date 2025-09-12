@@ -1,7 +1,6 @@
 package com.CartersDev.crystechmod.item.custom;
 
-import com.CartersDev.crystechmod.block.ModBlocks;
-import com.CartersDev.crystechmod.block.custom.SaberCornCropBlock;
+import com.CartersDev.crystechmod.block.custom.plants.crops.SaberCornCropBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.ItemNameBlockItem;

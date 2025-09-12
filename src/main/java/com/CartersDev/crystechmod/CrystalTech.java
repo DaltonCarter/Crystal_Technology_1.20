@@ -6,6 +6,10 @@ import com.CartersDev.crystechmod.effect.ModEffects;
 import com.CartersDev.crystechmod.enchantment.ModEnchantments;
 import com.CartersDev.crystechmod.entity.ModEntities;
 import com.CartersDev.crystechmod.entity.client.*;
+import com.CartersDev.crystechmod.entity.client.renderer.rhino.RhinoRenderer;
+import com.CartersDev.crystechmod.entity.client.renderer.vitricSheep.VitricSheepRenderer;
+import com.CartersDev.crystechmod.entity.client.vitricSheep.VitricSheepFurModel;
+import com.CartersDev.crystechmod.entity.client.vitricSheep.VitricSheepModel;
 import com.CartersDev.crystechmod.fluid.ModFluidTypes;
 import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModCreativeModTabs;
@@ -25,13 +29,10 @@ import com.CartersDev.crystechmod.screen.infuserScreen.AlythumTiberiumInfuserScr
 import com.CartersDev.crystechmod.screen.infuserScreen.CrystalCoreTiberiumInfuserScreen;
 import com.CartersDev.crystechmod.screen.infuserScreen.TiberiumInfuserScreen;
 import com.CartersDev.crystechmod.screen.infuserScreen.VitricTiberiumInfuserScreen;
-import com.CartersDev.crystechmod.screen.maceratorMenu.AlythumTiberiumMaceratorMenu;
 import com.CartersDev.crystechmod.screen.maceratorScreen.AlythumTiberiumMaceratorScreen;
 import com.CartersDev.crystechmod.screen.maceratorScreen.CrystalCoreTiberiumMaceratorScreen;
 import com.CartersDev.crystechmod.screen.maceratorScreen.TiberiumMaceratorScreen;
 import com.CartersDev.crystechmod.screen.maceratorScreen.VitricTiberiumMaceratorScreen;
-import com.CartersDev.crystechmod.screen.poweredKilnMenu.CrystalCoreKilnMenu;
-import com.CartersDev.crystechmod.screen.poweredKilnMenu.VitricKilnMenu;
 import com.CartersDev.crystechmod.screen.poweredKilnScreen.AlythumKilnScreen;
 import com.CartersDev.crystechmod.screen.poweredKilnScreen.CrystalCoreKilnScreen;
 import com.CartersDev.crystechmod.screen.poweredKilnScreen.PoweredKilnScreen;
@@ -52,7 +53,6 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
@@ -73,8 +73,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import org.slf4j.Logger;
 import terrablender.api.SurfaceRuleManager;
-
-import java.util.function.BooleanSupplier;
 
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -195,6 +193,7 @@ public class CrystalTech {
 ///         Entities:
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
             EntityRenderers.register(ModEntities.VITRIC_SHEEP.get(), m -> new VitricSheepRenderer(m, new VitricSheepModel<>(m.bakeLayer(ModModelLayers.VITRIC_SHEEP_LAYER)), new VitricSheepFurModel(m.bakeLayer(ModModelLayers.VITRIC_SHEEP_FUR_LAYER)), 0.7F));
+//            EntityRenderers.register(ModEntities.VITRIC_COW.get(), VitricCowRenderer::new);
 
 
 ///         Menu Screens:

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:blue_core_crystal"
+    },
+    "C": {
+      "item": "crystechmod:lg_core_ingot"
+    },
+    "G": {
+      "item": "crystechmod:green_core_crystal"
+    },
+    "O": {
+      "item": "crystechmod:orange_core_crystal"
+    },
+    "P": {
+      "item": "crystechmod:purple_core_crystal"
+    },
+    "R": {
+      "item": "crystechmod:red_core_crystal"
+    },
+    "Y": {
+      "item": "crystechmod:yellow_core_crystal"
+    }
+  },
+  "pattern": [
+    "OCY",
+    "PCB",
+    "GCR"
+  ],
+  "result": {
+    "item": "crystechmod:fools_crystal_core"
+  },
+  "show_notification": true
+}

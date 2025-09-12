@@ -1,7 +1,6 @@
 package com.CartersDev.crystechmod.entity.custom;
 
 import com.CartersDev.crystechmod.CrystalTech;
-import com.CartersDev.crystechmod.entity.ModBuiltInLootTables;
 import com.CartersDev.crystechmod.entity.ModEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -13,7 +12,6 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
-import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.Level;
@@ -129,7 +127,7 @@ public class VitricSheepEntity extends Sheep {
         @Nullable
         public com.CartersDev.crystechmod.entity.custom.VitricSheepEntity getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
         if(!(pOtherParent instanceof VitricSheepEntity otherParent)){
-            CrystalTech.LOGGER.error("WARNING: Genetic instability detected! ABORTING!");
+            CrystalTech.LOGGER.error("WARNING: Genetic instability detected! CANCELING!");
             return null;
         }
         VitricSheepEntity baby = ModEntities.VITRIC_SHEEP.get().create(pLevel);

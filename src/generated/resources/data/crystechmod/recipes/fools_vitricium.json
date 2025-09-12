@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:tiberium_blue"
+    },
+    "C": {
+      "item": "crystechmod:lg_core_ingot"
+    },
+    "G": {
+      "item": "crystechmod:tiberium"
+    },
+    "P": {
+      "item": "crystechmod:tiberium_purple"
+    },
+    "R": {
+      "item": "crystechmod:tiberium_red"
+    }
+  },
+  "pattern": [
+    "CGC",
+    "PCB",
+    "CRC"
+  ],
+  "result": {
+    "item": "crystechmod:fools_vitricium"
+  },
+  "show_notification": true
+}

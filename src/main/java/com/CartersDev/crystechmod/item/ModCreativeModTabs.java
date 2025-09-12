@@ -26,6 +26,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
 //                    output.accept(ModBlocks.DOOR_CON.get());
 
 
+
                     output.accept(ModItems.PURPLE_CORE_CRYSTAL.get());
                     output.accept(ModBlocks.PURPLE_CORE_BLOCK.get());
                     output.accept(ModItems.RED_CORE_CRYSTAL.get());
@@ -214,6 +215,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
 
                         output.accept(ModItems.RHINO_SPAWN_EGG.get());
                         output.accept(ModItems.VITRIC_SHEEP_SPAWN_EGG.get());
+//                        output.accept(ModItems.VITRIC_COW_SPAWN_EGG.get());
 
                     })
                     .build());
@@ -263,6 +265,12 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.ALYTHUM_VITRICIUM_REFINERY.get());
                         output.accept(ModBlocks.VITRIC_VITRICIUM_REFINERY.get());
                         output.accept(ModBlocks.CRYSTAL_CORE_VITRICIUM_REFINERY.get());
+
+                        output.accept(ModBlocks.VITRIC_TRANSPORTER.get());
+                        output.accept(ModBlocks.VITRIC_TRANSPORTER_SIDE1.get());
+                        output.accept(ModBlocks.VITRIC_TRANSPORTER_SIDE2.get());
+
+
 
                     })
                     .build());

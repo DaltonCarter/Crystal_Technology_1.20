@@ -2,7 +2,24 @@ package com.CartersDev.crystechmod.block;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.custom.*;
-import com.CartersDev.crystechmod.block.custom.terrainBlocks.VitricSandBlock;
+import com.CartersDev.crystechmod.block.custom.fluid.*;
+import com.CartersDev.crystechmod.block.custom.functional.*;
+import com.CartersDev.crystechmod.block.custom.machines.*;
+import com.CartersDev.crystechmod.block.custom.VitricTransporterBlock;
+import com.CartersDev.crystechmod.block.custom.machines.portal.VitricPortalBlock;
+import com.CartersDev.crystechmod.block.custom.plants.crops.HeimBerryCropBlock;
+import com.CartersDev.crystechmod.block.custom.plants.crops.HelFruitCropBlock;
+import com.CartersDev.crystechmod.block.custom.plants.crops.LaiMelonBlock;
+import com.CartersDev.crystechmod.block.custom.plants.crops.SaberCornCropBlock;
+import com.CartersDev.crystechmod.block.custom.plants.flowers.*;
+import com.CartersDev.crystechmod.block.custom.plants.trees.EmberLogBlock;
+import com.CartersDev.crystechmod.block.custom.plants.trees.ModFlammableRotatedPillarBlock;
+import com.CartersDev.crystechmod.block.custom.plants.trees.leaves.EmberLeavesBlock;
+import com.CartersDev.crystechmod.block.custom.plants.trees.leaves.MarikaLeaves;
+import com.CartersDev.crystechmod.block.custom.plants.trees.leaves.ModLeavesBlock;
+import com.CartersDev.crystechmod.block.custom.plants.trees.leaves.PlaguedLeavesBlock;
+import com.CartersDev.crystechmod.block.custom.terrainBlocks.*;
+import com.CartersDev.crystechmod.block.custom.tiberium.*;
 import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.sound.ModSounds;
@@ -49,10 +66,10 @@ public class ModBlocks {
             () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.SOUND_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> FOOLS_VITRICIUM = registerBlock("fools_vitricium",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).sound(SoundType.AMETHYST)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).sound(SoundType.AMETHYST).lightLevel(marikaglow)));
 
     public static final RegistryObject<Block> FOOLS_CRYSTAL_CORE = registerBlock("fools_crystal_core",
-            () -> new TempPortalBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).noOcclusion().sound(SoundType.AMETHYST).lightLevel(tiberiumglow)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).noOcclusion().sound(SoundType.AMETHYST).lightLevel(marikaglow)));
 
     //Terrain Blocks:
         //Natural Terrain Blocks:
@@ -97,10 +114,13 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
     public static final RegistryObject<Block> SEEDED_YELLOW_ZONE_CRACKED_DIRT = registerBlock("seeded_yellow_zone_cracked_dirt",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+            () -> new SeededBlock(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
     public static final RegistryObject<Block> SEEDED_RED_ZONE_DIRT = registerBlock("seeded_red_zone_dirt",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+            () -> new SeededBlock(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+
+    public static final RegistryObject<Block> SEEDED_DIRT = registerBlock("seeded_dirt",
+            () -> new SeededBlock(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
     public static final RegistryObject<Block> YELLOW_ZONE_SAND = registerBlock("yellow_zone_sand",
             () -> new VitricSandBlock(24815329, BlockBehaviour.Properties.copy(Blocks.SAND)));
@@ -108,8 +128,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> RED_ZONE_SAND = registerBlock("red_zone_sand",
             () -> new VitricSandBlock(414141, BlockBehaviour.Properties.copy(Blocks.SAND)));
 
-    public static final RegistryObject<Block> SEEDED_DIRT = registerBlock("seeded_dirt",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+
 
         //Tiberium terrain blocks:
 
@@ -2958,6 +2977,22 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRYSTAL_CORE_VITRICIUM_REFINERY = registerBlock("crystal_core_vitricium_refinery",
             () -> new VitriciumRefineryBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
                     .lightLevel(state -> state.getValue(VitriciumRefineryBlock.WORKING) ? 15 : 0)));
+
+
+    public static final RegistryObject<Block> VITRIC_TRANSPORTER = registerBlock("vitric_transporter",
+            () -> new VitricTransporterBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> VITRIC_TRANSPORTER_SIDE1 = registerBlock("vitric_transporter_side1",
+            () -> new VitricTransporterBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> VITRIC_TRANSPORTER_SIDE2 = registerBlock("vitric_transporter_side2",
+            () -> new VitricTransporterBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> VITRIC_PORTAL = registerBlock("vitric_portal",
+            () -> new VitricPortalBlock(BlockBehaviour.Properties.copy(Blocks.END_PORTAL).noOcclusion().noLootTable().noCollission()));
+
+
+
 
         //Signs:
 

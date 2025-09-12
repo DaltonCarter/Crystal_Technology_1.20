@@ -6,7 +6,6 @@ import com.CartersDev.crystechmod.entity.custom.RhinoEntity;
 import com.CartersDev.crystechmod.entity.custom.VitricSheepEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.animal.Sheep;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,7 +21,11 @@ public static final RegistryObject<EntityType<RhinoEntity>> RHINO =
 
     public static final RegistryObject<EntityType<VitricSheepEntity>> VITRIC_SHEEP =
             ENTITY_TYPES.register("vitric_sheep", () -> EntityType.Builder.of(VitricSheepEntity::new, MobCategory.CREATURE)
-                    .sized(1.0F, 1.0F).build("vitric_sheep"));
+                    .sized(0.9F, 1.3F).build("vitric_sheep"));
+
+//    public static final RegistryObject<EntityType<VitricCowEntity>> VITRIC_COW =
+//            ENTITY_TYPES.register("vitric_cow", () -> EntityType.Builder.of(VitricCowEntity::new, MobCategory.CREATURE)
+//                    .sized(0.9F, 1.4F).build("vitric_cow"));
 
 
     public static void register(IEventBus eventBus) {

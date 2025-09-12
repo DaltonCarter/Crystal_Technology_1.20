@@ -1,6 +1,6 @@
 package com.CartersDev.crystechmod.block.entity.renderer.infuser;
 
-import com.CartersDev.crystechmod.block.custom.TiberiumInfuserBlock;
+import com.CartersDev.crystechmod.block.custom.machines.TiberiumInfuserBlock;
 import com.CartersDev.crystechmod.block.entity.infuser.TiberiumInfuserBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;

@@ -95,8 +95,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                 );
 
-
-
         this.tag(ModTags.Blocks.HAZMAT_GLASS_PANES)
                 .add(
                         ModBlocks.CLEAR_TIBERGLASS_PANE.get(),

@@ -9,6 +9,7 @@ import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.custom.*;
 import com.CartersDev.crystechmod.sound.ModSounds;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -98,7 +99,7 @@ public static final RegistryObject<Item> TIBERIUM = ITEMS.register("tiberium",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> RED_CORE_CRYSTAL = ITEMS.register("red_core_crystal",
-            () -> new Item(new Item.Properties()));
+            () -> new RedCoreCrystal(new Item.Properties()));
 
     public static final RegistryObject<Item> BLUE_CORE_CRYSTAL = ITEMS.register("blue_core_crystal",
             () -> new Item(new Item.Properties()));
@@ -438,6 +439,10 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
             () -> new ForgeSpawnEggItem(ModEntities.VITRIC_SHEEP, 0x31772C, 0xFDFFFC ,
                     new Item.Properties()));
 
+//    public static final RegistryObject<Item> VITRIC_COW_SPAWN_EGG = ITEMS.register("vitric_cow_spawn_egg",
+//            () -> new ForgeSpawnEggItem(ModEntities.VITRIC_COW, 0x413620 , 0x117E23 ,
+//                    new Item.Properties()));
+
 
     //End of Spawn Eggs
 
@@ -583,5 +588,9 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
+    }
+
+    public static Item registerBlock(Block pBlock) {
+        return registerBlock(new BlockItem(pBlock, new Item.Properties()).getBlock());
     }
 }

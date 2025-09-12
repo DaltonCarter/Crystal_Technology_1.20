@@ -16,6 +16,7 @@ import com.CartersDev.crystechmod.block.entity.macerator.AlythumTiberiumMacerato
 import com.CartersDev.crystechmod.block.entity.macerator.CrystalCoreTiberiumMaceratorBlockEntity;
 import com.CartersDev.crystechmod.block.entity.macerator.TiberiumMaceratorBlockEntity;
 import com.CartersDev.crystechmod.block.entity.macerator.VitricTiberiumMaceratorBlockEntity;
+import com.CartersDev.crystechmod.block.entity.portal.VitricPortalBlockEntity;
 import com.CartersDev.crystechmod.block.entity.poweredkiln.AlythumKilnBlockEntity;
 import com.CartersDev.crystechmod.block.entity.poweredkiln.CrystalCoreKilnBlockEntity;
 import com.CartersDev.crystechmod.block.entity.poweredkiln.PoweredKilnBlockEntity;
@@ -127,6 +128,10 @@ public static final RegistryObject<BlockEntityType<TiberiumGrinderBlockEntity>> 
     public static final RegistryObject<BlockEntityType<CrystalCoreVitriciumRefineryBlockEntity>> CRYSTAL_CORE_VITRICIUM_REFINERY_BE =
             BLOCK_ENTITIES.register("crystal_core_vitricium_refinery_be", () -> BlockEntityType.Builder.of(
                     CrystalCoreVitriciumRefineryBlockEntity::new, ModBlocks.CRYSTAL_CORE_VITRICIUM_REFINERY.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<VitricPortalBlockEntity>> VITRIC_PORTAL_BE =
+            BLOCK_ENTITIES.register("vitric_portal_be", () -> BlockEntityType.Builder.of(
+                    VitricPortalBlockEntity::new, ModBlocks.VITRIC_PORTAL.get()).build(null));
 
 
 

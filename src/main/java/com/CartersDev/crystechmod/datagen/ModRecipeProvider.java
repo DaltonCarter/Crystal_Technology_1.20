@@ -96,6 +96,34 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
 
         //Shaped Crafting:
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.FOOLS_VITRICIUM.get())
+                .pattern("CGC")
+                .pattern("PCB")
+                .pattern("CRC")
+                .define('P', ModItems.TIBERIUM_PURPLE.get())
+                .define('R', ModItems.TIBERIUM_RED.get())
+                .define('B', ModItems.TIBERIUM_BLUE.get())
+                .define('G', ModItems.TIBERIUM.get())
+                .define('C', ModItems.LG_CORE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.FOOLS_CRYSTAL_CORE.get())
+                .pattern("OCY")
+                .pattern("PCB")
+                .pattern("GCR")
+                .define('P', ModItems.PURPLE_CORE_CRYSTAL.get())
+                .define('R', ModItems.RED_CORE_CRYSTAL.get())
+                .define('B', ModItems.BLUE_CORE_CRYSTAL.get())
+                .define('G', ModItems.GREEN_CORE_CRYSTAL.get())
+                .define('Y', ModItems.YELLOW_CORE_CRYSTAL.get())
+                .define('O', ModItems.ORANGE_CORE_CRYSTAL.get())
+                .define('C', ModItems.LG_CORE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.GREEN_CORE_CRYSTAL.get()), has(ModItems.GREEN_CORE_CRYSTAL.get()))
+                .save(consumer);
+
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TIBERIUM_GRINDER.get())
                 .pattern("GGG")
                 .pattern("AMA")

@@ -1,11 +1,10 @@
 package com.CartersDev.crystechmod.block.entity.refinery;
 
 
-import com.CartersDev.crystechmod.block.custom.VitriciumRefineryBlock;
+import com.CartersDev.crystechmod.block.custom.machines.VitriciumRefineryBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.VitriciumRefineryRecipe;
 import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.AlythumVitriciumRefineryMenu;
-import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.VitriciumRefineryMenu;
 import com.CartersDev.crystechmod.util.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -42,7 +41,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Map;
 import java.util.Optional;
 
-import static com.CartersDev.crystechmod.block.custom.VitriciumRefineryBlock.WORKING;
+import static com.CartersDev.crystechmod.block.custom.machines.VitriciumRefineryBlock.WORKING;
 
 
 public class AlythumVitriciumRefineryBlockEntity extends BlockEntity implements MenuProvider {

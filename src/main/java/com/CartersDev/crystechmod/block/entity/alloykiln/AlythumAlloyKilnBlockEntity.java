@@ -1,10 +1,9 @@
 package com.CartersDev.crystechmod.block.entity.alloykiln;
 
 
-import com.CartersDev.crystechmod.block.custom.AlloyKilnBlock;
+import com.CartersDev.crystechmod.block.custom.machines.AlloyKilnBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.AlloyKilnRecipe;
-import com.CartersDev.crystechmod.screen.alloyKilnMenu.AlloyKilnMenu;
 import com.CartersDev.crystechmod.screen.alloyKilnMenu.AlythumAlloyKilnMenu;
 import com.CartersDev.crystechmod.util.*;
 import net.minecraft.core.BlockPos;
@@ -40,7 +39,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Map;
 import java.util.Optional;
 
-import static com.CartersDev.crystechmod.block.custom.AlloyKilnBlock.WORKING;
+import static com.CartersDev.crystechmod.block.custom.machines.AlloyKilnBlock.WORKING;
 
 
 

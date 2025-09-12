@@ -1,9 +1,8 @@
 package com.CartersDev.crystechmod.block.entity.refinery;
 
 
-import com.CartersDev.crystechmod.block.custom.VitriciumRefineryBlock;
+import com.CartersDev.crystechmod.block.custom.machines.VitriciumRefineryBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
-import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.recipe.VitriciumRefineryRecipe;
 import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.VitriciumRefineryMenu;
 import com.CartersDev.crystechmod.util.*;
@@ -22,7 +21,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
@@ -43,7 +41,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Map;
 import java.util.Optional;
 
-import static com.CartersDev.crystechmod.block.custom.VitriciumRefineryBlock.WORKING;
+import static com.CartersDev.crystechmod.block.custom.machines.VitriciumRefineryBlock.WORKING;
 
 
 public class VitriciumRefineryBlockEntity extends BlockEntity implements MenuProvider {

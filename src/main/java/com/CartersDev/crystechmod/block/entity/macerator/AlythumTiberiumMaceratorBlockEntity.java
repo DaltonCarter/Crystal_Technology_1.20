@@ -1,11 +1,10 @@
 package com.CartersDev.crystechmod.block.entity.macerator;
 
 
-import com.CartersDev.crystechmod.block.custom.TiberiumMaceratorBlock;
+import com.CartersDev.crystechmod.block.custom.machines.TiberiumMaceratorBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.TiberiumMaceratorRecipe;
 import com.CartersDev.crystechmod.screen.maceratorMenu.AlythumTiberiumMaceratorMenu;
-import com.CartersDev.crystechmod.screen.maceratorMenu.TiberiumMaceratorMenu;
 import com.CartersDev.crystechmod.util.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -40,7 +39,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Map;
 import java.util.Optional;
 
-import static com.CartersDev.crystechmod.block.custom.TiberiumMaceratorBlock.WORKING;
+import static com.CartersDev.crystechmod.block.custom.machines.TiberiumMaceratorBlock.WORKING;
 
 
 public class AlythumTiberiumMaceratorBlockEntity extends BlockEntity implements MenuProvider {

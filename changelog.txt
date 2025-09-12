@@ -471,12 +471,12 @@ Posted By: Dalton Carter
 
 ------------------------------------------------------------------------------
 
-11/19/2024 - ???
-Version ???
+11/19/2024 - 9/12/2025
+Version 0.6.0
 Posted By: Dalton Carter
 
 -MASSIVE WORLD GEN UPDATE!!!
--Version to ???
+-Version to 0.6.0
 -All 4 trees now have saplings and growth logic.
 -Ember Oaks and Marika Oaks have a regular and Mega variant.
 -Dead Trees added to general overworld World gen
@@ -554,7 +554,15 @@ Posted By: Dalton Carter
 -Added Core Crystals, and Core Crystal Blocks
 -Added Vitric Sheep Passive Mob
 -Tweaked Dimension settings so vanilla hostile mobs could spawn correctly dispite the Tiberium Glow
+-Added Occultism Silver Ore Compatibility
+-Matter Transmitter Portal Created and Functional, No recipe, requires Red Core Crystals to work
+-Changed the Tutorial Rhino into the Impaler Rhino, Skin changed to match Dimension
+-adjusted Vitric Sheep Spawn Rates
+-Added new Particles
+-Updated Blossom Tree and Tiberium With new Particles
+-Added Particle effects to Tiberium/Ichor soils and Seeded Dirts
 
+------------------------------------------------------------------------------
 
 
 

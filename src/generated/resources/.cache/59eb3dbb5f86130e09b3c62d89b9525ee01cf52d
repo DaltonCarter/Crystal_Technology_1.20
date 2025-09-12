@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-31T18:08:17.8371589	Loot Tables
+// 1.20.1	2025-09-11T18:02:32.6393611	Loot Tables
 03c6f95925fa38635ca3601903e1d452029caabd data/crystechmod/loot_tables/blocks/aboreus_crystal.json
 d0beb68b81b414280026c89df98ac8685d552502 data/crystechmod/loot_tables/blocks/aboreus_crystal_slab.json
 119389378ebef86e266227fdae475e18f84de5e1 data/crystechmod/loot_tables/blocks/aboreus_crystal_stairs.json
@@ -787,6 +787,9 @@ fd3548d8a6730a2512948269f6693734c108f092 data/crystechmod/loot_tables/blocks/vit
 67a83426c0e7bcd4be868c568224217caf38275a data/crystechmod/loot_tables/blocks/vitric_rose.json
 bebb707a5b6021665c6ad0a18b80ad0e4a404e3d data/crystechmod/loot_tables/blocks/vitric_tiberium_infuser.json
 ad31e43e005260756041c68851801d83ed6e2714 data/crystechmod/loot_tables/blocks/vitric_tiberium_macerator.json
+104c2dac3a453ca92928b6ea38b2507168e6ee8a data/crystechmod/loot_tables/blocks/vitric_transporter.json
+faf8f595be87ef5c0df9c8b60a266a7c73c84244 data/crystechmod/loot_tables/blocks/vitric_transporter_side1.json
+1742621966d76b85db949064d17fe144908f8e66 data/crystechmod/loot_tables/blocks/vitric_transporter_side2.json
 a4f0749a61d967c8bd77c8fa2b331ac740699ebf data/crystechmod/loot_tables/blocks/vitric_vitricium_refinery.json
 c230599c32a891314a761ed0d6e1f0e0620ee453 data/crystechmod/loot_tables/blocks/white_crystal_core_light.json
 1d140ba710ae4a193775768c1945cda1c542b5bb data/crystechmod/loot_tables/blocks/white_tibercrete.json

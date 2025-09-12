@@ -1,0 +1,28 @@
+{
+    "type": "forge:conditional",
+    "recipes": [
+        {
+            "conditions": [
+                {
+                    "type": "forge:mod_loaded",
+                    "modid": "occultism"
+                }
+            ],
+            "recipe": {
+                "type": "crystechmod:tiberium_macerating",
+                "craftTime": 200,
+                "energyAmount": 20,
+                "ingredients": [
+                    {
+                        "item": "occultism:silver_ore_deepslate"
+                    }
+                ],
+                "multiply": true,
+                "output": {
+                    "count": 2,
+                    "item": "occultism:silver_dust"
+                }
+            }
+        }
+    ]
+}

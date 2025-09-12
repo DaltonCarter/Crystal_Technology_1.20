@@ -2,7 +2,12 @@ package com.CartersDev.crystechmod.datagen.loot;
 
 
 import com.CartersDev.crystechmod.block.ModBlocks;
-import com.CartersDev.crystechmod.block.custom.*;
+import com.CartersDev.crystechmod.block.custom.plants.crops.HelFruitCropBlock;
+import com.CartersDev.crystechmod.block.custom.plants.crops.SaberCornCropBlock;
+import com.CartersDev.crystechmod.block.custom.tiberium.BlueTiberiumCrystalBlock;
+import com.CartersDev.crystechmod.block.custom.tiberium.GreenTiberiumCrystalBlock;
+import com.CartersDev.crystechmod.block.custom.tiberium.PurpleTiberiumCrystalBlock;
+import com.CartersDev.crystechmod.block.custom.tiberium.RedTiberiumCrystalBlock;
 import com.CartersDev.crystechmod.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -68,6 +73,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ALYTHUM_ALLOY_KILN.get());
         this.dropSelf(ModBlocks.VITRIC_ALLOY_KILN.get());
         this.dropSelf(ModBlocks.CRYSTAL_CORE_ALLOY_KILN.get());
+
+        this.dropSelf(ModBlocks.VITRIC_TRANSPORTER.get());
+        this.dropSelf(ModBlocks.VITRIC_TRANSPORTER_SIDE1.get());
+        this.dropSelf(ModBlocks.VITRIC_TRANSPORTER_SIDE2.get());
 
         this.dropSelf(ModBlocks.GUNDANIUM_MACHINE_CORE.get());
         this.dropSelf(ModBlocks.ALYTHUM_MACHINE_CORE.get());

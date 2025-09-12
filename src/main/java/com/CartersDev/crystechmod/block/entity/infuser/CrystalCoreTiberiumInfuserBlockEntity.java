@@ -1,6 +1,6 @@
 package com.CartersDev.crystechmod.block.entity.infuser;
 
-import com.CartersDev.crystechmod.block.custom.TiberiumInfuserBlock;
+import com.CartersDev.crystechmod.block.custom.machines.TiberiumInfuserBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.TiberiumInfuserRecipe;
 import com.CartersDev.crystechmod.screen.infuserMenu.CrystalCoreTiberiumInfuserMenu;
@@ -41,7 +41,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Map;
 import java.util.Optional;
 
-import static com.CartersDev.crystechmod.block.custom.TiberiumInfuserBlock.WORKING;
+import static com.CartersDev.crystechmod.block.custom.machines.TiberiumInfuserBlock.WORKING;
 
 
 

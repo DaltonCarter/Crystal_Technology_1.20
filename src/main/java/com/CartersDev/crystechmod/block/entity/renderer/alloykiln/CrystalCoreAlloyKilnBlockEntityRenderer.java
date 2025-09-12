@@ -1,7 +1,6 @@
 package com.CartersDev.crystechmod.block.entity.renderer.alloykiln;
 
-import com.CartersDev.crystechmod.block.custom.AlloyKilnBlock;
-import com.CartersDev.crystechmod.block.entity.alloykiln.AlloyKilnBlockEntity;
+import com.CartersDev.crystechmod.block.custom.machines.AlloyKilnBlock;
 import com.CartersDev.crystechmod.block.entity.alloykiln.CrystalCoreAlloyKilnBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;

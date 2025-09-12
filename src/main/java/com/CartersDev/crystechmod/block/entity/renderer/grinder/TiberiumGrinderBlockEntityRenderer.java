@@ -1,6 +1,6 @@
 package com.CartersDev.crystechmod.block.entity.renderer.grinder;
 
-import com.CartersDev.crystechmod.block.custom.TiberiumGrinderBlock;
+import com.CartersDev.crystechmod.block.custom.machines.TiberiumGrinderBlock;
 import com.CartersDev.crystechmod.block.entity.grinder.TiberiumGrinderBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;

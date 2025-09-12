@@ -113,6 +113,7 @@
   "item.crystechmod.illyrim_boots": "Illyrim Boots",
   "item.crystechmod.rhino_spawn_egg": "Rhino Spawn Egg",
   "item.crystechmod.vitric_sheep_spawn_egg": "Vitric Sheep Spawn Egg",
+  "item.crystechmod.vitric_cow_spawn_egg": "Vitric Cow Spawn Egg",
   "item.crystechmod.green_tiberium_dust": "Riparius Tiberium Dust",
   "item.crystechmod.blue_tiberium_dust": "Vinifera Tiberium Dust",
   "item.crystechmod.red_tiberium_dust": "Cruentus Tiberium Dust",
@@ -949,6 +950,12 @@
   "block.crystechmod.alythum_vitricium_refinery": "Improved Vitricium Refinery",
   "block.crystechmod.vitric_vitricium_refinery": "Advanced Vitricium Refinery",
   "block.crystechmod.crystal_core_vitricium_refinery": "Ultimate Vitricium Refinery",
+
+  "block.crystechmod.vitric_transporter": "Matter Transmitter",
+  "block.crystechmod.vitric_transporter_side1": "Matter Transmitter Left",
+  "block.crystechmod.vitric_transporter_side2": "Matter Transmitter Right",
+
+
   "block.crystechmod.purple_core_block": "Purple Core Crystal Case",
   "block.crystechmod.red_core_block": "Red Core Crystal Case",
   "block.crystechmod.blue_core_block": "Blue Core Crystal Case",
@@ -976,6 +983,9 @@
 
 
   "entity.minecraft.villager.crystechmod.vitric_gatherer": "Vitric Gatherer",
+  "entity.crystechmod.rhino": "Impaler Rhino",
+  "entity.crystechmod.vitric_sheep": "Vitric Sheep",
+  "entity.crystechmod.vitric_cow": "Vitric Cow",
 
 
 

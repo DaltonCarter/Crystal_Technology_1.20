@@ -3,10 +3,10 @@ package com.CartersDev.crystechmod.datagen;
 import com.CartersDev.crystechmod.CrystalTech;
 
 import com.CartersDev.crystechmod.block.ModBlocks;
-import com.CartersDev.crystechmod.block.custom.HeimBerryCropBlock;
-import com.CartersDev.crystechmod.block.custom.SaberCornCropBlock;
-import com.CartersDev.crystechmod.block.custom.CrystalCoreLampBlock;
-import com.CartersDev.crystechmod.block.custom.HelFruitCropBlock;
+import com.CartersDev.crystechmod.block.custom.plants.crops.HeimBerryCropBlock;
+import com.CartersDev.crystechmod.block.custom.plants.crops.SaberCornCropBlock;
+import com.CartersDev.crystechmod.block.custom.functional.CrystalCoreLampBlock;
+import com.CartersDev.crystechmod.block.custom.plants.crops.HelFruitCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -32,6 +32,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TEST_BLOCK);
         blockWithItem(ModBlocks.FOOLS_VITRICIUM);
         blockWithItem(ModBlocks.FOOLS_CRYSTAL_CORE);
+        blockWithItem(ModBlocks.VITRIC_PORTAL);
 
         //Basic Block States:
         blockWithItem(ModBlocks.GUNDANIUM_BLOCK);
@@ -960,8 +961,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
         // Machines and other Block Entities:
-//        simpleBlockWithItem(ModBlocks.TIBERIUM_GRINDER.get(),
-//                new ModelFile.UncheckedModelFile(modLoc("block/tiberium_grinder")));
+//        simpleBlockWithItem(ModBlocks.VITRIC_TRANSPORTER.get(),
+//                new ModelFile.UncheckedModelFile(modLoc("block/vitric_transporter")));
 
 
         //Lights, Lamps, and Torch-Likes:
@@ -1061,8 +1062,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
         //Horizontal Blocks:
-//        horizontalBlock(ModBlocks.TIBERIUM_INFUSER.get(),
-//                new ModelFile.UncheckedModelFile(modLoc("block/tiberium_infuser")));
+//        horizontalBlock(ModBlocks.VITRIC_TRANSPORTER.get(),
+//                new ModelFile.UncheckedModelFile(modLoc("block/vitric_transporter")));
 
     }
 

@@ -1,7 +1,7 @@
 package com.CartersDev.crystechmod.block.entity.poweredkiln;
 
 
-import com.CartersDev.crystechmod.block.custom.PoweredKilnBlock;
+import com.CartersDev.crystechmod.block.custom.machines.PoweredKilnBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.PoweredKilnRecipe;
 import com.CartersDev.crystechmod.screen.poweredKilnMenu.AlythumKilnMenu;
@@ -39,7 +39,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Map;
 import java.util.Optional;
 
-import static com.CartersDev.crystechmod.block.custom.PoweredKilnBlock.WORKING;
+import static com.CartersDev.crystechmod.block.custom.machines.PoweredKilnBlock.WORKING;
 
 
 public class AlythumKilnBlockEntity extends BlockEntity implements MenuProvider {

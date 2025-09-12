@@ -1,6 +1,6 @@
 package com.CartersDev.crystechmod.block.entity.grinder;
 
-import com.CartersDev.crystechmod.block.custom.TiberiumGrinderBlock;
+import com.CartersDev.crystechmod.block.custom.machines.TiberiumGrinderBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.TiberiumGrinderRecipe;
 import com.CartersDev.crystechmod.screen.grinderMenu.TiberiumGrinderMenu;

@@ -1,7 +1,7 @@
 package com.CartersDev.crystechmod.block.entity.alloykiln;
 
 
-import com.CartersDev.crystechmod.block.custom.AlloyKilnBlock;
+import com.CartersDev.crystechmod.block.custom.machines.AlloyKilnBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.AlloyKilnRecipe;
 import com.CartersDev.crystechmod.screen.alloyKilnMenu.AlloyKilnMenu;
@@ -24,7 +24,6 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -39,11 +38,10 @@ import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Arrays;
 import java.util.Map;
 import java.util.Optional;
 
-import static com.CartersDev.crystechmod.block.custom.AlloyKilnBlock.WORKING;
+import static com.CartersDev.crystechmod.block.custom.machines.AlloyKilnBlock.WORKING;
 
 
 
