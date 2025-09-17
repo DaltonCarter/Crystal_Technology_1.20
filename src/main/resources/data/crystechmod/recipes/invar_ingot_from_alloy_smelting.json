@@ -1,0 +1,35 @@
+
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "thermal_foundation"
+        }
+      ],
+      "recipe": {
+        "type": "crystechmod:alloy_smelting",
+        "craftTime": 150,
+        "energyAmount": 10,
+        "ingredients": [
+            {
+              "item": "minecraft:iron_ingot"
+           },
+           {
+             "item": "minecraft:iron_ingot"
+          },
+          {
+            "item": "thermal_foundation:nickle_ingot"
+          }
+        ],
+        "output": {
+          "count": 3,
+          "item": "thermal_foundation:invar_ingot"
+        }
+      }
+    }
+
+  ]
+}

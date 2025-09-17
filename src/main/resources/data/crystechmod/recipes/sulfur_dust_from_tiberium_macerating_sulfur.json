@@ -1,0 +1,32 @@
+{
+    "type": "forge:conditional",
+    "recipes": [
+        {
+            "conditions": [
+                {
+                    "type": "forge:mod_loaded",
+                    "modid": "thermal_foundation"
+                },
+              {
+                "type": "forge:mod_loaded",
+                "modid": "mekanism"
+              }
+            ],
+            "recipe": {
+                "type": "crystechmod:tiberium_macerating",
+                "craftTime": 200,
+                "energyAmount": 20,
+                "ingredients": [
+                    {
+                        "item": "thermal_foundation:sulfur"
+                    }
+                ],
+                "multiply": false,
+                "output": {
+                    "count": 1,
+                    "item": "mekanism:dust_sulfur"
+                }
+            }
+        }
+    ]
+}

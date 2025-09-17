@@ -564,6 +564,19 @@ Posted By: Dalton Carter
 
 ------------------------------------------------------------------------------
 
+9/16/2025
+Version 0.6.1
+Posted By: Dalton Carter
+
+-Adjusted Spawn Rates for Passive mobs in Dimension
+-Added Vitric Cow
+-Vitric Cow added to Dimension
+-Impaler Rhino given a loot table
+-Added handling for Processing Occultism Iesnium with Mod Machines
+-Added handling for Processing Create Zinc with Mod Machines including making Zinc Dust item.
+-Added handling for Processing Thermal Foundation & Series with Mod Machines.
+-Added handling for SOME Processing EnderIO with Mod Machines.
+
 
 
 ======================================================

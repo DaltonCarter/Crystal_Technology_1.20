@@ -1,0 +1,33 @@
+
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "enderio"
+        }
+      ],
+      "recipe": {
+        "type": "crystechmod:alloy_smelting",
+        "craftTime": 200,
+        "energyAmount": 28,
+        "ingredients": [
+            {
+              "item": "minecraft:soul_sand"
+           },
+          {
+            "item": "minecraft:gold_ingot"
+          }
+
+        ],
+        "output": {
+          "count": 1,
+          "item": "enderio:soularium_ingot"
+        }
+      }
+    }
+
+  ]
+}

@@ -14,7 +14,7 @@
                 "energyAmount": 10,
                 "ingredients": [
                     {
-                        "item": "occultism:silver_ore_deepslate"
+                        "item": "occultism:silver_dust"
                     }
                 ],
                 "output": {

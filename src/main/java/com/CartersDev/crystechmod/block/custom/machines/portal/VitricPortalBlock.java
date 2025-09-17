@@ -1,5 +1,6 @@
 package com.CartersDev.crystechmod.block.custom.machines.portal;
 
+import com.CartersDev.crystechmod.block.custom.VitricTransporterBlock;
 import com.CartersDev.crystechmod.block.entity.portal.VitricPortalBlockEntity;
 import com.CartersDev.crystechmod.sound.ModSounds;
 import com.CartersDev.crystechmod.worldgen.dimension.ModDimensions;
@@ -8,6 +9,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceKey;
 
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
@@ -16,6 +18,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluid;
@@ -95,6 +98,7 @@ public class VitricPortalBlock extends BaseEntityBlock {
         }
 
     }
+
 
     public ItemStack getCloneItemStack(BlockGetter pLevel, BlockPos pPos, BlockState pState) {
         return ItemStack.EMPTY;

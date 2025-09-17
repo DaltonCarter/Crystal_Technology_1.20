@@ -1,6 +1,9 @@
 {
   "values": [
     "crystechmod:tiberium_block",
+    "crystechmod:vitric_transporter",
+    "crystechmod:vitric_transporter_side1",
+    "crystechmod:vitric_transporter_side2",
     "crystechmod:purple_core_block",
     "crystechmod:orange_core_block",
     "crystechmod:red_core_block",

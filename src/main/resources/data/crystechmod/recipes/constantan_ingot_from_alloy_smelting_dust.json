@@ -1,0 +1,32 @@
+
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "thermal_foundation"
+        }
+      ],
+      "recipe": {
+        "type": "crystechmod:alloy_smelting",
+        "craftTime": 150,
+        "energyAmount": 10,
+        "ingredients": [
+          {
+            "item": "crystechmod:copper_dust"
+          },
+          {
+            "item": "thermal_foundation:nickel_dust"
+          }
+        ],
+        "output": {
+          "count": 2,
+          "item": "thermal_foundation:constantan_ingot"
+        }
+      }
+    }
+
+  ]
+}

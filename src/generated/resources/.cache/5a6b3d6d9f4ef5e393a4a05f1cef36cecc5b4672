@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-18T02:09:03.958903	Tags for minecraft:item mod id crystechmod
+// 1.20.1	2025-09-16T18:09:14.574753	Tags for minecraft:item mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/items/aeries_ores.json
 d9cbaedec56f83f65def981e9dac46ba077fd955 data/crystechmod/tags/items/alloying_input.json
 655216b4c1a7b6525500eec6babbe3f7e78ade3d data/crystechmod/tags/items/alloying_result.json
@@ -27,7 +27,7 @@ ee6c95b24ed7fb71ba4fb4b4ee72ce886ce3b2ba data/crystechmod/tags/items/smelting_re
 30072644d4c3d908ca2eabafbb2613c9f1b8c07b data/crystechmod/tags/items/smelting_result_2.json
 ecf2a3889f87177c168a6ffc2c5f25e077381f19 data/crystechmod/tags/items/sticks.json
 39acdcf33383e05a367faca9c1c896cc6cdba9c0 data/crystechmod/tags/items/tibercrete_sands.json
-4a74f4b242dfccc45ae7b8a058888024b9f5c9b4 data/forge/tags/items/dusts.json
+4b700b33cd0f1676485a704b4ca21d0d44d43738 data/forge/tags/items/dusts.json
 2e0f8661c75c39419b1d57f9ec8c99eba7866bf2 data/forge/tags/items/gems.json
 002e5c40a5184c92f01d66de3343c441df892703 data/forge/tags/items/ingots.json
 663b4405fee2bbd585777b4e84cf20a69ab0275b data/forge/tags/items/ores.json

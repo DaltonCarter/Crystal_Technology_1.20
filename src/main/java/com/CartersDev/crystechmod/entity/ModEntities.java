@@ -3,6 +3,7 @@ package com.CartersDev.crystechmod.entity;
 import com.CartersDev.crystechmod.CrystalTech;
 
 import com.CartersDev.crystechmod.entity.custom.RhinoEntity;
+import com.CartersDev.crystechmod.entity.custom.VitricCowEntity;
 import com.CartersDev.crystechmod.entity.custom.VitricSheepEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -23,9 +24,9 @@ public static final RegistryObject<EntityType<RhinoEntity>> RHINO =
             ENTITY_TYPES.register("vitric_sheep", () -> EntityType.Builder.of(VitricSheepEntity::new, MobCategory.CREATURE)
                     .sized(0.9F, 1.3F).build("vitric_sheep"));
 
-//    public static final RegistryObject<EntityType<VitricCowEntity>> VITRIC_COW =
-//            ENTITY_TYPES.register("vitric_cow", () -> EntityType.Builder.of(VitricCowEntity::new, MobCategory.CREATURE)
-//                    .sized(0.9F, 1.4F).build("vitric_cow"));
+    public static final RegistryObject<EntityType<VitricCowEntity>> VITRIC_COW =
+            ENTITY_TYPES.register("vitric_cow", () -> EntityType.Builder.of(VitricCowEntity::new, MobCategory.CREATURE)
+                    .sized(0.9F, 1.4F).build("vitric_cow"));
 
 
     public static void register(IEventBus eventBus) {

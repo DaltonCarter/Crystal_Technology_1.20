@@ -1,0 +1,26 @@
+{
+    "type": "forge:conditional",
+    "recipes": [
+        {
+            "conditions": [
+                {
+                    "type": "forge:mod_loaded",
+                    "modid": "thermal"
+                }
+            ],
+            "recipe": {
+                "type": "crystechmod:powered_smelting",
+                "craftTime": 150,
+                "energyAmount": 10,
+                "ingredients": [
+                    {
+                        "item": "thermal:lumium_dust"
+                    }
+                ],
+                "output": {
+                    "item": "thermal:lumium_ingot"
+                }
+            }
+        }
+    ]
+}

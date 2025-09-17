@@ -47,7 +47,7 @@ Technology once I learned enough about it to make my own additions. It is HEAVIL
 
 This technology has at its center several different colored "Core Crystals" that each do something different. Most
 Notably are the RED crystals which are used in weapons, and are HIGHLY VOLATILE simply dropping one can result in
-an explosion equivalant to a nuclear explosion. Frequently used as a "HAIL MARY" tactic Soldiers have thrown these
+an explosion equivalent to a nuclear explosion. Frequently used as a "HAIL MARY" tactic Soldiers have thrown these
 crystals and beamed back onto the cruiser they are assigned to.
 
 Core Technology also features a multi-stage metal alloy called "Core Steel" which has been used in everything from
@@ -63,4 +63,4 @@ Core Technology also features a multi-stage metal alloy called "Core Steel" whic
   other technologies above.
 
   The true vision for this mod is to bring all of the above together to create a unique tech mod that can double
-  as a survival challange, or simply also have effects on the vanilla survival experience.
+  as a survival challenge, or simply also have effects on the vanilla survival experience.

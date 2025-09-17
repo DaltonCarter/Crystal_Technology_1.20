@@ -1,0 +1,26 @@
+{
+    "type": "forge:conditional",
+    "recipes": [
+        {
+            "conditions": [
+                {
+                    "type": "forge:mod_loaded",
+                    "modid": "occultism"
+                }
+            ],
+            "recipe": {
+                "type": "crystechmod:powered_smelting",
+                "craftTime": 150,
+                "energyAmount": 10,
+                "ingredients": [
+                    {
+                        "item": "occultism:iesnium_ore"
+                    }
+                ],
+                "output": {
+                    "item": "occultism:iesnium_ingot"
+                }
+            }
+        }
+    ]
+}

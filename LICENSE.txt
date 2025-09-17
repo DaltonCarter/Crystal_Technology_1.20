@@ -16,8 +16,6 @@ and claiming it as your own work.
 3. You cannot steal the sound and music files contained in this mod. Many of them are copyrighted,
 and I own legitimate copies of the sound/music.
 
-4. You cannot download this repo to make your own JAR files. I will provide JARs on request and with the
-understanding that you CANNOT distribute it FOR ANY REASON. ESPECIALLY NOT FOR PROFIT!
 
 Again DO NOT ruin this for everybody by being a JERK!
 

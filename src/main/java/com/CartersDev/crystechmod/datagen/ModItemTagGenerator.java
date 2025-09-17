@@ -72,6 +72,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.IRON_DUST.get(),
                         ModItems.GOLD_DUST.get(),
                         ModItems.COPPER_DUST.get(),
+                        ModItems.ZINC_DUST.get(),
                         ModItems.ILLYRIM_BLEND.get(),
                         ModItems.LG_CORE_BLEND.get(),
                         ModItems.MG_CORE_BLEND.get(),

@@ -76,6 +76,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.KRYON_CRYSTAL);
 
         simpleItem(ModItems.GUNDANIUM_DUST);
+        simpleItem(ModItems.ZINC_DUST);
         simpleItem(ModItems.HARMONIUM_DUST);
         simpleItem(ModItems.GRINDER_GEAR);
         simpleItem(ModItems.ILLYRIM_GRINDER_GEAR);
@@ -603,7 +604,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         //Spawn Eggs:
         withExistingParent(ModItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.VITRIC_SHEEP_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
-//        withExistingParent(ModItems.VITRIC_COW_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.VITRIC_COW_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         //Signs:
         simpleItem(ModItems.PLAGUED_SIGN);

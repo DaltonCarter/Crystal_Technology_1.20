@@ -205,6 +205,9 @@ rareTrades.add((pTrader, pRandom) -> new MerchantOffer( new ItemStack(Items.EMER
 rareTrades.add((pTrader, pRandom) -> new MerchantOffer( new ItemStack(Items.EMERALD, 12),
                 new ItemStack(ModItems.HAZMAT_MK1_BOOTS.get(), 1), 2, 12, 0.15f));
 
+        rareTrades.add((pTrader, pRandom) -> new MerchantOffer( new ItemStack(Items.EMERALD, 12),
+                new ItemStack(ModBlocks.FLOWER_OF_LIFE.get(), 1), 2, 12, 0.15f));
+
 
     }
 

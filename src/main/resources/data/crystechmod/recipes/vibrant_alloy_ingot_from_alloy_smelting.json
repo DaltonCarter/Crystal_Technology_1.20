@@ -1,0 +1,33 @@
+
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "enderio"
+        }
+      ],
+      "recipe": {
+        "type": "crystechmod:alloy_smelting",
+        "craftTime": 200,
+        "energyAmount": 24,
+        "ingredients": [
+          {
+            "item": "enderio:energetic_alloy_ingot"
+          },
+          {
+              "item": "minecraft:ender_pearl"
+           }
+
+        ],
+        "output": {
+          "count": 1,
+          "item": "enderio:vibrant_alloy_ingot"
+        }
+      }
+    }
+
+  ]
+}

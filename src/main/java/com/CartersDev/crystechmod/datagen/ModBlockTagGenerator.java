@@ -128,6 +128,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.TIBERIUM_BLOCK.get(),
+                ModBlocks.VITRIC_TRANSPORTER.get(),
+                ModBlocks.VITRIC_TRANSPORTER_SIDE1.get(),
+                ModBlocks.VITRIC_TRANSPORTER_SIDE2.get(),
                 ModBlocks.PURPLE_CORE_BLOCK.get(),
                 ModBlocks.ORANGE_CORE_BLOCK.get(),
                 ModBlocks.RED_CORE_BLOCK.get(),
@@ -1491,6 +1494,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CS_SCAFFOLD.get(),
                         ModBlocks.PURPLE_CORE_BLOCK.get(),
                         ModBlocks.ORANGE_CORE_BLOCK.get(),
+                        ModBlocks.VITRIC_TRANSPORTER.get(),
+                        ModBlocks.VITRIC_TRANSPORTER_SIDE1.get(),
+                        ModBlocks.VITRIC_TRANSPORTER_SIDE2.get(),
                         ModBlocks.RED_CORE_BLOCK.get(),
                         ModBlocks.GREEN_CORE_BLOCK.get(),
                         ModBlocks.BLUE_CORE_BLOCK.get(),

@@ -1,0 +1,28 @@
+{
+    "type": "forge:conditional",
+    "recipes": [
+        {
+            "conditions": [
+                {
+                    "type": "forge:mod_loaded",
+                    "modid": "create"
+                }
+            ],
+            "recipe": {
+                "type": "crystechmod:tiberium_macerating",
+                "craftTime": 200,
+                "energyAmount": 20,
+                "ingredients": [
+                    {
+                        "item": "create:raw_zinc"
+                    }
+                ],
+                "multiply": true,
+                "output": {
+                    "count": 2,
+                    "item": "crystechmod:zinc_dust"
+                }
+            }
+        }
+    ]
+}

@@ -152,6 +152,9 @@ public static final RegistryObject<Item> GREEN_TIBERIUM_DUST = ITEMS.register("g
     public static final RegistryObject<Item> ALYTHUM_DUST = ITEMS.register("alythum_dust",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> ZINC_DUST = ITEMS.register("zinc_dust",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> ILLYRIM_BLEND = ITEMS.register("illyrim_blend",
             () -> new Item(new Item.Properties()));
 
@@ -439,9 +442,9 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
             () -> new ForgeSpawnEggItem(ModEntities.VITRIC_SHEEP, 0x31772C, 0xFDFFFC ,
                     new Item.Properties()));
 
-//    public static final RegistryObject<Item> VITRIC_COW_SPAWN_EGG = ITEMS.register("vitric_cow_spawn_egg",
-//            () -> new ForgeSpawnEggItem(ModEntities.VITRIC_COW, 0x413620 , 0x117E23 ,
-//                    new Item.Properties()));
+    public static final RegistryObject<Item> VITRIC_COW_SPAWN_EGG = ITEMS.register("vitric_cow_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.VITRIC_COW, 0x413620 , 0x117E23 ,
+                    new Item.Properties()));
 
 
     //End of Spawn Eggs

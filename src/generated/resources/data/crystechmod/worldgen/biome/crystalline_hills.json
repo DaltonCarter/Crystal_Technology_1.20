@@ -136,7 +136,7 @@
         "type": "crystechmod:vitric_sheep",
         "maxCount": 4,
         "minCount": 4,
-        "weight": 20
+        "weight": 8
       }
     ],
     "misc": [],

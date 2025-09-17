@@ -118,6 +118,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     output.accept(ModItems.IRON_DUST.get());
                     output.accept(ModItems.COPPER_DUST.get());
                     output.accept(ModItems.GOLD_DUST.get());
+                    output.accept(ModItems.ZINC_DUST.get());
 
                     output.accept(ModBlocks.GUNDANIUM_ORE.get());
                     output.accept(ModBlocks.DEEPSLATE_GUNDANIUM_ORE.get());
@@ -215,7 +216,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
 
                         output.accept(ModItems.RHINO_SPAWN_EGG.get());
                         output.accept(ModItems.VITRIC_SHEEP_SPAWN_EGG.get());
-//                        output.accept(ModItems.VITRIC_COW_SPAWN_EGG.get());
+                        output.accept(ModItems.VITRIC_COW_SPAWN_EGG.get());
 
                     })
                     .build());

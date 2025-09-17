@@ -126,10 +126,22 @@
     "axolotls": [],
     "creature": [
       {
+        "type": "minecraft:chicken",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 10
+      },
+      {
         "type": "crystechmod:vitric_sheep",
         "maxCount": 4,
         "minCount": 4,
-        "weight": 20
+        "weight": 8
+      },
+      {
+        "type": "crystechmod:vitric_cow",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 10
       }
     ],
     "misc": [],

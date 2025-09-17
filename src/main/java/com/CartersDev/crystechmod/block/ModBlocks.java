@@ -2980,16 +2980,20 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> VITRIC_TRANSPORTER = registerBlock("vitric_transporter",
-            () -> new VitricTransporterBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new VitricTransporterBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(VitricTransporterBlock.CORE) ? 15 : 0)));
 
     public static final RegistryObject<Block> VITRIC_TRANSPORTER_SIDE1 = registerBlock("vitric_transporter_side1",
-            () -> new VitricTransporterBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new VitricTransporterBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(VitricTransporterBlock.CORE) ? 15 : 0)));
 
     public static final RegistryObject<Block> VITRIC_TRANSPORTER_SIDE2 = registerBlock("vitric_transporter_side2",
-            () -> new VitricTransporterBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new VitricTransporterBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(VitricTransporterBlock.CORE) ? 15 : 0)));
 
     public static final RegistryObject<Block> VITRIC_PORTAL = registerBlock("vitric_portal",
-            () -> new VitricPortalBlock(BlockBehaviour.Properties.copy(Blocks.END_PORTAL).noOcclusion().noLootTable().noCollission()));
+            () -> new VitricPortalBlock(BlockBehaviour.Properties.copy(Blocks.END_PORTAL).noOcclusion().noLootTable()
+                    .noCollission().destroyTime(-1.0F).lightLevel(marikaglow)));
 
 
 

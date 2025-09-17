@@ -32,7 +32,7 @@ public class RedCoreCrystal extends Item {
 
         if (blockstate.is(ModBlocks.VITRIC_TRANSPORTER.get()) && !blockstate.getValue(VitricTransporterBlock.CORE) ||
                 blockstate.is(ModBlocks.VITRIC_TRANSPORTER_SIDE1.get()) && !blockstate.getValue(VitricTransporterBlock.CORE) ||
-                blockstate.is(ModBlocks.VITRIC_TRANSPORTER_SIDE2.get()) && !blockstate.getValue(VitricTransporterBlock.CORE)) {
+                blockstate.is(ModBlocks.VITRIC_TRANSPORTER_SIDE2.get()) && !blockstate.getValue(VitricTransporterBlock.CORE))  {
 
             if (level.isClientSide) {
                 return InteractionResult.SUCCESS;
@@ -46,6 +46,7 @@ public class RedCoreCrystal extends Item {
                 level.updateNeighbourForOutputSignal(blockpos, ModBlocks.VITRIC_TRANSPORTER_SIDE2.get());
                 pContext.getItemInHand().shrink(1);
                 level.levelEvent(1503, blockpos, 0);
+
                 BlockPattern.BlockPatternMatch blockpattern$blockpatternmatch = VitricTransporterBlock.getOrCreatePortalShape().find(level, blockpos);
                 if (blockpattern$blockpatternmatch != null) {
                     BlockPos blockpos1 = blockpattern$blockpatternmatch.getFrontTopLeft().offset(0, -1, -3);
@@ -60,6 +61,7 @@ public class RedCoreCrystal extends Item {
                                 level.setBlock(blockpos1.offset(i, 0, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
                                 level.setBlock(blockpos1.offset(i, -1, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
                                 level.setBlock(blockpos1.offset(i, -2, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
+
                             }
                         }
 

@@ -1,0 +1,35 @@
+
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "enderio"
+        }
+      ],
+      "recipe": {
+        "type": "crystechmod:alloy_smelting",
+        "craftTime": 200,
+        "energyAmount": 24,
+        "ingredients": [
+            {
+              "item": "enderio:copper_alloy_ingot"
+           },
+          {
+            "item": "minecraft:iron_ingot"
+          },
+           {
+             "item": "minecraft:redstone"
+          }
+        ],
+        "output": {
+          "count": 1,
+          "item": "enderio:conductive_alloy_ingot"
+        }
+      }
+    }
+
+  ]
+}

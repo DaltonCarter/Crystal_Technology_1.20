@@ -7,7 +7,9 @@ import com.CartersDev.crystechmod.enchantment.ModEnchantments;
 import com.CartersDev.crystechmod.entity.ModEntities;
 import com.CartersDev.crystechmod.entity.client.*;
 import com.CartersDev.crystechmod.entity.client.renderer.rhino.RhinoRenderer;
+import com.CartersDev.crystechmod.entity.client.renderer.vitricCow.VitricCowRenderer;
 import com.CartersDev.crystechmod.entity.client.renderer.vitricSheep.VitricSheepRenderer;
+import com.CartersDev.crystechmod.entity.client.vitricCow.VitricCowModel;
 import com.CartersDev.crystechmod.entity.client.vitricSheep.VitricSheepFurModel;
 import com.CartersDev.crystechmod.entity.client.vitricSheep.VitricSheepModel;
 import com.CartersDev.crystechmod.fluid.ModFluidTypes;
@@ -193,7 +195,7 @@ public class CrystalTech {
 ///         Entities:
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
             EntityRenderers.register(ModEntities.VITRIC_SHEEP.get(), m -> new VitricSheepRenderer(m, new VitricSheepModel<>(m.bakeLayer(ModModelLayers.VITRIC_SHEEP_LAYER)), new VitricSheepFurModel(m.bakeLayer(ModModelLayers.VITRIC_SHEEP_FUR_LAYER)), 0.7F));
-//            EntityRenderers.register(ModEntities.VITRIC_COW.get(), VitricCowRenderer::new);
+            EntityRenderers.register(ModEntities.VITRIC_COW.get(), m -> new VitricCowRenderer(m, new VitricCowModel<>(m.bakeLayer(ModModelLayers.VITRIC_COW_LAYER)), 0.7F));
 
 
 ///         Menu Screens:

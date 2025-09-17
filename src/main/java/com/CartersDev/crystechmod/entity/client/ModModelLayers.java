@@ -14,7 +14,7 @@ public class ModModelLayers {
     public static final ModelLayerLocation VITRIC_SHEEP_FUR_LAYER = new ModelLayerLocation(
             new ResourceLocation(CrystalTech.MOD_ID, "vitric_sheep_fur_layer"), "main");
 
-//    public static final ModelLayerLocation VITRIC_COW_LAYER = new ModelLayerLocation(
-//            new ResourceLocation(CrystalTech.MOD_ID, "vitric_cow_layer"), "main");
+    public static final ModelLayerLocation VITRIC_COW_LAYER = new ModelLayerLocation(
+            new ResourceLocation(CrystalTech.MOD_ID, "vitric_cow_layer"), "main");
 
 }

@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-27T21:33:48.9585286	Item Models: crystechmod
+// 1.20.1	2025-09-16T18:09:14.560798	Item Models: crystechmod
 7d9fe5e88433390f9cd29dab7e515bddd3fbdf4b assets/crystechmod/models/item/aboreus_crystal_slab.json
 0e376de85f99a387d23f7130ff296ce0b5fe876e assets/crystechmod/models/item/aboreus_crystal_stairs.json
 2ced509a911b88c37b68b1a1278f10fc986798c4 assets/crystechmod/models/item/aboreus_crystal_wall.json
@@ -670,6 +670,7 @@ f7561c5adee3d153de480f27e7b947220b694ec6 assets/crystechmod/models/item/vinifera
 0eef7d2aa5afbe8aca0858af26c3e4a7a60cb86d assets/crystechmod/models/item/vinifera_stone_stairs.json
 a039969901458750d6a96395083f53367de701b6 assets/crystechmod/models/item/vinifera_stone_wall.json
 817ea843755aa3ef8a451a492d2798831831fec3 assets/crystechmod/models/item/vitric_circuit.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/crystechmod/models/item/vitric_cow_spawn_egg.json
 75968cb6f1dc69a1e6839985e49698ef65bcdc18 assets/crystechmod/models/item/vitric_deepslate_brick_slab.json
 9e3d9d9dd70f36583714391c4d4bba57a8af26c3 assets/crystechmod/models/item/vitric_deepslate_brick_stairs.json
 2863d14a76d37c62734152ebb546e5f1fe3a40de assets/crystechmod/models/item/vitric_deepslate_brick_wall.json
@@ -699,3 +700,4 @@ e5cbdeb5d635f578511d15ec368e9fe810273464 assets/crystechmod/models/item/yellow_t
 3c0af8717025bfbc60d68c919d95577f3f4f4dbb assets/crystechmod/models/item/yellow_tiberglass_pane.json
 f63a7b776458b814bb07d63673754c432546fdf6 assets/crystechmod/models/item/yokaran_bloom_powder.json
 f643b811435de5bb9aca96ae11822a6cee34a6f6 assets/crystechmod/models/item/zairan_fruit_salad.json
+254a8dfcdd70a66b8caaae60199980a7c60d44a5 assets/crystechmod/models/item/zinc_dust.json

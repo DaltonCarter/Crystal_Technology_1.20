@@ -138,14 +138,7 @@
       }
     ],
     "axolotls": [],
-    "creature": [
-      {
-        "type": "crystechmod:vitric_sheep",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 20
-      }
-    ],
+    "creature": [],
     "misc": [],
     "monster": [
       {
