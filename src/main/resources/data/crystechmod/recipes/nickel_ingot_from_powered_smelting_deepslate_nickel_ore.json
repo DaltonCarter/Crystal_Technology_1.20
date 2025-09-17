@@ -5,7 +5,7 @@
             "conditions": [
                 {
                     "type": "forge:mod_loaded",
-                    "modid": "thermal_foundation"
+                    "modid": "railcraft"
                 }
             ],
             "recipe": {
@@ -14,11 +14,11 @@
                 "energyAmount": 10,
                 "ingredients": [
                     {
-                        "item": "thermal_foundation:deepslate_nickel_ore"
+                        "item": "railcraft:deepslate_nickel_ore"
                     }
                 ],
                 "output": {
-                    "item": "thermal_foundation:nickel_ingot"
+                    "item": "railcraft:nickel_ingot"
                 }
             }
         }

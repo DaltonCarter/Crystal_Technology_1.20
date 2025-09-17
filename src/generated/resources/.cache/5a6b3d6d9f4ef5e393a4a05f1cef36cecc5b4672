@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-16T18:09:14.574753	Tags for minecraft:item mod id crystechmod
+// 1.20.1	2025-09-17T00:33:08.3059798	Tags for minecraft:item mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/items/aeries_ores.json
 d9cbaedec56f83f65def981e9dac46ba077fd955 data/crystechmod/tags/items/alloying_input.json
 655216b4c1a7b6525500eec6babbe3f7e78ade3d data/crystechmod/tags/items/alloying_result.json
@@ -9,7 +9,7 @@ d9cbaedec56f83f65def981e9dac46ba077fd955 data/crystechmod/tags/items/alloying_in
 9e69fb63880d9644913e3c1febc7b5019ed06a98 data/crystechmod/tags/items/ember_oak_logs.json
 569b96ed4a3700478598d59a0249f011c9e779f0 data/crystechmod/tags/items/enigma_ores.json
 385384748b1de16a26be84aa4324801acb1e776d data/crystechmod/tags/items/glass.json
-c17e48a17dcde33173252d12f36486463c318197 data/crystechmod/tags/items/grindable.json
+6a0cd9e557eda7ff09e593734531a692341db607 data/crystechmod/tags/items/grindable.json
 f9541d478a6479b3fadbd51f6a062c8d4fb28ca3 data/crystechmod/tags/items/grindable_flowers.json
 8129e0d99fa1905e1c878dd4c3c242d52676526f data/crystechmod/tags/items/grinding_result.json
 4cadb914e0eab48bbce75c6e6b2093818996d44e data/crystechmod/tags/items/gundanium_ores.json

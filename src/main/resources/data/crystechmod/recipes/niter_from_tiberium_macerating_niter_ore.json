@@ -14,13 +14,13 @@
                 "energyAmount": 20,
                 "ingredients": [
                     {
-                        "item": "thermal_foundation:niter_ore"
+                        "item": "thermal:niter_ore"
                     }
                 ],
                 "multiply": true,
                 "output": {
-                    "count": 1,
-                    "item": "thermal_foundation:niter"
+                    "count": 2,
+                    "item": "thermal:niter"
                 }
             }
         }

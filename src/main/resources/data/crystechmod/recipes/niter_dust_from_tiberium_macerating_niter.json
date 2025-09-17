@@ -5,7 +5,7 @@
             "conditions": [
                 {
                     "type": "forge:mod_loaded",
-                    "modid": "thermal_foundation"
+                    "modid": "thermal"
                 }
             ],
             "recipe": {
@@ -14,13 +14,13 @@
                 "energyAmount": 20,
                 "ingredients": [
                     {
-                        "item": "thermal_foundation:niter"
+                        "item": "thermal:niter"
                     }
                 ],
                 "multiply": false,
                 "output": {
                     "count": 1,
-                    "item": "thermal_foundation:niter_dust"
+                    "item": "thermal:niter_dust"
                 }
             }
         }

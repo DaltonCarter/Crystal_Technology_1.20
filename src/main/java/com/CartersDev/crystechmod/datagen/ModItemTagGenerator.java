@@ -264,6 +264,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModTags.Items.HARMONIUM_ORES,
                         ModTags.Items.GRINDABLE_FLOWERS,
                         Tags.Items.RAW_MATERIALS,
+                        Tags.Items.GEMS,
                         Tags.Items.ORES,
                         Tags.Items.INGOTS);
 

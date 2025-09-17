@@ -2,13 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "I": {
+      "item": "crystechmod:gundanium_ingot"
+    },
     "L": {
       "item": "crystechmod:tiberium_leather"
     }
   },
   "pattern": [
-    "LLL",
-    "L L",
+    "LIL",
+    "I I",
     "L L"
   ],
   "result": {

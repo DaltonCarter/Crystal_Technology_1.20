@@ -21,12 +21,12 @@
              "item": "minecraft:iron_ingot"
           },
           {
-            "item": "thermal_foundation:nickle_ingot"
+            "item": "thermal:nickle_ingot"
           }
         ],
         "output": {
           "count": 3,
-          "item": "thermal_foundation:invar_ingot"
+          "item": "thermal:invar_ingot"
         }
       }
     }

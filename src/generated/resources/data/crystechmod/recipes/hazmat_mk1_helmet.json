@@ -5,12 +5,15 @@
     "G": {
       "tag": "crystechmod:hazmat_glass_panes"
     },
+    "I": {
+      "item": "crystechmod:gundanium_ingot"
+    },
     "L": {
       "item": "crystechmod:tiberium_leather"
     }
   },
   "pattern": [
-    "LLL",
+    "ILI",
     "LGL",
     "   "
   ],

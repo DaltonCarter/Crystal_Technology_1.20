@@ -14,11 +14,11 @@
                 "energyAmount": 10,
                 "ingredients": [
                     {
-                        "item": "thermal_foundation:electrum_dust"
+                        "item": "thermal:electrum_dust"
                     }
                 ],
                 "output": {
-                    "item": "thermal_foundation:electrum_ingot"
+                    "item": "thermal:electrum_ingot"
                 }
             }
         }

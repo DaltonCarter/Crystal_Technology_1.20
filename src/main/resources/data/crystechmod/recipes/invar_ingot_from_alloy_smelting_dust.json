@@ -21,12 +21,12 @@
             "item": "crystechmod:iron_dust"
           },
           {
-            "item": "thermal_foundation:nickel_dust"
+            "item": "thermal:nickel_dust"
           }
         ],
         "output": {
           "count": 3,
-          "item": "thermal_foundation:invar_ingot"
+          "item": "thermal:invar_ingot"
         }
       }
     }

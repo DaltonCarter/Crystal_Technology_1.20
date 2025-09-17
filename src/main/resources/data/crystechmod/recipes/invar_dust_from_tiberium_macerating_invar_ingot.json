@@ -14,13 +14,13 @@
                 "energyAmount": 20,
                 "ingredients": [
                     {
-                        "item": "thermal_foundation:invar_ingot"
+                        "item": "thermal:invar_ingot"
                     }
                 ],
                 "multiply": false,
                 "output": {
                     "count": 1,
-                    "item": "thermal_foundation:invar_dust"
+                    "item": "thermal:invar_dust"
                 }
             }
         }

@@ -14,13 +14,13 @@
                 "energyAmount": 20,
                 "ingredients": [
                     {
-                        "item": "thermal_foundation:apatite_ore"
+                        "item": "thermal:apatite_ore"
                     }
                 ],
                 "multiply": true,
                 "output": {
-                    "count": 1,
-                    "item": "thermal_foundation:apatite"
+                    "count": 2,
+                    "item": "thermal:apatite"
                 }
             }
         }

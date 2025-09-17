@@ -18,7 +18,7 @@
                 "energyAmount": 20,
                 "ingredients": [
                     {
-                        "item": "thermal_foundation:sulfur"
+                        "item": "thermal:sulfur"
                     }
                 ],
                 "multiply": false,

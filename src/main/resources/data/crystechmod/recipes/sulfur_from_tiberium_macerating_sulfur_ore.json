@@ -14,13 +14,13 @@
                 "energyAmount": 20,
                 "ingredients": [
                     {
-                        "item": "thermal_foundation:sulfur_ore"
+                        "item": "thermal:sulfur_ore"
                     }
                 ],
                 "multiply": true,
                 "output": {
-                    "count": 1,
-                    "item": "thermal_foundation:sulfur"
+                    "count": 2,
+                    "item": "thermal:sulfur"
                 }
             }
         }

@@ -2480,35 +2480,39 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HAZMAT_MK1_HELMET.get())
-                .pattern("LLL")
+                .pattern("ILI")
                 .pattern("LGL")
                 .pattern("   ")
                 .define('L', ModItems.TIBERIUM_LEATHER.get())
                 .define('G', ModTags.Items.HAZMAT_GLASS_PANES)
+                .define('I', ModItems.GUNDANIUM_INGOT.get())
                 .unlockedBy(getHasName(ModItems.TIBERIUM_LEATHER.get()), has(ModItems.TIBERIUM_LEATHER.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HAZMAT_MK1_CHESTPLATE.get())
-                .pattern("L L")
-                .pattern("LLL")
-                .pattern("LLL")
+                .pattern("I I")
+                .pattern("LIL")
+                .pattern("LIL")
                 .define('L', ModItems.TIBERIUM_LEATHER.get())
+                .define('I', ModItems.GUNDANIUM_INGOT.get())
                 .unlockedBy(getHasName(ModItems.TIBERIUM_LEATHER.get()), has(ModItems.TIBERIUM_LEATHER.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HAZMAT_MK1_LEGGINGS.get())
-                .pattern("LLL")
-                .pattern("L L")
+                .pattern("LIL")
+                .pattern("I I")
                 .pattern("L L")
                 .define('L', ModItems.TIBERIUM_LEATHER.get())
+                .define('I', ModItems.GUNDANIUM_INGOT.get())
                 .unlockedBy(getHasName(ModItems.TIBERIUM_LEATHER.get()), has(ModItems.TIBERIUM_LEATHER.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HAZMAT_MK1_BOOTS.get())
                 .pattern("   ")
                 .pattern("L L")
-                .pattern("L L")
+                .pattern("I I")
                 .define('L', ModItems.TIBERIUM_LEATHER.get())
+                .define('I', ModItems.GUNDANIUM_INGOT.get())
                 .unlockedBy(getHasName(ModItems.TIBERIUM_LEATHER.get()), has(ModItems.TIBERIUM_LEATHER.get()))
                 .save(consumer);
 

@@ -18,7 +18,10 @@
               "item": "minecraft:copper_ingot"
            },
            {
-             "item": "thermal_foundation:nickel_ingot"
+             "item": "thermal:nickel_ingot"
+          },
+          {
+            "item": "minecraft:empty"
           }
         ],
         "output": {

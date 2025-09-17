@@ -14,13 +14,13 @@
                 "energyAmount": 20,
                 "ingredients": [
                     {
-                        "item": "thermal_foundation:deepslate_cinnabar_ore"
+                        "item": "thermal:deepslate_cinnabar_ore"
                     }
                 ],
                 "multiply": true,
                 "output": {
-                    "count": 1,
-                    "item": "thermal_foundation:cinnabar"
+                    "count": 2,
+                    "item": "thermal:cinnabar"
                 }
             }
         }

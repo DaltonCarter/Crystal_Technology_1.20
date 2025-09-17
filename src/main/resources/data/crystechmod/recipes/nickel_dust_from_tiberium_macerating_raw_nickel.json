@@ -5,7 +5,7 @@
             "conditions": [
                 {
                     "type": "forge:mod_loaded",
-                    "modid": "thermal_foundation"
+                    "modid": "railcraft"
                 }
             ],
             "recipe": {
@@ -14,13 +14,13 @@
                 "energyAmount": 20,
                 "ingredients": [
                     {
-                        "item": "thermal_foundation:raw_nickel"
+                        "item": "railcraft:nickel_raw"
                     }
                 ],
                 "multiply": true,
                 "output": {
                     "count": 2,
-                    "item": "thermal_foundation:nickel_dust"
+                    "item": "thermal:nickel_dust"
                 }
             }
         }

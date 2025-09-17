@@ -14,13 +14,13 @@
                 "energyAmount": 20,
                 "ingredients": [
                     {
-                        "item": "thermal_foundation:deepslate_apatite_ore"
+                        "item": "thermal:deepslate_apatite_ore"
                     }
                 ],
                 "multiply": true,
                 "output": {
-                    "count": 1,
-                    "item": "thermal_foundation:apatite"
+                    "count": 2,
+                    "item": "thermal:apatite"
                 }
             }
         }
