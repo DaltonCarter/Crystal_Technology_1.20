@@ -1,0 +1,32 @@
+{
+    "type": "forge:conditional",
+    "recipes": [
+        {
+            "conditions": [
+                {
+                    "type": "forge:mod_loaded",
+                    "modid": "xycraft_world"
+                },
+              {
+                "type": "forge:mod_loaded",
+                "modid": "jaopca"
+              }
+            ],
+            "recipe": {
+                "type": "crystechmod:tiberium_macerating",
+                "craftTime": 200,
+                "energyAmount": 20,
+                "ingredients": [
+                    {
+                        "item": "xycraft_world:aluminum_ore_kivi"
+                    }
+                ],
+                "multiply": true,
+                "output": {
+                    "count": 2,
+                    "item": "jaopca:dusts.aluminum"
+                }
+            }
+        }
+    ]
+}

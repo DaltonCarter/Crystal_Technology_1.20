@@ -1,0 +1,28 @@
+{
+    "type": "forge:conditional",
+    "recipes": [
+        {
+            "conditions": [
+                {
+                    "type": "forge:mod_loaded",
+                    "modid": "xycraft_world"
+                }
+            ],
+            "recipe": {
+                "type": "crystechmod:tiberium_macerating",
+                "craftTime": 200,
+                "energyAmount": 20,
+                "ingredients": [
+                    {
+                        "item": "xycraft_world:xychorium_ore_deepslate_green"
+                    }
+                ],
+                "multiply": true,
+                "output": {
+                    "count": 2,
+                    "item": "xycraft_world:xychorium_gem_green"
+                }
+            }
+        }
+    ]
+}

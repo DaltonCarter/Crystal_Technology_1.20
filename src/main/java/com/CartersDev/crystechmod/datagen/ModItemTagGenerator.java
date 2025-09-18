@@ -162,6 +162,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         Items.COD,
                         Items.SALMON,
                         Items.POTATO,
+                        Items.QUARTZ,
                         Items.RAW_IRON,
                         Items.RAW_COPPER,
                         Items.RAW_GOLD,

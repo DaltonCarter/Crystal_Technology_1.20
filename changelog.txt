@@ -577,6 +577,15 @@ Posted By: Dalton Carter
 -Added handling for Processing Thermal Foundation & Series with Mod Machines.
 -Added handling for SOME Processing EnderIO with Mod Machines.
 
+------------------------------------------------------------------------------
+
+9/17/2025
+Version 0.6.2
+Posted By: Dalton Carter
+
+
+-Added handling for Processing Xycraft:World ores with Mod Machines.
+-Added handling for Processing some AE2 items with Mod Machines.
 
 
 ======================================================

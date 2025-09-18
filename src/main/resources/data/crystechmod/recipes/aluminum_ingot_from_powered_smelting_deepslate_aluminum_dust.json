@@ -1,0 +1,31 @@
+{
+    "type": "forge:conditional",
+    "recipes": [
+        {
+            "conditions": [
+                {
+                    "type": "forge:mod_loaded",
+                    "modid": "xycraft_world"
+                },
+              {
+                "type": "forge:mod_loaded",
+                "modid": "jaopca"
+              }
+
+            ],
+            "recipe": {
+                "type": "crystechmod:powered_smelting",
+                "craftTime": 150,
+                "energyAmount": 10,
+                "ingredients": [
+                    {
+                        "item": "jaopca:dusts.aluminum"
+                    }
+                ],
+                "output": {
+                    "item": "xycraft_world:aluminum_ingot"
+                }
+            }
+        }
+    ]
+}

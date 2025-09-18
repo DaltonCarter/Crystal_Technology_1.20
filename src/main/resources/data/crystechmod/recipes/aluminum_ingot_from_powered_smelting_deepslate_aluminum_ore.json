@@ -1,0 +1,27 @@
+{
+    "type": "forge:conditional",
+    "recipes": [
+        {
+            "conditions": [
+                {
+                    "type": "forge:mod_loaded",
+                    "modid": "xycraft_world"
+                }
+
+            ],
+            "recipe": {
+                "type": "crystechmod:powered_smelting",
+                "craftTime": 150,
+                "energyAmount": 10,
+                "ingredients": [
+                    {
+                        "item": "xycraft_world:aluminum_ore_deepslate"
+                    }
+                ],
+                "output": {
+                    "item": "xycraft_world:aluminum_ingot"
+                }
+            }
+        }
+    ]
+}

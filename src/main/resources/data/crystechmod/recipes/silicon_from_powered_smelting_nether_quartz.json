@@ -1,0 +1,27 @@
+{
+    "type": "forge:conditional",
+    "recipes": [
+        {
+            "conditions": [
+                {
+                    "type": "forge:mod_loaded",
+                    "modid": "ae2"
+                }
+
+            ],
+            "recipe": {
+                "type": "crystechmod:powered_smelting",
+                "craftTime": 150,
+                "energyAmount": 10,
+                "ingredients": [
+                    {
+                        "item": "minecraft:quartz"
+                    }
+                ],
+                "output": {
+                    "item": "ae2:silicon"
+                }
+            }
+        }
+    ]
+}

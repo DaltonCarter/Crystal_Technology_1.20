@@ -1,0 +1,28 @@
+{
+    "type": "forge:conditional",
+    "recipes": [
+        {
+            "conditions": [
+                {
+                    "type": "forge:mod_loaded",
+                    "modid": "ae2"
+                }
+            ],
+            "recipe": {
+                "type": "crystechmod:tiberium_macerating",
+                "craftTime": 200,
+                "energyAmount": 20,
+                "ingredients": [
+                    {
+                        "item": "ae2:fluix_crystal"
+                    }
+                ],
+                "multiply": false,
+                "output": {
+                    "count": 2,
+                    "item": "ae2:fluix_dust"
+                }
+            }
+        }
+    ]
+}
