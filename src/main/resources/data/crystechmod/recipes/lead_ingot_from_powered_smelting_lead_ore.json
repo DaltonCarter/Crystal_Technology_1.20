@@ -10,13 +10,16 @@
             ],
             "recipe": {
                 "type": "crystechmod:powered_smelting",
-                "craftTime": 150,
-                "energyAmount": 10,
-                "ingredients": [
-                    {
-                        "item": "mekanism:lead_ore"
-                    }
-                ],
+              "craftTime": 200,
+              "energyAmount": 10,
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "tag": "forge:ores/lead"
+                  }
+                }
+              ],
                 "output": {
                     "item": "mekanism:ingot_lead"
                 }

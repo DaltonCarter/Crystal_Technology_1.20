@@ -6,6 +6,8 @@ import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.TiberiumMaceratorRecipe;
 import com.CartersDev.crystechmod.screen.maceratorMenu.VitricTiberiumMaceratorMenu;
 import com.CartersDev.crystechmod.util.*;
+import com.CartersDev.crystechmod.util.inventory.InventoryDirectionEntry;
+import com.CartersDev.crystechmod.util.inventory.InventoryDirectionWrapper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;

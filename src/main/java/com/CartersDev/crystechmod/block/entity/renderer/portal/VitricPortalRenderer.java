@@ -27,6 +27,7 @@ public class VitricPortalRenderer<T extends VitricPortalBlockEntity> implements 
     private void renderCube(T pBlockEntity, Matrix4f pPose, VertexConsumer pConsumer) {
         float f = this.getOffsetDown();
         float f1 = this.getOffsetUp();
+
         this.renderFace(pBlockEntity, pPose, pConsumer, 0.0F, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 1.0F, 1.0F, Direction.SOUTH);
         this.renderFace(pBlockEntity, pPose, pConsumer, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, Direction.NORTH);
         this.renderFace(pBlockEntity, pPose, pConsumer, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, 1.0F, 0.0F, Direction.EAST);

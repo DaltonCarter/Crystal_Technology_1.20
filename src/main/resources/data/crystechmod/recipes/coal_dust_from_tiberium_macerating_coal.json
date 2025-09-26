@@ -12,11 +12,14 @@
                 "type": "crystechmod:tiberium_macerating",
                 "craftTime": 200,
                 "energyAmount": 20,
-                "ingredients": [
-                    {
-                        "item": "minecraft:coal"
-                    }
-                ],
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "item": "minecraft:coal"
+                  }
+                }
+              ],
                 "multiply": false,
                 "output": {
                     "count": 1,
@@ -26,3 +29,4 @@
         }
     ]
 }
+

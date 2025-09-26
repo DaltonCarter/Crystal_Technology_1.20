@@ -1,0 +1,19 @@
+{
+  "type": "crystechmod:tiberium_macerating",
+  "craftTime": 200,
+  "energyAmount": 20,
+  "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:ores/iron"
+      }
+    }
+  ],
+  "multiply": false,
+  "output": {
+    "count": 2,
+    "item": "crystechmod:iron_dust"
+  }
+}
+

@@ -12,11 +12,14 @@
                 "type": "crystechmod:tiberium_macerating",
                 "craftTime": 200,
                 "energyAmount": 20,
-                "ingredients": [
-                    {
-                        "item": "mekanism:raw_uranium"
-                    }
-                ],
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "tag": "forge:raw_materials/uranium"
+                  }
+                }
+              ],
                 "multiply": true,
                 "output": {
                     "count": 2,

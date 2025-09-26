@@ -10,13 +10,16 @@
             ],
             "recipe": {
                 "type": "crystechmod:powered_smelting",
-                "craftTime": 150,
-                "energyAmount": 10,
-                "ingredients": [
-                    {
-                        "item": "thermal:nickel_dust"
-                    }
-                ],
+              "craftTime": 200,
+              "energyAmount": 10,
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "item": "thermal:nickel_dust"
+                  }
+                }
+              ],
                 "output": {
                     "item": "railcraft:nickel_ingot"
                 }

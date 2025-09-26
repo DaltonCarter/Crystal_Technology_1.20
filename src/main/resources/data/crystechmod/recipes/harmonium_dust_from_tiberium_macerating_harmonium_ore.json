@@ -4,7 +4,10 @@
   "energyAmount": 20,
   "ingredients": [
     {
-      "item": "crystechmod:harmonium_ore"
+      "count": 1,
+      "ingredient": {
+        "tag": "crystechmod:harmonium_ores"
+      }
     }
   ],
   "multiply": true,

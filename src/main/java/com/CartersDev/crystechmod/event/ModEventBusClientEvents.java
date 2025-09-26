@@ -107,6 +107,9 @@ public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
     Minecraft.getInstance().particleEngine.register(ModParticles.ABOREUS_PARTICLES.get(),
             AboreusParticles.Provider::new);
 
+    Minecraft.getInstance().particleEngine.register(ModParticles.BLUE_FLAME_PARTICLES.get(),
+            BlueFlameParticles.Provider::new);
+
     Minecraft.getInstance().particleEngine.register(ModParticles.SMALL_ABOREUS_PARTICLES.get(),
             AboreusParticles.SmallAboreusProvider::new);
 

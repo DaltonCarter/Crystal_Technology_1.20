@@ -12,17 +12,21 @@
                 "type": "crystechmod:tiberium_macerating",
                 "craftTime": 200,
                 "energyAmount": 20,
-                "ingredients": [
-                    {
-                        "item": "occultism:raw_iesnium"
-                    }
-                ],
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "item": "occultism:raw_iesnium"
+                  }
+                }
+              ],
                 "multiply": true,
                 "output": {
                     "count": 2,
-                    "item": "occultism:silver_iesnium"
+                    "item": "occultism:iesnium_dust"
                 }
             }
         }
     ]
 }
+

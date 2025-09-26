@@ -4,13 +4,22 @@
   "energyAmount": 20,
   "ingredients": [
     {
-      "item": "crystechmod:lg_core_ingot"
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:lg_core_ingot"
+      }
     },
     {
-      "item": "crystechmod:ichor_composite_ingot"
+      "count": 2,
+      "ingredient": {
+        "item": "crystechmod:ichor_composite_ingot"
+      }
     },
     {
-      "item": "crystechmod:harmonium_ingot"
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:proto_steel"
+      }
     }
   ],
   "output": {

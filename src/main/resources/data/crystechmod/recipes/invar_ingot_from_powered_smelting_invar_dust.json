@@ -10,13 +10,16 @@
             ],
             "recipe": {
                 "type": "crystechmod:powered_smelting",
-                "craftTime": 150,
-                "energyAmount": 10,
-                "ingredients": [
-                    {
-                        "item": "thermal:invar_dust"
-                    }
-                ],
+              "craftTime": 200,
+              "energyAmount": 10,
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "item": "thermal:invar_dust"
+                  }
+                }
+              ],
                 "output": {
                     "item": "thermal:invar_ingot"
                 }

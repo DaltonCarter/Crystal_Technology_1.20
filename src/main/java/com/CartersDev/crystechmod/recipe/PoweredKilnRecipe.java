@@ -1,6 +1,7 @@
 package com.CartersDev.crystechmod.recipe;
 
 import com.CartersDev.crystechmod.CrystalTech;
+import com.CartersDev.crystechmod.util.crafting.CountedIngredient;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.core.NonNullList;
@@ -14,15 +15,18 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PoweredKilnRecipe implements Recipe<SimpleContainer> {
 
-    private final NonNullList<Ingredient> inputItems;
+    private final List<CountedIngredient> inputItems;
     private final ItemStack output;
     private final ResourceLocation id;
     private final int craftTime;
     private final int energyAmount;
 
-    public PoweredKilnRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> inputItems, int craftTime, int energyAmount) {
+    public PoweredKilnRecipe(ResourceLocation id, ItemStack output, List<CountedIngredient> inputItems, int craftTime, int energyAmount) {
         this.inputItems = inputItems;
         this.output = output;
         this.id = id;
@@ -38,6 +42,10 @@ public class PoweredKilnRecipe implements Recipe<SimpleContainer> {
         }
 
         return inputItems.get(0).test(pContainer.getItem(0));
+    }
+
+    public List<CountedIngredient> getInputItems() {
+        return inputItems;
     }
 
     @Override
@@ -57,7 +65,7 @@ public class PoweredKilnRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public NonNullList<Ingredient> getIngredients() {
-        return this.inputItems;
+        return NonNullList.of(Ingredient.EMPTY, inputItems.stream().map(CountedIngredient::ingredient).toArray(Ingredient[]::new));
     }
 
     public int getCraftTime() {
@@ -102,11 +110,10 @@ public class PoweredKilnRecipe implements Recipe<SimpleContainer> {
 
 
 
-            JsonArray ingredients = GsonHelper.getAsJsonArray(pSerializedRecipe, "ingredients");
-            NonNullList<Ingredient> inputs = NonNullList.withSize(1, Ingredient.EMPTY);
-
-            for(int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
+            JsonArray jsonInputs = pSerializedRecipe.getAsJsonArray("ingredients");
+            List<CountedIngredient> inputs = new ArrayList<>(jsonInputs.size());
+            for (int i = 0; i < jsonInputs.size(); i++) {
+                inputs.add(i, CountedIngredient.fromJson(jsonInputs.get(i).getAsJsonObject()));
             }
 
             int craftTime = pSerializedRecipe.get("craftTime").getAsInt();
@@ -119,12 +126,7 @@ public class PoweredKilnRecipe implements Recipe<SimpleContainer> {
 
         @Override
         public @Nullable PoweredKilnRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
-            NonNullList<Ingredient> inputs = NonNullList.withSize(pBuffer.readInt(), Ingredient.EMPTY);
-
-
-            for(int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromNetwork(pBuffer));
-            }
+            List<CountedIngredient> inputs = pBuffer.readList(CountedIngredient::fromNetwork);
 
             int craftTime = pBuffer.readInt();
             int energyAmount = pBuffer.readInt();
@@ -135,11 +137,7 @@ public class PoweredKilnRecipe implements Recipe<SimpleContainer> {
         @Override
         public void toNetwork(FriendlyByteBuf pBuffer, PoweredKilnRecipe pRecipe) {
 
-            pBuffer.writeInt(pRecipe.inputItems.size());
-
-            for(Ingredient ingredient : pRecipe.getIngredients()) {
-                ingredient.toNetwork(pBuffer);
-            }
+            pBuffer.writeCollection(pRecipe.inputItems, (buf, ing) -> ing.toNetwork(buf));
 
             pBuffer.writeInt(pRecipe.craftTime);
             pBuffer.writeInt(pRecipe.energyAmount);

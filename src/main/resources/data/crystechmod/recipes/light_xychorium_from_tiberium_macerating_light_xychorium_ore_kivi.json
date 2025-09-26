@@ -12,11 +12,15 @@
                 "type": "crystechmod:tiberium_macerating",
                 "craftTime": 200,
                 "energyAmount": 20,
-                "ingredients": [
-                    {
-                        "item": "xycraft_world:xychorium_ore_kivi_light"
-                    }
-                ],
+
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "item": "xycraft_world:xychorium_ore_kivi_light"
+                  }
+                }
+              ],
                 "multiply": true,
                 "output": {
                     "count": 2,

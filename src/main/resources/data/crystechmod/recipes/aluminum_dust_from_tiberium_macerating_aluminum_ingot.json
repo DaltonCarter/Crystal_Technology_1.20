@@ -16,11 +16,14 @@
                 "type": "crystechmod:tiberium_macerating",
                 "craftTime": 200,
                 "energyAmount": 20,
-                "ingredients": [
-                    {
-                        "item": "xycraft_world:aluminum_ingot"
-                    }
-                ],
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "item": "xycraft_world:aluminum_ingot"
+                  }
+                }
+              ],
                 "multiply": false,
                 "output": {
                     "count": 1,
@@ -30,3 +33,4 @@
         }
     ]
 }
+

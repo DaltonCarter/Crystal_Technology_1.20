@@ -4,7 +4,10 @@
   "energyAmount": 5,
   "ingredients": [
     {
-      "item": "crystechmod:tiberium"
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:tiberium"
+      }
     }
   ],
   "multiply": true,

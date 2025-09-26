@@ -14,16 +14,26 @@
         "craftTime": 200,
         "energyAmount": 24,
         "ingredients": [
-            {
-              "item": "minecraft:redstone"
-           },
-          {
-            "item": "minecraft:gold_ingot"
-          },
-           {
-             "item": "minecraft:glowstone_dust"
-          }
-        ],
+    {
+      "count": 1,
+      "ingredient": {
+           "tag": "forge:dusts/redstone"
+      }
+    },
+	{
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:ingots/gold"
+      }
+    },
+    
+    {
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:dusts/glowstone"
+      }
+    }
+  ],
         "output": {
           "count": 1,
           "item": "enderio:energetic_alloy_ingot"

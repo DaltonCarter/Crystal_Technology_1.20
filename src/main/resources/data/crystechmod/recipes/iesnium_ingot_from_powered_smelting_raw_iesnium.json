@@ -10,13 +10,16 @@
             ],
             "recipe": {
                 "type": "crystechmod:powered_smelting",
-                "craftTime": 150,
-                "energyAmount": 10,
-                "ingredients": [
-                    {
-                        "item": "occultism:raw_iesnium"
-                    }
-                ],
+              "craftTime": 200,
+              "energyAmount": 10,
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "item": "occultism:raw_iesnium"
+                  }
+                }
+              ],
                 "output": {
                     "item": "occultism:iesnium_ingot"
                 }

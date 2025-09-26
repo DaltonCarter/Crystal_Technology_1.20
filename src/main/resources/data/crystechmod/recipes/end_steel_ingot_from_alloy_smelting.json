@@ -14,16 +14,25 @@
         "craftTime": 200,
         "energyAmount": 24,
         "ingredients": [
-            {
-              "item": "minecraft:end_stone"
-           },
-          {
-            "item": "enderio:dark_steel_ingot"
-          },
-           {
-             "item": "minecraft:obsidian"
-          }
-        ],
+    {
+      "count": 1,
+      "ingredient": {
+         "item": "minecraft:end_stone"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+          "tag": "forge:ingots/dark_steel"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:obsidian"
+      }
+    }
+  ],
         "output": {
           "count": 1,
           "item": "enderio:end_steel_ingot"

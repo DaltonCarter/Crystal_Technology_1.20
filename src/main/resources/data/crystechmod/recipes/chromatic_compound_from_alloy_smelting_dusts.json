@@ -1,0 +1,44 @@
+
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "create"
+        }
+      ],
+      "recipe": {
+        "type": "crystechmod:alloy_smelting",
+        "craftTime": 200,
+        "energyAmount": 16,
+        "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:dusts/glowstone"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:dusts/obsidian"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "item": "create:polished_rose_quartz"
+      }
+    }
+  ],
+        "output": {
+          "count": 1,
+          "item": "create:chromatic_compound"
+        }
+      }
+    }
+
+  ]
+}

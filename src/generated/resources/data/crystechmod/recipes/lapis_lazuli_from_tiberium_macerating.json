@@ -1,0 +1,18 @@
+{
+  "type": "crystechmod:tiberium_macerating",
+  "craftTime": 200,
+  "energyAmount": 15,
+  "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:ores/lapis"
+      }
+    }
+  ],
+  "multiply": true,
+  "output": {
+    "count": 2,
+    "item": "minecraft:lapis_lazuli"
+  }
+}

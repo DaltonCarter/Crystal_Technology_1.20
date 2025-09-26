@@ -7,26 +7,39 @@
         {
           "type": "forge:mod_loaded",
           "modid": "thermal_foundation"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "railcraft"
         }
       ],
       "recipe": {
         "type": "crystechmod:alloy_smelting",
-        "craftTime": 150,
-        "energyAmount": 10,
+        "craftTime": 200,
+        "energyAmount": 16,
         "ingredients": [
-            {
-              "item": "minecraft:copper_ingot"
-           },
-           {
-             "item": "thermal:nickel_ingot"
-          },
-          {
-            "item": "minecraft:empty"
-          }
-        ],
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:ingots/copper"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:ingots/copper"
+      }
+    },
+    {
+      "count": 2,
+      "ingredient": {
+        "item": "railcraft:nickel_ingot"
+      }
+    }
+  ],
         "output": {
-          "count": 2,
-          "item": "thermal_foundation:constantan_ingot"
+          "count": 4,
+          "item": "thermal:constantan_ingot"
         }
       }
     }

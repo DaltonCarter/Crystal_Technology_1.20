@@ -1,0 +1,29 @@
+
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "treemod"
+        }
+      ],
+      "recipe": {
+        "type": "crystechmod:vitric_refining",
+        "craftTime": 200,
+        "energyAmount": 20,
+        "fluidAmount": 1000,
+        "fluidType": "crystechmod:tiberium_water_source",
+        "ingredients": [
+          {
+            "item": "treemod:soap"
+          }
+        ],
+        "output": {},
+        "outputFluidAmount": 1000,
+        "outputFluidType": "treemod:soap_water_fluid"
+        }
+      }
+  ]
+}

@@ -12,11 +12,14 @@
                 "type": "crystechmod:tiberium_macerating",
                 "craftTime": 200,
                 "energyAmount": 20,
-                "ingredients": [
-                    {
-                        "item": "xycraft_world:xychorium_ore_deepslate_blue"
-                    }
-                ],
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "item": "xycraft_world:xychorium_ore_deepslate_blue"
+                  }
+                }
+              ],
                 "multiply": true,
                 "output": {
                     "count": 2,

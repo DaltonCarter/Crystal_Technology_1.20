@@ -4,7 +4,10 @@
   "energyAmount": 20,
   "ingredients": [
     {
-      "item": "crystechmod:gundanium_ore"
+      "count": 1,
+      "ingredient": {
+        "tag": "crystechmod:gundanium_ores"
+      }
     }
   ],
   "multiply": true,

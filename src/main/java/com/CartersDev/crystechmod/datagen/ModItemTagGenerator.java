@@ -31,6 +31,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
 
     this.copy(ModTags.Blocks.TIBERCRETE_SANDS, ModTags.Items.TIBERCRETE_SANDS);
+    this.copy(ModTags.Blocks.VITRIC_SANDS, ModTags.Items.VITRIC_SANDS);
 
         this.copy(ModTags.Blocks.HAZMAT_GLASS_PANES, ModTags.Items.HAZMAT_GLASS_PANES);
         this.copy(ModTags.Blocks.CONCRETES, ModTags.Items.CONCRETES);
@@ -63,6 +64,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(
                         ModItems.PLAGUED_STICK.get()
                 );
+
 
         this.tag(Tags.Items.DUSTS)
                 .add(
@@ -117,10 +119,19 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         Items.COPPER_INGOT,
                         Items.GOLD_INGOT,
                         Items.NETHERITE_INGOT,
-                        Items.MAGMA_BLOCK
+                        Items.MAGMA_BLOCK,
+                        Items.END_STONE,
+                        Items.COAL,
+                        Items.SOUL_SAND,
+                        Items.SOUL_SOIL,
+                        Items.CLAY_BALL
 
                 )
-                .addTag(Tags.Items.INGOTS);
+                .addTags(Tags.Items.INGOTS,
+                        Tags.Items.DUSTS,
+                        Tags.Items.OBSIDIAN,
+
+                        Tags.Items.ENDER_PEARLS);
 
         this.tag(ModTags.Items.ALLOYING_RESULT)
                 .add(

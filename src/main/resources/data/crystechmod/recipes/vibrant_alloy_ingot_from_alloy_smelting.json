@@ -14,16 +14,28 @@
         "craftTime": 200,
         "energyAmount": 24,
         "ingredients": [
-          {
-            "item": "enderio:energetic_alloy_ingot"
-          },
-          {
-              "item": "minecraft:ender_pearl"
-           }
-
-        ],
+    {
+      "count": 2,
+      "ingredient": {
+          "tag": "forge:ingots/energetic_alloy"
+      }
+    },
+	{
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:ender_pearls"
+      }
+    },
+    
+    {
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:ender_pearls"
+      }
+    }
+  ],
         "output": {
-          "count": 1,
+          "count": 2,
           "item": "enderio:vibrant_alloy_ingot"
         }
       }

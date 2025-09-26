@@ -11,13 +11,16 @@
             ],
             "recipe": {
                 "type": "crystechmod:powered_smelting",
-                "craftTime": 150,
-                "energyAmount": 10,
-                "ingredients": [
-                    {
-                        "item": "ae2:certus_quartz_dust"
-                    }
-                ],
+              "craftTime": 200,
+              "energyAmount": 10,
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "item": "ae2:certus_quartz_dust"
+                  }
+                }
+              ],
                 "output": {
                     "item": "ae2:silicon"
                 }

@@ -12,11 +12,14 @@
                 "type": "crystechmod:tiberium_macerating",
                 "craftTime": 200,
                 "energyAmount": 20,
-                "ingredients": [
-                    {
-                        "item": "mekanism:osmium_ore"
-                    }
-                ],
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "tag": "forge:ores/osmium"
+                  }
+                }
+              ],
                 "multiply": true,
                 "output": {
                     "count": 2,

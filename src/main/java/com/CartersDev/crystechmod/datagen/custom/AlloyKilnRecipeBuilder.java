@@ -2,6 +2,7 @@ package com.CartersDev.crystechmod.datagen.custom;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.recipe.AlloyKilnRecipe;
+import com.CartersDev.crystechmod.util.crafting.CountedIngredient;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.advancements.Advancement;
@@ -19,30 +20,21 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
+import java.util.List;
 import java.util.function.Consumer;
 
 public class AlloyKilnRecipeBuilder implements RecipeBuilder {
     private final Item result;
-    private final Ingredient ingredient;
-//    private final int inputCount1;
-    private final Ingredient ingredient2;
-//    private final int inputCount2;
-    private final Ingredient ingredient3;
-//    private final int inputCount3;
+    private final List<CountedIngredient> inputs;
     private final int count;
     private final int craftTime;
     private final int energyAmount;
 
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
 
-    public AlloyKilnRecipeBuilder(ItemLike ingredient, ItemLike ingredient2, ItemLike ingredient3, ItemLike result, int count, int craftTime, int energyAmount) {
-        this.ingredient = Ingredient.of(ingredient);
-//        this.inputCount1 = inputCount1;
-        this.ingredient2 = Ingredient.of(ingredient2);
-//        this.inputCount2 = inputCount2;
-        this.ingredient3 = Ingredient.of(ingredient3);
-//        this.inputCount3 = inputCount3;
-        this.result = result.asItem();
+    public AlloyKilnRecipeBuilder(List<CountedIngredient> inputs, Item result, int count, int craftTime, int energyAmount) {
+        this.inputs = inputs;
+        this.result = result;
         this.count = count;
         this.craftTime = craftTime;
         this.energyAmount = energyAmount;
@@ -70,8 +62,7 @@ public class AlloyKilnRecipeBuilder implements RecipeBuilder {
                 .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(pRecipeId))
                 .rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
 
-        pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.count, this.ingredient, this.ingredient2,
-                this.ingredient3 , this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/"
+        pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.count, this.inputs, this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/"
                 + pRecipeId.getPath()), craftTime, energyAmount));
 
     }
@@ -79,12 +70,8 @@ public class AlloyKilnRecipeBuilder implements RecipeBuilder {
     public static class Result implements FinishedRecipe {
         private final ResourceLocation id;
         private final Item result;
-        private final Ingredient ingredient;
-//        private final int inputCount1;
-        private final Ingredient ingredient2;
-//        private final int inputCount2;
-        private final Ingredient ingredient3;
-//        private final int inputCount3;
+        private final List<CountedIngredient> inputs;
+
 
         private final int count;
         private final int craftTime;
@@ -93,18 +80,13 @@ public class AlloyKilnRecipeBuilder implements RecipeBuilder {
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
 
-        public Result(ResourceLocation pId, Item pResult, int pCount, Ingredient ingredient, Ingredient ingredient2,
-                      Ingredient ingredient3, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId, int craftTime, int energyAmount) {
+        public Result(ResourceLocation pId, Item pResult, int pCount, List<CountedIngredient> inputs, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId, int craftTime, int energyAmount) {
             this.id = pId;
             this.result = pResult;
             this.count = pCount;
 
-            this.ingredient = ingredient;
-//            this.inputCount1 = inputCount1;
-            this.ingredient2 = ingredient2;
-//            this.inputCount2 = inputCount2;
-            this.ingredient3 = ingredient3;
-//            this.inputCount3 = inputCount3;
+            this.inputs = inputs;
+
             this.craftTime = craftTime;
             this.energyAmount = energyAmount;
             this.advancement = pAdvancement;
@@ -113,28 +95,14 @@ public class AlloyKilnRecipeBuilder implements RecipeBuilder {
 
         @Override
         public void serializeRecipeData(JsonObject pJson) {
-            JsonArray jsonarray = new JsonArray();
-            jsonarray.add(ingredient.toJson());
-            jsonarray.add(ingredient2.toJson());
-            jsonarray.add(ingredient3.toJson());
 
-            pJson.add("ingredients", jsonarray);
+            JsonArray jsonInputs = new JsonArray(inputs.size());
+            inputs.forEach(ing -> jsonInputs.add(ing.toJson()));
+
+            pJson.add("ingredients", jsonInputs);
+
             JsonObject jsonobject = new JsonObject();
             jsonobject.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
-
-//
-//            if (this.inputCount1 > 1) {
-//                jsonobject.addProperty("inputCount1", this.inputCount1);
-//            }
-//
-//            if (this.inputCount2 > 1) {
-//                jsonobject.addProperty("inputCount2", this.inputCount2);
-//            }
-//
-//            if (this.inputCount3 > 1) {
-//                jsonobject.addProperty("inputCount3", this.inputCount3);
-//            }
-
 
             if (this.count > 1) {
                 jsonobject.addProperty("count", this.count);

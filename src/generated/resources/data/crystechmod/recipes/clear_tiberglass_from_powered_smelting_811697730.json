@@ -1,0 +1,16 @@
+{
+  "type": "crystechmod:powered_smelting",
+  "craftTime": 200,
+  "energyAmount": 16,
+  "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "crystechmod:vitric_sands"
+      }
+    }
+  ],
+  "output": {
+    "item": "crystechmod:clear_tiberglass"
+  }
+}

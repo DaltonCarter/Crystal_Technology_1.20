@@ -11,19 +11,29 @@
       ],
       "recipe": {
         "type": "crystechmod:alloy_smelting",
-        "craftTime": 150,
-        "energyAmount": 10,
+        "craftTime": 200,
+        "energyAmount": 240,
         "ingredients": [
-          {
-            "item": "minecraft:coal"
-          },
-          {
-            "item": "minecraft:iron_ingot"
-          },
-          {
-            "item": "minecraft:iron_ingot"
-          }
-        ],
+    {
+      "count": 2,
+      "ingredient": {
+         "item": "minecraft:coal"
+      }
+    },
+	{
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:ingots/iron"
+      }
+    },
+    
+    {
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:ingots/iron"
+      }
+    }
+  ],
         "output": {
           "count": 2,
           "item": "mekanism:ingot_steel"

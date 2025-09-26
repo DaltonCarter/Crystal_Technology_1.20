@@ -587,6 +587,25 @@ Posted By: Dalton Carter
 -Added handling for Processing Xycraft:World ores with Mod Machines.
 -Added handling for Processing some AE2 items with Mod Machines.
 
+------------------------------------------------------------------------------
+
+9/21/2025 - 9/26/2025
+Version 0.6.5
+Posted By: Dalton Carter
+
+-Fixed Display error for tier 2-4 Refinery
+-Jei compatibility Updated to have "Show all Recipes" appear on all machine tiers, Displays Fluid, Craft Time, and Energy requirements where required.
+-Alloy Kiln Now accepts Ingredients with Counts
+-Updated Firestone to a normal Item
+-Firestone Class renamed Fire Heart for a future Curio
+-Gave Machine Animated Ticks when Active
+-Both kilns and the Macerator can now use Tags for ingredients
+-Removed redundant recipes, now that the Kilns and Macerator can use item tags for ingredients
+-Added new Macerator recipes for Coal, diamond, emerald, lapis, redstone, Aeries, Illumina, Kryon, and Enigma ores
+-Added two recipes for the refinery to make Soap Water from Ches' Glowing Tree Mod
+-Variants for the Impaler Rhino implemented: Green Horn, Blue Horn, Red Horn, Purple Horn
+
+
 
 ======================================================
 LEGACY 1.16.5 Changelog

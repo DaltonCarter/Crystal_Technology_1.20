@@ -18,7 +18,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class TiberiumGrindingCategory implements IRecipeCategory<TiberiumGrinderRecipe> {
     public static final ResourceLocation UID = new ResourceLocation(CrystalTech.MOD_ID, "tiberium_grinding");
-    public static final ResourceLocation TEXTURE = new ResourceLocation(CrystalTech.MOD_ID, "textures/gui/tiberium_grinder.png");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(CrystalTech.MOD_ID, "textures/gui/dummies/tiberium_grinder.png");
 
 public static final RecipeType<TiberiumGrinderRecipe> TIBERIUM_GRINDING_TYPE =
 new RecipeType<>(UID, TiberiumGrinderRecipe.class);
@@ -27,7 +27,7 @@ private final IDrawable background;
 private final IDrawable icon;
 
     public TiberiumGrindingCategory(IGuiHelper helper) {
-        this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 85);
+        this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 83);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.TIBERIUM_GRINDER.get()));
     }
 

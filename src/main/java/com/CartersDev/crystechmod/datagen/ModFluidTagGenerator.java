@@ -71,7 +71,9 @@ public class ModFluidTagGenerator extends FluidTagsProvider {
 
         this.tag(ModTags.Fluids.REFINERY_INPUT)
                 .addTags(FluidTags.LAVA,
-                        ModTags.Fluids.LIQUID_PROTOCULTURE
+                        ModTags.Fluids.LIQUID_PROTOCULTURE,
+                        FluidTags.WATER
+
                 );
 
 

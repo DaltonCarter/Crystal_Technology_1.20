@@ -8,8 +8,11 @@ import com.CartersDev.crystechmod.fluid.ModFluidTypes;
 import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.util.ModTags;
+import com.CartersDev.crystechmod.util.crafting.CountedIngredient;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -21,6 +24,7 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Iterator;
@@ -4473,88 +4477,117 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
 
 
-
 //Tiberium Macerator:
         //Ores
             //Vanilla
-        new TiberiumMaceratorRecipeBuilder(Items.RAW_IRON, ModItems.IRON_DUST.get(), 2, 100, 10, true)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(Tags.Items.RAW_MATERIALS_IRON)), ModItems.IRON_DUST.get(), 2, 150, 15, true)
                 .unlockedBy("has_iron_ore", has(Blocks.IRON_ORE)).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(Items.RAW_COPPER, ModItems.COPPER_DUST.get(),2,  100, 10, true)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(Tags.Items.RAW_MATERIALS_COPPER)), ModItems.COPPER_DUST.get(),2,  150, 15, true)
                 .unlockedBy("has_copper_ore", has(Blocks.COPPER_ORE)).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(Items.RAW_GOLD, ModItems.GOLD_DUST.get(), 2,  100, 10, true)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(Tags.Items.RAW_MATERIALS_GOLD)), ModItems.GOLD_DUST.get(), 2,  150, 15, true)
                 .unlockedBy("has_gold_ore", has(Blocks.GOLD_ORE)).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(Blocks.ANCIENT_DEBRIS, Items.NETHERITE_SCRAP, 2,  150, 10, true)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(Blocks.ANCIENT_DEBRIS)), Items.NETHERITE_SCRAP, 2,  200, 15, true)
                 .unlockedBy("has_ancient_debris", has(Blocks.ANCIENT_DEBRIS)).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(Tags.Items.ORES_COAL)), Items.COAL, 2,  200, 15, true)
+                .unlockedBy("has_coal", has(Items.COAL)).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(Tags.Items.ORES_DIAMOND)), Items.DIAMOND, 2,  200, 15, true)
+                .unlockedBy("has_diamond", has(Items.DIAMOND)).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(Tags.Items.ORES_EMERALD)), Items.EMERALD, 2,  200, 15, true)
+                .unlockedBy("has_emerald", has(Items.EMERALD)).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(Tags.Items.ORES_REDSTONE)), Items.REDSTONE, 2,  200, 15, true)
+                .unlockedBy("has_redstone", has(Items.REDSTONE)).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(Tags.Items.ORES_LAPIS)), Items.LAPIS_LAZULI, 2,  200, 15, true)
+                .unlockedBy("has_lapis_lazuli", has(Items.LAPIS_LAZULI)).save(consumer);
         //Gundanium:
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.RAW_GUNDANIUM.get(), ModItems.GUNDANIUM_DUST.get(), 2,  100, 10, true)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModItems.RAW_GUNDANIUM.get())), ModItems.GUNDANIUM_DUST.get(), 2,  150, 15, true)
                 .unlockedBy("has_gundanium_ore", has(ModBlocks.GUNDANIUM_ORE.get())).save(consumer);
 
 
         //Harmonium:
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.RAW_HARMONIUM.get(), ModItems.HARMONIUM_DUST.get(), 2, 100, 10, true)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModItems.RAW_HARMONIUM.get())), ModItems.HARMONIUM_DUST.get(), 2, 150, 15, true)
                 .unlockedBy("has_harmonium_ore", has(ModBlocks.HARMONIUM_ORE.get())).save(consumer);
 
         //Alythum:
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.RAW_ALYTHUM.get(), ModItems.ALYTHUM_DUST.get(), 2, 100, 10, true)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModItems.RAW_ALYTHUM.get())), ModItems.ALYTHUM_DUST.get(), 2, 150, 15, true)
                 .unlockedBy("has_alythum_ore", has(ModBlocks.ALYTHUM_ORE.get())).save(consumer);
 
         //Illyrim:
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.ILLYRIM_INGOT.get(), ModItems.ILLYRIM_BLEND.get(), 1, 200, 20, false)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModItems.ILLYRIM_INGOT.get())), ModItems.ILLYRIM_BLEND.get(), 1, 200, 20, false)
                 .unlockedBy("has_illyrim_blend", has(ModItems.ILLYRIM_BLEND.get())).save(consumer);
+
+        //Crystals:
+
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModTags.Items.AERIES_ORES)), ModItems.AERIES_CRYSTAL.get(), 2,  200, 15, true)
+                .unlockedBy("has_aeries_crystal", has(ModItems.AERIES_CRYSTAL.get())).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModTags.Items.ILLUMINA_ORES)), ModItems.ILLUMINA_CRYSTAL.get(), 2,  200, 15, true)
+                .unlockedBy("has_illumina_crystal", has(ModItems.ILLUMINA_CRYSTAL.get())).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModTags.Items.KRYON_ORES)), ModItems.KRYON_CRYSTAL.get(), 2,  200, 15, true)
+                .unlockedBy("has_kryon_crystal", has(ModItems.KRYON_CRYSTAL.get())).save(consumer);
+
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModTags.Items.ENIGMA_ORES)), ModItems.ENIGMA_CRYSTAL.get(), 2,  200, 15, true)
+                .unlockedBy("has_enigma_crystal", has(ModItems.ENIGMA_CRYSTAL.get())).save(consumer);
+
 
         //Core Steel:
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.LG_CORE_INGOT.get(), ModItems.LG_CORE_BLEND.get(), 1, 200, 20, false)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModItems.LG_CORE_INGOT.get())), ModItems.LG_CORE_BLEND.get(), 1, 200, 20, false)
                 .unlockedBy("has_lg_core_blend", has(ModItems.LG_CORE_BLEND.get())).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.MG_CORE_INGOT.get(), ModItems.MG_CORE_BLEND.get(), 1, 200, 20, false)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModItems.MG_CORE_INGOT.get())), ModItems.MG_CORE_BLEND.get(), 1, 200, 20, false)
                 .unlockedBy("has_mg_core_blend", has(ModItems.MG_CORE_BLEND.get())).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.HG_CORE_INGOT.get(), ModItems.HG_CORE_BLEND.get(), 1, 200, 20, false)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModItems.HG_CORE_INGOT.get())), ModItems.HG_CORE_BLEND.get(), 1, 200, 20, false)
                 .unlockedBy("has_hg_core_blend", has(ModItems.HG_CORE_BLEND.get())).save(consumer);
 
             //Misc
-        new TiberiumMaceratorRecipeBuilder(ModBlocks.DEVILS_BLOOD.get(), ModItems.DEVILS_BLOOD_POWDER.get(), 2, 200, 20, true)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModBlocks.DEVILS_BLOOD.get())), ModItems.DEVILS_BLOOD_POWDER.get(), 2, 150, 15, true)
                 .unlockedBy("has_devils_blood", has(ModBlocks.DEVILS_BLOOD.get())).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModBlocks.YOKARAN_BLOOM.get(), ModItems.YOKARAN_BLOOM_POWDER.get(), 2, 200, 20, true)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModBlocks.YOKARAN_BLOOM.get())), ModItems.YOKARAN_BLOOM_POWDER.get(), 2, 150, 15, true)
                 .unlockedBy("has_yokaran_bloom", has(ModBlocks.YOKARAN_BLOOM.get())).save(consumer);
 
         //Stones
-        new TiberiumMaceratorRecipeBuilder(Blocks.STONE, Blocks.COBBLESTONE, 1, 200, 20, false)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(Blocks.STONE)), Blocks.COBBLESTONE, 1, 200, 20, false)
                 .unlockedBy("has_stone", has(Blocks.STONE)).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(Blocks.COBBLESTONE, Blocks.GRAVEL, 1, 150, 20, false)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(Blocks.COBBLESTONE)), Blocks.GRAVEL, 1, 150, 20, false)
                 .unlockedBy("has_cobble", has(Blocks.COBBLESTONE)).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(Blocks.GRAVEL, Blocks.SAND, 1, 100, 20, false)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(Blocks.GRAVEL)), Blocks.SAND, 1, 100, 20, false)
                 .unlockedBy("has_cobble", has(Blocks.GRAVEL)).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModBlocks.INFESTED_STONE.get(), ModBlocks.INFESTED_COBBLE.get(), 1, 200, 20, false)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModBlocks.INFESTED_STONE.get())), ModBlocks.INFESTED_COBBLE.get(), 1, 200, 20, false)
                 .unlockedBy("has_infested_stone", has(ModBlocks.INFESTED_STONE.get())).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModBlocks.INFESTED_COBBLE.get(), ModBlocks.YELLOW_ZONE_SAND.get(), 1, 150, 20, false)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModBlocks.INFESTED_COBBLE.get())), ModBlocks.YELLOW_ZONE_SAND.get(), 1, 150, 20, false)
                 .unlockedBy("has_infested_stone", has(ModBlocks.INFESTED_COBBLE.get())).save(consumer);
 
 
         //Tiberium
-        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM.get(), ModItems.GREEN_TIBERIUM_DUST.get(), 2,  150, 5, true)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModItems.TIBERIUM.get())), ModItems.GREEN_TIBERIUM_DUST.get(), 2,  150, 5, true)
                 .unlockedBy("has_tiberium", has(ModItems.TIBERIUM.get())).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM_BLUE.get(), ModItems.BLUE_TIBERIUM_DUST.get(), 2, 200, 10, true)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModItems.TIBERIUM_BLUE.get())), ModItems.BLUE_TIBERIUM_DUST.get(), 2, 200, 10, true)
                 .unlockedBy("has_blue_tiberium", has(ModItems.TIBERIUM_BLUE.get())).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM_RED.get(), ModItems.RED_TIBERIUM_DUST.get(), 2, 200, 15, true)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModItems.TIBERIUM_RED.get())), ModItems.RED_TIBERIUM_DUST.get(), 2, 200, 15, true)
                 .unlockedBy("has_red_tiberium", has(ModItems.TIBERIUM_RED.get())).save(consumer);
 
-        new TiberiumMaceratorRecipeBuilder(ModItems.TIBERIUM_PURPLE.get(), ModItems.PURPLE_TIBERIUM_DUST.get(), 2, 200, 20, true)
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModItems.TIBERIUM_PURPLE.get())), ModItems.PURPLE_TIBERIUM_DUST.get(), 2, 200, 20, true)
                 .unlockedBy("has_purple_tiberium", has(ModItems.TIBERIUM_PURPLE.get())).save(consumer);
 
 
@@ -4650,92 +4683,87 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
         //Powered Smelting: Due to unforseen issues most of the Powered kiln recipes are in the Resourses/Data/Crystechmod/Recipes directory.
 
-        new PoweredKilnRecipeBuilder(ModItems.ILLYRIM_BLEND.get(), ModItems.ILLYRIM_INGOT.get(), 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.ILLYRIM_BLEND.get())), ModItems.ILLYRIM_INGOT.get(), 1, 200, 16)
                 .unlockedBy("has_illyrim_blend", has(ModItems.ILLYRIM_BLEND.get())).save(consumer);
 
-        new PoweredKilnRecipeBuilder(ModItems.LG_CORE_BLEND.get(), ModItems.LG_CORE_INGOT.get(), 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.LG_CORE_BLEND.get())), ModItems.LG_CORE_INGOT.get(), 1, 200, 16)
                 .unlockedBy("has_lg_core_blend", has(ModItems.LG_CORE_BLEND.get())).save(consumer);
 
-        new PoweredKilnRecipeBuilder(ModItems.MG_CORE_BLEND.get(), ModItems.MG_CORE_INGOT.get(), 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.MG_CORE_BLEND.get())), ModItems.MG_CORE_INGOT.get(), 1, 200, 16)
                 .unlockedBy("has_mg_core_blend", has(ModItems.MG_CORE_BLEND.get())).save(consumer);
 
-        new PoweredKilnRecipeBuilder(ModItems.HG_CORE_BLEND.get(), ModItems.HG_CORE_INGOT.get(), 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.HG_CORE_BLEND.get())), ModItems.HG_CORE_INGOT.get(), 1, 200, 16)
                 .unlockedBy("has_hg_core_blend", has(ModItems.HG_CORE_BLEND.get())).save(consumer);
 
-        new PoweredKilnRecipeBuilder(ModBlocks.RED_ZONE_SAND.get(), ModBlocks.CLEAR_TIBERGLASS.get(), 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(ModTags.Items.VITRIC_SANDS)), ModBlocks.CLEAR_TIBERGLASS.get(), 1, 200, 16)
                 .unlockedBy("has_red_zone_sand", has(ModBlocks.RED_ZONE_SAND.get())).save(consumer);
 
-        new PoweredKilnRecipeBuilder(ModBlocks.YELLOW_ZONE_SAND.get(), ModBlocks.CLEAR_TIBERGLASS.get(), 1, 150, 10)
-                .unlockedBy("has_yellow_zone_sand", has(ModBlocks.YELLOW_ZONE_SAND.get())).save(consumer);
 
-
-
-
-        new PoweredKilnRecipeBuilder(Items.OAK_LOG, Items.CHARCOAL, 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(ItemTags.LOGS_THAT_BURN)), Items.CHARCOAL, 1, 200, 10)
                 .unlockedBy("has_wood", has(Items.OAK_LOG)).save(consumer);
 
-        new PoweredKilnRecipeBuilder(Items.ANCIENT_DEBRIS, Items.NETHERITE_SCRAP, 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(Items.ANCIENT_DEBRIS)), Items.NETHERITE_SCRAP, 1, 200, 16)
                 .unlockedBy("has_ancient_debris", has(Items.ANCIENT_DEBRIS)).save(consumer);
 
-        new PoweredKilnRecipeBuilder(ModBlocks.RED_ZONE_SAND.get(), ModBlocks.CLEAR_TIBERGLASS.get(), 1, 150, 10)
-                .unlockedBy("has_red_zone_sand", has(ModBlocks.RED_ZONE_SAND.get())).save(consumer);
 
 
-        new PoweredKilnRecipeBuilder(Items.POTATO, Items.BAKED_POTATO, 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(Items.POTATO)), Items.BAKED_POTATO, 1, 200, 10)
                 .unlockedBy("has_potato", has(Items.POTATO)).save(consumer);
 
-        new PoweredKilnRecipeBuilder(Items.BEEF, Items.COOKED_BEEF, 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(Items.BEEF)), Items.COOKED_BEEF, 1, 200, 10)
                 .unlockedBy("has_beef", has(Items.BEEF)).save(consumer);
 
-        new PoweredKilnRecipeBuilder(Items.CHICKEN, Items.COOKED_CHICKEN, 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(Items.CHICKEN)), Items.COOKED_CHICKEN, 1, 200, 10)
                 .unlockedBy("has_chicken", has(Items.CHICKEN)).save(consumer);
 
-        new PoweredKilnRecipeBuilder(Items.PORKCHOP, Items.COOKED_PORKCHOP, 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(Items.PORKCHOP)), Items.COOKED_PORKCHOP, 1, 200, 10)
                 .unlockedBy("has_porkchop", has(Items.PORKCHOP)).save(consumer);
 
-        new PoweredKilnRecipeBuilder(Items.RABBIT, Items.COOKED_RABBIT, 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(Items.RABBIT)), Items.COOKED_RABBIT, 1, 200, 10)
                 .unlockedBy("has_rabbit", has(Items.RABBIT)).save(consumer);
 
-        new PoweredKilnRecipeBuilder(Items.MUTTON, Items.COOKED_MUTTON, 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(Items.MUTTON)), Items.COOKED_MUTTON, 1, 200, 10)
                 .unlockedBy("has_mutton", has(Items.MUTTON)).save(consumer);
 
-        new PoweredKilnRecipeBuilder(Items.COD, Items.COOKED_COD, 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(Items.COD)), Items.COOKED_COD, 1, 200, 10)
                 .unlockedBy("has_cod", has(Items.COD)).save(consumer);
 
-        new PoweredKilnRecipeBuilder(Items.SALMON, Items.COOKED_SALMON, 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(Items.SALMON)), Items.COOKED_SALMON, 1, 200, 10)
                 .unlockedBy("has_salmon", has(Items.SALMON)).save(consumer);
 
-        new PoweredKilnRecipeBuilder(Items.SEA_PICKLE, Items.LIME_DYE, 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(Items.SEA_PICKLE)), Items.LIME_DYE, 1, 200, 10)
                 .unlockedBy("has_sea_pickle", has(Items.SEA_PICKLE)).save(consumer);
 
-        new PoweredKilnRecipeBuilder(Items.CACTUS, Items.GREEN_DYE, 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(Items.CACTUS)), Items.GREEN_DYE, 1, 200, 10)
                 .unlockedBy("has_cactus", has(Items.CACTUS)).save(consumer);
 
-        new PoweredKilnRecipeBuilder(Items.KELP, Items.DRIED_KELP, 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(Items.KELP)), Items.DRIED_KELP, 1, 200, 10)
                 .unlockedBy("has_kelp", has(Items.KELP)).save(consumer);
 
-        new PoweredKilnRecipeBuilder(Items.CHORUS_FRUIT, Items.POPPED_CHORUS_FRUIT, 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(Items.CHORUS_FRUIT)), Items.POPPED_CHORUS_FRUIT, 1, 200, 10)
                 .unlockedBy("has_chorus_fruit", has(Items.CHORUS_FRUIT)).save(consumer);
 
-        new PoweredKilnRecipeBuilder(Items.CLAY_BALL, Items.BRICK, 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(Items.CLAY_BALL)), Items.BRICK, 1, 200, 10)
                 .unlockedBy("has_clay_ball", has(Items.CLAY_BALL)).save(consumer);
 
-        new PoweredKilnRecipeBuilder(ModItems.RAW_INFECTED_MEAT.get(), ModItems.COOKED_INFECTED_MEAT.get(), 1, 150, 10)
+        new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.RAW_INFECTED_MEAT.get())), ModItems.COOKED_INFECTED_MEAT.get(), 1, 200, 10)
                 .unlockedBy("has_raw_infected_meat", has(ModItems.RAW_INFECTED_MEAT.get())).save(consumer);
 
 
     //Alloy Kiln:
-        new AlloyKilnRecipeBuilder(ModItems.ALYTHUM_INGOT.get(), Items.NETHERITE_INGOT, ModItems.QUALRIM_COMPOUND.get(), ModItems.ILLYRIM_INGOT.get() ,2, 250, 20)
-                .unlockedBy("has_qualrim_compound", has(ModItems.QUALRIM_COMPOUND.get())).save(consumer);
 
-        new AlloyKilnRecipeBuilder(ModItems.ILLYRIM_INGOT.get(), ModItems.TIBERIUM_COMPOSITE_INGOT.get(), ModItems.PROTO_STEEL.get(), ModItems.LG_CORE_INGOT.get() ,3, 250, 20)
-                .unlockedBy("has_illyrim_ingot", has(ModItems.ILLYRIM_INGOT.get())).save(consumer);
+        new AlloyKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.ALYTHUM_INGOT.get()), CountedIngredient.of(Tags.Items.INGOTS_NETHERITE), CountedIngredient.of(2,ModItems.QUALRIM_COMPOUND.get())),
+                ModItems.ILLYRIM_INGOT.get(), 2, 250, 20).unlockedBy("has_qualrim_compound", has(ModItems.QUALRIM_COMPOUND.get())).save(consumer);
 
-        new AlloyKilnRecipeBuilder(ModItems.LG_CORE_INGOT.get(), ModItems.ICHOR_COMPOSITE_INGOT.get(), ModItems.HARMONIUM_INGOT.get(), ModItems.MG_CORE_INGOT.get() ,3, 250, 20)
-                .unlockedBy("has_lg_core_ingot", has(ModItems.LG_CORE_INGOT.get())).save(consumer);
+        new AlloyKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.ILLYRIM_INGOT.get()), CountedIngredient.of(2, ModItems.TIBERIUM_COMPOSITE_INGOT.get()), CountedIngredient.of(ModItems.HARMONIUM_INGOT.get())),
+                ModItems.LG_CORE_INGOT.get(), 3, 250, 20).unlockedBy("has_illyrim_ingot", has(ModItems.ILLYRIM_INGOT.get())).save(consumer);
 
-        new AlloyKilnRecipeBuilder(ModItems.GUNDANIUM_DUST.get(), ModItems.IRON_DUST.get(), Items.MAGMA_BLOCK, ModItems.FIRESTONE.get(),3, 300, 20)
-                .unlockedBy("has_gundanium_ingot", has(ModItems.GUNDANIUM_INGOT.get())).save(consumer);
+        new AlloyKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.LG_CORE_INGOT.get()), CountedIngredient.of(2, ModItems.ICHOR_COMPOSITE_INGOT.get()), CountedIngredient.of(ModItems.PROTO_STEEL.get())),
+                ModItems.MG_CORE_INGOT.get(), 3, 250, 20).unlockedBy("has_lg_core_ingot", has(ModItems.LG_CORE_INGOT.get())).save(consumer);
+
+        new AlloyKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.GUNDANIUM_DUST.get()), CountedIngredient.of( ModItems.IRON_DUST.get()), CountedIngredient.of(Items.MAGMA_BLOCK)),
+                ModItems.FIRESTONE.get(), 3, 250, 20).unlockedBy("has_gundanium_ingot", has(ModItems.GUNDANIUM_INGOT.get())).save(consumer);
+
 
 
         //Refinery:

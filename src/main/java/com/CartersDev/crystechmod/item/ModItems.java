@@ -483,7 +483,7 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
 //Misc Items
     public static final RegistryObject<Item> FIRESTONE = ITEMS.register("firestone",
-        () -> new Firestone(new Item.Properties().setNoRepair().durability(10)));
+        () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> PLAGUED_STICK = ITEMS.register("plagued_stick",
         () -> new Item(new Item.Properties()));

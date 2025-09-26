@@ -7,6 +7,7 @@ import com.CartersDev.crystechmod.recipe.TiberiumMaceratorRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
@@ -17,9 +18,13 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
 
+import java.text.DecimalFormat;
+import java.util.Arrays;
+import java.util.List;
+
 public class PoweredKilnCategory implements IRecipeCategory<PoweredKilnRecipe> {
     public static final ResourceLocation UID = new ResourceLocation(CrystalTech.MOD_ID, "powered_smelting");
-    public static final ResourceLocation TEXTURE = new ResourceLocation(CrystalTech.MOD_ID, "textures/gui/powered_kiln_gui.png");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(CrystalTech.MOD_ID, "textures/gui/dummies/powered_kiln_gui.png");
 
 public static final RecipeType<PoweredKilnRecipe> POWERED_KILN_TYPE =
 new RecipeType<>(UID, PoweredKilnRecipe.class);
@@ -28,7 +33,7 @@ private final IDrawable background;
 private final IDrawable icon;
 
     public PoweredKilnCategory(IGuiHelper helper) {
-        this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 85);
+        this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 83);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.POWERED_KILN.get()));
     }
 
@@ -40,7 +45,7 @@ private final IDrawable icon;
 
     @Override
     public Component getTitle() {
-        return Component.literal("Powered Kiln");
+        return Component.literal("All Powered Kilns");
     }
 
     @Override
@@ -58,4 +63,39 @@ private final IDrawable icon;
         iRecipeLayoutBuilder.addSlot(RecipeIngredientRole.INPUT, 56, 17).addIngredients(poweredKilnRecipe.getIngredients().get(0));
         iRecipeLayoutBuilder.addSlot(RecipeIngredientRole.OUTPUT, 116, 35).addItemStack(poweredKilnRecipe.getResultItem(null));
     }
+
+
+    /*
+     * BluSunrize
+     * Copyright (c) 2017
+     *
+     * This code is licensed under "Blu's License of Common Sense"
+     * https://github.com/BluSunrize/ImmersiveEngineering/blob/1.20.1/LICENSE
+     */
+
+    public static String formatDouble(double d, String s)
+    {
+        DecimalFormat df = new DecimalFormat(s);
+        return df.format(d);
+    }
+
+
+    public List<Component> getTooltipStrings(PoweredKilnRecipe recipe, IRecipeSlotsView recipeSlotsView, double mouseX, double mouseY)
+    {
+        int x = (176 - 86)/2;
+        int y = 166 / 2;
+
+        if(mouseX >= x + 110 && mouseX <= x + 120 && mouseY >= 10 && mouseY <= 76)
+        {
+            float time = recipe.getCraftTime();
+            float energy = recipe.getEnergyAmount() * time;
+            formatDouble(energy, "#.##");
+            return Arrays.asList(
+                    Component.literal("Total Energy: " + formatDouble(energy, "#.##") + " FE"),
+                    Component.literal("Craft Time: " + formatDouble(time/20, "#.##") + "s")
+            );
+        }
+        return IRecipeCategory.super.getTooltipStrings(recipe, recipeSlotsView, mouseX, mouseY);
+    }
+
 }

@@ -120,6 +120,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.ICHOR_SOIL.get()
                 );
 
+        this.tag(ModTags.Blocks.VITRIC_SANDS)
+                .add(ModBlocks.RED_ZONE_SAND.get(),
+                        ModBlocks.YELLOW_ZONE_SAND.get());
+
         this.tag(ModTags.Blocks.TIBERCRETE_SANDS)
                 .add(ModBlocks.RED_ZONE_SAND.get(),
                         ModBlocks.YELLOW_ZONE_SAND.get(),
@@ -1261,6 +1265,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.DEAD_PLANKS.get()
 
                 );
+
+
 
         this.tag(BlockTags.LOGS)
                 .addTags(ModTags.Blocks.MARIKA_OAK_LOGS,

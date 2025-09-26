@@ -2993,7 +2993,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> VITRIC_PORTAL = registerBlock("vitric_portal",
             () -> new VitricPortalBlock(BlockBehaviour.Properties.copy(Blocks.END_PORTAL).noOcclusion().noLootTable()
-                    .noCollission().destroyTime(-1.0F).lightLevel(marikaglow)));
+                    .noCollission().destroyTime(-1.0F).instabreak().lightLevel(marikaglow)));
 
 
 

@@ -1,0 +1,16 @@
+{
+  "type": "crystechmod:powered_smelting",
+  "craftTime": 200,
+  "energyAmount": 10,
+  "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "minecraft:logs_that_burn"
+      }
+    }
+  ],
+  "output": {
+    "item": "minecraft:charcoal"
+  }
+}

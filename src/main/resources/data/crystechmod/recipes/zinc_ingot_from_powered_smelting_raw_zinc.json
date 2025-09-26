@@ -10,13 +10,16 @@
             ],
             "recipe": {
                 "type": "crystechmod:powered_smelting",
-                "craftTime": 150,
-                "energyAmount": 10,
-                "ingredients": [
-                    {
-                        "item": "create:raw_zinc"
-                    }
-                ],
+              "craftTime": 200,
+              "energyAmount": 10,
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "item": "create:raw_zinc"
+                  }
+                }
+              ],
                 "output": {
                     "item": "create:zinc_ingot"
                 }

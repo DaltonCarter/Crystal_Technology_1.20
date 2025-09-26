@@ -4,7 +4,10 @@
   "energyAmount": 20,
   "ingredients": [
     {
-      "item": "crystechmod:infested_cobble"
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:infested_cobble"
+      }
     }
   ],
   "multiply": false,

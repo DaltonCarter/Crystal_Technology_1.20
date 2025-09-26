@@ -11,13 +11,16 @@
             ],
             "recipe": {
                 "type": "crystechmod:powered_smelting",
-                "craftTime": 150,
-                "energyAmount": 10,
-                "ingredients": [
-                    {
-                        "item": "xycraft_world:aluminum_ore_stone"
-                    }
-                ],
+              "craftTime": 200,
+              "energyAmount": 10,
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "tag": "forge:ores/aluminum"
+                  }
+                }
+              ],
                 "output": {
                     "item": "xycraft_world:aluminum_ingot"
                 }

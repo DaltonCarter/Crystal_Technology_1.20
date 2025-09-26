@@ -1,0 +1,16 @@
+{
+  "type": "crystechmod:powered_smelting",
+  "craftTime": 200,
+  "energyAmount": 16,
+  "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:lg_core_blend"
+      }
+    }
+  ],
+  "output": {
+    "item": "crystechmod:lg_core_ingot"
+  }
+}

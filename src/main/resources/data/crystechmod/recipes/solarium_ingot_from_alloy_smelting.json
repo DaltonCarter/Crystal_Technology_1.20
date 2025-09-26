@@ -14,16 +14,27 @@
         "craftTime": 200,
         "energyAmount": 28,
         "ingredients": [
-            {
-              "item": "minecraft:soul_sand"
-           },
-          {
-            "item": "minecraft:gold_ingot"
-          }
-
-        ],
+    {
+      "count": 1,
+      "ingredient": {
+         "item": "minecraft:soul_sand"
+      }
+    },
+    {
+      "count": 2,
+      "ingredient": {
+         "tag": "forge:ingots/gold"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+         "item": "minecraft:soul_sand"
+      }
+    }
+  ],
         "output": {
-          "count": 1,
+          "count": 2,
           "item": "enderio:soularium_ingot"
         }
       }
@@ -31,3 +42,5 @@
 
   ]
 }
+
+

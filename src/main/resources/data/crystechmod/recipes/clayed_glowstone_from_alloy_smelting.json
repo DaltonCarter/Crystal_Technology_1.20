@@ -14,15 +14,27 @@
         "craftTime": 200,
         "energyAmount": 24,
         "ingredients": [
-            {
-              "item": "minecraft:glowstone_dust"
-           },
-          {
-            "item": "minecraft:clay_ball"
-          }
-        ],
+    {
+      "count": 1,
+      "ingredient": {
+         "item": "minecraft:glowstone_dust"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:dusts/glowstone"
+      }
+    },
+    {
+      "count": 2,
+      "ingredient": {
+        "item": "minecraft:clay_ball"
+      }
+    }
+  ],
         "output": {
-          "count": 1,
+          "count": 4,
           "item": "enderio:clayed_glowstone"
         }
       }
@@ -30,3 +42,4 @@
 
   ]
 }
+

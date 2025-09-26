@@ -13,17 +13,27 @@
         "type": "crystechmod:alloy_smelting",
         "craftTime": 200,
         "energyAmount": 24,
-        "ingredients": [
-            {
-              "item": "minecraft:iron_ingot"
-           },
-          {
-            "item": "enderio:powdered_coal"
-          },
-           {
-             "item": "minecraft:obsidian"
-          }
-        ],
+       
+ "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:ingots/iron"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:dusts/coal"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:obsidian"
+      }
+    }
+  ],
         "output": {
           "count": 1,
           "item": "enderio:dark_steel_ingot"

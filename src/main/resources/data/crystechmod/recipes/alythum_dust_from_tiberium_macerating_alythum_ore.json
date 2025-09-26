@@ -4,7 +4,10 @@
   "energyAmount": 20,
   "ingredients": [
     {
-      "item": "crystechmod:alythum_ore"
+      "count": 1,
+      "ingredient": {
+        "tag": "crystechmod:alythum_ores"
+      }
     }
   ],
   "multiply": true,

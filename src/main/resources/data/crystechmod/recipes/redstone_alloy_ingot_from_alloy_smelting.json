@@ -14,15 +14,28 @@
         "craftTime": 200,
         "energyAmount": 16,
         "ingredients": [
-            {
-              "item": "minecraft:redstone"
-           },
-           {
-             "item": "enderio:silicon"
-          }
-        ],
+    {
+      "count": 2,
+      "ingredient": {
+         "tag": "forge:dusts/redstone"
+      }
+    },
+	{
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:silicon"
+      }
+    },
+    
+    {
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:silicon"
+      }
+    }
+  ],
         "output": {
-          "count": 1,
+          "count": 2,
           "item": "enderio:redstone_alloy_ingot"
         }
       }

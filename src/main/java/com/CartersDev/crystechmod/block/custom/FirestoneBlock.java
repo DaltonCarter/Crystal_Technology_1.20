@@ -1,6 +1,6 @@
 package com.CartersDev.crystechmod.block.custom;
 
-import com.CartersDev.crystechmod.item.custom.Firestone;
+import com.CartersDev.crystechmod.item.custom.FireHeart;
 import com.CartersDev.crystechmod.particle.ModParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -13,7 +13,6 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -74,7 +73,7 @@ public class FirestoneBlock extends Block {
 
     @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
-        Firestone.lightEntityOnFire(pEntity, 5);
+        FireHeart.lightEntityOnFire(pEntity, 5);
         super.stepOn(pLevel, pPos, pState, pEntity);
     }
 }

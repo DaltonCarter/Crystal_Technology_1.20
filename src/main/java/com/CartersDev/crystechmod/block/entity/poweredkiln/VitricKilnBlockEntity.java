@@ -6,6 +6,8 @@ import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.PoweredKilnRecipe;
 import com.CartersDev.crystechmod.screen.poweredKilnMenu.VitricKilnMenu;
 import com.CartersDev.crystechmod.util.*;
+import com.CartersDev.crystechmod.util.inventory.InventoryDirectionEntry;
+import com.CartersDev.crystechmod.util.inventory.InventoryDirectionWrapper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -280,7 +282,7 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
         ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
 
-        this.itemHandler.extractItem(INPUT_SLOT, 1, false);
+        this.itemHandler.extractItem(INPUT_SLOT, recipe.get().getInputItems().get(0).count(), false);
 
         this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
                 this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount()));

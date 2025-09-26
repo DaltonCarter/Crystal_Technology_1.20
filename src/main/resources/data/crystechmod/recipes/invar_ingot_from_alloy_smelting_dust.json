@@ -11,19 +11,28 @@
       ],
       "recipe": {
         "type": "crystechmod:alloy_smelting",
-        "craftTime": 150,
-        "energyAmount": 10,
+        "craftTime": 200,
+        "energyAmount": 24,
         "ingredients": [
-          {
-            "item": "crystechmod:iron_dust"
-          },
-          {
-            "item": "crystechmod:iron_dust"
-          },
-          {
-            "item": "thermal:nickel_dust"
-          }
-        ],
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:dusts/iron"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:dusts/iron"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "item": "thermal:nickel_dust"
+      }
+    }
+  ],
         "output": {
           "count": 3,
           "item": "thermal:invar_ingot"

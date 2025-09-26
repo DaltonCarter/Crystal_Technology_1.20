@@ -4,7 +4,10 @@
   "energyAmount": 20,
   "ingredients": [
     {
-      "item": "minecraft:gravel"
+      "count": 1,
+      "ingredient": {
+        "item": "minecraft:gravel"
+      }
     }
   ],
   "multiply": false,

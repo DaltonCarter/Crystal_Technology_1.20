@@ -1,10 +1,13 @@
 {
   "type": "crystechmod:tiberium_macerating",
-  "craftTime": 200,
-  "energyAmount": 20,
+  "craftTime": 150,
+  "energyAmount": 15,
   "ingredients": [
     {
-      "item": "crystechmod:devils_blood"
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:devils_blood"
+      }
     }
   ],
   "multiply": true,

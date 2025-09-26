@@ -12,11 +12,14 @@
                 "type": "crystechmod:tiberium_macerating",
                 "craftTime": 200,
                 "energyAmount": 20,
-                "ingredients": [
-                    {
-                        "item": "thermal:sulfur_ore"
-                    }
-                ],
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "tag": "forge:ores/sulfur"
+                  }
+                }
+              ],
                 "multiply": true,
                 "output": {
                     "count": 2,

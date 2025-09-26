@@ -1,0 +1,44 @@
+
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "thermal_foundation"
+        }
+      ],
+      "recipe": {
+        "type": "crystechmod:alloy_smelting",
+        "craftTime": 200,
+        "energyAmount": 60,
+        "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:dusts/silver"
+      }
+    },
+    {
+      "count": 3,
+      "ingredient": {
+        "tag": "forge:dusts/tin"
+      }
+    },
+    {
+      "count": 2,
+      "ingredient": {
+        "tag": "forge:dusts/glowstone"
+      }
+    }
+  ],
+        "output": {
+          "count": 4,
+          "item": "thermal:lumium_ingot"
+        }
+      }
+    }
+
+  ]
+}

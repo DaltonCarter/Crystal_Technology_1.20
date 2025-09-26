@@ -8,7 +8,12 @@ import com.CartersDev.crystechmod.block.entity.refinery.VitricVitriciumRefineryB
 import com.CartersDev.crystechmod.block.entity.refinery.VitriciumRefineryBlockEntity;
 import com.CartersDev.crystechmod.util.ModBlockstateProperties;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -69,6 +74,34 @@ public class VitriciumRefineryBlock extends BaseEntityBlock {
         pBuilder.add(FACING);
         pBuilder.add(WORKING);
         pBuilder.add(MACHINE_CORE_LVL);
+    }
+
+    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
+        if (pState.getValue(WORKING)) {
+            double d0 = (double)pPos.getX() + 0.5D;
+            double d1 = (double)pPos.getY();
+            double d2 = (double)pPos.getZ() + 0.5D;
+            if (pRandom.nextDouble() < 0.05D) {
+                pLevel.playLocalSound(d0, d1, d2, SoundEvents.LAVA_AMBIENT, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+            }
+
+            Direction direction = pState.getValue(FACING);
+            Direction.Axis direction$axis = direction.getAxis();
+            double d3 = 0.52D;
+            double d4 = pRandom.nextDouble() * 0.6D - 0.3D;
+            double d5 = direction$axis == Direction.Axis.X ? (double)direction.getStepX() * 0.52D : d4;
+            double d6 = pRandom.nextDouble() * 6.0D / 16.0D;
+            double d7 = direction$axis == Direction.Axis.Z ? (double)direction.getStepZ() * 0.52D : d4;
+
+            pLevel.addParticle(ParticleTypes.SMOKE,  pPos.getX() + pRandom.nextDouble(),
+                    pPos.getY() + 1.5D, pPos.getZ() + pRandom.nextDouble(),
+                    0d, 0.05d, 0d);
+
+            pLevel.addParticle(ParticleTypes.FLAME,  pPos.getX() + pRandom.nextDouble(),
+                    pPos.getY() + 1.0D, pPos.getZ() + pRandom.nextDouble(),
+                    0d, 0.05d, 0d);
+
+        }
     }
 
 
@@ -132,10 +165,8 @@ public class VitriciumRefineryBlock extends BaseEntityBlock {
             default -> throw new IllegalStateException("Unexpected value: " + lvl);
         };
 
-
-
-
     }
+
 
     @Override
     public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
@@ -145,6 +176,12 @@ public class VitriciumRefineryBlock extends BaseEntityBlock {
         int lvl = pState.getValue(MACHINE_CORE_LVL);
         return switch (lvl){
             case 1 -> createTickerHelper(pBlockEntityType, ModBlockEntities.VITRICIUM_REFINERY_BE.get(),
+                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
+            case 2 -> createTickerHelper(pBlockEntityType, ModBlockEntities.ALYTHUM_VITRICIUM_REFINERY_BE.get(),
+                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
+            case 3 -> createTickerHelper(pBlockEntityType, ModBlockEntities.VITRIC_VITRICIUM_REFINERY_BE.get(),
+                    (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
+            case 4 -> createTickerHelper(pBlockEntityType, ModBlockEntities.CRYSTAL_CORE_VITRICIUM_REFINERY_BE.get(),
                     (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
 
             default -> throw new IllegalStateException("Unexpected value: " + lvl);

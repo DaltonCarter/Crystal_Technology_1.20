@@ -2,7 +2,7 @@ package com.CartersDev.crystechmod.block.custom;
 
 
 
-import com.CartersDev.crystechmod.item.custom.Firestone;
+import com.CartersDev.crystechmod.item.custom.FireHeart;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
@@ -16,9 +16,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-import javax.annotation.Nullable;
 import java.util.List;
-import java.util.Random;
 
 public class FirestoneWallBlock extends WallBlock {
 
@@ -47,13 +45,13 @@ public class FirestoneWallBlock extends WallBlock {
 
     @Override
     public void stepOn(Level worldIn, BlockPos pos, BlockState pState, Entity entityIn) {
-        Firestone.lightEntityOnFire(entityIn, 5);
+        FireHeart.lightEntityOnFire(entityIn, 5);
         super.stepOn(worldIn, pos, pState, entityIn);
     }
 
     @Override
     public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
-        Firestone.lightEntityOnFire(pEntity, 5);
+        FireHeart.lightEntityOnFire(pEntity, 5);
         super.entityInside(pState, pLevel, pPos, pEntity);
     }
 

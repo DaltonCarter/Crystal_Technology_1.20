@@ -4,13 +4,22 @@
   "energyAmount": 20,
   "ingredients": [
     {
-      "item": "crystechmod:illyrim_ingot"
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:illyrim_ingot"
+      }
     },
     {
-      "item": "crystechmod:tiberium_composite_ingot"
+      "count": 2,
+      "ingredient": {
+        "item": "crystechmod:tiberium_composite_ingot"
+      }
     },
     {
-      "item": "crystechmod:proto_steel"
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:harmonium_ingot"
+      }
     }
   ],
   "output": {

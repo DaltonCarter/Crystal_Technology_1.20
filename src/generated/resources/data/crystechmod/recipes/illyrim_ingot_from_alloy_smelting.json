@@ -4,13 +4,22 @@
   "energyAmount": 20,
   "ingredients": [
     {
-      "item": "crystechmod:alythum_ingot"
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:alythum_ingot"
+      }
     },
     {
-      "item": "minecraft:netherite_ingot"
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:ingots/netherite"
+      }
     },
     {
-      "item": "crystechmod:qualrim_compound"
+      "count": 2,
+      "ingredient": {
+        "item": "crystechmod:qualrim_compound"
+      }
     }
   ],
   "output": {

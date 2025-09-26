@@ -16,11 +16,14 @@
                 "type": "crystechmod:tiberium_macerating",
                 "craftTime": 200,
                 "energyAmount": 20,
-                "ingredients": [
-                    {
-                        "item": "xycraft_world:raw_aluminum"
-                    }
-                ],
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "tag": "forge:raw_materials/aluminum"
+                  }
+                }
+              ],
                 "multiply": true,
                 "output": {
                     "count": 2,

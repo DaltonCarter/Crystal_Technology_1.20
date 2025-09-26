@@ -17,6 +17,14 @@
     "minecraft:gold_ingot",
     "minecraft:netherite_ingot",
     "minecraft:magma_block",
-    "#forge:ingots"
+    "minecraft:end_stone",
+    "minecraft:coal",
+    "minecraft:soul_sand",
+    "minecraft:soul_soil",
+    "minecraft:clay_ball",
+    "#forge:ingots",
+    "#forge:dusts",
+    "#forge:obsidian",
+    "#forge:ender_pearls"
   ]
 }

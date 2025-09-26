@@ -1,18 +1,19 @@
-// 1.20.1	2025-09-17T18:51:18.6672568	Tags for minecraft:item mod id crystechmod
+// 1.20.1	2025-09-23T19:33:21.2156621	Tags for minecraft:item mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/items/aeries_ores.json
-d9cbaedec56f83f65def981e9dac46ba077fd955 data/crystechmod/tags/items/alloying_input.json
+b1a1358d34a731372748d01956f6b5c6051bcdf3 data/crystechmod/tags/items/alloying_input.json
 655216b4c1a7b6525500eec6babbe3f7e78ade3d data/crystechmod/tags/items/alloying_result.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/items/alythum_ores.json
 5159be849ca1f753e204748b15df43bb5f807324 data/crystechmod/tags/items/bucket_output.json
 6b38af71a7ebba97f729de43e6ee84033f8e45cc data/crystechmod/tags/items/concretes.json
 1b1bb8b2e7aecfb7d82d771a540fcafffe25b6ed data/crystechmod/tags/items/dead_logs.json
 9e69fb63880d9644913e3c1febc7b5019ed06a98 data/crystechmod/tags/items/ember_oak_logs.json
-569b96ed4a3700478598d59a0249f011c9e779f0 data/crystechmod/tags/items/enigma_ores.json
+f8f3067f545a2de3c125e52b61ebeb33ac073b29 data/crystechmod/tags/items/enigma_ores.json
 385384748b1de16a26be84aa4324801acb1e776d data/crystechmod/tags/items/glass.json
-6a0cd9e557eda7ff09e593734531a692341db607 data/crystechmod/tags/items/grindable.json
+bb9fb2e4484e4cb7aaaf866264ae93f8257a9946 data/crystechmod/tags/items/grindable.json
 f9541d478a6479b3fadbd51f6a062c8d4fb28ca3 data/crystechmod/tags/items/grindable_flowers.json
 8129e0d99fa1905e1c878dd4c3c242d52676526f data/crystechmod/tags/items/grinding_result.json
 4cadb914e0eab48bbce75c6e6b2093818996d44e data/crystechmod/tags/items/gundanium_ores.json
+9c7583450d5f86fbf218485ce0807b63dd86c3db data/crystechmod/tags/items/harmonium_ores.json
 3c0db247b35cadbc078a1b88ac98777330717935 data/crystechmod/tags/items/hazmat_glass_panes.json
 816d980d5ac7ce159aff209b52ee0952d2d1eed8 data/crystechmod/tags/items/illumina_ores.json
 c7bbac2058df90e9377b5e00ecc05db2c0213cad data/crystechmod/tags/items/kryon_ores.json
@@ -21,16 +22,18 @@ c7bbac2058df90e9377b5e00ecc05db2c0213cad data/crystechmod/tags/items/kryon_ores.
 76338cc754cb5d1030cd4159192e0089f6c09fae data/crystechmod/tags/items/marika_oak_logs.json
 b97904e909222fd61767ad7160b0c32323c6852d data/crystechmod/tags/items/mod_planks.json
 7ff009a6ce8d964af59c35e91e257d0fca7cfd07 data/crystechmod/tags/items/plagued_logs.json
-ee5b7fa627624f169c1f928bb2933cee6d008256 data/crystechmod/tags/items/smeltable.json
+fe52d96082bd2e48838b631bad6ff58272f52533 data/crystechmod/tags/items/qualrite_ores.json
+42f15dd039919658dc69e0842a044f18985d56b4 data/crystechmod/tags/items/smeltable.json
 d26b70f3c4060c33bb4259b959961338dc430bc5 data/crystechmod/tags/items/smelting.json
 ee6c95b24ed7fb71ba4fb4b4ee72ce886ce3b2ba data/crystechmod/tags/items/smelting_result.json
 30072644d4c3d908ca2eabafbb2613c9f1b8c07b data/crystechmod/tags/items/smelting_result_2.json
 ecf2a3889f87177c168a6ffc2c5f25e077381f19 data/crystechmod/tags/items/sticks.json
 39acdcf33383e05a367faca9c1c896cc6cdba9c0 data/crystechmod/tags/items/tibercrete_sands.json
+46b073173762a16348446e0d95c2e02d41798343 data/crystechmod/tags/items/vitric_sands.json
 4b700b33cd0f1676485a704b4ca21d0d44d43738 data/forge/tags/items/dusts.json
 2e0f8661c75c39419b1d57f9ec8c99eba7866bf2 data/forge/tags/items/gems.json
 002e5c40a5184c92f01d66de3343c441df892703 data/forge/tags/items/ingots.json
-663b4405fee2bbd585777b4e84cf20a69ab0275b data/forge/tags/items/ores.json
+5ce1bb1d496e96b02294375e57978c42fb1c986f data/forge/tags/items/ores.json
 b759f5fd340e754f6a7a35b3b46d2ba136c2fcc1 data/forge/tags/items/raw_materials.json
 1f682baa5bdc283d63c6bd780f9bc6d87b5d8b8b data/forge/tags/items/rods.json
 44865f8b448996e9e30460a29e6ee31ba2683205 data/minecraft/tags/items/creeper_drop_music_discs.json

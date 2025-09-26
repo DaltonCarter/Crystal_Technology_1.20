@@ -12,11 +12,14 @@
                 "type": "crystechmod:tiberium_macerating",
                 "craftTime": 200,
                 "energyAmount": 20,
-                "ingredients": [
-                    {
-                        "item": "minecraft:quartz"
-                    }
-                ],
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "item": "minecraft:quartz"
+                  }
+                }
+              ],
                 "multiply": false,
                 "output": {
                     "count": 1,
@@ -26,3 +29,4 @@
         }
     ]
 }
+

@@ -1,10 +1,13 @@
 {
   "type": "crystechmod:powered_smelting",
-  "craftTime": 150,
+  "craftTime": 200,
   "energyAmount": 10,
   "ingredients": [
     {
-      "item": "minecraft:cyan_terracotta"
+      "count": 1,
+      "ingredient": {
+        "item": "minecraft:cyan_terracotta"
+      }
     }
   ],
   "output": {

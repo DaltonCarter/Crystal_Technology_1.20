@@ -4,7 +4,10 @@
   "energyAmount": 10,
   "ingredients": [
     {
-      "item": "minecraft:red_sand"
+      "count": 1,
+      "ingredient": {
+        "item": "minecraft:red_sand"
+      }
     }
   ],
   "output": {

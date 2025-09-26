@@ -6,6 +6,8 @@ import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.AlloyKilnRecipe;
 import com.CartersDev.crystechmod.screen.alloyKilnMenu.AlloyKilnMenu;
 import com.CartersDev.crystechmod.util.*;
+import com.CartersDev.crystechmod.util.inventory.InventoryDirectionEntry;
+import com.CartersDev.crystechmod.util.inventory.InventoryDirectionWrapper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -84,10 +86,13 @@ public class AlloyKilnBlockEntity extends BlockEntity implements MenuProvider {
 
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+            Optional<AlloyKilnRecipe> recipe = getCurrentRecipe();
+
+
             return switch (slot) {
-              case 0,1,2 -> stack.is(ModTags.Items.ALLOYING_INPUT);
-              case 3 -> stack.getItem() == Items.REDSTONE;
-              case 4 -> stack.is(ModTags.Items.ALLOYING_RESULT);
+                case 0,1,2 -> stack.is(ModTags.Items.ALLOYING_INPUT);
+                case 3 -> stack.getItem() == Items.REDSTONE;
+                case 4 -> stack.is(ModTags.Items.ALLOYING_RESULT);
                 default -> super.isItemValid(slot, stack);
             };
         }
@@ -100,7 +105,7 @@ public class AlloyKilnBlockEntity extends BlockEntity implements MenuProvider {
     private static final int OUTPUT_SLOT = 4;
 
 
-private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
+    private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
     private final Map<Direction, LazyOptional<WrappedHandler>> directioWrappedHandlerMap =
             new InventoryDirectionWrapper(itemHandler,
@@ -113,15 +118,15 @@ private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
     private LazyOptional<IEnergyStorage> lazyEnergyHandler = LazyOptional.empty();
 
-protected final ContainerData data;
-private int progress = 0;
-private int max_progress = 100;
-private final int default_max_progress = 100;
+    protected final ContainerData data;
+    private int progress = 0;
+    private int max_progress = 100;
+    private final int default_max_progress = 100;
 
-private int energyAmount = 0;
-private final int defaultEnergyAmount = 100;
+    private int energyAmount = 0;
+    private final int defaultEnergyAmount = 100;
 
-private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
+    private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
 
     private ModEnergyStorage createEnergyStorage() {
@@ -157,7 +162,7 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
             @Override
             public void set(int pIndex, int pValue) {
-                 switch (pIndex){
+                switch (pIndex){
                     case 0 -> AlloyKilnBlockEntity.this.progress = pValue;
                     case 1 -> AlloyKilnBlockEntity.this.max_progress = pValue;
                 };
@@ -273,7 +278,7 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
 
             }
-            
+
         }else {
             resetProgress();
             level.setBlockAndUpdate(pPos, getBlockState().setValue(WORKING, false));
@@ -311,11 +316,11 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
         ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
 
-        ;
 
-        this.itemHandler.extractItem(INPUT_SLOT, 1, false);
-        this.itemHandler.extractItem(INPUT_SLOT_2, 1, false);
-        this.itemHandler.extractItem(INPUT_SLOT_3, 1, false);
+
+        this.itemHandler.extractItem(INPUT_SLOT, recipe.get().getInputItems().get(0).count(), false);
+        this.itemHandler.extractItem(INPUT_SLOT_2, recipe.get().getInputItems().get(1).count(), false);
+        this.itemHandler.extractItem(INPUT_SLOT_3, recipe.get().getInputItems().get(2).count(), false);
 
         this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
                 this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount()));

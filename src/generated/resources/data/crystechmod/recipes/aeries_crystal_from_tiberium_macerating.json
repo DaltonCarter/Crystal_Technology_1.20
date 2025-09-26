@@ -1,0 +1,18 @@
+{
+  "type": "crystechmod:tiberium_macerating",
+  "craftTime": 200,
+  "energyAmount": 15,
+  "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "crystechmod:aeries_ores"
+      }
+    }
+  ],
+  "multiply": true,
+  "output": {
+    "count": 2,
+    "item": "crystechmod:aeries_crystal"
+  }
+}

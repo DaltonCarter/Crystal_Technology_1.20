@@ -4,7 +4,10 @@
   "energyAmount": 20,
   "ingredients": [
     {
-      "item": "minecraft:gold_ingot"
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:ingots/gold"
+      }
     }
   ],
   "multiply": false,
@@ -13,3 +16,4 @@
     "item": "crystechmod:gold_dust"
   }
 }
+

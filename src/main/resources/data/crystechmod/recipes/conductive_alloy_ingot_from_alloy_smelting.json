@@ -14,16 +14,26 @@
         "craftTime": 200,
         "energyAmount": 24,
         "ingredients": [
-            {
-              "item": "enderio:copper_alloy_ingot"
-           },
-          {
-            "item": "minecraft:iron_ingot"
-          },
-           {
-             "item": "minecraft:redstone"
-          }
-        ],
+    {
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:ingots/copper_alloy"
+      }
+    },
+	{
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:ingots/iron"
+      }
+    },
+    
+    {
+      "count": 1,
+      "ingredient": {
+         "tag": "forge:dusts/redstone"
+      }
+    }
+  ],
         "output": {
           "count": 1,
           "item": "enderio:conductive_alloy_ingot"

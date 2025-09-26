@@ -22,6 +22,7 @@ public class ModTags {
         public static final TagKey<Block> TIBERIUM_VULNERABLE_WOOD= tag("tiberium_vulnerable_wood");
         public static final TagKey<Block> TIBERIUM_VULNERABLE_SAPLINGS= tag("tiberium_vulnerable_saplings");
         public static final TagKey<Block> TIBERCRETE_SANDS= tag("tibercrete_sands");
+        public static final TagKey<Block> VITRIC_SANDS= tag("vitric_sands");
         public static final TagKey<Block> TIBERIUM_VIABLE_BLOCKS= tag("tiberium_viable_blocks");
         public static final TagKey<Block> TIBERIUM_SEED_BLOCKS= tag("tiberium_seed_block");
         public static final TagKey<Block> HAZMAT_GLASS_PANES= tag("hazmat_glass_panes");
@@ -56,8 +57,8 @@ public class ModTags {
         public static final TagKey<Block> ILLUMINA_ORES= tag("illumina_ores");
         public static final TagKey<Block> KRYON_ORES= tag("kryon_ores");
         public static final TagKey<Block> ENIGMA_ORES= tag("enigma_ores");
-        public static final TagKey<Block> QUALRITE_ORES= tag("enigma_ores");
-        public static final TagKey<Block> HARMONIUM_ORES= tag("enigma_ores");
+        public static final TagKey<Block> QUALRITE_ORES= tag("qualrite_ores");
+        public static final TagKey<Block> HARMONIUM_ORES= tag("harmonium_ores");
 
 
 
@@ -69,6 +70,7 @@ public class ModTags {
 
     public static class Items {
         public static final TagKey<Item> TIBERCRETE_SANDS= tag("tibercrete_sands");
+        public static final TagKey<Item> VITRIC_SANDS= tag("vitric_sands");
         public static final TagKey<Item> GLASS= tag("glass");
         public static final TagKey<Item> STICKS= tag("sticks");
         public static final TagKey<Item> HAZMAT_GLASS_PANES= tag("hazmat_glass_panes");
@@ -85,8 +87,8 @@ public class ModTags {
         public static final TagKey<Item> ILLUMINA_ORES= tag("illumina_ores");
         public static final TagKey<Item> KRYON_ORES= tag("kryon_ores");
         public static final TagKey<Item> ENIGMA_ORES= tag("enigma_ores");
-        public static final TagKey<Item> QUALRITE_ORES= tag("enigma_ores");
-        public static final TagKey<Item> HARMONIUM_ORES= tag("enigma_ores");
+        public static final TagKey<Item> QUALRITE_ORES= tag("qualrite_ores");
+        public static final TagKey<Item> HARMONIUM_ORES= tag("harmonium_ores");
 
         public static final TagKey<Item> GRINDABLE= tag("grindable");
         public static final TagKey<Item> GRINDABLE_FLOWERS= tag("grindable_flowers");

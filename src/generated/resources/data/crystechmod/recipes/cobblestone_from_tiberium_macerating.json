@@ -4,7 +4,10 @@
   "energyAmount": 20,
   "ingredients": [
     {
-      "item": "minecraft:stone"
+      "count": 1,
+      "ingredient": {
+        "item": "minecraft:stone"
+      }
     }
   ],
   "multiply": false,

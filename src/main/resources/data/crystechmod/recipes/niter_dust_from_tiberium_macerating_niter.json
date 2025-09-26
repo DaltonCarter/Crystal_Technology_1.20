@@ -12,11 +12,14 @@
                 "type": "crystechmod:tiberium_macerating",
                 "craftTime": 200,
                 "energyAmount": 20,
-                "ingredients": [
-                    {
-                        "item": "thermal:niter"
-                    }
-                ],
+              "ingredients": [
+                {
+                  "count": 1,
+                  "ingredient": {
+                    "tag": "forge:gems/niter"
+                  }
+                }
+              ],
                 "multiply": false,
                 "output": {
                     "count": 1,
@@ -26,3 +29,4 @@
         }
     ]
 }
+

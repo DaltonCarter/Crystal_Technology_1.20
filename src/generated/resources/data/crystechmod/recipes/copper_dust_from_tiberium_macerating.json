@@ -1,10 +1,13 @@
 {
   "type": "crystechmod:tiberium_macerating",
-  "craftTime": 100,
-  "energyAmount": 10,
+  "craftTime": 150,
+  "energyAmount": 15,
   "ingredients": [
     {
-      "item": "minecraft:raw_copper"
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:raw_materials/copper"
+      }
     }
   ],
   "multiply": true,

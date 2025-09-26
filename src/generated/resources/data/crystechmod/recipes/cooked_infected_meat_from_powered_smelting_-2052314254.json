@@ -1,0 +1,16 @@
+{
+  "type": "crystechmod:powered_smelting",
+  "craftTime": 200,
+  "energyAmount": 10,
+  "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:raw_infected_meat"
+      }
+    }
+  ],
+  "output": {
+    "item": "crystechmod:cooked_infected_meat"
+  }
+}

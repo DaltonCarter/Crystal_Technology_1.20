@@ -60,6 +60,9 @@ public static final RegistryObject<SimpleParticleType> YOKARITE_PARTICLES =
     public static final RegistryObject<SimpleParticleType> SMALL_ABOREUS_PARTICLES =
             PARTICLE_TYPES.register("small_aboreus_particles", () -> new SimpleParticleType(true));
 
+    public static final RegistryObject<SimpleParticleType> BLUE_FLAME_PARTICLES =
+            PARTICLE_TYPES.register("blue_flame_particles", () -> new SimpleParticleType(true));
+
 public static void register(IEventBus eventBus) {
     PARTICLE_TYPES.register(eventBus);
 }

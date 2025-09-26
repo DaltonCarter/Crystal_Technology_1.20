@@ -1,10 +1,13 @@
 {
   "type": "crystechmod:powered_smelting",
-  "craftTime": 150,
+  "craftTime": 200,
   "energyAmount": 10,
   "ingredients": [
     {
-      "item": "crystechmod:raw_alythum"
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:raw_alythum"
+      }
     }
   ],
   "output": {

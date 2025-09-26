@@ -2,6 +2,7 @@ package com.CartersDev.crystechmod.datagen.custom;
 
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.recipe.PoweredKilnRecipe;
+import com.CartersDev.crystechmod.util.crafting.CountedIngredient;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.advancements.Advancement;
@@ -19,19 +20,20 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
+import java.util.List;
 import java.util.function.Consumer;
 
 public class PoweredKilnRecipeBuilder implements RecipeBuilder {
     private final Item result;
-    private final Ingredient ingredient;
+    private final List<CountedIngredient> ingredient;
     private final int count;
     private final int craftTime;
     private final int energyAmount;
 
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
 
-    public PoweredKilnRecipeBuilder(ItemLike ingredient, ItemLike result, int count, int craftTime, int energyAmount) {
-        this.ingredient = Ingredient.of(ingredient);
+    public PoweredKilnRecipeBuilder(List<CountedIngredient> ingredient, ItemLike result, int count, int craftTime, int energyAmount) {
+        this.ingredient = ingredient;
         this.result = result.asItem();
         this.count = count;
         this.craftTime = craftTime;
@@ -68,7 +70,7 @@ public class PoweredKilnRecipeBuilder implements RecipeBuilder {
     public static class Result implements FinishedRecipe {
         private final ResourceLocation id;
         private final Item result;
-        private final Ingredient ingredient;
+        private final List<CountedIngredient> ingredient;
 
 
         private final int count;
@@ -78,7 +80,7 @@ public class PoweredKilnRecipeBuilder implements RecipeBuilder {
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
 
-        public Result(ResourceLocation pId, Item pResult, int pCount, Ingredient ingredient, Advancement.Builder pAdvancement,
+        public Result(ResourceLocation pId, Item pResult, int pCount, List<CountedIngredient> ingredient, Advancement.Builder pAdvancement,
                       ResourceLocation pAdvancementId, int craftTime, int energyAmount) {
             this.id = pId;
             this.result = pResult;
@@ -93,10 +95,10 @@ public class PoweredKilnRecipeBuilder implements RecipeBuilder {
 
         @Override
         public void serializeRecipeData(JsonObject pJson) {
-            JsonArray jsonarray = new JsonArray();
-            jsonarray.add(ingredient.toJson());
+            JsonArray jsonInputs = new JsonArray(ingredient.size());
+            ingredient.forEach(ing -> jsonInputs.add(ing.toJson()));
 
-            pJson.add("ingredients", jsonarray);
+            pJson.add("ingredients", jsonInputs);
             JsonObject jsonobject = new JsonObject();
             jsonobject.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
 
@@ -114,7 +116,7 @@ public class PoweredKilnRecipeBuilder implements RecipeBuilder {
         public ResourceLocation getId() {
 
             return new ResourceLocation(CrystalTech.MOD_ID,
-                    ForgeRegistries.ITEMS.getKey(this.result).getPath() + "_from_powered_smelting_" + ingredient.hashCode());
+                    ForgeRegistries.ITEMS.getKey(this.result).getPath() + "_from_powered_smelting_" + ingredient.get(0).hashCode());
         }
 
         @Override

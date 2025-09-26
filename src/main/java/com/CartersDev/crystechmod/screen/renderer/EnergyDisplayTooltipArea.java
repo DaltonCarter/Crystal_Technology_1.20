@@ -1,6 +1,7 @@
 package com.CartersDev.crystechmod.screen.renderer;
 
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.renderer.Rect2i;
 import net.minecraft.network.chat.Component;
 import net.minecraftforge.energy.IEnergyStorage;
 
@@ -36,6 +37,16 @@ public class EnergyDisplayTooltipArea {
 
     public List<Component> getTooltips() {
         return List.of(Component.literal(energy.getEnergyStored()+" / "+energy.getMaxEnergyStored()+" FE"));
+    }
+
+
+    public int getWidth() {
+        return this.width;
+    }
+
+
+    public int getHeight() {
+        return this.height;
     }
 
     public void render(GuiGraphics guiGraphics) {

@@ -4,7 +4,10 @@
   "energyAmount": 20,
   "ingredients": [
     {
-      "item": "crystechmod:mg_core_ingot"
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:mg_core_ingot"
+      }
     }
   ],
   "multiply": false,
