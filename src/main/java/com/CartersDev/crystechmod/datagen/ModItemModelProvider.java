@@ -46,6 +46,22 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
 
         //Simple Item Models:
+        simpleItem(ModItems.ANTIDOTE);
+        simpleItem(ModItems.WITHER_ANTIDOTE);
+        simpleItem(ModItems.VACCINE);
+        simpleItem(ModItems.COMPLETE_VACCINE);
+        simpleItem(ModItems.BANDAGES);
+        simpleItem(ModItems.MED_KIT);
+        simpleItem(ModItems.ADV_MED_KIT);
+
+        simpleItem(ModItems.CHICKEN_MRE);
+        simpleItem(ModItems.BEEF_MRE);
+        simpleItem(ModItems.PORK_MRE);
+        simpleItem(ModItems.FISH_MRE);
+        simpleItem(ModItems.MUTTON_MRE);
+        simpleItem(ModItems.VITRIC_MRE);
+        simpleItem(ModItems.VEGGIE_MRE);
+
         simpleItem(ModItems.TIBERIUM_LEATHER);
         simpleItem(ModItems.ICHOR_LEATHER);
         simpleItem(ModItems.YOKARAN_BLOOM_POWDER);

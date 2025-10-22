@@ -153,6 +153,38 @@
   "item.crystechmod.kryonic_capacitor": "Kryonic Component",
   "item.crystechmod.kryonic_reservoir": "Kryonic Reservoir",
 
+  "item.crystechmod.bandages": "Bandages",
+  "item.crystechmod.antidote": "Antidote",
+  "item.crystechmod.wither_antidote": "Wither Antidote",
+  "item.crystechmod.vaccine": "Vitricium Infection Vaccine",
+  "item.crystechmod.complete_vaccine": "Vitricium Infection Cure",
+  "item.crystechmod.med_kit": "Med-Kit",
+  "item.crystechmod.adv_med_kit": "Advanced Med-Kit",
+
+  "item.crystechmod.chicken_mre": "Ration C",
+  "item.crystechmod.beef_mre": "Ration B",
+  "item.crystechmod.fish_mre": "Ration F",
+  "item.crystechmod.pork_mre": "Ration P",
+  "item.crystechmod.mutton_mre": "Ration M",
+  "item.crystechmod.vitric_mre": "Ration Vi",
+  "item.crystechmod.veggie_mre": "Ration Ve",
+
+  "item.minecraft.potion.effect.poison_resistance_potion": "Poison Resistance Potion",
+  "item.minecraft.splash_potion.effect.poison_resistance_potion": "Splash Potion of Poison Resistance",
+  "item.minecraft.lingering_potion.effect.poison_resistance_potion": "Lingering Potion of Poison Resistance",
+
+  "item.minecraft.potion.effect.long_poison_resistance_potion": "Poison Resistance Potion",
+  "item.minecraft.splash_potion.effect.long_poison_resistance_potion": "Splash Potion of Poison Resistance",
+  "item.minecraft.lingering_potion.effect.long_poison_resistance_potion": "Lingering Potion of Poison Resistance",
+
+  "item.minecraft.potion.effect.wither_resistance_potion": "Wither Resistance Potion",
+  "item.minecraft.splash_potion.effect.wither_resistance_potion": "Splash Potion of Wither Resistance",
+  "item.minecraft.lingering_potion.effect.wither_resistance_potion": "Lingering Potion of Wither Resistance",
+
+  "item.minecraft.potion.effect.long_wither_resistance_potion": "Wither Resistance Potion",
+  "item.minecraft.splash_potion.effect.long_wither_resistance_potion": "Splash Potion of Wither Resistance",
+  "item.minecraft.lingering_potion.effect.long_wither_resistance_potion": "Lingering Potion of Wither Resistance",
+
 
 
   "block.crystechmod.aeries_ore": "Aeries Ore",
@@ -969,10 +1001,30 @@
   "enchantment.crystechmod.lightning_striker": "Lightning Striker",
   "enchantment.crystechmod.vitric_harvester": "Vitric Harvester",
 
+  "enchantment.crystechmod.vitric_harvester.desc": "Prevents Tiberium Variants from Exploding when mined. Works with Fortune.",
+  "enchantment.crystechmod.lightning_striker.desc": "Smite thine enemies with righteous lightning. DO NOT USE ON CREEPERS.",
+
 
 
   "effect.crystechmod.freeze": "Freeze",
   "effect.crystechmod.slimey_effect": "Slimey",
+
+  "effect.crystechmod.poison_resistance": "Poison Resistance",
+  "effect.crystechmod.wither_resistance": "Wither Resistance",
+  "effect.crystechmod.hazmat": "Hazmat Protection",
+
+  "effect.crystechmod.vitricium_infection_1": "Initial Vitricium Infection",
+  "effect.crystechmod.vitricium_infection_2": "Serious Vitricium Infection",
+  "effect.crystechmod.vitricium_infection_3": "Critical Vitricium Infection",
+  "effect.crystechmod.vitricium_infection_4": "Terminal Vitricium Infection",
+
+  "effect.crystechmod.vitricium_resistance_1": "Basic Vitricium Resistance",
+  "effect.crystechmod.vitricium_resistance_2": "Improved Vitricium Resistance",
+  "effect.crystechmod.vitricium_resistance_3": "Advanced Vitricium Resistance",
+  "effect.crystechmod.vitricium_resistance_4": "Complete Vitricium Resistance",
+
+
+
 
 
 

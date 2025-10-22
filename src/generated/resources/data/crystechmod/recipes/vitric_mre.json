@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "crystechmod:vitric_meats"
+    },
+    {
+      "tag": "crystechmod:vitric_meats"
+    },
+    {
+      "tag": "crystechmod:veggies"
+    },
+    {
+      "tag": "crystechmod:veggies"
+    },
+    {
+      "tag": "crystechmod:fruit"
+    },
+    {
+      "tag": "crystechmod:fruit"
+    },
+    {
+      "tag": "crystechmod:bread"
+    },
+    {
+      "tag": "crystechmod:bread"
+    }
+  ],
+  "result": {
+    "item": "crystechmod:vitric_mre"
+  }
+}

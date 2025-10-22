@@ -103,6 +103,14 @@ public class ModTags {
         public static final TagKey<Item> ALLOYING_RESULT = tag("alloying_result");
         public static final TagKey<Item> BUCKET_OUTPUT = tag("bucket_output");
 
+        public static final TagKey<Item> VEGGIES = tag("veggies");
+        public static final TagKey<Item> FRUITS = tag("fruit");
+        public static final TagKey<Item> BREADS = tag("bread");
+        public static final TagKey<Item> FISH = tag("fish");
+        public static final TagKey<Item> VITRIC_MEATS = tag("vitric_meats");
+        public static final TagKey<Item> WOOL = tag("wool");
+
+
 
 
 

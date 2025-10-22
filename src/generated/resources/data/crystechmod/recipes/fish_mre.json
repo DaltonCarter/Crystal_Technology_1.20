@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "crystechmod:fish"
+    },
+    {
+      "tag": "crystechmod:fish"
+    },
+    {
+      "tag": "crystechmod:veggies"
+    },
+    {
+      "tag": "crystechmod:veggies"
+    },
+    {
+      "tag": "crystechmod:fruit"
+    },
+    {
+      "tag": "crystechmod:fruit"
+    },
+    {
+      "tag": "crystechmod:bread"
+    },
+    {
+      "tag": "crystechmod:bread"
+    }
+  ],
+  "result": {
+    "item": "crystechmod:fish_mre"
+  }
+}

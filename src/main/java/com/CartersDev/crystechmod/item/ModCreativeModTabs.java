@@ -180,10 +180,14 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     .title(Component.translatable("creativetab.crystal_technology_plant_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
-                        output.accept(ModBlocks.PLAGUED_SAPLING.get());
-                        output.accept(ModBlocks.DYING_SAPLING.get());
-                        output.accept(ModBlocks.EMBER_OAK_SAPLING.get());
-                        output.accept(ModBlocks.MARIKA_OAK_SAPLING.get());
+                        output.accept(ModItems.BANDAGES.get());
+                        output.accept(ModItems.ANTIDOTE.get());
+                        output.accept(ModItems.WITHER_ANTIDOTE.get());
+                        output.accept(ModItems.VACCINE.get());
+                        output.accept(ModItems.COMPLETE_VACCINE.get());
+                        output.accept(ModItems.MED_KIT.get());
+                        output.accept(ModItems.ADV_MED_KIT.get());
+
                         output.accept(ModItems.TIBERIUM_FRUIT.get());
                         output.accept(ModItems.HEL_FRUIT_SEEDS.get());
                         output.accept(ModItems.HEL_FRUIT.get());
@@ -198,6 +202,19 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModItems.SABER_BREAD.get());
                         output.accept(ModItems.RAW_INFECTED_MEAT.get());
                         output.accept(ModItems.COOKED_INFECTED_MEAT.get());
+                        output.accept(ModItems.BEEF_MRE.get());
+                        output.accept(ModItems.CHICKEN_MRE.get());
+                        output.accept(ModItems.PORK_MRE.get());
+                        output.accept(ModItems.FISH_MRE.get());
+                        output.accept(ModItems.MUTTON_MRE.get());
+                        output.accept(ModItems.VITRIC_MRE.get());
+                        output.accept(ModItems.VEGGIE_MRE.get());
+
+
+                        output.accept(ModBlocks.PLAGUED_SAPLING.get());
+                        output.accept(ModBlocks.DYING_SAPLING.get());
+                        output.accept(ModBlocks.EMBER_OAK_SAPLING.get());
+                        output.accept(ModBlocks.MARIKA_OAK_SAPLING.get());
                         output.accept(ModBlocks.HYACINTH.get());
                         output.accept(ModBlocks.FLOWER_OF_LIFE.get());
                         output.accept(ModBlocks.DEVILS_BLOOD.get());

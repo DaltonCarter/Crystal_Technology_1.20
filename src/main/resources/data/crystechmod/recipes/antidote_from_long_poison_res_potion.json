@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:nbt",
+      "item": "minecraft:potion",
+      "count": 1,
+      "nbt": "{Potion:\"crystechmod:long_poison_resistance_potion\"}"
+    }
+  ],
+  "result": {
+    "item": "crystechmod:antidote",
+    "count" : 8
+  }
+}

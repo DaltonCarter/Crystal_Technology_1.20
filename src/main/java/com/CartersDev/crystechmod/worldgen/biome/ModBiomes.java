@@ -95,7 +95,7 @@ public class ModBiomes {
     public static final ResourceKey<Biome> WASTELAND_HILLS = register("wasteland_hills");
     public static final ResourceKey<Biome> SCORCHED_HILLS = register("scorched_hills");
     public static final ResourceKey<Biome> SCORCHED_DESERT = register("scorched_desert");
-    public static final ResourceKey<Biome> RED_AND_BLUE_ZONE_BORDER = register("red_and_blue_border");
+    public static final ResourceKey<Biome> RED_AND_BLUE_ZONE_BORDER = register("red_and_blue_zone_border");
     public static final ResourceKey<Biome> ICHOR_MARSH = register("ichor_marsh");
     public static final ResourceKey<Biome> ABYSSAL_MARSH = register("abyssal_marsh");
     public static final ResourceKey<Biome> DEAD_PLAINS = register("dead_plains");

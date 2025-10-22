@@ -7,6 +7,7 @@ import com.CartersDev.crystechmod.datagen.custom.*;
 import com.CartersDev.crystechmod.fluid.ModFluidTypes;
 import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModItems;
+import com.CartersDev.crystechmod.potion.ModPotions;
 import com.CartersDev.crystechmod.util.ModTags;
 import com.CartersDev.crystechmod.util.crafting.CountedIngredient;
 import net.minecraft.data.PackOutput;
@@ -4398,6 +4399,116 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .requires(ModBlocks.FLOWER_OF_LIFE.get())
                 .unlockedBy(getHasName(ModItems.ILLYRIM_BLEND.get()), has(ModItems.ILLYRIM_BLEND.get()))
                 .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BEEF_MRE.get(), 1)
+                .requires(Items.COOKED_BEEF, 2)
+                .requires(ModTags.Items.VEGGIES)
+                .requires(ModTags.Items.VEGGIES)
+                .requires(ModTags.Items.FRUITS)
+                .requires(ModTags.Items.FRUITS)
+                .requires(ModTags.Items.BREADS)
+                .requires(ModTags.Items.BREADS)
+                .unlockedBy(getHasName(Items.BEEF), has(Items.BEEF))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CHICKEN_MRE.get(), 1)
+                .requires(Items.COOKED_CHICKEN, 2)
+                .requires(ModTags.Items.VEGGIES)
+                .requires(ModTags.Items.VEGGIES)
+                .requires(ModTags.Items.FRUITS)
+                .requires(ModTags.Items.FRUITS)
+                .requires(ModTags.Items.BREADS)
+                .requires(ModTags.Items.BREADS)
+                .unlockedBy(getHasName(Items.CHICKEN), has(Items.CHICKEN))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.FISH_MRE.get(), 1)
+                .requires(ModTags.Items.FISH)
+                .requires(ModTags.Items.FISH)
+                .requires(ModTags.Items.VEGGIES)
+                .requires(ModTags.Items.VEGGIES)
+                .requires(ModTags.Items.FRUITS)
+                .requires(ModTags.Items.FRUITS)
+                .requires(ModTags.Items.BREADS)
+                .requires(ModTags.Items.BREADS)
+                .unlockedBy(getHasName(Items.COD), has(Items.COD))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.MUTTON_MRE.get(), 1)
+                .requires(Items.COOKED_MUTTON, 2)
+                .requires(ModTags.Items.VEGGIES)
+                .requires(ModTags.Items.VEGGIES)
+                .requires(ModTags.Items.FRUITS)
+                .requires(ModTags.Items.FRUITS)
+                .requires(ModTags.Items.BREADS)
+                .requires(ModTags.Items.BREADS)
+                .unlockedBy(getHasName(Items.MUTTON), has(Items.MUTTON))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.PORK_MRE.get(), 1)
+                .requires(Items.COOKED_PORKCHOP, 2)
+                .requires(ModTags.Items.VEGGIES)
+                .requires(ModTags.Items.VEGGIES)
+                .requires(ModTags.Items.FRUITS)
+                .requires(ModTags.Items.FRUITS)
+                .requires(ModTags.Items.BREADS)
+                .requires(ModTags.Items.BREADS)
+                .unlockedBy(getHasName(Items.COOKED_PORKCHOP), has(Items.COOKED_PORKCHOP))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.VEGGIE_MRE.get(), 1)
+                .requires(Items.EGG, 2)
+                .requires(ModTags.Items.VEGGIES)
+                .requires(ModTags.Items.VEGGIES)
+                .requires(ModTags.Items.FRUITS)
+                .requires(ModTags.Items.FRUITS)
+                .requires(ModTags.Items.BREADS)
+                .requires(ModTags.Items.BREADS)
+                .unlockedBy(getHasName(Items.EGG), has(Items.EGG))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.VITRIC_MRE.get(), 1)
+                .requires(ModTags.Items.VITRIC_MEATS)
+                .requires(ModTags.Items.VITRIC_MEATS)
+                .requires(ModTags.Items.VEGGIES)
+                .requires(ModTags.Items.VEGGIES)
+                .requires(ModTags.Items.FRUITS)
+                .requires(ModTags.Items.FRUITS)
+                .requires(ModTags.Items.BREADS)
+                .requires(ModTags.Items.BREADS)
+                .unlockedBy(getHasName(ModItems.RAW_INFECTED_MEAT.get()), has(ModItems.RAW_INFECTED_MEAT.get()))
+                .save(consumer);
+
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BANDAGES.get(), 6)
+                .requires(ModTags.Items.WOOL)
+                .requires(ModTags.Items.WOOL)
+                .requires(ModTags.Items.WOOL)
+
+                .unlockedBy(getHasName(Items.WHITE_WOOL), has(Items.WHITE_WOOL))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.MED_KIT.get(), 1)
+                .requires(ModItems.BANDAGES.get())
+                .requires(ModItems.BANDAGES.get())
+                .requires(ModItems.BANDAGES.get())
+                .requires(ModItems.ANTIDOTE.get())
+                .requires(ModItems.WITHER_ANTIDOTE.get())
+
+                .unlockedBy(getHasName(ModItems.BANDAGES.get()), has(ModItems.BANDAGES.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.ADV_MED_KIT.get(), 1)
+                .requires(ModItems.BANDAGES.get())
+                .requires(ModItems.BANDAGES.get())
+                .requires(ModItems.BANDAGES.get())
+                .requires(ModItems.MED_KIT.get())
+                .requires(ModItems.COMPLETE_VACCINE.get())
+
+                .unlockedBy(getHasName(ModItems.BANDAGES.get()), has(ModItems.BANDAGES.get()))
+                .save(consumer);
+
 
 
 

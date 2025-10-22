@@ -1,6 +1,6 @@
 package com.CartersDev.crystechmod.block.custom;
 
-import com.CartersDev.crystechmod.item.custom.FireHeart;
+import com.CartersDev.crystechmod.item.custom.Curios.FireHeart;
 import com.CartersDev.crystechmod.particle.ModParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;

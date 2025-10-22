@@ -1,7 +1,10 @@
 package com.CartersDev.crystechmod.worldgen.dimension;
 
 import com.CartersDev.crystechmod.CrystalTech;
+import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.worldgen.biome.ModBiomes;
+import com.CartersDev.crystechmod.worldgen.biome.VitricBiomeBuilder;
+import com.CartersDev.crystechmod.worldgen.biome.surface.ModSurfaceRules;
 import com.google.common.collect.ImmutableSet;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Codec;
@@ -124,10 +127,15 @@ public class ModDimensions {
 ///     Single Chunk Gen
 
         NoiseBasedChunkGenerator wrappedChunkGenerator = new NoiseBasedChunkGenerator(
-                new FixedBiomeSource(biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_DESERT)),
+                new
+
+
+                FixedBiomeSource(biomeRegistry.getOrThrow(ModBiomes.TIBERIAN_DESERT)),
                 noiseGenSettings.getOrThrow(NoiseGeneratorSettings.OVERWORLD));
 
 ///    End Single Chunk Gen
+
+
 
 
 
@@ -141,12 +149,12 @@ public class ModDimensions {
                         new Climate.ParameterList<>(List.of(
 
 ////                                  Shores/Beaches:
-                                Pair.of(Climate.parameters(-0.45F, -1.0F, -0.4F, 0.45F, 0.0F, -1.0F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.YELLOW_ZONE_SHORE)),
-                                Pair.of(Climate.parameters(-0.15F, -0.35F, -0.25F, 0.55F, 0.0F, -0.9333F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.YELLOW_ZONE_SHORE)),
-                                Pair.of(Climate.parameters(-1.0F, -1.0F, -0.39F, 0.55F, 0.0F, -0.4F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.YELLOW_ZONE_STONY_SHORE)),
-                                Pair.of(Climate.parameters(-0.45F, -0.35F, -0.21F, 1.0F, 0.0F, -0.2666F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.YELLOW_ZONE_STONY_SHORE)),
-                                Pair.of(Climate.parameters(-0.45F, -0.35F, -0.19F, -0.2225F, 0.0F, 0.05F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.RED_ZONE_SHORE)),
-                                Pair.of(Climate.parameters(-0.15F, -0.1F, -0.11F, 0.45F, 0.0F, 0.2666F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.RED_ZONE_SHORE)),
+//                                Pair.of(Climate.parameters(-0.45F, -1.0F, -0.4F, 0.45F, 0.0F, -1.0F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.YELLOW_ZONE_SHORE)),
+//                                Pair.of(Climate.parameters(-0.15F, -0.35F, -0.25F, 0.55F, 0.0F, -0.9333F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.YELLOW_ZONE_SHORE)),
+//                                Pair.of(Climate.parameters(-1.0F, -1.0F, -0.39F, 0.55F, 0.0F, -0.4F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.YELLOW_ZONE_STONY_SHORE)),
+//                                Pair.of(Climate.parameters(-0.45F, -0.35F, -0.21F, 1.0F, 0.0F, -0.2666F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.YELLOW_ZONE_STONY_SHORE)),
+//                                Pair.of(Climate.parameters(-0.45F, -0.35F, -0.19F, -0.2225F, 0.0F, 0.05F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.RED_ZONE_SHORE)),
+//                                Pair.of(Climate.parameters(-0.15F, -0.1F, -0.11F, 0.45F, 0.0F, 0.2666F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.RED_ZONE_SHORE)),
                                 Pair.of(Climate.parameters(-0.45F, -1.0F, -0.19F, 1.0F, 0.0F, -0.05F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_RIVER)),
                                 Pair.of(Climate.parameters(1.0F, 1.0F, -0.11F, -0.375F, 0.0F, 0.05F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.INFECTED_RIVER)),
                                 Pair.of(Climate.parameters(-1.0F, -1.0F, -0.19F, -0.375F, 0.0F, -0.05F, 0.4F), biomeRegistry.getOrThrow(ModBiomes.RED_ZONE_RIVER)),
@@ -291,4 +299,51 @@ public class ModDimensions {
 
     }
 
+    public static void bootstrapNoise(BootstapContext<NoiseGeneratorSettings> context) {
+        context.register(VITRIC_EXPANSE_SETTINGS, vitricDefault());
+
+    }
+
+
+    public static NoiseGeneratorSettings vitricDefault() {
+        NoiseSettings vitricNoise = NoiseSettings.create(
+                -64, //TODO Deliberate over this. For now it'll be -32
+                256,
+                1,
+                2
+        );
+
+        return new NoiseGeneratorSettings(
+                vitricNoise,
+                ModBlocks.INFESTED_STONE.get().defaultBlockState(),
+                ModBlocks.TIBERIUM_WATER_BLOCK.get().defaultBlockState(),
+                new NoiseRouter(
+                        DensityFunctions.zero(),
+                        DensityFunctions.zero(),
+                        DensityFunctions.zero(),
+                        DensityFunctions.zero(),
+                        DensityFunctions.zero(),
+                        DensityFunctions.zero(),
+                        DensityFunctions.zero(),
+                        DensityFunctions.zero(),
+                        DensityFunctions.zero(),
+                        DensityFunctions.zero(),
+                        DensityFunctions.zero(),
+                        DensityFunctions.zero(),
+                        DensityFunctions.zero(),
+                        DensityFunctions.zero(),
+                        DensityFunctions.zero()
+                ),
+                ModSurfaceRules.vitric(true, false, true),
+                (new VitricBiomeBuilder()).spawnTarget(),
+                63,
+                false,
+                true,
+                true,
+                false
+        );
+    }
+
+
 }
+

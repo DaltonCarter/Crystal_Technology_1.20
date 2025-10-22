@@ -1,13 +1,16 @@
-// 1.20.1	2025-09-23T19:33:21.2156621	Tags for minecraft:item mod id crystechmod
+// 1.20.1	2025-10-21T20:21:13.0612041	Tags for minecraft:item mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/items/aeries_ores.json
 b1a1358d34a731372748d01956f6b5c6051bcdf3 data/crystechmod/tags/items/alloying_input.json
 655216b4c1a7b6525500eec6babbe3f7e78ade3d data/crystechmod/tags/items/alloying_result.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/items/alythum_ores.json
+9e6c1b54299e9316a36c8543bd636a40c390231c data/crystechmod/tags/items/bread.json
 5159be849ca1f753e204748b15df43bb5f807324 data/crystechmod/tags/items/bucket_output.json
 6b38af71a7ebba97f729de43e6ee84033f8e45cc data/crystechmod/tags/items/concretes.json
 1b1bb8b2e7aecfb7d82d771a540fcafffe25b6ed data/crystechmod/tags/items/dead_logs.json
 9e69fb63880d9644913e3c1febc7b5019ed06a98 data/crystechmod/tags/items/ember_oak_logs.json
 f8f3067f545a2de3c125e52b61ebeb33ac073b29 data/crystechmod/tags/items/enigma_ores.json
+be7f7f4f1cefe92039d0d177c5381596513ef943 data/crystechmod/tags/items/fish.json
+aa5fd8b96f58518f91faef29c0c3928d9c7c82e5 data/crystechmod/tags/items/fruit.json
 385384748b1de16a26be84aa4324801acb1e776d data/crystechmod/tags/items/glass.json
 bb9fb2e4484e4cb7aaaf866264ae93f8257a9946 data/crystechmod/tags/items/grindable.json
 f9541d478a6479b3fadbd51f6a062c8d4fb28ca3 data/crystechmod/tags/items/grindable_flowers.json
@@ -29,7 +32,10 @@ ee6c95b24ed7fb71ba4fb4b4ee72ce886ce3b2ba data/crystechmod/tags/items/smelting_re
 30072644d4c3d908ca2eabafbb2613c9f1b8c07b data/crystechmod/tags/items/smelting_result_2.json
 ecf2a3889f87177c168a6ffc2c5f25e077381f19 data/crystechmod/tags/items/sticks.json
 39acdcf33383e05a367faca9c1c896cc6cdba9c0 data/crystechmod/tags/items/tibercrete_sands.json
+fbe02114295808e08a661c7e8f4975306dba35d7 data/crystechmod/tags/items/veggies.json
+0a3ba27610d51d9b460751f215de38f6743e6a9d data/crystechmod/tags/items/vitric_meats.json
 46b073173762a16348446e0d95c2e02d41798343 data/crystechmod/tags/items/vitric_sands.json
+77829b6fc27f73d63c05e0a50150c9435263b6fb data/crystechmod/tags/items/wool.json
 4b700b33cd0f1676485a704b4ca21d0d44d43738 data/forge/tags/items/dusts.json
 2e0f8661c75c39419b1d57f9ec8c99eba7866bf2 data/forge/tags/items/gems.json
 002e5c40a5184c92f01d66de3343c441df892703 data/forge/tags/items/ingots.json

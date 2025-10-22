@@ -5,11 +5,10 @@ import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.enchantment.ModEnchantments;
 import com.CartersDev.crystechmod.item.ModItems;
-import com.CartersDev.crystechmod.item.custom.ExcavatorItem;
-import com.CartersDev.crystechmod.item.custom.HammerItem;
+import com.CartersDev.crystechmod.item.custom.Tools.ExcavatorItem;
+import com.CartersDev.crystechmod.item.custom.Tools.HammerItem;
 import com.CartersDev.crystechmod.villager.ModVillagers;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
-import net.minecraft.client.sounds.MusicManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.npc.VillagerProfession;
@@ -118,11 +117,10 @@ public class ModEvents {
             ItemStack enchantedBook2 = EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.VITRIC_HARVESTER.get(), 1));
 
             //Level 1
-            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(ModItems.TIBERIUM_BLUE.get(),20),
-                    enchantedBook, 2, 8, 0.02f));
 
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(new ItemStack(ModItems.TIBERIUM_RED.get(),20),
                     enchantedBook2, 2, 8, 0.02f));
+
 
         }
 
@@ -190,7 +188,7 @@ public static void addCustomWanderingTrades(WandererTradesEvent event) {
     List<VillagerTrades.ItemListing> genericTrades = event.getGenericTrades();
     List<VillagerTrades.ItemListing> rareTrades = event.getRareTrades();
 
-genericTrades.add((pTrader, pRandom) -> new MerchantOffer( new ItemStack(Items.EMERALD, 32),
+genericTrades.add((pTrader, pRandom) -> new MerchantOffer( new ItemStack(Items.EMERALD, 10),
         new ItemStack(ModItems.GREEN_TIBERIUM_DUST.get(), 1), 10, 2, 0.2f));
 
 rareTrades.add((pTrader, pRandom) -> new MerchantOffer( new ItemStack(Items.EMERALD, 12),

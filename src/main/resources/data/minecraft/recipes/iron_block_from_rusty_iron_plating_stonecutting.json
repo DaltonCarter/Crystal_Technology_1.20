@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crystechmod:rusty_iron_plating"
+  },
+  "result": "minecraft:iron_block"
+}

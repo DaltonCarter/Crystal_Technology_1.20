@@ -121,10 +121,10 @@ public class RedTiberiumCrystalBlock extends CropBlock {
     public boolean hasEnchantment (String enchantments) {
         if (enchantments.contains("com.CartersDev.crystechmod.enchantment.VitricHarvesterEnchantment") ||
                 enchantments.contains("net.minecraft.world.item.enchantment.UntouchingEnchantment")) {
-            System.out.println("PING PONG");
+//            System.out.println("PING PONG");
             return true;
         }
-        System.out.println("GOD DAMN IT NAPPA!");
+//        System.out.println("GOD DAMN IT NAPPA!");
         return false;
     }
 

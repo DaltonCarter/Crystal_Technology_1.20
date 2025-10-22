@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "crystechmod:wool"
+    },
+    {
+      "tag": "crystechmod:wool"
+    },
+    {
+      "tag": "crystechmod:wool"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:bandages"
+  }
+}

@@ -6,7 +6,16 @@ import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.entity.ModEntities;
 import com.CartersDev.crystechmod.fluid.ModFluids;
-import com.CartersDev.crystechmod.item.custom.*;
+import com.CartersDev.crystechmod.item.custom.CoreCrystals.RedCoreCrystal;
+import com.CartersDev.crystechmod.item.custom.Medicine.*;
+import com.CartersDev.crystechmod.item.custom.Util.ModArmorItem;
+import com.CartersDev.crystechmod.item.custom.TiberiumDust.BlueTiberiumDust;
+import com.CartersDev.crystechmod.item.custom.TiberiumDust.PurpleTiberiumDust;
+import com.CartersDev.crystechmod.item.custom.TiberiumDust.RedTiberiumDust;
+import com.CartersDev.crystechmod.item.custom.TiberiumDust.TiberiumDust;
+import com.CartersDev.crystechmod.item.custom.Tools.ExcavatorItem;
+import com.CartersDev.crystechmod.item.custom.Tools.HammerItem;
+import com.CartersDev.crystechmod.item.custom.Tools.PaxelItem;
 import com.CartersDev.crystechmod.sound.ModSounds;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
@@ -64,7 +73,57 @@ public static final RegistryObject<Item> TIBERIUM_FRUIT = ITEMS.register("tiberi
     public static final RegistryObject<Item> SABER_BREAD = ITEMS.register("saber_bread",
             () -> new Item(new Item.Properties().food(ModFoods.SABER_BREAD)));
 
+    public static final RegistryObject<Item> CHICKEN_MRE = ITEMS.register("chicken_mre",
+            () -> new Item(new Item.Properties().food(ModFoods.MRE_CHIK)));
+
+    public static final RegistryObject<Item> BEEF_MRE = ITEMS.register("beef_mre",
+            () -> new Item(new Item.Properties().food(ModFoods.MRE_BEEF)));
+
+    public static final RegistryObject<Item> FISH_MRE = ITEMS.register("fish_mre",
+            () -> new Item(new Item.Properties().food(ModFoods.MRE_FISH)));
+
+    public static final RegistryObject<Item> PORK_MRE = ITEMS.register("pork_mre",
+            () -> new Item(new Item.Properties().food(ModFoods.MRE_PORK)));
+
+    public static final RegistryObject<Item> MUTTON_MRE = ITEMS.register("mutton_mre",
+            () -> new Item(new Item.Properties().food(ModFoods.MRE_MUTTON)));
+
+    public static final RegistryObject<Item> VITRIC_MRE = ITEMS.register("vitric_mre",
+            () -> new Item(new Item.Properties().food(ModFoods.MRE_VITRIC)));
+
+    public static final RegistryObject<Item> VEGGIE_MRE = ITEMS.register("veggie_mre",
+            () -> new Item(new Item.Properties().food(ModFoods.MRE_VEG)));
+
 //End of Foods
+
+
+
+//Medicine
+
+    public static final RegistryObject<Item> ANTIDOTE = ITEMS.register("antidote",
+            () -> new AntidoteItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> WITHER_ANTIDOTE = ITEMS.register("wither_antidote",
+            () -> new WitherAntidoteItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> VACCINE = ITEMS.register("vaccine",
+            () -> new VaccineItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> COMPLETE_VACCINE = ITEMS.register("complete_vaccine",
+            () -> new CompleteVaccineItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> BANDAGES = ITEMS.register("bandages",
+            () -> new BandageItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> MED_KIT = ITEMS.register("med_kit",
+            () -> new MedKitItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> ADV_MED_KIT = ITEMS.register("adv_med_kit",
+            () -> new AdvMedKitItem(new Item.Properties()));
+
+
+//End of Medicine
+
 
 
 //Crystals:
@@ -382,35 +441,35 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
                     new Item.Properties()));
 
     public static final RegistryObject<Item> HAZMAT_MK1_HELMET = ITEMS.register("hazmat_mk1_helmet",
-            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK1, ArmorItem.Type.HELMET,
+            () -> new ModArmorItem(ModArmorMaterials.HAZMAT_MK1, ArmorItem.Type.HELMET,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> HAZMAT_MK1_CHESTPLATE = ITEMS.register("hazmat_mk1_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK1, ArmorItem.Type.CHESTPLATE,
+            () -> new ModArmorItem(ModArmorMaterials.HAZMAT_MK1, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> HAZMAT_MK1_LEGGINGS = ITEMS.register("hazmat_mk1_leggings",
-            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK1, ArmorItem.Type.LEGGINGS,
+            () -> new ModArmorItem(ModArmorMaterials.HAZMAT_MK1, ArmorItem.Type.LEGGINGS,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> HAZMAT_MK1_BOOTS = ITEMS.register("hazmat_mk1_boots",
-            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK1, ArmorItem.Type.BOOTS,
+            () -> new ModArmorItem(ModArmorMaterials.HAZMAT_MK1, ArmorItem.Type.BOOTS,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> HAZMAT_MK2_HELMET = ITEMS.register("hazmat_mk2_helmet",
-            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK2, ArmorItem.Type.HELMET,
+            () -> new ModArmorItem(ModArmorMaterials.HAZMAT_MK2, ArmorItem.Type.HELMET,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> HAZMAT_MK2_CHESTPLATE = ITEMS.register("hazmat_mk2_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK2, ArmorItem.Type.CHESTPLATE,
+            () -> new ModArmorItem(ModArmorMaterials.HAZMAT_MK2, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> HAZMAT_MK2_LEGGINGS = ITEMS.register("hazmat_mk2_leggings",
-            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK2, ArmorItem.Type.LEGGINGS,
+            () -> new ModArmorItem(ModArmorMaterials.HAZMAT_MK2, ArmorItem.Type.LEGGINGS,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> HAZMAT_MK2_BOOTS = ITEMS.register("hazmat_mk2_boots",
-            () -> new ArmorItem(ModArmorMaterials.HAZMAT_MK2, ArmorItem.Type.BOOTS,
+            () -> new ModArmorItem(ModArmorMaterials.HAZMAT_MK2, ArmorItem.Type.BOOTS,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> ILLYRIM_HELMET = ITEMS.register("illyrim_helmet",

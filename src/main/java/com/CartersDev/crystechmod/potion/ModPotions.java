@@ -20,6 +20,18 @@ public static final RegistryObject<Potion> FREEZE_POTION = POTIONS.register("fre
     public static final RegistryObject<Potion> CLIMBING_POTION = POTIONS.register("climbing_potion",
             () -> new Potion(new MobEffectInstance(ModEffects.SLIMEY_EFFECT.get(), 200, 0)));
 
+    public static final RegistryObject<Potion> POISON_RESISTANCE_POTION = POTIONS.register("poison_resistance_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.POISON_RESISTANCE_EFFECT.get(), 3600, 0)));
+
+    public static final RegistryObject<Potion> LONG_POISON_RESISTANCE_POTION = POTIONS.register("long_poison_resistance_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.POISON_RESISTANCE_EFFECT.get(), 9600, 0)));
+
+    public static final RegistryObject<Potion> WITHER_RESISTANCE_POTION = POTIONS.register("wither_resistance_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.WITHER_RESISTANCE_EFFECT.get(), 3600, 0)));
+
+    public static final RegistryObject<Potion> LONG_WITHER_RESISTANCE_POTION = POTIONS.register("long_wither_resistance_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.WITHER_RESISTANCE_EFFECT.get(), 9600, 0)));
+
 
 
 

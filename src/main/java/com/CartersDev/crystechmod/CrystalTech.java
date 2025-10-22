@@ -15,6 +15,7 @@ import com.CartersDev.crystechmod.entity.client.vitricSheep.VitricSheepModel;
 import com.CartersDev.crystechmod.fluid.ModFluidTypes;
 import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModCreativeModTabs;
+import com.CartersDev.crystechmod.item.ModItemProperties;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.loot.ModLootModifiers;
 import com.CartersDev.crystechmod.painting.ModPaintings;
@@ -135,6 +136,18 @@ public class CrystalTech {
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.MUNDANE,
                     Items.SLIME_BALL, ModPotions.CLIMBING_POTION.get()));
 
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.POISON,
+                    ModItems.QUALRIM_COMPOUND.get(), ModPotions.POISON_RESISTANCE_POTION.get()));
+
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.POISON_RESISTANCE_POTION.get(),
+                    Items.REDSTONE, ModPotions.LONG_POISON_RESISTANCE_POTION.get()));
+
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.HARMING,
+                    ModItems.QUALRIM_COMPOUND.get(), ModPotions.WITHER_RESISTANCE_POTION.get()));
+
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.WITHER_RESISTANCE_POTION.get(),
+                    Items.REDSTONE, ModPotions.LONG_WITHER_RESISTANCE_POTION.get()));
+
             //End of Potion Recipes
 
 
@@ -186,6 +199,8 @@ public class CrystalTech {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+
+            ModItemProperties.addCustomItemProperties();
 
             Sheets.addWoodType(ModWoodTypes.PLAGUED);
             Sheets.addWoodType(ModWoodTypes.EMBER_OAK);

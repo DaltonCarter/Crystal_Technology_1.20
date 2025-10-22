@@ -605,6 +605,27 @@ Posted By: Dalton Carter
 -Added two recipes for the refinery to make Soap Water from Ches' Glowing Tree Mod
 -Variants for the Impaler Rhino implemented: Green Horn, Blue Horn, Red Horn, Purple Horn
 
+------------------------------------------------------------------------------
+
+10/22/2025
+Version 0.6.6
+Posted By: Dalton Carter
+
+-Fixed assorted Lang file entries.
+-Added and implemented antidote, wither antidote, bandages, med-kits, and adv.Med-kits
+-Created Hazmat effect, Poison, Wither, and Vitric Infection Resistance*
+-Created Vitric Infection effect*
+-Added Bonemeal logic to Select Flowers
+-Updated Several Textures
+-Hazmat Armor Set abilities finally added
+-Added M.R.E Rations 8 types
+-Added assorted Recipes
+-Added Potions for Poison and Wither Resistance potions
+-Fixed Bug with Vitric Portal eating away at the ground on the other side of the portal
+-Began Work on Energy Bow*
+
+* W.I.P Will be fully implemented in another update
+
 
 
 ======================================================

@@ -1,7 +1,7 @@
 package com.CartersDev.crystechmod.block.custom.plants.trees;
 
 import com.CartersDev.crystechmod.block.ModBlocks;
-import com.CartersDev.crystechmod.item.custom.PaxelItem;
+import com.CartersDev.crystechmod.item.custom.Tools.PaxelItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.AxeItem;

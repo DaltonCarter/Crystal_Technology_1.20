@@ -43,6 +43,27 @@ public class ModFoods {
     public static final FoodProperties SABER_BREAD = new FoodProperties.Builder().nutrition(10).fast()
             .saturationMod(0.5f).build();
 
+    public static final FoodProperties MRE_CHIK = new FoodProperties.Builder().nutrition(20).fast()
+            .saturationMod(1.5f).build();
+
+    public static final FoodProperties MRE_FISH = new FoodProperties.Builder().nutrition(20).fast()
+            .saturationMod(1.5f).build();
+
+    public static final FoodProperties MRE_BEEF = new FoodProperties.Builder().nutrition(20).fast()
+            .saturationMod(1.5f).build();
+
+    public static final FoodProperties MRE_PORK = new FoodProperties.Builder().nutrition(20).fast()
+            .saturationMod(1.5f).build();
+
+    public static final FoodProperties MRE_MUTTON = new FoodProperties.Builder().nutrition(20).fast()
+            .saturationMod(1.5f).build();
+
+    public static final FoodProperties MRE_VITRIC = new FoodProperties.Builder().nutrition(20).fast()
+            .saturationMod(1.5f).build();
+
+    public static final FoodProperties MRE_VEG = new FoodProperties.Builder().nutrition(20).fast()
+            .saturationMod(1.5f).build();
+
 
 
 }

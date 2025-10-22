@@ -237,7 +237,7 @@ public class VitricTeleporter implements ITeleporter {
 				return optional;
 			} else {
 				Direction.Axis direction$axis = entity.level().getBlockState(this.entityEnterPos).getOptionalValue(NetherPortalBlock.AXIS).orElse(Direction.Axis.X);
-				return this.createPortal(pos, direction$axis);
+				return optional;
 			}
 		} else {
 			return optional;

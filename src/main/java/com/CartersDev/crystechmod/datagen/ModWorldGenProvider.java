@@ -25,6 +25,7 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
             .add(Registries.BIOME, ModBiomes::bootstrap)
             .add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem)
+            .add(Registries.NOISE_SETTINGS, ModDimensions::bootstrapNoise)
             .add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType)
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
 

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:bandages"
+    },
+    {
+      "item": "crystechmod:bandages"
+    },
+    {
+      "item": "crystechmod:bandages"
+    },
+    {
+      "item": "crystechmod:antidote"
+    },
+    {
+      "item": "crystechmod:wither_antidote"
+    }
+  ],
+  "result": {
+    "item": "crystechmod:med_kit"
+  }
+}
