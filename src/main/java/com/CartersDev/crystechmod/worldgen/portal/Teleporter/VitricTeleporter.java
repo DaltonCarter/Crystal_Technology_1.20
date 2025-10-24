@@ -10,6 +10,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Vec3i;
+import net.minecraft.network.protocol.game.ClientboundMoveEntityPacket;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.TicketType;
@@ -26,6 +27,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.border.WorldBorder;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.portal.PortalInfo;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.common.util.ITeleporter;
@@ -43,6 +45,8 @@ import java.util.function.Function;
 public class VitricTeleporter implements ITeleporter {
 	public static final TicketType<BlockPos> CUSTOM_PORTAL = TicketType.create("transporter", Vec3i::compareTo, 300);
 	public static Holder<PoiType> poi = null;
+
+    public static BlockPos thisPos = BlockPos.ZERO;
 
 	@SubscribeEvent
 	public static void registerPointOfInterest(RegisterEvent event) {
@@ -145,7 +149,7 @@ public class VitricTeleporter implements ITeleporter {
 			for (int i3 = -1; i3 < 2; ++i3) {
 				for (int j3 = 0; j3 < 2; ++j3) {
 					for (int k3 = -1; k3 < 3; ++k3) {
-						BlockState blockstate1 = k3 < 0 ? Blocks.AIR.defaultBlockState(): Blocks.AIR.defaultBlockState();
+						BlockState blockstate1 = k3 < 0 ? ModBlocks.INFESTED_STONE.get().defaultBlockState(): Blocks.AIR.defaultBlockState();
 						blockpos$mutableblockpos.setWithOffset(blockpos, j3 * direction.getStepX() + i3 * direction1.getStepX(), k3, j3 * direction.getStepZ() + i3 * direction1.getStepZ());
 						this.level.setBlockAndUpdate(blockpos$mutableblockpos, blockstate1);
 					}
@@ -156,7 +160,7 @@ public class VitricTeleporter implements ITeleporter {
 			for (int j2 = -1; j2 < 4; ++j2) {
 				if (l1 == -1 || l1 == 2 || j2 == -1 || j2 == 3) {
 					blockpos$mutableblockpos.setWithOffset(blockpos, l1 * direction.getStepX(), j2, l1 * direction.getStepZ());
-					this.level.setBlock(blockpos$mutableblockpos, Blocks.AIR.defaultBlockState(), 3);
+					this.level.setBlock(blockpos$mutableblockpos, ModBlocks.INFESTED_STONE.get().defaultBlockState(), 3);
 				}
 			}
 		}
@@ -191,10 +195,28 @@ public class VitricTeleporter implements ITeleporter {
 	@Override
 	public Entity placeEntity(Entity entity, ServerLevel currentWorld, ServerLevel server, float yaw, Function<Boolean, Entity> repositionEntity) {
 		PortalInfo portalinfo = getPortalInfo(entity, server);
+
+        int y = 61;
+
 		if (entity instanceof ServerPlayer player) {
+
+//            BlockPos destinationPos = new BlockPos(thisPos.getX(), y, thisPos.getZ());
+//            int tries = 0;
+//
+//            while ((server.getBlockState(destinationPos).getBlock() != Blocks.AIR) ||
+//                    server.getBlockState(destinationPos).getBlock() != ModBlocks.VITRIC_PORTAL.get() &&
+//                            !server.getBlockState(destinationPos).canBeReplaced(Fluids.WATER) &&
+//                            (server.getBlockState(destinationPos.above()).getBlock()  != Blocks.AIR) &&
+//                            !server.getBlockState(destinationPos.above()).canBeReplaced(Fluids.WATER) && (tries < 25)) {
+//                destinationPos = destinationPos.above(2);
+//                tries++;
+//            }
 			player.setServerLevel(server);
 			server.addDuringPortalTeleport(player);
-			player.connection.teleport(portalinfo.pos.x, portalinfo.pos.y, portalinfo.pos.z, portalinfo.yRot, portalinfo.xRot);
+
+
+
+            player.connection.teleport(portalinfo.pos.x, portalinfo.pos.y, portalinfo.pos.z, portalinfo.yRot, portalinfo.xRot);
 			player.connection.resetPosition();
 			CriteriaTriggers.CHANGED_DIMENSION.trigger(player, currentWorld.dimension(), server.dimension());
 			return entity;
@@ -237,7 +259,7 @@ public class VitricTeleporter implements ITeleporter {
 				return optional;
 			} else {
 				Direction.Axis direction$axis = entity.level().getBlockState(this.entityEnterPos).getOptionalValue(NetherPortalBlock.AXIS).orElse(Direction.Axis.X);
-				return optional;
+				return this.createPortal(pos, direction$axis);
 			}
 		} else {
 			return optional;

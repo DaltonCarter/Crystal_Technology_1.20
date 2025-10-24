@@ -26,10 +26,13 @@ public class ModVillagers {
     public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS =
             DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, CrystalTech.MOD_ID);
 
+
+
     public static final RegistryObject<VillagerProfession> VITRIC_GATHERER = VILLAGER_PROFESSIONS.register(
             "vitric_gatherer", () -> new VillagerProfession("vitric_gatherer",
                     holder -> holder.get() == VITRIC_POI.get(), holder -> holder.get() == VITRIC_POI.get(),
                     ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_WEAPONSMITH));
+
 
 
     public static void register (IEventBus eventBus) {
