@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-11T18:02:32.6393611	Loot Tables
+// 1.20.1	2025-10-23T19:09:01.176375	Loot Tables
 03c6f95925fa38635ca3601903e1d452029caabd data/crystechmod/loot_tables/blocks/aboreus_crystal.json
 d0beb68b81b414280026c89df98ac8685d552502 data/crystechmod/loot_tables/blocks/aboreus_crystal_slab.json
 119389378ebef86e266227fdae475e18f84de5e1 data/crystechmod/loot_tables/blocks/aboreus_crystal_stairs.json
@@ -784,7 +784,7 @@ b11015661a74e04b59885b5ae5c05c223ac6bf5f data/crystechmod/loot_tables/blocks/vit
 fd3548d8a6730a2512948269f6693734c108f092 data/crystechmod/loot_tables/blocks/vitric_iron_plating_wall.json
 35eb652ab3390cfaff7b80f0026715d98bae3cc8 data/crystechmod/loot_tables/blocks/vitric_kiln.json
 93ceea00ed3f685027fa6b13f0f347ef83121ff7 data/crystechmod/loot_tables/blocks/vitric_machine_core.json
-67a83426c0e7bcd4be868c568224217caf38275a data/crystechmod/loot_tables/blocks/vitric_rose.json
+ede9fc3d65cb8c760ae3a4ff57fb56fae72f8b6e data/crystechmod/loot_tables/blocks/vitric_rose.json
 bebb707a5b6021665c6ad0a18b80ad0e4a404e3d data/crystechmod/loot_tables/blocks/vitric_tiberium_infuser.json
 ad31e43e005260756041c68851801d83ed6e2714 data/crystechmod/loot_tables/blocks/vitric_tiberium_macerator.json
 104c2dac3a453ca92928b6ea38b2507168e6ee8a data/crystechmod/loot_tables/blocks/vitric_transporter.json
@@ -820,7 +820,7 @@ facc2f33983fd6ce7c5fde3c74362a043820b613 data/crystechmod/loot_tables/blocks/yel
 446fa973b02d8a582fbf6effb9221c2a2d2434d5 data/crystechmod/loot_tables/blocks/yellow_tiberglass_pane.json
 f6eaa8d86784d437b50f20cf959bd60a1c2c8804 data/crystechmod/loot_tables/blocks/yellow_zone_cracked_dirt.json
 16d874fe6a3c0155e4fe9280d39d206cd597fbba data/crystechmod/loot_tables/blocks/yellow_zone_sand.json
-b2e5bbd8ac33b36161d38c6c406fa98ec816f544 data/crystechmod/loot_tables/blocks/yokaran_bloom.json
+12464fdb286cb0c3538786e50bc09dc56bd3e8b5 data/crystechmod/loot_tables/blocks/yokaran_bloom.json
 a2b4868b805b331d91c55ac322eed565346eca40 data/crystechmod/loot_tables/blocks/yz_sandstone.json
 175e59d2f8ffaf50bbf148fcc9bb43e3c6362b75 data/crystechmod/loot_tables/blocks/yz_sandstone_slab.json
 bacfc578c8da23bed1d9cbebde496232cc1ec584 data/crystechmod/loot_tables/blocks/yz_sandstone_stairs.json

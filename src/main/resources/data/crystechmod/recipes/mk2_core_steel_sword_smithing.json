@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "crystechmod:mg_core_block"
+  },
+  "base": {
+    "item": "crystechmod:mk1_core_steel_sword"
+  },
+  "result": {
+    "item": "crystechmod:mk2_core_steel_sword"
+  },
+  "template": {
+    "item": "crystechmod:orange_core_crystal"
+  }
+}

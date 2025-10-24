@@ -1,0 +1,28 @@
+{
+  "type": "crystechmod:alloy_smelting",
+  "craftTime": 250,
+  "energyAmount": 20,
+  "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:alythum_ingot"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "minecraft:coals"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:flower_of_life"
+      }
+    }
+  ],
+  "output": {
+    "item": "crystechmod:proto_steel"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "crystechmod:lg_core_block"
+  },
+  "base": {
+    "item": "crystechmod:illyrim_sword"
+  },
+  "result": {
+    "item": "crystechmod:mk1_core_steel_sword"
+  },
+  "template": {
+    "item": "crystechmod:yellow_core_crystal"
+  }
+}

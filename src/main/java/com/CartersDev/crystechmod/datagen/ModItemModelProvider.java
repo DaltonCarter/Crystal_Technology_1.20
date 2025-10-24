@@ -575,6 +575,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.ALYTHUM_HAMMER);
         handheldItem(ModItems.ALYTHUM_EXCAVATOR);
 
+        handheldItem(ModItems.PROTO_STEEL_SWORD);
         handheldItem(ModItems.ILLYRIM_PICKAXE);
         handheldItem(ModItems.ILLYRIM_AXE);
         handheldItem(ModItems.ILLYRIM_SHOVEL);

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_infested_stone": {
+    "has_proto_steel": {
       "conditions": {
         "items": [
           {
             "items": [
-              "crystechmod:infested_cobble"
+              "crystechmod:proto_steel"
             ]
           }
         ]
@@ -15,21 +15,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "crystechmod:yellow_zone_sand"
+        "recipe": "crystechmod:proto_steel_sword"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_infested_stone",
+      "has_proto_steel",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "crystechmod:yellow_zone_sand"
+      "crystechmod:proto_steel_sword"
     ]
   },
-  "sends_telemetry_event": true
+  "sends_telemetry_event": false
 }

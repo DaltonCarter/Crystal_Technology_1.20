@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:alythum_ingot"
+    },
+    "P": {
+      "item": "crystechmod:proto_steel"
+    },
+    "S": {
+      "tag": "forge:rods"
+    }
+  },
+  "pattern": [
+    "  P",
+    "AP ",
+    "SA "
+  ],
+  "result": {
+    "item": "crystechmod:proto_steel_sword"
+  },
+  "show_notification": true
+}

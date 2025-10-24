@@ -626,6 +626,21 @@ Posted By: Dalton Carter
 
 * W.I.P Will be fully implemented in another update
 
+------------------------------------------------------------------------------
+
+10/24/2025
+Version 0.6.7
+Posted By: Dalton Carter
+
+-Added Proto Steel Sword.
+-Buffed Illyrim Sword, and changed recipe.
+-Added Core Steel Swords.*
+-Portal Hotfix.
+-Fixed Tall Flower Loot table bug.
+
+
+* W.I.P Will be fully implemented in another update
+
 
 
 ======================================================

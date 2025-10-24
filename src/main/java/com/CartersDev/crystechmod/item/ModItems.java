@@ -16,6 +16,8 @@ import com.CartersDev.crystechmod.item.custom.TiberiumDust.TiberiumDust;
 import com.CartersDev.crystechmod.item.custom.Tools.ExcavatorItem;
 import com.CartersDev.crystechmod.item.custom.Tools.HammerItem;
 import com.CartersDev.crystechmod.item.custom.Tools.PaxelItem;
+import com.CartersDev.crystechmod.item.custom.Weapons.IllyrimSword;
+import com.CartersDev.crystechmod.item.custom.Weapons.SlowingSword;
 import com.CartersDev.crystechmod.sound.ModSounds;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
@@ -368,8 +370,12 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
 
         //Illyrim Tools:
+    public static final RegistryObject<Item> PROTO_STEEL_SWORD = ITEMS.register("proto_steel_sword",
+            () -> new SlowingSword(ModToolTiers.PROTO_STEEL, 6, -1.25f,
+                    new Item.Properties()));
+
     public static final RegistryObject<Item> ILLYRIM_SWORD = ITEMS.register("illyrim_sword",
-            () -> new SwordItem(ModToolTiers.ILLYRIM, 6, -1.0f,
+            () -> new IllyrimSword(ModToolTiers.ILLYRIM, 8, -1.0f,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> ILLYRIM_AXE = ITEMS.register("illyrim_axe",
@@ -399,6 +405,23 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
     public static final RegistryObject<Item> ILLYRIM_EXCAVATOR = ITEMS.register("illyrim_excavator",
             () -> new ExcavatorItem(ModToolTiers.ILLYRIM, 5, -2f,
                     new Item.Properties().durability(10000)));
+
+        //MK.1 Core Steel Tools:
+    public static final RegistryObject<Item> MK1_CORE_STEEL_SWORD = ITEMS.register("mk1_core_steel_sword",
+                () -> new IllyrimSword(ModToolTiers.MK1_CORE, 10, -0.5f,
+                        new Item.Properties()));
+
+        //MK.2 Core Steel Tools:
+    public static final RegistryObject<Item> MK2_CORE_STEEL_SWORD = ITEMS.register("mk2_core_steel_sword",
+            () -> new IllyrimSword(ModToolTiers.MK2_CORE, 12, 0.0f,
+                    new Item.Properties()));
+
+        //MK.3 Core Steel Tools:
+    public static final RegistryObject<Item> MK3_CORE_STEEL_SWORD = ITEMS.register("mk3_core_steel_sword",
+            () -> new IllyrimSword(ModToolTiers.MK3_CORE, 14, 0.5f,
+                    new Item.Properties()));
+
+
     //End Tools
 
 

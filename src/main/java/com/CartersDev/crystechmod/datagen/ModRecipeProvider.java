@@ -2636,8 +2636,18 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern(" I ")
                 .pattern(" S ")
                 .define('I', ModItems.ILLYRIM_INGOT.get())
-                .define('S', Tags.Items.RODS)
+                .define('S', ModItems.PROTO_STEEL_SWORD.get())
                 .unlockedBy(getHasName(ModItems.ILLYRIM_INGOT.get()), has(ModItems.ILLYRIM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PROTO_STEEL_SWORD.get())
+                .pattern("  P")
+                .pattern("AP ")
+                .pattern("SA ")
+                .define('P', ModItems.PROTO_STEEL.get())
+                .define('A', ModItems.ALYTHUM_INGOT.get())
+                .define('S', Tags.Items.RODS)
+                .unlockedBy(getHasName(ModItems.PROTO_STEEL.get()), has(ModItems.PROTO_STEEL.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ILLYRIM_PICKAXE.get())
@@ -4797,6 +4807,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.ILLYRIM_BLEND.get())), ModItems.ILLYRIM_INGOT.get(), 1, 200, 16)
                 .unlockedBy("has_illyrim_blend", has(ModItems.ILLYRIM_BLEND.get())).save(consumer);
 
+
         new PoweredKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.LG_CORE_BLEND.get())), ModItems.LG_CORE_INGOT.get(), 1, 200, 16)
                 .unlockedBy("has_lg_core_blend", has(ModItems.LG_CORE_BLEND.get())).save(consumer);
 
@@ -4868,6 +4879,9 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
         new AlloyKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.ILLYRIM_INGOT.get()), CountedIngredient.of(2, ModItems.TIBERIUM_COMPOSITE_INGOT.get()), CountedIngredient.of(ModItems.HARMONIUM_INGOT.get())),
                 ModItems.LG_CORE_INGOT.get(), 3, 250, 20).unlockedBy("has_illyrim_ingot", has(ModItems.ILLYRIM_INGOT.get())).save(consumer);
+
+        new AlloyKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.ALYTHUM_INGOT.get()), CountedIngredient.of(ItemTags.COALS), CountedIngredient.of(ModBlocks.FLOWER_OF_LIFE.get())),
+                ModItems.PROTO_STEEL.get(), 1, 250, 20).unlockedBy("has_flower_of_life", has(ModBlocks.FLOWER_OF_LIFE.get())).save(consumer);
 
         new AlloyKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.LG_CORE_INGOT.get()), CountedIngredient.of(2, ModItems.ICHOR_COMPOSITE_INGOT.get()), CountedIngredient.of(ModItems.PROTO_STEEL.get())),
                 ModItems.MG_CORE_INGOT.get(), 3, 250, 20).unlockedBy("has_lg_core_ingot", has(ModItems.LG_CORE_INGOT.get())).save(consumer);

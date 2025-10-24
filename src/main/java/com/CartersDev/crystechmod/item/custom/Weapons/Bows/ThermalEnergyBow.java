@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
+import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
@@ -158,6 +159,22 @@ public class ThermalEnergyBow extends BowItem {
             return InteractionResultHolder.consume(itemstack);
         }
     }
+
+    public boolean isBarVisible(ItemStack pStack) {
+        return true;
+    }
+
+    public int getBarWidth(ItemStack pStack) {
+        return Math.round(13.0F - (float)pStack.getDamageValue() * 13.0F / (float)this.getMaxDamage(pStack));
+    }
+
+    public int getBarColor(ItemStack pStack) {
+        float stackMaxDamage = this.getMaxDamage(pStack);
+        float f = Math.max(0.0F, (stackMaxDamage - (float)pStack.getDamageValue()) / stackMaxDamage);
+        return Mth.hsvToRgb(f / 3.0F, 1.0F, 1.0F);
+    }
+
+    //Custom Logic:
 
 }
 

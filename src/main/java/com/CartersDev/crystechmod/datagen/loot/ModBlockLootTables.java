@@ -182,11 +182,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.TIBERIUM_RED_BLOCK.get());
         this.dropSelf(ModBlocks.TIBERIUM_PURPLE_BLOCK.get());
         this.dropSelf(ModBlocks.NOD_CREST_LARGE.get());
-        this.dropSelf(ModBlocks.YOKARAN_BLOOM.get());
         this.dropSelf(ModBlocks.SPITFIRE.get());
         this.dropSelf(ModBlocks.FULGURBLOOM.get());
         this.dropSelf(ModBlocks.VITRIC_BLOOM.get());
-        this.dropSelf(ModBlocks.VITRIC_ROSE.get());
 
 
 
@@ -1078,6 +1076,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.CT_TILE_SLAB_B_3.get(),
                 block -> createSlabItemTable(ModBlocks.CT_TILE_SLAB_B_3.get()));
 
+
+
+
+
+
         //Doors:
 
         this.add(ModBlocks.PLAGUED_DOOR.get(),
@@ -1094,6 +1097,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.IRON_PLATING_DOOR.get(),
                 block -> createDoorTable(ModBlocks.IRON_PLATING_DOOR.get()));
+
+        this.add(ModBlocks.YOKARAN_BLOOM.get(),
+                block -> createDoorTable(ModBlocks.YOKARAN_BLOOM.get()));
+
+        this.add(ModBlocks.YOKARAN_BLOOM.get(),
+                block -> createDoorTable(ModBlocks.YOKARAN_BLOOM.get()));
+
+        this.add(ModBlocks.VITRIC_ROSE.get(),
+                block -> createDoorTable(ModBlocks.VITRIC_ROSE.get()));
 
 
         //Signs:
