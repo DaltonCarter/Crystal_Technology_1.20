@@ -641,6 +641,20 @@ Posted By: Dalton Carter
 
 * W.I.P Will be fully implemented in another update
 
+------------------------------------------------------------------------------
+
+11/9/2025
+Version 0.6.8
+Posted By: Dalton Carter
+
+-Changed Illyrim and Core Swords to Large Swords
+-Large Swords now Block
+-Metal and Crystal Blocks added to Beacon Base tag
+-Added new tag to refinery output
+-Changed Iron Plating Recipes
+-Lang File Updates
+-Changed Liquid Protoculture Class
+
 
 
 ======================================================
