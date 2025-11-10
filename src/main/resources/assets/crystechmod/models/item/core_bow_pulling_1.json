@@ -1,0 +1,6 @@
+{
+    "parent": "crystechmod:item/core_bow",
+    "textures": {
+        "layer0": "crystechmod:item/core_bow_pulling_1"
+    }
+}

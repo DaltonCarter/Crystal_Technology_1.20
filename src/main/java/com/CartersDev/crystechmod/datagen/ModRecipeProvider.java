@@ -3104,7 +3104,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('T', ModItems.HARMONIC_CIRCUIT.get())
                 .define('C', ModItems.VITRIC_CIRCUIT.get())
                 .define('M', ModBlocks.ALYTHUM_MACHINE_CORE.get())
-                .define('I', ModItems.HARMONIUM_INGOT.get())
+                .define('I', ModItems.PROTO_STEEL.get())
 
                 .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
                 .save(consumer);
@@ -3991,6 +3991,14 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("CCC")
                 .pattern("CCC")
                 .define('C', ModBlocks.POLISHED_IRON_BLOCK.get())
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.IRON_PLATING.get(), 64)
+                .pattern("I I")
+                .pattern(" I ")
+                .pattern("I I")
+                .define('I', Items.IRON_INGOT)
                 .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                 .save(consumer);
 

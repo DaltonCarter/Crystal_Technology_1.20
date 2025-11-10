@@ -4,5 +4,5 @@
   "ingredient": {
     "item": "crystechmod:iron_plating"
   },
-  "result": "minecraft:iron_block"
+  "result": "crystechmod:polished_iron_block"
 }

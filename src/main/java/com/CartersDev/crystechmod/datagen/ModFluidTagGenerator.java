@@ -31,6 +31,7 @@ public class ModFluidTagGenerator extends FluidTagsProvider {
         this.tag(FluidTags.WATER)
                 .addTag(ModTags.Fluids.TIBERIUM_WATER);
 
+
         this.tag(FluidTags.LAVA)
                 .addTags(ModTags.Fluids.MOLTEN_GREEN_TIBERIUM,
                         ModTags.Fluids.MOLTEN_BLUE_TIBERIUM,
@@ -82,7 +83,8 @@ public class ModFluidTagGenerator extends FluidTagsProvider {
                         ModTags.Fluids.MOLTEN_BLUE_TIBERIUM,
                         ModTags.Fluids.MOLTEN_RED_TIBERIUM,
                         ModTags.Fluids.MOLTEN_PURPLE_TIBERIUM,
-                        ModTags.Fluids.LIQUID_PROTOCULTURE
+                        ModTags.Fluids.LIQUID_PROTOCULTURE,
+                        FluidTags.WATER
                 );
 
 

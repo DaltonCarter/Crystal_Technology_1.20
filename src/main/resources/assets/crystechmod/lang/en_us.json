@@ -988,6 +988,14 @@
   "block.crystechmod.vitric_vitricium_refinery": "Advanced Vitricium Refinery",
   "block.crystechmod.crystal_core_vitricium_refinery": "Ultimate Vitricium Refinery",
 
+  "block.crystechmod.tiberium_water_block": "Infected Water",
+  "block.crystechmod.liquid_protoculture_block": "Protoculture",
+  "block.crystechmod.molten_tiberium_block": "Molten Riparius",
+  "block.crystechmod.molten_blue_tiberium_block": "Molten Vinifera",
+  "block.crystechmod.molten_red_tiberium_block": "Molten Cruentus",
+  "block.crystechmod.molten_purple_tiberium_block": "Molten Aboreus",
+
+
   "block.crystechmod.vitric_transporter": "Matter Transmission Frame",
   "block.crystechmod.vitric_transporter_side1": "Matter Transmission Frame Left",
   "block.crystechmod.vitric_transporter_side2": "Matter Transmission Frame Right",
@@ -1033,6 +1041,7 @@
 
 
   "tootip.crystechmod.firestone_wall.tooltip": "For those times when things REALLY need to stay off your lawn.",
+  "tootip.crystechmod.large_sword.tooltip": "Can also block incoming attacks like a shield.",
 
   "crystechmod.tooltip.liquid.amount.with.capacity": "%s / %s mB",
   "crystechmod.tooltip.liquid.amount": "%s mB",

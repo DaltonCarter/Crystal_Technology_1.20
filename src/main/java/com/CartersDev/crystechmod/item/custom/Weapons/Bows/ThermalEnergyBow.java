@@ -1,10 +1,7 @@
 package com.CartersDev.crystechmod.item.custom.Weapons.Bows;
 
-import net.minecraft.ChatFormatting;
-import net.minecraft.core.Direction;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import com.CartersDev.crystechmod.util.ModEnergyStorage;
+
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -18,15 +15,10 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.capabilities.ICapabilityProvider;
+
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.IEnergyStorage;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.util.List;
 
    /*
     This class needs to have the Energy Capability and modifications to the bow logic. I.E If Energy > 10FE Has ammo == true.
@@ -46,43 +38,12 @@ public class ThermalEnergyBow extends BowItem {
         super(pProperties);
     }
 
-//    @Override
-//    public ICapabilityProvider initCapabilities(ItemStack stack, CompoundTag nbt)
-//    {
-//        if(!stack.isEmpty())
-//            return new IEItemStackHandler(stack)
-//            {
-//                final LazyOptional<EnergyHelper.ItemEnergyStorage> energyStorage = CapabilityUtils.constantOptional(
-//                        new EnergyHelper.ItemEnergyStorage(stack, RailgunItem::getMaxEnergyStored)
-//                );
-//
-//
-//                @Nonnull
-//                @Override
-//                public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> capability, Direction facing)
-//                {
-//                    if(capability== ForgeCapabilities.ENERGY)
-//                        return energyStorage.cast();
-//
-//                    return super.getCapability(capability, facing);
-//                }
-//            };
-//        return null;
-//    }
-//
-//    @Override
-//    public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> list, TooltipFlag flag)
-//    {
-//        IEnergyStorage energy = CapabilityUtils.getPresentCapability(stack, ForgeCapabilities.ENERGY);
-//        String stored = energy.getEnergyStored()+"/"+getMaxEnergyStored(stack);
-//        list.add(Component.translatable(Lib.DESC+"info.energyStored", stored).withStyle(ChatFormatting.GRAY));
-//    }
-//
+    private final int energyAmount = 10;
 
     @Override
     public void releaseUsing(ItemStack pStack, Level pLevel, LivingEntity pEntityLiving, int pTimeLeft) {
         if (pEntityLiving instanceof Player player) {
-            boolean flag = player.getAbilities().instabuild || EnchantmentHelper.getItemEnchantmentLevel(Enchantments.INFINITY_ARROWS, pStack) > 0;
+            boolean flag = player.getAbilities().instabuild || this.ENERGY_STORAGE.getEnergyStored() >= energyAmount;
             ItemStack itemstack = player.getProjectile(pStack);
 
             int i = this.getUseDuration(pStack) - pTimeLeft;
@@ -120,9 +81,7 @@ public class ThermalEnergyBow extends BowItem {
                             abstractarrow.setSecondsOnFire(100);
                         }
 
-                        pStack.hurtAndBreak(1, player, (p_289501_) -> {
-                            p_289501_.broadcastBreakEvent(player.getUsedItemHand());
-                        });
+
                         if (flag1 || player.getAbilities().instabuild && (itemstack.is(Items.SPECTRAL_ARROW) || itemstack.is(Items.TIPPED_ARROW))) {
                             abstractarrow.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
                         }
@@ -132,14 +91,12 @@ public class ThermalEnergyBow extends BowItem {
 
                     pLevel.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F / (pLevel.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
                     if (!flag1 && !player.getAbilities().instabuild) {
-                        itemstack.shrink(1);
-                        if (itemstack.isEmpty()) {
-                            player.getInventory().removeItem(itemstack);
+                        extractEnergy();
                         }
                     }
 
                     player.awardStat(Stats.ITEM_USED.get(this));
-                }
+
             }
         }
     }
@@ -156,25 +113,55 @@ public class ThermalEnergyBow extends BowItem {
             return InteractionResultHolder.fail(itemstack);
         } else {
             pPlayer.startUsingItem(pHand);
-            return InteractionResultHolder.consume(itemstack);
+            return InteractionResultHolder.success(itemstack);
         }
     }
 
+    @Override
     public boolean isBarVisible(ItemStack pStack) {
         return true;
     }
 
+    @Override
     public int getBarWidth(ItemStack pStack) {
-        return Math.round(13.0F - (float)pStack.getDamageValue() * 13.0F / (float)this.getMaxDamage(pStack));
+        return Math.round(13.0F - (float)this.ENERGY_STORAGE.getEnergyStored() * 13.0F / (float)this.ENERGY_STORAGE.getMaxEnergyStored());
     }
-
+    @Override
     public int getBarColor(ItemStack pStack) {
-        float stackMaxDamage = this.getMaxDamage(pStack);
-        float f = Math.max(0.0F, (stackMaxDamage - (float)pStack.getDamageValue()) / stackMaxDamage);
+        float stackMaxDamage = this.ENERGY_STORAGE.getMaxEnergyStored();
+        float f = Math.max(0.0F, (stackMaxDamage - (float)this.ENERGY_STORAGE.getEnergyStored()) / stackMaxDamage);
         return Mth.hsvToRgb(f / 3.0F, 1.0F, 1.0F);
     }
 
     //Custom Logic:
+
+
+
+    private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
+
+    private LazyOptional<IEnergyStorage> lazyEnergyHandler = LazyOptional.empty();
+
+    private ModEnergyStorage createEnergyStorage() {
+        return new ModEnergyStorage(1000, 1000) {
+            @Override
+            public void onEnergyChanged() {
+
+
+            }
+        };
+    }
+
+    private void extractEnergy() {
+        this.ENERGY_STORAGE.extractEnergy(energyAmount, false);
+
+    }
+
+    private void fillEnergy() {
+        this.ENERGY_STORAGE.receiveEnergy(1000, false);
+
+        }
+
+
 
 }
 

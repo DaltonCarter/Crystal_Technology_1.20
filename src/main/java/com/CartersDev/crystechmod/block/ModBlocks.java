@@ -2867,7 +2867,7 @@ public class ModBlocks {
 
     public static final RegistryObject<LiquidBlock> LIQUID_PROTOCULTURE_BLOCK = BLOCKS.register("liquid_protoculture_block",
             () -> new LiquidProtocultureBlock(ModFluids.SOURCE_LIQUID_PROTOCULTURE, BlockBehaviour.Properties.copy(Blocks.LAVA)
-                    .randomTicks().noLootTable(), 5, 0.5f));
+                    .randomTicks().noLootTable()));
 
     //End of Tiberium
 

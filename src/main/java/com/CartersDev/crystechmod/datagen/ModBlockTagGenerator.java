@@ -25,6 +25,32 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
 
+        this.tag(BlockTags.BEACON_BASE_BLOCKS)
+                .add(
+                        ModBlocks.GUNDANIUM_BLOCK.get(),
+                        ModBlocks.ALYTHUM_BLOCK.get(),
+                        ModBlocks.ILLYRIM_BLOCK.get(),
+                        ModBlocks.HARMONIUM_BLOCK.get(),
+                        ModBlocks.PROTO_STEEL_BLOCK.get(),
+                        ModBlocks.LG_CORE_BLOCK.get(),
+                        ModBlocks.MG_CORE_BLOCK.get(),
+                        ModBlocks.HG_CORE_BLOCK.get(),
+                        ModBlocks.AERIES_BLOCK.get(),
+                        ModBlocks.ILLUMINA_BLOCK.get(),
+                        ModBlocks.KRYON_BLOCK.get(),
+                        ModBlocks.ENIGMA_BLOCK.get(),
+                        ModBlocks.TIBERIUM_BLOCK.get(),
+                        ModBlocks.TIBERIUM_BLUE_BLOCK.get(),
+                        ModBlocks.TIBERIUM_RED_BLOCK.get(),
+                        ModBlocks.TIBERIUM_PURPLE_BLOCK.get(),
+                        ModBlocks.RED_CORE_BLOCK.get(),
+                        ModBlocks.GREEN_CORE_BLOCK.get(),
+                        ModBlocks.BLUE_CORE_BLOCK.get(),
+                        ModBlocks.PURPLE_CORE_BLOCK.get(),
+                        ModBlocks.YELLOW_CORE_BLOCK.get(),
+                        ModBlocks.ORANGE_CORE_BLOCK.get()
+                );
+
         this.tag(ModTags.Blocks.TIBERIUM_VIABLE_BLOCKS)
                 .add(
                         ModBlocks.RED_ZONE_DIRT.get(),

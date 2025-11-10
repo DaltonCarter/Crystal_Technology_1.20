@@ -1,0 +1,26 @@
+{
+  "values": [
+    "crystechmod:gundanium_block",
+    "crystechmod:alythum_block",
+    "crystechmod:illyrim_block",
+    "crystechmod:harmonium_block",
+    "crystechmod:proto_steel_block",
+    "crystechmod:lg_core_block",
+    "crystechmod:mg_core_block",
+    "crystechmod:hg_core_block",
+    "crystechmod:aeries_block",
+    "crystechmod:illumina_block",
+    "crystechmod:kryon_block",
+    "crystechmod:enigma_block",
+    "crystechmod:tiberium_block",
+    "crystechmod:tiberium_blue_block",
+    "crystechmod:tiberium_red_block",
+    "crystechmod:tiberium_purple_block",
+    "crystechmod:red_core_block",
+    "crystechmod:green_core_block",
+    "crystechmod:blue_core_block",
+    "crystechmod:purple_core_block",
+    "crystechmod:yellow_core_block",
+    "crystechmod:orange_core_block"
+  ]
+}

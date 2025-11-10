@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "crystechmod:polished_iron_block"
-  },
-  "result": "minecraft:iron_block"
-}

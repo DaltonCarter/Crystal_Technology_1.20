@@ -5,7 +5,8 @@
     "1": "crystechmod:item/blade2",
     "2": "crystechmod:item/hilt_accent",
     "3": "crystechmod:item/hilt",
-    "4": "crystechmod:item/handle"
+    "4": "crystechmod:item/handle",
+    "particle": "crystechmod:item/blade2"
   },
   "elements": [
     {

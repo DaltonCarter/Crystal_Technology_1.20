@@ -298,12 +298,15 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     .title(Component.translatable("creativetab.crystal_technology_equipment_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
+                        output.accept(ModItems.CORE_BOW.get());
+
                         output.accept(ModItems.PLAGUED_SWORD.get());
                         output.accept(ModItems.PLAGUED_PICKAXE.get());
                         output.accept(ModItems.PLAGUED_AXE.get());
                         output.accept(ModItems.PLAGUED_SHOVEL.get());
                         output.accept(ModItems.PLAGUED_HOE.get());
                         output.accept(ModItems.PLAGUED_BOW.get());
+
 
                         output.accept(ModItems.GUNDANIUM_SWORD.get());
                         output.accept(ModItems.GUNDANIUM_PICKAXE.get());

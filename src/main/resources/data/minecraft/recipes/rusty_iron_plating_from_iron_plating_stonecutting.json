@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "item": "minecraft:iron_block"
+    "item": "crystechmod:iron_plating"
   },
   "result": "crystechmod:rusty_iron_plating"
 }
