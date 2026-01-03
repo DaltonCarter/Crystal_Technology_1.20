@@ -1,0 +1,23 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "create"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smelting",
+        "category": "misc",
+        "cookingtime": 200,
+        "experience": 0.25,
+        "ingredient": {
+          "tag": "forge:dusts/zinc"
+        },
+        "result": "create:zinc_ingot"
+      }
+        }
+  ]
+}

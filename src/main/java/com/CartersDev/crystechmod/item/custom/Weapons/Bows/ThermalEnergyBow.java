@@ -1,14 +1,28 @@
 package com.CartersDev.crystechmod.item.custom.Weapons.Bows;
 
+import com.CartersDev.crystechmod.block.entity.ModSignBlockEntity;
+import com.CartersDev.crystechmod.enchantment.ModEnchantments;
+import com.CartersDev.crystechmod.entity.custom.LaserBeamEntity;
+import com.CartersDev.crystechmod.item.ModItems;
+import com.CartersDev.crystechmod.item.custom.Util.FocusContainer;
+import com.CartersDev.crystechmod.sound.ModSounds;
 import com.CartersDev.crystechmod.util.ModEnergyStorage;
 
+import com.CartersDev.crystechmod.util.NBTHelper;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.*;
@@ -16,8 +30,22 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.IEnergyStorage;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.level.BlockEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.Locale;
+
+import static net.minecraft.commands.arguments.coordinates.BlockPosArgument.getBlockPos;
+import static org.apache.logging.log4j.Level.getLevel;
 
 
    /*
@@ -31,138 +59,172 @@ import net.minecraftforge.energy.IEnergyStorage;
     Obviously this is also where the traditional Bow logic would be located
      */
 
-public class ThermalEnergyBow extends BowItem {
+public class ThermalEnergyBow extends CrossbowItem implements FocusContainer {
+
+    public static final String TAG_LASER_FOCUS = "LaserFocus";
+    public static Integer CHARGE = 0;
 
 
     public ThermalEnergyBow(Properties pProperties) {
         super(pProperties);
     }
 
-    private final int energyAmount = 10;
+//    @Override
+//    public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
+//
+//        ItemStack itemstack = pPlayer.getItemInHand(pUsedHand);
+//        pLevel.playSound(null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(), ModSounds.LASER.get(), SoundSource.NEUTRAL,
+//                1.5F, 1F);
+//        pPlayer.getCooldowns().addCooldown(this, 40);
+//
+//        if(!pLevel.isClientSide()) {
+//            LaserBeamEntity laserProjectile = new LaserBeamEntity(pLevel, pPlayer);
+//            laserProjectile.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 0.25F);
+//            pLevel.addFreshEntity(laserProjectile);
+//        }
+//
+//        pPlayer.awardStat(Stats.ITEM_USED.get(this));
+//        if (!pPlayer.getAbilities().instabuild) {
+//            itemstack.hurtAndBreak(1, pPlayer, p -> p.broadcastBreakEvent(pUsedHand));
+//        }
+//
+//        return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
+//    }
+
+    @Override
+    public UseAnim getUseAnimation(ItemStack pStack) {
+        return UseAnim.CROSSBOW;
+    }
 
     @Override
     public void releaseUsing(ItemStack pStack, Level pLevel, LivingEntity pEntityLiving, int pTimeLeft) {
         if (pEntityLiving instanceof Player player) {
-            boolean flag = player.getAbilities().instabuild || this.ENERGY_STORAGE.getEnergyStored() >= energyAmount;
-            ItemStack itemstack = player.getProjectile(pStack);
 
+
+            ItemStack weapon = player.getMainHandItem();
+
+            if (CHARGE == 1) {
+                removeFocus(weapon);
+                spawnEmptyFocus(player);
+                --CHARGE;
+
+            }
+
+            ItemStack itemstack = player.getProjectile(pStack);
             int i = this.getUseDuration(pStack) - pTimeLeft;
-            i = net.minecraftforge.event.ForgeEventFactory.onArrowLoose(pStack, pLevel, player, i, !itemstack.isEmpty() || flag);
+            i = net.minecraftforge.event.ForgeEventFactory.onArrowLoose(pStack, pLevel, player, i, itemstack.isEmpty());
             if (i < 0) return;
 
-            if (!itemstack.isEmpty() || flag) {
-                if (itemstack.isEmpty()) {
-                    itemstack = new ItemStack(Items.ARROW);
-                }
 
-                float f = getPowerForTime(i);
-                if (!((double)f < 0.1D)) {
-                    boolean flag1 = player.getAbilities().instabuild || (itemstack.getItem() instanceof ArrowItem && ((ArrowItem)itemstack.getItem()).isInfinite(itemstack, pStack, player));
-                    if (!pLevel.isClientSide) {
-                        ArrowItem arrowitem = (ArrowItem)(itemstack.getItem() instanceof ArrowItem ? itemstack.getItem() : Items.ARROW);
-                        AbstractArrow abstractarrow = arrowitem.createArrow(pLevel, itemstack, player);
-                        abstractarrow = customArrow(abstractarrow);
-                        abstractarrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, f * 3.0F, 1.0F);
-                        if (f == 1.0F) {
-                            abstractarrow.setCritArrow(true);
-                        }
+            float f = getPowerForTime(i, weapon);
+            if (!((double) f < 0.1D)) {
 
-                        int j = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.POWER_ARROWS, pStack);
-                        if (j > 0) {
-                            abstractarrow.setBaseDamage(abstractarrow.getBaseDamage() + (double)j * 0.5D + 0.5D);
-                        }
+                if (!pLevel.isClientSide) {
+                    LaserBeamEntity laserProjectile = new LaserBeamEntity(pLevel, player);
+                    laserProjectile.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 0.25F);
+                    pLevel.addFreshEntity(laserProjectile);
 
-                        int k = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.PUNCH_ARROWS, pStack);
-                        if (k > 0) {
-                            abstractarrow.setKnockback(k);
-                        }
+//
+//
+//                    int j = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.POWER_ARROWS, pStack);
+//                    if (j > 0) {
+//                        abstractarrow.setBaseDamage(abstractarrow.getBaseDamage() + (double)j * 0.5D + 0.5D);
+//                    }
+//
+//
+//
+//                    if (EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FLAMING_ARROWS, pStack) > 0) {
+//                        abstractarrow.setSecondsOnFire(100);
+//                    }
 
-                        if (EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FLAMING_ARROWS, pStack) > 0) {
-                            abstractarrow.setSecondsOnFire(100);
-                        }
+//
+//                    pStack.hurtAndBreak(1, player, (p_289501_) -> {
+//                        p_289501_.broadcastBreakEvent(player.getUsedItemHand());
+//                    });
+//
 
 
-                        if (flag1 || player.getAbilities().instabuild && (itemstack.is(Items.SPECTRAL_ARROW) || itemstack.is(Items.TIPPED_ARROW))) {
-                            abstractarrow.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
-                        }
+//                    pLevel.addFreshEntity(abstractarrow);
+//                }
 
-                        pLevel.addFreshEntity(abstractarrow);
-                    }
+                    pLevel.playSound(null, player.getX(), player.getY(), player.getZ(), ModSounds.LASER.get(), SoundSource.NEUTRAL,
+                            1.5F, 1F);
 
-                    pLevel.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F / (pLevel.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
-                    if (!flag1 && !player.getAbilities().instabuild) {
-                        extractEnergy();
-                        }
-                    }
 
                     player.awardStat(Stats.ITEM_USED.get(this));
-
+                }
             }
         }
     }
 
-
+    @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pHand) {
         ItemStack itemstack = pPlayer.getItemInHand(pHand);
-        boolean flag = !pPlayer.getProjectile(itemstack).isEmpty();
+        boolean flag = pPlayer.getItemInHand(pHand).isEmpty();
+
+        if(!isLoaded(itemstack)) {
+
+        }
+
 
         InteractionResultHolder<ItemStack> ret = net.minecraftforge.event.ForgeEventFactory.onArrowNock(itemstack, pLevel, pPlayer, pHand, flag);
         if (ret != null) return ret;
+        pPlayer.startUsingItem(pHand);
+        if (!pPlayer.getAbilities().instabuild) {
 
-        if (!pPlayer.getAbilities().instabuild && !flag) {
-            return InteractionResultHolder.fail(itemstack);
-        } else {
-            pPlayer.startUsingItem(pHand);
-            return InteractionResultHolder.success(itemstack);
+        }
+
+        return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
+    }
+
+    private static float getPowerForTime(int pUseTime, ItemStack pCrossbowStack) {
+        float f = (float)pUseTime / (float)getChargeDuration(pCrossbowStack);
+        if (f > 1.0F) {
+            f = 1.0F;
+        }
+
+        return f;
+    }
+
+    @Override
+    public void addFocus(ItemStack stack, FocusType focus) {
+        NBTHelper.setBoolean(stack, TAG_LASER_FOCUS + "_" + focus.name().toLowerCase(Locale.ROOT), true);
+
+    }
+
+    @Override
+    public boolean hasFocus(ItemStack stack, FocusType focus) {
+        return hasFocus_(stack, focus);
+    }
+
+    private static boolean hasFocus_(ItemStack stack, FocusType focus) {
+        return NBTHelper.getBoolean(stack, TAG_LASER_FOCUS + "_" + focus.name().toLowerCase(Locale.ROOT), false);
+    }
+
+    @Override
+    public void removeFocus(ItemStack stack) {
+        NBTHelper.setBoolean(stack, TAG_LASER_FOCUS, true);
+    }
+
+    private void spawnEmptyFocus(Player player) {
+        ItemStack emptyFocus = new ItemStack(ModItems.EMPTY_FOCUS.get());
+        if (!player.getInventory().add(emptyFocus)) {
+            player.spawnAtLocation(emptyFocus, 0.1F);
         }
     }
 
-    @Override
-    public boolean isBarVisible(ItemStack pStack) {
-        return true;
-    }
-
-    @Override
-    public int getBarWidth(ItemStack pStack) {
-        return Math.round(13.0F - (float)this.ENERGY_STORAGE.getEnergyStored() * 13.0F / (float)this.ENERGY_STORAGE.getMaxEnergyStored());
-    }
-    @Override
-    public int getBarColor(ItemStack pStack) {
-        float stackMaxDamage = this.ENERGY_STORAGE.getMaxEnergyStored();
-        float f = Math.max(0.0F, (stackMaxDamage - (float)this.ENERGY_STORAGE.getEnergyStored()) / stackMaxDamage);
-        return Mth.hsvToRgb(f / 3.0F, 1.0F, 1.0F);
-    }
-
-    //Custom Logic:
-
-
-
-    private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
-
-    private LazyOptional<IEnergyStorage> lazyEnergyHandler = LazyOptional.empty();
-
-    private ModEnergyStorage createEnergyStorage() {
-        return new ModEnergyStorage(1000, 1000) {
-            @Override
-            public void onEnergyChanged() {
-
-
+    public static boolean isLoaded(ItemStack stack) {
+        for(FocusType type : FocusType.values()) {
+            if (hasFocus_(stack, type)) {
+                return true;
             }
-        };
-    }
-
-    private void extractEnergy() {
-        this.ENERGY_STORAGE.extractEnergy(energyAmount, false);
-
-    }
-
-    private void fillEnergy() {
-        this.ENERGY_STORAGE.receiveEnergy(1000, false);
-
         }
+        return false;
+    }
 
 
 
 }
+
 
 

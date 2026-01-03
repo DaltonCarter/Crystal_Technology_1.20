@@ -1,4 +1,4 @@
-// 1.20.1	2025-10-24T04:32:38.3173811	Item Models: crystechmod
+// 1.20.1	2025-12-10T17:22:08.1797707	Item Models: crystechmod
 7d9fe5e88433390f9cd29dab7e515bddd3fbdf4b assets/crystechmod/models/item/aboreus_crystal_slab.json
 0e376de85f99a387d23f7130ff296ce0b5fe876e assets/crystechmod/models/item/aboreus_crystal_stairs.json
 2ced509a911b88c37b68b1a1278f10fc986798c4 assets/crystechmod/models/item/aboreus_crystal_wall.json
@@ -8,6 +8,7 @@ bb3c7c08d7803aeba68830098bd6ee48c6933c59 assets/crystechmod/models/item/aboreus_
 01a9d0b571ffacc1afe752aee9cbc16970732c39 assets/crystechmod/models/item/aboreus_stone_slab.json
 8be5dbb151f43b4b2471d590203062ca30f9a587 assets/crystechmod/models/item/aboreus_stone_stairs.json
 43c09af24902998035540f7b34dffa31fbd43788 assets/crystechmod/models/item/aboreus_stone_wall.json
+cee63e662a5013c07fcfb29dfd50d2a9420f1ee2 assets/crystechmod/models/item/advanced_laser_focus.json
 88a741948fb9fab9e17a0db8f1f83bd48d667dcb assets/crystechmod/models/item/adv_med_kit.json
 59af2f348d998b633663b4205f4a1565e13933c0 assets/crystechmod/models/item/aeries_crystal.json
 e93e288155e12d75f29575ccb056b60bd51b7bea assets/crystechmod/models/item/alythum_axe.json
@@ -267,6 +268,7 @@ d8ebc0e055b34ca80dc60444dea24ea7cda9ea2d assets/crystechmod/models/item/ember_oa
 da0c3e24e537e4de698cbb49754ef4f0b2ac4c4e assets/crystechmod/models/item/ember_oak_slab.json
 4d03b922f85b884dd08aa97274607d31c61a6a14 assets/crystechmod/models/item/ember_oak_stairs.json
 db2728f1cde624f7b1bc9d359d52e11507c179b4 assets/crystechmod/models/item/ember_oak_trapdoor.json
+c4d3a47a2e28844ffa23081914a590c371d22830 assets/crystechmod/models/item/empty_focus.json
 a8c7c15e83426f6890c67a3c19af6b0ed4471f00 assets/crystechmod/models/item/enigma_crystal.json
 03b9a675cf9bfd6655ef33a571eef5ab9c6e8599 assets/crystechmod/models/item/firestone.json
 87ef185c96cd4543c0a7f5912bef0cfa5c5a19d0 assets/crystechmod/models/item/firestone_wall.json
@@ -505,6 +507,7 @@ a0af9f2d6bb91028c960fde4d54faeaca204097d assets/crystechmod/models/item/illyrim_
 5b01b9e2b550255aac929317f287c5d9fc49cded assets/crystechmod/models/item/illyrim_paxel.json
 02b8b15b08f397a7b030420ae3ec7416b2321dde assets/crystechmod/models/item/illyrim_pickaxe.json
 390000f3745daa247c035ebd99048ca22a1e4aef assets/crystechmod/models/item/illyrim_shovel.json
+b75086b855ccbe213f0cc292aa3a13e290c528bd assets/crystechmod/models/item/improved_laser_focus.json
 8630ee3c332b45ec8cda0676a31a3a913ba29308 assets/crystechmod/models/item/infested_cobble_slab.json
 6ca1ff4abb9901c1c13550d958c6fd164d65574a assets/crystechmod/models/item/infested_cobble_stairs.json
 c5a9047f2099bae1fc73a4273057cbcf7868bf1d assets/crystechmod/models/item/infested_cobble_wall.json
@@ -523,6 +526,9 @@ b924e16b9543f6e87bb33bc88fc8e870d32006df assets/crystechmod/models/item/kodiak_s
 920acc3091d9ed157150c2c157028160faab4521 assets/crystechmod/models/item/kryon_crystal.json
 04b3bd18e4aa9d3c0a6ffb6c3b287ace9f70c976 assets/crystechmod/models/item/lai_melon_seeds.json
 c7df66b1127bfa6d0ff3ca146c0fbdbc1e88014f assets/crystechmod/models/item/lai_melon_slice.json
+985692163e32af07fb3f37b93cc9ff2a7bfc3837 assets/crystechmod/models/item/laser_focus.json
+574bc5458b2cd03ae0bf8208c895938cd2fd15a5 assets/crystechmod/models/item/laser_focus_poison.json
+b74a7f831e95083b0cdce6a31ee7ac9919a784e3 assets/crystechmod/models/item/laser_focus_protoculture.json
 2671a646942ad87cab53416b8104991e4eec9dbf assets/crystechmod/models/item/lg_core_blend.json
 9763dc256758ef661f032c756c6b3d7c09029f40 assets/crystechmod/models/item/lg_core_ingot.json
 3a5356f9ef93e55576a50344cbd48398830771b5 assets/crystechmod/models/item/light_blue_tibercrete_brick_slab.json
@@ -580,6 +586,7 @@ a4aa2c2487988339b955b46398553ef56b512d61 assets/crystechmod/models/item/orange_t
 371606a413d39488c1c2efb50f282fe0bd0defe2 assets/crystechmod/models/item/orange_tibercrete_stairs.json
 9bbdfbaf6d4f9610e5a7f42b2bf64700a74ac92a assets/crystechmod/models/item/orange_tibercrete_wall.json
 5efad42a30daf6ea30a061269b8bc4a743c6c774 assets/crystechmod/models/item/orange_tiberglass_pane.json
+d83da7e0e6dfd5e1ca496b276429332190e379d4 assets/crystechmod/models/item/overcharged_laser_focus.json
 cae61492d71579f0a9f1b1a2c32a985e839e0129 assets/crystechmod/models/item/pink_tibercrete_brick_slab.json
 6f782fe37a8642a43a9d064d1cc36a61684369b4 assets/crystechmod/models/item/pink_tibercrete_brick_stairs.json
 b59fe6dff07d28475a7859a0b351d11cbc8ec841 assets/crystechmod/models/item/pink_tibercrete_brick_wall.json
@@ -620,6 +627,7 @@ ec35121eeeadffafd25e6ce36b40d690400c602b assets/crystechmod/models/item/polished
 fdffaea39aa50b146da30cc703bf5d375156bf0b assets/crystechmod/models/item/polished_iron_stairs.json
 a6299bf14c31829f43f7416201a0edf638a082ce assets/crystechmod/models/item/polished_iron_wall.json
 2ed0fbb21ee3108928058cea685333c7b0ec10f7 assets/crystechmod/models/item/pork_mre.json
+c4c008d5a26aa3e421b81f08df12bab581fb01bd assets/crystechmod/models/item/powdered_qualrite.json
 e1a434a094278f4f2e4dcf1bb4769e2be1be83dc assets/crystechmod/models/item/proto_steel.json
 c93fec7feae9c2c9a240beba16a354c1dbe3036c assets/crystechmod/models/item/proto_steel_slab.json
 fb83db9bec6b4fe0e9078df1c0bc253d88e63bab assets/crystechmod/models/item/proto_steel_stairs.json

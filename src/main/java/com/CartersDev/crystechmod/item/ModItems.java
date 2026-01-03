@@ -193,6 +193,9 @@ public static final RegistryObject<Item> GREEN_TIBERIUM_DUST = ITEMS.register("g
     public static final RegistryObject<Item> PURPLE_TIBERIUM_DUST = ITEMS.register("purple_tiberium_dust",
             () -> new PurpleTiberiumDust(ModBlocks.PURPLE_TIBERIUM_CROP.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> POWDERED_QUALRITE = ITEMS.register("powdered_qualrite",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> QUALRIM_COMPOUND = ITEMS.register("qualrim_compound",
             () -> new Item(new Item.Properties()));
 
@@ -407,8 +410,8 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
             () -> new ExcavatorItem(ModToolTiers.ILLYRIM, 5, -2f,
                     new Item.Properties().durability(10000)));
 
-    public static final RegistryObject<Item> CORE_BOW = ITEMS.register("core_bow",
-            () -> new ThermalEnergyBow(new Item.Properties().durability(1)));
+    public static final RegistryObject<Item> BEAM_CASTER = ITEMS.register("beam_caster",
+            () -> new ThermalEnergyBow(new Item.Properties().durability(-1)));
 
         //MK.1 Core Steel Tools:
     public static final RegistryObject<Item> MK1_CORE_STEEL_SWORD = ITEMS.register("mk1_core_steel_sword",
@@ -427,6 +430,32 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
 
     //End Tools
+
+
+    //Focuses & Ammunition:
+    public static final RegistryObject<Item> EMPTY_FOCUS = ITEMS.register("empty_focus",
+            () -> new Item( new Item.Properties()));
+
+    public static final RegistryObject<Item> LASER_FOCUS = ITEMS.register("laser_focus",
+            () -> new Item( new Item.Properties()));
+
+    public static final RegistryObject<Item> IMPROVED_LASER_FOCUS = ITEMS.register("improved_laser_focus",
+            () -> new Item( new Item.Properties()));
+
+    public static final RegistryObject<Item> ADVANCED_LASER_FOCUS = ITEMS.register("advanced_laser_focus",
+            () -> new Item( new Item.Properties()));
+
+    public static final RegistryObject<Item> OVERCHARGED_LASER_FOCUS = ITEMS.register("overcharged_laser_focus",
+            () -> new Item( new Item.Properties()));
+
+    public static final RegistryObject<Item> LASER_FOCUS_POISON = ITEMS.register("laser_focus_poison",
+            () -> new Item( new Item.Properties()));
+
+    public static final RegistryObject<Item> LASER_FOCUS_PROTOCULTURE = ITEMS.register("laser_focus_protoculture",
+            () -> new Item( new Item.Properties()));
+
+
+    //End Focuses & Ammunition
 
 
     //Armors

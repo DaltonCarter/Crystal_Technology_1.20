@@ -1,0 +1,44 @@
+
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "thermal_foundation"
+        }
+      ],
+      "recipe": {
+        "type": "crystechmod:alloy_smelting",
+        "craftTime": 200,
+        "energyAmount": 60,
+        "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:obsidian"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:dustss/quartz"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:sand"
+      }
+    }
+  ],
+        "output": {
+          "count": 2,
+          "item": "thermal:obsidian_glass"
+        }
+      }
+    }
+
+  ]
+}

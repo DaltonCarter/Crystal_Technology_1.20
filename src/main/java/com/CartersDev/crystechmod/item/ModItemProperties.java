@@ -10,7 +10,7 @@ public class ModItemProperties {
 
     public static void addCustomItemProperties() {
         makeBow(ModItems.PLAGUED_BOW.get());
-        makeBow(ModItems.CORE_BOW.get());
+        makeBow(ModItems.BEAM_CASTER.get());
     }
 
 

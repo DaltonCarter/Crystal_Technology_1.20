@@ -6,6 +6,7 @@ import com.CartersDev.crystechmod.effect.ModEffects;
 import com.CartersDev.crystechmod.enchantment.ModEnchantments;
 import com.CartersDev.crystechmod.entity.ModEntities;
 import com.CartersDev.crystechmod.entity.client.*;
+import com.CartersDev.crystechmod.entity.client.renderer.LaserBeam.LaserBeamRenderer;
 import com.CartersDev.crystechmod.entity.client.renderer.rhino.RhinoRenderer;
 import com.CartersDev.crystechmod.entity.client.renderer.vitricCow.VitricCowRenderer;
 import com.CartersDev.crystechmod.entity.client.renderer.vitricSheep.VitricSheepRenderer;
@@ -17,6 +18,7 @@ import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModCreativeModTabs;
 import com.CartersDev.crystechmod.item.ModItemProperties;
 import com.CartersDev.crystechmod.item.ModItems;
+import com.CartersDev.crystechmod.item.custom.Weapons.Bows.ThermalEnergyBow;
 import com.CartersDev.crystechmod.loot.ModLootModifiers;
 import com.CartersDev.crystechmod.painting.ModPaintings;
 import com.CartersDev.crystechmod.particle.ModParticles;
@@ -59,6 +61,7 @@ import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -87,7 +90,6 @@ public class CrystalTech {
     public CrystalTech() {
 
 
-
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModTabs.register(modEventBus);
@@ -105,7 +107,6 @@ public class CrystalTech {
         ModLootModifiers.register(modEventBus);
         ModPaintings.register(modEventBus);
         ModVillagers.register(modEventBus);
-
 
 
         ModSounds.register(modEventBus);
@@ -129,6 +130,9 @@ public class CrystalTech {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
+
+            EnchantmentCategory LASER_CROSSBOW =
+                    EnchantmentCategory.create("laser_crossbow", (item) -> item instanceof ThermalEnergyBow);
             //Potion Recipes
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
                     ModItems.QUALRIM_COMPOUND.get(), ModPotions.FREEZE_POTION.get()));
@@ -160,22 +164,21 @@ public class CrystalTech {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.VITRIC_BLOOM.getId(), ModBlocks.POTTED_VITRIC_BLOOM);
             //End of flowers
 
-            ComposterBlock.COMPOSTABLES.put(ModItems.LAI_MELON_SEEDS.get(),0.35f);
-            ComposterBlock.COMPOSTABLES.put(ModItems.HEIM_BERRY_SEEDS.get(),0.35f);
-            ComposterBlock.COMPOSTABLES.put(ModItems.HEL_FRUIT_SEEDS.get(),0.35f);
-            ComposterBlock.COMPOSTABLES.put(ModItems.SABER_CORN_SEEDS.get(),0.35f);
-            ComposterBlock.COMPOSTABLES.put(ModItems.LAI_MELON_SLICE.get(),0.35f);
-            ComposterBlock.COMPOSTABLES.put(ModItems.HEIM_BERRY.get(),0.35f);
-            ComposterBlock.COMPOSTABLES.put(ModItems.HEL_FRUIT.get(),0.35f);
-            ComposterBlock.COMPOSTABLES.put(ModItems.SABER_CORN.get(),0.35f);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.DYING_SAPLING.get(),0.35f);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.EMBER_OAK_SAPLING.get(),0.35f);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.MARIKA_OAK_SAPLING.get(),0.35f);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.PLAGUED_SAPLING.get(),0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.LAI_MELON_SEEDS.get(), 0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.HEIM_BERRY_SEEDS.get(), 0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.HEL_FRUIT_SEEDS.get(), 0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.SABER_CORN_SEEDS.get(), 0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.LAI_MELON_SLICE.get(), 0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.HEIM_BERRY.get(), 0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.HEL_FRUIT.get(), 0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.SABER_CORN.get(), 0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.DYING_SAPLING.get(), 0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.EMBER_OAK_SAPLING.get(), 0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.MARIKA_OAK_SAPLING.get(), 0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.PLAGUED_SAPLING.get(), 0.35f);
 
 
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.vitric(true, false, true));
-
 
 
         });
@@ -212,6 +215,8 @@ public class CrystalTech {
             EntityRenderers.register(ModEntities.VITRIC_SHEEP.get(), m -> new VitricSheepRenderer(m, new VitricSheepModel<>(m.bakeLayer(ModModelLayers.VITRIC_SHEEP_LAYER)), new VitricSheepFurModel(m.bakeLayer(ModModelLayers.VITRIC_SHEEP_FUR_LAYER)), 0.7F));
             EntityRenderers.register(ModEntities.VITRIC_COW.get(), m -> new VitricCowRenderer(m, new VitricCowModel<>(m.bakeLayer(ModModelLayers.VITRIC_COW_LAYER)), 0.7F));
 
+            EntityRenderers.register(ModEntities.LASER_BEAM.get(), LaserBeamRenderer::new);
+
 
 ///         Menu Screens:
             MenuScreens.register(ModMenuTypes.TIBERIUM_GRINDER_MENU.get(), TiberiumGrinderScreen::new);
@@ -222,12 +227,10 @@ public class CrystalTech {
             MenuScreens.register(ModMenuTypes.CRYSTAL_CORE_TIBERIUM_MACERATOR_MENU.get(), CrystalCoreTiberiumMaceratorScreen::new);
 
 
-
             MenuScreens.register(ModMenuTypes.TIBERIUM_INFUSER_MENU.get(), TiberiumInfuserScreen::new);
             MenuScreens.register(ModMenuTypes.ALYTHUM_TIBERIUM_INFUSER_MENU.get(), AlythumTiberiumInfuserScreen::new);
             MenuScreens.register(ModMenuTypes.VITRIC_TIBERIUM_INFUSER_MENU.get(), VitricTiberiumInfuserScreen::new);
             MenuScreens.register(ModMenuTypes.CRYSTAL_CORE_TIBERIUM_INFUSER_MENU.get(), CrystalCoreTiberiumInfuserScreen::new);
-
 
 
             MenuScreens.register(ModMenuTypes.POWERED_KILN_MENU.get(), PoweredKilnScreen::new);
@@ -373,7 +376,7 @@ public class CrystalTech {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CT_TILE_STAIRS.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CT_TILE_SLAB.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CT_TILE_WALL.get(), RenderType.translucent());
-            
+
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CT_TILE_STAIRS_G.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CT_TILE_SLAB_G.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CT_TILE_WALL_G.get(), RenderType.translucent());
@@ -437,8 +440,10 @@ public class CrystalTech {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CT_TILE_WALL_P_3.get(), RenderType.translucent());
 
 
-
         }
+
+
 
     }
 }
+

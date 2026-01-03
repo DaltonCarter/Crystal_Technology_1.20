@@ -54,6 +54,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.MED_KIT);
         simpleItem(ModItems.ADV_MED_KIT);
 
+        simpleItem(ModItems.EMPTY_FOCUS);
+        simpleItem(ModItems.LASER_FOCUS);
+        simpleItem(ModItems.IMPROVED_LASER_FOCUS);
+        simpleItem(ModItems.ADVANCED_LASER_FOCUS);
+        simpleItem(ModItems.OVERCHARGED_LASER_FOCUS);
+        simpleItem(ModItems.LASER_FOCUS_PROTOCULTURE);
+        simpleItem(ModItems.LASER_FOCUS_POISON);
+
         simpleItem(ModItems.CHICKEN_MRE);
         simpleItem(ModItems.BEEF_MRE);
         simpleItem(ModItems.PORK_MRE);
@@ -119,6 +127,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RAW_HARMONIUM);
         simpleItem(ModItems.RAW_GUNDANIUM);
         simpleItem(ModItems.QUALRIM_COMPOUND);
+        simpleItem(ModItems.POWDERED_QUALRITE);
         simpleItem(ModItems.GDI_EMBLEM);
         simpleItem(ModItems.NOD_EMBLEM);
         simpleItem(ModItems.WOLF_EMBLEM);

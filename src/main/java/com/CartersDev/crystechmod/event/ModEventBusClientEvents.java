@@ -21,6 +21,7 @@ import com.CartersDev.crystechmod.block.entity.renderer.poweredkiln.PoweredKilnB
 import com.CartersDev.crystechmod.block.entity.renderer.poweredkiln.AlythumKilnBlockEntityRenderer;
 import com.CartersDev.crystechmod.block.entity.renderer.poweredkiln.VitricKilnBlockEntityRenderer;
 import com.CartersDev.crystechmod.block.entity.renderer.poweredkiln.CrystalCoreKilnBlockEntityRenderer;
+import com.CartersDev.crystechmod.entity.client.LaserBeam.LaserBeamModel;
 import com.CartersDev.crystechmod.entity.client.ModModelLayers;
 import com.CartersDev.crystechmod.entity.client.rhino.RhinoModel;
 import com.CartersDev.crystechmod.entity.client.vitricCow.VitricCowModel;
@@ -46,6 +47,8 @@ public class ModEventBusClientEvents {
         event.registerLayerDefinition(ModModelLayers.VITRIC_COW_LAYER, VitricCowModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.VITRIC_SHEEP_LAYER, VitricSheepModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.VITRIC_SHEEP_FUR_LAYER, VitricSheepFurModel::createFurLayer);
+
+        event.registerLayerDefinition(ModModelLayers.LASER_BEAM_LAYER, LaserBeamModel::createBodyLayer);
     }
 
 

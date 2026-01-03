@@ -26,7 +26,7 @@
       "model": "crystechmod:block/vitric_vitricium_refinery",
       "y": 270
     },
-    "facing=west,machine_core_lvl=2,working=true": {
+    "facing=west,machine_core_lvl=3,working=true": {
       "model": "crystechmod:block/vitric_vitricium_refinery_on",
       "y": 270
     }

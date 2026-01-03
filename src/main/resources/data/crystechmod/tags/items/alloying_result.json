@@ -5,6 +5,11 @@
     "crystechmod:mg_core_ingot",
     "crystechmod:hg_core_ingot",
     "crystechmod:firestone",
-    "#forge:ingots"
+    "thermal:obsidian_glass",
+    "thermal:lumium_glass",
+    "thermal:signalum_glass",
+    "thermal:enderium_glass",
+    "#forge:ingots",
+    "#forge:glass"
   ]
 }

@@ -110,6 +110,8 @@ public class ModTags {
         public static final TagKey<Item> VITRIC_MEATS = tag("vitric_meats");
         public static final TagKey<Item> WOOL = tag("wool");
 
+        public static final TagKey<Item> FOCUSES = tag("focuses");
+
 
 
 

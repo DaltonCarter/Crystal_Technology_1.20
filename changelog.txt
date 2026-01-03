@@ -655,6 +655,21 @@ Posted By: Dalton Carter
 -Lang File Updates
 -Changed Liquid Protoculture Class
 
+------------------------------------------------------------------------------
+
+11/10/2025 - 01/02/2026
+Version 0.6.9
+Posted By: Dalton Carter
+
+-Beam Caster Weapon is minimally functional. Still considered W.I.P
+-Fixed Texture error on the Vitric Refinery.
+-Added New Alloy Kil Recipes
+-Added new Furnace Recipes
+-Tweaked Tags. Alloy input and Results tag no longer in Data-Gen
+-Added Powdered Qualrite so that player can Multiply Raw Qualrite finds.
+-Raw Qualrite macerates to powdered Qualrite that is then infused into Qualrim Compound.
+-Tweaked Recipes requiring fluids to make certain later fluids less annoying to Mass produce
+
 
 
 ======================================================

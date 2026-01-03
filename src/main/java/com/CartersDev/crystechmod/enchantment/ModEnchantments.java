@@ -17,7 +17,7 @@ public class ModEnchantments {
 
 public static RegistryObject<Enchantment> LIGHTNING_STRIKER =
         ENCHANTMENTS.register("lightning_striker", () ->
-                new LightningStrikerEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.WEAPON,
+                new LightningStrikerEnchantment(Enchantment.Rarity.UNCOMMON, CTechEnchantCatagory.LASER_CROSSBOW,
                         EquipmentSlot.MAINHAND));
 
     public static RegistryObject<Enchantment> VITRIC_HARVESTER =

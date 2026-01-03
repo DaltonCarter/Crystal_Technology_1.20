@@ -1,0 +1,17 @@
+{
+  "type": "crystechmod:tiberium_macerating",
+  "craftTime": 200,
+  "energyAmount": 15,
+  "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "crystechmod:qualrite_ores"
+      }
+    }
+  ],
+  "multiply": true,
+  "output": {
+    "item": "crystechmod:powdered_qualrite"
+  }
+}

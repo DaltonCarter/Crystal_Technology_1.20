@@ -1,9 +1,11 @@
 package com.CartersDev.crystechmod.enchantment;
 
+import com.CartersDev.crystechmod.item.custom.Weapons.Bows.ThermalEnergyBow;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.*;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 
@@ -19,6 +21,8 @@ public class LightningStrikerEnchantment extends Enchantment {
     public int getMaxCost(int pEnchantmentLevel) {
         return super.getMinCost(pEnchantmentLevel) + 50;
     }
+
+
 
     @Override
     public void doPostAttack(LivingEntity pAttacker, Entity pTarget, int pLevel) {
@@ -44,5 +48,10 @@ public class LightningStrikerEnchantment extends Enchantment {
     @Override
     public int getMaxLevel() {
         return 2;
+    }
+
+    @Override
+    public boolean canEnchant(ItemStack pStack) {
+        return pStack.getItem() instanceof ThermalEnergyBow ? true : super.canEnchant(pStack);
     }
 }

@@ -72,6 +72,17 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         Items.BROWN_MUSHROOM
                 );
 
+        this.tag(ModTags.Items.FOCUSES)
+                .add(
+                        ModItems.LASER_FOCUS.get(),
+                        ModItems.IMPROVED_LASER_FOCUS.get(),
+                        ModItems.ADVANCED_LASER_FOCUS.get(),
+                        ModItems.OVERCHARGED_LASER_FOCUS.get(),
+                        ModItems.LASER_FOCUS_PROTOCULTURE.get(),
+                        ModItems.LASER_FOCUS_POISON.get()
+
+                );
+
         this.tag(ModTags.Items.FRUITS)
                 .add(ModItems.HEL_FRUIT.get(),
                         ModItems.HEIM_BERRY.get(),
@@ -162,51 +173,54 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
                 );
 
-        this.tag(ModTags.Items.ALLOYING_INPUT)
-                .add(
-                        ModItems.ALYTHUM_INGOT.get(),
-                        ModItems.ILLYRIM_INGOT.get(),
-                        ModItems.LG_CORE_INGOT.get(),
-                        ModItems.MG_CORE_INGOT.get(),
-                        ModItems.PROTO_STEEL.get(),
-                        ModItems.TIBERIUM_COMPOSITE_INGOT.get(),
-                        ModItems.ICHOR_COMPOSITE_INGOT.get(),
-                        ModItems.AERIES_CRYSTAL.get(),
-                        ModItems.QUALRIM_COMPOUND.get(),
-                        ModItems.ENIGMA_CRYSTAL.get(),
-                        ModItems.GUNDANIUM_DUST.get(),
-                        ModItems.IRON_DUST.get(),
-                        Items.IRON_INGOT,
-                        Items.COPPER_INGOT,
-                        Items.GOLD_INGOT,
-                        Items.NETHERITE_INGOT,
-                        Items.MAGMA_BLOCK,
-                        Items.END_STONE,
-                        Items.COAL,
-                        Items.SOUL_SAND,
-                        Items.SOUL_SOIL,
-                        Items.CLAY_BALL
-
-                )
-                .addTags(Tags.Items.INGOTS,
-                        Tags.Items.DUSTS,
-                        Tags.Items.OBSIDIAN,
-
-                        Tags.Items.ENDER_PEARLS);
-
-        this.tag(ModTags.Items.ALLOYING_RESULT)
-                .add(
-
-                        ModItems.ILLYRIM_INGOT.get(),
-                        ModItems.LG_CORE_INGOT.get(),
-                        ModItems.MG_CORE_INGOT.get(),
-                        ModItems.HG_CORE_INGOT.get(),
-                        ModItems.FIRESTONE.get()
-
-                )
-                .addTag(
-                        Tags.Items.INGOTS
-                );
+//        this.tag(ModTags.Items.ALLOYING_INPUT)
+//                .add(
+//                        ModItems.ALYTHUM_INGOT.get(),
+//                        ModItems.ILLYRIM_INGOT.get(),
+//                        ModItems.LG_CORE_INGOT.get(),
+//                        ModItems.MG_CORE_INGOT.get(),
+//                        ModItems.PROTO_STEEL.get(),
+//                        ModItems.TIBERIUM_COMPOSITE_INGOT.get(),
+//                        ModItems.ICHOR_COMPOSITE_INGOT.get(),
+//                        ModItems.AERIES_CRYSTAL.get(),
+//                        ModItems.QUALRIM_COMPOUND.get(),
+//                        ModItems.ENIGMA_CRYSTAL.get(),
+//                        ModItems.GUNDANIUM_DUST.get(),
+//                        ModItems.IRON_DUST.get(),
+//                        ModBlocks.FLOWER_OF_LIFE.get().asItem(),
+//                        Items.IRON_INGOT,
+//                        Items.COPPER_INGOT,
+//                        Items.GOLD_INGOT,
+//                        Items.NETHERITE_INGOT,
+//                        Items.MAGMA_BLOCK,
+//                        Items.END_STONE,
+//                        Items.COAL,
+//                        Items.SOUL_SAND,
+//                        Items.SOUL_SOIL,
+//                        Items.CLAY_BALL
+//
+//                )
+//                .addTags(Tags.Items.INGOTS,
+//                        Tags.Items.DUSTS,
+//                        Tags.Items.OBSIDIAN,
+//                        Tags.Items.GLASS,
+//
+//                        Tags.Items.ENDER_PEARLS);
+//
+//        this.tag(ModTags.Items.ALLOYING_RESULT)
+//                .add(
+//
+//                        ModItems.ILLYRIM_INGOT.get(),
+//                        ModItems.LG_CORE_INGOT.get(),
+//                        ModItems.MG_CORE_INGOT.get(),
+//                        ModItems.HG_CORE_INGOT.get(),
+//                        ModItems.FIRESTONE.get()
+//
+//                )
+//                .addTags(
+//                        Tags.Items.INGOTS,
+//                        Tags.Items.GLASS
+//                );
 
         this.tag(ModTags.Items.BUCKET_OUTPUT)
                 .add(

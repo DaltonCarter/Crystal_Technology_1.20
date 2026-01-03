@@ -17,4 +17,8 @@ public class ModModelLayers {
     public static final ModelLayerLocation VITRIC_COW_LAYER = new ModelLayerLocation(
             new ResourceLocation(CrystalTech.MOD_ID, "vitric_cow_layer"), "main");
 
+
+    public static final ModelLayerLocation LASER_BEAM_LAYER = new ModelLayerLocation(
+            new ResourceLocation(CrystalTech.MOD_ID, "laser_beam_layer"), "main");
+
 }

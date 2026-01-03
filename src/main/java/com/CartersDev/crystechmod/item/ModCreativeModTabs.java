@@ -113,6 +113,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     output.accept(ModBlocks.DEEPSLATE_QUALRITE_ORE.get());
                     output.accept(ModBlocks.NETHER_QUALRITE_ORE.get());
                     output.accept(ModItems.RAW_QUALRITE.get());
+                    output.accept(ModItems.POWDERED_QUALRITE.get());
                     output.accept(ModItems.QUALRIM_COMPOUND.get());
 
                     output.accept(ModItems.IRON_DUST.get());
@@ -298,7 +299,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     .title(Component.translatable("creativetab.crystal_technology_equipment_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
-                        output.accept(ModItems.CORE_BOW.get());
+                        output.accept(ModItems.BEAM_CASTER.get());
 
                         output.accept(ModItems.PLAGUED_SWORD.get());
                         output.accept(ModItems.PLAGUED_PICKAXE.get());
@@ -369,6 +370,23 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
 
 
                         output.accept(ModItems.GUNDANIUM_HORSE_ARMOR.get());
+                    })
+                    .build());
+
+    public static final RegistryObject<CreativeModeTab> AMMO_TAB = CREATIVE_MODE_TABS.register("crystal_technology_ammo_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.LASER_FOCUS.get()))
+                    .title(Component.translatable("creativetab.crystal_technology_ammo_tab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+
+                        output.accept(ModItems.EMPTY_FOCUS.get());
+                        output.accept(ModItems.LASER_FOCUS.get());
+                        output.accept(ModItems.IMPROVED_LASER_FOCUS.get());
+                        output.accept(ModItems.ADVANCED_LASER_FOCUS.get());
+                        output.accept(ModItems.OVERCHARGED_LASER_FOCUS.get());
+                        output.accept(ModItems.LASER_FOCUS_PROTOCULTURE.get());
+                        output.accept(ModItems.LASER_FOCUS_POISON.get());
+
+
                     })
                     .build());
 

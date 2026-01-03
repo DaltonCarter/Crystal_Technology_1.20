@@ -4,6 +4,7 @@
   "item.crystechmod.enigma_crystal": "Enigma Crystal",
   "item.crystechmod.kryon_crystal": "Kryon Crystal",
   "item.crystechmod.raw_qualrite": "Raw Qualrite",
+  "item.crystechmod.powdered_qualrite": "Powdered Qualrite",
   "item.crystechmod.raw_gundanium": "Raw Gundanium",
   "item.crystechmod.raw_harmonium": "Raw Harmonium",
   "item.crystechmod.raw_alythum": "Raw Alythum",
@@ -172,6 +173,16 @@
   "item.crystechmod.mutton_mre": "Ration M",
   "item.crystechmod.vitric_mre": "Ration Vi",
   "item.crystechmod.veggie_mre": "Ration Ve",
+
+  "item.crystechmod.beam_caster": "Beam Caster W.I.P*",
+
+  "item.crystechmod.empty_focus": "Empty Focus Cell",
+  "item.crystechmod.laser_focus": "Laser Focus Cell",
+  "item.crystechmod.improved_laser_focus": "Improved Laser Focus Cell",
+  "item.crystechmod.advanced_laser_focus": "Advanced Laser Focus Cell",
+  "item.crystechmod.overcharged_laser_focus": "Overcharged Laser Focus Cell",
+  "item.crystechmod.laser_focus_protoculture": "Protoculture Focus Cell",
+  "item.crystechmod.laser_focus_poison": "Toxic Focus Cell",
 
   "item.minecraft.potion.effect.poison_resistance_potion": "Poison Resistance Potion",
   "item.minecraft.splash_potion.effect.poison_resistance_potion": "Splash Potion of Poison Resistance",
@@ -1141,5 +1152,6 @@
   "creativetab.crystal_technology_equipment_tab": "Crystal Technology Tools and Equipment",
   "creativetab.crystal_technology_tech_tab": "Crystal Technology Machines",
   "creativetab.crystal_technology_mob_tab": "Crystal Technology Creatures",
-  "creativetab.crystal_technology_plant_tab": "Crystal Technology Food/Plants"
+  "creativetab.crystal_technology_plant_tab": "Crystal Technology Food/Plants",
+  "creativetab.crystal_technology_ammo_tab": "Crystal Technology Ammo"
 }

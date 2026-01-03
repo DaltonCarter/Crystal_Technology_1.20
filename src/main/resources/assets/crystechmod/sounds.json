@@ -6,6 +6,13 @@
     ]
   },
 
+  "laser": {
+    "subtitles": "sounds.crystechmod.laser",
+    "sounds": [
+      "crystechmod:laser"
+    ]
+  },
+
   "portal": {
     "subtitles": "sounds.crystechmod.portal",
     "sounds": [

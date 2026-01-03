@@ -2,7 +2,7 @@
   "type": "crystechmod:tiberium_infusing",
   "craftTime": 750,
   "energyAmount": 20,
-  "fluidAmount": 1000,
+  "fluidAmount": 250,
   "fluidType": "crystechmod:liquid_protoculture_source",
   "ingredients": [
     {

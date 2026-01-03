@@ -15,6 +15,7 @@ public class ModSounds {
 DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CrystalTech.MOD_ID);
 
     public static final RegistryObject<SoundEvent> CHIME = RegisterSoundEvents("chime");
+    public static final RegistryObject<SoundEvent> LASER = RegisterSoundEvents("laser");
     public static final RegistryObject<SoundEvent> PORTAL = RegisterSoundEvents("portal");
 
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_BREAK = RegisterSoundEvents("sound_block_break");

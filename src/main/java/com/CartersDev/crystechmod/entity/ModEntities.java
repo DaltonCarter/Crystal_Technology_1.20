@@ -2,6 +2,7 @@ package com.CartersDev.crystechmod.entity;
 
 import com.CartersDev.crystechmod.CrystalTech;
 
+import com.CartersDev.crystechmod.entity.custom.LaserBeamEntity;
 import com.CartersDev.crystechmod.entity.custom.RhinoEntity;
 import com.CartersDev.crystechmod.entity.custom.VitricCowEntity;
 import com.CartersDev.crystechmod.entity.custom.VitricSheepEntity;
@@ -27,6 +28,15 @@ public static final RegistryObject<EntityType<RhinoEntity>> RHINO =
     public static final RegistryObject<EntityType<VitricCowEntity>> VITRIC_COW =
             ENTITY_TYPES.register("vitric_cow", () -> EntityType.Builder.of(VitricCowEntity::new, MobCategory.CREATURE)
                     .sized(0.9F, 1.4F).build("vitric_cow"));
+
+
+    public static final RegistryObject<EntityType<LaserBeamEntity>> LASER_BEAM =
+            ENTITY_TYPES.register("laser_beam",
+                    () -> EntityType.Builder.<LaserBeamEntity>of(LaserBeamEntity::new, MobCategory.MISC)
+                            .sized(0.75f, 0.75f)
+                            .clientTrackingRange(7)
+                            .updateInterval(20)
+                            .build("laser_beam"));
 
 
     public static void register(IEventBus eventBus) {

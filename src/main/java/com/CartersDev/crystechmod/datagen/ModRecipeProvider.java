@@ -4670,6 +4670,9 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
         new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModTags.Items.ENIGMA_ORES)), ModItems.ENIGMA_CRYSTAL.get(), 2,  200, 15, true)
                 .unlockedBy("has_enigma_crystal", has(ModItems.ENIGMA_CRYSTAL.get())).save(consumer);
 
+        new TiberiumMaceratorRecipeBuilder(List.of(CountedIngredient.of(ModTags.Items.QUALRITE_ORES)), ModItems.POWDERED_QUALRITE.get(), 1,  200, 15, true)
+                .unlockedBy("has_raw_qualrite", has(ModItems.RAW_QUALRITE.get())).save(consumer);
+
 
         //Core Steel:
 
@@ -4729,8 +4732,8 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 new FluidStack(ModFluids.SOURCE_MOLTEN_RED_TIBERIUM.get(), 1000))
                 .unlockedBy("has_red_tiberium_bucket", has(ModItems.MOLTEN_RED_TIBERIUM_BUCKET.get())).save(consumer);
 
-    new TiberiumInfuserRecipeBuilder(ModItems.RAW_QUALRITE.get(), ModItems.QUALRIM_COMPOUND.get(), 1, 250, 20,
-            new FluidStack(ModFluids.SOURCE_MOLTEN_BLUE_TIBERIUM.get(), 1000))
+    new TiberiumInfuserRecipeBuilder(ModItems.POWDERED_QUALRITE.get(), ModItems.QUALRIM_COMPOUND.get(), 1, 250, 20,
+            new FluidStack(ModFluids.SOURCE_MOLTEN_BLUE_TIBERIUM.get(), 200))
             .unlockedBy("has_qualrite", has(ModItems.RAW_QUALRITE.get())).save(consumer);
 
         new TiberiumInfuserRecipeBuilder(ModItems.GUNDANIUM_INGOT.get(), ModItems.TIBERIUM_COMPOSITE_INGOT.get(), 1, 500, 25,
@@ -4742,7 +4745,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_purple_tiberium_bucket", has(ModItems.MOLTEN_PURPLE_TIBERIUM_BUCKET.get())).save(consumer);
 
         new TiberiumInfuserRecipeBuilder(ModItems.ALYTHUM_INGOT.get(), ModItems.PROTO_STEEL.get(), 1, 750, 20,
-                new FluidStack(ModFluids.SOURCE_LIQUID_PROTOCULTURE.get(), 1000))
+                new FluidStack(ModFluids.SOURCE_LIQUID_PROTOCULTURE.get(), 250))
                 .unlockedBy("has_liquid_protoculture_bucket", has(ModItems.LIQUID_PROTOCULTURE_BUCKET.get())).save(consumer);
 
         new TiberiumInfuserRecipeBuilder(Blocks.SAND, ModBlocks.YELLOW_ZONE_SAND.get(), 1, 100, 1,

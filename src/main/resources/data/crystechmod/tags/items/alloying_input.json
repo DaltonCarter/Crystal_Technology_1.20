@@ -12,6 +12,7 @@
     "crystechmod:enigma_crystal",
     "crystechmod:gundanium_dust",
     "crystechmod:iron_dust",
+    "crystechmod:flower_of_life",
     "minecraft:iron_ingot",
     "minecraft:copper_ingot",
     "minecraft:gold_ingot",
@@ -22,9 +23,11 @@
     "minecraft:soul_sand",
     "minecraft:soul_soil",
     "minecraft:clay_ball",
+    "thermal:obsidian_glass",
     "#forge:ingots",
     "#forge:dusts",
     "#forge:obsidian",
+    "#forge:glass",
     "#forge:ender_pearls"
   ]
 }
