@@ -26,6 +26,8 @@
     "thermal:obsidian_glass",
     "#forge:ingots",
     "#forge:dusts",
+    "#forge:sand",
+    "#forge:gems/quartz",
     "#forge:obsidian",
     "#forge:glass",
     "#forge:ender_pearls"
