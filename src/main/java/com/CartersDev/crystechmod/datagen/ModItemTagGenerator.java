@@ -343,7 +343,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.MG_CORE_INGOT.get(),
                         ModItems.HARMONIUM_INGOT.get(),
                         ModItems.RAW_HARMONIUM.get(),
-                        ModItems.HG_CORE_INGOT.get()
+                        ModItems.HG_CORE_INGOT.get(),
+                        ModItems.RAW_QUALRITE.get()
                 )
                 .addTags(ModTags.Items.ALYTHUM_ORES,
                 ModTags.Items.MACERATABLE,
@@ -373,7 +374,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.RED_TIBERIUM_DUST.get(),
                         ModItems.YOKARAN_BLOOM_POWDER.get(),
                         ModItems.DEVILS_BLOOD_POWDER.get(),
-                        ModItems.HARMONIUM_DUST.get()
+                        ModItems.HARMONIUM_DUST.get(),
+                        ModItems.POWDERED_QUALRITE.get()
                 )
                 .addTags(
                         ModTags.Items.MACERATING_RESULT,
