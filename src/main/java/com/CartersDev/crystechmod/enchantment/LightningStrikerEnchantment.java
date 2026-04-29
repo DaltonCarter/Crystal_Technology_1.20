@@ -52,6 +52,6 @@ public class LightningStrikerEnchantment extends Enchantment {
 
     @Override
     public boolean canEnchant(ItemStack pStack) {
-        return pStack.getItem() instanceof ThermalEnergyBow ? true : super.canEnchant(pStack);
+        return pStack.getItem() instanceof ThermalEnergyBow || super.canEnchant(pStack);
     }
 }

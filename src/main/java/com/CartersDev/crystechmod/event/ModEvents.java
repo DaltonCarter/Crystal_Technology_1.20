@@ -112,7 +112,7 @@ public class ModEvents {
 
         if(event.getType() == VillagerProfession.LIBRARIAN) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack enchantedBook = EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.LIGHTNING_STRIKER.get(), 1));
+            ItemStack enchantedBook = EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.POWER_STRIKE.get(), 1));
 
             ItemStack enchantedBook2 = EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.VITRIC_HARVESTER.get(), 1));
 

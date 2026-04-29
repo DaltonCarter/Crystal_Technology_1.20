@@ -57,6 +57,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
         this.copy(ModTags.Blocks.SMELTABLE, ModTags.Items.SMELTABLE);
         this.copy(ModTags.Blocks.SMELTING_RESULT, ModTags.Items.SMELTING_RESULT);
+        this.copy(ModTags.Blocks.CORE_LAMP, ModTags.Items.CORE_LAMP);
 
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
 

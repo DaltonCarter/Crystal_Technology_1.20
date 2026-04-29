@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:cyan_dye"
+    },
+    "H": {
+      "item": "crystechmod:illuminate_component"
+    },
+    "I": {
+      "item": "crystechmod:blue_core_crystal"
+    },
+    "R": {
+      "tag": "crystechmod:core_lamp"
+    },
+    "T": {
+      "item": "crystechmod:harmonium_ingot"
+    }
+  },
+  "pattern": [
+    "THT",
+    "IRI",
+    "TDT"
+  ],
+  "result": {
+    "item": "crystechmod:inverted_cyan_crystal_core_light"
+  },
+  "show_notification": true
+}

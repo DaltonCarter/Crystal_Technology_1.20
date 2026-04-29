@@ -1,5 +1,6 @@
 package com.CartersDev.crystechmod.entity.custom;
 
+import com.CartersDev.crystechmod.enchantment.ModEnchantments;
 import com.CartersDev.crystechmod.entity.ModEntities;
 import com.CartersDev.crystechmod.particle.ModParticles;
 import com.CartersDev.crystechmod.util.ModTags;
@@ -23,6 +24,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -43,6 +45,7 @@ import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraftforge.network.NetworkHooks;
 
 import javax.annotation.Nullable;
+import java.util.Collection;
 import java.util.List;
 
 public class LaserBeamEntity extends Projectile {
@@ -51,6 +54,9 @@ public class LaserBeamEntity extends Projectile {
 
     private static final EntityDataAccessor<Boolean> HIT =
             SynchedEntityData.defineId(LaserBeamEntity.class, EntityDataSerializers.BOOLEAN);
+
+    private static boolean igniteTarget = false;
+    private static boolean detonate = false;
 
     private static final EntityDataAccessor<Byte> PIERCE_LEVEL = SynchedEntityData.defineId(LaserBeamEntity.class, EntityDataSerializers.BYTE);
 
@@ -68,14 +74,17 @@ public class LaserBeamEntity extends Projectile {
         super(pEntityType, pLevel);
     }
 
+
+
     public LaserBeamEntity(Level pLevel, Player player) {
         super(ModEntities.LASER_BEAM.get(), pLevel);
         setOwner(player);
         BlockPos blockPos = player.blockPosition();
+Vec3 eyePos = player.getEyePosition(1.0F);
 
-        double d0 = (double)blockPos.getX() + 0.5D;
-        double d1 = (double)blockPos.getY() + 1.75D;
-        double d2 = (double)blockPos.getZ() + 0.5D;
+        double d0 = eyePos.x;
+        double d1 = eyePos.y;
+        double d2 = eyePos.z;
         this.moveTo(d0, d1, d2, this.getYRot(), this.getXRot());
     }
 
@@ -90,8 +99,14 @@ public class LaserBeamEntity extends Projectile {
             }
         }
 
-        if (this.tickCount >= 100) {
+        if (this.tickCount >= 300) {
             this.remove(RemovalReason.DISCARDED);
+        }
+
+        if (!this.level().isClientSide()) {
+            if(this.getY() > 320) {
+                this.discard();
+            }
         }
 
         Vec3 vec3 = this.getDeltaMovement();
@@ -120,6 +135,10 @@ public class LaserBeamEntity extends Projectile {
 
         BlockPos blockpos = this.blockPosition();
         BlockState blockstate = this.level().getBlockState(blockpos);
+
+
+
+
         if (!blockstate.isAir()) {
             VoxelShape voxelshape = blockstate.getCollisionShape(this.level(), blockpos);
             if (!voxelshape.isEmpty()) {
@@ -154,6 +173,20 @@ public class LaserBeamEntity extends Projectile {
         Vec3 vec31 = vec3.normalize().scale((double)0.05F);
         this.setPosRaw(this.getX() - vec31.x, this.getY() - vec31.y, this.getZ() - vec31.z);
         this.playSound(SoundEvents.ENDER_DRAGON_HURT, 1.0F, 1.2F / (this.random.nextFloat() * 0.2F + 0.9F));
+        this.resetPiercedEntities();
+
+    BlockPos partPos = pResult.getBlockPos();
+
+    if(detonate){
+        explodeLaser(partPos);
+    }
+
+    for(int x = 0; x < 18; ++x) {
+        for(int y = 0; y < 18; ++y) {
+            this.level().addParticle(ModParticles.BLUE_FLAME_PARTICLES.get(), partPos.getX(), partPos.getY(), partPos.getZ(),
+                    Math.cos(x*20) * 0.15d, Math.cos(y*20) * 0.15d, Math.sin(x*20) * 0.15d);
+        }
+    }
 
     }
 
@@ -164,9 +197,19 @@ public class LaserBeamEntity extends Projectile {
         super.onHitEntity(pResult);
         Entity hitEntity = pResult.getEntity();
         Entity owner = this.getOwner();
-
+        boolean igniteTarget = LaserBeamEntity.igniteTarget;
+        boolean detonate = LaserBeamEntity.detonate;
         if(hitEntity == owner && this.level().isClientSide()) {
             return;
+        }
+
+
+        if(igniteTarget){
+            hitEntity.setSecondsOnFire(5);
+        }
+
+        if(detonate){
+            explodeLaser(hitEntity.blockPosition());
         }
 
         this.level().playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.ENDER_DRAGON_HURT, SoundSource.NEUTRAL,
@@ -174,10 +217,20 @@ public class LaserBeamEntity extends Projectile {
 
         LivingEntity livingentity = owner instanceof LivingEntity ? (LivingEntity)owner : null;
         float damage = baseDamage;
+
         boolean hurt = hitEntity.hurt(this.damageSources().mobProjectile(this, livingentity), damage);
         if (hurt) {
             if(hitEntity instanceof LivingEntity livingHitEntity) {
                 livingHitEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 100, 1), owner);
+            }
+        }
+
+
+
+        for(int x = 0; x < 18; ++x) {
+            for(int y = 0; y < 18; ++y) {
+                this.level().addParticle(ModParticles.BLUE_FLAME_PARTICLES.get(), hitEntity.getX(), hitEntity.getY(), hitEntity.getZ(),
+                        Math.cos(x*20) * 0.15d, Math.cos(y*20) * 0.15d, Math.sin(x*20) * 0.15d);
             }
         }
 
@@ -198,12 +251,12 @@ public class LaserBeamEntity extends Projectile {
             this.piercingIgnoreEntityIds.add(hitEntity.getId());
         }
 
+
         if (!this.level().isClientSide && owner instanceof LivingEntity) {
             EnchantmentHelper.doPostHurtEffects(livingentity, owner);
             EnchantmentHelper.doPostDamageEffects((LivingEntity)owner, livingentity);
         }
 
-        this.doPostHurtEffects(livingentity);
         if (owner != null && livingentity != owner && livingentity instanceof Player && owner instanceof ServerPlayer && !this.isSilent()) {
             ((ServerPlayer)owner).connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.ARROW_HIT_PLAYER, 0.0F));
         }
@@ -213,18 +266,12 @@ public class LaserBeamEntity extends Projectile {
         }
     }
 
-    protected void doPostHurtEffects(LivingEntity pTarget) {
-    }
+
 
     @Override
     protected void onHit(HitResult pResult) {
         super.onHit(pResult);
-        for(int x = 0; x < 18; ++x) {
-            for(int y = 0; y < 18; ++y) {
-                this.level().addParticle(ModParticles.BLUE_FLAME_PARTICLES.get(), this.getX(), this.getY(), this.getZ(),
-                        Math.cos(x*20) * 0.15d, Math.cos(y*20) * 0.15d, Math.sin(x*20) * 0.15d);
-            }
-        }
+
 
         if(this.level().isClientSide()) {
             return;
@@ -246,6 +293,30 @@ public class LaserBeamEntity extends Projectile {
 
     }
 
+    private void explodeLaser(BlockPos pos) {
+        if (!this.level().isClientSide) {
+            int explosionRadius = 3;
+            this.level().explode(this, pos.getX(), pos.getY(), pos.getZ(), (float)explosionRadius * 2.5F, Level.ExplosionInteraction.MOB);
+            this.discard();
+            this.spawnLingeringCloud(pos);
+        }
+
+    }
+
+
+    private void spawnLingeringCloud(BlockPos pos) {
+
+            AreaEffectCloud areaeffectcloud = new AreaEffectCloud(this.level(), pos.getX(), pos.getY(), pos.getZ());
+            areaeffectcloud.setRadius(2.5F);
+            areaeffectcloud.setRadiusOnUse(-0.5F);
+            areaeffectcloud.setWaitTime(10);
+            areaeffectcloud.setDuration(areaeffectcloud.getDuration() / 2);
+            areaeffectcloud.setRadiusPerTick(-areaeffectcloud.getRadius() / (float)areaeffectcloud.getDuration());
+             this.level().addFreshEntity(areaeffectcloud);
+
+
+    }
+
     protected boolean canHitEntity(Entity p_36743_) {
         return super.canHitEntity(p_36743_) && (this.piercingIgnoreEntityIds == null || !this.piercingIgnoreEntityIds.contains(p_36743_.getId()));
     }
@@ -258,6 +329,7 @@ public class LaserBeamEntity extends Projectile {
         }
 
         pCompound.putFloat("damage", this.baseDamage);
+
         pCompound.putByte("PierceLevel", this.getPierceLevel());
     }
 
@@ -272,30 +344,30 @@ public class LaserBeamEntity extends Projectile {
         if (pCompound.contains("damage", 99)) {
             this.baseDamage = pCompound.getFloat("damage");
         }
+
+
         this.setPierceLevel(pCompound.getByte("PierceLevel"));
     }
     public void setBaseDamage(float pBaseDamage) {
         this.baseDamage = pBaseDamage;
     }
 
-    public float getBaseDamage() {
-        return this.baseDamage;
+    public boolean setIgniteTarget(boolean ignite) {
+       return igniteTarget = ignite;
     }
 
-    public void setEnchantmentEffectsFromEntity(LivingEntity pShooter, float pVelocity) {
-        int i = EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER_ARROWS, pShooter);
-
-        this.setBaseDamage((float) ((pVelocity * 2.0F) + this.random.triangle((float)this.level().getDifficulty().getId() * 0.11F, 0.57425F)));
-        if (i > 0) {
-            this.setBaseDamage(this.getBaseDamage() + (float)i * 0.5F + 0.5F);
-        }
-
-
-        if (EnchantmentHelper.getEnchantmentLevel(Enchantments.FLAMING_ARROWS, pShooter) > 0) {
-            this.setSecondsOnFire(100);
-        }
-
+    public boolean getIgniteTarget(boolean ignite) {
+        return igniteTarget = ignite;
     }
+
+    public boolean setDetonate(boolean detonate) {
+        return LaserBeamEntity.detonate = detonate;
+    }
+
+    public boolean getDetonate(boolean detonate) {
+        return LaserBeamEntity.detonate = detonate;
+    }
+
 
     public void setPierceLevel(byte pPierceLevel) {
         this.entityData.set(PIERCE_LEVEL, pPierceLevel);
@@ -304,8 +376,6 @@ public class LaserBeamEntity extends Projectile {
     public byte getPierceLevel() {
         return this.entityData.get(PIERCE_LEVEL);
     }
-
-
 
     private void resetPiercedEntities() {
         if (this.piercedAndKilledEntities != null) {

@@ -2,10 +2,7 @@ package com.CartersDev.crystechmod.entity;
 
 import com.CartersDev.crystechmod.CrystalTech;
 
-import com.CartersDev.crystechmod.entity.custom.LaserBeamEntity;
-import com.CartersDev.crystechmod.entity.custom.RhinoEntity;
-import com.CartersDev.crystechmod.entity.custom.VitricCowEntity;
-import com.CartersDev.crystechmod.entity.custom.VitricSheepEntity;
+import com.CartersDev.crystechmod.entity.custom.*;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,6 +27,7 @@ public static final RegistryObject<EntityType<RhinoEntity>> RHINO =
                     .sized(0.9F, 1.4F).build("vitric_cow"));
 
 
+    //Projectiles Lasers:
     public static final RegistryObject<EntityType<LaserBeamEntity>> LASER_BEAM =
             ENTITY_TYPES.register("laser_beam",
                     () -> EntityType.Builder.<LaserBeamEntity>of(LaserBeamEntity::new, MobCategory.MISC)
@@ -37,6 +35,46 @@ public static final RegistryObject<EntityType<RhinoEntity>> RHINO =
                             .clientTrackingRange(7)
                             .updateInterval(20)
                             .build("laser_beam"));
+
+    public static final RegistryObject<EntityType<ImprovedLaserBeamEntity>> IMPROVED_LASER_BEAM =
+            ENTITY_TYPES.register("improved_laser_beam",
+                    () -> EntityType.Builder.<ImprovedLaserBeamEntity>of(ImprovedLaserBeamEntity::new, MobCategory.MISC)
+                            .sized(0.75f, 0.75f)
+                            .clientTrackingRange(7)
+                            .updateInterval(20)
+                            .build("improved_laser_beam"));
+
+    public static final RegistryObject<EntityType<AdvancedLaserBeamEntity>> ADVANCED_LASER_BEAM =
+            ENTITY_TYPES.register("advanced_laser_beam",
+                    () -> EntityType.Builder.<AdvancedLaserBeamEntity>of(AdvancedLaserBeamEntity::new, MobCategory.MISC)
+                            .sized(0.75f, 0.75f)
+                            .clientTrackingRange(7)
+                            .updateInterval(20)
+                            .build("advanced_laser_beam"));
+
+    public static final RegistryObject<EntityType<OverchargedLaserBeamEntity>> OVERCHARGED_LASER_BEAM =
+            ENTITY_TYPES.register("overcharged_laser_beam",
+                    () -> EntityType.Builder.<OverchargedLaserBeamEntity>of(OverchargedLaserBeamEntity::new, MobCategory.MISC)
+                            .sized(0.75f, 0.75f)
+                            .clientTrackingRange(7)
+                            .updateInterval(20)
+                            .build("overcharged_laser_beam"));
+
+    public static final RegistryObject<EntityType<ProtocultureLaserBeamEntity>> PROTOCULTURE_LASER_BEAM =
+            ENTITY_TYPES.register("protoculture_laser_beam",
+                    () -> EntityType.Builder.<ProtocultureLaserBeamEntity>of(ProtocultureLaserBeamEntity::new, MobCategory.MISC)
+                            .sized(0.75f, 0.75f)
+                            .clientTrackingRange(7)
+                            .updateInterval(20)
+                            .build("protoculture_laser_beam"));
+
+    public static final RegistryObject<EntityType<PoisonLaserBeamEntity>> POISON_LASER_BEAM =
+            ENTITY_TYPES.register("poison_laser_beam",
+                    () -> EntityType.Builder.<PoisonLaserBeamEntity>of(PoisonLaserBeamEntity::new, MobCategory.MISC)
+                            .sized(0.75f, 0.75f)
+                            .clientTrackingRange(7)
+                            .updateInterval(20)
+                            .build("poison_laser_beam"));
 
 
     public static void register(IEventBus eventBus) {

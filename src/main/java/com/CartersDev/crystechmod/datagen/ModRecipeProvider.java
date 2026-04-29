@@ -2852,16 +2852,6 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModBlocks.MARIKA_OAK_LOG.get()), has(ModBlocks.MARIKA_OAK_LOG.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CRYSTAL_CORE_LAMP_G.get())
-                .pattern("TTT")
-                .pattern("IRI")
-                .pattern("TTT")
-                .define('R', Blocks.REDSTONE_LAMP)
-                .define('T', ModItems.TIBERIUM.get())
-                .define('I', ModItems.ILLUMINA_CRYSTAL.get())
-                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
-                .save(consumer);
-
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TIBERIUM_INFUSER.get())
                 .pattern("HIH")
                 .pattern("KMK")
@@ -3077,7 +3067,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("GRG")
                 .pattern("IGI")
                 .define('G', ModTags.Items.GLASS)
-                .define('R', Blocks.REDSTONE_BLOCK)
+                .define('R', ModItems.BASIC_CIRCUIT.get())
                 .define('I', ModItems.GUNDANIUM_INGOT.get())
 
                 .unlockedBy(getHasName(ModItems.GUNDANIUM_INGOT.get()), has(ModItems.GUNDANIUM_INGOT.get()))
@@ -3118,7 +3108,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('B', ModBlocks.TIBERIUM_BLUE_BLOCK.get())
                 .define('R', ModBlocks.TIBERIUM_RED_BLOCK.get())
                 .define('P', ModBlocks.TIBERIUM_PURPLE_BLOCK.get())
-                .define('S', Items.REDSTONE)
+                .define('S', ModItems.HARMONIC_CIRCUIT.get())
                 .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
                 .save(consumer);
 
@@ -3128,8 +3118,17 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .pattern("ICI")
                 .define('C', ModItems.HARMONIUM_INGOT.get())
                 .define('I', ModItems.ILLUMINA_CRYSTAL.get())
-                .define('R', Blocks.REDSTONE_BLOCK)
+                .define('R', ModItems.BASIC_CIRCUIT.get())
                 .unlockedBy(getHasName(ModItems.ILLUMINA_CRYSTAL.get()), has(ModItems.ILLUMINA_CRYSTAL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BASIC_CIRCUIT.get())
+                .pattern("ICI")
+                .pattern("CIC")
+                .pattern("ICI")
+                .define('C', ModItems.GUNDANIUM_INGOT.get())
+                .define('I', Items.REDSTONE)
+                .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HARMONIC_FOCUS.get())
@@ -3141,7 +3140,7 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('K', ModBlocks.KRYON_BLOCK.get())
                 .define('A', ModBlocks.AERIES_BLOCK.get())
                 .define('E', ModBlocks.ENIGMA_BLOCK.get())
-                .define('R', ModItems.HARMONIC_CIRCUIT.get())
+                .define('R', ModItems.VITRIC_CIRCUIT.get())
                 .unlockedBy(getHasName(ModItems.HARMONIUM_INGOT.get()), has(ModItems.HARMONIUM_INGOT.get()))
                 .save(consumer);
 
@@ -3183,12 +3182,36 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.HARMONIUM_INGOT.get()), has(ModItems.HARMONIUM_INGOT.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD.get(), 32)
                 .pattern("C C")
                 .pattern(" C ")
                 .pattern("C C")
                 .define('C', ModItems.LG_CORE_INGOT.get())
                 .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_LG.get(), 32)
+                .pattern("   ")
+                .pattern(" CC")
+                .pattern(" CC")
+                .define('C', ModItems.LG_CORE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_MG.get(), 32)
+                .pattern("   ")
+                .pattern(" CC")
+                .pattern(" CC")
+                .define('C', ModItems.MG_CORE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.MG_CORE_INGOT.get()), has(ModItems.MG_CORE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_TILE_HG.get(), 32)
+                .pattern("   ")
+                .pattern(" CC")
+                .pattern(" CC")
+                .define('C', ModItems.HG_CORE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.HG_CORE_INGOT.get()), has(ModItems.HG_CORE_INGOT.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CS_SCAFFOLD_SLAB.get(), 6)
@@ -4002,6 +4025,104 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BEAM_CASTER.get(), 1)
+                .pattern("AIH")
+                .pattern("ICM")
+                .pattern("HMI")
+                .define('I', ModItems.PROTO_STEEL.get())
+                .define('C', Items.CROSSBOW)
+                .define('A', ModItems.AERIES_CRYSTAL.get())
+                .define('M', ModItems.ILLUMINATE_COMPONENT.get())
+                .define('H', ModItems.HARMONIC_CIRCUIT.get())
+                .unlockedBy(getHasName(ModItems.PROTO_STEEL.get()), has(ModItems.PROTO_STEEL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EMPTY_FOCUS.get(), 6)
+                .pattern("AAI")
+                .pattern("AIA")
+                .pattern("IAA")
+                .define('A', ModItems.ALYTHUM_INGOT.get())
+                .define('I', ModItems.ILLUMINA_CRYSTAL.get())
+
+                .unlockedBy(getHasName(ModItems.PROTO_STEEL.get()), has(ModItems.PROTO_STEEL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LASER_FOCUS.get(), 1)
+                .pattern("RIR")
+                .pattern("AFA")
+                .pattern("RIR")
+                .define('F', ModItems.EMPTY_FOCUS.get())
+                .define('I', ModItems.ILLUMINA_CRYSTAL.get())
+                .define('A', ModItems.AERIES_CRYSTAL.get())
+                .define('R', Items.REDSTONE)
+
+                .unlockedBy(getHasName(ModItems.EMPTY_FOCUS.get()), has(ModItems.EMPTY_FOCUS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.IMPROVED_LASER_FOCUS.get(), 1)
+                .pattern("RIR")
+                .pattern("LFL")
+                .pattern("RAR")
+                .define('F', ModItems.EMPTY_FOCUS.get())
+                .define('L', ModItems.LASER_FOCUS.get())
+                .define('A', ModItems.AERIES_CRYSTAL.get())
+                .define('I', ModItems.ILLUMINA_CRYSTAL.get())
+                .define('R', Blocks.REDSTONE_BLOCK)
+
+                .unlockedBy(getHasName(ModItems.EMPTY_FOCUS.get()), has(ModItems.EMPTY_FOCUS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ADVANCED_LASER_FOCUS.get(), 1)
+                .pattern("EIE")
+                .pattern("LFL")
+                .pattern("EAE")
+                .define('F', ModItems.EMPTY_FOCUS.get())
+                .define('L', ModItems.IMPROVED_LASER_FOCUS.get())
+                .define('A', ModBlocks.AERIES_BLOCK.get())
+                .define('I', ModBlocks.ILLUMINA_BLOCK.get())
+                .define('E', ModItems.ENIGMA_CRYSTAL.get())
+
+                .unlockedBy(getHasName(ModItems.EMPTY_FOCUS.get()), has(ModItems.EMPTY_FOCUS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.OVERCHARGED_LASER_FOCUS.get(), 1)
+                .pattern("RLR")
+                .pattern("LFL")
+                .pattern("RLR")
+                .define('F', ModItems.EMPTY_FOCUS.get())
+                .define('L', ModItems.IMPROVED_LASER_FOCUS.get())
+                .define('R', Blocks.REDSTONE_BLOCK)
+
+                .unlockedBy(getHasName(ModItems.EMPTY_FOCUS.get()), has(ModItems.EMPTY_FOCUS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LASER_FOCUS_PROTOCULTURE.get(), 1)
+                .pattern("ELE")
+                .pattern("PFP")
+                .pattern("ELE")
+                .define('F', ModItems.EMPTY_FOCUS.get())
+                .define('L', ModItems.OVERCHARGED_LASER_FOCUS.get())
+                .define('P', ModItems.LIQUID_PROTOCULTURE_BUCKET.get())
+                .define('E', ModItems.ENIGMA_CRYSTAL.get())
+
+                .unlockedBy(getHasName(ModItems.EMPTY_FOCUS.get()), has(ModItems.EMPTY_FOCUS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LASER_FOCUS_POISON.get(), 1)
+                .pattern("RLV")
+                .pattern("PFP")
+                .pattern("CLA")
+                .define('F', ModItems.EMPTY_FOCUS.get())
+                .define('L', ModItems.IMPROVED_LASER_FOCUS.get())
+                .define('P', Items.SPIDER_EYE)
+                .define('R', ModItems.TIBERIUM.get())
+                .define('V', ModItems.TIBERIUM_BLUE.get())
+                .define('C', ModItems.TIBERIUM_RED.get())
+                .define('A', ModItems.TIBERIUM_PURPLE.get())
+
+                .unlockedBy(getHasName(ModItems.EMPTY_FOCUS.get()), has(ModItems.EMPTY_FOCUS.get()))
+                .save(consumer);
+
         //Shapeless Crafting:
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIBERIUM.get(), 9)
                 .requires(ModBlocks.TIBERIUM_BLOCK.get())
@@ -4530,8 +4651,6 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
 
 
-
-
 //Passive Tiberium Grinder:
 
         //Vanilla:
@@ -4885,8 +5004,8 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
     //Alloy Kiln:
 
-        new AlloyKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.ALYTHUM_INGOT.get()), CountedIngredient.of(Tags.Items.INGOTS_NETHERITE), CountedIngredient.of(2,ModItems.QUALRIM_COMPOUND.get())),
-                ModItems.ILLYRIM_INGOT.get(), 2, 250, 20).unlockedBy("has_qualrim_compound", has(ModItems.QUALRIM_COMPOUND.get())).save(consumer);
+        new AlloyKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.ALYTHUM_INGOT.get()), CountedIngredient.of(2, Items.NETHERITE_SCRAP), CountedIngredient.of(1,ModItems.QUALRIM_COMPOUND.get())),
+                ModItems.ILLYRIM_INGOT.get(), 3, 250, 20).unlockedBy("has_qualrim_compound", has(ModItems.QUALRIM_COMPOUND.get())).save(consumer);
 
         new AlloyKilnRecipeBuilder(List.of(CountedIngredient.of(ModItems.ILLYRIM_INGOT.get()), CountedIngredient.of(2, ModItems.TIBERIUM_COMPOSITE_INGOT.get()), CountedIngredient.of(ModItems.HARMONIUM_INGOT.get())),
                 ModItems.LG_CORE_INGOT.get(), 3, 250, 20).unlockedBy("has_illyrim_ingot", has(ModItems.ILLYRIM_INGOT.get())).save(consumer);

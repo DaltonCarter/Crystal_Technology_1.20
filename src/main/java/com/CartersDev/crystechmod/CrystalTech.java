@@ -6,7 +6,7 @@ import com.CartersDev.crystechmod.effect.ModEffects;
 import com.CartersDev.crystechmod.enchantment.ModEnchantments;
 import com.CartersDev.crystechmod.entity.ModEntities;
 import com.CartersDev.crystechmod.entity.client.*;
-import com.CartersDev.crystechmod.entity.client.renderer.LaserBeam.LaserBeamRenderer;
+import com.CartersDev.crystechmod.entity.client.renderer.LaserBeam.*;
 import com.CartersDev.crystechmod.entity.client.renderer.rhino.RhinoRenderer;
 import com.CartersDev.crystechmod.entity.client.renderer.vitricCow.VitricCowRenderer;
 import com.CartersDev.crystechmod.entity.client.renderer.vitricSheep.VitricSheepRenderer;
@@ -59,6 +59,9 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
@@ -79,6 +82,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import org.slf4j.Logger;
 import terrablender.api.SurfaceRuleManager;
+
+import static com.CartersDev.crystechmod.item.custom.Weapons.Bows.ThermalEnergyBow.isCharged;
 
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -205,6 +210,7 @@ public class CrystalTech {
 
             ModItemProperties.addCustomItemProperties();
 
+
             Sheets.addWoodType(ModWoodTypes.PLAGUED);
             Sheets.addWoodType(ModWoodTypes.EMBER_OAK);
             Sheets.addWoodType(ModWoodTypes.DEAD);
@@ -216,6 +222,11 @@ public class CrystalTech {
             EntityRenderers.register(ModEntities.VITRIC_COW.get(), m -> new VitricCowRenderer(m, new VitricCowModel<>(m.bakeLayer(ModModelLayers.VITRIC_COW_LAYER)), 0.7F));
 
             EntityRenderers.register(ModEntities.LASER_BEAM.get(), LaserBeamRenderer::new);
+            EntityRenderers.register(ModEntities.IMPROVED_LASER_BEAM.get(), ImprovedLaserBeamRenderer::new);
+            EntityRenderers.register(ModEntities.ADVANCED_LASER_BEAM.get(), AdvancedLaserBeamRenderer::new);
+            EntityRenderers.register(ModEntities.OVERCHARGED_LASER_BEAM.get(), OverchargedLaserBeamRenderer::new);
+            EntityRenderers.register(ModEntities.PROTOCULTURE_LASER_BEAM.get(), ProtocultureLaserBeamRenderer::new);
+            EntityRenderers.register(ModEntities.POISON_LASER_BEAM.get(), PoisonLaserBeamRenderer::new);
 
 
 ///         Menu Screens:

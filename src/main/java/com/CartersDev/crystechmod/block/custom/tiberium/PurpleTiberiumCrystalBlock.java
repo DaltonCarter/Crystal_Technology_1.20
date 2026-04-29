@@ -119,7 +119,7 @@ public class PurpleTiberiumCrystalBlock extends CropBlock {
 
 
     public boolean hasEnchantment (String enchantments) {
-        if (enchantments.contains("com.CartersDev.crystechmod.enchantment.VitricHarvesterEnchantment") ||
+        if (enchantments.contains("com.CartersDev.crystechmod.enchantment.Vanilla.VitricHarvesterEnchantment") ||
                 enchantments.contains("net.minecraft.world.item.enchantment.UntouchingEnchantment")) {
 //            System.out.println("PING PONG");
             return true;

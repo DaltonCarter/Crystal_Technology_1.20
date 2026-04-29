@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "crystechmod:crystal_core_light"
-  },
-  "result": "crystechmod:cyan_vert_crystal_core_light"
-}

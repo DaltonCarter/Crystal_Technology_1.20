@@ -153,6 +153,7 @@
   "item.crystechmod.ichor_composite_ingot": "Ichor Composite Ingot",
   "item.crystechmod.harmonic_relay": "Harmonic Relay",
   "item.crystechmod.harmonic_circuit": "Harmonic Circuit",
+  "item.crystechmod.basic_circuit": "Basic Circuit",
   "item.crystechmod.harmonic_focus": "Harmonic Focus",
   "item.crystechmod.illuminate_component": "Illuminate Component",
   "item.crystechmod.kryonic_capacitor": "Kryonic Component",
@@ -174,7 +175,7 @@
   "item.crystechmod.vitric_mre": "Ration Vi",
   "item.crystechmod.veggie_mre": "Ration Ve",
 
-  "item.crystechmod.beam_caster": "Beam Caster W.I.P*",
+  "item.crystechmod.beam_caster": "Beam Caster",
 
   "item.crystechmod.empty_focus": "Empty Focus Cell",
   "item.crystechmod.laser_focus": "Laser Focus Cell",
@@ -1022,10 +1023,29 @@
 
 
   "enchantment.crystechmod.lightning_striker": "Lightning Striker",
+  "enchantment.crystechmod.lightning_striker.desc": "Smite thine enemies with righteous lightning. DO NOT USE ON CREEPERS.",
+
   "enchantment.crystechmod.vitric_harvester": "Vitric Harvester",
 
+
+  "enchantment.crystechmod.power_strike": "Power Strike",
+  "enchantment.crystechmod.mortal_strike": "Mortal Strike",
+
+
+  "enchantment.crystechmod.efficient_cells": "Efficient Cells",
+  "enchantment.crystechmod.beam_intensity": "Beam Intensity",
+  "enchantment.crystechmod.searing_laser": "Searing Laser",
+  "enchantment.crystechmod.volatile_laser": "Volatile Laser",
+
   "enchantment.crystechmod.vitric_harvester.desc": "Prevents Tiberium Variants from Exploding when mined. Works with Fortune.",
-  "enchantment.crystechmod.lightning_striker.desc": "Smite thine enemies with righteous lightning. DO NOT USE ON CREEPERS.",
+
+  "enchantment.crystechmod.power_strike.desc": "Leverages the heft of your sword to increase Damage and Knockback.",
+  "enchantment.crystechmod.mortal_strike.desc": "Chance to instantly slay an enemy.",
+
+  "enchantment.crystechmod.efficient_cells.desc": "Chance to not consume charge when shooting.",
+  "enchantment.crystechmod.beam_intensity.desc": "Increases damage of Laser shots.",
+  "enchantment.crystechmod.searing_laser.desc": "Laser shots ignite target.",
+  "enchantment.crystechmod.volatile_laser.desc": "Laser shots explode.",
 
 
 

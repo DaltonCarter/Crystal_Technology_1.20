@@ -21,4 +21,19 @@ public class ModModelLayers {
     public static final ModelLayerLocation LASER_BEAM_LAYER = new ModelLayerLocation(
             new ResourceLocation(CrystalTech.MOD_ID, "laser_beam_layer"), "main");
 
+    public static final ModelLayerLocation IMPROVED_LASER_BEAM_LAYER = new ModelLayerLocation(
+            new ResourceLocation(CrystalTech.MOD_ID, "improved_laser_beam_layer"), "main");
+
+    public static final ModelLayerLocation ADVANCED_LASER_BEAM_LAYER = new ModelLayerLocation(
+            new ResourceLocation(CrystalTech.MOD_ID, "advancecd_laser_beam_layer"), "main");
+
+    public static final ModelLayerLocation OVERCHARGED_LASER_BEAM_LAYER = new ModelLayerLocation(
+            new ResourceLocation(CrystalTech.MOD_ID, "overcharged_laser_beam_layer"), "main");
+
+    public static final ModelLayerLocation PROTOCULTURE_LASER_BEAM_LAYER = new ModelLayerLocation(
+            new ResourceLocation(CrystalTech.MOD_ID, "protoculture_laser_beam_layer"), "main");
+
+    public static final ModelLayerLocation POISON_LASER_BEAM_LAYER = new ModelLayerLocation(
+            new ResourceLocation(CrystalTech.MOD_ID, "poison_laser_beam_layer"), "main");
+
 }

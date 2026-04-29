@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:light_blue_dye"
+    },
+    "H": {
+      "item": "crystechmod:harmonic_relay"
+    },
+    "I": {
+      "item": "crystechmod:blue_core_crystal"
+    },
+    "R": {
+      "tag": "crystechmod:core_lamp"
+    },
+    "T": {
+      "item": "crystechmod:harmonium_ingot"
+    }
+  },
+  "pattern": [
+    "THT",
+    "IRI",
+    "TDT"
+  ],
+  "result": {
+    "item": "crystechmod:light_blue_crystal_core_light"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:tiberium_purple"
+    },
+    "C": {
+      "item": "crystechmod:tiberium_red"
+    },
+    "F": {
+      "item": "crystechmod:empty_focus"
+    },
+    "L": {
+      "item": "crystechmod:improved_laser_focus"
+    },
+    "P": {
+      "item": "minecraft:spider_eye"
+    },
+    "R": {
+      "item": "crystechmod:tiberium"
+    },
+    "V": {
+      "item": "crystechmod:tiberium_blue"
+    }
+  },
+  "pattern": [
+    "RLV",
+    "PFP",
+    "CLA"
+  ],
+  "result": {
+    "item": "crystechmod:laser_focus_poison"
+  },
+  "show_notification": true
+}

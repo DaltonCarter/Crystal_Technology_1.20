@@ -136,6 +136,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ILLUMINATE_COMPONENT);
         simpleItem(ModItems.HARMONIC_RELAY);
         simpleItem(ModItems.HARMONIC_CIRCUIT);
+        simpleItem(ModItems.BASIC_CIRCUIT);
         simpleItem(ModItems.HARMONIC_FOCUS);
         simpleItem(ModItems.KRYONIC_CAPACITOR);
         simpleItem(ModItems.KRYONIC_RESERVOIR);

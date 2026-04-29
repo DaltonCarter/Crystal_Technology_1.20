@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:alythum_ingot"
+    },
+    "I": {
+      "item": "crystechmod:illumina_crystal"
+    }
+  },
+  "pattern": [
+    "AAI",
+    "AIA",
+    "IAA"
+  ],
+  "result": {
+    "count": 6,
+    "item": "crystechmod:empty_focus"
+  },
+  "show_notification": true
+}

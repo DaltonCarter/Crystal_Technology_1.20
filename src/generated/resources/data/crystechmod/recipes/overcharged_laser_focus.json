@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "crystechmod:empty_focus"
+    },
+    "L": {
+      "item": "crystechmod:improved_laser_focus"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "pattern": [
+    "RLR",
+    "LFL",
+    "RLR"
+  ],
+  "result": {
+    "item": "crystechmod:overcharged_laser_focus"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:aeries_crystal"
+    },
+    "F": {
+      "item": "crystechmod:empty_focus"
+    },
+    "I": {
+      "item": "crystechmod:illumina_crystal"
+    },
+    "L": {
+      "item": "crystechmod:laser_focus"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "pattern": [
+    "RIR",
+    "LFL",
+    "RAR"
+  ],
+  "result": {
+    "item": "crystechmod:improved_laser_focus"
+  },
+  "show_notification": true
+}

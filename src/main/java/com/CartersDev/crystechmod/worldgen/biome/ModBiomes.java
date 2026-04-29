@@ -19,6 +19,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraftforge.fml.ModList;
 
 
 public class ModBiomes {
@@ -176,10 +177,8 @@ public static void bootstrap(BootstapContext<Biome> context){
     context.register(OLD_WAR_ZONE, oldWarZone(context));
 
 
-
-
-
 }
+
 
     public static void globalOverworldGeneration(BiomeGenerationSettings.Builder builder) {
         BiomeDefaultFeatures.addDefaultCarversAndLakes(builder);

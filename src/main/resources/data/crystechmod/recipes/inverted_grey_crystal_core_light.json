@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:inverted_grey_vert_crystal_core_light"
+    }
+  ],
+  "result": {
+    "item": "crystechmod:inverted_grey_crystal_core_light"
+  }
+}

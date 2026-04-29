@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:aeries_block"
+    },
+    "E": {
+      "item": "crystechmod:enigma_crystal"
+    },
+    "F": {
+      "item": "crystechmod:empty_focus"
+    },
+    "I": {
+      "item": "crystechmod:illumina_block"
+    },
+    "L": {
+      "item": "crystechmod:improved_laser_focus"
+    }
+  },
+  "pattern": [
+    "EIE",
+    "LFL",
+    "EAE"
+  ],
+  "result": {
+    "item": "crystechmod:advanced_laser_focus"
+  },
+  "show_notification": true
+}

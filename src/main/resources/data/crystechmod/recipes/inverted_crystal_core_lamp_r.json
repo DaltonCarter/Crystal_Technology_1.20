@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:red_dye"
+    },
+    "H": {
+      "item": "crystechmod:illuminate_component"
+    },
+    "I": {
+      "item": "crystechmod:illumina_crystal"
+    },
+    "R": {
+      "item": "minecraft:redstone_lamp"
+    },
+    "T": {
+      "item": "crystechmod:tiberium"
+    }
+  },
+  "pattern": [
+    "THT",
+    "IRI",
+    "TDT"
+  ],
+  "result": {
+    "item": "crystechmod:inverted_crystal_core_lamp_r"
+  },
+  "show_notification": true
+}

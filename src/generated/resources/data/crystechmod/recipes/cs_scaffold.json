@@ -12,6 +12,7 @@
     "C C"
   ],
   "result": {
+    "count": 32,
     "item": "crystechmod:cs_scaffold"
   },
   "show_notification": true

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:aeries_crystal"
+    },
+    "F": {
+      "item": "crystechmod:empty_focus"
+    },
+    "I": {
+      "item": "crystechmod:illumina_crystal"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "RIR",
+    "AFA",
+    "RIR"
+  ],
+  "result": {
+    "item": "crystechmod:laser_focus"
+  },
+  "show_notification": true
+}

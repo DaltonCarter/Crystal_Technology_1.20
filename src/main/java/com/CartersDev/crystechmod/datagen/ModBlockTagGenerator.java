@@ -67,6 +67,20 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         Blocks.RED_SAND
                 );
 
+        this.tag(ModTags.Blocks.CORE_LAMP)
+                .add(
+                        ModBlocks.CRYSTAL_CORE_LAMP_G.get(),
+                        ModBlocks.CRYSTAL_CORE_LAMP_B.get(),
+                        ModBlocks.CRYSTAL_CORE_LAMP_R.get(),
+                        ModBlocks.CRYSTAL_CORE_LAMP_P.get(),
+                        ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_G.get(),
+                        ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_B.get(),
+                        ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_R.get(),
+                        ModBlocks.INVERTED_CRYSTAL_CORE_LAMP_P.get()
+
+
+                );
+
         this.tag(ModTags.Blocks.VULNERABLE_LEAVES)
                 .add(
                         ModBlocks.DEAD_LEAVES.get(),

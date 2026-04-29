@@ -1,8 +1,10 @@
 package com.CartersDev.crystechmod.util;
 
 import com.CartersDev.crystechmod.CrystalTech;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.*;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
@@ -41,6 +43,8 @@ public class ModTags {
         public static final TagKey<Block> MACERATING_RESULT = tag("macerating_result");
         public static final TagKey<Block> SMELTABLE = tag("smeltable");
         public static final TagKey<Block> SMELTING_RESULT = tag("smelting_result");
+
+        public static final TagKey<Block> CORE_LAMP = tag("core_lamp");
 
 
 
@@ -111,6 +115,7 @@ public class ModTags {
         public static final TagKey<Item> WOOL = tag("wool");
 
         public static final TagKey<Item> FOCUSES = tag("focuses");
+        public static final TagKey<Item> CORE_LAMP = tag("core_lamp");
 
 
 
@@ -143,6 +148,12 @@ public class ModTags {
         }
     }
 
+    public static class Entities {
+
+
+        public static final TagKey<EntityType<?>> CANNOT_EXECUTE =
+                TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation(CrystalTech.MOD_ID, "cannot_execute"));
+    }
 
 
 }

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "crystechmod:enigma_crystal"
+    },
+    "F": {
+      "item": "crystechmod:empty_focus"
+    },
+    "L": {
+      "item": "crystechmod:overcharged_laser_focus"
+    },
+    "P": {
+      "item": "crystechmod:liquid_protoculture_bucket"
+    }
+  },
+  "pattern": [
+    "ELE",
+    "PFP",
+    "ELE"
+  ],
+  "result": {
+    "item": "crystechmod:laser_focus_protoculture"
+  },
+  "show_notification": true
+}

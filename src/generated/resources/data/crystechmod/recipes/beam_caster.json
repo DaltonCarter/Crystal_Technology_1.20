@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:aeries_crystal"
+    },
+    "C": {
+      "item": "minecraft:crossbow"
+    },
+    "H": {
+      "item": "crystechmod:harmonic_circuit"
+    },
+    "I": {
+      "item": "crystechmod:proto_steel"
+    },
+    "M": {
+      "item": "crystechmod:illuminate_component"
+    }
+  },
+  "pattern": [
+    "AIH",
+    "ICM",
+    "HMI"
+  ],
+  "result": {
+    "item": "crystechmod:beam_caster"
+  },
+  "show_notification": true
+}

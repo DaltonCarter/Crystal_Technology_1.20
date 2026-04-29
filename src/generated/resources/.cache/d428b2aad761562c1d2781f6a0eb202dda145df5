@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-10T17:22:08.1797707	Item Models: crystechmod
+// 1.20.1	2026-01-11T20:19:50.4647582	Item Models: crystechmod
 7d9fe5e88433390f9cd29dab7e515bddd3fbdf4b assets/crystechmod/models/item/aboreus_crystal_slab.json
 0e376de85f99a387d23f7130ff296ce0b5fe876e assets/crystechmod/models/item/aboreus_crystal_stairs.json
 2ced509a911b88c37b68b1a1278f10fc986798c4 assets/crystechmod/models/item/aboreus_crystal_wall.json
@@ -67,6 +67,7 @@ f533b35b34b9ba1181181fb89e8c7ebcb98d8c3a assets/crystechmod/models/item/alythum_
 d44531ca847c753a781f8e5e6e3949ec096529a8 assets/crystechmod/models/item/alythum_sword.json
 d0939b371310af59bbb37635c6ab47cc160bba76 assets/crystechmod/models/item/antidote.json
 086855e18902036f239da9d62f8a6f4444cd7211 assets/crystechmod/models/item/bandages.json
+ee8cd69a730d46530ca5a19a7bef2732ac384e02 assets/crystechmod/models/item/basic_circuit.json
 b3d3aad36976d8b60445b9b1fe473e42edc8ef34 assets/crystechmod/models/item/beef_mre.json
 c023dfbd13e9a294cf164bdd66d0abe0178b39a7 assets/crystechmod/models/item/black_tibercrete_brick_slab.json
 20235ebd6263929232c814d1bf4e5a12919cb45e assets/crystechmod/models/item/black_tibercrete_brick_stairs.json

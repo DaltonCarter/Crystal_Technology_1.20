@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "crystechmod:hg_core_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    " CC",
+    " CC"
+  ],
+  "result": {
+    "count": 32,
+    "item": "crystechmod:cs_tile_hg"
+  },
+  "show_notification": true
+}

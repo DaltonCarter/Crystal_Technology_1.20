@@ -246,10 +246,11 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
 
 
 
-                        output.accept(ModItems.HARMONIC_RELAY.get());
+                        output.accept(ModItems.BASIC_CIRCUIT.get());
                         output.accept(ModItems.HARMONIC_CIRCUIT.get());
                         output.accept(ModItems.VITRIC_CIRCUIT.get());
                         output.accept(ModItems.HARMONIC_FOCUS.get());
+                        output.accept(ModItems.HARMONIC_RELAY.get());
                         output.accept(ModItems.ILLUMINATE_COMPONENT.get());
                         output.accept(ModItems.KRYONIC_CAPACITOR.get());
                         output.accept(ModItems.KRYONIC_RESERVOIR.get());
@@ -299,7 +300,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     .title(Component.translatable("creativetab.crystal_technology_equipment_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
-                        output.accept(ModItems.BEAM_CASTER.get());
+
 
                         output.accept(ModItems.PLAGUED_SWORD.get());
                         output.accept(ModItems.PLAGUED_PICKAXE.get());
@@ -341,6 +342,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModItems.MK2_CORE_STEEL_SWORD.get());
                         output.accept(ModItems.MK3_CORE_STEEL_SWORD.get());
 
+                        output.accept(ModItems.BEAM_CASTER.get());
 
                         output.accept(ModItems.HAZMAT_MK1_HELMET.get());
                         output.accept(ModItems.HAZMAT_MK1_CHESTPLATE.get());
@@ -366,8 +368,6 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModItems.ILLYRIM_CHESTPLATE.get());
                         output.accept(ModItems.ILLYRIM_LEGGINGS.get());
                         output.accept(ModItems.ILLYRIM_BOOTS.get());
-
-
 
                         output.accept(ModItems.GUNDANIUM_HORSE_ARMOR.get());
                     })

@@ -7,6 +7,7 @@ import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.entity.ModEntities;
 import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.custom.CoreCrystals.RedCoreCrystal;
+import com.CartersDev.crystechmod.item.custom.FocusItem;
 import com.CartersDev.crystechmod.item.custom.Medicine.*;
 import com.CartersDev.crystechmod.item.custom.Util.ModArmorItem;
 import com.CartersDev.crystechmod.item.custom.TiberiumDust.BlueTiberiumDust;
@@ -411,7 +412,7 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
                     new Item.Properties().durability(10000)));
 
     public static final RegistryObject<Item> BEAM_CASTER = ITEMS.register("beam_caster",
-            () -> new ThermalEnergyBow(new Item.Properties().durability(-1)));
+            () -> new ThermalEnergyBow(new Item.Properties().durability(1000)));
 
         //MK.1 Core Steel Tools:
     public static final RegistryObject<Item> MK1_CORE_STEEL_SWORD = ITEMS.register("mk1_core_steel_sword",
@@ -420,12 +421,12 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
         //MK.2 Core Steel Tools:
     public static final RegistryObject<Item> MK2_CORE_STEEL_SWORD = ITEMS.register("mk2_core_steel_sword",
-            () -> new LargeSword(ModToolTiers.MK2_CORE, 12, 0.0f,
+            () -> new LargeSword(ModToolTiers.MK2_CORE, 15, 0.0f,
                     new Item.Properties()));
 
         //MK.3 Core Steel Tools:
     public static final RegistryObject<Item> MK3_CORE_STEEL_SWORD = ITEMS.register("mk3_core_steel_sword",
-            () -> new LargeSword(ModToolTiers.MK3_CORE, 14, 0.5f,
+            () -> new LargeSword(ModToolTiers.MK3_CORE, 24, 1.0f,
                     new Item.Properties()));
 
 
@@ -437,22 +438,22 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
             () -> new Item( new Item.Properties()));
 
     public static final RegistryObject<Item> LASER_FOCUS = ITEMS.register("laser_focus",
-            () -> new Item( new Item.Properties()));
+            () -> new FocusItem(FocusTypes.BASIC, new Item.Properties().stacksTo(64)));
 
     public static final RegistryObject<Item> IMPROVED_LASER_FOCUS = ITEMS.register("improved_laser_focus",
-            () -> new Item( new Item.Properties()));
+            () -> new FocusItem(FocusTypes.IMPROVED, new Item.Properties().stacksTo(64)));
 
     public static final RegistryObject<Item> ADVANCED_LASER_FOCUS = ITEMS.register("advanced_laser_focus",
-            () -> new Item( new Item.Properties()));
+            () -> new FocusItem(FocusTypes.ADVANCED, new Item.Properties().stacksTo(64)));
 
     public static final RegistryObject<Item> OVERCHARGED_LASER_FOCUS = ITEMS.register("overcharged_laser_focus",
-            () -> new Item( new Item.Properties()));
+            () -> new FocusItem(FocusTypes.OVERCHARGED, new Item.Properties().stacksTo(64)));
 
     public static final RegistryObject<Item> LASER_FOCUS_POISON = ITEMS.register("laser_focus_poison",
-            () -> new Item( new Item.Properties()));
+            () -> new FocusItem(FocusTypes.POISON, new Item.Properties().stacksTo(64)));
 
     public static final RegistryObject<Item> LASER_FOCUS_PROTOCULTURE = ITEMS.register("laser_focus_protoculture",
-            () -> new Item( new Item.Properties()));
+            () -> new FocusItem(FocusTypes.PROTOCULTURE, new Item.Properties().stacksTo(64)));
 
 
     //End Focuses & Ammunition
@@ -604,6 +605,9 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
         () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> HARMONIC_RELAY = ITEMS.register("harmonic_relay",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> BASIC_CIRCUIT = ITEMS.register("basic_circuit",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> HARMONIC_CIRCUIT = ITEMS.register("harmonic_circuit",

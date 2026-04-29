@@ -21,7 +21,7 @@ import com.CartersDev.crystechmod.block.entity.renderer.poweredkiln.PoweredKilnB
 import com.CartersDev.crystechmod.block.entity.renderer.poweredkiln.AlythumKilnBlockEntityRenderer;
 import com.CartersDev.crystechmod.block.entity.renderer.poweredkiln.VitricKilnBlockEntityRenderer;
 import com.CartersDev.crystechmod.block.entity.renderer.poweredkiln.CrystalCoreKilnBlockEntityRenderer;
-import com.CartersDev.crystechmod.entity.client.LaserBeam.LaserBeamModel;
+import com.CartersDev.crystechmod.entity.client.LaserBeam.*;
 import com.CartersDev.crystechmod.entity.client.ModModelLayers;
 import com.CartersDev.crystechmod.entity.client.rhino.RhinoModel;
 import com.CartersDev.crystechmod.entity.client.vitricCow.VitricCowModel;
@@ -49,6 +49,11 @@ public class ModEventBusClientEvents {
         event.registerLayerDefinition(ModModelLayers.VITRIC_SHEEP_FUR_LAYER, VitricSheepFurModel::createFurLayer);
 
         event.registerLayerDefinition(ModModelLayers.LASER_BEAM_LAYER, LaserBeamModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.IMPROVED_LASER_BEAM_LAYER, ImprovedLaserBeamModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.ADVANCED_LASER_BEAM_LAYER, AdvancedLaserBeamModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.OVERCHARGED_LASER_BEAM_LAYER, OverchargedLaserBeamModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.PROTOCULTURE_LASER_BEAM_LAYER, ProtocultureLaserBeamModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.POISON_LASER_BEAM_LAYER, PoisonLaserBeamModel::createBodyLayer);
     }
 
 

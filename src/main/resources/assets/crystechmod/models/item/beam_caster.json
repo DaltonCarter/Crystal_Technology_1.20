@@ -55,7 +55,7 @@
         {
             "predicate": {
                 "charged": 1,
-                "firework": 1
+                "loaded_focus": 1
             },
             "model": "crystechmod:item/beam_caster_overcharged"
         }

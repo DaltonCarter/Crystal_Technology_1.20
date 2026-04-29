@@ -670,6 +670,23 @@ Posted By: Dalton Carter
 -Raw Qualrite macerates to powdered Qualrite that is then infused into Qualrim Compound.
 -Tweaked Recipes requiring fluids to make certain later fluids less annoying to Mass produce
 
+------------------------------------------------------------------------------
+
+04/28/2026
+Version 0.6.10
+Posted By: Dalton Carter
+
+-Beam Caster Weapon is fully functional and Implemented.
+-Laser Focuses Implemented for Beam Caster
+-Fixed Core steel Deco block recipes
+-Added Recipes for Crystal Core Lights
+-Added Recipes for Beam Caster and Focus Cells
+-Large Sword Blocking now animates correctly
+-Large Sword and Beam Caster Enchantment Categories implemented
+-Large Sword and Beam Caster Enchantments created and implemented
+-Cleaned up some Code using what I learned making the Beam caster and Focus Cells
+-Adjusted Damage on Core Steel Swords
+
 
 
 ======================================================

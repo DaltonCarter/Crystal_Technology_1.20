@@ -9,7 +9,7 @@
       "item": "crystechmod:illumina_crystal"
     },
     "R": {
-      "item": "minecraft:redstone_block"
+      "item": "crystechmod:basic_circuit"
     }
   },
   "pattern": [

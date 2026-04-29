@@ -229,5 +229,13 @@
 "translation": [4.25, -5, 0.5],
 "scale": [0.62, 0.74, 0]
 }
-}
+},
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "crystechmod:item/mk2_core_steel_sword_blocking"
+    }
+  ]
 }

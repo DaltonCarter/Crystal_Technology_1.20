@@ -26,14 +26,14 @@ public class LaserBeamModel<T extends Entity> extends EntityModel<T> {
             MeshDefinition meshdefinition = new MeshDefinition();
             PartDefinition partdefinition = meshdefinition.getRoot();
 
-            PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(0, 0).addBox(-0.5F, -9.0F, -5.0F, 1.0F, 1.0F, 10.0F, new CubeDeformation(0.0F))
-                    .texOffs(0, 0).addBox(0.5F, -8.6F, -5.0F, 0.25F, 0.25F, 10.0F, new CubeDeformation(0.0F))
-                    .texOffs(0, 0).addBox(-0.75F, -8.6F, -5.0F, 0.25F, 0.25F, 10.0F, new CubeDeformation(0.0F))
-                    .texOffs(0, 0).addBox(-0.15F, -9.25F, -5.0F, 0.25F, 0.25F, 10.0F, new CubeDeformation(0.0F))
-                    .texOffs(0, 0).addBox(-0.15F, -8.0F, -5.0F, 0.25F, 0.25F, 10.0F, new CubeDeformation(0.0F))
-                    .texOffs(0, 0).addBox(-0.25F, -8.75F, -5.5F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
-                    .texOffs(0, 0).addBox(-0.25F, -8.75F, 5.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 5.0F, 0.0F));
-
+            PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create()
+                    .texOffs(0, 10).addBox(-13.0F, -9.0F, 7.5F, 10.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+                    .texOffs(0, 11).addBox(-13.0F, -8.6F, 8.5F, 10.0F, 0.25F, 0.25F, new CubeDeformation(0.0F))
+                    .texOffs(0, 11).addBox(-13.0F, -8.6F, 7.25F, 10.0F, 0.25F, 0.25F, new CubeDeformation(0.0F))
+                    .texOffs(0, 11).addBox(-13.0F, -9.25F, 7.88F, 10.0F, 0.25F, 0.25F, new CubeDeformation(0.0F))
+                    .texOffs(0, 11).addBox(-13.0F, -8.0F, 7.88F, 10.0F, 0.25F, 0.25F, new CubeDeformation(0.0F))
+                    .texOffs(0, 2).addBox(-13.25F, -8.75F, 7.75F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
+                    .texOffs(0, 2).addBox(-3.25F, -8.75F, 7.75F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F)), PartPose.offset(8.0F, 8.0F, -8.0F));
             return LayerDefinition.create(meshdefinition, 32, 32);
         }
 

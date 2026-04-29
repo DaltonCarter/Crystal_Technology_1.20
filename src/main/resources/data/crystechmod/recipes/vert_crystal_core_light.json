@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystechmod:crystal_core_light"
+    }
+  ],
+  "result": {
+    "item": "crystechmod:vert_crystal_core_light"
+  }
+}

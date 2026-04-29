@@ -1,7 +1,8 @@
-// 1.20.1	2025-11-09T19:28:09.4112605	Tags for minecraft:block mod id crystechmod
+// 1.20.1	2026-01-20T04:26:31.5400354	Tags for minecraft:block mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/blocks/aeries_ores.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/blocks/alythum_ores.json
 6b38af71a7ebba97f729de43e6ee84033f8e45cc data/crystechmod/tags/blocks/concretes.json
+6d40b147b0fff5547267e7bfd0a496e878534cf5 data/crystechmod/tags/blocks/core_lamp.json
 1b1bb8b2e7aecfb7d82d771a540fcafffe25b6ed data/crystechmod/tags/blocks/dead_logs.json
 9e69fb63880d9644913e3c1febc7b5019ed06a98 data/crystechmod/tags/blocks/ember_oak_logs.json
 f8f3067f545a2de3c125e52b61ebeb33ac073b29 data/crystechmod/tags/blocks/enigma_ores.json
