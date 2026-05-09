@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "crystechmod:block/green_crystal_fixture_standing",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "crystechmod:block/green_crystal_fixture_wall"
+
+    },
+    "facing=north": {
+      "model": "crystechmod:block/green_crystal_fixture_wall",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "crystechmod:block/green_crystal_fixture_wall",
+      "y": 90
+    },
+    "facing=up": {
+      "model": "crystechmod:block/green_crystal_fixture_standing"
+    },
+    "facing=west": {
+      "model": "crystechmod:block/green_crystal_fixture_wall",
+      "y": 180
+    }
+  }
+}

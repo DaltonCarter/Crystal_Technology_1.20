@@ -55,7 +55,7 @@ public class TempTeleporter implements ITeleporter {
             }
 
             if (doSetBlock) {
-                destinationWorld.setBlock(destinationPos, ModBlocks.FOOLS_CRYSTAL_CORE.get().defaultBlockState(), 3);
+                destinationWorld.setBlock(destinationPos, Blocks.AIR.defaultBlockState(), 3);
             }
         }
 

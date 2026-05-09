@@ -102,6 +102,88 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
 
         //Shaped Crafting:
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PRIMITIVE_VITRIC_TRANSMITTER.get())
+                .pattern("RIR")
+                .pattern("ICI")
+                .pattern("RIR")
+                .define('C', ModItems.HARMONIC_CIRCUIT.get())
+                .define('I', ModItems.ALYTHUM_INGOT.get())
+                .define('R', ModItems.ILLUMINATE_COMPONENT.get())
+                .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_CRYSTAL_FIXTURE.get(), 4)
+                .pattern("   ")
+                .pattern("  T")
+                .pattern("  I")
+                .define('T', ModItems.TIBERIUM.get())
+                .define('I', ModItems.GUNDANIUM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_CRYSTAL_FIXTURE.get(), 4)
+                .pattern("   ")
+                .pattern("  T")
+                .pattern("  I")
+                .define('T', ModItems.TIBERIUM_BLUE.get())
+                .define('I', ModItems.GUNDANIUM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TIBERIUM_BLUE.get()), has(ModItems.TIBERIUM_BLUE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_CRYSTAL_FIXTURE.get(), 4)
+                .pattern("   ")
+                .pattern("  T")
+                .pattern("  I")
+                .define('T', ModItems.TIBERIUM_RED.get())
+                .define('I', ModItems.GUNDANIUM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TIBERIUM_RED.get()), has(ModItems.TIBERIUM_RED.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_CRYSTAL_FIXTURE.get(), 4)
+                .pattern("   ")
+                .pattern("  T")
+                .pattern("  I")
+                .define('T', ModItems.TIBERIUM_PURPLE.get())
+                .define('I', ModItems.GUNDANIUM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TIBERIUM_PURPLE.get()), has(ModItems.TIBERIUM_PURPLE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_CRYSTAL_TORCH.get(), 4)
+                .pattern("   ")
+                .pattern("  T")
+                .pattern("  S")
+                .define('T', ModItems.TIBERIUM.get())
+                .define('S', Tags.Items.RODS_WOODEN)
+                .unlockedBy(getHasName(ModItems.TIBERIUM.get()), has(ModItems.TIBERIUM.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_CRYSTAL_TORCH.get(), 4)
+                .pattern("   ")
+                .pattern("  T")
+                .pattern("  S")
+                .define('T', ModItems.TIBERIUM_BLUE.get())
+                .define('S', Tags.Items.RODS_WOODEN)
+                .unlockedBy(getHasName(ModItems.TIBERIUM_BLUE.get()), has(ModItems.TIBERIUM_BLUE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_CRYSTAL_TORCH.get(), 4)
+                .pattern("   ")
+                .pattern("  T")
+                .pattern("  S")
+                .define('T', ModItems.TIBERIUM_RED.get())
+                .define('S', Tags.Items.RODS_WOODEN)
+                .unlockedBy(getHasName(ModItems.TIBERIUM_RED.get()), has(ModItems.TIBERIUM_RED.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_CRYSTAL_TORCH.get(), 4)
+                .pattern("   ")
+                .pattern("  T")
+                .pattern("  S")
+                .define('T', ModItems.TIBERIUM_PURPLE.get())
+                .define('S', Tags.Items.RODS_WOODEN)
+                .unlockedBy(getHasName(ModItems.TIBERIUM_PURPLE.get()), has(ModItems.TIBERIUM_PURPLE.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.FOOLS_VITRICIUM.get())
                 .pattern("CGC")
                 .pattern("PCB")

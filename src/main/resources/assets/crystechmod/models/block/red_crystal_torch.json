@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_torch",
+  "textures": {
+    "torch": "crystechmod:block/red_crystal_torch"
+  }
+}

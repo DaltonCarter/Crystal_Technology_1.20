@@ -54,6 +54,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.MED_KIT);
         simpleItem(ModItems.ADV_MED_KIT);
 
+        simpleItem(ModItems.PRIMITIVE_VITRIC_TRANSMITTER);
+
         simpleItem(ModItems.EMPTY_FOCUS);
         simpleItem(ModItems.LASER_FOCUS);
         simpleItem(ModItems.IMPROVED_LASER_FOCUS);

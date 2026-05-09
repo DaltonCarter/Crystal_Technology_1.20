@@ -65,7 +65,7 @@ public class VitricPortalShape {
 	public VitricPortalShape(LevelAccessor p_77695_, BlockPos p_77696_, Direction.Axis p_77697_) {
 		this.level = p_77695_;
 		this.axis = p_77697_;
-		this.rightDir = p_77697_ == Direction.Axis.X ? Direction.WEST : Direction.SOUTH;
+		this.rightDir = p_77697_ == Direction.Axis.X ? Direction.EAST : Direction.SOUTH;
 		this.bottomLeft = this.calculateBottomLeft(p_77696_);
 		if (this.bottomLeft == null) {
 			this.bottomLeft = p_77696_;
@@ -82,6 +82,7 @@ public class VitricPortalShape {
 	@Nullable
 	private BlockPos calculateBottomLeft(BlockPos p_77734_) {
 		for (int i = Math.max(this.level.getMinBuildHeight(), p_77734_.getY() - 21); p_77734_.getY() > i && isEmpty(this.level.getBlockState(p_77734_.below())); p_77734_ = p_77734_.below()) {
+
 		}
 		Direction direction = this.rightDir.getOpposite();
 		int j = this.getDistanceUntilEdgeAboveFrame(p_77734_, direction) - 1;

@@ -6,6 +6,6 @@ import net.minecraft.world.item.Item;
 public class FocusItem extends Item {
 
     public FocusItem(FocusTypes type, Properties pProperties) {
-        super(pProperties.defaultDurability(type.getDurability()));
+        super(pProperties);
     }
 }

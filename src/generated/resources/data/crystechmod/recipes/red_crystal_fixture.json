@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "crystechmod:gundanium_ingot"
+    },
+    "T": {
+      "item": "crystechmod:tiberium_red"
+    }
+  },
+  "pattern": [
+    "   ",
+    "  T",
+    "  I"
+  ],
+  "result": {
+    "count": 4,
+    "item": "crystechmod:red_crystal_fixture"
+  },
+  "show_notification": true
+}

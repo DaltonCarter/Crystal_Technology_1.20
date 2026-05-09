@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.pattern.BlockPattern;
 
@@ -24,7 +25,7 @@ public class RedCoreCrystal extends Item {
         Level level = pContext.getLevel();
         BlockPos blockpos = pContext.getClickedPos();
         BlockState blockstate = level.getBlockState(blockpos);
-        Direction direction = pContext.getHorizontalDirection();
+
 
 
 
@@ -44,27 +45,42 @@ public class RedCoreCrystal extends Item {
                 level.updateNeighbourForOutputSignal(blockpos, ModBlocks.VITRIC_TRANSPORTER_SIDE2.get());
                 pContext.getItemInHand().shrink(1);
                 level.levelEvent(1503, blockpos, 0);
+                Direction direction = blockstate.getValue(VitricTransporterBlock.FACING).getOpposite();
 
                 BlockPattern.BlockPatternMatch blockpattern$blockpatternmatch = VitricTransporterBlock.getOrCreatePortalShape().find(level, blockpos);
                 if (blockpattern$blockpatternmatch != null) {
                     BlockPos blockpos1 = blockpattern$blockpatternmatch.getFrontTopLeft().offset(0, -1, -3);
                     BlockPos blockpos2 = blockpattern$blockpatternmatch.getFrontTopLeft().offset(0, -1, 1);
-
+                    System.out.println(blockpos2);
                     BlockPos blockpos3 = blockpattern$blockpatternmatch.getFrontTopLeft().offset(-3, -1, 0);
                     BlockPos blockpos4 = blockpattern$blockpatternmatch.getFrontTopLeft().offset(1, -1, 0);
+                    System.out.println(blockpos4);
 
                     if(direction == Direction.WEST) {
-                        for (int i = 0; i < 1; ++i) {
-                            for (int j = 0; j < 3; ++j) {
-                                level.setBlock(blockpos1.offset(i, 0, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
-                                level.setBlock(blockpos1.offset(i, -1, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
-                                level.setBlock(blockpos1.offset(i, -2, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
+                        if(level.getBlockState(blockpos.below()).is(Blocks.AIR) || level.getBlockState(blockpos.below()).is(ModBlocks.VITRIC_TRANSPORTER_SIDE1.get()) || level.getBlockState(blockpos.below()).is(ModBlocks.VITRIC_TRANSPORTER_SIDE2.get())) {
+                            for (int i = 0; i < 1; ++i) {
+                                for (int j = 0; j < 3; ++j) {
+                                    level.setBlock(blockpos1.offset(i, 0, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
+                                    level.setBlock(blockpos1.offset(i, -1, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
+                                    level.setBlock(blockpos1.offset(i, -2, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
 
+                                }
                             }
+
+                            level.globalLevelEvent(1038, blockpos1.offset(1, 0, 1), 0);
+                        }else {
+                            for (int i = 0; i < 1; ++i) {
+                                for (int j = 0; j < 3; ++j) {
+                                    level.setBlock(blockpos1.offset(i, 4, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
+                                    level.setBlock(blockpos1.offset(i, 3, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
+                                    level.setBlock(blockpos1.offset(i, 2, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
+
+                                }
+                            }
+
+                            level.globalLevelEvent(1038, blockpos1.offset(1, 0, 1), 0);
+
                         }
-
-                        level.globalLevelEvent(1038, blockpos1.offset(1, 0, 1), 0);
-
                     } else if (direction == Direction.EAST) {
                         for (int i = 0; i < 1; ++i) {
                             for (int j = 0; j < 3; ++j) {
@@ -74,18 +90,31 @@ public class RedCoreCrystal extends Item {
                             }
                         }
 
-                        level.globalLevelEvent(1038, blockpos2.offset(1, 0, 1), 0);
+                        level.globalLevelEvent(1038, blockpos2.offset(-1, 0, -1), 0);
 
                     }else if (direction == Direction.SOUTH) {
-                        for (int i = 0; i < 3; ++i) {
-                            for (int j = 0; j < 1; ++j) {
-                                level.setBlock(blockpos3.offset(i, 0, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
-                                level.setBlock(blockpos3.offset(i, -1, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
-                                level.setBlock(blockpos3.offset(i, -2, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
+                        if(level.getBlockState(blockpos.below()).is(Blocks.AIR) || level.getBlockState(blockpos.below()).is(ModBlocks.VITRIC_TRANSPORTER_SIDE1.get()) || level.getBlockState(blockpos.below()).is(ModBlocks.VITRIC_TRANSPORTER_SIDE2.get())) {
+                            for (int i = 0; i < 3; ++i) {
+                                for (int j = 0; j < 1; ++j) {
+                                    level.setBlock(blockpos3.offset(i, 0, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
+                                    level.setBlock(blockpos3.offset(i, -1, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
+                                    level.setBlock(blockpos3.offset(i, -2, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
+                                }
                             }
+
+                            level.globalLevelEvent(1038, blockpos3.offset(1, 0, 1), 0);
+                        }else {
+                            for (int i = 0; i < 3; ++i) {
+                                for (int j = 0; j < 1; ++j) {
+                                    level.setBlock(blockpos3.offset(i, 4, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
+                                    level.setBlock(blockpos3.offset(i, 3, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
+                                    level.setBlock(blockpos3.offset(i, 2, j), ModBlocks.VITRIC_PORTAL.get().defaultBlockState(), 2);
+                                }
+                            }
+
+                            level.globalLevelEvent(1038, blockpos3.offset(1, 0, 1), 0);
                         }
 
-                        level.globalLevelEvent(1038, blockpos2.offset(1, 0, 1), 0);
 
                     }else if (direction == Direction.NORTH) {
                         for (int i = 0; i < 3; ++i) {
@@ -96,7 +125,7 @@ public class RedCoreCrystal extends Item {
                             }
                         }
 
-                        level.globalLevelEvent(1038, blockpos2.offset(1, 0, 1), 0);
+                        level.globalLevelEvent(1038, blockpos4.offset(1, 0, 1), 0);
                     }
                 }
 

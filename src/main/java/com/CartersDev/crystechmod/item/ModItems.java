@@ -9,6 +9,7 @@ import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.custom.CoreCrystals.RedCoreCrystal;
 import com.CartersDev.crystechmod.item.custom.FocusItem;
 import com.CartersDev.crystechmod.item.custom.Medicine.*;
+import com.CartersDev.crystechmod.item.custom.PrimitiveTransmitterItem;
 import com.CartersDev.crystechmod.item.custom.Util.ModArmorItem;
 import com.CartersDev.crystechmod.item.custom.TiberiumDust.BlueTiberiumDust;
 import com.CartersDev.crystechmod.item.custom.TiberiumDust.PurpleTiberiumDust;
@@ -21,6 +22,7 @@ import com.CartersDev.crystechmod.item.custom.Weapons.Bows.ThermalEnergyBow;
 import com.CartersDev.crystechmod.item.custom.Weapons.LargeSword;
 import com.CartersDev.crystechmod.item.custom.Weapons.SlowingSword;
 import com.CartersDev.crystechmod.sound.ModSounds;
+import net.minecraft.core.Direction;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -628,6 +630,9 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
     public static final RegistryObject<Item> VITRIC_CIRCUIT = ITEMS.register("vitric_circuit",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> PRIMITIVE_VITRIC_TRANSMITTER = ITEMS.register("primitive_vitric_transmitter",
+            () -> new PrimitiveTransmitterItem(new Item.Properties().durability(2).setNoRepair()));
+
     public static final RegistryObject<Item> GRINDER_GEAR = ITEMS.register("grinder_gear",
             () -> new Item(new Item.Properties()));
 
@@ -703,6 +708,18 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> MARIKA_OAK_HANGING_SIGN = ITEMS.register("marika_oak_hanging_sign",
             () -> new HangingSignItem(ModBlocks.MARIKA_OAK_HANGING_SIGN.get(), ModBlocks.MARIKA_OAK_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> GREEN_CRYSTAL_TORCH = ITEMS.register("green_crystal_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.GREEN_CRYSTAL_TORCH.get(), ModBlocks.GREEN_CRYSTAL_WALL_TORCH.get(), new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> BLUE_CRYSTAL_TORCH = ITEMS.register("blue_crystal_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.BLUE_CRYSTAL_TORCH.get(), ModBlocks.BLUE_CRYSTAL_WALL_TORCH.get(), new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> RED_CRYSTAL_TORCH = ITEMS.register("red_crystal_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.RED_CRYSTAL_TORCH.get(), ModBlocks.RED_CRYSTAL_WALL_TORCH.get(), new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> PURPLE_CRYSTAL_TORCH = ITEMS.register("purple_crystal_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.PURPLE_CRYSTAL_TORCH.get(), ModBlocks.PURPLE_CRYSTAL_WALL_TORCH.get(), new Item.Properties(), Direction.DOWN));
 //End of Misc Items
 
 

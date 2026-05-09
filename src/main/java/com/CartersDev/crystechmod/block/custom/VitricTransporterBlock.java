@@ -55,7 +55,7 @@ public class VitricTransporterBlock extends Block {
 
         boolean hasCore = pState.getValue(VitricTransporterBlock.CORE);
 
-        if(pPlayer.getOffhandItem().isEmpty() && hasCore){
+        if(pPlayer.getOffhandItem().isEmpty() && hasCore ||pPlayer.getMainHandItem().isEmpty() && hasCore){
 
             pLevel.addFreshEntity(
                     new ItemEntity(
@@ -66,6 +66,7 @@ public class VitricTransporterBlock extends Block {
 
 
         }
+
 
         return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
     }

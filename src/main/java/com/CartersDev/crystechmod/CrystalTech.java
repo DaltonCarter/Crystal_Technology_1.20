@@ -59,9 +59,6 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
@@ -449,6 +446,18 @@ public class CrystalTech {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CT_TILE_STAIRS_P_3.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CT_TILE_SLAB_P_3.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CT_TILE_WALL_P_3.get(), RenderType.translucent());
+
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_CRYSTAL_TORCH.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_CRYSTAL_WALL_TORCH.get(), RenderType.cutout());
+
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_CRYSTAL_TORCH.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_CRYSTAL_WALL_TORCH.get(), RenderType.cutout());
+
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.RED_CRYSTAL_TORCH.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.RED_CRYSTAL_WALL_TORCH.get(), RenderType.cutout());
+
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.PURPLE_CRYSTAL_TORCH.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.PURPLE_CRYSTAL_WALL_TORCH.get(), RenderType.cutout());
 
 
         }

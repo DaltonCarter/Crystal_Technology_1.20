@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "crystechmod:harmonic_circuit"
+    },
+    "I": {
+      "item": "crystechmod:alythum_ingot"
+    },
+    "R": {
+      "item": "crystechmod:illuminate_component"
+    }
+  },
+  "pattern": [
+    "RIR",
+    "ICI",
+    "RIR"
+  ],
+  "result": {
+    "item": "crystechmod:primitive_vitric_transmitter"
+  },
+  "show_notification": true
+}

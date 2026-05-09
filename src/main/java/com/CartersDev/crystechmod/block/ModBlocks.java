@@ -22,12 +22,14 @@ import com.CartersDev.crystechmod.block.custom.terrainBlocks.*;
 import com.CartersDev.crystechmod.block.custom.tiberium.*;
 import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModItems;
+import com.CartersDev.crystechmod.particle.ModParticles;
 import com.CartersDev.crystechmod.sound.ModSounds;
 import com.CartersDev.crystechmod.util.ModWoodTypes;
 import com.CartersDev.crystechmod.worldgen.tree.DeadTreeGrower;
 import com.CartersDev.crystechmod.worldgen.tree.EmberTreeGrower;
 import com.CartersDev.crystechmod.worldgen.tree.MarikaTreeGrower;
 import com.CartersDev.crystechmod.worldgen.tree.PlaguedTreeGrower;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
@@ -2015,6 +2017,60 @@ public class ModBlocks {
 
 
     //Lamps, Lights, and Torch-likes:
+
+    public static final RegistryObject<Block> GREEN_CRYSTAL_TORCH = BLOCKS.register("green_crystal_torch",
+    () -> new CrystalTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).noCollission().instabreak().lightLevel(marikaglow),
+            ParticleTypes.FLAME, "green"));
+
+    public static final RegistryObject<Block> BLUE_CRYSTAL_TORCH = BLOCKS.register("blue_crystal_torch",
+            () -> new CrystalTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).noCollission().instabreak().lightLevel(marikaglow),
+                    ParticleTypes.FLAME, "blue"));
+
+    public static final RegistryObject<Block> RED_CRYSTAL_TORCH = BLOCKS.register("red_crystal_torch",
+            () -> new CrystalTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).noCollission().instabreak().lightLevel(marikaglow),
+                    ParticleTypes.FLAME, "red"));
+
+    public static final RegistryObject<Block> PURPLE_CRYSTAL_TORCH = BLOCKS.register("purple_crystal_torch",
+            () -> new CrystalTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).noCollission().instabreak().lightLevel(marikaglow),
+                    ParticleTypes.FLAME, "purple"));
+
+
+
+    public static final RegistryObject<Block> GREEN_CRYSTAL_WALL_TORCH = BLOCKS.register("green_crystal_wall_torch",
+            () -> new CrystalWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).noCollission().lootFrom(GREEN_CRYSTAL_TORCH).instabreak().lightLevel(marikaglow),
+                    ParticleTypes.FLAME, "green"));
+
+    public static final RegistryObject<Block> BLUE_CRYSTAL_WALL_TORCH = BLOCKS.register("blue_crystal_wall_torch",
+            () -> new CrystalWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).noCollission().lootFrom(BLUE_CRYSTAL_TORCH).instabreak().lightLevel(marikaglow),
+                    ParticleTypes.FLAME, "blue"));
+
+    public static final RegistryObject<Block> RED_CRYSTAL_WALL_TORCH = BLOCKS.register("red_crystal_wall_torch",
+            () -> new CrystalWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).noCollission().lootFrom(RED_CRYSTAL_TORCH).instabreak().lightLevel(marikaglow),
+                    ParticleTypes.FLAME, "red"));
+
+    public static final RegistryObject<Block> PURPLE_CRYSTAL_WALL_TORCH = BLOCKS.register("purple_crystal_wall_torch",
+            () -> new CrystalWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).noCollission().lootFrom(PURPLE_CRYSTAL_TORCH).instabreak().lightLevel(marikaglow),
+                    ParticleTypes.FLAME, "purple"));
+
+
+    public static final RegistryObject<Block> GREEN_CRYSTAL_FIXTURE = registerBlock("green_crystal_fixture",
+            () -> new CrystalFixtureBlock(BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(marikaglow),
+                     "green"));
+
+    public static final RegistryObject<Block> BLUE_CRYSTAL_FIXTURE = registerBlock("blue_crystal_fixture",
+            () -> new CrystalFixtureBlock(BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(marikaglow),
+                    "blue"));
+
+    public static final RegistryObject<Block> RED_CRYSTAL_FIXTURE = registerBlock("red_crystal_fixture",
+            () -> new CrystalFixtureBlock(BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(marikaglow),
+                    "red"));
+
+    public static final RegistryObject<Block> PURPLE_CRYSTAL_FIXTURE = registerBlock("purple_crystal_fixture",
+            () -> new CrystalFixtureBlock(BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(marikaglow),
+                    "purple"));
+
+
+
     public static final RegistryObject<Block> CRYSTAL_CORE_LAMP_G = registerBlock("crystal_core_lamp_g",
             () -> new CrystalCoreLampBlock(BlockBehaviour.Properties.of().sound(SoundType.GLASS)
                     .lightLevel(state -> state.getValue(CrystalCoreLampBlock.LIT) ? 15 : 0)

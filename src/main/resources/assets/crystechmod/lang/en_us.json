@@ -185,6 +185,8 @@
   "item.crystechmod.laser_focus_protoculture": "Protoculture Focus Cell",
   "item.crystechmod.laser_focus_poison": "Toxic Focus Cell",
 
+  "item.crystechmod.primitive_vitric_transmitter": "Portable Matter Transmitter",
+
   "item.minecraft.potion.effect.poison_resistance_potion": "Poison Resistance Potion",
   "item.minecraft.splash_potion.effect.poison_resistance_potion": "Splash Potion of Poison Resistance",
   "item.minecraft.lingering_potion.effect.poison_resistance_potion": "Lingering Potion of Poison Resistance",
@@ -999,6 +1001,21 @@
   "block.crystechmod.alythum_vitricium_refinery": "Improved Vitricium Refinery",
   "block.crystechmod.vitric_vitricium_refinery": "Advanced Vitricium Refinery",
   "block.crystechmod.crystal_core_vitricium_refinery": "Ultimate Vitricium Refinery",
+
+  "block.crystechmod.green_crystal_torch": "Riparius Torch",
+  "block.crystechmod.blue_crystal_torch": "Vinifera Torch",
+  "block.crystechmod.red_crystal_torch": "Cruentus Torch",
+  "block.crystechmod.purple_crystal_torch": "Aboreus Torch",
+
+  "block.crystechmod.green_crystal_wall_torch": "Riparius Torch",
+  "block.crystechmod.blue_crystal_wall_torch": "Vinifera Torch",
+  "block.crystechmod.red_crystal_wall_torch": "Cruentus Torch",
+  "block.crystechmod.purple_crystal_wall_torch": "Aboreus Torch",
+
+  "block.crystechmod.green_crystal_fixture": "Riparius Crystal Fixture",
+  "block.crystechmod.blue_crystal_fixture": "Vinifera Crystal Fixture",
+  "block.crystechmod.red_crystal_fixture": "Cruentus Crystal Fixture",
+  "block.crystechmod.purple_crystal_fixture": "Aboreus Crystal Fixture",
 
   "block.crystechmod.tiberium_water_block": "Infected Water",
   "block.crystechmod.liquid_protoculture_block": "Protoculture",

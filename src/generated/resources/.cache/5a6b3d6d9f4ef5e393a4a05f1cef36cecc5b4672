@@ -1,4 +1,4 @@
-// 1.20.1	2026-01-20T04:26:31.5415393	Tags for minecraft:item mod id crystechmod
+// 1.20.1	2026-05-03T01:09:24.4226616	Tags for minecraft:item mod id crystechmod
 56f7901d1a86ee02e5af718389396b62dc438a06 data/crystechmod/tags/items/aeries_ores.json
 5bf2c802f1dfc152f8d39b49486cab2ba9d7c079 data/crystechmod/tags/items/alythum_ores.json
 9e6c1b54299e9316a36c8543bd636a40c390231c data/crystechmod/tags/items/bread.json
@@ -42,6 +42,7 @@ fbe02114295808e08a661c7e8f4975306dba35d7 data/crystechmod/tags/items/veggies.jso
 5ce1bb1d496e96b02294375e57978c42fb1c986f data/forge/tags/items/ores.json
 b759f5fd340e754f6a7a35b3b46d2ba136c2fcc1 data/forge/tags/items/raw_materials.json
 1f682baa5bdc283d63c6bd780f9bc6d87b5d8b8b data/forge/tags/items/rods.json
+1f682baa5bdc283d63c6bd780f9bc6d87b5d8b8b data/forge/tags/items/rods/wooden.json
 44865f8b448996e9e30460a29e6ee31ba2683205 data/minecraft/tags/items/creeper_drop_music_discs.json
 e0721fc7760819c2882cc2896aeb4f60de8a8dad data/minecraft/tags/items/logs_that_burn.json
 44865f8b448996e9e30460a29e6ee31ba2683205 data/minecraft/tags/items/music_discs.json

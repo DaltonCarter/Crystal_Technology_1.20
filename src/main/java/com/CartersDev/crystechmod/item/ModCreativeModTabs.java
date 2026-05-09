@@ -244,7 +244,15 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     .title(Component.translatable("creativetab.crystal_technology_tech_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
+                        output.accept(ModBlocks.GREEN_CRYSTAL_TORCH.get());
+                        output.accept(ModBlocks.BLUE_CRYSTAL_TORCH.get());
+                        output.accept(ModBlocks.RED_CRYSTAL_TORCH.get());
+                        output.accept(ModBlocks.PURPLE_CRYSTAL_TORCH.get());
 
+                        output.accept(ModBlocks.GREEN_CRYSTAL_FIXTURE.get());
+                        output.accept(ModBlocks.BLUE_CRYSTAL_FIXTURE.get());
+                        output.accept(ModBlocks.RED_CRYSTAL_FIXTURE.get());
+                        output.accept(ModBlocks.PURPLE_CRYSTAL_FIXTURE.get());
 
                         output.accept(ModItems.BASIC_CIRCUIT.get());
                         output.accept(ModItems.HARMONIC_CIRCUIT.get());
@@ -254,6 +262,8 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModItems.ILLUMINATE_COMPONENT.get());
                         output.accept(ModItems.KRYONIC_CAPACITOR.get());
                         output.accept(ModItems.KRYONIC_RESERVOIR.get());
+
+                        output.accept(ModItems.PRIMITIVE_VITRIC_TRANSMITTER.get());
 
                         output.accept(ModBlocks.GUNDANIUM_MACHINE_CORE.get());
                         output.accept(ModBlocks.ALYTHUM_MACHINE_CORE.get());

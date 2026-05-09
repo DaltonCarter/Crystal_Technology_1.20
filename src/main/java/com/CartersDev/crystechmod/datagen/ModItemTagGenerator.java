@@ -138,6 +138,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.PLAGUED_STICK.get()
                 );
 
+        this.tag(Tags.Items.RODS_WOODEN)
+                .add(
+                        ModItems.PLAGUED_STICK.get()
+                );
+
 
         this.tag(Tags.Items.DUSTS)
                 .add(

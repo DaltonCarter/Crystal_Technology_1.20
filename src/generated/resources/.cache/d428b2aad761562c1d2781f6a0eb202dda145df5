@@ -1,4 +1,4 @@
-// 1.20.1	2026-01-11T20:19:50.4647582	Item Models: crystechmod
+// 1.20.1	2026-05-08T16:32:56.5878004	Item Models: crystechmod
 7d9fe5e88433390f9cd29dab7e515bddd3fbdf4b assets/crystechmod/models/item/aboreus_crystal_slab.json
 0e376de85f99a387d23f7130ff296ce0b5fe876e assets/crystechmod/models/item/aboreus_crystal_stairs.json
 2ced509a911b88c37b68b1a1278f10fc986798c4 assets/crystechmod/models/item/aboreus_crystal_wall.json
@@ -629,6 +629,7 @@ fdffaea39aa50b146da30cc703bf5d375156bf0b assets/crystechmod/models/item/polished
 a6299bf14c31829f43f7416201a0edf638a082ce assets/crystechmod/models/item/polished_iron_wall.json
 2ed0fbb21ee3108928058cea685333c7b0ec10f7 assets/crystechmod/models/item/pork_mre.json
 c4c008d5a26aa3e421b81f08df12bab581fb01bd assets/crystechmod/models/item/powdered_qualrite.json
+73729f60ba6cde8988cc2397836d44b12e1168d8 assets/crystechmod/models/item/primitive_vitric_transmitter.json
 e1a434a094278f4f2e4dcf1bb4769e2be1be83dc assets/crystechmod/models/item/proto_steel.json
 c93fec7feae9c2c9a240beba16a354c1dbe3036c assets/crystechmod/models/item/proto_steel_slab.json
 fb83db9bec6b4fe0e9078df1c0bc253d88e63bab assets/crystechmod/models/item/proto_steel_stairs.json

@@ -282,7 +282,7 @@ Posted By: Dalton Carter
 Version 0.4.5
 Posted By: Dalton Carter
 
--Added Custom ALL custom Music intended for the Mod*
+-Added ALL custom Music intended for the Mod*
 -Divided Items and blocks into multiple creatives tabs for the sake of organization and ease of access
 
 *Note: While Tracks from Twisted insurrection is available for Free, I do not have Distribution permission, also
@@ -575,7 +575,7 @@ Posted By: Dalton Carter
 -Added handling for Processing Occultism Iesnium with Mod Machines
 -Added handling for Processing Create Zinc with Mod Machines including making Zinc Dust item.
 -Added handling for Processing Thermal Foundation & Series with Mod Machines.
--Added handling for SOME Processing EnderIO with Mod Machines.
+-Added handling for Processing  SOME of EnderIO with Mod Machines.
 
 ------------------------------------------------------------------------------
 
@@ -663,7 +663,7 @@ Posted By: Dalton Carter
 
 -Beam Caster Weapon is minimally functional. Still considered W.I.P
 -Fixed Texture error on the Vitric Refinery.
--Added New Alloy Kil Recipes
+-Added New Alloy Kiln Recipes
 -Added new Furnace Recipes
 -Tweaked Tags. Alloy input and Results tag no longer in Data-Gen
 -Added Powdered Qualrite so that player can Multiply Raw Qualrite finds.
@@ -686,6 +686,18 @@ Posted By: Dalton Carter
 -Large Sword and Beam Caster Enchantments created and implemented
 -Cleaned up some Code using what I learned making the Beam caster and Focus Cells
 -Adjusted Damage on Core Steel Swords
+
+------------------------------------------------------------------------------
+
+04/30/2026 - 05/08/2026
+Version 0.6.11
+Posted By: Dalton Carter
+
+-Fixed 2 bugs with the Matter Transmitter Portal, remaining bug is due to Minecrafts inherent S/E bug and I currently do not know how to fix it.
+-Added Crystal Torches /w Recipes
+-Added Crystal Fixtures /w Recipes
+-Added Primitive Vitric Transmitter for early limited access to the Vitric Expanse *called Portable Matter Transmitter in game* /w Recipe
+
 
 
 
