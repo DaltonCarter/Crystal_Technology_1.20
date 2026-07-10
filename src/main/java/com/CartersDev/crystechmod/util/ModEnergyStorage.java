@@ -1,6 +1,8 @@
 package com.CartersDev.crystechmod.util;
 
 
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.energy.EnergyStorage;
 
 public abstract class ModEnergyStorage extends EnergyStorage {
@@ -27,6 +29,18 @@ public abstract class ModEnergyStorage extends EnergyStorage {
 
         return receiveEnergy;
     }
+
+
+    public void modify(int amount) {
+
+        energy += amount;
+        if (energy > capacity) {
+            energy = capacity;
+        } else if (energy < 0) {
+            energy = 0;
+        }
+    }
+
 
     public int setEnergy(int energy) {
         this.energy = energy;

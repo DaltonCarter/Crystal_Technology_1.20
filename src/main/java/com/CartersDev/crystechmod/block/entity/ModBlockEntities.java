@@ -21,6 +21,7 @@ import com.CartersDev.crystechmod.block.entity.poweredkiln.AlythumKilnBlockEntit
 import com.CartersDev.crystechmod.block.entity.poweredkiln.CrystalCoreKilnBlockEntity;
 import com.CartersDev.crystechmod.block.entity.poweredkiln.PoweredKilnBlockEntity;
 import com.CartersDev.crystechmod.block.entity.poweredkiln.VitricKilnBlockEntity;
+import com.CartersDev.crystechmod.block.entity.powermatricies.VitriciumMatrixEntity;
 import com.CartersDev.crystechmod.block.entity.refinery.AlythumVitriciumRefineryBlockEntity;
 import com.CartersDev.crystechmod.block.entity.refinery.CrystalCoreVitriciumRefineryBlockEntity;
 import com.CartersDev.crystechmod.block.entity.refinery.VitricVitriciumRefineryBlockEntity;
@@ -129,11 +130,16 @@ public static final RegistryObject<BlockEntityType<TiberiumGrinderBlockEntity>> 
             BLOCK_ENTITIES.register("crystal_core_vitricium_refinery_be", () -> BlockEntityType.Builder.of(
                     CrystalCoreVitriciumRefineryBlockEntity::new, ModBlocks.CRYSTAL_CORE_VITRICIUM_REFINERY.get()).build(null));
 
+
+
     public static final RegistryObject<BlockEntityType<VitricPortalBlockEntity>> VITRIC_PORTAL_BE =
             BLOCK_ENTITIES.register("vitric_portal_be", () -> BlockEntityType.Builder.of(
                     VitricPortalBlockEntity::new, ModBlocks.VITRIC_PORTAL.get()).build(null));
 
 
+    public static final RegistryObject<BlockEntityType<VitriciumMatrixEntity>> VITRICIUM_MATRIX_BE =
+            BLOCK_ENTITIES.register("vitricium_matrix_be", () -> BlockEntityType.Builder.of(
+                    VitriciumMatrixEntity::new, ModBlocks.VITRICIUM_MATRIX.get()).build(null));
 
 
     public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> MOD_SIGN =

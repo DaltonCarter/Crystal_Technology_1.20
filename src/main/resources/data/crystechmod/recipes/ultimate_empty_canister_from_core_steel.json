@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "crystechmod:lg_core_ingot"
+    },
+    "K": {
+      "item": "crystechmod:crystal_core_reservoir"
+    },
+    "R": {
+      "item": "crystechmod:crystal_core_component"
+    }
+  },
+  "pattern": [
+    "IRI",
+    "I I",
+    "IKI"
+  ],
+  "result": {
+    "count": 64,
+    "item": "crystechmod:ultimate_empty_canister"
+  },
+  "show_notification": true
+}

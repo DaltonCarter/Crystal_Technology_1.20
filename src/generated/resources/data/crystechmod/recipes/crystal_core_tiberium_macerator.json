@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:illyrim_grinder_gear"
+    },
+    "B": {
+      "item": "crystechmod:crystal_core_control_circuit"
+    },
+    "C": {
+      "item": "crystechmod:crystal_core_circuit"
+    },
+    "D": {
+      "item": "crystechmod:crystal_core_component"
+    },
+    "I": {
+      "item": "crystechmod:vitric_tiberium_macerator"
+    },
+    "M": {
+      "item": "crystechmod:vitric_machine_core"
+    },
+    "Q": {
+      "item": "crystechmod:lg_core_ingot"
+    }
+  },
+  "pattern": [
+    "AIA",
+    "DMB",
+    "QCQ"
+  ],
+  "result": {
+    "item": "crystechmod:crystal_core_tiberium_macerator"
+  },
+  "show_notification": true
+}

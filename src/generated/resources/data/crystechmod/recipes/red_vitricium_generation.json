@@ -1,0 +1,7 @@
+{
+  "type": "crystechmod:vitricium_power_generation",
+  "craftTime": 100,
+  "energyAmount": 200000,
+  "fluidAmount": 1000,
+  "fluidType": "crystechmod:molten_red_tiberium_source"
+}

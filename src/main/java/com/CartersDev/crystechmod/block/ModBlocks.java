@@ -3052,7 +3052,18 @@ public class ModBlocks {
                     .noCollission().destroyTime(-1.0F).instabreak().lightLevel(marikaglow)));
 
 
+    public static final RegistryObject<Block> COAL_MATRIX = registerBlock("coal_matrix",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
+    public static final RegistryObject<Block> VITRICIUM_MATRIX = registerBlock("vitricium_matrix",
+            () -> new VitriciumMatrixBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(VitriciumRefineryBlock.WORKING) ? 15 : 0)));
+
+    public static final RegistryObject<Block> PROTOCULTURE_MATRIX = registerBlock("protoculture_matrix",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> CRYSTAL_CORE_MATRIX = registerBlock("crystal_core_matrix",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
         //Signs:
 

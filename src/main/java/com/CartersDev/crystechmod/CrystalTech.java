@@ -42,6 +42,7 @@ import com.CartersDev.crystechmod.screen.poweredKilnScreen.AlythumKilnScreen;
 import com.CartersDev.crystechmod.screen.poweredKilnScreen.CrystalCoreKilnScreen;
 import com.CartersDev.crystechmod.screen.poweredKilnScreen.PoweredKilnScreen;
 import com.CartersDev.crystechmod.screen.poweredKilnScreen.VitricKilnScreen;
+import com.CartersDev.crystechmod.screen.vitriciumMatrixScreen.VitriciumMatrixScreen;
 import com.CartersDev.crystechmod.screen.vitriciumRefineryScreen.AlythumVitriciumRefineryScreen;
 import com.CartersDev.crystechmod.screen.vitriciumRefineryScreen.CrystalCoreVitriciumRefineryScreen;
 import com.CartersDev.crystechmod.screen.vitriciumRefineryScreen.VitricVitriciumRefineryScreen;
@@ -266,6 +267,8 @@ public class CrystalTech {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.LAI_MELON_STEM.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ATTACHED_LAI_MELON_STEM.get(), RenderType.cutout());
 
+            MenuScreens.register(ModMenuTypes.VITRICIUM_MATRIX_MENU.get(), VitriciumMatrixScreen::new);
+
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEST_BLOCK.get(), RenderType.translucent());
 
             //End of Tiberium
@@ -446,6 +449,14 @@ public class CrystalTech {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CT_TILE_STAIRS_P_3.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CT_TILE_SLAB_P_3.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CT_TILE_WALL_P_3.get(), RenderType.translucent());
+
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.PROTOCULTURE_MATRIX.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRYSTAL_CORE_MATRIX.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TIBERIUM_INFUSER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ALYTHUM_TIBERIUM_INFUSER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.VITRIC_TIBERIUM_INFUSER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRYSTAL_CORE_TIBERIUM_INFUSER.get(), RenderType.translucent());
+
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_CRYSTAL_TORCH.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_CRYSTAL_WALL_TORCH.get(), RenderType.cutout());

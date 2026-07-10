@@ -456,8 +456,6 @@ private final FluidTank OUTPUT_FLUID_TANK = createOutputFluidTank();
         outputFluidStack = recipe.get().getOutputFluidStack();
 
 
-        ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
-
         return canInsertAmountIntoOutputSlot()
                 && canInsertItemIntoOutputSlot(outputFluidStack) &&
                 hasEnoughEnergyToCraft() && isCorrectRecipeFluid() && hasEnoughFluidToCraft();

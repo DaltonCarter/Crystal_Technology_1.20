@@ -29,6 +29,9 @@ public static final RegistryObject<RecipeSerializer<TiberiumGrinderRecipe>> TIBE
     public static final RegistryObject<RecipeSerializer<VitriciumRefineryRecipe>> VITRICIUM_REFINERY_SERIALIZER =
             SERIALIZERS.register("vitric_refining", () -> VitriciumRefineryRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<VitriciumMatrixRecipe>> VITRICIUM_MATRIX_SERIALIZER =
+            SERIALIZERS.register("vitricium_power_generation", () -> VitriciumMatrixRecipe.Serializer.INSTANCE);
+
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

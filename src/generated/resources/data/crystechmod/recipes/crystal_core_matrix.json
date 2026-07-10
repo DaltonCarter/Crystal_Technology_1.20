@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:protoculture_matrix"
+    },
+    "B": {
+      "item": "crystechmod:crystal_core_circuit"
+    },
+    "C": {
+      "item": "crystechmod:crystal_core_master_circuit"
+    },
+    "I": {
+      "item": "crystechmod:hg_core_ingot"
+    },
+    "K": {
+      "item": "crystechmod:crystal_core_component"
+    },
+    "L": {
+      "item": "crystechmod:crystal_core_control_circuit"
+    },
+    "M": {
+      "item": "crystechmod:crystal_core_machine_core"
+    },
+    "T": {
+      "item": "crystechmod:crystal_core_capacitor"
+    }
+  },
+  "pattern": [
+    "IAI",
+    "KMT",
+    "BCL"
+  ],
+  "result": {
+    "item": "crystechmod:crystal_core_matrix"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:tiberium_blue"
+    },
+    "G": {
+      "item": "crystechmod:tiberium"
+    },
+    "H": {
+      "item": "crystechmod:illuminate_component"
+    },
+    "K": {
+      "item": "crystechmod:kryonic_capacitor"
+    },
+    "P": {
+      "item": "crystechmod:tiberium_purple"
+    },
+    "R": {
+      "item": "crystechmod:tiberium_red"
+    }
+  },
+  "pattern": [
+    "GHB",
+    "HKH",
+    "RHP"
+  ],
+  "result": {
+    "item": "crystechmod:vitric_capacitor"
+  },
+  "show_notification": true
+}

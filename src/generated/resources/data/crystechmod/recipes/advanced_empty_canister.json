@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "K": {
+      "item": "crystechmod:vitric_reservoir"
+    },
+    "R": {
+      "item": "crystechmod:illuminate_component"
+    }
+  },
+  "pattern": [
+    "IRI",
+    "I I",
+    "IKI"
+  ],
+  "result": {
+    "count": 2,
+    "item": "crystechmod:advanced_empty_canister"
+  },
+  "show_notification": true
+}

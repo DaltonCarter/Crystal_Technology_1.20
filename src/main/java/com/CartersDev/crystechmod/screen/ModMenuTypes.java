@@ -18,6 +18,7 @@ import com.CartersDev.crystechmod.screen.poweredKilnMenu.AlythumKilnMenu;
 import com.CartersDev.crystechmod.screen.poweredKilnMenu.CrystalCoreKilnMenu;
 import com.CartersDev.crystechmod.screen.poweredKilnMenu.PoweredKilnMenu;
 import com.CartersDev.crystechmod.screen.poweredKilnMenu.VitricKilnMenu;
+import com.CartersDev.crystechmod.screen.vitriciumMatrixMenu.VitriciumMatrixMenu;
 import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.AlythumVitriciumRefineryMenu;
 import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.CrystalCoreVitriciumRefineryMenu;
 import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.VitricVitriciumRefineryMenu;
@@ -105,6 +106,9 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<CrystalCoreVitriciumRefineryMenu>> CRYSTAL_CORE_VITRICIUM_REFINERY_MENU =
             registerMenuType("crystal_core_vitricium_refinery_menu", CrystalCoreVitriciumRefineryMenu::new);
 
+
+    public static final RegistryObject<MenuType<VitriciumMatrixMenu>> VITRICIUM_MATRIX_MENU =
+            registerMenuType("vitricium_matrix_menu", VitriciumMatrixMenu::new);
 
 
 private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {

@@ -34,6 +34,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.FOOLS_CRYSTAL_CORE);
         blockWithItem(ModBlocks.VITRIC_PORTAL);
 
+
         //Basic Block States:
         blockWithItem(ModBlocks.GUNDANIUM_BLOCK);
         blockWithItem(ModBlocks.PROTO_STEEL_BLOCK);
@@ -963,6 +964,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // Machines and other Block Entities:
 //        simpleBlockWithItem(ModBlocks.VITRIC_TRANSPORTER.get(),
 //                new ModelFile.UncheckedModelFile(modLoc("block/vitric_transporter")));
+
 
 
         //Lights, Lamps, and Torch-Likes:

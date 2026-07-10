@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "crystechmod:lg_core_ingot"
+    },
+    "K": {
+      "item": "crystechmod:kryonic_reservoir"
+    },
+    "R": {
+      "item": "crystechmod:harmonic_relay"
+    }
+  },
+  "pattern": [
+    "IRI",
+    "I I",
+    "IKI"
+  ],
+  "result": {
+    "count": 64,
+    "item": "crystechmod:improved_empty_canister"
+  },
+  "show_notification": true
+}

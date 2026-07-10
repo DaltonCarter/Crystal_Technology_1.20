@@ -1,0 +1,155 @@
+{
+  "variants": {
+
+    "facing=east,fuel=caeruleum,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_caeruleum",
+      "y": 90
+    },
+    "facing=east,fuel=caeruleum,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_caeruleum_on",
+      "y": 90
+    },
+    "facing=east,fuel=empty,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix",
+      "y": 90
+    },
+    "facing=east,fuel=empty,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_on",
+      "y": 90
+    },
+    "facing=east,fuel=sanguineum,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_sanguineum",
+      "y": 90
+    },
+    "facing=east,fuel=sanguineum,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_sanguineum_on",
+      "y": 90
+    },
+    "facing=east,fuel=violaceum,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_violaceum",
+      "y": 90
+    },
+    "facing=east,fuel=violaceum,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_violaceum_on",
+      "y": 90
+    },
+    "facing=east,fuel=viride,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_viride",
+      "y": 90
+    },
+    "facing=east,fuel=viride,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_viride_on",
+      "y": 90
+    },
+    "facing=north,fuel=caeruleum,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_caeruleum"
+    },
+    "facing=north,fuel=caeruleum,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_caeruleum_on"
+    },
+    "facing=north,fuel=empty,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix"
+    },
+    "facing=north,fuel=empty,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_on"
+    },
+    "facing=north,fuel=sanguineum,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_sanguineum"
+    },
+    "facing=north,fuel=sanguineum,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_sanguineum_on"
+    },
+    "facing=north,fuel=violaceum,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_violaceum"
+    },
+    "facing=north,fuel=violaceum,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_violaceum_on"
+    },
+    "facing=north,fuel=viride,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_viride"
+    },
+    "facing=north,fuel=viride,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_viride_on"
+    },
+    "facing=south,fuel=caeruleum,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_caeruleum",
+      "y": 180
+    },
+    "facing=south,fuel=caeruleum,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_caeruleum_on",
+      "y": 180
+    },
+    "facing=south,fuel=empty,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix",
+      "y": 180
+    },
+    "facing=south,fuel=empty,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_on",
+      "y": 180
+    },
+    "facing=south,fuel=sanguineum,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_sanguineum",
+      "y": 180
+    },
+    "facing=south,fuel=sanguineum,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_sanguineum_on",
+      "y": 180
+    },
+    "facing=south,fuel=violaceum,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_violaceum",
+      "y": 180
+    },
+    "facing=south,fuel=violaceum,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_violaceum_on",
+      "y": 180
+    },
+    "facing=south,fuel=viride,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_viride",
+      "y": 180
+    },
+    "facing=south,fuel=viride,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_viride_on",
+      "y": 180
+    },
+    "facing=west,fuel=caeruleum,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_caeruleum",
+      "y": 270
+    },
+    "facing=west,fuel=caeruleum,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_caeruleum_on",
+      "y": 270
+    },
+    "facing=west,fuel=empty,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix",
+      "y": 270
+    },
+    "facing=west,fuel=empty,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_on",
+      "y": 270
+    },
+    "facing=west,fuel=sanguineum,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_sanguineum",
+      "y": 270
+    },
+    "facing=west,fuel=sanguineum,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_sanguineum_on",
+      "y": 270
+    },
+    "facing=west,fuel=violaceum,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_violaceum",
+      "y": 270
+    },
+    "facing=west,fuel=violaceum,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_violaceum_on",
+      "y": 270
+    },
+    "facing=west,fuel=viride,machine_core_lvl=3,working=false": {
+      "model": "crystechmod:block/vitricium_matrix_viride",
+      "y": 270
+    },
+    "facing=west,fuel=viride,machine_core_lvl=3,working=true": {
+      "model": "crystechmod:block/vitricium_matrix_viride_on",
+      "y": 270
+    }
+  }
+}

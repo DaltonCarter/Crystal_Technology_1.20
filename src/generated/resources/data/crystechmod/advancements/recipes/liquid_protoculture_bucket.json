@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_flower_of_life": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crystechmod:flower_of_life"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystechmod:liquid_protoculture_bucket"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_flower_of_life",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystechmod:liquid_protoculture_bucket"
+    ]
+  },
+  "sends_telemetry_event": true
+}

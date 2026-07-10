@@ -77,6 +77,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.VITRIC_VITRICIUM_REFINERY.get());
         this.dropSelf(ModBlocks.CRYSTAL_CORE_VITRICIUM_REFINERY.get());
 
+        this.dropSelf(ModBlocks.COAL_MATRIX.get());
+        this.dropSelf(ModBlocks.VITRICIUM_MATRIX.get());
+        this.dropSelf(ModBlocks.PROTOCULTURE_MATRIX.get());
+        this.dropSelf(ModBlocks.CRYSTAL_CORE_MATRIX.get());
+
         this.dropSelf(ModBlocks.ALLOY_KILN.get());
         this.dropSelf(ModBlocks.ALYTHUM_ALLOY_KILN.get());
         this.dropSelf(ModBlocks.VITRIC_ALLOY_KILN.get());

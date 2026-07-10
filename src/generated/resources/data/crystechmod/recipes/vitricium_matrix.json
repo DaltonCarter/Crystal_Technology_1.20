@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:coal_matrix"
+    },
+    "C": {
+      "item": "crystechmod:harmonic_circuit"
+    },
+    "I": {
+      "item": "crystechmod:alythum_ingot"
+    },
+    "K": {
+      "item": "crystechmod:illuminate_component"
+    },
+    "M": {
+      "item": "crystechmod:alythum_machine_core"
+    },
+    "T": {
+      "item": "crystechmod:kryonic_capacitor"
+    }
+  },
+  "pattern": [
+    "IAI",
+    "TMT",
+    "KCK"
+  ],
+  "result": {
+    "item": "crystechmod:vitricium_matrix"
+  },
+  "show_notification": true
+}

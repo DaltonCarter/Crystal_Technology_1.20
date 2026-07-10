@@ -3,22 +3,22 @@
   "category": "misc",
   "key": {
     "B": {
-      "item": "crystechmod:tiberium_blue_block"
+      "item": "crystechmod:tiberium_blue"
     },
     "C": {
       "item": "crystechmod:tiberium_composite_ingot"
     },
     "P": {
-      "item": "crystechmod:tiberium_purple_block"
+      "item": "crystechmod:tiberium_purple"
     },
     "R": {
-      "item": "crystechmod:tiberium_red_block"
+      "item": "crystechmod:tiberium_red"
     },
     "S": {
       "item": "crystechmod:harmonic_circuit"
     },
     "T": {
-      "item": "crystechmod:tiberium_block"
+      "item": "crystechmod:tiberium"
     }
   },
   "pattern": [

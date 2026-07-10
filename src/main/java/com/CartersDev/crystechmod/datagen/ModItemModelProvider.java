@@ -64,6 +64,38 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.LASER_FOCUS_PROTOCULTURE);
         simpleItem(ModItems.LASER_FOCUS_POISON);
 
+        simpleItem(ModItems.EMPTY_CANISTER);
+        simpleItem(ModItems.LAVA_CANISTER);
+        simpleItem(ModItems.VIRIDE_VITRICIUM_CANISTER);
+        simpleItem(ModItems.CAERULEUM_VITRICIUM_CANISTER);
+        simpleItem(ModItems.SANGUINEUM_VITRICIUM_CANISTER);
+        simpleItem(ModItems.VIOLACEUM_VITRICIUM_CANISTER);
+        simpleItem(ModItems.PROTOCULTURE_CANISTER);
+
+        simpleItem(ModItems.IMPROVED_EMPTY_CANISTER);
+        simpleItem(ModItems.IMPROVED_LAVA_CANISTER);
+        simpleItem(ModItems.IMPROVED_VIRIDE_VITRICIUM_CANISTER);
+        simpleItem(ModItems.IMPROVED_CAERULEUM_VITRICIUM_CANISTER);
+        simpleItem(ModItems.IMPROVED_SANGUINEUM_VITRICIUM_CANISTER);
+        simpleItem(ModItems.IMPROVED_VIOLACEUM_VITRICIUM_CANISTER);
+        simpleItem(ModItems.IMPROVED_PROTOCULTURE_CANISTER);
+
+        simpleItem(ModItems.ADVANCED_EMPTY_CANISTER);
+        simpleItem(ModItems.ADVANCED_LAVA_CANISTER);
+        simpleItem(ModItems.ADVANCED_VIRIDE_VITRICIUM_CANISTER);
+        simpleItem(ModItems.ADVANCED_CAERULEUM_VITRICIUM_CANISTER);
+        simpleItem(ModItems.ADVANCED_SANGUINEUM_VITRICIUM_CANISTER);
+        simpleItem(ModItems.ADVANCED_VIOLACEUM_VITRICIUM_CANISTER);
+        simpleItem(ModItems.ADVANCED_PROTOCULTURE_CANISTER);
+
+        simpleItem(ModItems.ULTIMATE_EMPTY_CANISTER);
+        simpleItem(ModItems.ULTIMATE_LAVA_CANISTER);
+        simpleItem(ModItems.ULTIMATE_VIRIDE_VITRICIUM_CANISTER);
+        simpleItem(ModItems.ULTIMATE_CAERULEUM_VITRICIUM_CANISTER);
+        simpleItem(ModItems.ULTIMATE_SANGUINEUM_VITRICIUM_CANISTER);
+        simpleItem(ModItems.ULTIMATE_VIOLACEUM_VITRICIUM_CANISTER);
+        simpleItem(ModItems.ULTIMATE_PROTOCULTURE_CANISTER);
+
         simpleItem(ModItems.CHICKEN_MRE);
         simpleItem(ModItems.BEEF_MRE);
         simpleItem(ModItems.PORK_MRE);
@@ -136,6 +168,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.PLAGUED_STICK);
         simpleItem(ModItems.FIRESTONE);
         simpleItem(ModItems.ILLUMINATE_COMPONENT);
+        simpleItem(ModItems.CRYSTAL_CORE_COMPONENT);
         simpleItem(ModItems.HARMONIC_RELAY);
         simpleItem(ModItems.HARMONIC_CIRCUIT);
         simpleItem(ModItems.BASIC_CIRCUIT);
@@ -143,6 +176,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.KRYONIC_CAPACITOR);
         simpleItem(ModItems.KRYONIC_RESERVOIR);
         simpleItem(ModItems.VITRIC_CIRCUIT);
+        simpleItem(ModItems.CRYSTAL_CORE_CIRCUIT);
+        simpleItem(ModItems.CRYSTAL_CORE_CONTROL_CIRCUIT);
+        simpleItem(ModItems.CRYSTAL_CORE_MASTER_CIRCUIT);
+        simpleItem(ModItems.VITRIC_CAPACITOR);
+        simpleItem(ModItems.VITRIC_RESERVOIR);
+        simpleItem(ModItems.CRYSTAL_CORE_CAPACITOR);
+        simpleItem(ModItems.CRYSTAL_CORE_RESERVOIR);
+
 
         simpleItem(ModItems.TIBERIUM_FRUIT);
         simpleItem(ModItems.HEIM_BERRY);

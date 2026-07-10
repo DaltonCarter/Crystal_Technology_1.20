@@ -395,8 +395,8 @@ private final FluidTank FLUID_TANK = createFluidTank();
         if (recipe.isEmpty()){
             return false;
         }
-        maxProgress = recipe.get().getCraftTime();
 
+        maxProgress = recipe.get().getCraftTime();
         energyAmount = recipe.get().getEnergyAmount();
         neededFluidStack = recipe.get().getFluidStack();
 
@@ -404,18 +404,11 @@ private final FluidTank FLUID_TANK = createFluidTank();
         ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
 
         return canInsertAmountIntoOutputSlot(resultItem.getCount())
-                && canInsertItemIntoOutputSlot(resultItem.getItem()) &&
-                hasEnoughEnergyToCraft() && isCorrectRecipeFluid() && hasEnoughFluidToCraft();
+                && canInsertItemIntoOutputSlot(resultItem.getItem())
+                && hasEnoughEnergyToCraft()
+                && hasEnoughFluidToCraft();
     }
 
-    private boolean isCorrectRecipeFluid(){
-        FluidStack fluidStack = FLUID_TANK.getFluid();
-        Optional<TiberiumInfuserRecipe> recipe = getCurrentRecipe();
-        FluidStack requiredFluid = recipe.get().getFluidStack();
-
-        return fluidStack.containsFluid(requiredFluid);
-
-    }
 
     private boolean hasEnoughFluidToCraft() {
         return this.FLUID_TANK.getFluidAmount() >= neededFluidStack.getAmount();
@@ -431,7 +424,15 @@ private final FluidTank FLUID_TANK = createFluidTank();
             inventory.setItem(i, this.itemHandler.getStackInSlot(i));
         }
 
-        return this.level.getRecipeManager().getRecipeFor(TiberiumInfuserRecipe.Type.INSTANCE, inventory, level);
+        FluidStack tankFluid = this.FLUID_TANK.getFluid();
+
+        return this.level.getRecipeManager().getAllRecipesFor(TiberiumInfuserRecipe.Type.INSTANCE)
+                .stream()
+
+                .map(recipe -> (TiberiumInfuserRecipe) recipe)
+                .filter(recipe -> recipe.matches(inventory, level) && tankFluid.containsFluid(recipe.getFluidStack()))
+                .findFirst();
+
     }
 
 

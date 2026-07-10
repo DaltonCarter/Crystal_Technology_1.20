@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:lg_core_ingot"
+    },
+    "C": {
+      "item": "crystechmod:crystal_core_control_circuit"
+    },
+    "H": {
+      "item": "crystechmod:crystal_core_component"
+    },
+    "I": {
+      "item": "crystechmod:vitric_kiln"
+    },
+    "M": {
+      "item": "crystechmod:crystal_core_machine_core"
+    },
+    "V": {
+      "item": "crystechmod:crystal_core_circuit"
+    }
+  },
+  "pattern": [
+    "AIA",
+    "HMH",
+    "VIC"
+  ],
+  "result": {
+    "item": "crystechmod:crystal_core_kiln"
+  },
+  "show_notification": true
+}

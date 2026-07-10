@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:blast_furnace"
+    },
+    "C": {
+      "item": "crystechmod:basic_circuit"
+    },
+    "I": {
+      "item": "crystechmod:gundanium_ingot"
+    },
+    "K": {
+      "item": "crystechmod:harmonic_relay"
+    },
+    "M": {
+      "item": "crystechmod:gundanium_machine_core"
+    },
+    "T": {
+      "item": "minecraft:redstone_torch"
+    }
+  },
+  "pattern": [
+    "IAI",
+    "TMT",
+    "KCK"
+  ],
+  "result": {
+    "item": "crystechmod:coal_matrix"
+  },
+  "show_notification": true
+}

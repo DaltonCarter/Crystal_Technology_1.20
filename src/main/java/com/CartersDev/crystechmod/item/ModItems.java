@@ -458,6 +458,93 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
             () -> new FocusItem(FocusTypes.PROTOCULTURE, new Item.Properties().stacksTo(64)));
 
 
+    public static final RegistryObject<Item> EMPTY_CANISTER = ITEMS.register("empty_canister",
+            () -> new Item( new Item.Properties()));
+
+    public static final RegistryObject<Item> LAVA_CANISTER = ITEMS.register("lava_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> PROTOCULTURE_CANISTER = ITEMS.register("protoculture_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> VIRIDE_VITRICIUM_CANISTER = ITEMS.register("viride_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> CAERULEUM_VITRICIUM_CANISTER = ITEMS.register("caeruleum_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> SANGUINEUM_VITRICIUM_CANISTER = ITEMS.register("sanguineum_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> VIOLACEUM_VITRICIUM_CANISTER = ITEMS.register("violaceum_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.EMPTY_CANISTER.get())));
+
+
+    public static final RegistryObject<Item> IMPROVED_EMPTY_CANISTER = ITEMS.register("improved_empty_canister",
+            () -> new Item( new Item.Properties()));
+
+    public static final RegistryObject<Item> IMPROVED_LAVA_CANISTER = ITEMS.register("improved_lava_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.IMPROVED_EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> IMPROVED_PROTOCULTURE_CANISTER = ITEMS.register("improved_protoculture_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.IMPROVED_EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> IMPROVED_VIRIDE_VITRICIUM_CANISTER = ITEMS.register("improved_viride_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.IMPROVED_EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> IMPROVED_CAERULEUM_VITRICIUM_CANISTER = ITEMS.register("improved_caeruleum_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.IMPROVED_EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> IMPROVED_SANGUINEUM_VITRICIUM_CANISTER = ITEMS.register("improved_sanguineum_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.IMPROVED_EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> IMPROVED_VIOLACEUM_VITRICIUM_CANISTER = ITEMS.register("improved_violaceum_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.IMPROVED_EMPTY_CANISTER.get())));
+
+
+    public static final RegistryObject<Item> ADVANCED_EMPTY_CANISTER = ITEMS.register("advanced_empty_canister",
+            () -> new Item( new Item.Properties()));
+
+    public static final RegistryObject<Item> ADVANCED_LAVA_CANISTER = ITEMS.register("advanced_lava_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.ADVANCED_EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> ADVANCED_PROTOCULTURE_CANISTER = ITEMS.register("advanced_protoculture_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.ADVANCED_EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> ADVANCED_VIRIDE_VITRICIUM_CANISTER = ITEMS.register("advanced_viride_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.ADVANCED_EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> ADVANCED_CAERULEUM_VITRICIUM_CANISTER = ITEMS.register("advanced_caeruleum_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.ADVANCED_EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> ADVANCED_SANGUINEUM_VITRICIUM_CANISTER = ITEMS.register("advanced_sanguineum_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.ADVANCED_EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> ADVANCED_VIOLACEUM_VITRICIUM_CANISTER = ITEMS.register("advanced_violaceum_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.ADVANCED_EMPTY_CANISTER.get())));
+
+
+    public static final RegistryObject<Item> ULTIMATE_EMPTY_CANISTER = ITEMS.register("ultimate_empty_canister",
+            () -> new Item( new Item.Properties()));
+
+    public static final RegistryObject<Item> ULTIMATE_LAVA_CANISTER = ITEMS.register("ultimate_lava_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.ULTIMATE_EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> ULTIMATE_PROTOCULTURE_CANISTER = ITEMS.register("ultimate_protoculture_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.ULTIMATE_EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> ULTIMATE_VIRIDE_VITRICIUM_CANISTER = ITEMS.register("ultimate_viride_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.ULTIMATE_EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> ULTIMATE_CAERULEUM_VITRICIUM_CANISTER = ITEMS.register("ultimate_caeruleum_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.ULTIMATE_EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> ULTIMATE_SANGUINEUM_VITRICIUM_CANISTER = ITEMS.register("ultimate_sanguineum_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.ULTIMATE_EMPTY_CANISTER.get())));
+
+    public static final RegistryObject<Item> ULTIMATE_VIOLACEUM_VITRICIUM_CANISTER = ITEMS.register("ultimate_violaceum_vitricium_canister",
+            () -> new Item( new Item.Properties().craftRemainder(ModItems.ULTIMATE_EMPTY_CANISTER.get())));
+
     //End Focuses & Ammunition
 
 
@@ -618,10 +705,25 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
     public static final RegistryObject<Item> ILLUMINATE_COMPONENT = ITEMS.register("illuminate_component",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> CRYSTAL_CORE_COMPONENT = ITEMS.register("crystal_core_component",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> KRYONIC_CAPACITOR = ITEMS.register("kryonic_capacitor",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> KRYONIC_RESERVOIR = ITEMS.register("kryonic_reservoir",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> VITRIC_CAPACITOR = ITEMS.register("vitric_capacitor",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> VITRIC_RESERVOIR = ITEMS.register("vitric_reservoir",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> CRYSTAL_CORE_CAPACITOR = ITEMS.register("crystal_core_capacitor",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> CRYSTAL_CORE_RESERVOIR = ITEMS.register("crystal_core_reservoir",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> HARMONIC_FOCUS = ITEMS.register("harmonic_focus",
@@ -629,6 +731,17 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
 
     public static final RegistryObject<Item> VITRIC_CIRCUIT = ITEMS.register("vitric_circuit",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> CRYSTAL_CORE_CIRCUIT = ITEMS.register("crystal_core_circuit",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> CRYSTAL_CORE_CONTROL_CIRCUIT = ITEMS.register("crystal_core_control_circuit",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> CRYSTAL_CORE_MASTER_CIRCUIT = ITEMS.register("crystal_core_master_circuit",
+            () -> new Item(new Item.Properties()));
+
+
 
     public static final RegistryObject<Item> PRIMITIVE_VITRIC_TRANSMITTER = ITEMS.register("primitive_vitric_transmitter",
             () -> new PrimitiveTransmitterItem(new Item.Properties().durability(2).setNoRepair()));

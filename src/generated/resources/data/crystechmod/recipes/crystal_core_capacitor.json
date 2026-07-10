@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:lg_core_ingot"
+    },
+    "H": {
+      "item": "crystechmod:crystal_core_component"
+    },
+    "K": {
+      "item": "crystechmod:vitric_capacitor"
+    }
+  },
+  "pattern": [
+    "BHB",
+    "HKH",
+    "BHB"
+  ],
+  "result": {
+    "item": "crystechmod:crystal_core_capacitor"
+  },
+  "show_notification": true
+}

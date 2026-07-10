@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "crystechmod:crystal_core_circuit"
+    },
+    "I": {
+      "item": "crystechmod:mg_core_ingot"
+    },
+    "K": {
+      "item": "crystechmod:crystal_core_component"
+    },
+    "M": {
+      "item": "crystechmod:vitric_machine_core"
+    },
+    "R": {
+      "item": "crystechmod:crystal_core_control_circuit"
+    },
+    "T": {
+      "item": "crystechmod:crystal_core_capacitor"
+    }
+  },
+  "pattern": [
+    "IKI",
+    "TMC",
+    "IRI"
+  ],
+  "result": {
+    "item": "crystechmod:crystal_core_machine_core"
+  },
+  "show_notification": true
+}

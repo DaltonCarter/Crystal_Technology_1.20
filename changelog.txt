@@ -698,7 +698,30 @@ Posted By: Dalton Carter
 -Added Crystal Fixtures /w Recipes
 -Added Primitive Vitric Transmitter for early limited access to the Vitric Expanse *called Portable Matter Transmitter in game* /w Recipe
 
+------------------------------------------------------------------------------
 
+07/02/2026
+Version 0.6.12
+Posted By: Dalton Carter
+
+-Fixed recipe handling for the infuser. I can now make Multiple recipes with the same base item, but different fluids.
+-Reworked Powered Kiln to just automatically convert Vanilla furnace recipes into its recipes.
+-Polish pass on Refinery to incorporate the recipe fix used in the infuser
+-Added Empty Canisters, Lava, Protoculture, and all 4 Tiberium variant Canisters, for use as Fuel, ammo, and crafting. (4 varieties basic, improved, advanced, ultimate)
+    eventually each will represent a larger fluid capacity, ammo value, and use duration.
+-Updated certain recipes to account for new Fluid Canister items, and crafting components.
+-Added Coal, Vitricium, Protoculture, and Crystal Core Matrices (Power Gen)
+-Added Primitive, Standard, Advanced, Ultimate Power Grid (Power Storage)
+-Added Basic, Improved, Advanced, and Ultimate Fluid Silos (Fluid Storage)
+-Added Primitive, Standard, Advanced, and Ultimate Power Cells (Batteries)
+-Expanded existing crafting components to include Vitric Capacitor and Reservoir.
+-Started Adding Crystal Core Crafting Components, complete with recipes.*  **
+-Crystal Core Machinery Recipes added.*
+
+
+*Core Crystals and MK.3 Core Steel are still not legitimately obtainable in survival mode.
+
+**The components added do not include the planned components for weaponry.
 
 
 ======================================================

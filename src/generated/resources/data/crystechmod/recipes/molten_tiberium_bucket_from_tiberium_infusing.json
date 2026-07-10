@@ -1,0 +1,15 @@
+{
+  "type": "crystechmod:tiberium_infusing",
+  "craftTime": 200,
+  "energyAmount": 20,
+  "fluidAmount": 1000,
+  "fluidType": "crystechmod:molten_tiberium_source",
+  "ingredients": [
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:molten_tiberium_bucket"
+  }
+}

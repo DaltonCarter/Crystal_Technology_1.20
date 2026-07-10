@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:blue_core_crystal"
+    },
+    "C": {
+      "item": "crystechmod:crystal_core_control_circuit"
+    },
+    "G": {
+      "item": "crystechmod:green_core_crystal"
+    },
+    "I": {
+      "item": "crystechmod:hg_core_block"
+    },
+    "O": {
+      "item": "crystechmod:orange_core_crystal"
+    },
+    "P": {
+      "item": "crystechmod:purple_core_crystal"
+    },
+    "R": {
+      "item": "crystechmod:red_core_crystal"
+    },
+    "Y": {
+      "item": "crystechmod:yellow_core_crystal"
+    }
+  },
+  "pattern": [
+    "OIB",
+    "GCP",
+    "YIR"
+  ],
+  "result": {
+    "item": "crystechmod:crystal_core_master_circuit"
+  },
+  "show_notification": true
+}

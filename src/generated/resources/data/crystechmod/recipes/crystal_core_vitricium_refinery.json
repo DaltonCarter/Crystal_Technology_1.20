@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crystechmod:mg_core_ingot"
+    },
+    "B": {
+      "item": "crystechmod:crystal_core_control_circuit"
+    },
+    "C": {
+      "item": "crystechmod:crystal_core_circuit"
+    },
+    "H": {
+      "item": "crystechmod:crystal_core_component"
+    },
+    "I": {
+      "item": "crystechmod:vitric_vitricium_refinery"
+    },
+    "M": {
+      "item": "crystechmod:crystal_core_machine_core"
+    },
+    "V": {
+      "item": "crystechmod:crystal_core_reservoir"
+    }
+  },
+  "pattern": [
+    "AIA",
+    "HMH",
+    "CVB"
+  ],
+  "result": {
+    "item": "crystechmod:crystal_core_vitricium_refinery"
+  },
+  "show_notification": true
+}

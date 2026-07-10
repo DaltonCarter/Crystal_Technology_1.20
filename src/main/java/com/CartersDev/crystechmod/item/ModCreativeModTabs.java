@@ -257,13 +257,27 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModItems.BASIC_CIRCUIT.get());
                         output.accept(ModItems.HARMONIC_CIRCUIT.get());
                         output.accept(ModItems.VITRIC_CIRCUIT.get());
+                        output.accept(ModItems.CRYSTAL_CORE_CIRCUIT.get());
+                        output.accept(ModItems.CRYSTAL_CORE_CONTROL_CIRCUIT.get());
+                        output.accept(ModItems.CRYSTAL_CORE_MASTER_CIRCUIT.get());
+
                         output.accept(ModItems.HARMONIC_FOCUS.get());
                         output.accept(ModItems.HARMONIC_RELAY.get());
                         output.accept(ModItems.ILLUMINATE_COMPONENT.get());
+                        output.accept(ModItems.CRYSTAL_CORE_COMPONENT.get());
                         output.accept(ModItems.KRYONIC_CAPACITOR.get());
                         output.accept(ModItems.KRYONIC_RESERVOIR.get());
+                        output.accept(ModItems.VITRIC_CAPACITOR.get());
+                        output.accept(ModItems.VITRIC_RESERVOIR.get());
+                        output.accept(ModItems.CRYSTAL_CORE_CAPACITOR.get());
+                        output.accept(ModItems.CRYSTAL_CORE_RESERVOIR.get());
 
                         output.accept(ModItems.PRIMITIVE_VITRIC_TRANSMITTER.get());
+
+                        output.accept(ModBlocks.COAL_MATRIX.get());
+                        output.accept(ModBlocks.VITRICIUM_MATRIX.get());
+                        output.accept(ModBlocks.PROTOCULTURE_MATRIX.get());
+                        output.accept(ModBlocks.CRYSTAL_CORE_MATRIX.get());
 
                         output.accept(ModBlocks.GUNDANIUM_MACHINE_CORE.get());
                         output.accept(ModBlocks.ALYTHUM_MACHINE_CORE.get());
@@ -395,7 +409,34 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModItems.OVERCHARGED_LASER_FOCUS.get());
                         output.accept(ModItems.LASER_FOCUS_PROTOCULTURE.get());
                         output.accept(ModItems.LASER_FOCUS_POISON.get());
-
+                        output.accept(ModItems.EMPTY_CANISTER.get());
+                        output.accept(ModItems.LAVA_CANISTER.get());
+                        output.accept(ModItems.VIRIDE_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.CAERULEUM_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.SANGUINEUM_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.VIOLACEUM_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.PROTOCULTURE_CANISTER.get());
+                        output.accept(ModItems.IMPROVED_EMPTY_CANISTER.get());
+                        output.accept(ModItems.IMPROVED_LAVA_CANISTER.get());
+                        output.accept(ModItems.IMPROVED_VIRIDE_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.IMPROVED_CAERULEUM_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.IMPROVED_SANGUINEUM_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.IMPROVED_VIOLACEUM_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.IMPROVED_PROTOCULTURE_CANISTER.get());
+                        output.accept(ModItems.ADVANCED_EMPTY_CANISTER.get());
+                        output.accept(ModItems.ADVANCED_LAVA_CANISTER.get());
+                        output.accept(ModItems.ADVANCED_VIRIDE_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.ADVANCED_CAERULEUM_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.ADVANCED_SANGUINEUM_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.ADVANCED_VIOLACEUM_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.ADVANCED_PROTOCULTURE_CANISTER.get());
+                        output.accept(ModItems.ULTIMATE_EMPTY_CANISTER.get());
+                        output.accept(ModItems.ULTIMATE_LAVA_CANISTER.get());
+                        output.accept(ModItems.ULTIMATE_VIRIDE_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.ULTIMATE_CAERULEUM_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.ULTIMATE_SANGUINEUM_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.ULTIMATE_VIOLACEUM_VITRICIUM_CANISTER.get());
+                        output.accept(ModItems.ULTIMATE_PROTOCULTURE_CANISTER.get());
 
                     })
                     .build());
