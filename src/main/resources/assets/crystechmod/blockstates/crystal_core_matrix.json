@@ -1,7 +1,134 @@
 {
   "variants": {
-    "": {
+
+    "facing=east,machine_core_lvl=4,working=false,core_crystal=none": {
+      "model": "crystechmod:block/crystal_core_matrix",
+      "y": 90
+    },
+    "facing=east,machine_core_lvl=4,working=false,core_crystal=green": {
+      "model": "crystechmod:block/crystal_core_matrix_green",
+      "y": 90
+    },
+    "facing=east,machine_core_lvl=4,working=false,core_crystal=blue": {
+      "model": "crystechmod:block/crystal_core_matrix_blue",
+      "y": 90
+    },
+    "facing=east,machine_core_lvl=4,working=false,core_crystal=yellow": {
+      "model": "crystechmod:block/crystal_core_matrix_yellow",
+      "y": 90
+    },
+    "facing=east,machine_core_lvl=4,working=false,core_crystal=orange": {
+      "model": "crystechmod:block/crystal_core_matrix_orange",
+      "y": 90
+    },
+    "facing=east,machine_core_lvl=4,working=false,core_crystal=red": {
+      "model": "crystechmod:block/crystal_core_matrix_red",
+      "y": 90
+    },
+    "facing=east,machine_core_lvl=4,working=false,core_crystal=purple": {
+      "model": "crystechmod:block/crystal_core_matrix_purple",
+      "y": 90
+    },
+    "facing=east,machine_core_lvl=4,working=false,core_crystal=perfected": {
+      "model": "crystechmod:block/crystal_core_matrix_red",
+      "y": 90
+    },
+    
+    
+
+    "facing=north,machine_core_lvl=4,working=false,core_crystal=none": {
       "model": "crystechmod:block/crystal_core_matrix"
+    },
+    "facing=north,machine_core_lvl=4,working=false,core_crystal=green": {
+      "model": "crystechmod:block/crystal_core_matrix_green"
+    },
+    "facing=north,machine_core_lvl=4,working=false,core_crystal=blue": {
+      "model": "crystechmod:block/crystal_core_matrix_blue"
+    },
+    "facing=north,machine_core_lvl=4,working=false,core_crystal=yellow": {
+      "model": "crystechmod:block/crystal_core_matrix_yellow"
+    },
+    "facing=north,machine_core_lvl=4,working=false,core_crystal=orange": {
+      "model": "crystechmod:block/crystal_core_matrix_orange"
+    },
+    "facing=north,machine_core_lvl=4,working=false,core_crystal=red": {
+      "model": "crystechmod:block/crystal_core_matrix_red"
+    },
+    "facing=north,machine_core_lvl=4,working=false,core_crystal=purple": {
+      "model": "crystechmod:block/crystal_core_matrix_purple"
+    },
+    "facing=north,machine_core_lvl=4,working=false,core_crystal=perfected": {
+      "model": "crystechmod:block/crystal_core_matrix_red"
+    },
+
+
+
+    "facing=south,machine_core_lvl=4,working=false,core_crystal=none": {
+      "model": "crystechmod:block/crystal_core_matrix",
+      "y": 180
+    },
+    "facing=south,machine_core_lvl=4,working=false,core_crystal=green": {
+      "model": "crystechmod:block/crystal_core_matrix_green",
+      "y": 180
+    },
+    "facing=south,machine_core_lvl=4,working=false,core_crystal=blue": {
+      "model": "crystechmod:block/crystal_core_matrix_blue",
+      "y": 180
+    },
+    "facing=south,machine_core_lvl=4,working=false,core_crystal=yellow": {
+      "model": "crystechmod:block/crystal_core_matrix_yellow",
+      "y": 180
+    },
+    "facing=south,machine_core_lvl=4,working=false,core_crystal=orange": {
+      "model": "crystechmod:block/crystal_core_matrix_orange",
+      "y": 180
+    },
+    "facing=south,machine_core_lvl=4,working=false,core_crystal=red": {
+      "model": "crystechmod:block/crystal_core_matrix_red",
+      "y": 180
+    },
+    "facing=south,machine_core_lvl=4,working=false,core_crystal=purple": {
+      "model": "crystechmod:block/crystal_core_matrix_purple",
+      "y": 180
+    },
+    "facing=south,machine_core_lvl=4,working=false,core_crystal=perfected": {
+      "model": "crystechmod:block/crystal_core_matrix_red",
+      "y": 180
+    },
+
+
+
+    "facing=west,machine_core_lvl=4,working=false,core_crystal=none": {
+      "model": "crystechmod:block/crystal_core_matrix",
+      "y": 270
+    },
+    "facing=west,machine_core_lvl=4,working=false,core_crystal=green": {
+      "model": "crystechmod:block/crystal_core_matrix_green",
+      "y": 270
+    },
+    "facing=west,machine_core_lvl=4,working=false,core_crystal=blue": {
+      "model": "crystechmod:block/crystal_core_matrix_blue",
+      "y": 270
+    },
+    "facing=west,machine_core_lvl=4,working=false,core_crystal=yellow": {
+      "model": "crystechmod:block/crystal_core_matrix_yellow",
+      "y": 270
+    },
+    "facing=west,machine_core_lvl=4,working=false,core_crystal=orange": {
+      "model": "crystechmod:block/crystal_core_matrix_orange",
+      "y": 270
+    },
+    "facing=west,machine_core_lvl=4,working=false,core_crystal=red": {
+      "model": "crystechmod:block/crystal_core_matrix_red",
+      "y": 270
+    },
+    "facing=west,machine_core_lvl=4,working=false,core_crystal=purple": {
+      "model": "crystechmod:block/crystal_core_matrix_purple",
+      "y": 270
+    },
+    "facing=west,machine_core_lvl=4,working=false,core_crystal=perfected": {
+      "model": "crystechmod:block/crystal_core_matrix_red",
+      "y": 270
     }
   }
 }

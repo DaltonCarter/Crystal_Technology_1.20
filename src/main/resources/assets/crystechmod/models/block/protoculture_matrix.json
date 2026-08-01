@@ -6,7 +6,7 @@
     "0": "crystechmod:block/core_matrix_panel",
     "1": "crystechmod:block/protoculture_matrix_plate_and_neck",
     "2": "crystechmod:block/protoculture_matrix_top_and_bottom",
-    "particle": "crystechmod:block/core_matrix_panel"
+    "particle": "crystechmod:block/protoculture_matrix_top_and_bottom"
   },
   "elements": [
     {

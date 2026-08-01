@@ -3,7 +3,7 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"1": "crystechmod:block/vitric_tiberium_macerator_texture",
-		"particle": "crystechmod:block/vitric_tiberium_macerator_texture"
+		"particle": "crystechmod:block/kiln_side"
 	},
 	"elements": [
 		{

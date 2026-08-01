@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_refinery": {
+    "has_stirling_matrix": {
       "conditions": {
         "items": [
           {
             "items": [
-              "crystechmod:vitricium_refinery"
+              "crystechmod:coal_matrix"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_refinery",
+      "has_stirling_matrix",
       "has_the_recipe"
     ]
   ],

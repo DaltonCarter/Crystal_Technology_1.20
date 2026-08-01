@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:stirling_power_generation",
+  "burnTime": 100,
+  "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "item": "minecraft:scaffolding"
+      }
+    }
+  ],
+  "totalEnergy": 4000
+}

@@ -1,0 +1,50 @@
+{
+  "format_version": "1.21.11",
+  "credit": "Made with Blockbench",
+  "textures": {
+    "0": "crystechmod:block/door",
+    "1": "crystechmod:block/door_rail",
+    "particle": "crystechmod:block/door"
+  },
+  "elements": [
+    {
+      "from": [-6.75, 0.25, 7],
+      "to": [1.25, 16, 9],
+      "rotation": {"angle": 0, "axis": "y", "origin": [-6, 0, 7]},
+      "faces": {
+        "north": {"uv": [0, 8, 4, 16], "texture": "#0"},
+        "east": {"uv": [6, 8, 7, 16], "texture": "#0"},
+        "south": {"uv": [8, 0, 12, 8], "texture": "#0"},
+        "west": {"uv": [7, 8, 8, 16], "texture": "#0"},
+        "up": {"uv": [12, 11, 8, 10], "texture": "#0"},
+        "down": {"uv": [12, 11, 8, 12], "texture": "#0"}
+      }
+    },
+    {
+      "from": [14.75, 0.25, 7],
+      "to": [22.75, 16, 9],
+      "rotation": {"angle": 0, "axis": "y", "origin": [30, 0, 7]},
+      "faces": {
+        "north": {"uv": [0, 0, 4, 8], "texture": "#0"},
+        "east": {"uv": [4, 8, 5, 16], "texture": "#0"},
+        "south": {"uv": [4, 0, 8, 8], "texture": "#0"},
+        "west": {"uv": [5, 8, 6, 16], "texture": "#0"},
+        "up": {"uv": [12, 9, 8, 8], "texture": "#0"},
+        "down": {"uv": [12, 9, 8, 10], "texture": "#0"}
+      }
+    },
+    {
+      "from": [0, 0, 7],
+      "to": [16, 0.25, 9],
+      "rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 7]},
+      "faces": {
+        "north": {"uv": [0, 4, 16, 5], "texture": "#1"},
+        "east": {"uv": [0, 6, 2, 7], "texture": "#1"},
+        "south": {"uv": [0, 5, 16, 6], "texture": "#1"},
+        "west": {"uv": [2, 6, 4, 7], "texture": "#1"},
+        "up": {"uv": [16, 2, 0, 0], "texture": "#1"},
+        "down": {"uv": [16, 2, 0, 4], "texture": "#1"}
+      }
+    }
+  ]
+}

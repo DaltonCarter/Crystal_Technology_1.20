@@ -16,7 +16,9 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -102,8 +104,8 @@ public class TiberiumMaceratorBlock extends BaseEntityBlock {
     }
 
 
-    //Block Entity Logic
 
+    //Block Entity Logic
 
     @Override
     public RenderShape getRenderShape(BlockState pState) {
@@ -114,6 +116,14 @@ public class TiberiumMaceratorBlock extends BaseEntityBlock {
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pMovedByPiston) {
         if(pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
+
+            if (!pLevel.isClientSide()) {
+                for (Direction direction : Direction.values()) {
+                    BlockPos neighborPos = pPos.relative(direction);
+                    pLevel.neighborChanged(neighborPos, this, pPos);
+                }
+            }
+
             if(blockEntity instanceof TiberiumMaceratorBlockEntity) {
                 ((TiberiumMaceratorBlockEntity) blockEntity).drops();
             } else if (blockEntity instanceof AlythumTiberiumMaceratorBlockEntity) {
@@ -123,8 +133,10 @@ public class TiberiumMaceratorBlock extends BaseEntityBlock {
             }else if (blockEntity instanceof CrystalCoreTiberiumMaceratorBlockEntity) {
                 ((CrystalCoreTiberiumMaceratorBlockEntity) blockEntity).drops();
             }
+            super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
+        }else {
+            super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
         }
-        super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
     }
 
     @Override
@@ -134,18 +146,22 @@ public class TiberiumMaceratorBlock extends BaseEntityBlock {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof TiberiumMaceratorBlockEntity) {
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (TiberiumMaceratorBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else if (entity instanceof AlythumTiberiumMaceratorBlockEntity) {
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (AlythumTiberiumMaceratorBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else if (entity instanceof VitricTiberiumMaceratorBlockEntity) {
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (VitricTiberiumMaceratorBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else if (entity instanceof CrystalCoreTiberiumMaceratorBlockEntity) {
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (CrystalCoreTiberiumMaceratorBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else {
                 throw new IllegalStateException("The Container Provider is AWOL!");
             }
         }
 
-        return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
+        return InteractionResult.CONSUME;
     }
 
 

@@ -17,6 +17,9 @@ DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CrystalTech.MOD_ID);
     public static final RegistryObject<SoundEvent> CHIME = RegisterSoundEvents("chime");
     public static final RegistryObject<SoundEvent> LASER = RegisterSoundEvents("laser");
     public static final RegistryObject<SoundEvent> PORTAL = RegisterSoundEvents("portal");
+    public static final RegistryObject<SoundEvent> AUTO_DOOR_OPEN = RegisterSoundEvents("auto_door_open");
+    public static final RegistryObject<SoundEvent> AUTO_DOOR_CLOSE = RegisterSoundEvents("auto_door_close");
+    public static final RegistryObject<SoundEvent> DOOR_CON = RegisterSoundEvents("door_con");
 
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_BREAK = RegisterSoundEvents("sound_block_break");
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_STEP = RegisterSoundEvents("sound_block_step");

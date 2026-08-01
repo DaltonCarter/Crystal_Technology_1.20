@@ -15,8 +15,10 @@ import com.CartersDev.crystechmod.entity.client.vitricSheep.VitricSheepFurModel;
 import com.CartersDev.crystechmod.entity.client.vitricSheep.VitricSheepModel;
 import com.CartersDev.crystechmod.fluid.ModFluidTypes;
 import com.CartersDev.crystechmod.fluid.ModFluids;
+import com.CartersDev.crystechmod.item.CustomProperties.ModCanisterProperties;
+import com.CartersDev.crystechmod.item.CustomProperties.ModPowerCellProperties;
 import com.CartersDev.crystechmod.item.ModCreativeModTabs;
-import com.CartersDev.crystechmod.item.ModItemProperties;
+import com.CartersDev.crystechmod.item.CustomProperties.ModItemProperties;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.item.custom.Weapons.Bows.ThermalEnergyBow;
 import com.CartersDev.crystechmod.loot.ModLootModifiers;
@@ -25,31 +27,38 @@ import com.CartersDev.crystechmod.particle.ModParticles;
 import com.CartersDev.crystechmod.potion.ModPotions;
 import com.CartersDev.crystechmod.recipe.ModRecipes;
 import com.CartersDev.crystechmod.screen.*;
-import com.CartersDev.crystechmod.screen.alloyKilnScreen.AlloyKilnScreen;
-import com.CartersDev.crystechmod.screen.alloyKilnScreen.AlythumAlloyKilnScreen;
-import com.CartersDev.crystechmod.screen.alloyKilnScreen.CrystalCoreAlloyKilnScreen;
-import com.CartersDev.crystechmod.screen.alloyKilnScreen.VitricAlloyKilnScreen;
-import com.CartersDev.crystechmod.screen.grinderScreen.TiberiumGrinderScreen;
-import com.CartersDev.crystechmod.screen.infuserScreen.AlythumTiberiumInfuserScreen;
-import com.CartersDev.crystechmod.screen.infuserScreen.CrystalCoreTiberiumInfuserScreen;
-import com.CartersDev.crystechmod.screen.infuserScreen.TiberiumInfuserScreen;
-import com.CartersDev.crystechmod.screen.infuserScreen.VitricTiberiumInfuserScreen;
-import com.CartersDev.crystechmod.screen.maceratorScreen.AlythumTiberiumMaceratorScreen;
-import com.CartersDev.crystechmod.screen.maceratorScreen.CrystalCoreTiberiumMaceratorScreen;
-import com.CartersDev.crystechmod.screen.maceratorScreen.TiberiumMaceratorScreen;
-import com.CartersDev.crystechmod.screen.maceratorScreen.VitricTiberiumMaceratorScreen;
-import com.CartersDev.crystechmod.screen.poweredKilnScreen.AlythumKilnScreen;
-import com.CartersDev.crystechmod.screen.poweredKilnScreen.CrystalCoreKilnScreen;
-import com.CartersDev.crystechmod.screen.poweredKilnScreen.PoweredKilnScreen;
-import com.CartersDev.crystechmod.screen.poweredKilnScreen.VitricKilnScreen;
-import com.CartersDev.crystechmod.screen.vitriciumMatrixScreen.VitriciumMatrixScreen;
-import com.CartersDev.crystechmod.screen.vitriciumRefineryScreen.AlythumVitriciumRefineryScreen;
-import com.CartersDev.crystechmod.screen.vitriciumRefineryScreen.CrystalCoreVitriciumRefineryScreen;
-import com.CartersDev.crystechmod.screen.vitriciumRefineryScreen.VitricVitriciumRefineryScreen;
-import com.CartersDev.crystechmod.screen.vitriciumRefineryScreen.VitriciumRefineryScreen;
+import com.CartersDev.crystechmod.screen.AlloyKiln.alloyKilnScreen.AlloyKilnScreen;
+import com.CartersDev.crystechmod.screen.AlloyKiln.alloyKilnScreen.AlythumAlloyKilnScreen;
+import com.CartersDev.crystechmod.screen.AlloyKiln.alloyKilnScreen.CrystalCoreAlloyKilnScreen;
+import com.CartersDev.crystechmod.screen.AlloyKiln.alloyKilnScreen.VitricAlloyKilnScreen;
+import com.CartersDev.crystechmod.screen.CrystalCoreMatrix.crystalCoreMatrixScreen.CrystalCoreMatrixScreen;
+import com.CartersDev.crystechmod.screen.FluidSilo.fluidSiloScreen.FluidSiloScreen;
+import com.CartersDev.crystechmod.screen.Grinder.grinderScreen.TiberiumGrinderScreen;
+import com.CartersDev.crystechmod.screen.Infuser.infuserScreen.AlythumTiberiumInfuserScreen;
+import com.CartersDev.crystechmod.screen.Infuser.infuserScreen.CrystalCoreTiberiumInfuserScreen;
+import com.CartersDev.crystechmod.screen.Infuser.infuserScreen.TiberiumInfuserScreen;
+import com.CartersDev.crystechmod.screen.Infuser.infuserScreen.VitricTiberiumInfuserScreen;
+import com.CartersDev.crystechmod.screen.Macerator.maceratorScreen.AlythumTiberiumMaceratorScreen;
+import com.CartersDev.crystechmod.screen.Macerator.maceratorScreen.CrystalCoreTiberiumMaceratorScreen;
+import com.CartersDev.crystechmod.screen.Macerator.maceratorScreen.TiberiumMaceratorScreen;
+import com.CartersDev.crystechmod.screen.Macerator.maceratorScreen.VitricTiberiumMaceratorScreen;
+import com.CartersDev.crystechmod.screen.PowerCore.powerCoreScreen.PowerCoreScreen;
+import com.CartersDev.crystechmod.screen.PoweredKiln.poweredKilnScreen.AlythumKilnScreen;
+import com.CartersDev.crystechmod.screen.PoweredKiln.poweredKilnScreen.CrystalCoreKilnScreen;
+import com.CartersDev.crystechmod.screen.PoweredKiln.poweredKilnScreen.PoweredKilnScreen;
+import com.CartersDev.crystechmod.screen.PoweredKiln.poweredKilnScreen.VitricKilnScreen;
+import com.CartersDev.crystechmod.screen.ProtocultureMatrix.protocultureMatrixScreen.ProtocultureMatrixScreen;
+import com.CartersDev.crystechmod.screen.StirlingMatrix.stirlingMatrixScreen.StirlingMatrixScreen;
+import com.CartersDev.crystechmod.screen.VitriciumMatrix.vitriciumMatrixScreen.VitriciumMatrixScreen;
+import com.CartersDev.crystechmod.screen.VitriciumRefinery.vitriciumRefineryScreen.AlythumVitriciumRefineryScreen;
+import com.CartersDev.crystechmod.screen.VitriciumRefinery.vitriciumRefineryScreen.CrystalCoreVitriciumRefineryScreen;
+import com.CartersDev.crystechmod.screen.VitriciumRefinery.vitriciumRefineryScreen.VitricVitriciumRefineryScreen;
+import com.CartersDev.crystechmod.screen.VitriciumRefinery.vitriciumRefineryScreen.VitriciumRefineryScreen;
 import com.CartersDev.crystechmod.sound.ModSounds;
 import com.CartersDev.crystechmod.util.BetterBrewingRecipe;
 import com.CartersDev.crystechmod.util.ModWoodTypes;
+import com.CartersDev.crystechmod.util.crafting.EmptyCanisterIngredient;
+import com.CartersDev.crystechmod.util.crafting.EmptyPowerCellIngredient;
 import com.CartersDev.crystechmod.villager.ModVillagers;
 import com.CartersDev.crystechmod.worldgen.ModFeatureTypes.ModFeatures;
 import com.CartersDev.crystechmod.worldgen.biome.ModTerraBlenderAPI;
@@ -60,6 +69,7 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
@@ -69,6 +79,7 @@ import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
+import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -84,7 +95,6 @@ import terrablender.api.SurfaceRuleManager;
 import static com.CartersDev.crystechmod.item.custom.Weapons.Bows.ThermalEnergyBow.isCharged;
 
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(CrystalTech.MOD_ID)
 public class CrystalTech {
     public static final String MOD_ID = "crystechmod";
@@ -133,6 +143,12 @@ public class CrystalTech {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
+
+            CraftingHelper.register(new ResourceLocation(MOD_ID, "empty_canister_filter"),
+                    EmptyCanisterIngredient.Serializer.INSTANCE);
+
+            CraftingHelper.register(new ResourceLocation(MOD_ID, "empty_power_cell_filter"),
+                    EmptyPowerCellIngredient.Serializer.INSTANCE);
 
             EnchantmentCategory LASER_CROSSBOW =
                     EnchantmentCategory.create("laser_crossbow", (item) -> item instanceof ThermalEnergyBow);
@@ -207,7 +223,8 @@ public class CrystalTech {
         public static void onClientSetup(FMLClientSetupEvent event) {
 
             ModItemProperties.addCustomItemProperties();
-
+            ModCanisterProperties.registerCanisterVariants();
+            ModPowerCellProperties.registerBatteryProperties();
 
             Sheets.addWoodType(ModWoodTypes.PLAGUED);
             Sheets.addWoodType(ModWoodTypes.EMBER_OAK);
@@ -229,6 +246,9 @@ public class CrystalTech {
 
 ///         Menu Screens:
             MenuScreens.register(ModMenuTypes.TIBERIUM_GRINDER_MENU.get(), TiberiumGrinderScreen::new);
+
+            MenuScreens.register(ModMenuTypes.FLUID_SILO_MENU.get(), FluidSiloScreen::new);
+            MenuScreens.register(ModMenuTypes.POWER_CORE_MENU.get(), PowerCoreScreen::new);
 
             MenuScreens.register(ModMenuTypes.TIBERIUM_MACERATOR_MENU.get(), TiberiumMaceratorScreen::new);
             MenuScreens.register(ModMenuTypes.ALYTHUM_TIBERIUM_MACERATOR_MENU.get(), AlythumTiberiumMaceratorScreen::new);
@@ -259,6 +279,11 @@ public class CrystalTech {
             MenuScreens.register(ModMenuTypes.VITRIC_VITRICIUM_REFINERY_MENU.get(), VitricVitriciumRefineryScreen::new);
             MenuScreens.register(ModMenuTypes.CRYSTAL_CORE_VITRICIUM_REFINERY_MENU.get(), CrystalCoreVitriciumRefineryScreen::new);
 
+            MenuScreens.register(ModMenuTypes.VITRICIUM_MATRIX_MENU.get(), VitriciumMatrixScreen::new);
+            MenuScreens.register(ModMenuTypes.STIRLING_MATRIX_MENU.get(), StirlingMatrixScreen::new);
+            MenuScreens.register(ModMenuTypes.PROTOCULTURE_MATRIX_MENU.get(), ProtocultureMatrixScreen::new);
+            MenuScreens.register(ModMenuTypes.CRYSTAL_CORE_MATRIX_MENU.get(), CrystalCoreMatrixScreen::new);
+
 ///         Tiberium
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_TIBERIUM_CROP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_TIBERIUM_CROP.get(), RenderType.cutout());
@@ -266,8 +291,6 @@ public class CrystalTech {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.PURPLE_TIBERIUM_CROP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.LAI_MELON_STEM.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ATTACHED_LAI_MELON_STEM.get(), RenderType.cutout());
-
-            MenuScreens.register(ModMenuTypes.VITRICIUM_MATRIX_MENU.get(), VitriciumMatrixScreen::new);
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEST_BLOCK.get(), RenderType.translucent());
 
@@ -286,6 +309,17 @@ public class CrystalTech {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ABOREUS_CRYSTAL.get(), RenderType.translucent());
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.FOOLS_CRYSTAL_CORE.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.SOLID_AUTO_DOOR.get(), RenderType.translucent());
+
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.POWER_CORE.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.IMPROVED_POWER_CORE.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ADVANCED_POWER_CORE.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ULTIMATE_POWER_CORE.get(), RenderType.translucent());
+
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.FLUID_SILO.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.IMPROVED_FLUID_SILO.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ADVANCED_FLUID_SILO.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ULTIMATE_FLUID_SILO.get(), RenderType.translucent());
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.RIPARIUS_CRYSTAL_STAIRS.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.VINIFERA_CRYSTAL_STAIRS.get(), RenderType.translucent());

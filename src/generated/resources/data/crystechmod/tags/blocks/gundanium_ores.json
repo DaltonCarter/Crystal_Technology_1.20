@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "crystechmod:deepslate_gundanium_ore",
     "crystechmod:gundanium_ore"

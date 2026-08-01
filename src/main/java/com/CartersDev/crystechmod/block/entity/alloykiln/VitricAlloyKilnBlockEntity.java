@@ -4,7 +4,7 @@ package com.CartersDev.crystechmod.block.entity.alloykiln;
 import com.CartersDev.crystechmod.block.custom.machines.AlloyKilnBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.AlloyKilnRecipe;
-import com.CartersDev.crystechmod.screen.alloyKilnMenu.VitricAlloyKilnMenu;
+import com.CartersDev.crystechmod.screen.AlloyKiln.alloyKilnMenu.VitricAlloyKilnMenu;
 import com.CartersDev.crystechmod.util.*;
 import com.CartersDev.crystechmod.util.inventory.InventoryDirectionEntry;
 import com.CartersDev.crystechmod.util.inventory.InventoryDirectionWrapper;
@@ -85,7 +85,7 @@ public class VitricAlloyKilnBlockEntity extends BlockEntity implements MenuProvi
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
               case 0,1,2 -> stack.is(ModTags.Items.ALLOYING_INPUT);
-              case 3 -> stack.getItem() == Items.REDSTONE;
+              case 3 -> stack.getItem() == Items.REDSTONE || stack.getCapability(ForgeCapabilities.ENERGY).isPresent();
               case 4 -> stack.is(ModTags.Items.ALLOYING_RESULT);
                 default -> super.isItemValid(slot, stack);
             };
@@ -228,6 +228,15 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
         super.onLoad();
         lazyItemHandler = LazyOptional.of(() -> itemHandler);
         lazyEnergyHandler = LazyOptional.of(() -> ENERGY_STORAGE);
+
+        if (this.level != null && !this.level.isClientSide()) {
+            for (Direction direction : Direction.values()) {
+                BlockPos neighborPos = this.worldPosition.relative(direction);
+
+
+                this.level.neighborChanged(neighborPos, this.getBlockState().getBlock(), this.worldPosition);
+            }
+        }
     }
 
     @Override
@@ -286,13 +295,35 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
     }
 
     private void fillEnergy() {
+
+        ItemStack powerCell = this.itemHandler.getStackInSlot(3);
+        if (powerCell.isEmpty()) {
+            return;
+        }
+
+        powerCell.getCapability(ForgeCapabilities.ENERGY).ifPresent(powerCellEnergy -> {
+            if (powerCellEnergy.canExtract()) {
+                int avaliableSpace = this.ENERGY_STORAGE.getMaxEnergyStored() - this.ENERGY_STORAGE.getEnergyStored();
+                if(avaliableSpace > 0) {
+                    int potentialDrain = powerCellEnergy.extractEnergy(avaliableSpace, true);
+
+
+                    int actualDrain = this.ENERGY_STORAGE.receiveEnergy(potentialDrain, true);
+
+                    if (actualDrain > 0) {
+
+                        powerCellEnergy.extractEnergy(actualDrain, false);
+                        this.ENERGY_STORAGE.receiveEnergy(actualDrain, false);
+                    }
+                }
+            }
+        });
+
         if(hasEnergyItemInSlot(ENERGY_ITEM_SLOT) && ENERGY_STORAGE.getEnergyStored() < ENERGY_STORAGE.getMaxEnergyStored() - 4000 ) {
             for(int i = 0; i < 40; i++) {
                 this.ENERGY_STORAGE.receiveEnergy(100, false);
             }
             consumeFuel();
-
-
         }
     }
 
@@ -337,7 +368,6 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
     private boolean hasRecipe() {
 
         Optional<AlloyKilnRecipe> recipe = getCurrentRecipe();
-
 
         if (recipe.isEmpty()) {
             return false;

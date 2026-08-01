@@ -64,38 +64,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.LASER_FOCUS_PROTOCULTURE);
         simpleItem(ModItems.LASER_FOCUS_POISON);
 
-        simpleItem(ModItems.EMPTY_CANISTER);
-        simpleItem(ModItems.LAVA_CANISTER);
-        simpleItem(ModItems.VIRIDE_VITRICIUM_CANISTER);
-        simpleItem(ModItems.CAERULEUM_VITRICIUM_CANISTER);
-        simpleItem(ModItems.SANGUINEUM_VITRICIUM_CANISTER);
-        simpleItem(ModItems.VIOLACEUM_VITRICIUM_CANISTER);
-        simpleItem(ModItems.PROTOCULTURE_CANISTER);
-
-        simpleItem(ModItems.IMPROVED_EMPTY_CANISTER);
-        simpleItem(ModItems.IMPROVED_LAVA_CANISTER);
-        simpleItem(ModItems.IMPROVED_VIRIDE_VITRICIUM_CANISTER);
-        simpleItem(ModItems.IMPROVED_CAERULEUM_VITRICIUM_CANISTER);
-        simpleItem(ModItems.IMPROVED_SANGUINEUM_VITRICIUM_CANISTER);
-        simpleItem(ModItems.IMPROVED_VIOLACEUM_VITRICIUM_CANISTER);
-        simpleItem(ModItems.IMPROVED_PROTOCULTURE_CANISTER);
-
-        simpleItem(ModItems.ADVANCED_EMPTY_CANISTER);
-        simpleItem(ModItems.ADVANCED_LAVA_CANISTER);
-        simpleItem(ModItems.ADVANCED_VIRIDE_VITRICIUM_CANISTER);
-        simpleItem(ModItems.ADVANCED_CAERULEUM_VITRICIUM_CANISTER);
-        simpleItem(ModItems.ADVANCED_SANGUINEUM_VITRICIUM_CANISTER);
-        simpleItem(ModItems.ADVANCED_VIOLACEUM_VITRICIUM_CANISTER);
-        simpleItem(ModItems.ADVANCED_PROTOCULTURE_CANISTER);
-
-        simpleItem(ModItems.ULTIMATE_EMPTY_CANISTER);
-        simpleItem(ModItems.ULTIMATE_LAVA_CANISTER);
-        simpleItem(ModItems.ULTIMATE_VIRIDE_VITRICIUM_CANISTER);
-        simpleItem(ModItems.ULTIMATE_CAERULEUM_VITRICIUM_CANISTER);
-        simpleItem(ModItems.ULTIMATE_SANGUINEUM_VITRICIUM_CANISTER);
-        simpleItem(ModItems.ULTIMATE_VIOLACEUM_VITRICIUM_CANISTER);
-        simpleItem(ModItems.ULTIMATE_PROTOCULTURE_CANISTER);
-
         simpleItem(ModItems.CHICKEN_MRE);
         simpleItem(ModItems.BEEF_MRE);
         simpleItem(ModItems.PORK_MRE);

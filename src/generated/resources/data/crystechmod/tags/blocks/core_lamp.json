@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "crystechmod:crystal_core_lamp_g",
     "crystechmod:crystal_core_lamp_b",

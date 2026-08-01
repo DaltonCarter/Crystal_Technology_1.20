@@ -1,7 +1,36 @@
 {
   "variants": {
-    "": {
+
+    "facing=east,machine_core_lvl=1,working=false": {
+      "model": "crystechmod:block/coal_matrix",
+      "y": 90
+    },
+    "facing=east,machine_core_lvl=1,working=true": {
+      "model": "crystechmod:block/coal_matrix_on",
+      "y": 90
+    },
+    "facing=north,machine_core_lvl=1,working=false": {
       "model": "crystechmod:block/coal_matrix"
+    },
+    "facing=north,machine_core_lvl=1,working=true": {
+      "model": "crystechmod:block/coal_matrix_on"
+    },
+    "facing=south,machine_core_lvl=1,working=false": {
+      "model": "crystechmod:block/coal_matrix",
+      "y": 180
+    },
+    "facing=south,machine_core_lvl=1,working=true": {
+      "model": "crystechmod:block/coal_matrix_on",
+      "y": 180
+    },
+    
+    "facing=west,machine_core_lvl=1,working=false": {
+      "model": "crystechmod:block/coal_matrix",
+      "y": 270
+    },
+    "facing=west,machine_core_lvl=1,working=true": {
+      "model": "crystechmod:block/coal_matrix_on",
+      "y": 270
     }
   }
 }

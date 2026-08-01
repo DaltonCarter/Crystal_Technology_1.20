@@ -37,6 +37,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         //Self Drops:
         this.dropSelf(ModBlocks.TEST_BLOCK.get());
+        this.dropSelf(ModBlocks.DOOR_CON.get());
         this.dropSelf(ModBlocks.GREEN_CRYSTAL_TORCH.get());
         this.dropSelf(ModBlocks.BLUE_CRYSTAL_TORCH.get());
         this.dropSelf(ModBlocks.RED_CRYSTAL_TORCH.get());
@@ -76,6 +77,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ALYTHUM_VITRICIUM_REFINERY.get());
         this.dropSelf(ModBlocks.VITRIC_VITRICIUM_REFINERY.get());
         this.dropSelf(ModBlocks.CRYSTAL_CORE_VITRICIUM_REFINERY.get());
+
+        this.dropSelf(ModBlocks.POWER_CORE.get());
+        this.dropSelf(ModBlocks.IMPROVED_POWER_CORE.get());
+        this.dropSelf(ModBlocks.ADVANCED_POWER_CORE.get());
+        this.dropSelf(ModBlocks.ULTIMATE_POWER_CORE.get());
+
+        this.dropSelf(ModBlocks.FLUID_SILO.get());
+        this.dropSelf(ModBlocks.IMPROVED_FLUID_SILO.get());
+        this.dropSelf(ModBlocks.ADVANCED_FLUID_SILO.get());
+        this.dropSelf(ModBlocks.ULTIMATE_FLUID_SILO.get());
 
         this.dropSelf(ModBlocks.COAL_MATRIX.get());
         this.dropSelf(ModBlocks.VITRICIUM_MATRIX.get());
@@ -1110,6 +1121,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.IRON_PLATING_DOOR.get(),
                 block -> createDoorTable(ModBlocks.IRON_PLATING_DOOR.get()));
+
+        this.add(ModBlocks.AUTO_DOOR.get(),
+                block -> createDoorTable(ModBlocks.AUTO_DOOR.get()));
+
+        this.add(ModBlocks.SOLID_AUTO_DOOR.get(),
+                block -> createDoorTable(ModBlocks.SOLID_AUTO_DOOR.get()));
 
         this.add(ModBlocks.YOKARAN_BLOOM.get(),
                 block -> createDoorTable(ModBlocks.YOKARAN_BLOOM.get()));

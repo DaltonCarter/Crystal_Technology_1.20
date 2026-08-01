@@ -15,7 +15,9 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -103,6 +105,7 @@ public class PoweredKilnBlock extends BaseEntityBlock {
     }
 
 
+
 //    //Block Entity Logic
 
 
@@ -115,6 +118,14 @@ public class PoweredKilnBlock extends BaseEntityBlock {
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pMovedByPiston) {
         if(pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
+
+            if (!pLevel.isClientSide()) {
+                for (Direction direction : Direction.values()) {
+                    BlockPos neighborPos = pPos.relative(direction);
+                    pLevel.neighborChanged(neighborPos, this, pPos);
+                }
+            }
+
             if(blockEntity instanceof PoweredKilnBlockEntity) {
                 ((PoweredKilnBlockEntity) blockEntity).drops();
             } else if (blockEntity instanceof AlythumKilnBlockEntity) {
@@ -124,8 +135,10 @@ public class PoweredKilnBlock extends BaseEntityBlock {
             }else if (blockEntity instanceof CrystalCoreKilnBlockEntity) {
                 ((CrystalCoreKilnBlockEntity) blockEntity).drops();
             }
+                super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
+        }else {
+            super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
         }
-        super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
     }
 
     @Override
@@ -135,18 +148,22 @@ public class PoweredKilnBlock extends BaseEntityBlock {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof PoweredKilnBlockEntity) {
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (PoweredKilnBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else if (entity instanceof AlythumKilnBlockEntity) {
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (AlythumKilnBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else if (entity instanceof VitricKilnBlockEntity) {
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (VitricKilnBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else if (entity instanceof CrystalCoreKilnBlockEntity) {
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (CrystalCoreKilnBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else {
                 throw new IllegalStateException("The Container Provider is AWOL!");
             }
         }
 
-        return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
+        return InteractionResult.CONSUME;
     }
 
 

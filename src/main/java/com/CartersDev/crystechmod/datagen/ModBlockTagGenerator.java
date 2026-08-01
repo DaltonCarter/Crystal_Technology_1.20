@@ -172,6 +172,20 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.TIBERIUM_BLOCK.get(),
+                ModBlocks.AUTO_DOOR.get(),
+                ModBlocks.SOLID_AUTO_DOOR.get(),
+                ModBlocks.COAL_MATRIX.get(),
+                ModBlocks.VITRICIUM_MATRIX.get(),
+                ModBlocks.PROTOCULTURE_MATRIX.get(),
+                ModBlocks.CRYSTAL_CORE_MATRIX.get(),
+                ModBlocks.FLUID_SILO.get(),
+                ModBlocks.IMPROVED_FLUID_SILO.get(),
+                ModBlocks.ADVANCED_FLUID_SILO.get(),
+                ModBlocks.ULTIMATE_FLUID_SILO.get(),
+                ModBlocks.POWER_CORE.get(),
+                ModBlocks.IMPROVED_POWER_CORE.get(),
+                ModBlocks.ADVANCED_POWER_CORE.get(),
+                ModBlocks.ULTIMATE_POWER_CORE.get(),
                 ModBlocks.VITRIC_TRANSPORTER.get(),
                 ModBlocks.VITRIC_TRANSPORTER_SIDE1.get(),
                 ModBlocks.VITRIC_TRANSPORTER_SIDE2.get(),
@@ -2078,6 +2092,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.CT_TILE_WALL_R_3.get(),
                         ModBlocks.CT_TILE_WALL_P_3.get(),
                         ModBlocks.CS_TILE_WALL.get()
+                );
+
+        this.tag(BlockTags.WOODEN_STAIRS)
+                .add(ModBlocks.PLAGUED_STAIRS.get(),
+                        ModBlocks.DEAD_STAIRS.get(),
+                        ModBlocks.MARIKA_OAK_STAIRS.get()
                 );
 
         this.tag(BlockTags.WOODEN_DOORS)

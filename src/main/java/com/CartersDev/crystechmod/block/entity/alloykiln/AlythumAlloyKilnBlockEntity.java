@@ -4,7 +4,7 @@ package com.CartersDev.crystechmod.block.entity.alloykiln;
 import com.CartersDev.crystechmod.block.custom.machines.AlloyKilnBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.AlloyKilnRecipe;
-import com.CartersDev.crystechmod.screen.alloyKilnMenu.AlythumAlloyKilnMenu;
+import com.CartersDev.crystechmod.screen.AlloyKiln.alloyKilnMenu.AlythumAlloyKilnMenu;
 import com.CartersDev.crystechmod.util.*;
 import com.CartersDev.crystechmod.util.inventory.InventoryDirectionEntry;
 import com.CartersDev.crystechmod.util.inventory.InventoryDirectionWrapper;
@@ -84,9 +84,9 @@ public class AlythumAlloyKilnBlockEntity extends BlockEntity implements MenuProv
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
-              case 0,1,2 -> stack.is(ModTags.Items.ALLOYING_INPUT);
-              case 3 -> stack.getItem() == Items.REDSTONE;
-              case 4 -> stack.is(ModTags.Items.ALLOYING_RESULT);
+                case 0,1,2 -> stack.is(ModTags.Items.ALLOYING_INPUT);
+                case 3 -> stack.getItem() == Items.REDSTONE || stack.getCapability(ForgeCapabilities.ENERGY).isPresent();
+                case 4 -> stack.is(ModTags.Items.ALLOYING_RESULT);
                 default -> super.isItemValid(slot, stack);
             };
         }
@@ -99,7 +99,7 @@ public class AlythumAlloyKilnBlockEntity extends BlockEntity implements MenuProv
     private static final int OUTPUT_SLOT = 4;
 
 
-private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
+    private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
     private final Map<Direction, LazyOptional<WrappedHandler>> directioWrappedHandlerMap =
             new InventoryDirectionWrapper(itemHandler,
@@ -112,15 +112,15 @@ private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
     private LazyOptional<IEnergyStorage> lazyEnergyHandler = LazyOptional.empty();
 
-protected final ContainerData data;
-private int progress = 0;
-private int max_progress = 100;
-private final int default_max_progress = 100;
+    protected final ContainerData data;
+    private int progress = 0;
+    private int max_progress = 100;
+    private final int default_max_progress = 100;
 
-private int energyAmount = 0;
-private final int defaultEnergyAmount = 100;
+    private int energyAmount = 0;
+    private final int defaultEnergyAmount = 100;
 
-private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
+    private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
 
     private ModEnergyStorage createEnergyStorage() {
@@ -156,7 +156,7 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
             @Override
             public void set(int pIndex, int pValue) {
-                 switch (pIndex){
+                switch (pIndex){
                     case 0 -> AlythumAlloyKilnBlockEntity.this.progress = pValue;
                     case 1 -> AlythumAlloyKilnBlockEntity.this.max_progress = pValue;
                 };
@@ -228,6 +228,15 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
         super.onLoad();
         lazyItemHandler = LazyOptional.of(() -> itemHandler);
         lazyEnergyHandler = LazyOptional.of(() -> ENERGY_STORAGE);
+
+        if (this.level != null && !this.level.isClientSide()) {
+            for (Direction direction : Direction.values()) {
+                BlockPos neighborPos = this.worldPosition.relative(direction);
+
+
+                this.level.neighborChanged(neighborPos, this.getBlockState().getBlock(), this.worldPosition);
+            }
+        }
     }
 
     @Override
@@ -272,7 +281,7 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
 
             }
-            
+
         }else {
             resetProgress();
             level.setBlockAndUpdate(pPos, getBlockState().setValue(WORKING, false));
@@ -286,13 +295,35 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
     }
 
     private void fillEnergy() {
+
+        ItemStack powerCell = this.itemHandler.getStackInSlot(3);
+        if (powerCell.isEmpty()) {
+            return;
+        }
+
+        powerCell.getCapability(ForgeCapabilities.ENERGY).ifPresent(powerCellEnergy -> {
+            if (powerCellEnergy.canExtract()) {
+                int avaliableSpace = this.ENERGY_STORAGE.getMaxEnergyStored() - this.ENERGY_STORAGE.getEnergyStored();
+                if(avaliableSpace > 0) {
+                    int potentialDrain = powerCellEnergy.extractEnergy(avaliableSpace, true);
+
+
+                    int actualDrain = this.ENERGY_STORAGE.receiveEnergy(potentialDrain, true);
+
+                    if (actualDrain > 0) {
+
+                        powerCellEnergy.extractEnergy(actualDrain, false);
+                        this.ENERGY_STORAGE.receiveEnergy(actualDrain, false);
+                    }
+                }
+            }
+        });
+
         if(hasEnergyItemInSlot(ENERGY_ITEM_SLOT) && ENERGY_STORAGE.getEnergyStored() < ENERGY_STORAGE.getMaxEnergyStored() - 4000 ) {
             for(int i = 0; i < 40; i++) {
                 this.ENERGY_STORAGE.receiveEnergy(100, false);
             }
             consumeFuel();
-
-
         }
     }
 

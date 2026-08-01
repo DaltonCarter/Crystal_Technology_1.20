@@ -1,28 +1,33 @@
 package com.CartersDev.crystechmod.screen;
 
 import com.CartersDev.crystechmod.CrystalTech;
-import com.CartersDev.crystechmod.screen.alloyKilnMenu.AlloyKilnMenu;
-import com.CartersDev.crystechmod.screen.alloyKilnMenu.AlythumAlloyKilnMenu;
-import com.CartersDev.crystechmod.screen.alloyKilnMenu.CrystalCoreAlloyKilnMenu;
-import com.CartersDev.crystechmod.screen.alloyKilnMenu.VitricAlloyKilnMenu;
-import com.CartersDev.crystechmod.screen.grinderMenu.TiberiumGrinderMenu;
-import com.CartersDev.crystechmod.screen.infuserMenu.AlythumTiberiumInfuserMenu;
-import com.CartersDev.crystechmod.screen.infuserMenu.CrystalCoreTiberiumInfuserMenu;
-import com.CartersDev.crystechmod.screen.infuserMenu.TiberiumInfuserMenu;
-import com.CartersDev.crystechmod.screen.infuserMenu.VitricTiberiumInfuserMenu;
-import com.CartersDev.crystechmod.screen.maceratorMenu.AlythumTiberiumMaceratorMenu;
-import com.CartersDev.crystechmod.screen.maceratorMenu.CrystalCoreTiberiumMaceratorMenu;
-import com.CartersDev.crystechmod.screen.maceratorMenu.TiberiumMaceratorMenu;
-import com.CartersDev.crystechmod.screen.maceratorMenu.VitricTiberiumMaceratorMenu;
-import com.CartersDev.crystechmod.screen.poweredKilnMenu.AlythumKilnMenu;
-import com.CartersDev.crystechmod.screen.poweredKilnMenu.CrystalCoreKilnMenu;
-import com.CartersDev.crystechmod.screen.poweredKilnMenu.PoweredKilnMenu;
-import com.CartersDev.crystechmod.screen.poweredKilnMenu.VitricKilnMenu;
-import com.CartersDev.crystechmod.screen.vitriciumMatrixMenu.VitriciumMatrixMenu;
-import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.AlythumVitriciumRefineryMenu;
-import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.CrystalCoreVitriciumRefineryMenu;
-import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.VitricVitriciumRefineryMenu;
-import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.VitriciumRefineryMenu;
+import com.CartersDev.crystechmod.screen.AlloyKiln.alloyKilnMenu.AlloyKilnMenu;
+import com.CartersDev.crystechmod.screen.AlloyKiln.alloyKilnMenu.AlythumAlloyKilnMenu;
+import com.CartersDev.crystechmod.screen.AlloyKiln.alloyKilnMenu.CrystalCoreAlloyKilnMenu;
+import com.CartersDev.crystechmod.screen.AlloyKiln.alloyKilnMenu.VitricAlloyKilnMenu;
+import com.CartersDev.crystechmod.screen.CrystalCoreMatrix.crystalCoreMatrixMenu.CrystalCoreMatrixMenu;
+import com.CartersDev.crystechmod.screen.FluidSilo.fluidSiloMenu.FluidSiloMenu;
+import com.CartersDev.crystechmod.screen.Grinder.grinderMenu.TiberiumGrinderMenu;
+import com.CartersDev.crystechmod.screen.Infuser.infuserMenu.AlythumTiberiumInfuserMenu;
+import com.CartersDev.crystechmod.screen.Infuser.infuserMenu.CrystalCoreTiberiumInfuserMenu;
+import com.CartersDev.crystechmod.screen.Infuser.infuserMenu.TiberiumInfuserMenu;
+import com.CartersDev.crystechmod.screen.Infuser.infuserMenu.VitricTiberiumInfuserMenu;
+import com.CartersDev.crystechmod.screen.Macerator.maceratorMenu.AlythumTiberiumMaceratorMenu;
+import com.CartersDev.crystechmod.screen.Macerator.maceratorMenu.CrystalCoreTiberiumMaceratorMenu;
+import com.CartersDev.crystechmod.screen.Macerator.maceratorMenu.TiberiumMaceratorMenu;
+import com.CartersDev.crystechmod.screen.Macerator.maceratorMenu.VitricTiberiumMaceratorMenu;
+import com.CartersDev.crystechmod.screen.PowerCore.powerCoreMenu.PowerCoreMenu;
+import com.CartersDev.crystechmod.screen.PoweredKiln.poweredKilnMenu.AlythumKilnMenu;
+import com.CartersDev.crystechmod.screen.PoweredKiln.poweredKilnMenu.CrystalCoreKilnMenu;
+import com.CartersDev.crystechmod.screen.PoweredKiln.poweredKilnMenu.PoweredKilnMenu;
+import com.CartersDev.crystechmod.screen.PoweredKiln.poweredKilnMenu.VitricKilnMenu;
+import com.CartersDev.crystechmod.screen.ProtocultureMatrix.protocultureMatrixMenu.ProtocultureMatrixMenu;
+import com.CartersDev.crystechmod.screen.StirlingMatrix.stirlingMatrixMenu.StirlingMatrixMenu;
+import com.CartersDev.crystechmod.screen.VitriciumMatrix.vitriciumMatrixMenu.VitriciumMatrixMenu;
+import com.CartersDev.crystechmod.screen.VitriciumRefinery.vitriciumRefineryMenu.AlythumVitriciumRefineryMenu;
+import com.CartersDev.crystechmod.screen.VitriciumRefinery.vitriciumRefineryMenu.CrystalCoreVitriciumRefineryMenu;
+import com.CartersDev.crystechmod.screen.VitriciumRefinery.vitriciumRefineryMenu.VitricVitriciumRefineryMenu;
+import com.CartersDev.crystechmod.screen.VitriciumRefinery.vitriciumRefineryMenu.VitriciumRefineryMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -107,8 +112,27 @@ public class ModMenuTypes {
             registerMenuType("crystal_core_vitricium_refinery_menu", CrystalCoreVitriciumRefineryMenu::new);
 
 
+    public static final RegistryObject<MenuType<FluidSiloMenu>> FLUID_SILO_MENU =
+            registerMenuType("fluid_silo_menu", FluidSiloMenu::new);
+
+
+    public static final RegistryObject<MenuType<PowerCoreMenu>> POWER_CORE_MENU =
+            registerMenuType("power_core_menu", PowerCoreMenu::new);
+
+
+
+    public static final RegistryObject<MenuType<StirlingMatrixMenu>> STIRLING_MATRIX_MENU =
+            registerMenuType("stirling_matrix_menu", StirlingMatrixMenu::new);
+
     public static final RegistryObject<MenuType<VitriciumMatrixMenu>> VITRICIUM_MATRIX_MENU =
             registerMenuType("vitricium_matrix_menu", VitriciumMatrixMenu::new);
+
+    public static final RegistryObject<MenuType<ProtocultureMatrixMenu>> PROTOCULTURE_MATRIX_MENU =
+            registerMenuType("protoculture_matrix_menu", ProtocultureMatrixMenu::new);
+
+    public static final RegistryObject<MenuType<CrystalCoreMatrixMenu>> CRYSTAL_CORE_MATRIX_MENU =
+            registerMenuType("crystal_core_matrix_menu", CrystalCoreMatrixMenu::new);
+
 
 
 private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {

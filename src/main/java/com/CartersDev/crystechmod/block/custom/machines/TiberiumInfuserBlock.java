@@ -16,7 +16,9 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -103,6 +105,8 @@ public class TiberiumInfuserBlock extends BaseEntityBlock {
         }
     }
 
+
+
     /* BLOCK ENTITY LOGIC */
 
     @Override
@@ -115,6 +119,14 @@ public class TiberiumInfuserBlock extends BaseEntityBlock {
 
         if(pState.getBlock() != pNewState.getBlock()){
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
+
+            if (!pLevel.isClientSide()) {
+                for (Direction direction : Direction.values()) {
+                    BlockPos neighborPos = pPos.relative(direction);
+                    pLevel.neighborChanged(neighborPos, this, pPos);
+                }
+            }
+
             if(blockEntity instanceof TiberiumInfuserBlockEntity) {
                 ((TiberiumInfuserBlockEntity) blockEntity).drops();
             } else if (blockEntity instanceof AlythumTiberiumInfuserBlockEntity) {
@@ -123,11 +135,11 @@ public class TiberiumInfuserBlock extends BaseEntityBlock {
                 ((VitricTiberiumInfuserBlockEntity) blockEntity).drops();
             }else if (blockEntity instanceof CrystalCoreTiberiumInfuserBlockEntity) {
                 ((CrystalCoreTiberiumInfuserBlockEntity) blockEntity).drops();
-
             }
+            super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
+        }else {
+            super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
         }
-
-        super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
     }
 
     @Override
@@ -136,20 +148,24 @@ public class TiberiumInfuserBlock extends BaseEntityBlock {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof TiberiumInfuserBlockEntity) {
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (TiberiumInfuserBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else if (entity instanceof AlythumTiberiumInfuserBlockEntity) {
 //                System.out.println("WHAT");
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (AlythumTiberiumInfuserBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else if (entity instanceof VitricTiberiumInfuserBlockEntity) {
 //                System.out.println("THE");
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (VitricTiberiumInfuserBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else if (entity instanceof CrystalCoreTiberiumInfuserBlockEntity) {
 //                System.out.println("HECK");
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (CrystalCoreTiberiumInfuserBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else {
                 throw new IllegalStateException("The Container Provider is AWOL!");
             }
         }
-        return InteractionResult.sidedSuccess(pLevel.isClientSide());
+        return InteractionResult.CONSUME;
     }
 
     @Override
@@ -162,10 +178,6 @@ public class TiberiumInfuserBlock extends BaseEntityBlock {
             case 4 -> new CrystalCoreTiberiumInfuserBlockEntity(pPos, pState);
             default -> throw new IllegalStateException("Unexpected value: " + lvl);
         };
-
-
-
-
     }
 
     @Override

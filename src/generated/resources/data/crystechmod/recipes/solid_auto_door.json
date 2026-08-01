@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "crystechmod:harmonic_circuit"
+    },
+    "D": {
+      "item": "minecraft:iron_door"
+    },
+    "H": {
+      "item": "crystechmod:harmonic_relay"
+    },
+    "I": {
+      "item": "crystechmod:alythum_ingot"
+    }
+  },
+  "pattern": [
+    "ICI",
+    "HDH",
+    "IDI"
+  ],
+  "result": {
+    "count": 3,
+    "item": "crystechmod:solid_auto_door"
+  },
+  "show_notification": true
+}

@@ -13,6 +13,8 @@ import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -33,7 +35,7 @@ private final IDrawable background;
 private final IDrawable icon;
 
     public PoweredKilnCategory(IGuiHelper helper) {
-        this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 83);
+        this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 78);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.POWERED_KILN.get()));
     }
 
@@ -60,10 +62,11 @@ private final IDrawable icon;
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder iRecipeLayoutBuilder, PoweredKilnRecipe poweredKilnRecipe, IFocusGroup iFocusGroup) {
-        iRecipeLayoutBuilder.addSlot(RecipeIngredientRole.INPUT, 56, 17).addIngredients(poweredKilnRecipe.getIngredients().get(0));
-        iRecipeLayoutBuilder.addSlot(RecipeIngredientRole.OUTPUT, 116, 35).addItemStack(poweredKilnRecipe.getResultItem(null));
+        if (!poweredKilnRecipe.getIngredients().isEmpty()) {
+            iRecipeLayoutBuilder.addSlot(RecipeIngredientRole.INPUT, 56, 17).addIngredients(poweredKilnRecipe.getIngredients().get(0));
+        }
+        iRecipeLayoutBuilder.addSlot(RecipeIngredientRole.OUTPUT, 116, 35).addItemStack(poweredKilnRecipe.getResultItem(Minecraft.getInstance().level.registryAccess()));
     }
-
 
     /*
      * BluSunrize
@@ -88,11 +91,12 @@ private final IDrawable icon;
         if(mouseX >= x + 110 && mouseX <= x + 120 && mouseY >= 10 && mouseY <= 76)
         {
             float time = recipe.getCraftTime();
-            float energy = recipe.getEnergyAmount() * time;
-            formatDouble(energy, "#.##");
+            float energy = recipe.getEnergyAmount();
+            float totalEnergy = energy * time;
+
             return Arrays.asList(
-                    Component.literal("Total Energy: " + formatDouble(energy, "#.##") + " FE"),
-                    Component.literal("Craft Time: " + formatDouble(time/20, "#.##") + "s")
+                    Component.literal("Total Cost: " + formatDouble(totalEnergy, "#.##") + " FE"),
+                    Component.literal("Craft Time: " + formatDouble(time / 20.0, "#.##") + "s")
             );
         }
         return IRecipeCategory.super.getTooltipStrings(recipe, recipeSlotsView, mouseX, mouseY);

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:harmonic_circuit"
+    },
+    "C": {
+      "item": "crystechmod:fluid_silo"
+    },
+    "G": {
+      "item": "crystechmod:harmonic_relay"
+    },
+    "I": {
+      "item": "crystechmod:harmonium_ingot"
+    },
+    "M": {
+      "item": "crystechmod:alythum_machine_core"
+    },
+    "R": {
+      "item": "crystechmod:kryonic_reservoir"
+    }
+  },
+  "pattern": [
+    "ICI",
+    "GMG",
+    "BIR"
+  ],
+  "result": {
+    "item": "crystechmod:improved_fluid_silo"
+  },
+  "show_notification": true
+}

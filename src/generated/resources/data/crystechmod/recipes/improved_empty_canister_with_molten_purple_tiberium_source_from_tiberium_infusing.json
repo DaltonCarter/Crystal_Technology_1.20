@@ -1,0 +1,16 @@
+{
+  "type": "crystechmod:tiberium_infusing",
+  "craftTime": 200,
+  "energyAmount": 40,
+  "fluidAmount": 2500,
+  "fluidType": "crystechmod:molten_purple_tiberium_source",
+  "ingredients": [
+    {
+      "item": "crystechmod:improved_empty_canister"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:improved_empty_canister",
+    "nbt": "{Fluid:{Amount:2500,FluidName:\"crystechmod:molten_purple_tiberium_source\"}}"
+  }
+}

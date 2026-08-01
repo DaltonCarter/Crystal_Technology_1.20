@@ -11,8 +11,10 @@ import net.minecraft.advancements.RequirementsStrategy;
 import net.minecraft.advancements.critereon.RecipeUnlockedTrigger;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeBuilder;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
@@ -30,6 +32,7 @@ public class TiberiumInfuserRecipeBuilder implements RecipeBuilder {
     private final int energyAmount;
     private final FluidStack fluidStack;
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
+    private CompoundTag resultNbt = null;
 
     public TiberiumInfuserRecipeBuilder(ItemLike ingredient, ItemLike result, int count, int craftTime, int energyAmount, FluidStack fluidStack) {
         this.ingredient = Ingredient.of(ingredient);
@@ -39,6 +42,21 @@ public class TiberiumInfuserRecipeBuilder implements RecipeBuilder {
         this.energyAmount = energyAmount;
         this.fluidStack = fluidStack;
     }
+
+    public TiberiumInfuserRecipeBuilder(ItemLike ingredient, ItemStack resultStack, int count, int craftTime, int energyAmount, FluidStack fluidStack) {
+        this.ingredient = Ingredient.of(ingredient);
+        this.result = resultStack.getItem();
+        this.count = count;
+        this.craftTime = craftTime;
+        this.energyAmount = energyAmount;
+        this.fluidStack = fluidStack;
+
+
+        if (resultStack.hasTag()) {
+            this.resultNbt = resultStack.getTag().copy();
+        }
+    }
+
 
     @Override
     public RecipeBuilder unlockedBy(String pCriterionName, CriterionTriggerInstance pCriterionTrigger) {
@@ -62,7 +80,7 @@ public class TiberiumInfuserRecipeBuilder implements RecipeBuilder {
                 .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(pRecipeId))
                 .rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
 
-        pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.count, this.ingredient,
+        pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.resultNbt, this.count, this.ingredient,
                 this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/"
                 + pRecipeId.getPath()), this.craftTime, this.energyAmount, this.fluidStack));
 
@@ -71,6 +89,7 @@ public class TiberiumInfuserRecipeBuilder implements RecipeBuilder {
     public static class Result implements FinishedRecipe {
         private final ResourceLocation id;
         private final Item result;
+        private final CompoundTag resultNbt;
         private final Ingredient ingredient;
         private final int count;
         private final int craftTime;
@@ -79,10 +98,11 @@ public class TiberiumInfuserRecipeBuilder implements RecipeBuilder {
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
 
-        public Result(ResourceLocation pId, Item pResult, int pCount, Ingredient ingredient, Advancement.Builder pAdvancement,
+        public Result(ResourceLocation pId, Item pResult, CompoundTag pResultNbt, int pCount, Ingredient ingredient, Advancement.Builder pAdvancement,
                       ResourceLocation pAdvancementId, int craftTime, int energyAmount, FluidStack fluidStack) {
             this.id = pId;
             this.result = pResult;
+            this.resultNbt = pResultNbt;
             this.count = pCount;
             this.craftTime = craftTime;
             this.energyAmount = energyAmount;
@@ -101,6 +121,10 @@ public class TiberiumInfuserRecipeBuilder implements RecipeBuilder {
             JsonObject jsonobject = new JsonObject();
             jsonobject.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
 
+            if (this.resultNbt != null) {
+                jsonobject.addProperty("nbt", this.resultNbt.toString());
+            }
+
             pJson.addProperty("fluidType", ForgeRegistries.FLUIDS.getKey(this.fluidStack.getFluid()).toString());
             pJson.addProperty("fluidAmount", this.fluidStack.getAmount());
 
@@ -116,8 +140,11 @@ public class TiberiumInfuserRecipeBuilder implements RecipeBuilder {
 
         @Override
         public ResourceLocation getId() {
+
+            String fluidPath = ForgeRegistries.FLUIDS.getKey(this.fluidStack.getFluid()).getPath();
+
             return new ResourceLocation(CrystalTech.MOD_ID,
-                    ForgeRegistries.ITEMS.getKey(this.result).getPath() + "_from_tiberium_infusing");
+                    ForgeRegistries.ITEMS.getKey(this.result).getPath() + "_with_" + fluidPath + "_from_tiberium_infusing");
         }
 
         @Override

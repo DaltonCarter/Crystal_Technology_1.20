@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:basic_circuit"
+    },
+    "C": {
+      "item": "minecraft:cauldron"
+    },
+    "G": {
+      "tag": "crystechmod:glass"
+    },
+    "I": {
+      "item": "crystechmod:gundanium_ingot"
+    },
+    "M": {
+      "item": "crystechmod:gundanium_machine_core"
+    }
+  },
+  "pattern": [
+    "ICI",
+    "GMG",
+    "IBI"
+  ],
+  "result": {
+    "item": "crystechmod:fluid_silo"
+  },
+  "show_notification": true
+}

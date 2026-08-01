@@ -1,7 +1,35 @@
 {
   "variants": {
-    "": {
+
+    "facing=east,machine_core_lvl=3,working=false,has_canister=false": {
+      "model": "crystechmod:block/protoculture_matrix",
+      "y": 90
+    },
+    "facing=east,machine_core_lvl=3,working=false,has_canister=true": {
+      "model": "crystechmod:block/protoculture_matrix_active",
+      "y": 90
+    },
+    "facing=north,machine_core_lvl=3,working=false,has_canister=false": {
       "model": "crystechmod:block/protoculture_matrix"
+    },
+    "facing=north,machine_core_lvl=3,working=false,has_canister=true": {
+      "model": "crystechmod:block/protoculture_matrix_active"
+    },
+    "facing=south,machine_core_lvl=3,working=false,has_canister=false": {
+      "model": "crystechmod:block/protoculture_matrix",
+      "y": 180
+    },
+    "facing=south,machine_core_lvl=3,working=false,has_canister=true": {
+      "model": "crystechmod:block/protoculture_matrix_active",
+      "y": 180
+    },
+    "facing=west,machine_core_lvl=3,working=false,has_canister=false": {
+      "model": "crystechmod:block/protoculture_matrix",
+      "y": 270
+    },
+    "facing=west,machine_core_lvl=3,working=false,has_canister=true": {
+      "model": "crystechmod:block/protoculture_matrix_active",
+      "y": 270
     }
   }
 }

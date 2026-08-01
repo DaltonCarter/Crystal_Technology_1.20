@@ -4,7 +4,7 @@ package com.CartersDev.crystechmod.block.entity.macerator;
 import com.CartersDev.crystechmod.block.custom.machines.TiberiumMaceratorBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.TiberiumMaceratorRecipe;
-import com.CartersDev.crystechmod.screen.maceratorMenu.AlythumTiberiumMaceratorMenu;
+import com.CartersDev.crystechmod.screen.Macerator.maceratorMenu.AlythumTiberiumMaceratorMenu;
 import com.CartersDev.crystechmod.util.*;
 import com.CartersDev.crystechmod.util.inventory.InventoryDirectionEntry;
 import com.CartersDev.crystechmod.util.inventory.InventoryDirectionWrapper;
@@ -59,7 +59,7 @@ public class AlythumTiberiumMaceratorBlockEntity extends BlockEntity implements 
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
               case 0 -> stack.is(ModTags.Items.GRINDABLE);
-              case 1 -> stack.getItem() == Items.REDSTONE;
+              case 1 -> stack.getItem() == Items.REDSTONE || stack.getCapability(ForgeCapabilities.ENERGY).isPresent();
               case 2 -> stack.is(ModTags.Items.GRINDING_RESULT);
                 default -> super.isItemValid(slot, stack);
             };
@@ -200,6 +200,15 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
         super.onLoad();
         lazyItemHandler = LazyOptional.of(() -> itemHandler);
         lazyEnergyHandler = LazyOptional.of(() -> ENERGY_STORAGE);
+
+        if (this.level != null && !this.level.isClientSide()) {
+            for (Direction direction : Direction.values()) {
+                BlockPos neighborPos = this.worldPosition.relative(direction);
+
+
+                this.level.neighborChanged(neighborPos, this.getBlockState().getBlock(), this.worldPosition);
+            }
+        }
     }
 
     @Override
@@ -241,30 +250,48 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
             if (hasProgressFinished()) {
                 craftItem();
                 resetProgress();
-
-
             }
             
         }else {
             resetProgress();
             level.setBlockAndUpdate(pPos, getBlockState().setValue(WORKING, false));
         }
-
     }
 
     private void extractEnergy() {
         this.ENERGY_STORAGE.extractEnergy(energyAmount, false);
-
     }
 
     private void fillEnergy() {
+
+        ItemStack powerCell = this.itemHandler.getStackInSlot(1);
+        if (powerCell.isEmpty()) {
+            return;
+        }
+
+        powerCell.getCapability(ForgeCapabilities.ENERGY).ifPresent(powerCellEnergy -> {
+            if (powerCellEnergy.canExtract()) {
+                int avaliableSpace = this.ENERGY_STORAGE.getMaxEnergyStored() - this.ENERGY_STORAGE.getEnergyStored();
+                if(avaliableSpace > 0) {
+                    int potentialDrain = powerCellEnergy.extractEnergy(avaliableSpace, true);
+
+
+                    int actualDrain = this.ENERGY_STORAGE.receiveEnergy(potentialDrain, true);
+
+                    if (actualDrain > 0) {
+
+                        powerCellEnergy.extractEnergy(actualDrain, false);
+                        this.ENERGY_STORAGE.receiveEnergy(actualDrain, false);
+                    }
+                }
+            }
+        });
+
         if(hasEnergyItemInSlot(ENERGY_ITEM_SLOT) && ENERGY_STORAGE.getEnergyStored() < ENERGY_STORAGE.getMaxEnergyStored() - 4000 ) {
             for(int i = 0; i < 40; i++) {
                 this.ENERGY_STORAGE.receiveEnergy(100, false);
             }
             consumeFuel();
-
-
         }
     }
 

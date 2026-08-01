@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "crystechmod:illumina_ore",
     "crystechmod:deepslate_illumina_ore"

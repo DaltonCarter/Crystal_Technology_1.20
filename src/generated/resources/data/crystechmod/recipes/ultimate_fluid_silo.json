@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:crystal_core_circuit"
+    },
+    "C": {
+      "item": "crystechmod:advanced_fluid_silo"
+    },
+    "D": {
+      "item": "crystechmod:crystal_core_control_circuit"
+    },
+    "G": {
+      "item": "crystechmod:crystal_core_component"
+    },
+    "I": {
+      "item": "crystechmod:lg_core_ingot"
+    },
+    "M": {
+      "item": "crystechmod:crystal_core_machine_core"
+    },
+    "R": {
+      "item": "crystechmod:crystal_core_reservoir"
+    }
+  },
+  "pattern": [
+    "ICI",
+    "GMG",
+    "BDR"
+  ],
+  "result": {
+    "item": "crystechmod:ultimate_fluid_silo"
+  },
+  "show_notification": true
+}

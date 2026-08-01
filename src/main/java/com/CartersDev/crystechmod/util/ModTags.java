@@ -117,6 +117,15 @@ public class ModTags {
         public static final TagKey<Item> FOCUSES = tag("focuses");
         public static final TagKey<Item> CORE_LAMP = tag("core_lamp");
 
+        public static final TagKey<Item> CORE_CRYSTALS = tag("core_crystals");
+
+        public static final TagKey<Item> COALS = ItemTags.create(new ResourceLocation("forge", "coals"));
+        public static final TagKey<Item> MINEABLE_WITH_AXE = tag("mineable_with_axe");
+
+
+
+        public static final TagKey<Item> FLUID_CANISTERS = tag("fluid_canisters");
+
 
 
 

@@ -41,7 +41,7 @@ private final IDrawable icon;
 
     public TiberiumMaceratingCategory(IGuiHelper helper) {
 
-        this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 83);
+        this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 78);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.TIBERIUM_MACERATOR.get()));
 
     }

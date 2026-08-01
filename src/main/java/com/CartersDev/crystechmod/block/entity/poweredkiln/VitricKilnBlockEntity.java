@@ -4,7 +4,7 @@ package com.CartersDev.crystechmod.block.entity.poweredkiln;
 import com.CartersDev.crystechmod.block.custom.machines.PoweredKilnBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.PoweredKilnRecipe;
-import com.CartersDev.crystechmod.screen.poweredKilnMenu.VitricKilnMenu;
+import com.CartersDev.crystechmod.screen.PoweredKiln.poweredKilnMenu.VitricKilnMenu;
 import com.CartersDev.crystechmod.util.*;
 import com.CartersDev.crystechmod.util.inventory.InventoryDirectionEntry;
 import com.CartersDev.crystechmod.util.inventory.InventoryDirectionWrapper;
@@ -16,6 +16,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.world.Container;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -26,6 +27,10 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.AbstractCookingRecipe;
+import net.minecraft.world.item.crafting.BlastingRecipe;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -59,7 +64,7 @@ public class VitricKilnBlockEntity extends BlockEntity implements MenuProvider {
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
               case 0 -> stack.is(ModTags.Items.SMELTING);
-              case 1 -> stack.getItem() == Items.REDSTONE;
+              case 1 -> stack.getItem() == Items.REDSTONE || stack.getCapability(ForgeCapabilities.ENERGY).isPresent();
               case 2 -> stack.is(ModTags.Items.SMELTING_RESULT_2);
                 default -> super.isItemValid(slot, stack);
             };
@@ -200,6 +205,15 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
         super.onLoad();
         lazyItemHandler = LazyOptional.of(() -> itemHandler);
         lazyEnergyHandler = LazyOptional.of(() -> ENERGY_STORAGE);
+
+        if (this.level != null && !this.level.isClientSide()) {
+            for (Direction direction : Direction.values()) {
+                BlockPos neighborPos = this.worldPosition.relative(direction);
+
+
+                this.level.neighborChanged(neighborPos, this.getBlockState().getBlock(), this.worldPosition);
+            }
+        }
     }
 
     @Override
@@ -241,15 +255,12 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
             if (hasProgressFinished()) {
                 craftItem();
                 resetProgress();
-
-
             }
             
         }else {
             resetProgress();
             level.setBlockAndUpdate(pPos, getBlockState().setValue(WORKING, false));
         }
-
     }
 
     private void extractEnergy() {
@@ -258,13 +269,35 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
     }
 
     private void fillEnergy() {
+
+        ItemStack powerCell = this.itemHandler.getStackInSlot(1);
+        if (powerCell.isEmpty()) {
+            return;
+        }
+
+        powerCell.getCapability(ForgeCapabilities.ENERGY).ifPresent(powerCellEnergy -> {
+            if (powerCellEnergy.canExtract()) {
+                int avaliableSpace = this.ENERGY_STORAGE.getMaxEnergyStored() - this.ENERGY_STORAGE.getEnergyStored();
+                if(avaliableSpace > 0) {
+                    int potentialDrain = powerCellEnergy.extractEnergy(avaliableSpace, true);
+
+
+                    int actualDrain = this.ENERGY_STORAGE.receiveEnergy(potentialDrain, true);
+
+                    if (actualDrain > 0) {
+
+                        powerCellEnergy.extractEnergy(actualDrain, false);
+                        this.ENERGY_STORAGE.receiveEnergy(actualDrain, false);
+                    }
+                }
+            }
+        });
+
         if(hasEnergyItemInSlot(ENERGY_ITEM_SLOT) && ENERGY_STORAGE.getEnergyStored() < ENERGY_STORAGE.getMaxEnergyStored() - 4000 ) {
             for(int i = 0; i < 40; i++) {
                 this.ENERGY_STORAGE.receiveEnergy(100, false);
             }
             consumeFuel();
-
-
         }
     }
 
@@ -278,16 +311,34 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
     }
 
     private void craftItem() {
-        Optional<PoweredKilnRecipe> recipe = getCurrentRecipe();
 
-        ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
+        Optional<? extends Recipe<Container>> recipe = getCurrentRecipe();
 
-        this.itemHandler.extractItem(INPUT_SLOT, recipe.get().getInputItems().get(0).count(), false);
+        if (recipe.isPresent()) {
+            Recipe<Container> activeRecipe = recipe.get();
+            ItemStack resultItem = activeRecipe.getResultItem(getLevel().registryAccess());
 
-        this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
-                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount()));
+            Recipe<?> rawRecipe = (Recipe<?>) activeRecipe;
 
+            if (rawRecipe instanceof PoweredKilnRecipe) {
+                PoweredKilnRecipe kilnRecipe = (PoweredKilnRecipe) rawRecipe;
+                this.itemHandler.extractItem(INPUT_SLOT, kilnRecipe.getInputItems().get(0).count(), false);
+            }
+            else if (rawRecipe instanceof AbstractCookingRecipe) {
+                this.itemHandler.extractItem(INPUT_SLOT, 1, false);
+            }
+
+            ItemStack outputSlotStack = this.itemHandler.getStackInSlot(OUTPUT_SLOT);
+            if (outputSlotStack.isEmpty()) {
+                this.itemHandler.insertItem(OUTPUT_SLOT, resultItem.copy(), false);
+            } else {
+                outputSlotStack.grow(resultItem.getCount());
+            }
+
+            setChanged();
+        }
     }
+
 
 
     private void resetProgress() {
@@ -304,38 +355,64 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
         this.progress++;
     }
 
+    private static final int smeltingEnergyPerTick = 20;
+    private static final int blastingEnergyPerTick = 40;
+
     private boolean hasRecipe() {
-
-        Optional<PoweredKilnRecipe> recipe = getCurrentRecipe();
-
+        Optional<? extends Recipe<Container>> recipe = getCurrentRecipe();
 
         if (recipe.isEmpty()) {
             return false;
         }
 
-        max_progress = recipe.get().getCraftTime() / 3;
-        energyAmount = recipe.get().getEnergyAmount();
+        Recipe<Container> activeRecipe = recipe.get();
+        ItemStack resultItem = activeRecipe.getResultItem(getLevel().registryAccess());
 
-        ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
+        Recipe<?> rawRecipe = (Recipe<?>) activeRecipe;
+
+        if (rawRecipe instanceof PoweredKilnRecipe) {
+            PoweredKilnRecipe kilnRecipe = (PoweredKilnRecipe) rawRecipe;
+            this.max_progress = kilnRecipe.getCraftTime();
+            this.energyAmount = kilnRecipe.getEnergyAmount();
+        }
+        else if (rawRecipe instanceof net.minecraft.world.item.crafting.BlastingRecipe) {
+            AbstractCookingRecipe blastingRecipe = (AbstractCookingRecipe) rawRecipe;
+            this.max_progress = blastingRecipe.getCookingTime();
+            this.energyAmount = blastingEnergyPerTick;
+        }
+        else if (rawRecipe instanceof AbstractCookingRecipe) {
+            AbstractCookingRecipe smeltingRecipe = (AbstractCookingRecipe) rawRecipe;
+            this.max_progress = smeltingRecipe.getCookingTime();
+            this.energyAmount = smeltingEnergyPerTick;
+        }
 
         return canInsertAmountIntoOutputSlot(resultItem.getCount())
                 && canInsertItemIntoOutputSlot(resultItem.getItem())
                 && hasEnoughEnergyToCraft();
     }
 
+    private Optional<? extends Recipe<Container>> getCurrentRecipe() {
+        if (this.level == null) return Optional.empty();
+
+        SimpleContainer inventory = new SimpleContainer(1);
+        inventory.setItem(0, this.itemHandler.getStackInSlot(INPUT_SLOT));
+
+        Optional<PoweredKilnRecipe> custom = this.level.getRecipeManager()
+                .getRecipeFor(PoweredKilnRecipe.Type.INSTANCE, inventory, this.level);
+        if (custom.isPresent()) return (Optional<? extends Recipe<Container>>) (Optional<?>) custom;
+
+        Optional<BlastingRecipe> blasting = this.level.getRecipeManager()
+                .getRecipeFor(RecipeType.BLASTING, inventory, this.level);
+        if (blasting.isPresent()) return blasting;
+
+        return this.level.getRecipeManager()
+                .getRecipeFor(RecipeType.SMELTING, inventory, this.level);
+    }
+
     private boolean hasEnoughEnergyToCraft() {
-        return this.ENERGY_STORAGE.getEnergyStored() >= energyAmount * max_progress;
 
+        return this.ENERGY_STORAGE.getEnergyStored() >= this.energyAmount;
     }
-
-    private Optional<PoweredKilnRecipe> getCurrentRecipe() {
-        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
-        for(int i = 0; i < this.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, this.itemHandler.getStackInSlot(i));
-        }
-        return this.level.getRecipeManager().getRecipeFor(PoweredKilnRecipe.Type.INSTANCE, inventory, level);
-    }
-
 
     private boolean canInsertItemIntoOutputSlot(Item item) {
         return this.itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() || this.itemHandler.getStackInSlot(OUTPUT_SLOT).is(item);

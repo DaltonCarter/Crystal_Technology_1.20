@@ -7,6 +7,7 @@ import com.CartersDev.crystechmod.block.entity.renderer.alloykiln.AlloyKilnBlock
 import com.CartersDev.crystechmod.block.entity.renderer.alloykiln.AlythumAlloyKilnBlockEntityRenderer;
 import com.CartersDev.crystechmod.block.entity.renderer.alloykiln.CrystalCoreAlloyKilnBlockEntityRenderer;
 import com.CartersDev.crystechmod.block.entity.renderer.alloykiln.VitricAlloyKilnBlockEntityRenderer;
+import com.CartersDev.crystechmod.block.entity.renderer.fluidSilo.FluidSiloRenderer;
 import com.CartersDev.crystechmod.block.entity.renderer.grinder.TiberiumGrinderBlockEntityRenderer;
 import com.CartersDev.crystechmod.block.entity.renderer.infuser.AlythumTiberiumInfuserBlockEntityRenderer;
 import com.CartersDev.crystechmod.block.entity.renderer.infuser.CrystalCoreTiberiumInfuserBlockEntityRenderer;
@@ -79,6 +80,8 @@ public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.ALYTHUM_ALLOY_KILN_BE.get(), AlythumAlloyKilnBlockEntityRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.VITRIC_ALLOY_KILN_BE.get(), VitricAlloyKilnBlockEntityRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.CRYSTAL_CORE_ALLOY_KILN_BE.get(), CrystalCoreAlloyKilnBlockEntityRenderer::new);
+
+        event.registerBlockEntityRenderer(ModBlockEntities.FLUID_SILO_BE.get(), FluidSiloRenderer::new);
 
         event.registerBlockEntityRenderer(ModBlockEntities.VITRIC_PORTAL_BE.get(), VitricPortalRenderer::new);
 

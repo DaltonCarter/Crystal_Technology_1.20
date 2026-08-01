@@ -1,0 +1,34 @@
+{
+  "type": "crystechmod:fluid_canister_crafting",
+  "category": "misc",
+  "fluid_requirement": {
+    "fluid": "crystechmod:liquid_protoculture_source",
+    "amount": 200
+  },
+  "key": {
+    "E": {
+      "item": "crystechmod:enigma_crystal"
+    },
+    "F": {
+      "item": "crystechmod:empty_focus"
+    },
+    "L": {
+      "item": "crystechmod:overcharged_laser_focus"
+    },
+    "I": {
+      "item": "crystechmod:aeries_crystal"
+    },
+    "P": {
+      "tag": "crystechmod:fluid_canisters"
+    }
+  },
+  "pattern": [
+    "ELE",
+    "PFI",
+    "ELE"
+  ],
+  "result": {
+    "item": "crystechmod:laser_focus_protoculture"
+  },
+  "show_notification": true
+}

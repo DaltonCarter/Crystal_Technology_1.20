@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "crystechmod:item/improved_empty_canister"
+  },
+  "overrides": [
+    { "predicate": { "crystechmod:fluid_type": 1.0 }, "model": "crystechmod:item/improved_lava_canister" },
+    { "predicate": { "crystechmod:fluid_type": 2.0 }, "model": "crystechmod:item/improved_viride_vitricium_canister" },
+    { "predicate": { "crystechmod:fluid_type": 3.0 }, "model": "crystechmod:item/improved_caeruleum_vitricium_canister" },
+    { "predicate": { "crystechmod:fluid_type": 4.0 }, "model": "crystechmod:item/improved_sanguineum_vitricium_canister" },
+    { "predicate": { "crystechmod:fluid_type": 5.0 }, "model": "crystechmod:item/improved_violaceum_vitricium_canister" },
+    { "predicate": { "crystechmod:fluid_type": 6.0 }, "model": "crystechmod:item/improved_protoculture_canister" }
+  ]
+}

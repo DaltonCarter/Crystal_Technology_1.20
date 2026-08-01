@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "crystechmod:cs_scaffold",
     "crystechmod:purple_core_block",

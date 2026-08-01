@@ -5,7 +5,24 @@
       "crystechmod:chime"
     ]
   },
-
+    "door_con": {
+      "subtitles": "sounds.crystechmod.door_con",
+      "sounds": [
+        "crystechmod:door_con"
+      ]
+    },
+    "auto_door_open": {
+      "subtitles": "sounds.crystechmod.auto_door_open",
+      "sounds": [
+        "crystechmod:auto_door_open"
+      ]
+    },
+  "auto_door_close": {
+    "subtitles": "sounds.crystechmod.auto_door_close",
+    "sounds": [
+      "crystechmod:auto_door_close"
+    ]
+  },
   "laser": {
     "subtitles": "sounds.crystechmod.laser",
     "sounds": [

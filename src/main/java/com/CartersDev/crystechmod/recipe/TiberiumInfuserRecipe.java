@@ -59,6 +59,9 @@ public class TiberiumInfuserRecipe implements Recipe<SimpleContainer> {
         return output.copy();
     }
 
+    public ItemStack getOutput() {
+        return this.output;
+    }
 
     @Override
     public NonNullList<Ingredient> getIngredients() {
@@ -106,7 +109,23 @@ public class TiberiumInfuserRecipe implements Recipe<SimpleContainer> {
 
         @Override
         public TiberiumInfuserRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
-            ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "output"));
+            JsonObject outputJson = GsonHelper.getAsJsonObject(pSerializedRecipe, "output");
+            net.minecraft.world.item.Item resultItem = net.minecraftforge.registries.ForgeRegistries.ITEMS.getValue(
+                    new ResourceLocation(outputJson.get("item").getAsString())
+            );
+            int count = outputJson.has("count") ? outputJson.get("count").getAsInt() : 1;
+
+            ItemStack output = new ItemStack(resultItem, count);
+            if (outputJson.has("nbt")) {
+                try {
+                    net.minecraft.nbt.CompoundTag nbt = net.minecraft.nbt.TagParser.parseTag(outputJson.get("nbt").getAsString());
+                    output.setTag(nbt);
+                } catch (com.mojang.brigadier.exceptions.CommandSyntaxException e) {
+                    CrystalTech.LOGGER.error("Failed to parse infuser recipe output NBT tag!", e);
+                }
+            }
+
+
 
             FluidStack fluidStack = new FluidStack(ForgeRegistries.FLUIDS.getValue(new ResourceLocation(pSerializedRecipe.get("fluidType").getAsString())),
                     pSerializedRecipe.get("fluidAmount").getAsInt());
@@ -155,7 +174,7 @@ public class TiberiumInfuserRecipe implements Recipe<SimpleContainer> {
         pBuffer.writeInt(pRecipe.craftTime);
         pBuffer.writeInt(pRecipe.energyAmount);
 
-        pBuffer.writeItemStack(pRecipe.getResultItem(null), false);
+        pBuffer.writeItem(pRecipe.getResultItem(null));
 
     }
 }

@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "crystechmod:end_enigma_ore",
     "crystechmod:enigma_ore",

@@ -1,0 +1,16 @@
+{
+  "type": "crystechmod:tiberium_infusing",
+  "craftTime": 400,
+  "energyAmount": 20,
+  "fluidAmount": 10000,
+  "fluidType": "minecraft:lava",
+  "ingredients": [
+    {
+      "item": "crystechmod:ultimate_empty_canister"
+    }
+  ],
+  "output": {
+    "item": "crystechmod:ultimate_empty_canister",
+    "nbt": "{Fluid:{Amount:10000,FluidName:\"minecraft:lava\"}}"
+  }
+}

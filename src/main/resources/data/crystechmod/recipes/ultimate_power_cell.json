@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MCM",
+    "APB",
+    "MCM"
+  ],
+  "key": {
+    "M": {
+      "item": "crystechmod:crystal_core_component"
+    },
+    "C": {
+      "item": "crystechmod:crystal_core_capacitor"
+    },
+    "B": {
+      "item": "crystechmod:crystal_core_circuit"
+    },
+    "A": {
+      "item": "crystechmod:crystal_core_control_circuit"
+    },
+    "P": {
+      "type": "crystechmod:empty_power_cell_filter",
+      "base": {
+        "item": "crystechmod:advanced_power_cell"
+      }
+    }
+  },
+  "result": {
+    "item": "crystechmod:ultimate_power_cell"
+  }
+}

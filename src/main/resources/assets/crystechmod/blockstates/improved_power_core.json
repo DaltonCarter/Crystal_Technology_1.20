@@ -1,0 +1,35 @@
+{
+  "variants": {
+
+    "facing=east,machine_core_lvl=2,has_charge=false": {
+      "model": "crystechmod:block/improved_power_core",
+      "y": 90
+    },
+    "facing=east,machine_core_lvl=2,has_charge=true": {
+      "model": "crystechmod:block/improved_power_core_charged",
+      "y": 90
+    },
+    "facing=north,machine_core_lvl=2,has_charge=false": {
+      "model": "crystechmod:block/improved_power_core"
+    },
+    "facing=north,machine_core_lvl=2,has_charge=true": {
+      "model": "crystechmod:block/improved_power_core_charged"
+    },
+    "facing=south,machine_core_lvl=2,has_charge=false": {
+      "model": "crystechmod:block/improved_power_core",
+      "y": 180
+    },
+    "facing=south,machine_core_lvl=2,has_charge=true": {
+      "model": "crystechmod:block/improved_power_core_charged",
+      "y": 180
+    },
+    "facing=west,machine_core_lvl=2,has_charge=false": {
+      "model": "crystechmod:block/improved_power_core",
+      "y": 270
+    },
+    "facing=west,machine_core_lvl=2,has_charge=true": {
+      "model": "crystechmod:block/improved_power_core_charged",
+      "y": 270
+    }
+  }
+}

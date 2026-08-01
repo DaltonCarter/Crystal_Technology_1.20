@@ -1,76 +1,33 @@
 {
   "variants": {
-    "face=ceiling,facing=east,powered=false": {
-      "model": "crystechmod:block/door_con"
-    },
-    "face=ceiling,facing=east,powered=true": {
-      "model": "crystechmod:block/door_con_on"
-    },
-    "face=ceiling,facing=north,powered=false": {
-      "model": "crystechmod:block/door_con"
-    },
-    "face=ceiling,facing=north,powered=true": {
-      "model": "crystechmod:block/door_con_on"
-    },
-    "face=ceiling,facing=south,powered=false": {
-      "model": "crystechmod:block/door_con"
-    },
-    "face=ceiling,facing=south,powered=true": {
-      "model": "crystechmod:block/door_con_on"
-    },
-    "face=ceiling,facing=west,powered=false": {
-      "model": "crystechmod:block/door_con"
-    },
-    "face=ceiling,facing=west,powered=true": {
-      "model": "crystechmod:block/door_con_on"
-    },
-    "face=floor,facing=east,powered=false": {
-      "model": "crystechmod:block/door_con"
-    },
-    "face=floor,facing=east,powered=true": {
-      "model": "crystechmod:block/door_con_on"
-    },
-    "face=floor,facing=north,powered=false": {
-      "model": "crystechmod:block/door_con"
-    },
-    "face=floor,facing=north,powered=true": {
-      "model": "crystechmod:block/door_con_on"
-    },
-    "face=floor,facing=south,powered=false": {
-      "model": "crystechmod:block/door_con"
-    },
-    "face=floor,facing=south,powered=true": {
-      "model": "crystechmod:block/door_con_on"
-    },
-    "face=floor,facing=west,powered=false": {
-      "model": "crystechmod:block/door_con"
-    },
-    "face=floor,facing=west,powered=true": {
-      "model": "crystechmod:block/door_con_on"
-    },
-    "face=wall,facing=east,powered=false": {
-      "model": "crystechmod:block/door_con"
-    },
-    "face=wall,facing=east,powered=true": {
-      "model": "crystechmod:block/door_con_on"
-    },
-    "face=wall,facing=north,powered=false": {
-      "model": "crystechmod:block/door_con"
-    },
-    "face=wall,facing=north,powered=true": {
-      "model": "crystechmod:block/door_con_on"
-    },
-    "face=wall,facing=south,powered=false": {
-      "model": "crystechmod:block/door_con"
-    },
-    "face=wall,facing=south,powered=true": {
-      "model": "crystechmod:block/door_con_on"
-    },
-    "face=wall,facing=west,powered=false": {
-      "model": "crystechmod:block/door_con"
-    },
-    "face=wall,facing=west,powered=true": {
-      "model": "crystechmod:block/door_con_on"
-    }
+    "face=ceiling,facing=north,powered=false": { "model": "crystechmod:block/door_con", "x": 90, "y": 180 },
+    "face=ceiling,facing=south,powered=false": { "model": "crystechmod:block/door_con", "x": 90 },
+    "face=ceiling,facing=east,powered=false":  { "model": "crystechmod:block/door_con", "x": 90, "y": 270 },
+    "face=ceiling,facing=west,powered=false":  { "model": "crystechmod:block/door_con", "x": 90, "y": 90 },
+
+    "face=wall,facing=north,powered=false":  { "model": "crystechmod:block/door_con" },
+    "face=wall,facing=south,powered=false":  { "model": "crystechmod:block/door_con", "y": 180 },
+    "face=wall,facing=east,powered=false":   { "model": "crystechmod:block/door_con", "y": 90 },
+    "face=wall,facing=west,powered=false":   { "model": "crystechmod:block/door_con", "y": 270 },
+
+    "face=floor,facing=north,powered=false": { "model": "crystechmod:block/door_con", "x": 270 },
+    "face=floor,facing=south,powered=false": { "model": "crystechmod:block/door_con", "x": 270, "y": 180 },
+    "face=floor,facing=east,powered=false":  { "model": "crystechmod:block/door_con", "x": 270, "y": 90 },
+    "face=floor,facing=west,powered=false":  { "model": "crystechmod:block/door_con", "x": 270, "y": 270 },
+
+    "face=ceiling,facing=north,powered=true":  { "model": "crystechmod:block/door_con_on", "x": 90, "y": 180 },
+    "face=ceiling,facing=south,powered=true":  { "model": "crystechmod:block/door_con_on", "x": 90 },
+    "face=ceiling,facing=east,powered=true":   { "model": "crystechmod:block/door_con_on", "x": 90, "y": 270 },
+    "face=ceiling,facing=west,powered=true":   { "model": "crystechmod:block/door_con_on", "x": 90, "y": 90 },
+
+    "face=wall,facing=north,powered=true":   { "model": "crystechmod:block/door_con_on" },
+    "face=wall,facing=south,powered=true":   { "model": "crystechmod:block/door_con_on", "y": 180 },
+    "face=wall,facing=east,powered=true":    { "model": "crystechmod:block/door_con_on", "y": 90 },
+    "face=wall,facing=west,powered=true":    { "model": "crystechmod:block/door_con_on", "y": 270 },
+
+    "face=floor,facing=north,powered=true":  { "model": "crystechmod:block/door_con_on", "x": 270 },
+    "face=floor,facing=south,powered=true":  { "model": "crystechmod:block/door_con_on", "x": 270, "y": 180 },
+    "face=floor,facing=east,powered=true":   { "model": "crystechmod:block/door_con_on", "x": 270, "y": 90 },
+    "face=floor,facing=west,powered=true":   { "model": "crystechmod:block/door_con_on", "x": 270, "y": 270 }
   }
 }

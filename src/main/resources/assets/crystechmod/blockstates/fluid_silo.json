@@ -1,0 +1,20 @@
+{
+  "variants": {
+
+    "facing=east,machine_core_lvl=1": {
+      "model": "crystechmod:block/fluid_silo",
+      "y": 90
+    },
+    "facing=north,machine_core_lvl=1": {
+      "model": "crystechmod:block/fluid_silo"
+    },
+    "facing=south,machine_core_lvl=1": {
+      "model": "crystechmod:block/fluid_silo",
+      "y": 180
+    },
+    "facing=west,machine_core_lvl=1": {
+      "model": "crystechmod:block/fluid_silo",
+      "y": 270
+    }
+  }
+}

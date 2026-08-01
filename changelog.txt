@@ -700,8 +700,8 @@ Posted By: Dalton Carter
 
 ------------------------------------------------------------------------------
 
-07/02/2026
-Version 0.6.12
+07/02/2026 - 07/31/2026
+Version 0.7.0
 Posted By: Dalton Carter
 
 -Fixed recipe handling for the infuser. I can now make Multiple recipes with the same base item, but different fluids.
@@ -711,12 +711,19 @@ Posted By: Dalton Carter
     eventually each will represent a larger fluid capacity, ammo value, and use duration.
 -Updated certain recipes to account for new Fluid Canister items, and crafting components.
 -Added Coal, Vitricium, Protoculture, and Crystal Core Matrices (Power Gen)
--Added Primitive, Standard, Advanced, Ultimate Power Grid (Power Storage)
--Added Basic, Improved, Advanced, and Ultimate Fluid Silos (Fluid Storage)
--Added Primitive, Standard, Advanced, and Ultimate Power Cells (Batteries)
+-Added Basic, Improved, Advanced, Ultimate Power Cores (Power Storage), Fluid Silos (Fluid Storage),
+    and Power Cells (Batteries).
+- Updated certain recipes to use ONLY the empty Power cell
 -Expanded existing crafting components to include Vitric Capacitor and Reservoir.
 -Started Adding Crystal Core Crafting Components, complete with recipes.*  **
 -Crystal Core Machinery Recipes added.*
+-Fixed neighbor update bug in all machines, now properly talks to pipes etc...
+-All machines updated to accept energy from Power cells.
+-All fluid machines updated to handle new Fluid Canisters
+-Added Perfected Red Core Crystal for the Crystal Core Matrix, it is a W.I.P outside of Power Generation.
+-Added two kinds of sliding "Auto Doors", will add more later, will animate for polish later.
+-Added Door Controller, it's a sci-fi themed lever, it works exactly the same just looks cooler.
+-Added Recipes for the Door Controller and Auto Doors.
 
 
 *Core Crystals and MK.3 Core Steel are still not legitimately obtainable in survival mode.

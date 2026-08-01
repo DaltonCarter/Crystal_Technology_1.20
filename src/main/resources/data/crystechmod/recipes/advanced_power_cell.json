@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MCM",
+    "BPB",
+    "MCM"
+  ],
+  "key": {
+    "M": {
+      "item": "crystechmod:illuminate_component"
+    },
+    "C": {
+      "item": "crystechmod:vitric_capacitor"
+    },
+    "B": {
+      "item": "crystechmod:vitric_circuit"
+    },
+    "P": {
+      "type": "crystechmod:empty_power_cell_filter",
+      "base": {
+        "item": "crystechmod:improved_power_cell"
+      }
+    }
+  },
+  "result": {
+    "item": "crystechmod:advanced_power_cell"
+  }
+}

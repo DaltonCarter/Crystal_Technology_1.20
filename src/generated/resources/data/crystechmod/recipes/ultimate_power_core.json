@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:crystal_core_circuit"
+    },
+    "C": {
+      "item": "crystechmod:advanced_power_core"
+    },
+    "D": {
+      "item": "crystechmod:crystal_core_control_circuit"
+    },
+    "G": {
+      "item": "crystechmod:crystal_core_component"
+    },
+    "I": {
+      "item": "crystechmod:mg_core_ingot"
+    },
+    "K": {
+      "item": "crystechmod:crystal_core_capacitor"
+    },
+    "M": {
+      "item": "crystechmod:crystal_core_machine_core"
+    }
+  },
+  "pattern": [
+    "ICI",
+    "GMG",
+    "BDK"
+  ],
+  "result": {
+    "item": "crystechmod:ultimate_power_core"
+  },
+  "show_notification": true
+}

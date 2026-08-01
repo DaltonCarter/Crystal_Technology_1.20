@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:tiberium_blue"
+    },
+    "G": {
+      "item": "crystechmod:tiberium"
+    },
+    "H": {
+      "type": "crystechmod:empty_canister_filter",
+      "base": {
+        "item": "crystechmod:improved_empty_canister"
+      }
+    },
+    "K": {
+      "item": "crystechmod:kryonic_reservoir"
+    },
+    "P": {
+      "item": "crystechmod:tiberium_purple"
+    },
+    "R": {
+      "item": "crystechmod:tiberium_red"
+    }
+  },
+  "pattern": [
+    "GHB",
+    "HKH",
+    "RHP"
+  ],
+  "result": {
+    "item": "crystechmod:vitric_reservoir"
+  },
+  "show_notification": true
+}

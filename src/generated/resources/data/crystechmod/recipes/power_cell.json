@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "crystechmod:basic_circuit"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "I": {
+      "item": "crystechmod:gundanium_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "pattern": [
+    "IGI",
+    "CRC",
+    "IGI"
+  ],
+  "result": {
+    "item": "crystechmod:power_cell"
+  },
+  "show_notification": true
+}

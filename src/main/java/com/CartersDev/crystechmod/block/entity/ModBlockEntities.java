@@ -7,6 +7,7 @@ import com.CartersDev.crystechmod.block.entity.alloykiln.AlloyKilnBlockEntity;
 import com.CartersDev.crystechmod.block.entity.alloykiln.AlythumAlloyKilnBlockEntity;
 import com.CartersDev.crystechmod.block.entity.alloykiln.CrystalCoreAlloyKilnBlockEntity;
 import com.CartersDev.crystechmod.block.entity.alloykiln.VitricAlloyKilnBlockEntity;
+import com.CartersDev.crystechmod.block.entity.fluidsilo.FluidSiloBlockEntity;
 import com.CartersDev.crystechmod.block.entity.grinder.TiberiumGrinderBlockEntity;
 import com.CartersDev.crystechmod.block.entity.infuser.AlythumTiberiumInfuserBlockEntity;
 import com.CartersDev.crystechmod.block.entity.infuser.CrystalCoreTiberiumInfuserBlockEntity;
@@ -17,10 +18,14 @@ import com.CartersDev.crystechmod.block.entity.macerator.CrystalCoreTiberiumMace
 import com.CartersDev.crystechmod.block.entity.macerator.TiberiumMaceratorBlockEntity;
 import com.CartersDev.crystechmod.block.entity.macerator.VitricTiberiumMaceratorBlockEntity;
 import com.CartersDev.crystechmod.block.entity.portal.VitricPortalBlockEntity;
+import com.CartersDev.crystechmod.block.entity.powercore.PowerCoreBlockEntity;
 import com.CartersDev.crystechmod.block.entity.poweredkiln.AlythumKilnBlockEntity;
 import com.CartersDev.crystechmod.block.entity.poweredkiln.CrystalCoreKilnBlockEntity;
 import com.CartersDev.crystechmod.block.entity.poweredkiln.PoweredKilnBlockEntity;
 import com.CartersDev.crystechmod.block.entity.poweredkiln.VitricKilnBlockEntity;
+import com.CartersDev.crystechmod.block.entity.powermatricies.CrystalCoreMatrixBlockEntity;
+import com.CartersDev.crystechmod.block.entity.powermatricies.ProtocultureMatrixBlockEntity;
+import com.CartersDev.crystechmod.block.entity.powermatricies.StirlingMaxtrixBlockEntity;
 import com.CartersDev.crystechmod.block.entity.powermatricies.VitriciumMatrixEntity;
 import com.CartersDev.crystechmod.block.entity.refinery.AlythumVitriciumRefineryBlockEntity;
 import com.CartersDev.crystechmod.block.entity.refinery.CrystalCoreVitriciumRefineryBlockEntity;
@@ -130,16 +135,39 @@ public static final RegistryObject<BlockEntityType<TiberiumGrinderBlockEntity>> 
             BLOCK_ENTITIES.register("crystal_core_vitricium_refinery_be", () -> BlockEntityType.Builder.of(
                     CrystalCoreVitriciumRefineryBlockEntity::new, ModBlocks.CRYSTAL_CORE_VITRICIUM_REFINERY.get()).build(null));
 
-
-
     public static final RegistryObject<BlockEntityType<VitricPortalBlockEntity>> VITRIC_PORTAL_BE =
             BLOCK_ENTITIES.register("vitric_portal_be", () -> BlockEntityType.Builder.of(
                     VitricPortalBlockEntity::new, ModBlocks.VITRIC_PORTAL.get()).build(null));
 
 
+    public static final RegistryObject<BlockEntityType<StirlingMaxtrixBlockEntity>> STIRLING_MATRIX_BE =
+            BLOCK_ENTITIES.register("stirling_matrix_be", () -> BlockEntityType.Builder.of(
+                    StirlingMaxtrixBlockEntity::new, ModBlocks.COAL_MATRIX.get()).build(null));
+
     public static final RegistryObject<BlockEntityType<VitriciumMatrixEntity>> VITRICIUM_MATRIX_BE =
             BLOCK_ENTITIES.register("vitricium_matrix_be", () -> BlockEntityType.Builder.of(
                     VitriciumMatrixEntity::new, ModBlocks.VITRICIUM_MATRIX.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<ProtocultureMatrixBlockEntity>> PROTOCULTURE_MATRIX_BE =
+            BLOCK_ENTITIES.register("protoculture_matrix_be", () -> BlockEntityType.Builder.of(
+                    ProtocultureMatrixBlockEntity::new, ModBlocks.PROTOCULTURE_MATRIX.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<CrystalCoreMatrixBlockEntity>> CRYSTAL_CORE_MATRIX_BE =
+            BLOCK_ENTITIES.register("crystal_core_matrix_be", () -> BlockEntityType.Builder.of(
+                    CrystalCoreMatrixBlockEntity::new, ModBlocks.CRYSTAL_CORE_MATRIX.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<FluidSiloBlockEntity>> FLUID_SILO_BE =
+            BLOCK_ENTITIES.register("fluid_silo_be", () -> BlockEntityType.Builder.of(
+                    FluidSiloBlockEntity::new, ModBlocks.FLUID_SILO.get(), ModBlocks.IMPROVED_FLUID_SILO.get(),
+                    ModBlocks.ADVANCED_FLUID_SILO.get(), ModBlocks.ULTIMATE_FLUID_SILO.get()).build(null));
+
+
+    public static final RegistryObject<BlockEntityType<PowerCoreBlockEntity>> POWER_CORE_BE =
+            BLOCK_ENTITIES.register("power_core_be", () -> BlockEntityType.Builder.of(
+                    PowerCoreBlockEntity::new, ModBlocks.POWER_CORE.get(), ModBlocks.IMPROVED_POWER_CORE.get(),
+                    ModBlocks.ADVANCED_POWER_CORE.get(), ModBlocks.ULTIMATE_POWER_CORE.get()).build(null));
 
 
     public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> MOD_SIGN =

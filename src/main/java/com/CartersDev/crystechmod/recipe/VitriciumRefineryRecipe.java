@@ -40,8 +40,15 @@ public class VitriciumRefineryRecipe implements Recipe<SimpleContainer> {
             return false;
         }
 
-
         return inputItems.get(0).test(pContainer.getItem(0));
+    }
+
+    public boolean matchesFluid(FluidStack tankFluid) {
+        if (this.fluidStack.isEmpty()) {
+            return tankFluid.isEmpty();
+        }
+        return tankFluid.getFluid() == this.fluidStack.getFluid()
+                && tankFluid.getAmount() >= this.fluidStack.getAmount();
     }
 
     @Override

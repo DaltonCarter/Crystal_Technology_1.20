@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:vitric_circuit"
+    },
+    "C": {
+      "item": "crystechmod:improved_fluid_silo"
+    },
+    "G": {
+      "item": "crystechmod:illuminate_component"
+    },
+    "I": {
+      "item": "crystechmod:proto_steel"
+    },
+    "M": {
+      "item": "crystechmod:vitric_machine_core"
+    },
+    "R": {
+      "item": "crystechmod:vitric_reservoir"
+    }
+  },
+  "pattern": [
+    "ICI",
+    "GMG",
+    "BIR"
+  ],
+  "result": {
+    "item": "crystechmod:advanced_fluid_silo"
+  },
+  "show_notification": true
+}

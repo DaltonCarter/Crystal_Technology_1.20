@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "tag": "minecraft:buttons"
+    },
+    "C": {
+      "item": "crystechmod:harmonic_circuit"
+    },
+    "H": {
+      "item": "crystechmod:harmonic_relay"
+    },
+    "I": {
+      "item": "crystechmod:alythum_ingot"
+    }
+  },
+  "pattern": [
+    "IHI",
+    "BCB",
+    "IHI"
+  ],
+  "result": {
+    "item": "crystechmod:door_con"
+  },
+  "show_notification": true
+}

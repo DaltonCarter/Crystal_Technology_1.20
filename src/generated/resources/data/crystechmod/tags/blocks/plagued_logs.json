@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "crystechmod:plagued_log",
     "crystechmod:plagued_wood",

@@ -4,7 +4,7 @@
 	"render_type": "minecraft:translucent_no_crumbling",
 	"textures": {
 		"1": "crystechmod:block/tiberium_infuser_texture",
-		"particle": "crystechmod:block/tiberium_infuser_texture"
+		"particle": "crystechmod:block/kiln_side"
 	},
 	"elements": [
 		{

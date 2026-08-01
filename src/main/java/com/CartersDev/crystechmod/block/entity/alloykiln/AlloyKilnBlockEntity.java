@@ -4,7 +4,7 @@ package com.CartersDev.crystechmod.block.entity.alloykiln;
 import com.CartersDev.crystechmod.block.custom.machines.AlloyKilnBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.AlloyKilnRecipe;
-import com.CartersDev.crystechmod.screen.alloyKilnMenu.AlloyKilnMenu;
+import com.CartersDev.crystechmod.screen.AlloyKiln.alloyKilnMenu.AlloyKilnMenu;
 import com.CartersDev.crystechmod.util.*;
 import com.CartersDev.crystechmod.util.inventory.InventoryDirectionEntry;
 import com.CartersDev.crystechmod.util.inventory.InventoryDirectionWrapper;
@@ -47,7 +47,7 @@ import static com.CartersDev.crystechmod.block.custom.machines.AlloyKilnBlock.WO
 
 
 
-    /* For Multiple inputs:
+     /* For Multiple inputs:
 You need to make a List<Ingredient> instead of just an Ingredient. The modification should be similar to the thing
 we did in the ModArmorItem class. You change it to a NonNullList<Ingredient> and modify the serializeRecipeData method
 as such:
@@ -86,12 +86,9 @@ public class AlloyKilnBlockEntity extends BlockEntity implements MenuProvider {
 
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
-            Optional<AlloyKilnRecipe> recipe = getCurrentRecipe();
-
-
             return switch (slot) {
-                case 0,1,2 -> stack.is(ModTags.Items.ALLOYING_INPUT);
-                case 3 -> stack.getItem() == Items.REDSTONE;
+                case 0,1,2 -> true;
+                case 3 -> stack.getItem() == Items.REDSTONE || stack.getCapability(ForgeCapabilities.ENERGY).isPresent();
                 case 4 -> stack.is(ModTags.Items.ALLOYING_RESULT);
                 default -> super.isItemValid(slot, stack);
             };
@@ -234,6 +231,15 @@ public class AlloyKilnBlockEntity extends BlockEntity implements MenuProvider {
         super.onLoad();
         lazyItemHandler = LazyOptional.of(() -> itemHandler);
         lazyEnergyHandler = LazyOptional.of(() -> ENERGY_STORAGE);
+
+        if (this.level != null && !this.level.isClientSide()) {
+            for (Direction direction : Direction.values()) {
+                BlockPos neighborPos = this.worldPosition.relative(direction);
+
+
+                this.level.neighborChanged(neighborPos, this.getBlockState().getBlock(), this.worldPosition);
+            }
+        }
     }
 
     @Override
@@ -275,8 +281,6 @@ public class AlloyKilnBlockEntity extends BlockEntity implements MenuProvider {
             if (hasProgressFinished()) {
                 craftItem();
                 resetProgress();
-
-
             }
 
         }else {
@@ -288,17 +292,38 @@ public class AlloyKilnBlockEntity extends BlockEntity implements MenuProvider {
 
     private void extractEnergy() {
         this.ENERGY_STORAGE.extractEnergy(energyAmount, false);
-
     }
 
     private void fillEnergy() {
+
+        ItemStack powerCell = this.itemHandler.getStackInSlot(3);
+        if (powerCell.isEmpty()) {
+            return;
+        }
+
+        powerCell.getCapability(ForgeCapabilities.ENERGY).ifPresent(powerCellEnergy -> {
+            if (powerCellEnergy.canExtract()) {
+                int avaliableSpace = this.ENERGY_STORAGE.getMaxEnergyStored() - this.ENERGY_STORAGE.getEnergyStored();
+                if(avaliableSpace > 0) {
+                    int potentialDrain = powerCellEnergy.extractEnergy(avaliableSpace, true);
+
+
+                    int actualDrain = this.ENERGY_STORAGE.receiveEnergy(potentialDrain, true);
+
+                    if (actualDrain > 0) {
+
+                        powerCellEnergy.extractEnergy(actualDrain, false);
+                        this.ENERGY_STORAGE.receiveEnergy(actualDrain, false);
+                    }
+                }
+            }
+        });
+
         if(hasEnergyItemInSlot(ENERGY_ITEM_SLOT) && ENERGY_STORAGE.getEnergyStored() < ENERGY_STORAGE.getMaxEnergyStored() - 4000 ) {
             for(int i = 0; i < 40; i++) {
                 this.ENERGY_STORAGE.receiveEnergy(100, false);
             }
             consumeFuel();
-
-
         }
     }
 
@@ -317,22 +342,18 @@ public class AlloyKilnBlockEntity extends BlockEntity implements MenuProvider {
         ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
 
 
-
-        this.itemHandler.extractItem(INPUT_SLOT, recipe.get().getInputItems().get(0).count(), false);
-        this.itemHandler.extractItem(INPUT_SLOT_2, recipe.get().getInputItems().get(1).count(), false);
-        this.itemHandler.extractItem(INPUT_SLOT_3, recipe.get().getInputItems().get(2).count(), false);
+        this.itemHandler.extractItem(INPUT_SLOT, 1, false);
+        this.itemHandler.extractItem(INPUT_SLOT_2, 1, false);
+        this.itemHandler.extractItem(INPUT_SLOT_3, 1, false);
 
         this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
                 this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount()));
 
     }
 
-
     private void resetProgress() {
         this.progress = 0;
     }
-
-
 
     private boolean hasProgressFinished() {
         return this.progress >= this.max_progress;

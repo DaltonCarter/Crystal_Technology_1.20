@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:stirling_power_generation",
+  "burnTime": 300,
+  "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "minecraft:boats"
+      }
+    }
+  ],
+  "totalEnergy": 12000
+}

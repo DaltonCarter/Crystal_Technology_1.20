@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:vitric_circuit"
+    },
+    "C": {
+      "item": "crystechmod:improved_power_core"
+    },
+    "G": {
+      "item": "crystechmod:illuminate_component"
+    },
+    "I": {
+      "item": "crystechmod:illyrim_ingot"
+    },
+    "K": {
+      "item": "crystechmod:vitric_capacitor"
+    },
+    "M": {
+      "item": "crystechmod:vitric_machine_core"
+    }
+  },
+  "pattern": [
+    "ICI",
+    "GMG",
+    "BIK"
+  ],
+  "result": {
+    "item": "crystechmod:advanced_power_core"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,29 @@
+{
+  "type": "crystechmod:alloy_smelting",
+  "craftTime": 250,
+  "energyAmount": 20,
+  "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:mg_core_blend"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:yellow_core_crystal"
+      }
+    },
+    {
+      "count": 3,
+      "ingredient": {
+        "item": "minecraft:iron_ingot"
+      }
+    }
+  ],
+  "output": {
+    "count": 3,
+    "item": "crystechmod:gundanium_ingot"
+  }
+}

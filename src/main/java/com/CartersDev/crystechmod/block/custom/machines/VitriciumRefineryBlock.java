@@ -16,7 +16,9 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -105,6 +107,7 @@ public class VitriciumRefineryBlock extends BaseEntityBlock {
     }
 
 
+
     /* BLOCK ENTITY LOGIC */
 
     @Override
@@ -117,6 +120,15 @@ public class VitriciumRefineryBlock extends BaseEntityBlock {
 
         if(pState.getBlock() != pNewState.getBlock()){
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
+
+            if (!pLevel.isClientSide()) {
+                for (Direction direction : Direction.values()) {
+                    BlockPos neighborPos = pPos.relative(direction);
+                    pLevel.neighborChanged(neighborPos, this, pPos);
+                }
+
+            }
+
             if(blockEntity instanceof VitriciumRefineryBlockEntity) {
                 ((VitriciumRefineryBlockEntity) blockEntity).drops();
             } else if (blockEntity instanceof AlythumVitriciumRefineryBlockEntity) {
@@ -127,9 +139,10 @@ public class VitriciumRefineryBlock extends BaseEntityBlock {
                 ((CrystalCoreVitriciumRefineryBlockEntity) blockEntity).drops();
 
             }
+            super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
+        }else {
+            super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
         }
-
-        super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
     }
 
     @Override
@@ -138,15 +151,19 @@ public class VitriciumRefineryBlock extends BaseEntityBlock {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof VitriciumRefineryBlockEntity) {
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (VitriciumRefineryBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else if (entity instanceof AlythumVitriciumRefineryBlockEntity) {
 //                System.out.println("WHAT");
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (AlythumVitriciumRefineryBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else if (entity instanceof VitricVitriciumRefineryBlockEntity) {
 //                System.out.println("THE");
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (VitricVitriciumRefineryBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else if (entity instanceof CrystalCoreVitriciumRefineryBlockEntity) {
 //                System.out.println("HECK");
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), (CrystalCoreVitriciumRefineryBlockEntity) entity, pPos);
+                return InteractionResult.CONSUME;
             } else {
                 throw new IllegalStateException("The Container Provider is AWOL!");
             }

@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:stirling_power_generation",
+  "burnTime": 75,
+  "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "item": "crystechmod:plagued_bow"
+      }
+    }
+  ],
+  "totalEnergy": 3000
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "crystechmod:item/ultimate_power_cell"
+  },
+  "overrides": [
+    { "predicate": { "crystechmod:energy_level": 0.01 }, "model": "crystechmod:item/ultimate_power_cell_partial" },
+    { "predicate": { "crystechmod:energy_level": 0.51 }, "model": "crystechmod:item/ultimate_power_cell_full" }
+  ]
+}

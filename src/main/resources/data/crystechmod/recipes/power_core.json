@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IPI",
+    "RMR",
+    "ICI"
+  ],
+  "key": {
+    "M": {
+      "item": "crystechmod:gundanium_machine_core"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "C": {
+      "item": "crystechmod:basic_circuit"
+    },
+    "I": {
+      "item": "crystechmod:gundanium_ingot"
+    },
+    "P": {
+      "type": "crystechmod:empty_power_cell_filter",
+      "base": {
+        "item": "crystechmod:power_cell"
+      }
+    }
+  },
+  "result": {
+    "item": "crystechmod:power_core"
+  }
+}

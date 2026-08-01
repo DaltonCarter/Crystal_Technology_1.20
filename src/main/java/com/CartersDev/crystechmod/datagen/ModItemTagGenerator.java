@@ -58,9 +58,28 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.copy(ModTags.Blocks.SMELTABLE, ModTags.Items.SMELTABLE);
         this.copy(ModTags.Blocks.SMELTING_RESULT, ModTags.Items.SMELTING_RESULT);
         this.copy(ModTags.Blocks.CORE_LAMP, ModTags.Items.CORE_LAMP);
+        this.copy(BlockTags.MINEABLE_WITH_AXE, ModTags.Items.MINEABLE_WITH_AXE);
 
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
 
+        this.tag(ModTags.Items.FLUID_CANISTERS)
+                .add(
+                        ModItems.EMPTY_CANISTER.get(),
+                        ModItems.IMPROVED_EMPTY_CANISTER.get(),
+                        ModItems.ADVANCED_EMPTY_CANISTER.get(),
+                        ModItems.ULTIMATE_EMPTY_CANISTER.get()
+                );
+
+        this.tag(ModTags.Items.CORE_CRYSTALS)
+                .add(
+                        ModItems.GREEN_CORE_CRYSTAL.get(),
+                        ModItems.BLUE_CORE_CRYSTAL.get(),
+                        ModItems.YELLOW_CORE_CRYSTAL.get(),
+                        ModItems.ORANGE_CORE_CRYSTAL.get(),
+                        ModItems.RED_CORE_CRYSTAL.get(),
+                        ModItems.PURPLE_CORE_CRYSTAL.get()
+
+                );
 
         this.tag(ModTags.Items.VEGGIES)
                 .add(ModItems.SABER_CORN.get(),
@@ -83,6 +102,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.LASER_FOCUS_POISON.get()
 
                 );
+
+        this.tag(ModTags.Items.COALS)
+                .add(Items.COAL,
+                        Items.CHARCOAL);
 
         this.tag(ModTags.Items.FRUITS)
                 .add(ModItems.HEL_FRUIT.get(),

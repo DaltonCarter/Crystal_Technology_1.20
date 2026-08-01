@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MCM",
+    "BPB",
+    "MCM"
+  ],
+  "key": {
+    "M": {
+      "item": "crystechmod:harmonic_relay"
+    },
+    "C": {
+      "item": "crystechmod:kryonic_capacitor"
+    },
+    "B": {
+      "item": "crystechmod:harmonic_circuit"
+    },
+    "P": {
+      "type": "crystechmod:empty_power_cell_filter",
+      "base": {
+        "item": "crystechmod:power_cell"
+      }
+    }
+  },
+  "result": {
+    "item": "crystechmod:improved_power_cell"
+  }
+}

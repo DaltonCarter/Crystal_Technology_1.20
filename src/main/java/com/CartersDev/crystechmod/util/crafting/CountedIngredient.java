@@ -17,7 +17,7 @@ import java.util.stream.Stream;
 
 /*
 Credits to Team-EnderIO for this Work. Their code is Public Domain:
-https://github.com/Team-EnderIO/EnderIO/blob/l10n_dev/1.20.1/LICENSE.txt
+https://github.com/Team-EnderIO/EnderIO/blob/1.20.1/LICENSE.txt
  */
 
 /**

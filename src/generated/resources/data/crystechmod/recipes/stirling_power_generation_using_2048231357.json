@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:stirling_power_generation",
+  "burnTime": 25,
+  "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "minecraft:wooden_buttons"
+      }
+    }
+  ],
+  "totalEnergy": 1000
+}

@@ -2,14 +2,19 @@ package com.CartersDev.crystechmod.block.custom.machines;
 
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.block.entity.grinder.TiberiumGrinderBlockEntity;
+import com.CartersDev.crystechmod.block.entity.powermatricies.StirlingMaxtrixBlockEntity;
 import com.CartersDev.crystechmod.block.entity.powermatricies.VitriciumMatrixEntity;
 import com.CartersDev.crystechmod.util.ModBlockstateProperties;
 import com.CartersDev.crystechmod.util.VitriciumMatrixFluids;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
@@ -29,8 +34,8 @@ public class VitriciumMatrixBlock extends PowerMatrixBlock {
 
 
     public VitriciumMatrixBlock(Properties properties) {
-        super(3, properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(FUEL, VitriciumMatrixFluids.EMPTY).setValue(MACHINE_CORE_LVL, 3));
+        super(2, properties);
+        this.registerDefaultState(this.stateDefinition.any().setValue(FUEL, VitriciumMatrixFluids.EMPTY).setValue(MACHINE_CORE_LVL, 2));
     }
 
     @Override
@@ -40,8 +45,34 @@ public class VitriciumMatrixBlock extends PowerMatrixBlock {
 
     }
 
+    @Override
+    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
+        super.animateTick(pState, pLevel, pPos, pRandom);
+    }
+
 
     //Entity Logic:
+
+    @Override
+    public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pMovedByPiston) {
+        if(pState.getBlock() != pNewState.getBlock()) {
+            BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
+
+            if (!pLevel.isClientSide()) {
+                for (Direction direction : Direction.values()) {
+                    BlockPos neighborPos = pPos.relative(direction);
+                    pLevel.neighborChanged(neighborPos, this, pPos);
+                }
+            }
+
+            if(blockEntity instanceof VitriciumMatrixEntity) {
+                ((VitriciumMatrixEntity) blockEntity).drops();
+            }
+            super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
+        }else {
+            super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
+        }
+    }
 
     @Override
     public RenderShape getRenderShape(BlockState pState) {
@@ -60,7 +91,7 @@ public class VitriciumMatrixBlock extends PowerMatrixBlock {
             }
         }
 
-        return InteractionResult.sidedSuccess(pLevel.isClientSide());
+        return InteractionResult.CONSUME;
     }
 
     @Override

@@ -67,6 +67,7 @@
   "item.crystechmod.vitric_circuit": "Vitric Circuit",
   "item.crystechmod.purple_core_crystal": "Purple Core Crystal",
   "item.crystechmod.red_core_crystal": "Red Core Crystal",
+  "item.crystechmod.stable_red_core_crystal": "Perfected Red Core Crystal",
   "item.crystechmod.blue_core_crystal": "Blue Core Crystal",
   "item.crystechmod.green_core_crystal": "Green Core Crystal",
   "item.crystechmod.yellow_core_crystal": "Yellow Core Crystal",
@@ -193,37 +194,17 @@
   "item.crystechmod.laser_focus_protoculture": "Protoculture Focus Cell",
   "item.crystechmod.laser_focus_poison": "Toxic Focus Cell",
 
-  "item.crystechmod.empty_canister": "Empty Canister",
-  "item.crystechmod.lava_canister": "Lava Canister",
-  "item.crystechmod.viride_vitricium_canister": "Riparius Canister",
-  "item.crystechmod.caeruleum_vitricium_canister": "Vinifera Canister",
-  "item.crystechmod.sanguineum_vitricium_canister": "Cruentus Canister",
-  "item.crystechmod.violaceum_vitricium_canister": "Aboreus Canister",
-  "item.crystechmod.protoculture_canister": "Protoculture Canister",
+  "item.crystechmod.empty_canister": "Fluid Canister",
+  "item.crystechmod.improved_empty_canister": "Improved Fluid Canister",
+  "item.crystechmod.advanced_empty_canister": "Advanced Fluid Canister",
+  "item.crystechmod.ultimate_empty_canister": "Ultimate Fluid Canister",
 
-  "item.crystechmod.improved_empty_canister": "Improved Empty Canister",
-  "item.crystechmod.improved_lava_canister": "Improved Lava Canister",
-  "item.crystechmod.improved_viride_vitricium_canister": "Improved Riparius Canister",
-  "item.crystechmod.improved_caeruleum_vitricium_canister": "Improved Vinifera Canister",
-  "item.crystechmod.improved_sanguineum_vitricium_canister": "Improved Cruentus Canister",
-  "item.crystechmod.improved_violaceum_vitricium_canister": "Improved Aboreus Canister",
-  "item.crystechmod.improved_protoculture_canister": "Improved Protoculture Canister",
+  "item.crystechmod.power_cell": "Power Cell",
+  "item.crystechmod.improved_power_cell": "Improved Power Cell",
+  "item.crystechmod.advanced_power_cell": "Advanced Power Cell",
+  "item.crystechmod.ultimate_power_cell": "Ultimate Power Cell",
 
-  "item.crystechmod.advanced_empty_canister": "Advanced Empty Canister",
-  "item.crystechmod.advanced_lava_canister": "Advanced Lava Canister",
-  "item.crystechmod.advanced_viride_vitricium_canister": "Advanced Riparius Canister",
-  "item.crystechmod.advanced_caeruleum_vitricium_canister": "Advanced Vinifera Canister",
-  "item.crystechmod.advanced_sanguineum_vitricium_canister": "Advanced Cruentus Canister",
-  "item.crystechmod.advanced_violaceum_vitricium_canister": "Advanced Aboreus Canister",
-  "item.crystechmod.advanced_protoculture_canister": "Advanced Protoculture Canister",
 
-  "item.crystechmod.ultimate_empty_canister": "Ultimate Empty Canister",
-  "item.crystechmod.ultimate_lava_canister": "Ultimate Lava Canister",
-  "item.crystechmod.ultimate_viride_vitricium_canister": "Ultimate Riparius Canister",
-  "item.crystechmod.ultimate_caeruleum_vitricium_canister": "Ultimate Vinifera Canister",
-  "item.crystechmod.ultimate_sanguineum_vitricium_canister": "Ultimate Cruentus Canister",
-  "item.crystechmod.ultimate_violaceum_vitricium_canister": "Ultimate Aboreus Canister",
-  "item.crystechmod.ultimate_protoculture_canister": "Ultimate Protoculture Canister",
 
   "item.crystechmod.primitive_vitric_transmitter": "Portable Matter Transmitter",
 
@@ -325,6 +306,9 @@
   "block.crystechmod.plagued_door": "Plagued Door",
   "block.crystechmod.plagued_trapdoor": "Plagued Trapdoor",
   "block.crystechmod.iron_plating_door": "Iron Plated Door",
+  "block.crystechmod.auto_door": "Auto-Door",
+  "block.crystechmod.solid_auto_door": "Auto Panel Door",
+  "block.crystechmod.door_con": "Door Controller",
   "block.crystechmod.iron_plating_trapdoor": "Iron Plated Trapdoor",
   "block.crystechmod.ember_oak_planks": "Ember Oak Planks",
   "block.crystechmod.ember_oak_fence": "Ember Oak Fence",
@@ -1064,11 +1048,9 @@
   "block.crystechmod.molten_red_tiberium_block": "Molten Cruentus",
   "block.crystechmod.molten_purple_tiberium_block": "Molten Aboreus",
 
-
   "block.crystechmod.vitric_transporter": "Matter Transmission Frame",
   "block.crystechmod.vitric_transporter_side1": "Matter Transmission Frame Left",
   "block.crystechmod.vitric_transporter_side2": "Matter Transmission Frame Right",
-
 
   "block.crystechmod.purple_core_block": "Purple Core Crystal Case",
   "block.crystechmod.red_core_block": "Red Core Crystal Case",
@@ -1077,7 +1059,17 @@
   "block.crystechmod.yellow_core_block": "Yellow Core Crystal Case",
   "block.crystechmod.orange_core_block": "Orange Core Crystal Case",
 
-  "block.crystechmod.coal_matrix": "Coal Matrix",
+  "block.crystechmod.power_core": "Power Core",
+  "block.crystechmod.improved_power_core": "Improved Power Core",
+  "block.crystechmod.advanced_power_core": "Advanced Power Core",
+  "block.crystechmod.ultimate_power_core": "Ultimate Power Core",
+
+  "block.crystechmod.fluid_silo": "Fluid Silo",
+  "block.crystechmod.improved_fluid_silo": "Improved Fluid Silo",
+  "block.crystechmod.advanced_fluid_silo": "Advanced Fluid Silo",
+  "block.crystechmod.ultimate_fluid_silo": "Ultimate Fluid Silo",
+
+  "block.crystechmod.coal_matrix": "Stirling Matrix",
   "block.crystechmod.vitricium_matrix": "Tiberium Matrix",
   "block.crystechmod.protoculture_matrix": "Protoculture Matrix",
   "block.crystechmod.crystal_core_matrix": "Crystal Core Matrix",
@@ -1087,10 +1079,8 @@
 
   "enchantment.crystechmod.vitric_harvester": "Vitric Harvester",
 
-
   "enchantment.crystechmod.power_strike": "Power Strike",
   "enchantment.crystechmod.mortal_strike": "Mortal Strike",
-
 
   "enchantment.crystechmod.efficient_cells": "Efficient Cells",
   "enchantment.crystechmod.beam_intensity": "Beam Intensity",
@@ -1106,8 +1096,6 @@
   "enchantment.crystechmod.beam_intensity.desc": "Increases damage of Laser shots.",
   "enchantment.crystechmod.searing_laser.desc": "Laser shots ignite target.",
   "enchantment.crystechmod.volatile_laser.desc": "Laser shots explode.",
-
-
 
   "effect.crystechmod.freeze": "Freeze",
   "effect.crystechmod.slimey_effect": "Slimey",
@@ -1126,25 +1114,16 @@
   "effect.crystechmod.vitricium_resistance_3": "Advanced Vitricium Resistance",
   "effect.crystechmod.vitricium_resistance_4": "Complete Vitricium Resistance",
 
-
-
-
-
-
   "tootip.crystechmod.firestone_wall.tooltip": "For those times when things REALLY need to stay off your lawn.",
   "tootip.crystechmod.large_sword.tooltip": "Can also block incoming attacks like a shield.",
 
   "crystechmod.tooltip.liquid.amount.with.capacity": "%s / %s mB",
   "crystechmod.tooltip.liquid.amount": "%s mB",
 
-
-
   "entity.minecraft.villager.crystechmod.vitric_gatherer": "Vitric Gatherer",
   "entity.crystechmod.rhino": "Impaler Rhino",
   "entity.crystechmod.vitric_sheep": "Vitric Sheep",
   "entity.crystechmod.vitric_cow": "Vitric Cow",
-
-
 
   "biome.crystechmod.ember_glow_forest": "Ember Glow Forest",
   "biome.crystechmod.amber_grove": "Amber Grove",
@@ -1205,8 +1184,6 @@
   "biome.crystechmod.crystalline_hills": "Crystalline Hills",
   "biome.crystechmod.crystalline_plateau": "Crystalline Plateau",
 
-
-
   "sounds.crystechmod.chime": "Alert Chime",
   "sounds.crystechmod.sound_block_break": "Sound Block Broken",
   "sounds.crystechmod.sound_block_fall": "Sound Block Fallen On",
@@ -1214,16 +1191,12 @@
   "sounds.crystechmod.sound_block_place": "Sound Block Placed",
   "sounds.crystechmod.sound_block_step": "Sound Block Stepped On",
 
-
-
   "fluid_type.crystechmod.tiberium_water_fluid": "Tiberium Plagued Water",
   "fluid_type.crystechmod.molten_tiberium_fluid": "Molten Riparius Tiberium",
   "fluid_type.crystechmod.molten_blue_tiberium_fluid": "Molten Vinifera Tiberium",
   "fluid_type.crystechmod.molten_red_tiberium_fluid": "Molten Cruentus Tiberium",
   "fluid_type.crystechmod.molten_purple_tiberium_fluid": "Molten Aboreus Tiberium",
   "fluid_type.crystechmod.liquid_protoculture_fluid": "Liquid Protoculture",
-
-
 
   "creativetab.crystal_technology_tab": "Crystal Technology Ingredients",
   "creativetab.crystal_technology_music_tab": "Crystal Technology Music",

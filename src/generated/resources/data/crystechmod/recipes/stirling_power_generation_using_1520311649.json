@@ -1,0 +1,13 @@
+{
+  "type": "crystechmod:stirling_power_generation",
+  "burnTime": 50,
+  "ingredients": [
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "minecraft:wooden_pressure_plates"
+      }
+    }
+  ],
+  "totalEnergy": 2000
+}

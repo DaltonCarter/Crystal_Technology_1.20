@@ -4,7 +4,7 @@ package com.CartersDev.crystechmod.block.entity.refinery;
 import com.CartersDev.crystechmod.block.custom.machines.VitriciumRefineryBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.VitriciumRefineryRecipe;
-import com.CartersDev.crystechmod.screen.vitriciumRefineryMenu.VitricVitriciumRefineryMenu;
+import com.CartersDev.crystechmod.screen.VitriciumRefinery.vitriciumRefineryMenu.VitricVitriciumRefineryMenu;
 import com.CartersDev.crystechmod.util.*;
 import com.CartersDev.crystechmod.util.inventory.InventoryDirectionEntry;
 import com.CartersDev.crystechmod.util.inventory.InventoryDirectionWrapper;
@@ -63,7 +63,7 @@ public class VitricVitriciumRefineryBlockEntity extends BlockEntity implements M
             return switch (slot) {
                 case 0 -> true;
                 case 1 -> stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent();
-                case 2 -> stack.getItem() == Items.REDSTONE;
+                case 2 -> stack.getItem() == Items.REDSTONE || stack.getCapability(ForgeCapabilities.ENERGY).isPresent();
                 default -> super.isItemValid(slot, stack);
             };
         }
@@ -276,6 +276,14 @@ private final FluidTank OUTPUT_FLUID_TANK = createOutputFluidTank();
         lazyFluidHandler = LazyOptional.of(() -> FLUID_TANK);
         lazyOutputFluidHandler = LazyOptional.of(() -> OUTPUT_FLUID_TANK);
 
+        if (this.level != null && !this.level.isClientSide()) {
+            for (Direction direction : Direction.values()) {
+                BlockPos neighborPos = this.worldPosition.relative(direction);
+
+
+                this.level.neighborChanged(neighborPos, this.getBlockState().getBlock(), this.worldPosition);
+            }
+        }
     }
 
     @Override
@@ -399,13 +407,35 @@ private final FluidTank OUTPUT_FLUID_TANK = createOutputFluidTank();
     }
 
     private void fillEnergy() {
+
+        ItemStack powerCell = this.itemHandler.getStackInSlot(2);
+        if (powerCell.isEmpty()) {
+            return;
+        }
+
+        powerCell.getCapability(ForgeCapabilities.ENERGY).ifPresent(powerCellEnergy -> {
+            if (powerCellEnergy.canExtract()) {
+                int avaliableSpace = this.ENERGY_STORAGE.getMaxEnergyStored() - this.ENERGY_STORAGE.getEnergyStored();
+                if(avaliableSpace > 0) {
+                    int potentialDrain = powerCellEnergy.extractEnergy(avaliableSpace, true);
+
+
+                    int actualDrain = this.ENERGY_STORAGE.receiveEnergy(potentialDrain, true);
+
+                    if (actualDrain > 0) {
+
+                        powerCellEnergy.extractEnergy(actualDrain, false);
+                        this.ENERGY_STORAGE.receiveEnergy(actualDrain, false);
+                    }
+                }
+            }
+        });
+
         if(hasEnergyItemInSlot(POWER_SLOT) && ENERGY_STORAGE.getEnergyStored() < ENERGY_STORAGE.getMaxEnergyStored() - 4000 ) {
             for(int i = 0; i < 40; i++) {
                 this.ENERGY_STORAGE.receiveEnergy(100, false);
             }
             consumeFuel();
-
-
         }
     }
 
@@ -481,12 +511,20 @@ private final FluidTank OUTPUT_FLUID_TANK = createOutputFluidTank();
     }
 
     private Optional<VitriciumRefineryRecipe> getCurrentRecipe() {
+        if (this.level == null) return Optional.empty();
+
         SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
-        for(int i = 0; i < this.itemHandler.getSlots(); i++) {
+        for (int i = 0; i < this.itemHandler.getSlots(); i++) {
             inventory.setItem(i, this.itemHandler.getStackInSlot(i));
         }
 
-        return this.level.getRecipeManager().getRecipeFor(VitriciumRefineryRecipe.Type.INSTANCE, inventory, level);
+        FluidStack inputTankFluid = this.FLUID_TANK.getFluid();
+
+        return this.level.getRecipeManager().getAllRecipesFor(VitriciumRefineryRecipe.Type.INSTANCE)
+                .stream()
+                .map(recipe -> (VitriciumRefineryRecipe) recipe)
+                .filter(recipe -> recipe.matches(inventory, level) && recipe.matchesFluid(inputTankFluid)) // DUAL LOCK!
+                .findFirst();
     }
 
 

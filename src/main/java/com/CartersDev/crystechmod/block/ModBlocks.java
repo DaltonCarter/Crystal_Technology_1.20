@@ -24,6 +24,7 @@ import com.CartersDev.crystechmod.fluid.ModFluids;
 import com.CartersDev.crystechmod.item.ModItems;
 import com.CartersDev.crystechmod.particle.ModParticles;
 import com.CartersDev.crystechmod.sound.ModSounds;
+import com.CartersDev.crystechmod.util.ModBlockSetTypes;
 import com.CartersDev.crystechmod.util.ModWoodTypes;
 import com.CartersDev.crystechmod.worldgen.tree.DeadTreeGrower;
 import com.CartersDev.crystechmod.worldgen.tree.EmberTreeGrower;
@@ -61,8 +62,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> TEST_BLOCK = registerBlock("test_block",
             () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
 
-//    public static final RegistryObject<Block> DOOR_CON = registerBlock("door_con",
-//            () -> new DoorControllerBlock(BlockBehaviour.Properties.copy(Blocks.LEVER).noOcclusion()));
+    public static final RegistryObject<Block> DOOR_CON = registerBlock("door_con",
+            () -> new DoorControllerBlock(BlockBehaviour.Properties.copy(Blocks.LEVER).noOcclusion()));
 
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
             () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.SOUND_BLOCK_SOUNDS)));
@@ -2475,6 +2476,14 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR).noOcclusion(),
                     BlockSetType.OAK));
 
+    public static final RegistryObject<Block> AUTO_DOOR = registerBlock("auto_door",
+            () -> new AutoDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_DOOR).noOcclusion(),
+                    ModBlockSetTypes.AUTO_DOOR));
+
+    public static final RegistryObject<Block> SOLID_AUTO_DOOR = registerBlock("solid_auto_door",
+            () -> new AutoDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_DOOR).noOcclusion(),
+                    ModBlockSetTypes.AUTO_DOOR));
+
     public static final RegistryObject<Block> EMBER_OAK_LOG = registerBlock("ember_oak_log",
             () -> new EmberLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
 
@@ -3053,17 +3062,44 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> COAL_MATRIX = registerBlock("coal_matrix",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new StirlingMatrixBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .lightLevel(state -> state.getValue(StirlingMatrixBlock.WORKING) ? 15 : 0)));
 
     public static final RegistryObject<Block> VITRICIUM_MATRIX = registerBlock("vitricium_matrix",
             () -> new VitriciumMatrixBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
                     .lightLevel(state -> state.getValue(VitriciumRefineryBlock.WORKING) ? 15 : 0)));
 
     public static final RegistryObject<Block> PROTOCULTURE_MATRIX = registerBlock("protoculture_matrix",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new ProtocultureMatrixBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     public static final RegistryObject<Block> CRYSTAL_CORE_MATRIX = registerBlock("crystal_core_matrix",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new CrystalCoreMatrixBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+
+    public static final RegistryObject<Block> POWER_CORE = registerBlock("power_core",
+            () -> new PowerCoreBlock(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> IMPROVED_POWER_CORE = registerBlock("improved_power_core",
+            () -> new PowerCoreBlock(2, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> ADVANCED_POWER_CORE = registerBlock("advanced_power_core",
+            () -> new PowerCoreBlock(3, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> ULTIMATE_POWER_CORE = registerBlock("ultimate_power_core",
+            () -> new PowerCoreBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+
+    public static final RegistryObject<Block> FLUID_SILO = registerBlock("fluid_silo",
+            () -> new FluidSiloBlock(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> IMPROVED_FLUID_SILO = registerBlock("improved_fluid_silo",
+            () -> new FluidSiloBlock(2, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> ADVANCED_FLUID_SILO = registerBlock("advanced_fluid_silo",
+            () -> new FluidSiloBlock(3, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> ULTIMATE_FLUID_SILO = registerBlock("ultimate_fluid_silo",
+            () -> new FluidSiloBlock(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
         //Signs:
 

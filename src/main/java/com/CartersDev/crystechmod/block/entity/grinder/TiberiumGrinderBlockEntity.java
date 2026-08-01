@@ -3,7 +3,7 @@ package com.CartersDev.crystechmod.block.entity.grinder;
 import com.CartersDev.crystechmod.block.custom.machines.TiberiumGrinderBlock;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.recipe.TiberiumGrinderRecipe;
-import com.CartersDev.crystechmod.screen.grinderMenu.TiberiumGrinderMenu;
+import com.CartersDev.crystechmod.screen.Grinder.grinderMenu.TiberiumGrinderMenu;
 import com.CartersDev.crystechmod.util.inventory.InventoryDirectionEntry;
 import com.CartersDev.crystechmod.util.inventory.InventoryDirectionWrapper;
 import com.CartersDev.crystechmod.util.ModTags;
@@ -166,6 +166,14 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
 
         lazyItemHandler = LazyOptional.of(() -> itemHandler);
 
+        if (this.level != null && !this.level.isClientSide()) {
+            for (Direction direction : Direction.values()) {
+                BlockPos neighborPos = this.worldPosition.relative(direction);
+
+
+                this.level.neighborChanged(neighborPos, this.getBlockState().getBlock(), this.worldPosition);
+            }
+        }
     }
 
     @Override

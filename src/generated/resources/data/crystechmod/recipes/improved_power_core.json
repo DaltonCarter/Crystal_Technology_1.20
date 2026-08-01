@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crystechmod:harmonic_circuit"
+    },
+    "C": {
+      "item": "crystechmod:power_core"
+    },
+    "G": {
+      "item": "crystechmod:harmonic_relay"
+    },
+    "I": {
+      "item": "crystechmod:harmonium_ingot"
+    },
+    "K": {
+      "item": "crystechmod:kryonic_capacitor"
+    },
+    "M": {
+      "item": "crystechmod:alythum_machine_core"
+    }
+  },
+  "pattern": [
+    "ICI",
+    "GMG",
+    "BIK"
+  ],
+  "result": {
+    "item": "crystechmod:improved_power_core"
+  },
+  "show_notification": true
+}

@@ -3,11 +3,15 @@ package com.CartersDev.crystechmod.item;
 import com.CartersDev.crystechmod.CrystalTech;
 import com.CartersDev.crystechmod.block.ModBlocks;
 import com.CartersDev.crystechmod.enchantment.ModEnchantments;
+import com.CartersDev.crystechmod.fluid.ModFluids;
+import com.CartersDev.crystechmod.item.custom.FluidCanisterItem;
+import com.CartersDev.crystechmod.item.custom.PowerCellItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -23,7 +27,9 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                 .displayItems((itemDisplayParameters, output) -> {
 
 //                    output.accept(ModBlocks.TEST_BLOCK.get());
-//                    output.accept(ModBlocks.DOOR_CON.get());
+                    output.accept(ModBlocks.DOOR_CON.get());
+                    output.accept(ModBlocks.AUTO_DOOR.get());
+                    output.accept(ModBlocks.SOLID_AUTO_DOOR.get());
 
 
 
@@ -39,6 +45,8 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                     output.accept(ModBlocks.YELLOW_CORE_BLOCK.get());
                     output.accept(ModItems.ORANGE_CORE_CRYSTAL.get());
                     output.accept(ModBlocks.ORANGE_CORE_BLOCK.get());
+
+                    output.accept(ModItems.STABLE_RED_CORE_CRYSTAL.get());
 
                     output.accept(ModBlocks.FOOLS_VITRICIUM.get());
                     output.accept(ModBlocks.FOOLS_CRYSTAL_CORE.get());
@@ -279,6 +287,16 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.PROTOCULTURE_MATRIX.get());
                         output.accept(ModBlocks.CRYSTAL_CORE_MATRIX.get());
 
+                        output.accept(ModBlocks.POWER_CORE.get());
+                        output.accept(ModBlocks.IMPROVED_POWER_CORE.get());
+                        output.accept(ModBlocks.ADVANCED_POWER_CORE.get());
+                        output.accept(ModBlocks.ULTIMATE_POWER_CORE.get());
+
+                        output.accept(ModBlocks.FLUID_SILO.get());
+                        output.accept(ModBlocks.IMPROVED_FLUID_SILO.get());
+                        output.accept(ModBlocks.ADVANCED_FLUID_SILO.get());
+                        output.accept(ModBlocks.ULTIMATE_FLUID_SILO.get());
+
                         output.accept(ModBlocks.GUNDANIUM_MACHINE_CORE.get());
                         output.accept(ModBlocks.ALYTHUM_MACHINE_CORE.get());
                         output.accept(ModBlocks.VITRIC_MACHINE_CORE.get());
@@ -409,34 +427,51 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModItems.OVERCHARGED_LASER_FOCUS.get());
                         output.accept(ModItems.LASER_FOCUS_PROTOCULTURE.get());
                         output.accept(ModItems.LASER_FOCUS_POISON.get());
+
                         output.accept(ModItems.EMPTY_CANISTER.get());
-                        output.accept(ModItems.LAVA_CANISTER.get());
-                        output.accept(ModItems.VIRIDE_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.CAERULEUM_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.SANGUINEUM_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.VIOLACEUM_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.PROTOCULTURE_CANISTER.get());
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.EMPTY_CANISTER.get(), Fluids.LAVA, 1000));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 1000));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_BLUE_TIBERIUM.get(), 1000));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_RED_TIBERIUM.get(), 1000));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM.get(), 1000));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.EMPTY_CANISTER.get(), ModFluids.SOURCE_LIQUID_PROTOCULTURE.get(), 1000));
+
                         output.accept(ModItems.IMPROVED_EMPTY_CANISTER.get());
-                        output.accept(ModItems.IMPROVED_LAVA_CANISTER.get());
-                        output.accept(ModItems.IMPROVED_VIRIDE_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.IMPROVED_CAERULEUM_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.IMPROVED_SANGUINEUM_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.IMPROVED_VIOLACEUM_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.IMPROVED_PROTOCULTURE_CANISTER.get());
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.IMPROVED_EMPTY_CANISTER.get(), Fluids.LAVA, 2500));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.IMPROVED_EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 2500));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.IMPROVED_EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_BLUE_TIBERIUM.get(), 2500));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.IMPROVED_EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_RED_TIBERIUM.get(), 2500));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.IMPROVED_EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM.get(), 2500));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.IMPROVED_EMPTY_CANISTER.get(), ModFluids.SOURCE_LIQUID_PROTOCULTURE.get(), 2500));
+
                         output.accept(ModItems.ADVANCED_EMPTY_CANISTER.get());
-                        output.accept(ModItems.ADVANCED_LAVA_CANISTER.get());
-                        output.accept(ModItems.ADVANCED_VIRIDE_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.ADVANCED_CAERULEUM_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.ADVANCED_SANGUINEUM_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.ADVANCED_VIOLACEUM_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.ADVANCED_PROTOCULTURE_CANISTER.get());
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.ADVANCED_EMPTY_CANISTER.get(), Fluids.LAVA, 5000));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.ADVANCED_EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 5000));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.ADVANCED_EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_BLUE_TIBERIUM.get(), 5000));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.ADVANCED_EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_RED_TIBERIUM.get(), 5000));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.ADVANCED_EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM.get(), 5000));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.ADVANCED_EMPTY_CANISTER.get(), ModFluids.SOURCE_LIQUID_PROTOCULTURE.get(), 5000));
+
                         output.accept(ModItems.ULTIMATE_EMPTY_CANISTER.get());
-                        output.accept(ModItems.ULTIMATE_LAVA_CANISTER.get());
-                        output.accept(ModItems.ULTIMATE_VIRIDE_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.ULTIMATE_CAERULEUM_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.ULTIMATE_SANGUINEUM_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.ULTIMATE_VIOLACEUM_VITRICIUM_CANISTER.get());
-                        output.accept(ModItems.ULTIMATE_PROTOCULTURE_CANISTER.get());
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.ULTIMATE_EMPTY_CANISTER.get(), Fluids.LAVA, 10000));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.ULTIMATE_EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_TIBERIUM.get(), 10000));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.ULTIMATE_EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_BLUE_TIBERIUM.get(), 10000));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.ULTIMATE_EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_RED_TIBERIUM.get(), 10000));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.ULTIMATE_EMPTY_CANISTER.get(), ModFluids.SOURCE_MOLTEN_PURPLE_TIBERIUM.get(), 10000));
+                        output.accept(FluidCanisterItem.getFilledVariant(ModItems.ULTIMATE_EMPTY_CANISTER.get(), ModFluids.SOURCE_LIQUID_PROTOCULTURE.get(), 10000));
+
+                        output.accept(ModItems.POWER_CELL.get());
+                        output.accept(PowerCellItem.getFilledVariant(ModItems.POWER_CELL.get(), 50000));
+
+                        output.accept(ModItems.IMPROVED_POWER_CELL.get());
+                        output.accept(PowerCellItem.getFilledVariant(ModItems.IMPROVED_POWER_CELL.get(), 250000));
+
+                        output.accept(ModItems.ADVANCED_POWER_CELL.get());
+                        output.accept(PowerCellItem.getFilledVariant(ModItems.ADVANCED_POWER_CELL.get(), 1000000));
+
+                        output.accept(ModItems.ULTIMATE_POWER_CELL.get());
+                        output.accept(PowerCellItem.getFilledVariant(ModItems.ULTIMATE_POWER_CELL.get(), 10000000));
+
 
                     })
                     .build());

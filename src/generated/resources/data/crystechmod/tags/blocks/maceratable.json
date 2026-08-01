@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "crystechmod:infested_stone",
     "minecraft:stone",

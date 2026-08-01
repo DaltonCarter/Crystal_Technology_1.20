@@ -3,10 +3,13 @@ package com.CartersDev.crystechmod.block.custom.machines;
 import com.CartersDev.crystechmod.block.entity.ModBlockEntities;
 import com.CartersDev.crystechmod.block.entity.grinder.TiberiumGrinderBlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -74,12 +77,21 @@ public class TiberiumGrinderBlock  extends BaseEntityBlock {
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pMovedByPiston) {
         if (pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
+
+            if (!pLevel.isClientSide()) {
+                for (Direction direction : Direction.values()) {
+                    BlockPos neighborPos = pPos.relative(direction);
+                    pLevel.neighborChanged(neighborPos, this, pPos);
+                }
+            }
+
             if (blockEntity instanceof TiberiumGrinderBlockEntity) {
                 ((TiberiumGrinderBlockEntity) blockEntity).drops();
             }
+            super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
+        } else {
+            super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
         }
-
-        super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
     }
 
     @Override
@@ -94,7 +106,7 @@ public class TiberiumGrinderBlock  extends BaseEntityBlock {
             }
         }
 
-        return InteractionResult.sidedSuccess(pLevel.isClientSide());
+        return InteractionResult.CONSUME;
     }
 
     @Override

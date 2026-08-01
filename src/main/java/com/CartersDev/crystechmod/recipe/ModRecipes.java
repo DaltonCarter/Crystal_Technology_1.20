@@ -32,6 +32,16 @@ public static final RegistryObject<RecipeSerializer<TiberiumGrinderRecipe>> TIBE
     public static final RegistryObject<RecipeSerializer<VitriciumMatrixRecipe>> VITRICIUM_MATRIX_SERIALIZER =
             SERIALIZERS.register("vitricium_power_generation", () -> VitriciumMatrixRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<FluidCanisterCraftingRecipe>> FLUID_CANISTER_RECIPE_SERIALIZER =
+            SERIALIZERS.register("fluid_canister_crafting", () -> FluidCanisterCraftingRecipe.Serializer.INSTANCE);
+
+    public static final RegistryObject<RecipeSerializer<StirlingMatrixFuel>> STIRLING_MATRIX_SERIALIZER =
+            SERIALIZERS.register("stirling_power_generation", () -> StirlingMatrixFuel.Serializer.INSTANCE);
+
+    public static final RegistryObject<RecipeSerializer<CrystalCoreMatrixRecipe>> CRYSTAL_CORE_MATRIX_SERIALIZER =
+            SERIALIZERS.register("core_crystal_power_generation", () -> CrystalCoreMatrixRecipe.Serializer.INSTANCE);
+
+
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
