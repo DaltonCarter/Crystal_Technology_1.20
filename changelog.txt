@@ -701,7 +701,7 @@ Posted By: Dalton Carter
 ------------------------------------------------------------------------------
 
 07/02/2026 - 07/31/2026
-Version 0.7.0
+Version 0.7.4
 Posted By: Dalton Carter
 
 -Fixed recipe handling for the infuser. I can now make Multiple recipes with the same base item, but different fluids.
@@ -725,6 +725,7 @@ Posted By: Dalton Carter
 -Added Door Controller, it's a sci-fi themed lever, it works exactly the same just looks cooler.
 -Added Recipes for the Door Controller and Auto Doors.
 
+-Server only bug fixes
 
 *Core Crystals and MK.3 Core Steel are still not legitimately obtainable in survival mode.
 

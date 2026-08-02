@@ -1,13 +1,13 @@
 {
   "type": "crystechmod:core_crystal_power_generation",
-  "coreDurability": 2000,
+  "coreDurability": 5000,
   "ingredients": [
     {
       "count": 1,
       "ingredient": {
-        "item": "crystechmod:red_core_crystal"
+        "item": "crystechmod:blue_core_crystal"
       }
     }
   ],
-  "totalEnergy": 12000000
+  "totalEnergy": 4000000
 }

@@ -43,6 +43,7 @@ public static final RegistryObject<RecipeSerializer<TiberiumGrinderRecipe>> TIBE
 
 
 
+
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
     }

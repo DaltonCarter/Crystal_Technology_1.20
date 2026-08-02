@@ -745,6 +745,8 @@ public static final RegistryObject<Item> GUNDANIUM_INGOT = ITEMS.register("gunda
             () -> new BucketItem(ModFluids.SOURCE_LIQUID_PROTOCULTURE, new Item.Properties().craftRemainder(Items.BUCKET)
                     .stacksTo(1)));
 
+    public static final RegistryObject<Item> DOOR_CON_ITEM = ITEMS.register("door_con",
+            () -> new BlockItem(ModBlocks.DOOR_CON.get(), new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> PLAGUED_SIGN = ITEMS.register("plagued_sign",
             () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.PLAGUED_SIGN.get(), ModBlocks.PLAGUED_WALL_SIGN.get()));

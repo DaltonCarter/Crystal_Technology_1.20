@@ -96,11 +96,6 @@ public class FluidCanisterCraftingRecipe extends ShapedRecipe {
     }
 
     @Override
-    public RecipeSerializer<?> getSerializer() {
-        return ModRecipes.FLUID_CANISTER_RECIPE_SERIALIZER.get();
-    }
-
-    @Override
     public RecipeType<?> getType() {
         return FluidCanisterCraftingRecipe.Type.INSTANCE;
     }

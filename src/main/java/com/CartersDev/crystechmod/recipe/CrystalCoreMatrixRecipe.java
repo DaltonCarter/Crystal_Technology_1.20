@@ -48,7 +48,7 @@ public class CrystalCoreMatrixRecipe implements Recipe<Container> {
 
     @Override
     public ItemStack assemble(Container pContainer, RegistryAccess pRegistryAccess) {
-        return null;
+        return ItemStack.EMPTY;
     }
 
     @Override
@@ -58,7 +58,7 @@ public class CrystalCoreMatrixRecipe implements Recipe<Container> {
 
     @Override
     public ItemStack getResultItem(RegistryAccess pRegistryAccess) {
-        return null;
+        return ItemStack.EMPTY;
     }
 
 
@@ -133,7 +133,6 @@ public class CrystalCoreMatrixRecipe implements Recipe<Container> {
 
             pBuffer.writeInt(pRecipe.coreDurability);
             pBuffer.writeInt(pRecipe.totalEnergy);
-            pBuffer.writeItemStack(pRecipe.getResultItem(null), false);
 
         }
     }

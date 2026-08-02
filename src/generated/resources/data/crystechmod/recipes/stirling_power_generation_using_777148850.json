@@ -1,13 +1,13 @@
 {
   "type": "crystechmod:stirling_power_generation",
-  "burnTime": 25,
+  "burnTime": 50,
   "ingredients": [
     {
       "count": 1,
       "ingredient": {
-        "tag": "minecraft:saplings"
+        "tag": "minecraft:wooden_trapdoors"
       }
     }
   ],
-  "totalEnergy": 1000
+  "totalEnergy": 2000
 }

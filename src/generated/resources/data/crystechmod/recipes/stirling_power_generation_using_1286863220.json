@@ -5,7 +5,7 @@
     {
       "count": 1,
       "ingredient": {
-        "item": "minecraft:bow"
+        "tag": "minecraft:logs_that_burn"
       }
     }
   ],

@@ -29,7 +29,7 @@ public class DoorControllerBlock extends LeverBlock {
 
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        if (pLevel.isClientSide) {
+        if (pLevel.isClientSide()) {
             pPlayer.playSound(ModSounds.DOOR_CON.get(), 1.0F, 1.0F);
         }
         return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
@@ -45,4 +45,5 @@ public class DoorControllerBlock extends LeverBlock {
         pTooltip.add(Component.literal("Also works on the lights, and redstone in general."));
         super.appendHoverText(pStack, pLevel, pTooltip, pFlag);
     }
+
 }

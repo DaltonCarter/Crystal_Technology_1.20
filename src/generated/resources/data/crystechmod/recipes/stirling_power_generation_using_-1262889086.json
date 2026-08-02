@@ -1,13 +1,13 @@
 {
   "type": "crystechmod:stirling_power_generation",
-  "burnTime": 600,
+  "burnTime": 25,
   "ingredients": [
     {
       "count": 1,
       "ingredient": {
-        "item": "minecraft:blaze_rod"
+        "tag": "crystechmod:sticks"
       }
     }
   ],
-  "totalEnergy": 24000
+  "totalEnergy": 1000
 }

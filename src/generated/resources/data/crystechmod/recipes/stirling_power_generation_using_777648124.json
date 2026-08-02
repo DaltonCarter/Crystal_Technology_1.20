@@ -5,7 +5,7 @@
     {
       "count": 1,
       "ingredient": {
-        "tag": "minecraft:wooden_slabs"
+        "item": "minecraft:wooden_axe"
       }
     }
   ],

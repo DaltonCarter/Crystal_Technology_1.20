@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_purple_tiberium_bucket": {
+    "has_lava_bucket": {
       "conditions": {
         "items": [
           {
             "items": [
-              "crystechmod:molten_purple_tiberium_bucket"
+              "minecraft:lava_bucket"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_purple_tiberium_bucket",
+      "has_lava_bucket",
       "has_the_recipe"
     ]
   ],

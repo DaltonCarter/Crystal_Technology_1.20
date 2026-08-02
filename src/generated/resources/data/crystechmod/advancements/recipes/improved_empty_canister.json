@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_protoculture_bucket": {
+    "has_red_tiberium_bucket": {
       "conditions": {
         "items": [
           {
             "items": [
-              "crystechmod:liquid_protoculture_bucket"
+              "crystechmod:molten_red_tiberium_bucket"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_protoculture_bucket",
+      "has_red_tiberium_bucket",
       "has_the_recipe"
     ]
   ],
@@ -32,5 +32,4 @@
     ]
   },
   "sends_telemetry_event": true
-}": true
 }
