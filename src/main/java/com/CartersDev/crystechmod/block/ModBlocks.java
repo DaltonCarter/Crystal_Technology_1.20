@@ -62,7 +62,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> TEST_BLOCK = registerBlock("test_block",
             () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()));
 
-    public static final RegistryObject<Block> DOOR_CON = BLOCKS.register("door_con",
+    public static final RegistryObject<Block> DOOR_CON = registerBlock("door_con",
             () -> new DoorControllerBlock(BlockBehaviour.Properties.copy(Blocks.LEVER).noOcclusion()));
 
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",

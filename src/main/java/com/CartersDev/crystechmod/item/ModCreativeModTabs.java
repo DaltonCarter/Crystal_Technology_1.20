@@ -27,10 +27,7 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                 .displayItems((itemDisplayParameters, output) -> {
 
 //                    output.accept(ModBlocks.TEST_BLOCK.get());
-                    output.accept(ModItems.DOOR_CON_ITEM.get());
-                    output.accept(ModBlocks.AUTO_DOOR.get());
-                    output.accept(ModBlocks.SOLID_AUTO_DOOR.get());
-
+                    output.accept(ModBlocks.DOOR_CON.get());
 
 
                     output.accept(ModItems.PURPLE_CORE_CRYSTAL.get());
@@ -711,6 +708,9 @@ public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_M
                         output.accept(ModBlocks.IRON_PLATING_WALL.get());
                         output.accept(ModBlocks.IRON_PLATING_DOOR.get());
                         output.accept(ModBlocks.IRON_PLATING_TRAPDOOR.get());
+
+                        output.accept(ModBlocks.AUTO_DOOR.get());
+                        output.accept(ModBlocks.SOLID_AUTO_DOOR.get());
 
                         output.accept(ModBlocks.RUSTY_IRON_PLATING.get());
                         output.accept(ModBlocks.RUSTY_IRON_PLATING_STAIRS.get());
