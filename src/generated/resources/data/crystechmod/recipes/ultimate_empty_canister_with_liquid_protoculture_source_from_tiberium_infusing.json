@@ -11,6 +11,6 @@
   ],
   "output": {
     "item": "crystechmod:ultimate_empty_canister",
-    "nbt": "{Fluid:{Amount:10000,FluidName:\"crystechmod:liquid_protoculture_source\"},FluidData:{Amount:10000,FluidName:\"crystechmod:liquid_protoculture_source\"}}"
+    "nbt": "{Fluid:{Amount:10000,FluidName:\"crystechmod:liquid_protoculture_source\"}}"
   }
 }

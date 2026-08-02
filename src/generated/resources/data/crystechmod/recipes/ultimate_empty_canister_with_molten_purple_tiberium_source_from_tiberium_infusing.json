@@ -11,6 +11,6 @@
   ],
   "output": {
     "item": "crystechmod:ultimate_empty_canister",
-    "nbt": "{Fluid:{Amount:10000,FluidName:\"crystechmod:molten_purple_tiberium_source\"},FluidData:{Amount:10000,FluidName:\"crystechmod:molten_purple_tiberium_source\"}}"
+    "nbt": "{Fluid:{Amount:10000,FluidName:\"crystechmod:molten_purple_tiberium_source\"}}"
   }
 }

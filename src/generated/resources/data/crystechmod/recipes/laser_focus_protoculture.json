@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "crystechmod:empty_focus"
+    },
+    "L": {
+      "item": "crystechmod:overcharged_laser_focus"
+    },
+    "R": {
+      "item": "crystechmod:enigma_crystal"
+    }
+  },
+  "pattern": [
+    "RLR",
+    "LFL",
+    "RLR"
+  ],
+  "result": {
+    "item": "crystechmod:laser_focus_protoculture"
+  },
+  "show_notification": true
+}

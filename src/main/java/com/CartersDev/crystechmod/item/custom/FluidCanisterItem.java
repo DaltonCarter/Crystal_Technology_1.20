@@ -27,7 +27,6 @@ import net.minecraftforge.fluids.FluidUtil;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidHandlerItem;
 import net.minecraftforge.fluids.capability.templates.FluidHandlerItemStack;
-import net.minecraftforge.fluids.capability.templates.FluidHandlerItemStackSimple;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -45,27 +44,7 @@ public class FluidCanisterItem extends Item {
 
     @Override
     public @Nullable ICapabilityProvider initCapabilities(ItemStack stack, @Nullable CompoundTag nbt) {
-
-        int maxCapacity = this.capacity;
-
-        return new FluidHandlerItemStackSimple(stack, maxCapacity) { // 10000 = your canister max capacity
-
-            @Override
-            protected void setFluid(FluidStack fluid) {
-                super.setFluid(fluid);
-
-                CompoundTag tag = this.container.getOrCreateTag();
-
-                if (!fluid.isEmpty()) {
-                    CompoundTag fluidData = new CompoundTag();
-                    fluidData.putString("FluidName", ForgeRegistries.FLUIDS.getKey(fluid.getFluid()).toString());
-                    fluidData.putInt("Amount", fluid.getAmount());
-                    tag.put("FluidData", fluidData);
-                } else {
-                    tag.remove("FluidData");
-                }
-            }
-        };
+        return new FluidFilterHandler(stack, this.capacity);
     }
 
 
@@ -173,8 +152,6 @@ class FluidFilterHandler extends FluidHandlerItemStack {
         || fluid == ModFluids.FLOWING_TIBERIUM_WATER.get()) {
             return false;
         }
-
-
 
         return super.isFluidValid(tank, stack);
     }

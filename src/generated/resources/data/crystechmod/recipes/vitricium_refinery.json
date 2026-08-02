@@ -1,10 +1,6 @@
 {
-  "type": "crystechmod:fluid_canister_crafting",
+  "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "fluid_requirement": {
-    "fluid": "minecraft:lava",
-    "amount": 1000
-  },
   "key": {
     "B": {
       "item": "minecraft:cauldron"
@@ -16,7 +12,7 @@
       "item": "crystechmod:harmonium_ingot"
     },
     "I": {
-      "tag": "crystechmod:fluid_canisters"
+      "item": "minecraft:lava_bucket"
     },
     "K": {
       "item": "crystechmod:kryonic_reservoir"

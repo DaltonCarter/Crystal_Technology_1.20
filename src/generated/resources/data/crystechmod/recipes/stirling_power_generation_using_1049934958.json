@@ -1,13 +1,13 @@
 {
   "type": "crystechmod:stirling_power_generation",
-  "burnTime": 25,
+  "burnTime": 600,
   "ingredients": [
     {
       "count": 1,
       "ingredient": {
-        "tag": "minecraft:wool"
+        "item": "minecraft:blaze_rod"
       }
     }
   ],
-  "totalEnergy": 1000
+  "totalEnergy": 24000
 }

@@ -1,13 +1,13 @@
 {
   "type": "crystechmod:stirling_power_generation",
-  "burnTime": 6000,
+  "burnTime": 25,
   "ingredients": [
     {
       "count": 1,
       "ingredient": {
-        "item": "minecraft:coal_block"
+        "tag": "crystechmod:sticks"
       }
     }
   ],
-  "totalEnergy": 240000
+  "totalEnergy": 1000
 }

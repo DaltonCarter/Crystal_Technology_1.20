@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lava_bucket": {
+    "has_protoculture_bucket": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:lava_bucket"
+              "crystechmod:liquid_protoculture_bucket"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_lava_bucket",
+      "has_protoculture_bucket",
       "has_the_recipe"
     ]
   ],

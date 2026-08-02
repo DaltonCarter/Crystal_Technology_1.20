@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_crystal_core_matrix": {
+    "has_empty_focus": {
       "conditions": {
         "items": [
           {
             "items": [
-              "crystechmod:crystal_core_matrix"
+              "crystechmod:empty_focus"
             ]
           }
         ]
@@ -15,21 +15,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:air"
+        "recipe": "crystechmod:laser_focus_protoculture"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_crystal_core_matrix",
+      "has_empty_focus",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:air"
+      "crystechmod:laser_focus_protoculture"
     ]
   },
-  "sends_telemetry_event": true
+  "sends_telemetry_event": false
 }

@@ -2990,6 +2990,20 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.LG_CORE_INGOT.get()), has(ModItems.LG_CORE_INGOT.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VITRICIUM_REFINERY.get())
+                .pattern("HIH")
+                .pattern("KMK")
+                .pattern("FRB")
+                .define('H', ModItems.HARMONIUM_INGOT.get())
+                .define('K', ModItems.KRYONIC_RESERVOIR.get())
+                .define('M', ModBlocks.GUNDANIUM_MACHINE_CORE.get())
+                .define('I', Items.LAVA_BUCKET)
+                .define('R', ModItems.HARMONIC_RELAY.get())
+                .define('B', Items.CAULDRON)
+                .define('F', ModBlocks.POWERED_KILN.get())
+                .unlockedBy(getHasName(ModItems.ALYTHUM_INGOT.get()), has(ModItems.ALYTHUM_INGOT.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALYTHUM_VITRICIUM_REFINERY.get())
                 .pattern("AIA")
                 .pattern("KMK")
@@ -4516,6 +4530,18 @@ public class ModRecipeProvider  extends RecipeProvider implements IConditionBuil
                 .define('F', ModItems.EMPTY_FOCUS.get())
                 .define('L', ModItems.IMPROVED_LASER_FOCUS.get())
                 .define('R', Blocks.REDSTONE_BLOCK)
+
+                .unlockedBy(getHasName(ModItems.EMPTY_FOCUS.get()), has(ModItems.EMPTY_FOCUS.get()))
+                .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LASER_FOCUS_PROTOCULTURE.get(), 1)
+                .pattern("RLR")
+                .pattern("LFL")
+                .pattern("RLR")
+                .define('F', ModItems.EMPTY_FOCUS.get())
+                .define('L', ModItems.OVERCHARGED_LASER_FOCUS.get())
+                .define('R', ModItems.ENIGMA_CRYSTAL.get())
 
                 .unlockedBy(getHasName(ModItems.EMPTY_FOCUS.get()), has(ModItems.EMPTY_FOCUS.get()))
                 .save(consumer);
