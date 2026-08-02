@@ -11,6 +11,6 @@
   ],
   "output": {
     "item": "crystechmod:ultimate_empty_canister",
-    "nbt": "{Fluid:{Amount:10000,FluidName:\"minecraft:lava\"}}"
+    "nbt": "{Fluid:{Amount:10000,FluidName:\"minecraft:lava\"},FluidData:{Amount:10000,FluidName:\"minecraft:lava\"}}"
   }
 }

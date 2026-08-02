@@ -1,13 +1,13 @@
 {
   "type": "crystechmod:stirling_power_generation",
-  "burnTime": 50,
+  "burnTime": 25,
   "ingredients": [
     {
       "count": 1,
       "ingredient": {
-        "item": "minecraft:wooden_axe"
+        "item": "minecraft:bowl"
       }
     }
   ],
-  "totalEnergy": 2000
+  "totalEnergy": 1000
 }

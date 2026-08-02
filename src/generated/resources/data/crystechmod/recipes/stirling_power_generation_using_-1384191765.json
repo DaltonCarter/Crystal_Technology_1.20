@@ -1,13 +1,13 @@
 {
   "type": "crystechmod:stirling_power_generation",
-  "burnTime": 50,
+  "burnTime": 100,
   "ingredients": [
     {
       "count": 1,
       "ingredient": {
-        "tag": "minecraft:wooden_slabs"
+        "item": "minecraft:scaffolding"
       }
     }
   ],
-  "totalEnergy": 2000
+  "totalEnergy": 4000
 }

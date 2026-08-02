@@ -2,6 +2,8 @@ package com.CartersDev.crystechmod.recipe;
 
 
 import com.CartersDev.crystechmod.CrystalTech;
+import com.CartersDev.crystechmod.item.custom.FluidCanisterItem;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
@@ -34,29 +36,29 @@ public class FluidCanisterCraftingRecipe extends ShapedRecipe {
         this.output = output;
     }
 
-
     @Override
     public boolean matches(CraftingContainer pContainer, Level pLevel) {
-       if(!super.matches(pContainer, pLevel)){
-           return false;
-       }
+        if (!super.matches(pContainer, pLevel)) {
+            return false;
+        }
 
-       boolean hasValidCanister = false;
+        boolean hasValidCanister = false;
 
-        for(int i = 0; i < pContainer.getContainerSize(); i++) {
+        for (int i = 0; i < pContainer.getContainerSize(); i++) {
             ItemStack stack = pContainer.getItem(i);
 
-            if(stack.isEmpty()){
+            if (stack.isEmpty()) {
                 continue;
             }
 
+
             var fluidCap = stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM);
 
-            if(fluidCap.isPresent()){
+            if (fluidCap.isPresent()) {
                 IFluidHandler handler = fluidCap.resolve().get();
                 FluidStack fluidPresent = handler.getFluidInTank(0);
 
-                if(fluidPresent.isEmpty()) {
+                if (fluidPresent.isEmpty()) {
                     return false;
                 }
 
@@ -69,6 +71,29 @@ public class FluidCanisterCraftingRecipe extends ShapedRecipe {
                     }
                 } else {
                     return false;
+                }
+            }
+
+            else if (pLevel.isClientSide() && stack.getItem() instanceof FluidCanisterItem) {
+                net.minecraft.nbt.CompoundTag tag = stack.getTag();
+
+                if (tag != null && tag.contains("FluidData")) {
+                    net.minecraft.nbt.CompoundTag fluidData = tag.getCompound("FluidData");
+                    String fluidName = fluidData.getString("FluidName");
+                    int fluidAmount = fluidData.getInt("Amount");
+
+                    String reqPath = net.minecraftforge.registries.ForgeRegistries.FLUIDS.getKey(this.requiredFluid).toString();
+
+                    if (fluidName.equals(reqPath)) {
+                        if (fluidAmount >= this.requiredAmount) {
+                            if (hasValidCanister) return false;
+                            hasValidCanister = true;
+                        } else {
+                            return false;
+                        }
+                    } else {
+                        return false;
+                    }
                 }
             }
         }

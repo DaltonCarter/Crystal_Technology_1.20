@@ -1,13 +1,13 @@
 {
   "type": "crystechmod:stirling_power_generation",
-  "burnTime": 25,
+  "burnTime": 400,
   "ingredients": [
     {
       "count": 1,
       "ingredient": {
-        "tag": "minecraft:saplings"
+        "item": "minecraft:charcoal"
       }
     }
   ],
-  "totalEnergy": 1000
+  "totalEnergy": 16000
 }
