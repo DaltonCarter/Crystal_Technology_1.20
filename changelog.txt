@@ -731,6 +731,14 @@ Posted By: Dalton Carter
 
 **The components added do not include the planned components for weaponry.
 
+------------------------------------------------------------------------------
+
+08/13/2026
+Version 0.7.51
+Posted By: Dalton Carter
+
+-Bug fix for Powered Kilns that didn't allow new forge mod compat inputs and outputs to function correctly.
+
 
 ======================================================
 LEGACY 1.16.5 Changelog

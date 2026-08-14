@@ -65,9 +65,8 @@ public class PoweredKilnBlockEntity extends BlockEntity implements MenuProvider 
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
-              case 0 -> stack.is(ModTags.Items.SMELTING);
+              case 0, 2 -> true;
               case 1 -> stack.getItem() == Items.REDSTONE || stack.getCapability(ForgeCapabilities.ENERGY).isPresent();
-              case 2 -> stack.is(ModTags.Items.SMELTING_RESULT_2);
                 default -> super.isItemValid(slot, stack);
             };
         }
