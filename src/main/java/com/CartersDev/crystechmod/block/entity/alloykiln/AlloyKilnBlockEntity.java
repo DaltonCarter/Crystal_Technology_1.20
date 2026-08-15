@@ -89,7 +89,7 @@ public class AlloyKilnBlockEntity extends BlockEntity implements MenuProvider {
             return switch (slot) {
                 case 0,1,2 -> true;
                 case 3 -> stack.getItem() == Items.REDSTONE || stack.getCapability(ForgeCapabilities.ENERGY).isPresent();
-                case 4 -> stack.is(ModTags.Items.ALLOYING_RESULT);
+                case 4 -> false;
                 default -> super.isItemValid(slot, stack);
             };
         }

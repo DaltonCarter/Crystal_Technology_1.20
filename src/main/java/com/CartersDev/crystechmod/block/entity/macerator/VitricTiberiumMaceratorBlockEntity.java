@@ -60,7 +60,7 @@ public class VitricTiberiumMaceratorBlockEntity extends BlockEntity implements M
             return switch (slot) {
               case 0 -> stack.is(ModTags.Items.GRINDABLE);
               case 1 -> stack.getItem() == Items.REDSTONE || stack.getCapability(ForgeCapabilities.ENERGY).isPresent();
-              case 2 -> stack.is(ModTags.Items.GRINDING_RESULT);
+              case 2 -> false;
                 default -> super.isItemValid(slot, stack);
             };
         }

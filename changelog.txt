@@ -738,6 +738,23 @@ Version 0.7.51
 Posted By: Dalton Carter
 
 -Bug fix for Powered Kilns that didn't allow new forge mod compat inputs and outputs to function correctly.
+-Known Bug:
+Machines wil glitch out if they are mid-process and run out of energy while receiving energy.
+
+------------------------------------------------------------------------------
+
+08/13/2026
+Version 0.7.52
+Posted By: Dalton Carter
+
+-Bug fix for the previous bug fix. Output slot now functions correctly.
+-Began adding Forge Conditional recipes for Stirling Matrix. Currently only Coal Coke, and Coal Coke Blocks supported.
+
+Note: Will need to clean up tag files for no longer needed entries, and to begin polishing Forge compatability of the mod.
+
+-Known Bugs:
+Machines wil glitch out if they are mid-process and run out of energy while receiving energy.
+Using Bone Meal on Age 6/7 Saber Corn will cause an ENTIRE new crop to grow on top of the old crop.
 
 
 ======================================================

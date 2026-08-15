@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_crystal_core_matrix": {
+    "has_stirling_matrix": {
       "conditions": {
         "items": [
           {
             "items": [
-              "crystechmod:crystal_core_matrix"
+              "crystechmod:coal_matrix"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_crystal_core_matrix",
+      "has_stirling_matrix",
       "has_the_recipe"
     ]
   ],

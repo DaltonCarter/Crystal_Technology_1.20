@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-01T20:55:28.8769006	Recipes
+// 1.20.1	2026-08-14T22:00:34.0410709	Recipes
 77fd2add19191701243752f38b212d5a74bc6664 data/crystechmod/advancements/recipes/advanced_empty_canister.json
 8f4c49aeb92ecbdbaeae514f7f5f13f976a9f819 data/crystechmod/advancements/recipes/aeries_crystal.json
 3fc2eae5c76cb50e88664398e799ce2cb0633dc1 data/crystechmod/advancements/recipes/alythum_dust.json
@@ -35,7 +35,7 @@ f2963fec41843e036d9737f15c12243f46fa7349 data/crystechmod/advancements/recipes/i
 45769866b1aaa4fb96ea4ad123621d50e6557e4e data/crystechmod/advancements/recipes/illumina_crystal.json
 740b122c3405e1a4e6b30951a37abe5b3c504db7 data/crystechmod/advancements/recipes/illyrim_blend.json
 8341d14d1847cdcadc866e78dfd3ba98df23374a data/crystechmod/advancements/recipes/illyrim_ingot.json
-9b7e23312d6df44faca9062b184851fa1fed0263 data/crystechmod/advancements/recipes/improved_empty_canister.json
+535f56dd2c610ad44756c262d6363a40d42a4f1e data/crystechmod/advancements/recipes/improved_empty_canister.json
 8d2b1ebe2a7a452197538d01c2c2148de091443e data/crystechmod/advancements/recipes/infested_andesite.json
 61c598ee1ee0f429c1d9080ddcd3d5cc34e344ae data/crystechmod/advancements/recipes/infested_cobble.json
 cdf25a4d61aff3195568167d9198bdc37dfcd7dd data/crystechmod/advancements/recipes/infested_diorite.json

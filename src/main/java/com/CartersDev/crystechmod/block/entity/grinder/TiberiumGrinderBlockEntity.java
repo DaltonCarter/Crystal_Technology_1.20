@@ -55,7 +55,7 @@ public class TiberiumGrinderBlockEntity  extends BlockEntity implements MenuProv
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
                 case 0 -> stack.is(ModTags.Items.GRINDABLE);
-                case 1 -> stack.is(ModTags.Items.GRINDING_RESULT);
+                case 1 -> false;
                 default -> super.isItemValid(slot, stack);
             };
         }

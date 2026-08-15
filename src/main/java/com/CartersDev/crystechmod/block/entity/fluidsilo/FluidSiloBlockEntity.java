@@ -255,7 +255,7 @@ public class FluidSiloBlockEntity extends BlockEntity implements MenuProvider {
         ItemStack output = this.itemHandler.insertItem(RETURN_SLOT, vessel, false);
 
         if (!output.isEmpty() && this.level != null) {
-            net.minecraft.world.Containers.dropItemStack(this.level,
+            Containers.dropItemStack(this.level,
                     this.worldPosition.getX() + 0.5, this.worldPosition.getY() + 0.5, this.worldPosition.getZ() + 0.5,
                     output);
         }

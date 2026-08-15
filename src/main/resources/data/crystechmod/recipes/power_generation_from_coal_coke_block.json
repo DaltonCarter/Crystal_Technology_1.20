@@ -1,0 +1,30 @@
+{
+    "type": "forge:conditional",
+    "recipes": [
+      {
+        "conditions": [
+          {
+            "type": "forge:not",
+            "value": {
+              "type": "forge:tag_empty",
+              "tag": "forge:storage_blocks/coal_coke"
+            }
+          }
+        ],
+        "recipe": {
+          "type": "crystechmod:stirling_power_generation",
+          "burnTime": 10000,
+          "ingredients": [
+            {
+              "count": 1,
+              "ingredient": {
+                "tag": "forge:storage_blocks/coal_coke"
+              }
+            }
+          ],
+          "totalEnergy": 400000
+        }
+      }
+      ]
+}
+

@@ -63,8 +63,9 @@ public class VitricKilnBlockEntity extends BlockEntity implements MenuProvider {
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
-                case 0, 2 -> true;
+                case 0 -> true;
                 case 1 -> stack.getItem() == Items.REDSTONE || stack.getCapability(ForgeCapabilities.ENERGY).isPresent();
+                case 2 -> false;
                 default -> super.isItemValid(slot, stack);
             };
         }
@@ -329,7 +330,7 @@ private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
 
             ItemStack outputSlotStack = this.itemHandler.getStackInSlot(OUTPUT_SLOT);
             if (outputSlotStack.isEmpty()) {
-                this.itemHandler.insertItem(OUTPUT_SLOT, resultItem.copy(), false);
+                this.itemHandler.setStackInSlot(OUTPUT_SLOT, resultItem.copy());
             } else {
                 outputSlotStack.grow(resultItem.getCount());
             }

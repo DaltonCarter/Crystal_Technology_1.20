@@ -86,7 +86,7 @@ public class VitricAlloyKilnBlockEntity extends BlockEntity implements MenuProvi
             return switch (slot) {
               case 0,1,2 -> stack.is(ModTags.Items.ALLOYING_INPUT);
               case 3 -> stack.getItem() == Items.REDSTONE || stack.getCapability(ForgeCapabilities.ENERGY).isPresent();
-              case 4 -> stack.is(ModTags.Items.ALLOYING_RESULT);
+              case 4 -> false;
                 default -> super.isItemValid(slot, stack);
             };
         }
