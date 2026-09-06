@@ -242,6 +242,9 @@ public class CrystalCoreMatrixBlockEntity extends BlockEntity implements MenuPro
 
 
     public void tick(Level level, BlockPos pPos, BlockState pState) {
+
+        if (level.getGameTime() < 10) return;
+
         if (level.isClientSide()) return;
 
         manageStockpile();
@@ -448,12 +451,17 @@ public class CrystalCoreMatrixBlockEntity extends BlockEntity implements MenuPro
 
     @Override
     public CompoundTag getUpdateTag() {
-        return saveWithoutMetadata();
+        CompoundTag tag = super.getUpdateTag();
+        saveAdditional(tag);
+        return tag;
     }
 
     @Override
     public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
         super.onDataPacket(net, pkt);
+        if (this.level != null && this.level.isClientSide) {
+            this.level.sendBlockUpdated(this.worldPosition, getBlockState(), getBlockState(), 3);
+        }
     }
 
 

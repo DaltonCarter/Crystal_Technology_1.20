@@ -1,13 +1,13 @@
 {
   "type": "crystechmod:stirling_power_generation",
-  "burnTime": 400,
+  "burnTime": 100,
   "ingredients": [
     {
       "count": 1,
       "ingredient": {
-        "item": "minecraft:charcoal"
+        "item": "minecraft:scaffolding"
       }
     }
   ],
-  "totalEnergy": 16000
+  "totalEnergy": 4000
 }

@@ -1,13 +1,13 @@
 {
   "type": "crystechmod:stirling_power_generation",
-  "burnTime": 75,
+  "burnTime": 50,
   "ingredients": [
     {
       "count": 1,
       "ingredient": {
-        "item": "crystechmod:plagued_bow"
+        "tag": "minecraft:wooden_fences"
       }
     }
   ],
-  "totalEnergy": 3000
+  "totalEnergy": 2000
 }

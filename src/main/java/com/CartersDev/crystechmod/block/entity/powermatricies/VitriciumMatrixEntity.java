@@ -240,10 +240,7 @@ public class VitriciumMatrixEntity extends BlockEntity implements MenuProvider {
 
         if (this.level != null && !this.level.isClientSide()) {
             for (Direction direction : Direction.values()) {
-                BlockPos neighborPos = this.worldPosition.relative(direction);
-
-
-                this.level.neighborChanged(neighborPos, this.getBlockState().getBlock(), this.worldPosition);
+                this.level.neighborChanged(this.worldPosition.relative(direction), this.getBlockState().getBlock(), this.worldPosition);
             }
         }
     }
@@ -254,6 +251,7 @@ public class VitriciumMatrixEntity extends BlockEntity implements MenuProvider {
         lazyItemHandler.invalidate();
         lazyEnergyHandler.invalidate();
         lazyFluidHandler.invalidate();
+        this.directioWrappedHandlerMap.values().forEach(LazyOptional::invalidate);
 
     }
 
@@ -305,6 +303,10 @@ public class VitriciumMatrixEntity extends BlockEntity implements MenuProvider {
 
 
     public void tick(Level level, BlockPos pPos, BlockState pState) {
+
+        if (level.getGameTime() < 10) return;
+
+        if (level.isClientSide()) return;
 
         if (recipeToLoad != null && level != null) {
             level.getRecipeManager().byKey(recipeToLoad).ifPresent(recipe -> {
@@ -603,13 +605,17 @@ public class VitriciumMatrixEntity extends BlockEntity implements MenuProvider {
 
     @Override
     public CompoundTag getUpdateTag() {
-        return saveWithoutMetadata();
+        CompoundTag tag = super.getUpdateTag();
+        saveAdditional(tag);
+        return tag;
     }
 
     @Override
     public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
         super.onDataPacket(net, pkt);
-
+        if (this.level != null && this.level.isClientSide) {
+            this.level.sendBlockUpdated(this.worldPosition, getBlockState(), getBlockState(), 3);
+        }
 
     }
 }

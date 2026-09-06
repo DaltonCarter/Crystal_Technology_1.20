@@ -5,7 +5,7 @@
     {
       "count": 1,
       "ingredient": {
-        "tag": "minecraft:wool"
+        "item": "minecraft:bowl"
       }
     }
   ],

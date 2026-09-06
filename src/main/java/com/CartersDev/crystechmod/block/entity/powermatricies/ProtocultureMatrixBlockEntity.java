@@ -164,6 +164,7 @@ public class ProtocultureMatrixBlockEntity extends BlockEntity implements MenuPr
         super.invalidateCaps();
         this.lazyItemHandler.invalidate();
         this.lazyEnergyHandler.invalidate();
+        this.directioWrappedHandlerMap.values().forEach(LazyOptional::invalidate);
     }
 
     @Override
@@ -215,6 +216,9 @@ public class ProtocultureMatrixBlockEntity extends BlockEntity implements MenuPr
 
 
     public void tick(Level level, BlockPos pPos, BlockState pState) {
+
+        if (level.getGameTime() < 20) return;
+
         if (level.isClientSide()) return;
 
         manageStockpile();
@@ -232,13 +236,14 @@ public class ProtocultureMatrixBlockEntity extends BlockEntity implements MenuPr
             }
             setChanged();
         }
+        if (level.getGameTime() >= 20) {
+            boolean hasCanisterPresent = !itemHandler.getStackInSlot(INPUT_SLOT).isEmpty() || burnTimeRemaining > 0;
 
-        boolean hasCanisterPresent = !itemHandler.getStackInSlot(INPUT_SLOT).isEmpty() || burnTimeRemaining > 0;
-
-        if (pState.hasProperty(ProtocultureMatrixBlock.HAS_CANISTER)
+            if (pState.hasProperty(ProtocultureMatrixBlock.HAS_CANISTER)
                 && pState.getValue(ProtocultureMatrixBlock.HAS_CANISTER) != hasCanisterPresent) {
             level.setBlock(pPos, pState.setValue(ProtocultureMatrixBlock.HAS_CANISTER, hasCanisterPresent), 3);
         }
+    }
     }
 
     private void manageStockpile() {
@@ -385,12 +390,17 @@ public class ProtocultureMatrixBlockEntity extends BlockEntity implements MenuPr
 
     @Override
     public CompoundTag getUpdateTag() {
-        return saveWithoutMetadata();
+        CompoundTag tag = super.getUpdateTag();
+        saveAdditional(tag);
+        return tag;
     }
 
     @Override
     public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
         super.onDataPacket(net, pkt);
+        if (this.level != null && this.level.isClientSide) {
+            this.level.sendBlockUpdated(this.worldPosition, getBlockState(), getBlockState(), 3);
+        }
     }
 
 }

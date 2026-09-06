@@ -266,6 +266,12 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         Tags.Items.INGOTS
                 );
 
+        this.tag(ItemTags.SAPLINGS)
+                .add(ModBlocks.PLAGUED_SAPLING.get().asItem(),
+                        ModBlocks.DYING_SAPLING.get().asItem(),
+                        ModBlocks.EMBER_OAK_SAPLING.get().asItem(),
+                        ModBlocks.MARIKA_OAK_SAPLING.get().asItem());
+
 
         this.tag(ModTags.Items.SMELTING)
                 .add(

@@ -1,13 +1,13 @@
 {
   "type": "crystechmod:stirling_power_generation",
-  "burnTime": 25,
+  "burnTime": 1000,
   "ingredients": [
     {
       "count": 1,
       "ingredient": {
-        "tag": "minecraft:wooden_buttons"
+        "item": "minecraft:dried_kelp_block"
       }
     }
   ],
-  "totalEnergy": 1000
+  "totalEnergy": 40000
 }

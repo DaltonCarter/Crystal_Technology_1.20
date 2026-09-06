@@ -1,13 +1,13 @@
 {
   "type": "crystechmod:stirling_power_generation",
-  "burnTime": 300,
+  "burnTime": 75,
   "ingredients": [
     {
       "count": 1,
       "ingredient": {
-        "item": "minecraft:blaze_powder"
+        "tag": "minecraft:wooden_stairs"
       }
     }
   ],
-  "totalEnergy": 12000
+  "totalEnergy": 3000
 }

@@ -188,15 +188,12 @@ public class StirlingMaxtrixBlockEntity extends BlockEntity implements MenuProvi
         super.onLoad();
         lazyItemHandler = LazyOptional.of(() -> itemHandler);
         lazyEnergyHandler = LazyOptional.of(() -> ENERGY_STORAGE);
-
         if (this.level != null && !this.level.isClientSide()) {
             for (Direction direction : Direction.values()) {
-                BlockPos neighborPos = this.worldPosition.relative(direction);
-
-
-                this.level.neighborChanged(neighborPos, this.getBlockState().getBlock(), this.worldPosition);
+                this.level.neighborChanged(this.worldPosition.relative(direction), this.getBlockState().getBlock(), this.worldPosition);
             }
         }
+
     }
 
     @Override
@@ -204,6 +201,7 @@ public class StirlingMaxtrixBlockEntity extends BlockEntity implements MenuProvi
         super.invalidateCaps();
         lazyItemHandler.invalidate();
         lazyEnergyHandler.invalidate();
+        this.directioWrappedHandlerMap.values().forEach(LazyOptional::invalidate);
     }
 
     @Override
@@ -225,6 +223,9 @@ public class StirlingMaxtrixBlockEntity extends BlockEntity implements MenuProvi
     }
 
 public void tick(Level plevel, BlockPos pPos, BlockState pState) {
+
+    if (level.getGameTime() < 10) return;
+
     chargeItem();
     distributeEnergy();
 
@@ -358,12 +359,17 @@ public void tick(Level plevel, BlockPos pPos, BlockState pState) {
 
     @Override
     public CompoundTag getUpdateTag() {
-        return saveWithoutMetadata();
+        CompoundTag tag = super.getUpdateTag();
+        saveAdditional(tag);
+        return tag;
     }
 
     @Override
     public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
         super.onDataPacket(net, pkt);
+        if (this.level != null && this.level.isClientSide) {
+            this.level.sendBlockUpdated(this.worldPosition, getBlockState(), getBlockState(), 3);
+        }
     }
 
 }
